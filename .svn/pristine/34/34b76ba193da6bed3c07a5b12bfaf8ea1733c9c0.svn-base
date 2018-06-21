@@ -1,0 +1,156 @@
+body{
+    font-size: 13px;
+}
+strong{
+    font-weight: 600;
+}
+.margin-top{
+    margin-top: 12px;
+}
+.look_up_pdf{
+    width: 1000px;
+    padding: 75px;
+    background: #fff;
+    margin: 30px auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.27), 0 0 35px rgba(0,0,0,0.05) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.27), 0 0 35px rgba(0,0,0,0.05) inset;
+}
+.tax_table{
+    width: 100%;
+    background: #EEEEEE;
+    border:1px solid #000;
+    border-bottom:0;
+}
+.tax_table input{
+    height: 21px;
+}
+.tax_table input:focus{
+    box-shadow: none;
+    border-color: #a6a6a6;
+}
+.tax_table .tr{
+    border-bottom:1px solid #000;
+    overflow: hidden;
+}
+.tax_table .tr1{
+    padding:14px 10px;
+}
+.Reference_id{
+    text-align: center;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.caption{
+    height: 118px;
+}
+.caption .td{
+    float: left;
+    text-align: center;
+}
+.title{
+    width: 60%;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100%;
+    border-right:1px solid #000;
+    border-left:1px solid #000;
+}
+.title p{
+    line-height: 29px;
+}
+.form,.substitute{
+    width: 20%;
+    height: 100%;
+}
+.form_name{
+    margin-top: 62px;
+}
+.table_name{
+    font-size: 18px;
+    font-weight: 600;
+}
+.not_use{
+    font-weight: 600;
+    width: 80%;
+    font-size: 12px;
+}
+.not_use li{
+    list-style-type: disc;
+    margin-left: 19px;
+}
+.not_use_r{
+    width: 19%;
+    text-align: right;
+    font-weight: 600;
+}
+.right{
+    float:right!important;
+}
+.left{
+    float:left!important;
+}
+.part{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.partI{
+    width: 70px;
+    text-align: center;
+    background: #000;
+    color:#fff;
+}
+.Identification{
+    padding-left: 8px;
+}
+.Ident1,.Ident2{
+    padding: 12px 10px;
+}
+.Ident1{
+    width: 60%;
+    border-right: 1px solid #000;
+}
+.Ident2{
+    width: 40%;
+}
+.Ident1_tip{
+    margin-bottom: 12px;
+}
+.Ident0{
+    width: 70%;
+    border-right: 1px solid #000;
+    padding-right: 10px;
+}
+ol li{
+    list-style-type:decimal;
+    margin-left: 20px;
+}
+.Furthermore{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.sign_title h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+.m5{
+    margin-top: 5px;
+}
+.footer_sign{
+    overflow: hidden;
+}
+.footer_sign p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.sign_input{
+    width: 46.7%;
+    margin-left: 3%;
+}
+.sign_date,.acting{
+    width: 17%;
+}
+.sign_date{
+    margin-left: 6%;
+}

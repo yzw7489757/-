@@ -1,0 +1,36 @@
+.ws-span8{
+    width: 28%;
+    margin: 0 auto;
+}
+.Product_Codes{
+    visibility: hidden;
+}
+.Skip{
+    font-size: 13px;
+    float:right;
+    margin-top: 10px;
+}
+.select_answer label{
+    line-height: 25px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    padding-left: 8px;
+}
+.Product_Codes + label:after,.Product_Codes + label:before{
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #FF9900;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.Product_Codes:checked + label:after{
+    background-color: #FF9900;
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+}

@@ -1,0 +1,45 @@
+.ws-span48{
+    width: 48.3%;
+    margin: 0 auto;
+}
+.head-box{
+    position: relative;
+}
+.caption{
+    width: 75.2%;
+}
+.Skip{
+    position:absolute;
+    right: 0;top:5px;
+}
+.cetegory_box{
+    font-size: 0;
+}
+.cetegory_box li{
+    width: 25%;
+    float: left;
+    font-size: 13px;
+    margin-right: 7%;
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+}
+.cetegory_box li:nth-child(3n){
+    margin-right: 0;
+}
+.cetegory_box li:nth-child(3n+1){
+    clear:left;
+}
+.icon-box{
+    line-height: 40px;
+    text-align: center;
+}
+.title{
+    color: #767676;
+}
+.disport_select{
+    text-align: left;
+}
+.checkbox-fancy{
+    margin-bottom: 0;
+}

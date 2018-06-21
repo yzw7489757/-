@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Amazon.com: Sell Online with Selling on Amazon</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/register.css" />
+    </head>
+    <body>
+        <div class="as-header">
+            <header>
+                <a href="###" class="as-logo">
+                    <img src="img/as_logo.png" style="width:100%;"/>
+                </a>
+            </header>
+        </div>
+        <div class="banner_box">
+            <div class="back_img"></div>
+            <div class="banner_drop"></div>
+            <div class="word_back">
+                <p class="heading color-white">
+                    "<span>
+                        <span class='color-orange'>Over 40%</span>
+                        <span> of our profits come from selling on Amazon.</span>
+                    </span>"
+                </p>
+                <p class="box_middle">
+                    <span class='font-size-regular color-white'>
+                        Fernando Aguerrevere<br />
+                        CEO & Partner, Hot Chocolate Design
+                    </span>
+                </p>
+                <div class="box_middle">
+                    <div class="button_box">
+                        <a href="login.html" class="cta-button color-white">Start selling</a>
+                    </div>
+                    <p>
+                        <span class='font-size-small color-white'>$39.99 a month + additional selling fees</span>
+                    </p>
+                </div>
+                <div class="box_middle box_bottom">
+                    <p class="word_right">
+                        <span class='color-white'>
+                            Tattoo Mary Jane Shoes <br />by Hot Chocolate Design
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <nav class='footer_nav2'></nav>
+            <nav class='footer_nav'>
+                <a class="footer-logo">
+                    <img src="img/AS_REV._V287027702_.png" alt="Amazon Services" title="Amazon Services" width="140">
+                </a>
+                <a href="" class="footer-link">See All Solutions</a>
+                <hr class="divider">
+                <a href="" class="footer-link">Privacy Policy</a>
+                <hr class="divider">
+                <a href="" class="footer-link">Terms & Conditions</a>
+                <hr class="divider">
+                <a href="" class="footer-link">Linked In</a>
+                <hr class="divider">
+                <a href="" class="footer-link">Twitter</a>
+                <hr class="divider">
+                <a href="" class="footer-link">Facebook</a>
+                <p class="color-white">© 2018, Amazon Services LLC. All Rights Reserved. An Amazon Company</p>
+            </nav>
+        </footer>
+    </body>
+</html>

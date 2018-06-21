@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Amazon Password Assistance</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/login_public.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+    </head>
+    <body>
+        <div class="a-section a-padding-medium auth-workflow">
+            <div class="a-section a-spacing-none auth-navbar">
+                <div class="a-section a-spacing-medium a-text-center">
+                    <img src="img/SellerCentral_Bliss._CB379405384_.png" alt="Amazon Seller Central">
+            </div>
+            </div>
+            <div id="authportal-center-section">
+                <div id="authportal-main-section">
+                    <div class="auth-pagelet-container">
+                        <div class="a-spacing-base">
+                            <div class="a-box">
+                                <div class="a-box-inner a-padding-extra-large">
+                                    <h1 class="a-spacing-small">
+                                        Check your email
+                                    </h1>
+                                    <p> You will receive an email from us with instructions for resetting your password. If you don't receive this email, please check your junk mail folder or visit our Help pages to contact <a href="###">Customer Service</a> for further assistance.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a-section a-spacing-top-extra-large auth-footer">
+                <div class="a-divider a-divider-section">
+                    <div class="a-divider-inner"></div>
+                </div>
+                <div class="a-section a-spacing-small a-text-center a-size-mini">
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">我要开店</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">亚马逊物流</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">Amazon Payments</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">亚马逊广告</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">在欧洲销售</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">在日本销售</a>
+                    <span class="auth-footer-seperator"></span>
+                    <a href="" class="a-link-normal" target="_blank">帮助</a>
+                    <span class="auth-footer-seperator"></span>
+                </div>
+                <div class="a-section a-spacing-none a-text-center">
+                    <span class="a-size-mini a-color-secondary">
+                         © 1996-2018, Amazon.com, Inc. or its affiliates
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
