@@ -10,7 +10,15 @@
     min-width: 300px;
     z-index: 100;
     height: 45px;
-}    
+}  
+#sc-masthead{
+    position: relative;
+}
+#sc-logo-top{
+    position: relative;
+    left:0;
+    top:0;
+}
 #sc-logo-top img{
 	width:165px;
 	height:34px;
@@ -19,7 +27,7 @@
     padding-top: 6px;
 }
 #sc-navtabs{
-	overflow:hidden;
+    overflow:hidden;
 	height: 38px;
 	float:left;
 	width:355px ;
@@ -126,10 +134,25 @@
     border-right: 1px solid #999;
     padding-right: 5px;
 }
+@media screen and (max-width: 1296px) {
+    body {
+        background-color:lightblue;
+    }
+    #sc-navtabs{
+        position: absolute;
+        top:45px;
+    }
+    .container{
+    	margin-top: 45px;
+    }
+    .clearable{
+    	height:81px;
+    }
+}
 #nav_right{
-	width: 60%;
-	height: 100%;
-	max-width: 700px;
+    overflow: hidden;
+    height: 100%;
+    width: 696px;
 	float:right;
 }
 .pd05{
@@ -184,11 +207,9 @@
 	
 }
 #sc-global-search-form>input:focus{
-	outline: none;
-    border-color: transparent;  
+	/* outline: medium; */
+    /* border-color: transparent;   */
     box-shadow:none;
-	background:#77bc1f;
-	color:#fff;
 }
 #sc-global-search-form>div{
 	height:24px;
@@ -219,4 +240,178 @@
     text-decoration: none;
     font-weight: bold;
     color: #5c5c5c;
+}
+.container-fluid h3{
+	font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+    color: #c45500 !important;
+    text-align: left!important;
+    margin-top: 18px!important;
+}
+.container-fluid{
+	margin-top: 20px;
+}
+.container_content{
+	overflow: hidden;
+	padding-bottom: 18px;
+	height: 552px;
+}
+.box{
+	margin-top:18px;
+	border-radius: 4px;
+	border:1px solid #ddd;
+	background-color:#fff;
+}
+.a-text-left{
+	text-align:left !important;
+}
+h5{
+	font-size: 13px;
+	line-height: 19px;
+	font-weight: 700;
+}
+.a-padding-small{
+	padding:6px 10px !important;
+}
+.fl{
+	float:left;
+}
+table:last-child{
+	margin-bottom: 0 !important;
+}
+table{
+	width:100%;
+	border-collapse: collapse;
+}
+.fr{
+	float:right;
+}
+table tr td a{
+	color:#0066c0;
+	text-decoration: none;
+	font-weight: 700;
+}
+.width50{
+	width: 50%;
+}
+.a-text-right{
+	text-align: right !important;
+}
+.box_header{
+	border-radius: 4px 4px 0 0;
+	overflow: hidden;
+    background-color: #fff;
+    background-image: linear-gradient(rgb(248, 248, 248), rgb(238, 238, 238));
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;padding:0;
+}
+.box_content{
+	border-top: 1px solid #ddd;
+}
+.pdleft20{
+	padding-left:20px;
+}
+.content_center .box_content table {
+	margin-top: 6px;
+}
+.content_center .box_content table td a{
+	font-weight: 300 !important;
+}
+.content_center .box_content table td a:hover{
+	    text-decoration: underline;
+    cursor: pointer;
+    color: #c45500;
+}
+.content_question ul {
+	overflow: hidden;
+	position: relative;
+    padding: 14px 18px;
+}
+.pd0{
+	padding:0 !important;
+}
+.question ul li{
+	    margin-bottom: 22px;
+}
+.other_opt ul li{
+	margin-bottom:12px;
+}
+.other_opt ul li a{
+	text-decoration: none !important;
+	}
+.content_question ul li a{
+	text-decoration:underline;
+	font-weight: 700;
+	font-size:11px;
+}
+.content_question ul li a:hover{
+	cursor: pointer;
+    color: #c45500;
+}
+.box_content>table>tbody>tr>td:first-child{
+	font-weight:700;
+	font-size:13px;
+	line-height:19px;
+	vertical-align: top;
+}
+.pdleft10{
+	padding-left: 10px;
+}
+.box_content>table>tbody>tr>td:last-child{
+	font-size:13px;
+	line-height:19px;
+	padding-bottom:10px;
+}
+.float_left{
+	float: left;
+}
+.float_right{
+	float:right
+}
+.sc_footer{
+	overflow: hidden;
+    width: 100%;
+    height: 71px;
+    padding-top: 18px;
+    border-top: 1px solid #e7e7e7;
+    padding: 18px 2.5% 14px;
+    border-top: 1px solid #ddd;
+    margin-top: 44px;
+    margin-bottom: 0;
+    background: #f3f3f3;
+}
+.container_left{
+	overflow: hidden;
+	
+}
+.container_left>li{
+	float: left;
+	margin-right: 20px;
+	text-decoration: none;
+    border-right: 1px solid #e7e7e7;
+}
+.container_left>li>a{
+	color: #0066c0;
+	font-size: 13px;
+}
+.container_left>li>a:hover{
+	color:red;
+}
+.container_right{
+	overflow: hidden;
+	
+}
+.container_right>li{
+	float: left;
+	margin-right: 20px;
+	border-right: 1px solid #e7e7e7;	
+}
+.container_right>li>a{
+	color: #aaa;
+	font-size: 13px;
+}
+.container_right>li>a:hover{
+	color:red;
 }
