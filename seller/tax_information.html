@@ -105,9 +105,7 @@
                             <a href="" class="foot-link">Get support</a>
                             <a href="" class="foot-link">Policies and Agreements</a>
                             <div class="languageSwitcherDropdown a-section">
-                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher'>
-                                    <option value="en">English</option>
-                                    <option value="cn">中文</option>
+                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
                                 </select>
                             </div>
                         </div>
@@ -124,6 +122,7 @@
         </div>
     </body>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
     <script type="text/javascript">
         var margin_top = $(window).height() - $('.spacing-top-base').offset().top -  $('.spacing-top-base').height() - $(".footer").height();
         $('.footer').css('margin-top', margin_top);   

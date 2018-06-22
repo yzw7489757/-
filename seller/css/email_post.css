@@ -1,0 +1,38 @@
+*{padding: 0;margin: 0;}
+.email_box{
+    width: 41.2%;
+    padding: 20px;
+}
+body{
+    font-family: "lucida Grande",Verdana,"Microsoft YaHei";
+    font-size: 14px;
+    color:#000;
+}
+a, a:link{
+    color: #0F0FFF;
+    text-decoration: underline;
+}
+ul li{
+    list-style: disc;
+    margin-left: 20px;
+}
+.space{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ol li{
+    list-style-type:decimal;
+    margin-left: 20px;
+}
+.satisfaction a{
+    width: 63px;
+    height: 32px;
+    border:1px solid #1F1F79;
+    border-radius: 6px;
+    line-height: 32px;
+    text-align: center;
+    background: #FDE9AC;  
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+}

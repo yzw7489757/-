@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>您的账户是否符合条件</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_identity_verification.css" />
+    </head>
+    <body>
+        <div class="content-container">
+            <div class="content-width">
+                <h1 class="saw-module-header">
+                    卖家身份验证
+                </h1>
+                <div class="saw-module-container">
+                    <span>您正在请求批准注册。</span>
+                </div>
+                <div id="saw-module-incomplete-message" class="alert-error-tip hidden">
+                    <div class="alert-error-container">
+                        <h4 class="alert-heading">您的销售申请不完整。</h4>
+                        <i class="a-icon icon-alert-tip"></i>
+                        <div class="alert-error-content">
+                            请填写必填条目，然后再次提交。
+                        </div>
+                    </div>
+                </div>
+                <div class="saw-module-wrapper a-section">
+                    <h3 class="saw-module-header">
+                        请告诉我们您的业务情况
+                    </h3>
+                    <div class="saw-module-container" id="questionnaireDiv">
+                        <div id="questionnaire">
+                            <div id='myq_select_country_question'>
+                                <span class="myq-question">请选择您所在的国家/地区</span>
+                                <div class="myq-option-list-div">
+                                    <div class="button-dropdown">
+                                        <div class="button-inner">
+                                            <span>中国</span>
+                                            <i class="a-icon icon-dropdown"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myq_registration_individual_or_business" class="myq-questionnaire-div">
+                                <span class="myq-question">您是个人还是公司？</span>
+                                <div class="myq-option-list-div">
+                                    <div class="myq-option a-radio">
+                                        <label>
+                                            <input type="radio" name="individual_or_business" checked/>
+                                            <span class="a-radio-label">个人</span>
+                                        </label>
+                                    </div>
+                                    <div class="myq-option a-radio">
+                                        <label>
+                                            <input type="radio" name="individual_or_business" disabled/>
+                                            <span class="a-radio-label">公司</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionnaire-input">
+                    <div class="a-span9">
+                        <div class="saw-module-wrapper">
+                            <h3 class="saw-module-header">提交所需资质文档</h3>
+                            <div class="a-section saw-module-container">
+                                <div class="doc-upload-section a-section">
+                                    <span class="myq-application-radio-doc">1 份提供了身份证的文件</span>
+                                    <div id="container-dnd-ni--individual" class="myq-application-form-radio-expander">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">文档必须满足以下要求：</span>
+                                            <ul id="requirements-content-ni" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">提交政府签发的居民身份证两面的彩色扫描副本，并将它们合并到一个文件中。请勿提交屏幕截图。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">复印件应该清晰可读。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">您的身份证明文件必须为以下语言之一：中文、英语、法语、德语、意大利语、日语、葡萄牙语或西班牙语。如果不是其中任何一种语言，请提供您的护照或公证翻译成其中一种语言的身份证明文件。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">身份证上的姓名应与您注册的亚马逊账户上的名称一致。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">居民身份证上的地址应与您的注册亚马逊账户上的地址完全匹配。如果您需要更改亚马逊账户上的地址，请先按照<a href="###" target="_blank">此处</a>的说明进行操作，然后再提交此申请。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">身份证不应过期。</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-required-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            请提供此部分的必要文件
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-individual" class="document-upload-container">
+                                                <span class="dnd-text">将文件拖拽到此处</span>
+                                                <br />
+                                                或
+                                                <br />
+                                                <button class="select-files-button button-inner">选择文件</button>
+                                                <br />
+                                                <span class="text-span-supported-files">文件类型：pdf、doc、png、gif、jpg</span>
+                                            </div>
+                                            <div id="file-list-dnd-ni--individual" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-ni--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-ni--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-ni--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">删除</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    可选
+                                                </span>
+                                                <span class="a-text-bold">备注 </span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-comments">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="doc-upload-section a-section">
+                                    <b style="line-height: 3;">请从下方选择一种文档类型：</b>
+                                    <div id="credit_card">
+                                        <label>
+                                            <input type="radio" name="radio-documents" id="radio-button-cc--individual" />
+                                            <span class="a-radio-label">1份信用卡对账单</span>
+                                        </label>
+                                    </div>
+                                    <div id="container-dnd-cc--individual" class="myq-application-form-radio-expander myq-option hidden">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">文档必须满足以下要求：</span>
+                                            <ul id="requirements-content-cc" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">您可以隐藏货币金额，但文件的其他部分必须可见。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">信用卡对账单上的姓名应与政府签发的居民身份证上的姓名相匹配。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">信用卡对账单必须是在过去90天内发出的。</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-cc-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            请提供此部分的必要文件
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-cc--individual" class="document-upload-container">
+                                                <span class="dnd-text">将文件拖拽到此处</span>
+                                                <br />
+                                                或
+                                                <br />
+                                                <button class="select-files-button button-inner">选择文件</button>
+                                                <br />
+                                                <span class="text-span-supported-files">文件类型：pdf、doc、png、gif、jpg</span>
+                                            </div>
+                                            <div id="file-list-dnd-cc--individual" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-cc--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-cc--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-cc--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">删除</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    可选
+                                                </span>
+                                                <span class="a-text-bold">备注 </span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-cc">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="bank_account">
+                                        <label>
+                                            <input type="radio" name="radio-documents" id="radio-button-bas--individual" />
+                                            <span class="a-radio-label">1银行账户对账单</span>
+                                        </label>
+                                    </div>
+                                    <div id="container-dnd-bas--individual" class="myq-application-form-radio-expander myq-option hidden">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">文档必须满足以下要求：</span>
+                                            <ul id="requirements-content-bas" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">您可以隐藏货币金额，但文件的其他部分必须可见。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">您的证明文件必须为以下语言之一：中文、英语、法语、德语、意大利语、日语、葡萄牙语或西班牙语。如果不是其中任何一种语言，请提供公证翻译成其中一种语言的身份证明文件。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">银行账户对账单上的公司名称应与您注册的亚马逊账户上的名称一致。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">银行账户对账单上的地址应与您注册的亚马逊账户上的地址一致。</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">银行账户对账单必须是在过去 90 天内发出的。</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-bas-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            请提供此部分的必要文件
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-bas--individual" class="document-upload-container">
+                                                <span class="dnd-text">将文件拖拽到此处</span>
+                                                <br />
+                                                或
+                                                <br />
+                                                <button class="select-files-button button-inner">选择文件</button>
+                                                <br />
+                                                <span class="text-span-supported-files">文件类型：pdf、doc、png、gif、jpg</span>
+                                            </div>
+                                            <div id="file-list-dnd-bas--individual-table" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-bas--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-bas--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-bas--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">删除</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    可选
+                                                </span>
+                                                <span class="a-text-bold">备注 </span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-bas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-span9">
+                    <div class="a-section saw-module-wrapper">
+                        <h3 class="saw-module-header">提供联系方式</h3>
+                        <div class="saw-module-container">
+                            <div id="myq-application-form-contact-info-email" class="myq-application-form-contact-info">
+                                <div class="myq-application-form-text-input-heading">
+                                    <span class="a-text-bold">
+                                        电子邮件地址
+                                    </span>
+                                    最好通过电子邮件与您联系以交流问题
+                                </div>
+                                <div class='myq-application-form-text-input-container'>
+                                    <input type="text" maxlength="90" id="myq-application-form-email-input" placeholder="请使用逗号分隔电子邮件地址" name="emails" class="a-input-text">
+                                </div>
+                                <div id="myq-required-email-address-error" class="hidden">
+                                    <div class="a-alert-inline a-alert-inline-error">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content">
+                                                请提供有效的电子邮件地址。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myq-application-form-contact-info-phone" class="myq-application-form-contact-info">
+                                <div class="myq-application-form-text-input-heading">
+                                    <span class="myq-application-form-optional a-text-bold">
+                                        可选
+                                    </span>
+                                    <span class="a-text-bold">
+                                         电话
+                                    </span>
+                                    出现问题时联系您的电话号码 
+                                </div>
+                                <div class='myq-application-form-text-input-container space-none'>
+                                    <input type="text" maxlength="30" id="myq-application-form-phone-input" name="phone" class="a-input-text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit_box">
+                    <div id="myq-application-form-button-container-spacing">
+                        <div id="button_container_without_ack">
+                            <button class="button-dropdown button-text" id="button-save-draft-category">保存草稿</button>
+                            <button class="button-text button-primary">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_identity_verification.js"></script>
+</html>

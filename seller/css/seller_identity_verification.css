@@ -1,0 +1,251 @@
+.content-width{
+    width: 74.448%;
+    padding-left: 18px;
+}
+body {
+    font-family: 'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif;
+    font-size: 13px;
+}
+.a-section {
+    margin-bottom: 22px;
+}
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+}
+h1.saw-module-header {
+    padding-top: 22px;
+    margin-bottom: 22px;
+}
+.saw-module-container{
+    padding-left: 22px;
+}
+.alert-error-tip{
+    margin-top: 10px;
+    border:1px solid #c40000;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.alert-error-container{
+    background-color: #fff;
+    box-shadow: 0 0 0 4px #fcf4f4 inset;
+    border-radius: 4px;
+    position: relative;
+    padding: 14px 18px;
+    padding-left: 63px;
+    width: 100%;
+}
+.alert-heading{
+    color: #c40000;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.255;
+    padding-bottom: 4px;
+}
+.icon-alert-tip{
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+    background-position: -248px -35px;
+}
+.alert-error-content{
+    font-size: 13px;
+}
+.saw-module-header {
+    padding-bottom: 18px;
+    padding-top: 30px;
+}
+.myq-option-list-div{
+    padding-top: 14px;
+}
+.button-dropdown{
+    width: 65px;
+    height: 30px;
+    background: #eff1f3;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+.button-dropdown:hover {
+    border-color: #a2a6ac #979aa1 #82858a;
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+}
+.button-inner{
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+    padding: 0 26px 0 11px;
+    line-height: 30px;
+}
+.button-inner:hover {
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+}
+.icon-dropdown{
+    width: 11px;
+    height: 10px;
+    background-position: -7px -60px;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+.myq-questionnaire-div{
+    padding-top: 30px;
+}
+.a-radio-label{
+    padding-left: 5px;
+}
+.a-radio label,#credit_card label,#bank_account label{
+    position: relative;
+    margin-left: 3px;
+    top: -2px;
+}
+.myq-option {
+    padding-bottom: 10px;
+}
+input[type=radio] {
+    height: 14px;
+    width: 14px;
+    vertical-align: top;
+    position: relative;
+    bottom: -3px;
+}
+.a-span9{
+    width: 74.27813%;
+}
+.myq-application-form-radio-expander {
+    padding-left: 40px;
+    padding-top: 13px;
+}
+.a-text-bold {
+    font-weight: 700!important;
+}
+.a-unordered-list{
+    margin-left: 18px;
+}
+.a-unordered-list li{
+    line-height: 20px;
+    list-style: disc;
+}
+.a-alert-inline-error .a-alert-container {
+    padding-left: 16px;
+    color: #c40000;
+}
+.a-box-inner {
+    border-radius: 4px;
+    position: relative;
+}
+.a-alert-inline .a-alert-container .a-alert-content {
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+}
+.a-alert-inline .a-icon-alert {
+    top: 0;
+}
+#myq-required-documents-error{
+    margin-top: 5px;
+}
+.file-list-dnd-ni--individual{
+    height: 13px;
+}
+.document-upload-container{
+    height: 128px;
+    width: 530px;
+    background-image: url(../img/dnd.png);
+    padding-top: 20px;
+    text-align: center;
+}
+.dnd-text{
+    font-weight: 700;
+    color: #000;
+}
+.select-files-button{
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    line-height: 22px;
+    height: 22px;
+    width: 100px;
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+}
+.text-span-supported-files {
+    color: #aaa;
+    line-height: 30px;
+}
+.myq-application-form-document-comments-container{
+    padding-top: 5px;
+}
+.myq-application-form-optional {
+    color: #999;
+}
+.file-list {
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+.file-list-box-group{
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+.flie-box-inner{
+    padding: 14px 18px;
+}
+.file-remove{
+    cursor:pointer;
+}
+.myq-application-form-contact-info{
+    margin-bottom: 20px;
+}
+.myq-application-form-text-input-container {
+    padding-top: 10px;
+    width: 500px;
+}
+.space-none{
+    margin-bottom: 0;
+}
+#myq-application-form-button-container-spacing {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 22px;
+}
+.button-text{
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+.button-primary{
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    height: 30px;
+    border-radius: 3px;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-style: solid;
+    border-width: 1px;
+    cursor:pointer;
+}
+.button-primary:hover{
+    background: linear-gradient(to bottom,#f5d78e,#eeb933);
+}
+.hidden{
+    display:none;
+}
