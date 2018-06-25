@@ -85,7 +85,11 @@ tbody tr {
 }
 
 #sc-navtabs {
+<<<<<<< HEAD
     /* overflow: hidden; */
+=======
+    overflow: hidden;
+>>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
     height: 38px;
     float: left;
     width: 355px;
@@ -100,7 +104,11 @@ tbody tr {
 }
 
 #sc-navtabs>ul {
+<<<<<<< HEAD
     /* overflow: hidden; */
+=======
+    overflow: hidden;
+>>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
     float: left;
 }
 
@@ -126,6 +134,7 @@ tbody tr {
 
 #sc-navtabs>ul>li {
     float: left;
+<<<<<<< HEAD
     position: relative;
 }
 
@@ -140,7 +149,14 @@ tbody tr {
 }
 .hide{
     display: none
+=======
 }
+
+.sc-sub-nav {
+    display: none;
+>>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
+}
+
 #sc-masthead * {
     font-family: Arial, Helvetica, sans-serif;
     -moz-box-sizing: border-box;

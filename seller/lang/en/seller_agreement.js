@@ -2,8 +2,6 @@
     head: {
         title: "Seller agreement"
     },
-    Settings:"Settings",
-    Logout:"Logout",
     body:{
         Agreement:"Seller agreement",
         Information:"Seller Information",
@@ -27,11 +25,6 @@
         Checkbox:"I have read and accepted the terms and conditions of the",
         CheckboxLink:" Amazon Services Business Solutions Agreement ",
         International:"If you are an international seller, read",
-        InternationalLink:" this important information",
-        Next:"next",
-        Rate:"Rate this page",
-        Support:"Get support",
-        Policies:"Policies and Agreements",
-        Inc:"© 1999-2018, Amazon.com, Inc. or its affiliates"
+        InternationalLink:" this important information"
     }
 }
