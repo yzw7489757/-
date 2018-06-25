@@ -14,13 +14,15 @@
 	<link rel="stylesheet" type="text/css" href="./css/iconfont.css" />
 	<link rel="stylesheet" type="text/css" href="./css/iconfont2.css" />
 	<link rel="stylesheet" type="text/css" href="./css/account_information.css" />
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/webjs/account_information.js"></script>
 </head>
 
 <body>
 	<header id="sc-masthead" class="clearable">
 		<div id="sc-logo-top">
 			<a href="//sellercentral.amazon.com/gp/homepage.html/ref=id_home_logo_xx" title="主页">
-				<img src="https://images-na.ssl-images-amazon.com/images/G/01/rainier/nav/sc-unified._CB341165134_.png" id="sc_logo_top_image"
+				<img src"https://images-na.ssl-images-amazon.com/images/G/01/rainier/nav/sc-unified._CB341165134_.png" id="sc_logo_top_image"
 				    border="0" class="sc-unified" />
 			</a>
 		</div>
@@ -103,6 +105,15 @@
 				<a class="sc-ql-a">帮助</a>
 				<em>|</em>
 				<a class="sc-ql-a">设置</a>
+				<ul>
+					<li><a href="#">111111</a></li>
+					<li><a href="#">1111111</a></li>
+					<li><a href="#">111111</a></li>
+					<li><a href="#">11111111111111</a></li>
+					<li><a href="#">111111111111</a></li>
+					<li><a href="#">1111111111</a></li>
+					<li><a href="#">111111111</a></li>	
+				</ul>
 			</div>
 			<div class="nav_right_opt " id="sc-global-search-form">
 				<div class="sc-global-search-input">
@@ -461,11 +472,17 @@
 		<footer class="sc_footer">
 			<ul class="float_left container_left">
 				<li>
-					<a href="">为此页评级</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+					<a href="javascript:void(0);" onclick="aaa()" id="what" >为此页评级</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 				<li>
 					<a href="">获得支持</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 				<li>
 					<a href="">政策和协议</a>
+				</li>
+				<li>
+					<select name="" value="1" id="selectlang">
+						<option value="1">中文</option>
+						<option value="2">英文</option>
+					</select>
 				</li>
 			</ul>
 			<ol class="float_right container_right">
@@ -477,6 +494,8 @@
 			</ol>
 		</footer>
 	</div>
+
+
 
 </body>
 
