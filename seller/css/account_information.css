@@ -85,11 +85,7 @@ tbody tr {
 }
 
 #sc-navtabs {
-<<<<<<< HEAD
     /* overflow: hidden; */
-=======
-    overflow: hidden;
->>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
     height: 38px;
     float: left;
     width: 355px;
@@ -104,11 +100,7 @@ tbody tr {
 }
 
 #sc-navtabs>ul {
-<<<<<<< HEAD
     /* overflow: hidden; */
-=======
-    overflow: hidden;
->>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
     float: left;
 }
 
@@ -134,29 +126,51 @@ tbody tr {
 
 #sc-navtabs>ul>li {
     float: left;
-<<<<<<< HEAD
     position: relative;
 }
 
 .sc-sub-nav {
-    /* display: none; */
+    display: none; 
     position: absolute;
-    top: 35px;
-    left: 0;
+    left:0;
+    top:35px;
+    padding: 2px 0;
+    background-color: #fff;
+    border-top: 3px solid #333;
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 }
-.show{
-    diaplay:block;
-}
-.hide{
-    display: none
-=======
-}
+.sc-sub-nav>li{
+    white-space: nowrap;
+    display: block;
+    margin: 0 3px;
+    padding: 1px 0;
+    background-image: none;
+    padding-left: 5px;
 
-.sc-sub-nav {
-    display: none;
->>>>>>> aa7af92cad217fc0a2e5683194a69b5b4f8e5802
 }
-
+.sc-sub-nav>li>a{
+    color: #333;
+    display: block;
+    padding: 7px 6px;
+}
+.sc-nav-arrow{
+    display: block;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    margin-left: -6px;
+    bottom: 0;
+    height: 0;
+    padding: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #333;
+    z-index: 102;
+    opacity: 0;
+    visibility: hidden;
+}
 #sc-masthead * {
     font-family: Arial, Helvetica, sans-serif;
     -moz-box-sizing: border-box;
@@ -180,7 +194,7 @@ tbody tr {
 }
 
 .sc-level1 .sc-tab-a {
-    display: inline-block;
+    display: block;
     padding: 17px 0 18px;
     text-decoration: none;
     font-weight: bold;
@@ -305,9 +319,9 @@ tbody tr {
 
 }
 #nav_right {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
-/*width: 741px;*/
+    /*width: 741px;*/
     float: right;
 }
 
@@ -412,8 +426,13 @@ tbody tr {
     text-decoration: none;
     font-weight: bold;
     color: #5c5c5c;
+    position: relative;
 }
-
+.sc-sub-nav-right{
+    position: absolute;
+    right: 0;
+    top:35px;
+}
 .a-container h3 {
     font-weight: 700;
     font-size: 17px;
