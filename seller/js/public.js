@@ -1,4 +1,4 @@
-﻿var inputctr = {};
+﻿﻿var inputctr = {};
 inputctr.public = {};
 //亚马逊请求接口
 var BaseUrl='http://192.168.2.168:8006/QAMZN.asmx';
