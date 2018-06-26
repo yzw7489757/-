@@ -15,13 +15,15 @@
 	<link rel="stylesheet" type="text/css" href="./css/iconfont.css" />
 	<link rel="stylesheet" type="text/css" href="./css/iconfont2.css" />
 	<link rel="stylesheet" type="text/css" href="./css/account_information.css" />
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/webjs/account_information.js"></script>
 </head>
 
 <body>
 	<header id="sc-masthead" class="clearable">
 		<div id="sc-logo-top">
 			<a href="//sellercentral.amazon.com/gp/homepage.html/ref=id_home_logo_xx" title="主页">
-				<img src="https://images-na.ssl-images-amazon.com/images/G/01/rainier/nav/sc-unified._CB341165134_.png" id="sc_logo_top_image"
+				<img src "https://images-na.ssl-images-amazon.com/images/G/01/rainier/nav/sc-unified._CB341165134_.png" id="sc_logo_top_image"
 				    border="0" class="sc-unified" />
 			</a>
 		</div>
@@ -571,7 +573,10 @@
 				<li>
 					<a href="javascript:void(0);" id="getSurport">获得支持</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 				<li>
-					<a href="javascript:void(0);">政策和协议</a>
+					<select name="" value="1" id="selectlang">
+						<option value="1">中文</option>
+						<option value="2">英文</option>
+					</select>
 				</li>
 				<li>
 					<select name="" value="1" id="selectlang">
@@ -610,7 +615,7 @@
 						<div id="spaui-search">
 							<input type="text" id="spaui-search-box" class="spaui-search-box" placeholder="搜索" autocomplete="off">
 							<div id="spaui-search-suggestions" class="spaui-search-suggestions" data-tools-title="工具" data-history-title="热门搜索" data-ngram-title="热门搜索"
-							  data-merged-title="热门搜索" data-help-title="帮助" data-autohelp-title="帮助" data-previous-title="历史记录" style="width: 275px; top: 25px;">
+							    data-merged-title="热门搜索" data-help-title="帮助" data-autohelp-title="帮助" data-previous-title="历史记录" style="width: 275px; top: 25px;">
 								<div id="spaui-search-suggestions-list"></div>
 							</div>
 						</div>
@@ -618,14 +623,22 @@
 					<li id="spaui-head-controls-close-affordance" class="spaui-head-controls-close-affordance" style="display:none;">
 						<a href="#" id="spaui-close-affordance" class="spaui-sprite spaui-close-affordance" title="关闭"></a>
 					</li>
-					<li class="spaui-head-controls-close spaui-head-icon" role="menuitem"><a href="#" id="spaui-close" class="spaui-sprite spaui-close" title="关闭"></a></li>
+					<li class="spaui-head-controls-close spaui-head-icon" role="menuitem">
+						<a href="#" id="spaui-close" class="spaui-sprite spaui-close" title="关闭"></a>
+					</li>
+				</ul>
 			</li>
+			<li>主题内容</li>	
 
-
-			</ul>
-			</li>
 
 		</ul>
+	</div>
+
+
+	</ul>
+	</li>
+
+	</ul>
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>

@@ -362,8 +362,9 @@ tbody tr {
     float: right;
     height: 100%;
     line-height: 45px;
+    position: relative;
 }
-.nav_right_opt>ul{
+.nav_right_opt ul{
     position: absolute;
     right: 0;
     top: 35px;
@@ -771,10 +772,6 @@ a:-webkit-any-link {
 .container_right>li>a:hover {
     color: red;
 }
-
-
-
-
 
 
 #spaui{
