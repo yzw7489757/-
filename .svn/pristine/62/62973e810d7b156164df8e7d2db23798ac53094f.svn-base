@@ -1,4 +1,3 @@
-<<<<<<< .mine
 ﻿var inputctr = {};
 inputctr.public = {};
 //亚马逊请求接口
@@ -17,387 +16,37 @@ var store_id='';
 var traintype='';
 $(function(){
 	inputctr.public.catchError(); 
+    inputctr.public.LangShow();
     inputctr.public.LoadLang();
     inputctr.public.popover();
 })
 inputctr.public.LoadLang=function(){
-    $("#languageSwitcher").change(function(){ 
-        inputctr.public.setCookie("lang",$(this).val());
-        window.location.reload();
-    });
-}
-inputctr.public.LoadLang1=function(){
-    var  filename=location.href; 
-    filename=filename.substr(filename.lastIndexOf('/')+1);   
-    filename=filename.substring(0,filename.indexOf('.'));
-    var lang='en';
-    if(inputctr.public.getCookie('lang')){
-		lang=inputctr.public.getCookie('lang');
-	}
-    var js='/seller/lang/'+lang+'/'+filename+'.js';
-    jQuery.getScript(js)
-         .done(function () {
-            var arrKey=new Array(),arrValue=new Array();
-            function f(obj,path){
-                var keyPath=path;
-                for(var key in obj){
-                    path = keyPath+"_"+key;
-                    if(typeof obj[key]=="object"){
-                        f(obj[key],path)
-                    }else{
-                        //alert(path+':'+obj[key]);
-                        arrKey[arrKey.length]=path; 
-                        arrValue[arrValue.length]=obj[key];
-                        console.log(obj[key]);
-　　                }
-                }
-            }
-            var rootP='';
-            f(PageObject,rootP);
-            var html =$('head').html();
-            for(var i =0;i < arrKey.length;i++){ 
-                html = html.replace('{{'+arrKey[i]+'}}',arrValue[i]); 
-            } 
-            $('head').html(html);
-            
-            var html =$('body').html();
-            for(var i =0;i < arrKey.length;i++){ 
-                html = html.replace('{{'+arrKey[i]+'}}',arrValue[i]); 
-            } 
-            $('body').html(html);
-    });
-} 
-//设置cookie
-inputctr.public.setCookie=function(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	var expires = "expires=" + d.toUTCString(); 
-	document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-//获取cookie
-inputctr.public.getCookie=function(cname) {
-	var name = cname + "=";
-	var ca = document.cookie.split(';');
-	for(var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while(c.charAt(0) == ' ') c = c.substring(1);
-		if(c.indexOf(name) != -1) return c.substring(name.length, c.length);
-	}
-	return "";
-}
-//清除cookie
-inputctr.public.clearCookie=function(cname) {
-	this.setCookie(cname, "", -1);
-}
-
-//验证是否登录
-inputctr.public.checkLogin=function(){
-	if(!inputctr.public.getCookie('storeInfo')){
-		var recodeUrl=encodeURIComponent(window.location.href);
-		window.location.href="Login.html?rediect="+	recodeUrl;
-	}else{
-		store_id=inputctr.public.getCookie('storeInfo');
-	}
-}
-//js获取地址栏参数
-inputctr.public.getQueryString=function(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-		var r = window.location.search.substr(1).match(reg);
-		if(r != null) return unescape(r[2]);
-		return null;
-}
-//ajax请求出错返回错误信息
-inputctr.public.catchError=function(){
-	$( document ).ajaxError(function( event, request, settings) {
-		inputctr.alertError('Error',"Error requesting " + settings.url + ": " + request.status + " " + request.statusText);
-	  	inputctr.public.hideLoading();
-	});
-} 
-//邮编验证
-inputctr.public.ispostcode = function(num) {
-	var reNum = /^[1-9]\d{5}(?!\d)$/;
-	return(reNum.test(num))
-};
-
-//身份证验证
-inputctr.public.isidcard = function(num) {
-	var reNum = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
-	return(reNum.test(num))
-};
-
-//手机号码验证
-inputctr.public.ismobile = function(num) {
-	var reNum = /^1[3|4|5|7|8][0-9]{9}$/;
-	return(reNum.test(num))
-}
-//邮箱验证
-inputctr.public.isemail = function(num) {
-	var reNum = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-	return(reNum.test(num))
-};
-//数字验证
-inputctr.public.isNum = function(num) {
-	var reNum = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
-	return(reNum.test(num))
-};
-//中文名字验证
-inputctr.public.isChineseName = function(num) {
-	var reNum = /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{1,20}$/;
-	return(reNum.test(num))
-};
-//类型为 price
-inputctr.public.isPrice = function(num) {
-	var reNum = /^(\${0,1}[0-9]([0-9]+)?((\.[0-9]{1,2})?))$/;
-	return(reNum.test(num))
-};
-//类型为Integer
-inputctr.public.isInteger = function(num) {
-	var reNum = /^([0-9]([0-9]+)?)$/;
-	return(reNum.test(num))
-};
-//类型为Decimal
-inputctr.public.isDecimal = function(num) {
-	var reNum = /^([0-9]([0-9]+)?((\.[0-9]{1,2})?))$/;
-	return(reNum.test(num))
-};
-
-//日期格式化
-inputctr.formatTime=function(fmt,target){
-	//fmt为日期格式，target为转化的时间
-	var o = {  
-        "M+": target.getMonth() + 1, //月份   
-        "d+": target.getDate(), //日   
-        "H+": target.getHours(), //小时   
-        "m+": target.getMinutes(), //分   
-        "s+": target.getSeconds(), //秒   
-        "q+": Math.floor((target.getMonth() + 3) / 3), //季度   
-        "S": target.getMilliseconds() //毫秒   
-    };  
-    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (target.getFullYear() + "").substr(4 - RegExp.$1.length));  
-    for (var k in o)  
-    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
-    return fmt;  
-}
-||||||| .r18
-﻿var inputctr = {};
-inputctr.public = {};
-//亚马逊请求接口
-var BaseUrl='http://192.168.2.168:8006/QAMZN.asmx';
-//任务请求接口地址
-var TaskUrl='http://192.168.2.168:10000/CourseService.asmx';
-//派安盈请求接口地址
-var PayoneerUrl='http://192.168.2.168:9030/WishBind.aspx'; 
-//网上银行请求接口地址
-var BankUrl='http://192.168.2.168:9030/WishBind.aspx';
-var userid='';
-var account='';
-var TrainingID='';
-var studentID='';
-var store_id='';
-var traintype='';
-$(function(){
-	inputctr.public.catchError(); 
-    inputctr.public.LoadLang();
-    inputctr.public.popover();
-})
-inputctr.public.LoadLang=function(){
-    $("#languageSwitcher").change(function(){ 
-        inputctr.public.setCookie("lang",$(this).val());
-        window.location.reload();
-    });
-}
-inputctr.public.LoadLang1=function(){
-    var  filename=location.href; 
-    filename=filename.substr(filename.lastIndexOf('/')+1);   
-    filename=filename.substring(0,filename.indexOf('.'));
-    var lang='en';
-    if(inputctr.public.getCookie('lang')){
-		lang=inputctr.public.getCookie('lang');
-	}
-    var js='/seller/lang/'+lang+'/'+filename+'.js';
-    jQuery.getScript(js)
-         .done(function () {
-            var arrKey=new Array(),arrValue=new Array();
-            function f(obj,path){
-                var keyPath=path;
-                for(var key in obj){
-                    path = keyPath+"_"+key;
-                    if(typeof obj[key]=="object"){
-                        f(obj[key],path)
-                    }else{
-                        //alert(path+':'+obj[key]);
-                        arrKey[arrKey.length]=path; 
-                        arrValue[arrValue.length]=obj[key];
-                        console.log(obj[key]);
-　　                }
-                }
-            }
-            var rootP='';
-            f(PageObject,rootP);
-            var html =$('head').html();
-            for(var i =0;i < arrKey.length;i++){ 
-                html = html.replace('{{'+arrKey[i]+'}}',arrValue[i]); 
-            } 
-            $('head').html(html);
-            
-            var html =$('body').html();
-            for(var i =0;i < arrKey.length;i++){ 
-                html = html.replace('{{'+arrKey[i]+'}}',arrValue[i]); 
-            } 
-            $('body').html(html);
-    });
-} 
-//设置cookie
-inputctr.public.setCookie=function(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	var expires = "expires=" + d.toUTCString(); 
-	document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-//获取cookie
-inputctr.public.getCookie=function(cname) {
-	var name = cname + "=";
-	var ca = document.cookie.split(';');
-	for(var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while(c.charAt(0) == ' ') c = c.substring(1);
-		if(c.indexOf(name) != -1) return c.substring(name.length, c.length);
-	}
-	return "";
-}
-//清除cookie
-inputctr.public.clearCookie=function(cname) {
-	this.setCookie(cname, "", -1);
-}
-
-//验证是否登录
-inputctr.public.checkLogin=function(){
-	if(!inputctr.public.getCookie('storeInfo')){
-		var recodeUrl=encodeURIComponent(window.location.href);
-		window.location.href="Login.html?rediect="+	recodeUrl;
-	}else{
-		store_id=inputctr.public.getCookie('storeInfo');
-	}
-}
-//js获取地址栏参数
-inputctr.public.getQueryString=function(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-		var r = window.location.search.substr(1).match(reg);
-		if(r != null) return unescape(r[2]);
-		return null;
-}
-//ajax请求出错返回错误信息
-inputctr.public.catchError=function(){
-	$( document ).ajaxError(function( event, request, settings) {
-		inputctr.alertError('Error',"Error requesting " + settings.url + ": " + request.status + " " + request.statusText);
-	  	inputctr.public.hideLoading();
-	});
-} 
-//邮编验证
-inputctr.public.ispostcode = function(num) {
-	var reNum = /^[1-9]\d{5}(?!\d)$/;
-	return(reNum.test(num))
-};
-
-//身份证验证
-inputctr.public.isidcard = function(num) {
-	var reNum = /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
-	return(reNum.test(num))
-};
-
-//手机号码验证
-inputctr.public.ismobile = function(num) {
-	var reNum = /^1[3|4|5|7|8][0-9]{9}$/;
-	return(reNum.test(num))
-}
-//邮箱验证
-inputctr.public.isemail = function(num) {
-	var reNum = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-	return(reNum.test(num))
-};
-//数字验证
-inputctr.public.isNum = function(num) {
-	var reNum = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
-	return(reNum.test(num))
-};
-//中文名字验证
-inputctr.public.isChineseName = function(num) {
-	var reNum = /^[\u4E00-\u9FA5\uf900-\ufa2d·s]{1,20}$/;
-	return(reNum.test(num))
-};
-//类型为 price
-inputctr.public.isPrice = function(num) {
-	var reNum = /^(\${0,1}[0-9]([0-9]+)?((\.[0-9]{1,2})?))$/;
-	return(reNum.test(num))
-};
-//类型为Integer
-inputctr.public.isInteger = function(num) {
-	var reNum = /^([0-9]([0-9]+)?)$/;
-	return(reNum.test(num))
-};
-//类型为Decimal
-inputctr.public.isDecimal = function(num) {
-	var reNum = /^([0-9]([0-9]+)?((\.[0-9]{1,2})?))$/;
-	return(reNum.test(num))
-};
-
-//日期格式化
-inputctr.formatTime=function(fmt,target){
-	//fmt为日期格式，target为转化的时间
-	var o = {  
-        "M+": target.getMonth() + 1, //月份   
-        "d+": target.getDate(), //日   
-        "H+": target.getHours(), //小时   
-        "m+": target.getMinutes(), //分   
-        "s+": target.getSeconds(), //秒   
-        "q+": Math.floor((target.getMonth() + 3) / 3), //季度   
-        "S": target.getMilliseconds() //毫秒   
-    };  
-    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (target.getFullYear() + "").substr(4 - RegExp.$1.length));  
-    for (var k in o)  
-    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
-    return fmt;  
-}
-=======
-﻿var inputctr = {};
-inputctr.public = {};
-//亚马逊请求接口
-var BaseUrl='http://192.168.2.168:8006/QAMZN.asmx';
-//任务请求接口地址
-var TaskUrl='http://192.168.2.168:10000/CourseService.asmx';
-//派安盈请求接口地址
-var PayoneerUrl='http://192.168.2.168:9030/WishBind.aspx'; 
-//网上银行请求接口地址
-var BankUrl='http://192.168.2.168:9030/WishBind.aspx';
-var userid='';
-var account='';
-var TrainingID='';
-var studentID='';
-var store_id='';
-var traintype='';
-$(function(){
-	inputctr.public.catchError(); 
-    inputctr.public.LoadLang();
-    inputctr.public.popover();
-})
-inputctr.public.LoadLang=function(){
-    var language = ['English','中文']
-    for(var i in language){
-        var option_html = '<option>'+language[i]+'</option>'
-        $("#languageSwitcher").append(option_html)
+    var language = inputctr.public.getCookie('lang');
+    var languageSwitcher = $("#languageSwitcher")
+    if(!language || language=='cn'){
+        languageSwitcher.children('option[value="cn"]').prop("selected","selected")
+    }else{
+        languageSwitcher.children('option[value='+language+']').prop("selected","selected")
     }
     $("#languageSwitcher").change(function(){ 
         inputctr.public.setCookie("lang",$(this).val());
         window.location.reload();
     })
 }
+inputctr.public.LangShow = function(){
+    var language = ['English','中文']
+    var lang=['en','cn'];
+    for(var i in language){
+        var option_html = '<option value="'+lang[i]+'">'+language[i]+'</option>'
+        $("#languageSwitcher").append(option_html)
+    }
+}
 inputctr.public.LoadLang1=function(){
     var  filename=location.href; 
     filename=filename.substr(filename.lastIndexOf('/')+1);   
     filename=filename.substring(0,filename.indexOf('.'));
     var lang='en';
     if(inputctr.public.getCookie('lang')){
-        alert(666)
 		lang=inputctr.public.getCookie('lang');
 	}
     var js='/seller/lang/'+lang+'/'+filename+'.js';
@@ -543,8 +192,7 @@ inputctr.formatTime=function(fmt,target){
     for (var k in o)  
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
     return fmt;  
-}
->>>>>>> .r19
+} 
 inputctr.public.popover=function(){ 
     $(".js-popover").click(function() {
         var title = $(this).attr("header");
@@ -769,16 +417,12 @@ inputctr.public.initOperationFileUploader=function(fileuploader,serverUrl,fileQu
 		 uploader.upload();
 	})
 }
- 
-
-
 inputctr.public.loadTaskConfig=function(){
 	$.getJSON('js/TaskConfig.js',function(result){
 		let data=result.taskConfig;
 		 inputctr.public.loadTaskList(data);
 	})
 }
-
 inputctr.public.loadTaskList=function(taskList){
 	let commitdata={
 		TrainingID:TrainingID,
@@ -823,8 +467,6 @@ inputctr.public.loadTaskList=function(taskList){
 		
 	})
 }
-
-
 inputctr.public.judgeTask=function(callback,parameter){
 	userid=inputctr.public.getCookie('userid')?inputctr.public.getCookie('userid'):inputctr.public.getQueryString('userid');
 	account=inputctr.public.getCookie('account')?inputctr.public.getCookie('account'):inputctr.public.getQueryString('account');

@@ -1,0 +1,42 @@
+{
+    head:{
+        title:"Tax information"
+    },
+    Settings:"Settings",
+    Logout:"Logout",
+    body:{
+        Agreement:"Seller agreement",
+        Information:"Seller Information",
+        Deposit:"Billing / Deposit",
+        Tax:"Tax information",
+        Product:"Product information",
+        Caption:"Tax information survey",
+        Quesition1:"Who will get income from Amazon (Amazon) or its subsidiaries?",
+        Quesition1Radio1:"个人/独资经营者/单一成员有限责任公司",
+        Quesition1Radio2:"业务",
+        Quesition2:"就美国税收目的而言，您是否为美国人？",
+        Quesition2Radio1:"yes",
+        Quesition2Radio2:"no",
+        TaxName:"全名",
+        TaxCountry:"国籍",
+        Beneficiary:"受益所有人类型",
+        FoveroverAddress:"永久地址",
+        StreetPlaceholder:"街道和号码",
+        FloorPlaceholder:"公寓、套房、单元、建筑、楼层等",
+        CityPlaceholder:"城市",
+        ProvincePlaceholder:"省份",
+        PostPlaceholder:"邮政编码",
+        Finish:"已完成",
+        PostAddress:"邮寄地址",
+        SameAddress:"同永久地址",
+        SignatureQuesition:"您是否同意为您的 IRS 表格 W-8BEN 提供电子签名？",
+        SignatureY:"yes",
+        SignatureN:"no",
+        SignatureC:"您是否确定？如果您提供电子签名，则可以立即提交您的信息。否则，您将需要打印、签字并邮寄表格。",
+        Submit:"Submit",
+        Rate:"Rate this page",
+        Support:"Get support",
+        Policies:"Policies and Agreements",
+        Inc:"© 1999-2018, Amazon.com, Inc. or its affiliates"
+    }
+}

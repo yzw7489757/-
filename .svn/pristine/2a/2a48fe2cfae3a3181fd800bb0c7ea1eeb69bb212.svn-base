@@ -11,8 +11,8 @@
         LabelRemember: {
             name: "Keep me signed in.",
             details: " Details",
-            header: "\"Keep Me Signed In\" Checkbox",
-            inlineContent: "<p>Choosing \"Keep me signed in\" reduces the number of times you're asked to sign in on this device.</p><p>To keep your account secure, use this option only on your personal devices.</p>"
+            header: "&quot;Keep Me Signed In&quot; Checkbox",
+            inlineContent: "<p>Choosing &quot;Keep me signed in&quot; reduces the number of times you're asked to sign in on this device.</p><p>To keep your account secure, use this option only on your personal devices.</p>"
         },
         BtnRegister: "Create your Amazon account"
     }

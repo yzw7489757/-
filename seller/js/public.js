@@ -16,14 +16,30 @@ var store_id='';
 var traintype='';
 $(function(){
 	inputctr.public.catchError(); 
+    inputctr.public.LangShow();
     inputctr.public.LoadLang();
     inputctr.public.popover();
 })
 inputctr.public.LoadLang=function(){
+    var language = inputctr.public.getCookie('lang');
+    var languageSwitcher = $("#languageSwitcher")
+    if(!language || language=='cn'){
+        languageSwitcher.children('option[value="cn"]').prop("selected","selected")
+    }else{
+        languageSwitcher.children('option[value='+language+']').prop("selected","selected")
+    }
     $("#languageSwitcher").change(function(){ 
         inputctr.public.setCookie("lang",$(this).val());
         window.location.reload();
-    });
+    })
+}
+inputctr.public.LangShow = function(){
+    var language = ['English','中文']
+    var lang=['en','cn'];
+    for(var i in language){
+        var option_html = '<option value="'+lang[i]+'">'+language[i]+'</option>'
+        $("#languageSwitcher").append(option_html)
+    }
 }
 inputctr.public.LoadLang1=function(){
     var  filename=location.href; 
@@ -176,7 +192,7 @@ inputctr.formatTime=function(fmt,target){
     for (var k in o)  
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
     return fmt;  
-}
+} 
 inputctr.public.popover=function(){ 
     $(".js-popover").click(function() {
         var title = $(this).attr("header");
@@ -401,16 +417,12 @@ inputctr.public.initOperationFileUploader=function(fileuploader,serverUrl,fileQu
 		 uploader.upload();
 	})
 }
- 
-
-
 inputctr.public.loadTaskConfig=function(){
 	$.getJSON('js/TaskConfig.js',function(result){
 		let data=result.taskConfig;
 		 inputctr.public.loadTaskList(data);
 	})
 }
-
 inputctr.public.loadTaskList=function(taskList){
 	let commitdata={
 		TrainingID:TrainingID,
@@ -455,8 +467,6 @@ inputctr.public.loadTaskList=function(taskList){
 		
 	})
 }
-
-
 inputctr.public.judgeTask=function(callback,parameter){
 	userid=inputctr.public.getCookie('userid')?inputctr.public.getCookie('userid'):inputctr.public.getQueryString('userid');
 	account=inputctr.public.getCookie('account')?inputctr.public.getCookie('account'):inputctr.public.getQueryString('account');
