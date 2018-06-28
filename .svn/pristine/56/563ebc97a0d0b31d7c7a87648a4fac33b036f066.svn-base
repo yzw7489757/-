@@ -1,0 +1,14 @@
+_head_title=注册账户
+_body_Caption=创建账户
+_body_CustomerName=你的名字
+_body_NameError=请输入你的名字
+_body_ApEmail=邮箱
+_body_EmailMissing=请输入你的邮箱
+_body_ApPassword=密码
+_body_PasswordPlaceholder=至少包含6个字符
+_body_PasswordTip=密码必须至少包含6个字符。
+_body_ReEnterPassword=重新输入密码
+_body_ReEnterError=密码必须相同
+_body_Next=下一步
+_body_Already=已经有一个帐户？
+

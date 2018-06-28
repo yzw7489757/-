@@ -1,0 +1,153 @@
+body{
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+}
+.clear_both:after{
+    content:"";
+    height: 0;
+    display: block;
+    clear: both;
+}
+.mainBlockWidth{
+    width: 1216px;
+    margin-left: 2.5%;
+}
+.size-extra-large{
+    font-size: 28px;
+    line-height: 1.2;
+}
+.spacing-top-large{
+    margin-top: 22px;
+}
+.ad{
+    display:block;
+    width: 350px;
+}
+.div-gpt-ad{
+    margin-top: 10px;
+    margin-right: 65px;
+}
+.mainImg{
+    width: 350px;
+    height: 45px;
+    background: url(../img/V497388467_.png);
+}
+.sellercentral{
+    color: grey;
+    font-size: 12px;
+    text-align: right;
+}
+.tutorialDefault{
+    height: 50px;
+    border-bottom:1px solid #aaa;
+    margin-bottom: 20px;
+}
+.leftBlockWidth{
+    width: 906px;
+}
+.ReleaseNew{
+    padding: 14px 18px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.product-heading{
+    margin-bottom: 10px;
+}
+.color-secondary{
+    color:#555;
+    margin-bottom: 6px;
+}
+.searchInputWidth{
+    width: 300px;
+    position: relative;
+    display:inline-block;
+    vertical-align: middle;
+}
+.icon-search {
+    width: 13px;
+    height: 13px;
+    background-position: -271px -86px;
+    opacity: .55;
+    position:absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 10px;
+}
+#product-search{
+    padding-left: 29px;
+}
+.product-search-button{
+    display:inline-block;
+}
+.button{
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 29px;
+    padding:0 10px;
+    border-radius: 3px;
+}
+.button-search{
+    background: linear-gradient(to bottom,#72787f,#444c55);
+    border-color: #3d444c #2f353b #2c3137;
+    color: #fff;
+    transition: all 100ms linear;
+}
+.button-search:hover{
+    background: linear-gradient(to bottom,#666b72,#393f47);
+    border-color: #32373e #24282d #212429;
+}
+#search{
+    margin-bottom: 26px;
+    display:inline-block;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+.a-spacing-bottom-small {
+    margin-bottom: 10px!important;
+}
+.rightBlockWidth {
+    width: 288px;
+}
+.a-size-large{
+    font-size: 21px!important;
+    line-height: 1.3!important;
+}
+.widget-action-item,.Suppressed_errors{
+    display:block;
+    background: #e6f0fa;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 17px;
+    line-height: 1.255;
+    margin-bottom: 6px;
+}
+.Suppressed_errors{
+    background: #fff;
+    color:#555;
+    font-size: 13px;
+}
+.error_listings_count{
+    color: #d00;font-weight: 700;
+}
+.Draft_listings_count{
+    font-weight: 700;
+}
+.widget-action-item:hover{
+    text-decoration: none;
+    background: linen;
+}
+.draft{
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+}
+.text-center{
+    text-align: center;
+}

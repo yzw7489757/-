@@ -38,7 +38,7 @@ window.onload = function () {
     $spaui.width(divWidth)
     if (showToggle) {
       //search.style.width = '466px'
-      $search.width(446)
+      $search.width(465)
     } else {
       $search.width(302)
       //search.style.width = '302px'
@@ -58,28 +58,6 @@ window.onload = function () {
     show ? spaui.style.right = -divWidth + 'px' : spaui.style.right = '0px';
     show = !show;
   })
-  // function moveto(object, itarget) {
-  //   show = !show;
-  //   let $obj = $('#object');
-  //   clearInterval(timer);
-  //   timer = setInterval(function () {
-  //     let speed = 0;
-  //     //obj.offsetLeft
-  //     if ($obj.offset().Left < itarget) {
-  //       //通过位移量除以10，使speed递减，实现减速停止。
-  //       speed = (itarget - $obj.offset().Left) / 15;
-  //     } else {
-  //       // 乘以10则为加速。通过乘除的数字，控制快慢
-  //       speed = -($obj.offset().Left - itarget) / 15;
-  //     }
-  //     speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed); //取整，解决最后不足1px的位移量被忽略的问题
-  //     if ($obj.offset().Left == itarget) {
-  //       clearInterval(timer);
-  //     } else {
-  //       obj.style.left = $obj.offset().Left + speed + 'px';
-  //     };
-  //   }, 20);
-  // };
   // 目录
   $('.sc-hover-nav').each(function (i) {
     $('.sc-hover-nav').eq([i]).attr('data-list', i)
@@ -133,13 +111,11 @@ window.onload = function () {
   $('#sc-ql-sz').hover(function () {
     $('.sc-nav-arrow-right').addClass('opacity_visibility')
     $('.sc-sub-nav-right').addClass('display_block');
-    console.log('触发显示1')
   }, function () {
     timer_sc = setTimeout(function () {
       $('.sc-nav-arrow-right').removeClass('opacity_visibility')
       $('.sc-sub-nav-right').removeClass('display_block')
     }, 10)
-    console.log('触发隐藏1')
   })
 
   $('#sc-sub-nav-right').hover(

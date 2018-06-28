@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ToPage.aspx.cs" Inherits="seller_ToPage" %> 
