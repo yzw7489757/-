@@ -16,7 +16,7 @@
                 <div class="a-column a-span12 a-ws-span6 a-ws-spacing-none width48">
                     <div class="a-section a-spacing-none">
                         <div class="a-row a-spacing-micro a-ws-row overflow_hidden">
-                            <h2 class="float_left marBottom4">卖家消息</h2>
+                            <h2 class="float_left marBottom4">卖家信息</h2>
                             <a href="" class="float_right marTop4">账户信息</a>
                         </div>
                         <hr>
@@ -41,14 +41,24 @@
                                 <div class="a-section ng-scope">
                                     <div class="a-row a-size-base a-ws-row">
                                         <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
-                                            <div class="a-row a-spacing-none ng-scope">选择唯一的公司显示名称</div>
-                                            <div class="a-row ng-scope">（此名称将在亚马逊网站上向买家显示。）</div>
-                                            <div class="a-row a-ws-row">
-                                                <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
-                                                    <input type="text">
+                                            <div class="a-row a-spacing-none ng-scope">
+                                                <span class="a-text-bold ng-binding">选择唯一的公司显示名称:</span>
+                                                <span class="mandatoryTagClass">&nbsp;*</span>
+                                            </div>
+                                            <div class="a-row ng-scope">
+                                                <span class="a-size-small a-color-tertiary ng-binding">（此名称将在亚马逊网站上向买家显示。</span>）</div>
+                                            <div class="a-row a-ws-row overflow_hidden">
+                                                <div class="a-column a-span12 a-ws-span6 grid-col-right-margin width47 float_left">
+                                                    <input type="text" maxlength="50" class="padding3_0 a-input-text a-width-medium a-spacing-top-micro width-100 celwidget ng-pristine ng-valid ng-scope ng-not-empty ng-valid-required ng-valid-maxlength ng-touched width-100"
+                                                        value="zhongguo feng">
                                                 </div>
-                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last">
-                                                    qqq
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div>
+                                                        <div>
+                                                            <!-- <img src="./img/AmazonUIBaseCSS-sprite.png" alt=""> -->
+                                                        </div>
+                                                        <div>允许</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -61,15 +71,27 @@
                                 <div class="a-section ng-scope">
                                     <div class="a-row a-size-base a-ws-row">
                                         <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
-                                            <div class="a-row a-spacing-none ng-scope">选择唯一的公司显示名称</div>
-                                            <div class="a-row ng-scope">（此名称将在亚马逊网站上向买家显示。）</div>
-                                            <div class="a-row a-ws-row">
-                                                <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
-                                                    <span>www.amazon.com.mx/shops/</span>
-                                                    <input type="text">
+                                            <div class="a-row a-spacing-none ng-scope">
+                                                <span class="a-text-bold ng-binding">店铺链接：</span>
+                                                <span class="mandatoryTagClass">*</span>
+                                            </div>
+                                            <div class="a-row ng-scope">
+                                                <span class="a-size-small a-color-tertiary ng-binding">（您的顾客可通过此链接来访问您的店面。）</span>
+                                            </div>
+                                            <div class="a-row a-ws-row overflow_hidden">
+                                                <div class=" overflow_hidden a-column a-span12 a-ws-span6 grid-col-right-margin width47 float_left">
+                                                    <span class="a-input-text-addon2 ng-binding float_left block">www.amazon.com.mx/shops/</span>
+                                                    <input type="text" class="padding3_0 width100 float_right a-input-text a-width-medium celwidget ng-pristine ng-untouched ng-scope ng-empty ng-invalid ng-invalid-required ng-valid-maxlength a-form-error"
+                                                        value="aaa">
+
                                                 </div>
-                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last">
-                                                    qqq
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div>
+                                                        <div>
+                                                            <!-- <img src="./img/AmazonUIBaseCSS-sprite.png" alt=""> -->
+                                                        </div>
+                                                        <div>不允许</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,14 +99,14 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="a-row">
-                            <div class="a-column a-span12 a-spacing-base a-ws-span6">
-                                <input type="button">
-                                <span>取消</span>
+                        <div class="a-row overflow_hidden">
+                            <div class="relative width47 float_left a-column a-span12 a-spacing-base a-ws-span6">
+                                <input type="button" class="a-button-input">
+                                <span class="a-button-input-span">取消</span>
                             </div>
-                            <div class="a-column a-span12 a-spacing-base a-ws-span6 a-span-last a-ws-span-last ng-scope">
-                                <input type="button">
-                                <span>提交</span>
+                            <div class="relative width47 float_right a-column a-span12 a-spacing-base a-ws-span6 a-span-last a-ws-span-last ng-scope">
+                                <input type="button" class="a-button-input">
+                                <span class="a-button-input-span">提交</span>
                             </div>
                         </div>
                     </div>

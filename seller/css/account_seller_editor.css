@@ -18,7 +18,7 @@ li{
 a{
     text-decoration: none;
 }
-.a-ember {
+.a-ember body {
     font-family: "Amazon Ember",Arial,sans-serif;
 }
 .a-text-bold {
@@ -36,6 +36,9 @@ a{
 .inline-block{
     display: inline-block;
 }
+.block{
+    display: block
+}
 .a-padding-large {
     padding: 18px 22px!important;
 }
@@ -48,9 +51,18 @@ a{
 .width48 {
     width: 48.948%;
 }
+.width47{
+    width: 47.96267%;
+}
 .width4{
     width: 4.62933%;
 }
+.width-100 {
+    width: 100% !important;
+}
+.width100{
+   width: 100px; 
+}   
 .height{
     height: 42px;
 }
@@ -105,4 +117,75 @@ hr {
 }
 .marBottom14{
     margin-bottom: 14px
+}
+.mandatoryTagClass {
+    color: #F90;
+}
+.a-size-small {
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+.padding3_7{
+    padding: 3px 7px;
+}
+.padding3_0{
+    padding: 3px 0;
+}
+.a-color-tertiary {
+    color: #767676!important;
+}
+.grid-col-right-margin {
+    margin-right: 1% !important;
+}
+.a-input-text, input[type=text], input[type=search], input[type=number], input[type=tel], input[type=password], input[type=date], input[type=email] {
+    background-color: #fff;
+    height: 23px;
+    line-height: normal;
+}
+.a-input-text, input[type=text], input[type=search], input[type=number], input[type=tel], input[type=password], select.a-select-multiple, textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+.a-input-text-addon {
+    background-color: #f6f6f6;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    width: 1%;
+    white-space: nowrap;
+    height:23px;
+    vertical-align: middle
+}
+.a-input-text-addon2 {
+    background-color: #f6f6f6;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    white-space: nowrap;
+    padding:3px 7px;
+    height: 23px;
+    width: 185px;
+    vertical-align: middle;
+}
+.a-input-text-addon:first-child {
+    border-right: 0;
+}
+.a-button-input{
+    width: 100%;
+    height: 29px;
+}
+.a-button-input-span{
+    position: absolute;
+    left:135px;
+    top:5px;
+}
+.relative{
+    position: relative;
 }
