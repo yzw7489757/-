@@ -99,6 +99,16 @@ hr {
     margin-top: 0;
     margin-bottom: 14px;
 }
+.email{
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    white-space: nowrap;
+    width: 21em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .height{
     height: 187px;
 }
@@ -193,4 +203,7 @@ h5 {
 }
 .a-color-secondary {
     color: #555!important;
+}
+.a-ws-span6{
+    width: 48.60313%;
 }

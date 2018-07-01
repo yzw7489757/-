@@ -15,6 +15,7 @@ li{
     margin: 0;
     padding: 0;
 }
+
 a{
     text-decoration: none;
 }
@@ -79,6 +80,77 @@ a{
 a, a:active, a:link, a:visited {
     text-decoration: none;
     color: #0066c0;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search] {
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+}
+.a-input-text-addon-group .a-input-text-wrapper:last-child, .a-input-text-addon-group .a-input-text:last-child,.a-input-text-addon:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.a-input-text-addon-group .a-input-text-wrapper:first-child,.righttop_rightbottom_border0 , .a-input-text-addon-group .a-input-text:first-child, .a-input-text-addon:first-child {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.border-left_none{
+    border-left:none !important;
+}
+.border-right_none{
+    border-right:none !important;
+}
+.a-row:after {
+    clear: both;
+}
+.onfocusInput:focus{
+    outline: 0;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+    border-color:rgba(231,118,0,1) !important;  
+    -webkit-box-shadow:0 0 5px rgba(231,118,0,1) ; 
+}
+.a-row:after, .a-row:before {
+    display: table;
+    content: "";
+    line-height: 0;
+    font-size: 0;
+}
+.width-94{
+    width:94% !important;
+}
+input[placeholder] {
+    text-overflow: ellipsis;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search], select.a-select-multiple, textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+.paddinglr{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.box-sizing{
+    box-sizing:border-box;
+}
+.inputs{
+    position: absolute;
+    background-color: #fff;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .01;
+    /* filter: alpha(opacity=1); */
+    outline: 0;
+    overflow: visible;
+    z-index: 20;
 }
 h2 {
     font-weight: 700;
@@ -163,7 +235,7 @@ hr {
 }
 .a-input-text-addon2 {
     background-color: #f6f6f6;
-    line-height: 1;
+    line-height: 24px;
     text-align: center;
     border: 1px solid #a6a6a6;
     border-top-color: #949494;
@@ -171,7 +243,7 @@ hr {
     white-space: nowrap;
     padding:3px 7px;
     height: 23px;
-    width: 185px;
+    width: 190px;
     vertical-align: middle;
 }
 .a-input-text-addon:first-child {
@@ -189,3 +261,57 @@ hr {
 .relative{
     position: relative;
 }
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+
+.a-button-span12 {
+    width: 100%!important;
+}
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button .a-button-inner {
+    background: #eff0f3;
+    background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f8fa', endColorstr='#e7e9ec', GradientType=0);
+}
+.a-button-inner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+}
+.a-ember input, .a-ember select, .a-ember textarea {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.a-span12 input {
+    float: none;
+    margin-right: 0;
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+
