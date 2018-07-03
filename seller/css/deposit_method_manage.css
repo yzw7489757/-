@@ -1,0 +1,101 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+}
+h5 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+a {
+    text-decoration: none;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+.a-row{
+    width: 100%;
+}
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.float_left {
+    float: left !important;
+}
+.float_right {
+    float: right !important;
+}
+
+.a-padding-large {
+    padding: 18px 22px!important;
+}
+.width74{
+    width: 74.448%;
+}
+.width48{
+    width: 48.60313%;
+}
+.width14{
+    width: 14.3698%;
+}
+.width22{
+    width: 22.92813%;
+}
+.marRight{
+    margin-right: 2%
+}
+.border_box{
+    box-sizing: border-box
+}
+.height47{
+    height: 47px;
+}
+
+.marBot {
+    margin-bottom: 14px!important;
+}
+.a-spacing-top-micro {
+    margin-top: 4px!important;
+}
+.a-spacing-top-medium {
+    margin-top: 18px!important;
+}
+.a-spacing-base, .a-ws .a-ws-spacing-base {
+    margin-bottom: 14px!important;
+}
+.a-column {
+    margin-right: 2.7%;
+   
+}
+.a-span-last {
+    margin-right: 2.7%;
+}
