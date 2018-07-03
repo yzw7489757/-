@@ -143,3 +143,33 @@ table {
     padding-top: .7rem;
     padding-bottom: .7rem;
 }
+.pdBot{
+    padding-bottom: .7rem; 
+}
+.submitBtn{
+   margin: 0 0 18px 18px; 
+}
+.submitBtn_big{
+    width: 49px;
+    height: 31px;
+    box-sizing: border-box;
+}
+
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button-primary {
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
