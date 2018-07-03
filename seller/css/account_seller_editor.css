@@ -116,13 +116,10 @@ a, a:active, a:link, a:visited {
 .onfocusInput:focus{
     outline: 0;
     -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
-    border-color:rgba(231,118,0,1) !important;  
+    border-color:rgba(231,118,0,1);  
     -webkit-box-shadow:0 0 5px rgba(231,118,0,1) ; 
 }
-.onfocusInput:onblur{
-    border-color: #d00;
-    box-shadow: 0 0 0 3px rgba(221,0,0,.1);
-}
+
 .a-row:after, .a-row:before {
     display: table;
     content: "";
@@ -433,4 +430,9 @@ button, input[type=button], input[type=reset], input[type=submit] {
     display: block;
     border-radius: 4px;
     background-color: #fff;
+}
+
+.activebtn{
+    border-color: #d00 !important;
+    box-shadow: 0 0 0 3px rgba(221,0,0,.1) !important;
 }

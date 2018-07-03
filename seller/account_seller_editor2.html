@@ -28,7 +28,7 @@
                             <a href="" class="float_right marBottom14">返回卖家资料</a>
                         </div>
                     </div>
-                    <div class="a-section a-spacing-base ng-scope sizing" style="height: 47px;">
+                    <div class="update a-section a-spacing-base ng-scope sizing display_none" style="height: 47px;">
                         <div class="a-row ng-scope">
                             <div class="a-row">
                                 <div class="a-box a-alert a-alert-success">
@@ -72,17 +72,18 @@
                                             </div>
                                             <div class="a-row a-ws-row ">
                                                 <div class="a-column a-span12 a-ws-span6 width47 float_left">
-                                                    <input type="text" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                    <input type="text" id="userEmailInput" class="padding3_0 emailinput box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
                                                         value="" autocomplete="off" style="height: 31px;" />
                                                 </div>
-                                                <!-- <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
-                                                    <div class="a-box a-alert-inline a-alert-inline-success ng-scope">
-                                                        <div class="a-box-inner a-alert-container relative display_none">
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div class="a-box a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input0_no a-box-inner a-alert-container relative display_none">
                                                             <i class="a-icon a-icon-alert "></i>
-                                                            <div class="a-alert-content ng-binding inline-block ">可订</div>
+                                                            <div class="a-alert-content ng-binding inline-block ">必须填写电子邮件
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -104,12 +105,12 @@
                                             </div>
                                             <div class="a-row a-ws-row ">
                                                 <div class="a-column a-span12 a-ws-span6 width47 float_left">
-                                                    <input type="text" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                    <input type="text" id="usertelphone" class="input_tel padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
                                                         value="" autocomplete="off" style="height: 31px;" />
                                                 </div>
                                                 <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
-                                                    <div class="a-box a-alert-inline a-alert-inline-error ng-scope">
-                                                        <div class="group_input1_no a-box-inner a-alert-container relative ">
+                                                    <div class="a-box a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input1_no a-box-inner a-alert-container relative display_none">
                                                             <i class="a-icon a-icon-alert "></i>
                                                             <div class="a-alert-content ng-binding inline-block ">电话号码无效</div>
                                                         </div>
@@ -136,17 +137,18 @@
                                             </div>
                                             <div class="a-row a-ws-row ">
                                                 <div class="a-column a-span12 a-ws-span6 width47 float_left">
-                                                    <input type="text" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                    <input type="text" id="saleEmailInput" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
                                                         value="" autocomplete="off" style="height: 31px;" />
                                                 </div>
-                                                <!-- <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
-                                                    <div class="a-box a-alert-inline a-alert-inline-success ng-scope">
-                                                        <div class="a-box-inner a-alert-container relative display_none">
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div class="a-box a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input2_no a-box-inner a-alert-container relative display_none">
                                                             <i class="a-icon a-icon-alert "></i>
-                                                            <div class="a-alert-content ng-binding inline-block ">可订</div>
+                                                            <div class="a-alert-content ng-binding inline-block ">必须填写电子邮件
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -166,7 +168,7 @@
                                 <span class="a-button a-button-normal a-button-group-last a-spacing-top-small a-button-span12 a-button-primary box-sizing">
                                     <span class="a-button-inner">
                                         <input type="button" class="a-button-input submitBtn">
-                                        <span class="a-button-text box-sizing">提交</span>
+                                        <span class="submit_span a-button-text box-sizing">提交</span>
                                     </span>
                                 </span>
                             </div>
