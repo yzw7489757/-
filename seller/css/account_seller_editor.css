@@ -365,12 +365,15 @@ button, input[type=button], input[type=reset], input[type=submit] {
     width: 27px;
     background-position: -318px -35px;
 }
-.a-alert-inline .a-icon-alert {
+.a-alert-inline .a-icon-alert{
     height: 13px;
     width: 14px;
     position: absolute;
     left: 2px;
-    top: 2px;
+    top:2px;
+}
+.a-alert-inline-error .a-icon-alert {
+    top: 0px !important;
 }
 .a-alert-inline .a-alert-container .a-alert-content {
     margin-bottom: 0;
@@ -410,12 +413,32 @@ button, input[type=button], input[type=reset], input[type=submit] {
     background: -webkit-linear-gradient(to bottom,#F6DDA1,#F3CD72,#EEB936)
 
 }
+.a-box {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
 .a-alert-success {
     border-color: #7fc87f;
+}
+.a-box .a-box-inner {
+    border-radius: 4px;
+    position: relative;
+    padding: 14px 18px;
 }
 .a-alert-success .a-alert-container {
     box-shadow: 0 0 0 4px #dff7df inset;
     padding-left: 60px;
+}
+
+.myInput .a-alert-container {
+    padding: 0 !important;
+    padding-left: 20px !important;
+    /* padding-top: 2px !important; */
+}
+.myInput .a-box{
+    border:none !important;
 }
 .a-alert .a-icon-alert {
     height: 27px;
@@ -426,13 +449,13 @@ button, input[type=button], input[type=reset], input[type=submit] {
 }
 
 
-.a-box {
-    display: block;
-    border-radius: 4px;
-    background-color: #fff;
-}
+
 
 .activebtn{
     border-color: #d00 !important;
     box-shadow: 0 0 0 3px rgba(221,0,0,.1) !important;
+}
+.successMes,.mustMes,.notNull,.shopNameNull,.success_status,.urlSuccessMes,.shopNameError,.canNotReceive,.shopNameUrlError,.urlCanNotReceive{
+    display: none;
+    margin-top: 5px;
 }

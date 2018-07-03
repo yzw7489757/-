@@ -22,8 +22,28 @@
                             <td >
                                 <div id="learnmorehelplink" class="relative">
                                     <span class="a-declarative pdleft ">
-                                        <a href="javascript:void(0)">了解更多信息</a>
+                                        <a href="javascript:void(0)" class="moreMessage">了解更多信息</a>
                                         <i class="a-icon a-icon-popover"></i>
+                                        <div id="model">
+                                            <div class="popup">
+                                                <span><em></em></span>
+                                                <i class="a-icon a-icon-close"></i>
+                                                <div class="a-popover-inner">
+                                                    <div class="a-popover-content" id="a-popover-content-1">
+                                                        <div class="a-row a-spacing-medium">
+                                                            <span class="tiny">
+                                                                <a href="javascript:openModalDialog('/gp/help/help-popup.html/?itemID=200135620', 550, 550, 'scrollbars=yes', null, 'yes')">
+                                                                    如果您正准备去休假，或者您希望暂时从亚马逊网站上清除您的在售商品，请使用此功能来取消激活商品。
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="a-row a-spacing-medium">请注意，亚马逊物流商品将不受此假期设置影响，仍然处于在售状态。
+                                                        </div>
+                                                        <div class="a-row">在假期期间收到的任何买家-卖家消息仍需在 24 小时内回复。</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </span>
                                 </div>
                             </td>
@@ -33,15 +53,15 @@
             </div>
             <div class="a-section">
                 <form method="post" id="listingStatusPostForm">
-                    <table class="a-normal registration-listingstatus-table">
+                    <table class="content_table a-normal registration-listingstatus-table">
                         <tbody>
                             <tr class="registration-listingstatus border ">
                                 <td class="a-text-left registration-listingstatus padding-left-small"></td>
                                 <td class="a-text-left registration-listingstatus padding-left-small ">
-                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5">在售</p>
+                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5 startCheck">在售</p>
                                 </td>
                                 <td class="a-text-left registration-listingstatus padding-left-small ">
-                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5">停售</p>
+                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5 stopCheck">停售</p>
                                 </td>
                                 <td class="a-text-left registration-listingstatus padding-left-small"></td>
                             </tr>
@@ -53,7 +73,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true"  name="choose1">
+                                            <input type="radio"   name="choose1" class="readyCheck">
                                             <span>在售</span>
                                         </label>
                                     </div>
@@ -61,7 +81,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true"  name="choose1">
+                                            <input type="radio" checked    name="choose1" class="tostopCheck">
                                             <span>停售</span>
                                         </label>
                                     </div>
@@ -79,7 +99,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true"  name="choose2">
+                                            <input type="radio"   name="choose2" class="readyCheck">
                                             <span>在售</span>
                                         </label>
                                     </div>
@@ -87,7 +107,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true" name="choose2">
+                                            <input type="radio" checked   name="choose2" class="tostopCheck">
                                             <span>停售</span>
                                         </label>
                                     </div>
@@ -105,7 +125,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true" name="choose3">
+                                            <input type="radio"  name="choose3" class="readyCheck">
                                             <span>在售</span>
                                         </label>
                                     </div>
@@ -113,7 +133,7 @@
                                 <td class="width8">
                                     <div class="a-radio">
                                         <label>
-                                            <input type="radio" value="true" name="choose3">
+                                            <input type="radio" checked   name="choose3" class="tostopCheck">
                                             <span>停售</span>
                                         </label>
                                     </div>
@@ -148,5 +168,5 @@
     </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
-
+<script src="./js/webjs/holiday_setting.js"></script>
 </html>

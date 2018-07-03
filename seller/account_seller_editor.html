@@ -235,10 +235,25 @@
                             <a href="" class="float_right marBottom14">返回卖家资料</a>
                         </div>
                     </div>
-                    <div class="a-section">
+                    <div  class="a-section a-spacing-base success_status">
+                        <div  class="a-row">
+                            <div  class="a-row">
+                                <div class="a-box a-alert a-alert-success">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content">
+                                            <span class="ng-binding">商店详细信息已成功更新。</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="a-section width48">
                         <div class="a-row ">
                             <div class="a-row a-spacing-base a-ws-row height">
-                                <div class="a-column a-span2 a-spacing-top-small a-ws-span1 float_left width14 width4 marRight">
+                                <div class="a-column a-span2 a-spacing-top-small a-ws-span1 float_left width14 width4">
                                     <img src="./img/Mexico._V529822910_.png" alt="">
                                 </div>
                                 <div class="a-column a-span6 a-spacing-top-small float_left width48">
@@ -246,7 +261,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="a-row">
+                        <div class="a-row myInput">
                             <form action="" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
                                 <div class="a-section ng-scope">
                                     <div class="a-row a-size-base a-ws-row">
@@ -259,26 +274,38 @@
                                                 <span class="a-size-small a-color-tertiary ng-binding">（此名称将在亚马逊网站上向买家显示。</span>）</div>
                                             <div class="a-row a-ws-row ">
                                                 <div class="a-column a-span12 a-ws-span6 width47 float_left">
-                                                    <input type="text" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                    <input type="text" id="shopName" class="padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
                                                         value="zhongguo feng" autocomplete="off" style="height: 31px;" />
                                                 </div>
                                                 <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
-                                                    <div class="a-box a-alert-inline a-alert-inline-success">
+                                                    <div class="a-box a-alert-inline a-alert-inline-success successMes">
                                                         <div class="a-box-inner a-alert-container relative">
                                                             <i class="a-icon a-icon-alert "></i>
                                                             <div class="a-alert-content ng-binding inline-block ">可订</div>
                                                         </div>
                                                     </div>
-                                                    <div class="a-box a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box a-alert-inline a-alert-inline-error mustMes">
                                                         <div class="a-box-inner a-alert-container relative">
                                                            <i class="a-icon a-icon-alert"></i>
                                                            <div class="a-alert-content ng-binding">必须填写显示名称</div>
                                                         </div>
                                                     </div>
-                                                    <div class="a-box a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box a-alert-inline a-alert-inline-error notNull">
                                                         <div class="a-box-inner a-alert-container relative">
                                                            <i class="a-icon a-icon-alert"></i>
-                                                           <div class="a-alert-content ng-binding"商品名称>不能为空</div>
+                                                           <div class="a-alert-content ng-binding">商品名称为空</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-box a-alert-inline a-alert-inline-error shopNameError">
+                                                        <div class="a-box-inner a-alert-container relative">
+                                                           <i class="a-icon a-icon-alert"></i>
+                                                           <div class="a-alert-content ng-binding">商品名称无效</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-box a-alert-inline a-alert-inline-error canNotReceive">
+                                                        <div class="a-box-inner a-alert-container relative">
+                                                           <i class="a-icon a-icon-alert"></i>
+                                                           <div class="a-alert-content ng-binding">显示名称不可用</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -304,15 +331,33 @@
                                                 <div class="a-input-text-addon-group">
                                                     <div class="saleName a-column a-span12 a-ws-span6 grid-col-right-margin width47 float_left">
                                                         <span class="box-sizing height31 a-input-text-addon2 border-right_none righttop_rightbottom_border0 ng-binding float_left block">www.amazon.com.mx/shops/</span>
-                                                        <input type="text" class="group_input1 box-sizing height31 padding3_0 onfocusInput width145  a-input-text a-width-medium celwidget ng-pristine ng-untouched ng-scope ng-empty ng-invalid ng-invalid-required ng-valid-maxlength a-form-error"
+                                                        <input type="text" id="shopNameUrl" class="group_input1 box-sizing height31 padding3_0 onfocusInput width145  a-input-text a-width-medium celwidget ng-pristine ng-untouched ng-scope ng-empty ng-invalid ng-invalid-required ng-valid-maxlength a-form-error"
                                                           >
                                                     </div>
                                                 </div>
                                                 <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
-                                                    <div class="a-box a-alert-inline a-alert-inline-error ng-scope">
-                                                        <div class="group_input1_no a-box-inner a-alert-container relative display_none">
+                                                    <div class="a-box a-alert-inline a-alert-inline-success urlSuccessMes">
+                                                        <div class="a-box-inner a-alert-container relative">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block ">可订</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-box a-alert-inline a-alert-inline-error shopNameNull">
+                                                        <div class="group_input1_no a-box-inner a-alert-container relative">
                                                             <i class="a-icon a-icon-alert "></i>
                                                             <div class="a-alert-content ng-binding inline-block ">商店名称为空</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-box a-alert-inline a-alert-inline-error shopNameUrlError">
+                                                        <div class="a-box-inner a-alert-container relative">
+                                                           <i class="a-icon a-icon-alert"></i>
+                                                           <div class="a-alert-content ng-binding">商店名称无效</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-box a-alert-inline a-alert-inline-error urlCanNotReceive">
+                                                        <div class="a-box-inner a-alert-container relative">
+                                                           <i class="a-icon a-icon-alert"></i>
+                                                           <div class="a-alert-content ng-binding">商店名称不可用</div>
                                                         </div>
                                                     </div>
                                                 </div>
