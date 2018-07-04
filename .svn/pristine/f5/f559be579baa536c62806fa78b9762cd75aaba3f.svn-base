@@ -1,0 +1,382 @@
+#spaui{
+  box-sizing: border-box;
+  height:100vh;
+  width: 410px;
+  position: fixed;
+  margin:0;
+  top:0;
+  bottom: 0;
+  right: -410px;
+  background:lightpink;
+  z-index: 20000;
+  list-style: none;
+  text-align: left;
+  background-image: none;
+  color: #333;
+  font-size: 13px;
+  transition-property: width,right;
+  transition-duration: 0.5s;
+  -webkit-ttransition-property: width,right;
+  -webkit-ttransition-duration: 0.5s;
+  -o-ttransition-property: width,right;
+  -o-ttransition-duration:0.5s;
+  -moz-ttransition-property: width,right;
+-moz-ttransition-duration: 0.5s;
+  
+}
+.spaui-sprite{
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url('../img/ui._V283335016_.png')!important;
+}
+.spaui-resize-large {
+  background-position: -83px -4px;
+}
+.spaui-home{
+  background-position: -264px -4px;
+}
+.spaui_ul{
+  display: block;
+  width: 410px;
+  margin-right: 0px;
+  overflow: hidden;
+  height: 24px;
+  font-size: 13px;
+}
+#spaui .spaui-content-ui-feedback a {
+  line-height: 27px;
+  padding: 0 4px;
+}
+
+#spaui .spaui-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 100%;
+  z-index: 200;
+  background: #303942;
+  list-style: none;
+  padding-left: 0;
+}
+.spaui ul{
+  float: none;
+}
+.spaui-head li{
+  float:left;
+}
+.spaui li,.spaui ul{
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+  border-radius: 0;
+  display: block;
+  height: auto;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  width: auto;
+  z-index: auto;
+}
+#spaui .spaui-head-controls {
+  margin: 0;
+  padding: 14px 0 0 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+}
+#spaui ol:last-child,#spaui ul:last-child {
+  margin-bottom: 0!important;
+}
+#spaui .spaui-head-controls li:first-child {
+  margin-left: 8px;
+}
+#spaui .spaui-head-controls li {
+  display: inline-block;
+  margin: 0 4px;
+  padding-left: 0;
+}
+#spaui .spaui-head-controls .spaui-head-controls-search {
+  position: absolute;
+  top: 10px;
+  right: 36px;
+}
+#spaui .spaui-search-icon {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 29px;
+  height: 26px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #ffbe61;
+  cursor: pointer;
+}
+#spaui .spaui-search-icon-image {
+  background-position: -239px -3px;
+  width: 20px;
+  height: 28px;
+  display: inline-block;
+  margin: 3px 6px;
+}
+#spaui .spaui-head-controls-search #spaui-search {
+  overflow: hidden;
+  padding-right: 5px;
+}
+#spaui .spaui-head-controls-search .spaui-search-box {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0;
+  height: 26px;
+  font-size: 13px;
+  padding: 1px 6px 1px 8px;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: none;
+  width: 100%;
+}
+#spaui-search-suggestions {
+  border: 1px solid #AEAEAE;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 2000;
+  left: 1px;
+  text-align: left;
+}
+#spaui-search-suggestions #spaui-search-suggestions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#spaui .spaui-head-controls li {
+  /* display: inline-block; */
+  margin: 0 4px;
+  padding-left: 0;
+}
+#spaui .spaui-head-controls-close-affordance {
+  opacity: 1;
+  transition: opacity 1.25s ease-in-out;
+}
+#spaui .spaui-head-controls-close-affordance {
+  z-index: 100;
+}
+#spaui .spaui-close-affordance {
+  background-position: -4px -30px;
+}
+#spaui .spaui-head-controls .spaui-head-controls-close {
+  position: absolute;
+  top: 14px;
+  right: 3px;
+}
+#spaui .spaui-head-controls li {
+  display: inline-block;
+  margin: 0 4px;
+  padding-left: 0;
+}
+#spaui .spaui-head-controls li.spaui-head-icon a {
+  width: 18px;
+  height: 18px;
+}
+
+#spaui .spaui-close {
+  background-position: -4px -4px;
+}
+#spaui-head-controls-search{
+  transition:width 0.5s;
+  -moz-transition:width 0.5s; /* Firefox 4 */
+  -webkit-transition:width 0.5s; /* Safari and Chrome */
+  -o-transition:width 0.5s; /* Opera */
+}
+#spaui spaui-content-ui{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  height: 24px;
+}
+#spaui .spaui-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  overflow: auto;
+  padding-top: 46px!important;
+  width: 100%;
+  background-color: #fff;
+  border-left: 2px solid #303942;
+  border-right: 2px solid #303942;
+}
+#spaui .spaui-content-ui-back {
+  position: absolute;
+  left: 0;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none!important;
+}
+#spaui .spaui-content-ui-back a{
+  color: #0097d6!important;
+  text-decoration: none;
+}
+#spaui .spaui-content-ui-feedback {
+  position: absolute;
+  right: 0;
+  list-style: none!important;
+  margin: 0;
+  padding: 0;
+}
+#spaui .spaui-content-ui-feedback a{
+  color: #0097d6!important;
+  text-decoration: none;
+}
+/* 横线 */
+#spaui-help-hub-input{
+  width: 100%;
+  height:0;
+  border-color: red;
+  
+}
+/* 列表 */
+#spaui .spaui-panel .spaui-content {
+  position: absolute;
+  top: 73px;
+  bottom: 60px;
+  box-sizing: content-box;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  width: 100%;
+  bottom: 0;
+  border-bottom: solid 2px #303942;
+}
+
+#spaui .spaui-get-support-card {
+  font-family: 'Amazon Ember',arial,sans-serif;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  font-size: 14px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-header {
+  padding-bottom: 15px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-header .spaui-get-support-card-header-title {
+  color: #f90;
+
+}
+.asp .asp-spacing-small, .asp .asp-ws .asp-ws-spacing-small {
+  margin-bottom: 10px!important;
+}
+/* 列表ul */
+.asp ol.asp-nostyle, .asp ul.asp-nostyle {
+  margin-left: 0;
+  list-style-type: none;
+  color: #333;
+}
+
+.asp ol:last-child, .asp ul:last-child {
+  margin-bottom: 0!important;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item {
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* 获得支持 */
+.asp h2 {
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* 图片 */
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon.spaui-get-support-card-accountshipping {
+  background-position: -12px -133px;
+}
+#spaui .spaui-get-support-icon.spaui-get-support-card-paymentstax {
+  background-position: -60px -133px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon.spaui-get-support-card-addproducts {
+  background-position: -115px -133px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon.spaui-get-support-card-sellrestricted {
+  background-position: -164px -133px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon.spaui-get-support-card-fba {
+  background-position: -219px -133px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon.spaui-get-support-card-other {
+  background-position: -267px -133px;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-get-support-icon {
+  width: 40px;
+  height: 30px;
+  vertical-align: middle;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header span {
+  display: inline-block;
+}
+
+.spaui-get-support-card-item-header{
+  position: relative;
+}
+/* 下拉箭头 */
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-header .spaui-toggle-icon {
+  width: 14px;
+  height: 9px;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  margin-top: 11px;
+  background-position: -110px -8px;
+}
+/* 二级菜单 */
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-body {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  margin-left: 0;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-body .spaui-get-support-card-item-linkgroup {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* 字体 */
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-body .spaui-get-support-card-item-linkgroup .spaui-get-support-card-item-body-text {
+  display: block;
+  font-size: 14px;
+  line-height: 15px;
+  color: #303942;
+}
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-body .spaui-get-support-card-item-linkgroup .spaui-get-support-card-item-body-link {
+  font-size: 13px;
+  padding-right: 3px;
+  margin-top: 4px;
+  line-height: 14px;
+  display: block;
+  color: #0097d6;
+}
+
+#spaui .spaui-get-support-card .spaui-get-support-card-item .spaui-get-support-card-item-body .spaui-get-support-card-item-linkgroup .spaui-get-support-card-item-body-link::after {
+  content: "";
+  background: 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #0097d6;
+  border-right: none;
+  margin-left: 4px;
+}

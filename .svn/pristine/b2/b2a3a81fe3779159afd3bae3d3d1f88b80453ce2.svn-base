@@ -1,0 +1,461 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+.box-sizing{
+    box-sizing: border-box;
+}
+.a-ember body {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+.a-text-bold {
+    font-weight: 700!important;
+}
+.display_none{
+    display: none;
+}
+.overflow_hidden{
+    overflow: hidden;
+}
+.float_left{
+    float: left !important;
+}
+.float_right{
+    float: right !important;
+}
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block
+}
+.a-padding-large {
+    padding: 18px 22px!important;
+}
+.a-spacing-base, .a-ws .a-ws-spacing-base {
+    margin-bottom: 14px!important;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+.width48 {
+    width: 48.948%;
+}
+.width47{
+    width: 47.96267%;
+}
+.width4{
+    width: 4.62933%;
+}
+.width-100 {
+    width: 100% !important;
+}
+.width145{
+   width: 132px; 
+}   
+.height{
+    height: 42px;
+}
+.height31{
+    height: 31px;
+}
+.marRight{
+    margin-right: 4%;
+}
+.a-ws div.a-column, div.a-column {
+    min-height: 1px;
+    overflow: visible;
+}
+.a-spacing-base, .a-ws .a-ws-spacing-base {
+    margin-bottom: 14px!important;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search] {
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+}
+.a-input-text-addon-group .a-input-text-wrapper:last-child, .a-input-text-addon-group .a-input-text:last-child,.a-input-text-addon:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.a-input-text-addon-group .a-input-text-wrapper:first-child,.righttop_rightbottom_border0 , .a-input-text-addon-group .a-input-text:first-child, .a-input-text-addon:first-child {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.border-left_none{
+    border-left:none !important;
+}
+.border-right_none{
+    border-right:none !important;
+}
+.a-row:after {
+    clear: both;
+}
+.onfocusInput:focus{
+    outline: 0;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+    border-color:rgba(231,118,0,1);  
+    -webkit-box-shadow:0 0 5px rgba(231,118,0,1) ; 
+}
+
+.a-row:after, .a-row:before {
+    display: table;
+    content: "";
+    line-height: 0;
+    font-size: 0;
+}
+.width-94{
+    width:94% !important;
+}
+input[placeholder] {
+    text-overflow: ellipsis;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search], select.a-select-multiple, textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+.paddinglr{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.box-sizing{
+    box-sizing:border-box;
+}
+.inputs{
+    position: absolute;
+    background-color: #fff;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .01;
+    /* filter: alpha(opacity=1); */
+    outline: 0;
+    overflow: visible;
+    z-index: 20;
+}
+h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 0;
+    padding-bottom: 4px;
+}
+h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+    margin: 0;
+    
+}
+h1, h2, h3, h4 {
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+   
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+form {
+    margin-bottom: 14px;
+}
+.marBottom4{
+    margin-bottom: 4px
+}
+.marTop4{
+    margin-top: 4px
+}
+.marBottom14{
+    margin-bottom: 14px
+}
+.mandatoryTagClass {
+    color: #F90;
+}
+.a-size-small {
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+.padding3_7{
+    padding: 3px 7px;
+}
+.padding3_0{
+    padding: 3px 0;
+}
+.a-color-tertiary {
+    color: #767676!important;
+}
+.grid-col-right-margin {
+    margin-right: 1% !important;
+}
+.a-input-text, input[type=text], input[type=search], input[type=number], input[type=tel], input[type=password], input[type=date], input[type=email] {
+    background-color: #fff;
+    line-height: normal;
+}
+.a-input-text, input[type=text], input[type=search], input[type=number], input[type=tel], input[type=password], select.a-select-multiple, textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+.a-input-text-addon {
+    background-color: #f6f6f6;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle
+}
+.a-input-text-addon2 {
+    background-color: #f6f6f6;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    white-space: nowrap;
+    padding:3px 7px;
+    width: 190px;
+    vertical-align: middle;
+}
+.a-input-text-addon:first-child {
+    border-right: 0;
+}
+.a-button-input{
+    width: 100%;
+    height: 29px;
+}
+.a-button-input-span{
+    position: absolute;
+    left:135px;
+    top:5px;
+}
+.relative{
+    position: relative;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+
+.a-button-span12 {
+    width: 100%!important;
+}
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button .a-button-inner {
+    background: #eff0f3;
+    background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f8fa', endColorstr='#e7e9ec', GradientType=0);
+}
+.a-button-inner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+    position: relative;
+}
+.a-button-primary {
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+.a-ember input, .a-ember select, .a-ember textarea {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.a-span12 input {
+    float: none;
+    margin-right: 0;
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+.a-button-text {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.a-icon, .a-link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+.a-alert-inline-error .a-icon-alert, .a-icon-error.a-icon-small {
+    background-position: -141px -130px;
+}
+.a-alert-inline-success .a-icon-alert, .a-icon-success.a-icon-small {
+    background-position: -117px -130px;
+}
+.a-alert-success .a-icon-alert, .a-icon-success {
+    width: 27px;
+    background-position: -318px -35px;
+}
+.a-alert-inline .a-icon-alert{
+    height: 13px;
+    width: 14px;
+    position: absolute;
+    left: 2px;
+    top:2px;
+}
+.a-alert-inline-error .a-icon-alert {
+    top: 0px !important;
+}
+.a-alert-inline .a-alert-container .a-alert-content {
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+}
+.a-alert-inline-error .a-alert-container {
+    padding-left: 16px;
+    color: #c40000;
+}
+.a-alert-inline-success .a-alert-container {
+    padding-left: 22px;
+    color: #007600;
+}
+.a-alert-inline {
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+    background-color: transparent;
+}
+.saleName{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.saleName span,.saleName input{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.group_input1{
+    width:calc(100% - 190px);
+}
+.submitBtn{
+    background: linear-gradient(to bottom,#F6DDA1,#F3CD72,#EEB936);
+    background: -webkit-linear-gradient(to bottom,#F6DDA1,#F3CD72,#EEB936)
+
+}
+.a-box {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+.a-alert-success {
+    border-color: #7fc87f;
+}
+.a-box .a-box-inner {
+    border-radius: 4px;
+    position: relative;
+    padding: 14px 18px;
+}
+.a-alert-success .a-alert-container {
+    box-shadow: 0 0 0 4px #dff7df inset;
+    padding-left: 60px;
+}
+
+.myInput .a-alert-container {
+    padding: 0 !important;
+    padding-left: 20px !important;
+    /* padding-top: 2px !important; */
+}
+.myInput .a-box{
+    border:none !important;
+}
+.a-alert .a-icon-alert {
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+
+
+
+
+.activebtn{
+    border-color: #d00 !important;
+    box-shadow: 0 0 0 3px rgba(221,0,0,.1) !important;
+}
+.successMes,.mustMes,.notNull,.shopNameNull,.success_status,.urlSuccessMes,.shopNameError,.canNotReceive,.shopNameUrlError,.urlCanNotReceive{
+    display: none;
+    margin-top: 5px;
+}

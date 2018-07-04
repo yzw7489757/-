@@ -1,0 +1,102 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+
+
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+.a-box {
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+
+.a-row{
+    width: 100%;
+}
+.block{
+    display: block;
+}
+.none{
+    display:none
+}
+.border_box{
+    box-sizing: border-box
+}
+.relative{
+    position: relative
+}
+.overflow_hidden {
+    overflow: hidden;
+}
+.float_left {
+    float: left !important;
+}
+.float_right {
+    float: right !important;
+}
+.align_right{
+    text-align: right;
+}
+.a-spacing-top-medium {
+    margin-top: 18px!important;
+}
+.a-spacing-top-micro {
+    margin-top: 4px!important;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+.a-padding-large {
+    padding: 18px 22px!important;
+}
+.a-box-inner{
+    padding: 18px 22px!important;
+}
+.a-spacing-base{
+    margin-bottom: 14px!important;
+}
+.width74{
+    width: 74.448%;
+}
+.width48{
+    width: 48.60313%;
+}
+.width23{
+    width: 23.448%;
+}
+.width65{
+    width: 65.7198%;
+}
+.width31{
+    width: 31.48647%;
+}
+.a-column {
+    margin-right: 2%;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
