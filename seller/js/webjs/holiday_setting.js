@@ -13,12 +13,12 @@ window.onload = function(){
     $('#model').hide();
   })
   $('.startCheck').click(function(){
-    $('.readyCheck').attr('checked',true)
-    $('.tostopCheck').attr('checked',false);
+    $('.readyCheck').attr('checked','checked')
+    $('.tostopCheck').removeAttr('checked');
   });
 
   $('.stopCheck').click(function(){
-    $('.tostopCheck').attr('checked',true)
-    $('.readyCheck').attr('checked',false);
+    $('.tostopCheck').attr('checked','checked')
+    $('.readyCheck').removeAttr('checked');
   })
 }
