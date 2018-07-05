@@ -5,21 +5,20 @@ body {
     font-family: Arial,sans-serif;
 }
 label{
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
     font-weight: 700;
 }
-ul{
-    margin: 0 ;
-    padding:0 ;
-
-}
-li{
-    list-style: none;
-}
-
 h1 {
     font-weight: 400;
     font-size: 28px;
     line-height: 1.2;
+}
+h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
 }
 h3 {
     font-weight: 700;
@@ -36,6 +35,21 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
+}
+h1, h2, h3, h4 {
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
 }
 a {
     text-decoration: none;
@@ -88,18 +102,7 @@ b{
 .a-text-bold {
     font-weight: 700!important;
 }
-.a-spacing-top-mini {
-    margin-top: 6px!important;
-}
-.a-spacing-top-medium {
-    margin-top: 18px!important;
-}
-.a-spacing-top-micro {
-    margin-top: 4px!important;
-}
-.a-spacing-top-small {
-    margin-top: 10px!important;
-}
+
 .a-padding-large {
     padding: 18px 22px!important;
 }
@@ -118,6 +121,18 @@ b{
 .faq_questionSet {
     padding-bottom: 10px;
 }
+.a-spacing-top-mini {
+    margin-top: 6px!important;
+}
+.a-spacing-top-medium {
+    margin-top: 18px!important;
+}
+.a-spacing-top-micro {
+    margin-top: 4px!important;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
 .a-spacing-base{
     margin-bottom: 14px!important;
 }
@@ -126,6 +141,12 @@ b{
 }
 .marBtn10{
     margin-bottom: 10px!important;
+}
+.a-spacing-micro, .a-ws .a-ws-spacing-micro {
+    margin-bottom: 4px!important;
+}
+.a-spacing-medium, .a-ws .a-ws-spacing-medium {
+    margin-bottom: 18px!important;
 }
 .width91{
     width: 91.3948%;
@@ -148,18 +169,17 @@ b{
 .width31{
     width: 31.48647%;
 }
+.width30{
+    width: 30.62933%;
+}
 .width99{
     width: 99.95313%;
 }
-.width14{width: 14.3698%;}
+.width14{
+    width: 14.3698%;
+}
 .width5{
     width: 5.81147%;
-}
-.heigh29{
-    height: 29px;
-}
-.height34{
-    height: 34px;
 }
 .pdTOP6{
     padding-top: 6px;
@@ -170,70 +190,30 @@ b{
 .marRight2_7{
     margin-right: 2.7%;
 }
-.faq-text-underline {
-    text-decoration: underline;
+.first_child{
+    border-radius: 4px 4px 0 0;
 }
-hr {
-    background-color: transparent;
-    display: block;
-    height: 1px;
-    border-width: 0;
-    border-top: 1px solid #e7e7e7;
-    line-height: 19px;
-    margin-top: 0;
-    margin-bottom: 14px;
-}
-.a-color-tertiary {
-    color: #767676!important;
-}
-.a-button {
-    background: #e7e9ec;
-    border-radius: 3px;
-    border-color: #adb1b8 #a2a6ac #8d9096;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-    text-decoration: none!important;
-    vertical-align: middle;
-}
-img {
-    vertical-align: top;
-    height: 27px;
-}
-.img-with-bottom-text {
-    vertical-align: bottom;
+.last_chilid{
+    border-radius: 0 0 4px 4px;
 }
 .a-size-base {
     font-size: 13px!important;
     line-height: 19px!important;
 }
-.a-size-medium {
-    font-size: 17px!important;
-    line-height: 1.255!important;
-    font-family: Arial,sans-serif;
-    text-rendering: optimizeLegibility;
+.a-button-primary {
+    background: #f0c14b !important;
+    color: #111;
 }
-.a-box .a-divider.a-divider-break:after, .a-color-base-background .a-divider.a-divider-break:after, .a-divider.a-divider-break:after {
-    content: "";
-    width: 100%;
+.a-button-text {
     background-color: transparent;
+    border: 0;
     display: block;
-    height: 1px;
-    border-top: 1px solid #e7e7e7;
-    position: absolute;  
-    margin-top: -1px;
-    z-index: 1;
-}
-.box_header {
-    border-radius: 4px 4px 0 0;
-    overflow: hidden;
-    background-color: #fff;
-    background-image: linear-gradient(rgb(248, 248, 248), rgb(238, 238, 238));
-}
-.box {  
-    border: 1px solid #ddd;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
 }
