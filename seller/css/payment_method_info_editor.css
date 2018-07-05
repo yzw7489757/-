@@ -71,23 +71,12 @@ textarea {
     outline: 0;
 }
 
-.a-input-text,
-input[type=text],
-input[type=number],
-input[type=tel],
-input[type=password],
-input[type=search] {
-    background-color: #fff;
-    height: 31px;
-    padding: 3px 7px;
-    line-height: normal;
-}
-
 .onfocusInput:focus {
     outline: 0;
     -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
     border-color: rgba(231, 118, 0, 1);
     -webkit-box-shadow: 0 0 5px rgba(231, 118, 0, 1);
+    
 }
 
 .a-alert-inline {
