@@ -416,3 +416,6 @@ a:-webkit-any-link {
 .separated-list>li:last-child  {
     border-right-color:none 
 }
+.first_child{
+  border-radius: 4px 4px 0 0;  
+}

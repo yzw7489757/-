@@ -120,6 +120,9 @@ hr {
 .a-spacing-top-base {
     margin-top: 14px!important;
 }
+.a-spacing-top-extra-large {
+    margin-top: 26px!important;
+}
 .a-box {   
     border-radius: 4px;
     border: 1px #ddd solid;
@@ -172,6 +175,10 @@ h6 {
 }
 .block{
     display: block;
+}
+.a-size-base-plus {
+    font-size: 15px!important;
+    line-height: 1.4!important;
 }
 .a-size-small {
     font-size: 12px!important;
