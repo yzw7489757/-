@@ -4,12 +4,7 @@ body {
     color: #111;
     font-family: Arial,sans-serif;
 }
-label{
-    display: block;
-    padding-left: 2px;
-    padding-bottom: 2px;
-    font-weight: 700;
-}
+
 h1 {
     font-weight: 400;
     font-size: 28px;
@@ -41,16 +36,6 @@ h1, h2, h3, h4 {
     text-rendering: optimizeLegibility;
     padding-bottom: 4px;
 }
-hr {
-    background-color: transparent;
-    display: block;
-    height: 1px;
-    border-width: 0;
-    border-top: 1px solid #e7e7e7;
-    line-height: 19px;
-    margin-top: 0;
-    margin-bottom: 14px;
-}
 a {
     text-decoration: none;
 }
@@ -60,6 +45,16 @@ a, a:active, a:link, a:visited {
 }
 b{
     font-weight: 700;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
 }
 .a-box {
     border: 1px #ddd solid;
@@ -118,6 +113,9 @@ b{
 .a-box-inner_radio{
     padding: 14px 18px;
 }
+.a-padding-base {
+    padding: 10px 14px!important;
+}
 .faq_questionSet {
     padding-bottom: 10px;
 }
@@ -136,7 +134,7 @@ b{
 .a-spacing-base{
     margin-bottom: 14px!important;
 }
-.a-spacing-small,{
+.a-spacing-small{
     margin-bottom: 10px!important;
 }
 .marBtn10{
@@ -166,9 +164,6 @@ b{
 .width65{
     width: 65.7198%;
 }
-.width39{
-    width: 39.296%;
-}
 .width31{
     width: 31.48647%;
 }
@@ -184,11 +179,17 @@ b{
 .width5{
     width: 5.81147%;
 }
+.width56{
+    width: 56.62933%;
+}
+.width39{
+    width: 39.296%;
+}
+.width47{
+    width: 47.96267%;
+}
 .pdTOP6{
     padding-top: 6px;
-}
-.marRight4{
-    margin-right: 4%;
 }
 .a-column {
     margin-right: 2%;
@@ -196,16 +197,55 @@ b{
 .marRight2_7{
     margin-right: 2.7%;
 }
+.marRight4{
+    margin-right: 4%;
+}
 .first_child{
     border-radius: 4px 4px 0 0;
 }
 .last_chilid{
     border-radius: 0 0 4px 4px;
 }
-.a-size-base {
-    font-size: 13px!important;
-    line-height: 19px!important;
+.radius{
+    border-radius: 4px;
 }
+
+/* i */
+.a-icon {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+.a-alert .a-icon-alert {
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+.a-icon-alert {
+    background-position: -318px -35px;
+}
+/* 边框 */
+.a-alert-success .a-alert-container {
+    box-shadow: 0 0 0 4px #dff7df inset;
+    padding-left: 60px;
+}
+
+.a-color-success {
+    color: #008a00!important;
+}
+.a-size-medium {
+    font-size: 17px!important;
+    line-height: 1.255!important;
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+/* 按钮 */
 .a-button {
     background: #e7e9ec;
     border-radius: 3px;
@@ -220,9 +260,13 @@ b{
     text-decoration: none!important;
     vertical-align: middle;
 }
-.a-button-primary {
-    background: #f0c14b !important;
-    color: #111;
+.a-button-inner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
 }
 .a-button-text {
     background-color: transparent;
@@ -237,73 +281,28 @@ b{
     text-align: center;
     white-space: nowrap;
 }
-
-/* i */
-.a-icon {
-    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
-    -webkit-background-size: 400px 670px;
-    background-size: 400px 670px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.a-alert-inline .a-icon-alert {
-    height: 13px;
-    width: 14px;
+.a-button-input {
     position: absolute;
-    left: 2px;
-    top: 2px;
-}
-
-.a-icon-alert2 {
-    height: 27px;
-    width: 30px;
-    position: absolute;
-    left: 18px;
-    top: 11px;
-}
-.a-alert-inline-error {
-    width: 5px;
-    background-position: -141px -130px;
-}
-.a-icon-alert2{
-    background-position: -248px -35px;
-}
-.a-alert-container {
-    padding-left: 16px;
-    color: #c40000;
-}
-.onfocusInput:focus {
-    outline: 0;
-    -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
-    border-color: rgba(231, 118, 0, 1);
-    -webkit-box-shadow: 0 0 5px rgba(231, 118, 0, 1);
-}
-.a-input-text,
-input[type=text],
-input[type=number],
-input[type=tel],
-input[type=password],
-input[type=search] {
     background-color: #fff;
-    height: 31px;
-    padding: 3px 7px;
-    line-height: normal;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .01;
+    filter: alpha(opacity=1);
+    outline: 0;
+    overflow: visible;
+    z-index: 20;
 }
-.a-alert-inline {
-    display: inline-block;
-    border: none;
-    vertical-align: middle;
-    background-color: transparent;
+
+.bgcolor{
+   
+    background-color: #f3f3f3!important;
+ 
 }
-.address-inputName {
-    font-weight: bold;
-}
-.a-alert-error {
-    border-color: #c40000;
-}
-.a-alert-error .a-alert-container {
-    box-shadow: 0 0 0 4px #fcf4f4 inset;
-    padding-left: 63px;
+.a-ember {
+    font-family: "Amazon Ember",Arial,sans-serif;
 }

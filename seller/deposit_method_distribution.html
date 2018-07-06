@@ -19,10 +19,32 @@
                             <h1>存款方式</h1>
                         </div>
                         <div class="float_right a-spacing-top-micro">
-                            <a href="">账户信息</a>
+                            <a href="./account_information.html">账户信息</a>
                         </div>
                     </div>
                     <hr class="a-divider-normal">
+                    <div class="a-row a-spacing-base">
+                        <div class="a-row">
+                            <div class="a-row">
+                                <div class="a-box a-alert a-alert-error">
+                                    <div class="a-box-inner_radio relative a-alert-container a-box-inner">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="inline_block">
+                                            <div class="a-row">
+                                                <span>
+                                                    无法验证现有银行账户详情。请提供正确的信息，然后重新提交。
+                                                </span>
+                                            </div>
+                                            <div class="align_right a-row">
+                                                <span>- occured at</span>
+                                                <span>Fri Jul 06 2018 10:50:53 GMT+0800 (中国标准时间)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="a-row marTop30">
                         <div class="marBot">
                             <h3>
@@ -80,8 +102,8 @@
                                             <div class="width48 float_left">
                                                 <div class="a-alert-inline">
                                                     <div class="a-alert-container relative">
-                                                        <i class="a-icon a-icon-alert"></i>
-                                                        <div class="pdleft16">
+                                                        <i class="a-icon a-icon-alert2"></i>
+                                                        <div class="a-alert-content inline-block ">
                                                             选择您要分配的存款方式。
                                                         </div>
                                                     </div>
@@ -118,7 +140,7 @@
                                 </div>
                             </div>
                             <!-- 2 -->
-                            <div class="a-row  table_two none">
+                            <div class="a-row  table_two ">
                                 <div class="a-box">
                                     <div class="a-box-inner">
                                         <div class="a-row overflow_hidden">
@@ -174,8 +196,8 @@
                                             <div class="width48 float_right">
                                                 <div class="a-alert-inline a-spacing-top-small">
                                                     <div class="a-alert-container relative">
-                                                        <i class="a-icon a-icon-alert"></i>
-                                                        <div class="pdleft16">
+                                                        <i class="a-icon a-icon-alert2"></i>
+                                                        <div class="a-alert-content inline-block">
                                                             您的银行可能会对支付收取费用
                                                         </div>
                                                     </div>
@@ -187,7 +209,7 @@
 
                             </div>
                             <!-- 3 -->
-                            <div class="a-row  table_three none">
+                            <div class="a-row  table_three ">
                                 <div class="a-row  a-box">
                                     <div class="a-box-inner">
                                         <div class="a-row">
@@ -201,6 +223,14 @@
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="姓名应与银行证件上的相同">
                                                 </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="width99 a-spacing-top-base">
                                                 <div class="a-row">
@@ -212,6 +242,14 @@
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="（8 或 11 个字符）">
                                                 </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="width99 a-spacing-top-base">
                                                 <div class="a-row">
@@ -221,18 +259,32 @@
                                                     </span>
                                                 </div>
                                                 <div class="a-row">
-                                                    <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="最多 34 个字符">
+                                                    <input maxlength="34" type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="最多 34 个字符">
+                                                </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="width99 a-spacing-top-base">
                                                 <div class="a-row">
                                                     <span> 重新输入 IBAN</span>
-                                                    <span>
-                                                        <img src="./img/u368._V279572601_.png" alt="">
-                                                    </span>
+                                                   
                                                 </div>
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box">
+                                                </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -260,6 +312,14 @@
                                             </div>
                                         </div>
                                         <div class="a-row a-spacing-top-base"></div>
+                                        <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                            <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                <div class="a-alert-content inline-block a-alert-container-color">
+                                                    您必须接受该协议。
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="a-row a-spacing-top-small">
                                             <span class="a-size-small ng-binding">
                                                 否则，请输入您销售商品的市场所在国家或地区的银行账户。
@@ -269,7 +329,7 @@
                                 </div>
                             </div>
                             <!-- 4 -->
-                            <div class="a-row table-four none">
+                            <div class="a-row table-four ">
                                 <div class="a-row a-box">
                                     <div class="a-box-inner">
                                         <!-- 111 -->
@@ -284,6 +344,14 @@
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="姓名应与银行证件上的相同">
                                                 </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="width48 a-spacing-top-base float_right">
                                                 <div class="a-row">
@@ -291,6 +359,14 @@
                                                 </div>
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box">
+                                                </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -303,6 +379,14 @@
                                                 </div>
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="123">
+                                                </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="width48 a-spacing-top-base float_right">
@@ -319,6 +403,14 @@
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box">
                                                 </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="width48 a-spacing-top-base float_right">
                                                 <div class="a-row">
@@ -327,6 +419,14 @@
                                                 </div>
                                                 <div class="a-row">
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box">
+                                                </div>
+                                                <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                                    <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                                        <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                                        <div class="a-alert-content inline-block a-alert-container-color">
+                                                            必填字段！
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -355,6 +455,22 @@
                                             <input type="text" class="a-input-text a-spacing-top-micro border_box width48">
                                         </div>
                                     </div>
+                                    <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                        <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                            <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                            <div class="a-alert-content inline-block a-alert-container-color">
+                                                必填字段！
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a-row a-alert-inline a-alert-inline-error a-spacing-top-mini">
+                                        <div class="a-row a-alert-container relative display_none a-spacing-top-micro">
+                                            <i class="a-icon a-icon-alert3 a-alert-inline-error"></i>
+                                            <div class="a-alert-content inline-block a-alert-container-color">
+                                                您已超出尝试允许的最大次数。请等候4分钟，然后重试。
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -378,7 +494,75 @@
                         </div>
                     </div>
                 </div>
+                <div class="a-row pd8 a_button_style">
+                    <div class="a-popover-wrapper relative">
+                        <div class="a-popover-inner relative">
+                            <button class="a-button-close">
+                                <i class="a-icon a-icon-close"></i>
+                            </button>
+                            <div>账户持有人姓名必须与您银行账户上的
+                                <br>姓名相符。请勿包含银行本身的名称。</div>
+                        </div>
+                        <div class="a-arrow-border">
+                            <div class="a-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="a-row pd8 a_button_style">
+                    <div class="a-popover-wrapper relative">
+                        <div class="a-popover-inner relative">
+                            <button class="a-button-close">
+                                <i class="a-icon a-icon-close"></i>
+                            </button>
+                            <div>账户持有人姓名必须与您银行账户上的
+                                <br>姓名相符。请勿包含银行本身的名称。
+                                <br> 示例：John Doe 或 XYZ 公司。使用 ISO
+                                <br> 基本拉丁字符与您的银行在存档中的记录
+                                <br>保持一致。为确保收到您的付款，此信息
+                                <br>必须准确。</div>
+                        </div>
+                        <div class="a-arrow-border">
+                            <div class="a-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row pd8 a_button_style">
+                    <div class="a-popover-wrapper relative">
+                        <div class="a-popover-inner relative">
+                            <button class="a-button-close">
+                                <i class="a-icon a-icon-close"></i>
+                            </button>
+                            <div> 您的银行识别码 (BIC) 是特定银行的代
+                                <br>码。 示例：ABCDITA1 或
+                                <br> ABCDITA1A12. 请使用您的银行对帐单中的
+                                字符。 （8 或 11 个字符）</div>
+                        </div>
+                        <div class="a-arrow-border">
+                            <div class="a-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row pd8 a_button_style">
+                    <div class="a-popover-wrapper relative">
+                        <div class="a-popover-inner relative">
+                            <button class="a-button-close">
+                                <i class="a-icon a-icon-close"></i>
+                            </button>
+                            <div> 您的国际银行帐户号码 (IBAN) 是用于将
+                                <br>资金按照特定的路径汇入您的银行帐户
+                                <br>的帐户号码。 请使用您的银行对帐单中的
+                                <br>字符。 （最多 34 个字符）</div>
+                        </div>
+                        <div class="a-arrow-border">
+                            <div class="a-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -387,4 +571,5 @@
 <script src="./js/jquery-3.3.1.min.js "></script>
 <script src="./js/public.js " type="text/javascript "></script>
 <script src="./js/webjs/deposit_method_distribution.js" type="text/javascript "></script>
+
 </html>
