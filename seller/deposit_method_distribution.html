@@ -212,7 +212,7 @@
                                     <div class="a-box-inner">
                                         <div class="a-row">
 
-                                            <div class="width99 a-spacing-top-base us haveCardUserName" id="hasUser"><!--账户持有人姓名-->
+                                            <div class="width99 a-spacing-top-base haveCardUserName" id="hasUser"><!--账户持有人姓名-->
                                                 <div class="a-row">
                                                     <span> 账户持有人姓名</span>
                                                     <span class='hasModel'>
@@ -255,7 +255,7 @@
                                                     <input type="text" class="width25 mg3 a-input-text a-spacing-top-micro border_box">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base liquidation iban" id="liquidation"><!--清算代码-->
+                                            <div class="width99 a-spacing-top-base liquidation none" id="liquidation"><!--清算代码-->
                                                 <div class="a-row">
                                                     <span>清算代码</span>
                                                     <span>
@@ -266,7 +266,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="示例：123">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base branchBankCode" id="branchBankCode"><!--分行代码-->
+                                            <div class="width99 a-spacing-top-base branchBankCode none" id="branchBankCode"><!--分行代码-->
                                                 <div class="a-row">
                                                     <span>分行代码</span>
                                                     <span>
@@ -277,7 +277,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box"  placeholder="示例：456">
                                                 </div>
                                             </div>                                            
-                                            <div class="width99 a-spacing-top-base us noBB" id="bic"> <!--BIC-->
+                                            <div class="width99 a-spacing-top-base us noBB none" id="bic"> <!--BIC-->
                                                 <div class="a-row">
                                                     <span> BIC</span>
                                                     <span>
@@ -288,7 +288,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="（8 或 11 个字符）">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base us intBankNum" id="intBank"><!--国际银行帐户号码-->
+                                            <div class="width99 a-spacing-top-base us intBankNum none" id="intBank"><!--国际银行帐户号码-->
                                                 <div class="a-row">
                                                     <span> 国际银行帐户号码</span>
                                                     <span>
@@ -299,7 +299,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="最多 34 个字符">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base us iban" id="iban"><!--重新输入IBAN-->
+                                            <div class="width99 a-spacing-top-base us none" id="iban"><!--重新输入IBAN-->
                                                 <div class="a-row">
                                                     <span> 重新输入 IBAN</span>
                                                     <span>
@@ -344,7 +344,18 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="示例：45678（5 位数字）。">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base bankIds none" id="bankIds"><!--银行账号-->
+                                            <div class="width99 a-spacing-top-base nightBankCode" id="nightBankCode"><!--9位数银行编码-->
+                                                <div class="a-row">
+                                                    <span>9 位数的银行识别代码</span>
+                                                    <span>
+                                                        <img src="./img/u368._V279572601_.png" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="a-row">
+                                                    <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="9 位 数">
+                                                </div>
+                                            </div>
+                                            <div class="width99 a-spacing-top-base bankIds " id="bankIds"><!--银行账号-->
                                                 <div class="a-row">
                                                     <span>银行账号</span>
                                                 </div>
@@ -352,7 +363,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="介于 3 至 12 位数字之间">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base againBankIds none" id="againBankIds"><!--重新输入银行账号-->
+                                            <div class="width99 a-spacing-top-base againBankIds " id="againBankIds"><!--重新输入银行账号-->
                                                 <div class="a-row">
                                                     <span>重新输入银行账号</span>
                                                 </div>
@@ -371,7 +382,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="示例：ABCD0123456">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base bankCode none" id="bankCode"><!--IFSC-->
+                                            <div class="width99 a-spacing-top-base bankCode none" id="bankCode"><!--bankcode-->
                                                 <div class="a-row">
                                                     <span>银行代码</span>
                                                 </div>
@@ -379,7 +390,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="123">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base bsb none" id="bsb"><!--IFSC-->
+                                            <div class="width99 a-spacing-top-base bsb none" id="bsb"><!--bsb-->
                                                 <div class="a-row">
                                                     <span>Bank State Branch (BSB) 代码</span>
                                                 </div>
@@ -387,7 +398,7 @@
                                                     <input type="text" class="a-row a-input-text a-spacing-top-micro border_box" placeholder="示例：123456">
                                                 </div>
                                             </div>
-                                            <div class="width99 a-spacing-top-base readSample iban" id="readSample"><!--查看支票样本-->
+                                            <div class="width99 a-spacing-top-base readSample none" id="readSample"><!--查看支票样本-->
                                                 <div class="a-row">
                                                     <span>查看支票样本</span>
                                                 </div>

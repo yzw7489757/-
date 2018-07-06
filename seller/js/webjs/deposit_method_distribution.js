@@ -144,7 +144,10 @@ window.onload = function() {
         $('#iban').show();
       break;
       case 'string:US': //美国
-          $('.us').show();
+        $('.hasUser').show();
+        $('.nightBankCode').show();
+        $('#bankIds').show();
+        $('#againBankIds').show();
       break;
       case 'string:FI': //芬兰
         $('#hasUser').show();
