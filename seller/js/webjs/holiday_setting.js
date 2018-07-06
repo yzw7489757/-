@@ -13,16 +13,11 @@ window.onload = function(){
     $('#model').hide();
   })
   $('.startCheck').click(function(){
-    $('.startCheck').addClass('active_style')
-    $('.stopCheck').removeClass('active_style')
-    $('.readyCheck').attr('checked',true)
-    $('.tostopCheck').attr('checked',false);
+    $('.readyCheck').val(['0'])
+    
   });
 
   $('.stopCheck').click(function(){
-    $('.stopCheck').addClass('active_style')
-    $('.startCheck').removeClass('active_style')
-    $('.tostopCheck').attr('checked',true)
-    $('.readyCheck').attr('checked',false);
+    $('.tostopCheck').val(['1'])
   })
 }
