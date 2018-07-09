@@ -1,0 +1,23 @@
+window.onload=function () { 
+    $('.addNewaddress').click(
+        function(e) {
+            e.preventDefault();
+            $('.address').show()
+            $('.address2').show()
+            $('.city_town').show()
+            $('.state_province_region').show()
+            $('.zip_code').show()
+            $('.contury').show()
+            $('.tel').show()
+            $('.reg-db-content-list').hide()                                 
+            $('.addNewaddressBtn').hide()
+        }
+    )
+    $('.extension_numberBtn').click(
+        function(e){
+            e.preventDefault();
+            $('.extension_number').show();
+            $('.extension_numberBtn').hide();
+        }
+    )
+ }

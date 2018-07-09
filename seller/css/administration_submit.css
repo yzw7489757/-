@@ -1,0 +1,256 @@
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.a_link_color {
+    color: #004B91 !important;
+}
+a:visited {
+    color: #963;
+}
+reg-db-content > a:visited {
+    color: #963;
+}
+h1 {
+    color: #c60;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: .1em;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+.a-row{
+    width: 100%;
+}
+#content-frame {
+    width: 95%;
+    margin: 15px auto;
+    text-align: left;
+}
+.bucketcontainer {
+    margin-top: 15px;
+}
+.cols-two #cols-main .cols-mc {
+    width: auto;
+    margin-right: 275px;
+    zoom: 1;
+}
+.width40 {
+    width: 40%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.alien {
+    text-align: right;
+    vertical-align: top;
+}
+
+.tiny-example {
+    font-size: 10px;
+    color: #666;
+}
+
+.width16 {
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 16.66666667%;
+}
+.width66{
+    width: 66%;
+}
+
+.width33 {
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 33.33333333%;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.display_none{
+    display: none;
+}
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.float_left {
+    float: left !important;
+}
+.float_right {
+    float: right !important;
+}
+.reg-db-section {
+    clear: both;
+    border-top: 1px solid #999;
+    padding: 10px 0px 0px;
+    margin-bottom: 10px;
+}
+.cols-right {
+    width: 260px;
+}
+.reg-db-header {
+    padding-right: 100px;
+    font-size: 14px;
+}
+.reg-db-status { 
+    font-weight: bold;
+    float: right;
+    width: 100px;
+    text-align: right;
+    /* text-decoration: none; */
+}
+.reg-db-status > a{
+    color: #090;
+}
+.reg-db-content-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.reg-db-subtitle {
+    clear: left;
+    float: left;
+    width: 220px;
+}
+.reg-edit-link {
+    display: block;
+    margin-top: 10px;
+}
+.reg-edit-link>a{
+    text-decoration: underline;
+}
+.a_underline{
+    text-decoration: underline;
+}
+.reg-db-content {
+    padding-left: 220px;
+}
+.buttonLarge {
+    height: 22px;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
+}
+.primaryLargeButton {
+    background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/nav2/prod/rainierCoreCSS/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+}
+.inner_button {
+    text-align: center;
+    display: block;
+    display: inline-block;
+}
+.button_label{
+    color: #006;
+}
+.secondaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
+}
+.primaryLargeButton span {
+    background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/nav2/prod/rainierCoreCSS/sc_button_sliding._V192548845_.gif) no-repeat left top;
+}
+.buttonLarge span {
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    margin-right: 7px;
+    padding-top: 2px;
+}
+.reg-right-section {
+    line-height: 1.4em;
+    font-size: 11px;
+    padding: 6px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 15px;
+}
+.reg-compPer-barwrap {
+    width: 100%;
+    height: 20px;
+    border: 1px solid #595959;
+    background-color: #fff;
+    padding: 0;
+    display: block;
+}
+.reg-compPer-bar-left {
+    height: 20px;
+    background-color: #a5a5a5;
+    padding: 0;
+    float: left;
+    display: block;
+}
+.reg-compPer-bar-right {
+    height: 20px;
+    background-color: #dad4d4;
+    padding: 0;
+    float: right;
+    display: block;
+}
+.reg-compPer-label {
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+}
+/* 常见问题 */
+.cols-r1 {
+    border: 1px solid #ddd;
+   
+}
+
+.cols-r1, .cols-r2 {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+.righttitle {
+    padding: 6px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    font-size: 12px;
+}
+.righttable{
+    padding: 2px 6px;
+    line-height: 1.4em;
+}
+.helptitle {
+    margin-top: 8px;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+.helpContent{
+    padding: 2px 6px;
+}

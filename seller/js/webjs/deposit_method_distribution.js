@@ -222,4 +222,8 @@ window.onload = function() {
         $('.credit').show();
     }
   });
+  
+  var bankId=document.getElementById('bankId')
+  bankId.appendChild(createDiv)
+
 };
