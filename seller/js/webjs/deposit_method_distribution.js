@@ -223,7 +223,9 @@ window.onload = function() {
     }
   });
   
+  var createDiv=document.createElement('div')
   var bankId=document.getElementById('bankId')
   bankId.appendChild(createDiv)
 
 };
+s
