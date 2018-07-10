@@ -16,46 +16,37 @@
     border-radius: 4px;
     width: 100%;
 }
-.address-dropdown:before,
-.ai-dropdown-container:before {
-    border-bottom-style: solid;
-    /* border-top: none; */
+.bank-account-dropdown:before {
+    top: 8px;
+    border-color: transparent transparent #000 transparent !important;
 }
-.address-dropdown:before,
-.ai-dropdown-container:before,
-.ai-dropdown-container:after {
+.bank-account-dropdown:before, .bank-account-dropdown:after {
     content: '';
     position: absolute;
     z-index: 2;
-    top: 10px;
     right: 10px;
     width: 0;
     height: 0;
     border: 3px dashed;
-    border-color: #000 transparent;
     pointer-events: none;
 }
-.address-dropdown:after,
-.ai-dropdown-container:after {
-    margin-top: 5px;
+.bank-account-dropdown:after {
     border-top-style: solid;
     border-bottom: none;
 }
-.address-dropdown:after,
-.ai-dropdown-container:before,
-.ai-dropdown-container:after {
+.bank-account-dropdown:after {
+    top: 16px;
+    border-color: #000 transparent;
+}
+.bank-account-dropdown:before, .bank-account-dropdown:after {
     content: '';
     position: absolute;
     z-index: 2;
-    top: 10px;
     right: 10px;
     width: 0;
     height: 0;
-    border: 3px dashed;
-    border-color: #000 transparent;
     pointer-events: none;
 }
-
 .a-input-text,
 input[type=text],
 input[type=number],

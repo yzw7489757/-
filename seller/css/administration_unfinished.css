@@ -20,13 +20,48 @@ li {
     margin: 0;
     padding: 0;
 }
+table.titlebar {
+    background: none;
+    border: none;
+    border-top: 1px solid #999;
+    width: 100%;
+}
 
+table {
+    width: 100%;
+}
+
+table.data-entry .field,
+table.data-entry .label {
+    padding: 10px;
+}
+
+table.data-entry td {
+    border-top: 1px solid #999;
+}
+.border_top_color{
+    border-top: 1px solid #999;
+}
+.border_top_color2{
+    border-top: 1px solid #ddd !important;
+}
+body,
+td,
+th {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+.pd6{
+    padding: 6px;
+}
 a {
     text-decoration: none;
 }
 .a_link_color {
     color: #004B91 !important;
 }
+
 a:visited {
     color: #963;
 }
@@ -81,9 +116,7 @@ h3{
     font-size: 10px;
     color: #666;
 }
-.width100{
-    width: 100%;
-}
+
 .width16 {
     padding-left: 18px;
     padding-right: 18px;
@@ -97,6 +130,9 @@ h3{
     padding-left: 18px;
     padding-right: 18px;
     width: 33.33333333%;
+}
+.a_underline{
+    text-decoration: underline;
 }
 .relative{
     position: relative;
@@ -256,37 +292,48 @@ h3{
 .helpContent{
     padding: 2px 6px;
 }
-/* 祝贺你 */
-.reg-db-successbox {
-    width: auto;
-    background-image: none;
-    padding-left: 10px;
-    margin-right: 260px;
+
+/* 显示卖家名称 */
+.a-input-text-wrapper {
+    float: left;
+    margin-right: .3rem;
 }
-.messageboxsuccess {
-    width: 75%;
-    padding: 10px;
-    font-size: 9pt;
-    text-align: left;
-    background-color: #ffc;
-    border: 2px solid #063;
-    color: #063;
+/* 公司地址 */
+.reg-db-content-list {
+    margin: 10px 0;
 }
-.awesomeButton {
-    width: 190px;
-    position: relative;
-    border: 0;
-    padding: 0;
-    /* margin: 0 4px; */
-    cursor: pointer;
-    overflow: visible;
-    color: #006;
+/* 按钮 */
+.bucketcontainer {
+    margin-top: 15px;
 }
+.primaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
+}
+
 .buttonLarge {
     height: 22px;
     padding-right: 6px;
 }
-.button_label{
-    width: 100%;
-    display: block;
+.awesomeButton {
+    position: relative;
+    border: 0;
+    padding: 0;
+    margin: 0 4px;
+    cursor: pointer;
+    overflow: visible;
+    color: #006;
+}
+.primaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left top;
+}
+.secondaryLargeButton span {
+    background: transparent url(https://images-na.ssl-images-amazon.com/images/G/01/nav2/prod/rainierCoreCSS/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
+}
+.buttonLarge span {
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    margin-right: 7px;
 }
