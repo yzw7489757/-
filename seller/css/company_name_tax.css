@@ -19,7 +19,6 @@ ul {
 li {
     color: #949494;
 }
-
 h1 {
     font-weight: 400;
     font-size: 28px;
@@ -220,7 +219,10 @@ hr {
 .a-button-select:active:hover {
     border-color: #adb1b8 #a2a6ac #a2a6ac;
 }
-
+#select{
+    line-height: 29px;
+    text-align: left;
+}
 .tip {
     width: 15px;
     height: 15px;
@@ -562,4 +564,20 @@ input[type=email] {
     margin-left: -45px;
     margin-top: -15px;
 }
-
+.clear{
+    clear: both;
+}
+.ul>li{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    border:1px solid red;
+   
+}
+.ul{
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 0;
+    transform: translateY(-20%);
+}

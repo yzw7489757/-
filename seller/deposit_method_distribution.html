@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/deposit_method_distribution.css">
+    <link rel="stylesheet" href="./css/prompt.css">
 </head>
 
 <body>
@@ -729,22 +730,15 @@
                                 <div class="a-row a-size-small a-color-base">
                                     为防止滥用您的银行账户，您需要验证末尾数字为808的账户详情，并提供完整的账号。
                                 </div>
-                                <div class="a-row a-ws-row" id="bankId">
-                                    <div class="a-row a-spacing-top-base">
+                                <div class="a-row a-ws-row" >
+                                    <div class="a-row a-spacing-top-base" id="bankId">
                                         <div class="a-row bankAccountVerificationLabel">
                                             <span>银行账号</span>
                                         </div>
                                         <div class="a-row">
                                             <input type="text" class="a-input-text a-spacing-top-micro border_box width48">
                                         </div>
-                                        <div class="a-alert-inline">
-                                            <div class="a-alert-container relative">
-                                                <i class="a-icon a-icon-alert"></i>
-                                                <div class="pdleft16">
-                                                    选择您要分配的存款方式。
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -761,7 +755,7 @@
                             </div>
                         </div>
                         <div class="width22 a-column float_left">
-                            <div class="a-spacing-top-small a-button a-button-primary a-row ">
+                            <div class="a-spacing-top-small a-button a-button-primary a-row setting_deposit">
                                 <span class="a-button-inner">
                                     <span class="a-button-text block pdTop5">设置存款方式</span>
                                 </span>
@@ -776,6 +770,7 @@
     </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/webjs/prompt.js"></script>
 <script src="./js/public.js " type="text/javascript "></script>
 <script src="./js/webjs/deposit_method_distribution.js" type="text/javascript "></script>
 

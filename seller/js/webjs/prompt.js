@@ -31,6 +31,4 @@
           //其他处理
         }
       }
-    addwarn('full_name',2,'必填字段') 
-    addwarn('tel',2,'必填字段') 
-
+    

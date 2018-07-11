@@ -222,10 +222,9 @@ window.onload = function() {
         $('.credit').show();
     }
   });
-  
-  var createDiv=document.createElement('div')
-  var bankId=document.getElementById('bankId')
-  bankId.appendChild(createDiv)
-
+  $('.setting_deposit').click(function(){
+    
+  })
+  addwarn('hasUser',2,'必填字段') 
+ 
 };
-s
