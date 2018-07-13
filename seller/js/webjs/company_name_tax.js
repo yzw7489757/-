@@ -1,50 +1,249 @@
 window.onload = function () {
-    $('.tip').hover(function () {
-        $('.personal').show()
-    }, function () {
-        $('.personal').hide()
-    })
-    $('.tip2').hover(function () {
-        $('.business').show()
-    }, function () {
-        $('.business').hide()
-    })
-    function chooseClass (btn1,btn2,className){
-        $(btn1).click(function () { 
+    // 气泡显示与隐藏
+    function showText(bubble_img, bubble_text) {
+        $(bubble_img).hover(function () {
+            $(bubble_text).show()
+        }, function () {
+            $(bubble_text).hide()
+        })
+
+    }
+    showText('.tip', '.personal')
+    showText('.tip2', '.business')
+    showText('.tip_federal_tax', '.federal_tax')
+    showText('.tip_ncome_tax', '.ncome_tax')
+    showText('.tip_full_name', '.full_name')
+    showText('.tip_nationality', '.nationality_text')
+    showText('.tip_mailing_address', '.mailing_address')
+    showText('.tip_country_address', '.country_address')
+    showText('.tip_taxpayer', '.taxpayer')
+    // 气泡文字
+    bubble('.tip', '根据将获得收入的个人或企业完成税务调查。如果您为独资经营者或一人有限公司且所有者为个人，选择“个人”', 'personal')
+    bubble('.tip_federal_tax', '为您的法律实体（从“名称”行中识别）从下拉框中选择适当的联邦税分类。<br><br>如果所有者为个人的单一成员 LLC，请选择“个体/独资企业经营者”。<br><br>如果您的法律实体不属于联邦税分类下拉类别中的任何一项，请选择“其他”。然后在“其他类型”下选择一个单选按钮选项。', 'federal_tax')
+    bubble('.tip_ncome_tax',
+        '在“名称”行中的名称必须为所得税申报表中用于报告收入的名称。输入“名称”行的实体名称决不能为非企业实体。对于一人有限公司，请输入其所有者的姓名或法人实体的姓名<br><br>如果您是个体/独资经营者，请输入与您社保卡或所得税申报表上相同的姓名。<br><br>如果您的联邦税的分类并非个体/独资经营者，请根据您选择的联邦税分类，使用以下类型：<br><br>您还可以在“业务或贸易名称”行内填写您的业务、贸易、或“经营”（DBA）名称。', 'ncome_tax')
+    bubble('tip_full_name', '如果您是以个人身份填写信息，请使用您的纳税申报单上出现的信息。', 'full_name')
+    bubble('tip_nationality', '如果您是个人，请输入您的国籍。如果您是双重国籍公民，请输入您在填写本表格时兼具公民和居民身份的所在国家/地区。如果您不是在您具有公民身份的任何国家/地区中的居民，请输入您最近居住的国家/地区。<br><br>如果您是个人且您的收入与美国贸易或业务实际相关，则必须提供您的居住国家/地区以纳税。', 'nationality_text')
+    bubble('tip_mailing_address', '输入您首选用于与亚马逊进行进一步通信的地址。', 'mailing_address')
+    bubble('tip_country_address',
+        `<p>您的地址（通常称为主要居住地）由下列部分或所有因素确定。它是发生下列事件的地址:</p>
+    <ul>
+    <li>您拥有或租赁您度过大部分时间所在的主要居所</li>
+    <li>您在工作、旅行或在其他地方短暂生活的情况下意图返回到的位置</li>
+    <li>您保留您的驾照</li>
+    <li>您登记投票</li>
+    <li>您保留您的主要银行账户</li>
+    <li>您拥有最强烈的家庭纽带</li>
+    <li>您的孩子生活和上学</li>
+    <li>您拥有或运营您的主要业务i</li>
+    <li>如果您是在其他州学习的大学生，但是在您的籍贯州仍然具有永久地址（例如您父母的住宅），则您的籍贯州是您的主要居住地址。</li>
+    </ul>`, 'country_address')
+    bubble('tip_taxpayer', '您的 TIN（Tax Identification Number，纳税人识别号）可以是您的 SSN（Social Security Number，社会保险号码）、ITIN（Individual Taxpayer Identification Number，个人纳税识别号码）、或 EIN（Employer Identification Number，雇主识别号码）。您可以在您的社保卡上找到您的 SSN。您可以从 IRS（颁发 ITIN 的机构）发布的 CP565 通告上找到您的 ITIN。您可以从 IRS（颁发 EIN 的机构）发布的 CP575A 通告上找到您的 EIN。请务必确保您输入的 TIN 是正确的 TIN。<br><br>如果您是一人有限责任公司（single-member LLC），请输入所有人的 SSN 或 EIN。请勿输入无效实体的 EIN。', 'taxpayer')
+
+    // 个人 业务 是 否
+    function chooseClass(btn1, btn2, className) {
+        $(btn1).click(function () {
             $(btn1).addClass(className)
             $(btn2).removeClass(className)
-         })
+        })
     }
+
     // $('#select').hover(function(){
     //     $('#select').css({
     //         backgroundColor:' #dcdfe3',
     //     })
     // })
-    chooseClass('.a-choose-yes','.a-choose-no','a-button-choose')
-    chooseClass('.a-choose-no','.a-choose-yes','a-button-choose')
-    chooseClass('.a-choose-business','.a-choose-persinal','a-button-choose')
-    chooseClass('.a-choose-persinal','.a-choose-business','a-button-choose')
-    
-    let arr =  $('.country li');
-    for(let i=0;i<arr.length;i++){
-        arr[i].addEventListener('click',function(){
-            $('#select').text(this.innerText);
-            $('.country').hide();
+    chooseClass('.a-choose-yes', '.a-choose-no', 'a-button-choose')
+    chooseClass('.a-choose-no', '.a-choose-yes', 'a-button-choose')
+    chooseClass('.a-choose-business', '.a-choose-persinal', 'a-button-choose')
+    chooseClass('.a-choose-persinal', '.a-choose-business', 'a-button-choose')
+
+    function init() {
+        $('.tax_status_information').hide()
+        $('.full_name_show').hide();
+        $('.permanent_email_address').hide();
+        $('.address_show').hide();
+        $('.name_show').hide();
+        $('.federal_tax_category').hide()
+        $('.beneficiary_type').hide()
+    }
+    init();
+
+    function chooseBtn(className) {
+        $(className).click(function () {
+            //把所有隐藏
+            init();
+            switch (className) {
+                case '.a-choose-yes': //是
+                    //是+个人
+                    if ($('.a-choose-persinal').is('.a-button-choose') && $('.a-choose-yes').is('.a-button-choose')) {
+                        $('.tax_status_information').show()
+                        $('.name_show').show();
+                        $('.address_show').show();
+                    }
+                    //是+业务
+                    if ($('.a-choose-business').is('.a-button-choose') && $('.a-choose-yes').is('.a-button-choose')) {
+                        $('.federal_tax_category').show()
+                    }
+                    break;
+                case '.a-choose-no': //否
+                    //否+个人
+                    if ($('.a-choose-persinal').is('.a-button-choose') && $('.a-choose-no').is('.a-button-choose')) {
+                        $('.tax_status_information').show();
+                        $('.full_name_show').show();
+                        $('.permanent_email_address').show();
+                        $('.address_show').hide();
+                        $('.name_show').hide();
+                    }
+                    //否+业务
+                    if ($('.a-choose-business').is('.a-button-choose') && $('.a-choose-no').is('.a-button-choose')) {
+                        $('.beneficiary_type').show()
+                    }
+                    break;
+                case '.a-choose-business': //业务
+                    if ($('.a-choose-business').is('.a-button-choose') && $('.a-choose-yes').is('.a-button-choose')) {
+                        //业务+是
+                        $('.federal_tax_category').show()
+
+                    } else if ($('.a-choose-business').is('.a-button-choose') && $('.a-choose-no').is('.a-button-choose')) {
+                        //业务+否
+                        $('.beneficiary_type').show()
+                    }
+                    break;
+                case '.a-choose-persinal': //个人
+                    //个人+否
+                    if ($('.a-choose-persinal').is('.a-button-choose') && $('.a-choose-no').is('.a-button-choose')) {
+                        $('.tax_status_information').show();
+                        $('.full_name_show').show();
+                        $('.permanent_email_address').show();
+                        $('.address_show').hide();
+                        $('.name_show').hide();
+                    }
+                    //个人+是
+                    if ($('.a-choose-persinal').is('.a-button-choose') && $('.a-choose-yes').is('.a-button-choose')) {
+                        $('.tax_status_information').show()
+                        $('.name_show').show();
+                    }
+                    break;
+            }
         })
     }
-    $('#select').on('click',function(){
-        $('.country').show();
-        
-    })
-    addwarn('full_name',2,'必填字段') 
-    addwarn('tel',2,'必填字段') 
-       /* $('.country').find('li').each(function(i){
-            $('.country').find('li').eq(i).click(function () {
-                console.log( $('.country').find('li').eq(i).text())
-                console.log($('#select').eq(0).innerHTML)    
+    chooseBtn('.a-choose-yes')
+    chooseBtn('.a-choose-no')
+    chooseBtn('.a-choose-business')
+    chooseBtn('.a-choose-persinal')
+
+    // 下拉框
+    function dropdown_box(ulName, selectName) {
+        let arr = $(ulName).find('li');
+        for (let i = 0; i < arr.length; i++) {
+            //.removeClass('select_style')
+            arr[i].addEventListener('click', function () {
+                for (let j = 0; j < $(`${ulName} li `).length; j++) {
+                    $(`${ulName} li `).eq(j).removeClass('select_style')
+                }
+                $(selectName).find('p').text(this.innerText);
+                this.className = `${this.className} select_style`;
+                $(ulName).hide();
+
             })
-           
-        })*/
+        }
+        $(selectName).on('click', function () {
+            $(ulName).show();
+            $(ulName).addClass('zIndex999')
+        })
+    }
+    dropdown_box('.language', '#choose_lang')
+    dropdown_box('.country', '#choose_country')
+    dropdown_box('.nationality', '#choose_nationality')
+    dropdown_box('.ssn', '#choose_ssn')
+    dropdown_box('.profit', '#choose_profit')
+    dropdown_box('.one', '#choose_one')
+    dropdown_box('.two', '#choose_two')
+    $('.one li').click(function(){
+        if($('.federal_tax_category_p').html() != "选择一项"){
+            $('.LLC_show').show();
+        }  
+    })
+    // 红色提示框
+    // addwarn('full_name', 2, '必填字段')
+
+    function activeColor(target, targetId) {
+        if ($(target).val() == '') {
+            addwarn(targetId, 2, '必填字段')
+            $(target).addClass('activebtn')
+        }
+    }
+
+    function Input_blur(target, targetId) {
+        $(target).blur(function (e) {
+            e.preventDefault();
+            if ($(target).val() == '') {
+                addwarn(targetId, 2, '必填字段')
+                $(target).addClass('activebtn')
+                return;
+            }
+            if (!((/^[a-zA-Z0-9&,'/#.% -]*$/).test($('.tel_input').val()))) {
+                $(target).addClass('activebtn')
+                addwarn(targetId, 2, `只接受字母、数字和特殊字符 & - , ' / # . %。若要使用重音字符，请使用相应的英文字符代替重音字符，例如，使用 a 代替 á、o 代替 ó 等`)
+            }
+        })
+    }
+    // SSN 或 ITIN' .TIN_input', 'TIN'
+    $('.TIN_input').blur(function (e) {
+        e.preventDefault();
+        if ($('.TIN_input').val() == '') {
+            addwarn('TIN', 2, '必填字段')
+            $('.TIN_input').addClass('activebtn')
+            return;
+        }
+        if (!((/^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/).test($('.tel_input').val()))) {
+            $('.TIN_input').addClass('activebtn')
+            addwarn('TIN', 2, '无效税务标识号：检查格式和输入值')
+        }
+    })
+    // 名称（参见您的所得税申报表）
+    Input_blur('.name_input', 'name')
+    // 街道和号码
+    Input_blur('.tel_input', 'tel')
+    Input_blur('.tel_input2', 'tel2')
+    // 市或镇
+    Input_blur('.city_town_input', 'city_town')
+    Input_blur('.city_town_input2', 'city_town2')
+    // 邮政编码
+    Input_blur('.postal_code_input', 'postal_code')
+    Input_blur('.postal_code_input2', 'postal_code2')
+    // 全名
+    Input_blur('.full_name_input', 'full_name_div')
+
+    let telReg = new RegExp(/^[a-zA-Z0-9&,'/#.% -]*$/) //只接受字母、数字和特殊字符 & - , ' / # . %。若要使用重音字符，请使用相应的英文字符代替重音字符，例如，使用 a 代替 á、o 代替 ó 等。
+    let ssnReg = new RegExp(/^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/) //无效税务标识号：检查格式和输入值
+    $('.go_on_Btn').click(function (e) {
+        e.preventDefault();
+        if($('.choose_country_p').text() == '国家') {
+            addwarn('choose_country', 2, '必填字段')
+        }
+        // 名称（参见您的所得税申报表）
+        activeColor('.name_input', 'name')
+        // 街道和号码
+        activeColor('.tel_input', 'tel')
+        // 市或镇
+        activeColor('.city_town_input', 'city_town')
+        // 邮政编码
+        activeColor('.postal_code_input', 'postal_code')
+        // SSN 或 ITIN
+        activeColor('.TIN_input', 'TIN')
+        //全名
+        activeColor('.full_name_input', 'full_name_div')
+    })
+
+    // checkbox
+    $('.checkbox').click(function(){
+        if($('.checkbox').is(":checked")){
+            $('.right_input').hide()
+        }else{
+            $('.right_input').show()
+        }
+    })
     
 }
-
