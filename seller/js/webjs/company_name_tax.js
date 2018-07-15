@@ -1,12 +1,19 @@
 window.onload = function () {
     // 气泡显示与隐藏
     function showText(bubble_img, bubble_text) {
+        var timer = null;
         $(bubble_img).hover(function () {
             $(bubble_text).show()
         }, function () {
+            timer= setTimeout(function(){
+               $(bubble_text).hide()  
+            },3000)       
+        })
+        $(bubble_text).hover(function(){
+            clearInterval(timer)
+        },function(){
             $(bubble_text).hide()
         })
-
     }
     showText('.tip', '.personal')
     showText('.tip2', '.business')
@@ -71,6 +78,7 @@ window.onload = function () {
 
     function chooseBtn(className) {
         $(className).click(function () {
+            debugger
             //把所有隐藏
             init();
             switch (className) {
@@ -79,6 +87,10 @@ window.onload = function () {
                     if ($('.a-choose-persinal').is('.a-button-choose') && $('.a-choose-yes').is('.a-button-choose')) {
                         $('.tax_status_information').show()
                         $('.name_show').show();
+                        $('.permanent_email_address').show();
+                        $('.left_show').show();
+                        $('.right_hidden').hide();
+                        $('.permanent_address').hide();
                         $('.address_show').show();
                     }
                     //是+业务

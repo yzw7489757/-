@@ -400,8 +400,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    right: -426px;
-    top: 50%；
+    top: 140px;
+    right: -430px;
 }
 
 /* 名称（参见您的所得税申报表） */
@@ -411,8 +411,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    top: 425px;
-    right: 85px;
+    top: 180px;
+    right: 5px;
     z-index:999;
 }
 /* 全名 */
@@ -421,8 +421,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    top: 425px;
-    right: 85px;
+    top: 270px;
+    right: 10px;
     z-index:999;
 }
 /* 国籍 */
@@ -431,8 +431,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    top: 425px;
-    right: -500px;
+    top: 225px;
+    right: -420px;
     z-index:999; 
 }
 /* 邮寄地址 */
@@ -451,8 +451,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    top: 425px;
-    right: -500px;
+    top: 345px;
+    right: 10px;
     z-index:999; 
 }
 /* 纳税人识别号（TIN） */
@@ -461,8 +461,8 @@ hr {
     box-sizing: border-box;
     width: 430px;
     position: absolute;
-    top: 425px;
-    right: -500px;
+    top: 590px;
+    right: -420px;
     z-index:999; 
 }
 /*  受益所有人类型 */

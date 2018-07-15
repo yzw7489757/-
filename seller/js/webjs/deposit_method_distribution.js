@@ -34,6 +34,14 @@ window.onload = function() {
     switch(selectVal){
       case 'string:CN': //中国
         $('.chinaese').show();
+        $('.set_deposit').click(function(){
+          function showError(inputName,targetId){
+                if($(inputName).val()==""){
+                  addwarn(targetId,2,'必填字段') 
+                }
+              }
+          showError('.carId_input','carId')
+        })
       break;
       case 'string:CA': //加拿大
         $('#hasUser').show();
@@ -222,9 +230,84 @@ window.onload = function() {
         $('.credit').show();
     }
   });
-  $('.setting_deposit').click(function(){
-    
-  })
-  addwarn('hasUser',2,'必填字段') 
- 
+
+
+  // $('.set_deposit').click(function(){
+  //   function showError(inputName,targetId){
+  //     if($(inputName).val()==""){
+  //       addwarn(targetId,2,'必填字段') 
+  //     }
+  //   }
+  //   // 账户持有人姓名
+  //   showError('.hasUser_input','hasUser')
+  //   // 9位数银行编码
+  //   showError('.nightBankCode_input','nightBankCode')
+  //   // 银行账号 介于 3 至 12 位数字之间
+  //   showError('.bankIds_input','bankIds')
+  //   // 重新输入银行账号
+  //   showError('.againBankIds_input','againBankIds')
+  //   // IFSC
+  //   showError('.ifsc_input','ifsc')
+  //   // bankcode
+  //   showError('.bankCode_input','bankCode')
+  //   // bsb
+  //   showError('.bsb_input','bsb')
+  //   // CNAPS 编号
+  //   showError('.cnaps_input','cnaps')
+  //   // 身份证号码
+  //   showError('.carId_input','carId')
+  //   // 营业执照编号
+  //   showError('.licenseId_input','licenseId')
+  //   // 银行名称 英文版
+  //   showError('.backname_input_ch','backname')
+  //   // 银行名称 简体中文版
+  //   showError('.backname_input_eg','bankCode')
+  //   // 支行名称 简体中文版
+  //   showError('.branchBank_input_ch','branchBank')
+  //   // 支行名称 英文版
+  //   showError('.branchBank_input_eg','branchBank')
+  //   // 银行所在城市 简体中文版
+  //   showError('.bankCity_input_ch','bankCity')
+  //   // 银行所在城市 英文版
+  //   showError('.bankCity_input_eg','bankCity')
+  //   // 银行所在省
+  //   showError('.bankProvince_input_ch','bankProvince')
+  //   // 银行所在省
+  //   showError('.bankProvince_input_eg','bankProvince')
+  //   // 账户持有人姓名 
+  //   showError('.bankUserName_input_eg','bankUserName')
+  //   showError('.bankUserName_input_ch','bankUserName')
+  //   // 银行账号
+  //   showError('.bankUser_input','bankUser')
+  //   showError('.bankUser_input_again','bankUser')
+  //  //信用卡
+  //   showError('.credit_input','credit')
+  //   showError('.credit_input_again','credit')
+  //   // 姓名应与银行证件上的相同
+  //   showError('.same_name_input','same_name')
+  //   // 账户类型
+  //   showError('.account_type_input','account_type')
+  //   // 银行代码
+  //   showError('.bank_code_input','bank_code')
+  //   // 银行账号
+  //   showError('.bank_account_input','bank_account')
+  //   // 重新输入银行账号
+  //   showError('.bank_account_again_input','bank_account_again')
+  //   // 为防止滥用您的银行账户，您需要验证末尾数字为808的账户详情，并提供完整的账号。
+  //   showError('.bank_input','bank')
+  //   // 清算代码
+  //   showError('.liquidation_input','liquidation')
+  //   // 分行代码
+  //   showError('.branchBankCode_input','branchBankCode')
+  //   // bic
+  //   showError('.bic_input','bic')
+  //   // 国际银行帐户号码
+  //   showError('.intBank_input','intBank') 
+  //   //重新输入IBAN
+  //   showError('.iban_input','iban')
+  //   // 机构编号
+  //   showError('.organization_input','organization')
+  //   // 转账编号
+  //   showError('.transfer_input','transfer')
+  // })
 };
