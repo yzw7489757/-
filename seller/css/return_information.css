@@ -36,7 +36,7 @@ body {
     display: block;
     border: 1px solid transparent;
 }
-.a-tab-container ul li span:hover{
+.a-tab-container> ul> li span:hover{
     border-color: #ddd;
     background-color: #fff;
     color: #c45500;
@@ -52,7 +52,7 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
-.a-tab-container ul li:last-child{
+.a-tab-container>ul>li:last-child{
     float: right
 }
 .a-box-inner {
@@ -144,4 +144,9 @@ label .a-icon-checkbox{
 }
 .addProductCategorySection {
     padding: 0 1% 6.5% 5%;
+}
+ul li a{
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
 }

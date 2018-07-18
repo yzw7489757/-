@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/demo.css">
     <link rel="stylesheet" href="./css/return_information.css">
 </head>
+
 <body>
     <div class="manage-returns-page">
         <div class="header marBottom10">
@@ -329,9 +331,145 @@
                                                     <div class="a-row a-spacing-top-base">
                                                         <span class="a-size-small a-text-bold">添加类别</span>
                                                         <br>
-                                                        <ddiv class="a-row">
+                                                        <div class="a-row">
                                                             <div class="width74 a-column2_4 float_left">
-                                                                <input type="text" class="box-sizing a-row">
+                                                                <div id="choose_type">
+                                                                     <input type="text" class="box-sizing a-row">
+                                                                </div>
+                                                               
+                                                                <div class="type none" style="height: 192.141px; min-width: 0px;">
+                                                                    <ul class="a-popover-inner a-popover-wrapper overflow_y">
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-45" class="ui-corner-all" tabindex="-1">办公用品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-46" class="ui-corner-all" tabindex="-1">行李箱包</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-47" class="ui-corner-all" tabindex="-1">杂货</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-48" class="ui-corner-all" tabindex="-1">家具</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-49" class="ui-corner-all" tabindex="-1">音乐</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-50" class="ui-corner-all" tabindex="-1">数字软件</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-51" class="ui-corner-all" tabindex="-1">软件</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-52" class="ui-corner-all" tabindex="-1">体育用品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-53" class="ui-corner-all" tabindex="-1">运动纪念品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-54" class="ui-corner-all" tabindex="-1">手机应用程序</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-55" class="ui-corner-all" tabindex="-1">相机</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-56" class="ui-corner-all" tabindex="-1">个人电脑</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-57" class="ui-corner-all" tabindex="-1">婴儿用品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-58" class="ui-corner-all" tabindex="-1">图书</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-59" class="ui-corner-all" tabindex="-1">鞋类</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-60" class="ui-corner-all" tabindex="-1">珠宝首饰</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-61" class="ui-corner-all" tabindex="-1">BISS</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-62" class="ui-corner-all" tabindex="-1">DVD</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-63" class="ui-corner-all" tabindex="-1">药房</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-64" class="ui-corner-all" tabindex="-1">轮胎</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-65" class="ui-corner-all" tabindex="-1">娱乐收藏品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-66" class="ui-corner-all" tabindex="-1">宠物用品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-67" class="ui-corner-all" tabindex="-1">汽车</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-68" class="ui-corner-all" tabindex="-1">家居装饰</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-69" class="ui-corner-all" tabindex="-1">支付设备</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-70" class="ui-corner-all" tabindex="-1">家居</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-71" class="ui-corner-all" tabindex="-1">观看</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-72" class="ui-corner-all" tabindex="-1">玩具</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-73" class="ui-corner-all" tabindex="-1">大型家电</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-74" class="ui-corner-all" tabindex="-1">工具</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-75" class="ui-corner-all" tabindex="-1">无线</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-76" class="ui-corner-all" tabindex="-1">服装</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-77" class="ui-corner-all" tabindex="-1">草坪和园艺</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-78" class="ui-corner-all" tabindex="-1">户外运动</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-79" class="ui-corner-all" tabindex="-1">乐器</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-80" class="ui-corner-all" tabindex="-1">视频游戏</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-81" class="ui-corner-all" tabindex="-1">Unbox Video</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-82" class="ui-corner-all" tabindex="-1">厨房</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-83" class="ui-corner-all" tabindex="-1">电子产品</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-84" class="ui-corner-all" tabindex="-1">美容</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-85" class="ui-corner-all" tabindex="-1">杂志</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-86" class="ui-corner-all" tabindex="-1">家庭娱乐</a>
+                                                                        </li>
+                                                                        <li class="ui-menu-item" role="presentation">
+                                                                            <a id="ui-id-87" class="ui-corner-all" tabindex="-1">移动电子设备</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                             <div class="float_left">
                                                                 <span class="a-button-inner  block a-button ">
@@ -341,7 +479,7 @@
                                                                 </span>
                                                             </div>
                                                             <div class="clear"></div>
-                                                        </ddiv>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -361,528 +499,411 @@
                                                         <div class="a-row">
                                                             <div class="width74 a-column2_4 float_left relative">
                                                                 <!-- <input type="text" class="box-sizing a-row"> -->
-                                                                <div class="a-row box-sizing  select  bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
+                                                                <div id="choose_why" class="a-row box-sizing  select  bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
                                                                     <p style="margin-top: 5px;font-size: 13px">选择原因:</p>
                                                                 </div>
-                                                                <div class="a-popover-wrapper">
-                                                                    <div class="a-popover-inner a-lgtbox-vertical-scroll" style="height: 192.141px; overflow-y: auto; min-width: 0px; width: 403px;">
-                                                                        <ul tabindex="-1" class="a-nostyle a-list-link" role="application"
-                                                                            aria-multiselectable="false">
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_0"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-NO-CERT&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_0"
-                                                                                    class="a-dropdown-link">
-                                                                                    缺少应有的证书
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_1"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-NOT_COMPATIBLE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_1"
-                                                                                    class="a-dropdown-link">
-                                                                                    产品与我的系统不完全兼容。
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_2"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_TOO_WIDE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_2"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋太宽
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_3"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-UNAUTHORIZED_PURCHASE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_3"
-                                                                                    class="a-dropdown-link">
-                                                                                    不是我授权的订单
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_4"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NUMBER_PORTING_ISSUES&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_4"
-                                                                                    class="a-dropdown-link">
-                                                                                    号码问题
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_5"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-NOT_AS_PICTURED--AMZ-PG-BAD-DESC&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_5"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品名称一致，但与网页介绍不符
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_6"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;WRONG_MATERIAL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_6"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品的材质错误
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_7"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-FABRIC&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_7"
-                                                                                    class="a-dropdown-link">
-                                                                                    材质与期望不符
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_8"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-LOOSE-STONE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_8"
-                                                                                    class="a-dropdown-link">
-                                                                                    宝石丢失或松动
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_9"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ACTIVATION_FAILURE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_9"
-                                                                                    class="a-dropdown-link">
-                                                                                    激活失败
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_10"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-MISORDERED&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_10"
-                                                                                    class="a-dropdown-link">
-                                                                                    订错款式/尺码/颜色
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_11"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DAMAGED_BY_CARRIER&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_11"
-                                                                                    class="a-dropdown-link">
-                                                                                    配送包裹外包装破损，导致商品破损、污损或配件缺失
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_12"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-ITEM_MISSING&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_12"
-                                                                                    class="a-dropdown-link">
-                                                                                    我仍然没有收到商品
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_13"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DEFECTIVE--TA-CR-DEFECTIVE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_13"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品质量问题
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_14"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TARNISHED&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_14"
-                                                                                    class="a-dropdown-link">
-                                                                                    污损/不能接受
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_15"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DID_NOT_LIKE_FABRIC&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_15"
-                                                                                    class="a-dropdown-link">
-                                                                                    不喜欢服装面料
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_16"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-ARRIVED_TOO_LATE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_16"
-                                                                                    class="a-dropdown-link">
-                                                                                    到达超时
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_17"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TOO-LARGE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_17"
-                                                                                    class="a-dropdown-link">
-                                                                                    尺码不正确：太大/太长
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_18"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_LONG&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_18"
-                                                                                    class="a-dropdown-link">
-                                                                                    太长
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_19"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;RECYCLE-LEGAL-COMP&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_19"
-                                                                                    class="a-dropdown-link">
-                                                                                    回收旧商品
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_20"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_HALF_SIZE_LARGE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_20"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋子大了半个尺寸
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_21"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_TOO_NARROW&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_21"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋太窄
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_22"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-UNWANTED_ITEM--TA-CR-NO_LONGER_WANTED&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_22"
-                                                                                    class="a-dropdown-link">
-                                                                                    不需要/不想要的商品
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_23"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-SWITCHEROO--TA-CR-WRONG_ITEM_SENT&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_23"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品名称与我的订单不一致
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_24"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DAMAGED_BY_FC&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_24"
-                                                                                    class="a-dropdown-link">
-                                                                                    配送包裹外包装完好，商品外观污损或破损
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_25"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-APP-STYLE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_25"
-                                                                                    class="a-dropdown-link">
-                                                                                    样式和预期不符
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_26"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;POOR_SERVICE_COVERAGE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_26"
-                                                                                    class="a-dropdown-link">
-                                                                                    服务范围小
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_27"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-MISSING_PARTS&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_27"
-                                                                                    class="a-dropdown-link">
-                                                                                    配送包裹外包装完好，配件缺失或图书内部缺损
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_28"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-ORDERED_WRONG_ITEM&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_28"
-                                                                                    class="a-dropdown-link">
-                                                                                    订错货
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_29"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-BATTERY&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_29"
-                                                                                    class="a-dropdown-link">
-                                                                                    电池损坏
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_30"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-OTHER&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_30"
-                                                                                    class="a-dropdown-link">
-                                                                                    其他原因
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_31"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_LARGE--AMZ-PG-APP-TOO-LARGE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_31"
-                                                                                    class="a-dropdown-link">
-                                                                                    太大
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_32"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DID_NOT_LIKE_COLOR&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_32"
-                                                                                    class="a-dropdown-link">
-                                                                                    不喜欢颜色
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_33"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-QUALITY_UNACCEPTABLE--TA-CR-QUALITY&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_33"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品质量问题
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_34"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_ARCH_POOR_FIT&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_34"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋弓不合适
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_35"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-EXTRA_ITEM--TA-CR-ADDITIONAL_ITEM&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_35"
-                                                                                    class="a-dropdown-link">
-                                                                                    收到额外商品
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_36"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_FULL_SIZE_SMALL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_36"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋子小了一个尺寸
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_37"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;EXCESSIVE_INSTALLATION&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_37"
-                                                                                    class="a-dropdown-link">
-                                                                                    多余安装/未安装
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_38"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMPATIBLE_WITH_SERVICE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_38"
-                                                                                    class="a-dropdown-link">
-                                                                                    与我的服务不兼容
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_39"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-NO_REASON_GIVEN&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_39"
-                                                                                    class="a-dropdown-link">
-                                                                                    无理由
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_40"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SERVICE_PACKAGE_NOT_AS_NEEDED&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_40"
-                                                                                    class="a-dropdown-link">
-                                                                                    包裹未达到预期要求
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_41"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_FULL_SIZE_LARGE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_41"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋子大了一个尺寸
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_42"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMPATIBLE_WITH_PHONE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_42"
-                                                                                    class="a-dropdown-link">
-                                                                                    与我的手机不兼容
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_43"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_SHORT&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_43"
-                                                                                    class="a-dropdown-link">
-                                                                                    太短
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_44"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CARRIER_BILL_NOT_AS_EXPECTED&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_44"
-                                                                                    class="a-dropdown-link">
-                                                                                    配送费超出预期
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_45"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMFORTABLE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_45"
-                                                                                    class="a-dropdown-link">
-                                                                                    不舒适
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_46"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-DAMAGED_ON_ARRIVAL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_46"
-                                                                                    class="a-dropdown-link">
-                                                                                    到货即损
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_47"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PRODUCT_NOT_ITALIAN&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_47"
-                                                                                    class="a-dropdown-link">
-                                                                                    未提供意大利语版本的商品或手册
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_48"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-NOT_COMPATIBLE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_48"
-                                                                                    class="a-dropdown-link">
-                                                                                    与期望不符
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_49"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-MISSED_ESTIMATED_DELIVERY&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_49"
-                                                                                    class="a-dropdown-link">
-                                                                                    超出预计送达时间
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_50"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CARRIER_SWITCHING_COST&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_50"
-                                                                                    class="a-dropdown-link">
-                                                                                    当前配送商提高价格
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_51"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_SMALL--AMZ-PG-APP-TOO-SMALL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_51"
-                                                                                    class="a-dropdown-link">
-                                                                                    太小
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_52"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;WRONG_COLOUR&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_52"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品颜色错误
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_53"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-NO-DOCS&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_53"
-                                                                                    class="a-dropdown-link">
-                                                                                    缺少文件/说明书/保修单
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_54"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-WARRANTY&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_54"
-                                                                                    class="a-dropdown-link">
-                                                                                    使用后出现故障
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_55"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PRODUCT_NOT_SPANISH&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_55"
-                                                                                    class="a-dropdown-link">
-                                                                                    商品或手册未采用西班牙语
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_56"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-MISSING_PARTS&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_56"
-                                                                                    class="a-dropdown-link">
-                                                                                    产品缺少零件/配件。
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_57"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_HALF_SIZE_SMALL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_57"
-                                                                                    class="a-dropdown-link">
-                                                                                    鞋子小了半个尺寸
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_58"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-FOUND_BETTER_PRICE--TA-CR-FOUND_BETTER_PRICES&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_58"
-                                                                                    class="a-dropdown-link">
-                                                                                    找到比原订单更低的价格
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_59"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BOOT_SHAFT_POOR_FIT&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_59"
-                                                                                    class="a-dropdown-link">
-                                                                                    靴子不合适
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_60"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TOO-SMALL&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_60"
-                                                                                    class="a-dropdown-link">
-                                                                                    尺码不正确：太小/太短
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_61"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PART_NOT_COMPATIBLE&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_61"
-                                                                                    class="a-dropdown-link">
-                                                                                    零件与现有系统不兼容
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_62"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-BAD-CLASP&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_62"
-                                                                                    class="a-dropdown-link">
-                                                                                    扣环损坏或不能使用
-                                                                                </a>
-                                                                            </li>
-                                                                            <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_63"
-                                                                                class="a-dropdown-item">
-                                                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;REBATE_ELIGIBILITY&quot;}"
-                                                                                    id="returnReasonCodeDropDown_createNewRule_63"
-                                                                                    class="a-dropdown-link">
-                                                                                    折扣资格问题
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
+
+                                                                <div class="why none" style="height: 192.141px; min-width: 0px;">
+                                                                    <ul class="a-popover-inner a-popover-wrapper overflow_y">
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_0" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-NO-CERT&quot;}" id="returnReasonCodeDropDown_createNewRule_0"
+                                                                                class="a-dropdown-link">
+                                                                                缺少应有的证书
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_1" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-NOT_COMPATIBLE&quot;}" id="returnReasonCodeDropDown_createNewRule_1"
+                                                                                class="a-dropdown-link">
+                                                                                产品与我的系统不完全兼容。
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_2" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_TOO_WIDE&quot;}" id="returnReasonCodeDropDown_createNewRule_2"
+                                                                                class="a-dropdown-link">
+                                                                                鞋太宽
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_3" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-UNAUTHORIZED_PURCHASE&quot;}" id="returnReasonCodeDropDown_createNewRule_3"
+                                                                                class="a-dropdown-link">
+                                                                                不是我授权的订单
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_4" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NUMBER_PORTING_ISSUES&quot;}" id="returnReasonCodeDropDown_createNewRule_4"
+                                                                                class="a-dropdown-link">
+                                                                                号码问题
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_5" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-NOT_AS_PICTURED--AMZ-PG-BAD-DESC&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_5"
+                                                                                class="a-dropdown-link">
+                                                                                商品名称一致，但与网页介绍不符
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_6" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;WRONG_MATERIAL&quot;}" id="returnReasonCodeDropDown_createNewRule_6"
+                                                                                class="a-dropdown-link">
+                                                                                商品的材质错误
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_7" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-FABRIC&quot;}" id="returnReasonCodeDropDown_createNewRule_7"
+                                                                                class="a-dropdown-link">
+                                                                                材质与期望不符
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_8" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-LOOSE-STONE&quot;}" id="returnReasonCodeDropDown_createNewRule_8"
+                                                                                class="a-dropdown-link">
+                                                                                宝石丢失或松动
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_9" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ACTIVATION_FAILURE&quot;}" id="returnReasonCodeDropDown_createNewRule_9"
+                                                                                class="a-dropdown-link">
+                                                                                激活失败
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_10" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-MISORDERED&quot;}" id="returnReasonCodeDropDown_createNewRule_10"
+                                                                                class="a-dropdown-link">
+                                                                                订错款式/尺码/颜色
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_11" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DAMAGED_BY_CARRIER&quot;}" id="returnReasonCodeDropDown_createNewRule_11"
+                                                                                class="a-dropdown-link">
+                                                                                配送包裹外包装破损，导致商品破损、污损或配件缺失
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_12" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-ITEM_MISSING&quot;}" id="returnReasonCodeDropDown_createNewRule_12"
+                                                                                class="a-dropdown-link">
+                                                                                我仍然没有收到商品
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_13" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DEFECTIVE--TA-CR-DEFECTIVE&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_13"
+                                                                                class="a-dropdown-link">
+                                                                                商品质量问题
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_14" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TARNISHED&quot;}" id="returnReasonCodeDropDown_createNewRule_14"
+                                                                                class="a-dropdown-link">
+                                                                                污损/不能接受
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_15" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DID_NOT_LIKE_FABRIC&quot;}" id="returnReasonCodeDropDown_createNewRule_15"
+                                                                                class="a-dropdown-link">
+                                                                                不喜欢服装面料
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_16" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-ARRIVED_TOO_LATE&quot;}" id="returnReasonCodeDropDown_createNewRule_16"
+                                                                                class="a-dropdown-link">
+                                                                                到达超时
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_17" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TOO-LARGE&quot;}" id="returnReasonCodeDropDown_createNewRule_17"
+                                                                                class="a-dropdown-link">
+                                                                                尺码不正确：太大/太长
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_18" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_LONG&quot;}" id="returnReasonCodeDropDown_createNewRule_18"
+                                                                                class="a-dropdown-link">
+                                                                                太长
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_19" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;RECYCLE-LEGAL-COMP&quot;}" id="returnReasonCodeDropDown_createNewRule_19"
+                                                                                class="a-dropdown-link">
+                                                                                回收旧商品
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_20" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_HALF_SIZE_LARGE&quot;}" id="returnReasonCodeDropDown_createNewRule_20"
+                                                                                class="a-dropdown-link">
+                                                                                鞋子大了半个尺寸
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_21" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_TOO_NARROW&quot;}" id="returnReasonCodeDropDown_createNewRule_21"
+                                                                                class="a-dropdown-link">
+                                                                                鞋太窄
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_22" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-UNWANTED_ITEM--TA-CR-NO_LONGER_WANTED&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_22"
+                                                                                class="a-dropdown-link">
+                                                                                不需要/不想要的商品
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_23" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-SWITCHEROO--TA-CR-WRONG_ITEM_SENT&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_23"
+                                                                                class="a-dropdown-link">
+                                                                                商品名称与我的订单不一致
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_24" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-DAMAGED_BY_FC&quot;}" id="returnReasonCodeDropDown_createNewRule_24"
+                                                                                class="a-dropdown-link">
+                                                                                配送包裹外包装完好，商品外观污损或破损
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_25" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-APP-STYLE&quot;}" id="returnReasonCodeDropDown_createNewRule_25"
+                                                                                class="a-dropdown-link">
+                                                                                样式和预期不符
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_26" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;POOR_SERVICE_COVERAGE&quot;}" id="returnReasonCodeDropDown_createNewRule_26"
+                                                                                class="a-dropdown-link">
+                                                                                服务范围小
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_27" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-MISSING_PARTS&quot;}" id="returnReasonCodeDropDown_createNewRule_27"
+                                                                                class="a-dropdown-link">
+                                                                                配送包裹外包装完好，配件缺失或图书内部缺损
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_28" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-ORDERED_WRONG_ITEM&quot;}" id="returnReasonCodeDropDown_createNewRule_28"
+                                                                                class="a-dropdown-link">
+                                                                                订错货
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_29" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-BATTERY&quot;}" id="returnReasonCodeDropDown_createNewRule_29"
+                                                                                class="a-dropdown-link">
+                                                                                电池损坏
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_30" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-OTHER&quot;}" id="returnReasonCodeDropDown_createNewRule_30"
+                                                                                class="a-dropdown-link">
+                                                                                其他原因
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_31" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_LARGE--AMZ-PG-APP-TOO-LARGE&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_31"
+                                                                                class="a-dropdown-link">
+                                                                                太大
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_32" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DID_NOT_LIKE_COLOR&quot;}" id="returnReasonCodeDropDown_createNewRule_32"
+                                                                                class="a-dropdown-link">
+                                                                                不喜欢颜色
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_33" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-QUALITY_UNACCEPTABLE--TA-CR-QUALITY&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_33"
+                                                                                class="a-dropdown-link">
+                                                                                商品质量问题
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_34" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_ARCH_POOR_FIT&quot;}" id="returnReasonCodeDropDown_createNewRule_34"
+                                                                                class="a-dropdown-link">
+                                                                                鞋弓不合适
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_35" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-EXTRA_ITEM--TA-CR-ADDITIONAL_ITEM&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_35"
+                                                                                class="a-dropdown-link">
+                                                                                收到额外商品
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_36" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_FULL_SIZE_SMALL&quot;}" id="returnReasonCodeDropDown_createNewRule_36"
+                                                                                class="a-dropdown-link">
+                                                                                鞋子小了一个尺寸
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_37" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;EXCESSIVE_INSTALLATION&quot;}" id="returnReasonCodeDropDown_createNewRule_37"
+                                                                                class="a-dropdown-link">
+                                                                                多余安装/未安装
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_38" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMPATIBLE_WITH_SERVICE&quot;}" id="returnReasonCodeDropDown_createNewRule_38"
+                                                                                class="a-dropdown-link">
+                                                                                与我的服务不兼容
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_39" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-NO_REASON_GIVEN&quot;}" id="returnReasonCodeDropDown_createNewRule_39"
+                                                                                class="a-dropdown-link">
+                                                                                无理由
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_40" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SERVICE_PACKAGE_NOT_AS_NEEDED&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_40"
+                                                                                class="a-dropdown-link">
+                                                                                包裹未达到预期要求
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_41" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_FULL_SIZE_LARGE&quot;}" id="returnReasonCodeDropDown_createNewRule_41"
+                                                                                class="a-dropdown-link">
+                                                                                鞋子大了一个尺寸
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_42" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMPATIBLE_WITH_PHONE&quot;}" id="returnReasonCodeDropDown_createNewRule_42"
+                                                                                class="a-dropdown-link">
+                                                                                与我的手机不兼容
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_43" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_SHORT&quot;}" id="returnReasonCodeDropDown_createNewRule_43"
+                                                                                class="a-dropdown-link">
+                                                                                太短
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_44" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CARRIER_BILL_NOT_AS_EXPECTED&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_44"
+                                                                                class="a-dropdown-link">
+                                                                                配送费超出预期
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_45" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NOT_COMFORTABLE&quot;}" id="returnReasonCodeDropDown_createNewRule_45"
+                                                                                class="a-dropdown-link">
+                                                                                不舒适
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_46" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-DAMAGED_ON_ARRIVAL&quot;}" id="returnReasonCodeDropDown_createNewRule_46"
+                                                                                class="a-dropdown-link">
+                                                                                到货即损
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_47" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PRODUCT_NOT_ITALIAN&quot;}" id="returnReasonCodeDropDown_createNewRule_47"
+                                                                                class="a-dropdown-link">
+                                                                                未提供意大利语版本的商品或手册
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_48" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-NOT_COMPATIBLE&quot;}" id="returnReasonCodeDropDown_createNewRule_48"
+                                                                                class="a-dropdown-link">
+                                                                                与期望不符
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_49" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-MISSED_ESTIMATED_DELIVERY&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_49"
+                                                                                class="a-dropdown-link">
+                                                                                超出预计送达时间
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_50" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CARRIER_SWITCHING_COST&quot;}" id="returnReasonCodeDropDown_createNewRule_50"
+                                                                                class="a-dropdown-link">
+                                                                                当前配送商提高价格
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_51" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-TOO_SMALL--AMZ-PG-APP-TOO-SMALL&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_51"
+                                                                                class="a-dropdown-link">
+                                                                                太小
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_52" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;WRONG_COLOUR&quot;}" id="returnReasonCodeDropDown_createNewRule_52"
+                                                                                class="a-dropdown-link">
+                                                                                商品颜色错误
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_53" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-NO-DOCS&quot;}" id="returnReasonCodeDropDown_createNewRule_53"
+                                                                                class="a-dropdown-link">
+                                                                                缺少文件/说明书/保修单
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_54" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-WARRANTY&quot;}" id="returnReasonCodeDropDown_createNewRule_54"
+                                                                                class="a-dropdown-link">
+                                                                                使用后出现故障
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_55" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PRODUCT_NOT_SPANISH&quot;}" id="returnReasonCodeDropDown_createNewRule_55"
+                                                                                class="a-dropdown-link">
+                                                                                商品或手册未采用西班牙语
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_56" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TA-CR-MISSING_PARTS&quot;}" id="returnReasonCodeDropDown_createNewRule_56"
+                                                                                class="a-dropdown-link">
+                                                                                产品缺少零件/配件。
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_57" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SHOE_HALF_SIZE_SMALL&quot;}" id="returnReasonCodeDropDown_createNewRule_57"
+                                                                                class="a-dropdown-link">
+                                                                                鞋子小了半个尺寸
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_58" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR-FOUND_BETTER_PRICE--TA-CR-FOUND_BETTER_PRICES&quot;}"
+                                                                                id="returnReasonCodeDropDown_createNewRule_58"
+                                                                                class="a-dropdown-link">
+                                                                                找到比原订单更低的价格
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_59" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BOOT_SHAFT_POOR_FIT&quot;}" id="returnReasonCodeDropDown_createNewRule_59"
+                                                                                class="a-dropdown-link">
+                                                                                靴子不合适
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_60" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-TOO-SMALL&quot;}" id="returnReasonCodeDropDown_createNewRule_60"
+                                                                                class="a-dropdown-link">
+                                                                                尺码不正确：太小/太短
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_61" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PART_NOT_COMPATIBLE&quot;}" id="returnReasonCodeDropDown_createNewRule_61"
+                                                                                class="a-dropdown-link">
+                                                                                零件与现有系统不兼容
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_62" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AMZ-PG-WJ-BAD-CLASP&quot;}" id="returnReasonCodeDropDown_createNewRule_62"
+                                                                                class="a-dropdown-link">
+                                                                                扣环损坏或不能使用
+                                                                            </a>
+                                                                        </li>
+                                                                        <li tabindex="0" role="option" aria-labelledby="returnReasonCodeDropDown_createNewRule_63" class="a-dropdown-item">
+                                                                            <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;REBATE_ELIGIBILITY&quot;}" id="returnReasonCodeDropDown_createNewRule_63"
+                                                                                class="a-dropdown-link">
+                                                                                折扣资格问题
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
+
                                                             </div>
                                                             <div class="float_left">
                                                                 <span class="a-button-inner  block a-button ">
@@ -914,4 +935,5 @@
 <script src="./js/webjs/prompt.js"></script>
 <script src="./js/public.js " type="text/javascript"></script>
 <script src="./js/webjs/return_information.js"></script>
+
 </html>
