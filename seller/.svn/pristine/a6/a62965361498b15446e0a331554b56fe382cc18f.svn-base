@@ -1,0 +1,12 @@
+window.onload=function () { 
+    $('.billing_addressBtn').click(function (e) { 
+        e.preventDefault();
+        $('.billing_address').hide()
+        $('.send_address').show();
+     })
+     $('.send_addressBtn').click(function (e) { 
+        e.preventDefault();
+        $('.billing_address').show()
+        $('.send_address').hide();
+     })
+ }

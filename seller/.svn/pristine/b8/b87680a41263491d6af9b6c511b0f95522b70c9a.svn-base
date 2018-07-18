@@ -1,0 +1,25 @@
+<div class="a-section a-spacing-top-extra-large auth-footer">
+    <div class="a-divider a-divider-section">
+        <div class="a-divider-inner">
+        </div>
+    </div>
+    <div class="a-section a-spacing-small a-text-center a-size-mini">
+        <span class="auth-footer-seperator"></span><a href="" class="a-link-normal" target="_blank">
+            我要开店</a> <span class="auth-footer-seperator"></span><a href="" class="a-link-normal"
+                target="_blank">亚马逊物流</a> <span class="auth-footer-seperator"></span><a href="" class="a-link-normal"
+                    target="_blank">Amazon Payments</a> <span class="auth-footer-seperator">
+        </span><a href="" class="a-link-normal" target="_blank">亚马逊广告</a> <span class="auth-footer-seperator">
+        </span><a href="" class="a-link-normal" target="_blank">在欧洲销售</a> <span class="auth-footer-seperator">
+        </span><a href="" class="a-link-normal" target="_blank">在日本销售</a> <span class="auth-footer-seperator">
+        </span><a href="" class="a-link-normal" target="_blank">帮助</a> <span class="auth-footer-seperator">
+        </span>
+        <div class="languageSwitcherDropdown a-section">
+            <select class='languageSwitcherDropdownSelect' id='languageSwitcher'>
+            </select>
+        </div>
+    </div>
+    <div class="a-section a-spacing-none a-text-center">
+        <span class="a-size-mini a-color-secondary">© 1996-2018, Amazon.com, Inc. or its affiliates
+        </span>
+    </div>
+</div>

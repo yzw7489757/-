@@ -1,0 +1,136 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+}
+.manage-returns-page {
+    min-width: 981px;
+    padding: 14px 88px 20px;
+}
+.header {
+    margin: 22px 0 0 0;
+}
+.marBottom10{
+    margin-bottom: 10px;
+}
+.a-tab-container{
+    border: 1px solid #ddd;
+}
+.a-tab-container>ul{
+    overflow: hidden;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.a-tab-container>ul>li{
+    float: left;
+}
+.a-tab-container>ul>li>span{
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    line-height: 1;
+    padding: 15px 17px 15px 18px;
+    display: block;
+    border: 1px solid transparent;
+}
+.a-tab-container ul li span:hover{
+    border-color: #ddd;
+    background-color: #fff;
+    color: #c45500;
+    border-top-color: #e77600;
+    font-weight: 700;
+    text-decoration: none;
+}
+.activeStyle{
+    border-color: #ddd;
+    background-color: #fff;
+    color: #c45500;
+    border-top-color: #e77600;
+    font-weight: 700;
+    text-decoration: none;
+}
+.a-tab-container ul li:last-child{
+    float: right
+}
+.a-box-inner {
+    border-radius: 4px;
+    padding: 14px 18px;
+}
+.generalSettingsContainer {
+    font-size: 16px;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.a-box-inner .emailPreference {
+    margin-top: 6px;
+    margin-left: -2px;
+    text-align: left;
+    font-size: 15px;
+}
+.labelPreference {
+    margin-top: 6px;
+    margin-left: -2px;
+    text-align: left;
+    font-size: 15px;
+}
+label{
+    text-indent: -19px;
+    position: relative;
+}
+label input{
+    height: 16px;
+    width: 16px;
+}
+.a-radio-fancy input {
+    height: 17px;
+    width: 17px;
+    
+}
+label .a-icon-checkbox{
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    background-position: -6px -266px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.a-icon-radio {
+    height: 17px;
+    width: 17px;
+    vertical-align: middle;
+    background-position:-30px -285px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.returnSettingsCommonMargin {
+    margin-top: 4%;
+}
+/* 圆点 */
+.beforeActive{
+    background-position: -6px -286px !important;
+}
+
+/* 30天 */
+.width48px{
+    width: 48px;
+}
+.height29 {
+    height: 29px;
+}
+.font-size16{
+    font-size: 16px;
+}
+/* hr */
+.a-divider-normal {
+    margin-top: .5%;
+}
+
+.noSizeWeight{
+    font-size: 13px;
+    font-weight: normal;
+}

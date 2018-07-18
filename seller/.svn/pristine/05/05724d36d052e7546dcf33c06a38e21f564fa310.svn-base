@@ -1,0 +1,107 @@
+$(function(){
+    inputctr.public.selectCountry();
+    var drop_details = $('.drop_details');
+    var subscriptions_fadeIn = $('.subscriptions_fadeIn');
+    var new_address_enter = $('.new_address_enter');
+    var ExistingAddress = $('#ExistingAddress');
+    // 查看计划详情
+    drop_details.click(function() {
+        subscriptions_fadeIn.toggleClass('hide')
+    })
+    // 添加不同的账单地址
+    ExistingAddress.find('.add_message_label').click(function() {
+        new_address_enter.removeClass('hide')
+    })
+    ExistingAddress.find('.old_message_label').click(function() {
+        new_address_enter.addClass('hide')
+    })
+    // 银行信息click提示框
+    var ask_inform = $('.ask_inform');
+    var ask_inform_box = $('.ask_inform_box');
+    var answer_content = {
+        quesition:ask_inform.attr("quesition"),
+        content:ask_inform.attr("content"),
+    }
+    popover_click(ask_inform,ask_inform_box,answer_content);
+    // 存款方式hover提示框
+    var tip_hover = $('.deposit .hover_tip');
+    var popover = $('.popover');
+    popover_hover(tip_hover,popover);
+    // 收款
+    var Collect_Card = $('.Card_Number');
+    var Cardholder_Name = $('.Cardholder_Name');
+    var Card_Month = $('.ccDropdownSelect');
+    var Card_Year = $('.yyDropdownSelect');
+    // 存款
+    var Holder_Name = $(".Holder_Name");
+    var Routing_Number = $(".Routing_Number");
+    var Bank_Number = $(".Bank_Number");
+    var Re_type_Number = $(".Re-type_Number");
+    // 表单验证
+    var regNum = /^\d{13,19}$/;
+    var regRout = /^\d{9}$/;
+    $('.card').change(function() {
+        if(!$(this).val()){
+            $(this).addClass('red_warning').siblings('.a-alert-inline-error').removeClass('hide');
+        }else{
+            if($(this).hasClass('Card_Number') || $(this).hasClass('Bank_Number')){
+                if(!regNum.test($(this).val())){
+                    $(this).addClass('red_warning').siblings('.a-alert-inline-error').removeClass('hide');
+                }else{
+                    $(this).removeClass('red_warning').siblings('.a-alert-inline-error').addClass('hide');
+                }
+            }else if($(this).hasClass('Routing_Number')){
+                if(!regRout.test($(this).val())){
+                    $(this).addClass('red_warning').siblings('.a-alert-inline-error').removeClass('hide');
+                }else{
+                    $(this).removeClass('red_warning').siblings('.a-alert-inline-error').addClass('hide');
+                }
+            }else{
+                $(this).removeClass('red_warning').siblings('.a-alert-inline-error').addClass('hide');
+            }
+        }
+    })
+    // 有效期验证
+    var date = new Date();
+    var yy = date .getFullYear();
+    var mm = date .getMonth()+1;
+    Card_Month.change(function() {
+        if(Card_Year.val() == yy){
+            if($(this).val() < mm){
+                $(this).parents(".b-span5").siblings('.a-alert-inline-error').removeClass('hide')
+            }else{
+                $(this).parents(".b-span5").siblings('.a-alert-inline-error').addClass('hide')
+            }
+        }else{
+            $(this).parents(".b-span5").siblings('.a-alert-inline-error').addClass('hide')
+        }
+    })
+    // 提交验证
+    var deposit_next = $(".deposit_next");
+    var Card_Year_flag = false;
+    var card_flag = false;
+    deposit_next.click(function(){
+        var card = $('.card').filter(function(index) {
+            return $(this).val() == false;
+        })
+        if(Card_Year.val() == yy){
+            if(Card_Month.val() < mm){
+                Card_Year_flag = true;
+                Card_Month.parents(".b-span5").siblings('.a-alert-inline-error').removeClass('hide');
+            }else{
+                Card_Year_flag = false;
+                Card_Month.parents(".b-span5").siblings('.a-alert-inline-error').addClass('hide')
+            }
+        }
+        if(card.length){
+            card_flag = true;
+            card.addClass('red_warning').siblings('.a-alert-inline-error').removeClass('hide');
+        }else{
+            card_flag = false;
+        }
+        if(Card_Year_flag||card_flag){
+            return;
+        }
+    })
+    // 重新输入银行账号验证
+})

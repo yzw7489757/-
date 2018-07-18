@@ -1,0 +1,65 @@
+.code_overlay,.loading_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+    background-color: rgba(0,0,0,.5);
+}
+.code_screen{
+    width: 400px;
+    height: 200px;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    background-color: #FFF;
+    border-radius: 5px;
+    z-index: 998;
+}
+.text-bold{
+    font-weight: 700;
+}
+.base-plus{
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+.pv_otpMainDiv{
+    padding: 15px 25px;
+}
+.a-size-base{
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+#pin_enter{
+    width: 185px;
+}
+#verifyOTPButton{
+    padding:6px 10px;
+    margin-left: 8px;
+}
+.a-color-tertiary{
+    color: #767676;
+}
+.loading_overlay{
+    background-color: rgba(255,253,253,.5);
+}
+.load_box{
+    width: 32px;
+    height: 32px;
+    background:url(../img/spinner_2x._V1_.gif) 50% 50% no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    z-index: 999;
+}

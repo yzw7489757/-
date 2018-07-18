@@ -1,0 +1,22 @@
+.popover{
+    position:absolute;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #a6a6a6;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+}
+.showCloseIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+}
+.a-icon-close{
+    width: 10px;
+    height: 9px;
+    background-position: -297px -5px;
+    opacity: .64;
+    filter: alpha(opacity=64);
+}

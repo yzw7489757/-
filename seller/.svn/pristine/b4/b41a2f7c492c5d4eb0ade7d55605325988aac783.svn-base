@@ -1,0 +1,22 @@
+.product_details{
+    margin: 20px 0;
+    border: solid 1px #DDD;
+}
+.reconciledDetailsHeaderTitle{
+    padding: 20px;
+    background: -webkit-linear-gradient(top, #f8f8f8, #eeeeee);
+    background: -o-linear-gradient(top, #f8f8f8, #eeeeee);
+    background: -ms-linear-gradient(top, #f8f8f8, #eeeeee);
+    background: -moz-linear-gradient(top, #f8f8f8, #eeeeee);
+    background: linear-gradient(top, #f8f8f8, #eeeeee);
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 0.5) inset;
+}
+.reconciledDetailsHeaderContent{
+    padding: 20px;
+}
+.smallnegative {
+    color: #900;
+}
+.footer{
+    margin-bottom: 25px;
+}

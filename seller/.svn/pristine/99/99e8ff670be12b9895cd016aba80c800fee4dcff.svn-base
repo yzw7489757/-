@@ -1,0 +1,108 @@
+.a-spacing-base{
+    margin-bottom: 14px;
+}
+.a-spacing-top-base{
+    margin-top: 14px;
+}
+.b-clo{
+    width: 100%;
+}
+.b-size-medium{
+    font-size: 17px!important;
+    line-height: 1.255!important;
+}
+.b-ws-span8{
+    width: 65.8176%;
+}
+.b-ws-span4{
+    width: 31.68427%;
+}
+.text-right{
+    text-align: right;
+}
+.b-spacing-top-large{
+    margin-top: 22px;
+}
+.b-size-base-plus {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.b-color-tertiary {
+    color: #767676;
+}
+.PS_product_checkbox_padding{
+    padding-left: 25px;
+}
+.b-size-mini{
+    font-size: 11px;
+    line-height: 1.465;
+}
+.checkbox-fancy .valid_checkbox:checked:disabled+.a-icon-checkbox {
+    background-position: -380px -530px;
+    box-shadow: none;border:0;
+}
+.b-spacing-block{
+    margin: 4px 0;
+}
+.b-span5{
+    width: 39.296%;
+}
+.b-column{
+    margin-right: 2.4%;
+}
+.b-span1{
+    width: 4.62933%;
+}
+.middle_img{
+    margin-top: 19px;
+    margin-left: 5px;
+}
+.ccLine{
+    font-size: 13px;
+    width: 1px;
+    height: 29px;
+    transform: rotate(15deg);
+}
+.b-spacing-top-small{
+    margin-top: 10px;
+}
+#ExistingAddress .old_address label,#ExistingAddress .add_address label{
+    position:relative;
+    padding-left: 20px;
+    margin-left: 3px;
+}
+#ExistingAddress .old_address label #old_message,#ExistingAddress .add_address label #add_message{
+    position:absolute;
+    left: 0;top: 0;
+}
+.euBankAccountLabel{
+    color:#666;
+}
+.hover_tip{
+    display:inline-block;
+    width: 14px;height: 14px;
+    vertical-align: text-top;
+}
+.two_submit,.product_submit{
+    width: 266px;
+    margin: 0 auto;
+}
+.tax_submit{
+    width: 350px;
+    margin: 0 auto;
+}
+.deposit_back,.tax_back,.tax_address,.product_back{
+    background: #e7e9ec;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f8fa', endColorstr='#e7e9ec', GradientType=0);
+}
+.deposit_back,.deposit_next,.product_back,.product_next{
+    width: 115px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.step_button_box{
+    padding-top: 14px;
+}
+

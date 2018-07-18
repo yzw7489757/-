@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/company_address.css">
+</head>
+
+<body>
+    <div class="a-row a-padding-large">
+        <div class="a-row">
+            <div class="width48 a-column ">
+                <div class="a-row overflow_hidden a-spacing-micro">
+                    <div class="width65 float_left">
+                        <h2 class="">公司地址</h2>
+                    </div>
+                    <div class="width30 a-spacing-top-micro align_right float_right">
+                        <a href="./account_information.html">账户信息</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="a-row a-spacing-base">
+                    <div class="a-row">
+                        <div class="a-row">
+                            <div class="a-box a-alert a-alert-success">
+                                <div class="a-box-inner_radio relative a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content inline_block">
+                                        <span>已成功提交企业地址</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row a-section a-spacing-top-small">
+                    <div class="a-row">
+                        <form class="a-spacing-base">
+                            <div class="a-spacing-medium">
+                                <div class="a-row a-box first_child bgcolor">
+                                    <div class="a-box-inner_td">
+                                        <div class="a-row ">
+                                            <span class="naBillingAddressLabel">当前企业地址</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-row  a-box last_chilid">
+                                    <div class="a-box-inner_td">
+                                        <div class="a-spacing-base">
+                                            <div class="a-row">
+                                                <span>gongshu qu wanda shagnye zhongxin D zuo 718</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span>hangzhou shi</span><span>zhejiang sheng</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span>中国</span><span>310013</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span>+8613968018091</span>
+                                            </div>
+                                        </div>
+                                        <div class="a-row">
+                                            <a href="./company_address_choose.html">
+                                                <span>
+                                                    选择地址
+                                                </span>
+                                                </a>
+                                            <i class="a-icon a-icon-text-separator"></i>
+                                            <a href="./company_address_add.html"><span>添加新地址</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

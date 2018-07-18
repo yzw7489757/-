@@ -1,0 +1,53 @@
+{
+    head:{
+        title: "Seller Information"
+    },
+    Settings:"Settings",
+    Logout:"Logout",
+    body:{
+        Agreement:"Seller agreement",
+        Information:"Seller Information",
+        Deposit:"Billing / Deposit",
+        Tax:"Tax information",
+        Product:"Product information",
+        Caption:"Tell us about your business.",
+        AddressField:{
+            Street:"Street address",
+            StreetError:"Street address is Invalid",
+            City:"City / Town",
+            CityError:"City / Town is Invalid",
+            Province:"State / Region / Province",
+            ProvinceError:"State / Region / Province is Invalid",
+            Country:"Country/Region",
+            ZIP:"ZIP / Postal Code",
+            ZIPError:"ZIP / Postal Code is Invalid"
+        },
+        ChoseName:"Choose your unique business display name",
+        ChoseNameQuestion:"What is a Business Display Name?",
+        ChoseNameContent:'Your Business Display Name is displayed with your Amazon listings and on your Seller Profile. You can change this name any time by clicking on the "Account Info" in Seller Central Settings.',
+        WhatName:"What is a business display name?",
+        URL:"If you sell your products online, enter your website URL (optional)",
+        WhyUrl:"Why do we ask for this?",
+        WhyUrlQuestion:"Why do we ask for this?",
+        WhyUrlContent:"By providing a web address, you authorize Amazon to visit that site, and to use information and content from the site to help you create your listings and to better use Amazon's tools and services.",
+        PIN:"Select an option to receive a PIN to verify your phone number",
+        Call:"Call",
+        SMS:"SMS",
+        Phone:"Mobile number",
+        ValidPhone:"Please enter a valid phone number", 
+        Eg:"E.g. +86 131 2345 6789",
+        SMSVer:"SMS Verification Language",
+        Textme:"Text me now",
+        CallChangImg:"Try another image?",
+        Characters:"Type the characters above",
+        Verify:"Verify",
+        Tell:"Telephone number",
+        VerificationLanguage:"Phone Verification Language",
+        Callme:"Call me now",
+        Next:"Next",
+        Rate:"Rate this page",
+        Support:"Get support",
+        Policies:"Policies and Agreements",
+        Inc:"© 1999-2018, Amazon.com, Inc. or its affiliates"
+    }
+}

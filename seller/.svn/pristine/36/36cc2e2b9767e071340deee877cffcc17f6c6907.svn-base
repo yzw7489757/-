@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta id="i18n_pagename" content="seller_information">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+    <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+    <link rel="stylesheet" type="text/css" href="css/pover_click.css" />
+    <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+</head>
+<body>
+    <div class="page-header">
+        <div class="a-padding-base">
+            <div class="a-row">
+                <div class="a-column">
+                    <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                </div>
+                <div class="a-span-last">
+                    <div class="header-settings-tab">
+                        <span class='a-size-small' data-i18n-text="_Settings"></span>
+                        <div class="header-list-item">
+                            <span class="a-list-item"><a class="a-link-normal ng-binding" href="" data-i18n-text="_Logout"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scope">
+        <ul class="navContentArea">
+            <li class="navStep">
+                <div class="navLineFirst">
+                </div>
+                <div class="navCircleActive navCircleCompleted">
+                    <div>
+                    </div>
+                </div>
+                <span class="stepTitleCompleted" data-i18n-text="_body_Agreement"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive">
+                    <div>
+                        2</div>
+                </div>
+                <span class="stepTitleActive" data-i18n-text="_body_Information"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive navCircleReady">
+                    <div>
+                        3</div>
+                </div>
+                <span class="stepTitleActive stepTitleReady" data-i18n-text="_body_Deposit"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive navCircleReady">
+                    <div>
+                        4</div>
+                </div>
+                <span class="stepTitleActive stepTitleReady" data-i18n-text="_body_Tax"></span> </li>
+            <li class="navStep">
+                <div class="navLineLast">
+                </div>
+                <div class="navCircleActive navCircleReady">
+                    <div>
+                        5</div>
+                </div>
+                <span class="stepTitleActive stepTitleReady" data-i18n-text="_body_Product"></span> </li>
+        </ul>
+    </div>
+    <div class="headerDivider">
+        <div class="divider-inner">
+        </div>
+    </div>
+    <div class="spacing-top-base">
+        <div class="ws-row">
+            <div class="ws-span5">
+                <p class="size-large text-center" data-i18n-text="_body_Caption">
+                    </p>
+                <div class="a-section">
+                    <div class="a-size-base">
+                        <div class="address-inputName" data-i18n-text="_body_AddressField_Street">
+                            </div>
+                        <input type="text" class="address-textbox spacing-top-micro address-street" />
+                        <div class="a-alert-inline a-alert-inline-error hide">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content ng-binding" data-i18n-text="_body_AddressField_StreetError">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-size-base">
+                        <div class="ws-span6 spacing-left">
+                            <div class="address-inputName " data-i18n-text="_body_AddressField_City">
+                                </div>
+                            <input type="text" class="address-textbox spacing-top-micro address-city" />
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding" data-i18n-text="_body_AddressField_CityError">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ws-span6 spacing-right">
+                            <div class="address-inputName " data-i18n-text="_body_AddressField_Province">
+                                </div>
+                            <input type="text" class="address-textbox spacing-top-micro address-state" />
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding" data-i18n-text="_body_AddressField_ProvinceError">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-size-base">
+                        <div class="ws-span6 spacing-left">
+                            <div class="address-inputName " data-i18n-text="_body_AddressField_Country">
+                                </div>
+                            <div class="address-dropdown spacing-top-micro">
+                                <select name="country" class="address-dropdown-select"> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ws-span6 spacing-right">
+                            <div class="address-inputName " data-i18n-text="_body_AddressField_ZIP">
+                                </div>
+                            <input type="text" class="address-textbox spacing-top-micro address-zip" />
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding" data-i18n-text="_body_AddressField_ZIPError">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section a-spacing-base a-spacing-top-base a-size-base">
+                    <div class="text-left">
+                        <div>
+                            <span class="a-text-bold" data-i18n-text="_body_ChoseName"></span></div>
+                        <div>
+                            <a href="javascript:;" class="link-emphasis business_name" data-i18n-quesition='_body_ChoseNameQuestion' data-i18n-content="_body_ChoseNameContent" data-i18n-emphasis=""  data-i18n-text="_body_WhatName"></a>
+                        </div>
+                    </div>
+                    <div class="ws-span6 spacing-left">
+                        <input type="text" maxlength="50" autocomplete="off" id="store_name" class="address-textbox store_name">
+                    </div>
+                    <div class="ws-span6 spacing-right dn_messageDivV2 a-alert-inline-error hide">
+                        <div class="a-alert-inline">
+                            <div class="a-box-inner a-alert-container fail">
+                                <i class="a-icon a-icon-alert store_name_error"></i>
+                                <div class="a-alert-content ng-binding">
+                                    Store name empty</div>
+                            </div>
+                            <div class="a-box-inner a-alert-container a-alert-success success hide">
+                                <i class="a-icon a-icon-alert store_name_success"></i>
+                                <div class="a-alert-content ng-binding" style="margin-left:5px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section">
+                    <div class="a-size-base">
+                        <div class="websiteInfo-heading a-text-bold" data-i18n-text="_body_URL">
+                           </div>
+                        <div>
+                            <a href="javascript:;" class="link-emphasis ask_why"data-i18n-quesition='_body_WhyUrlQuestion' data-i18n-content="_body_WhyUrlContent" data-i18n-emphasis=""   data-i18n-text="_body_WhyUrl"></a>
+                        </div>
+                        <div class="ws-span10">
+                            <input type="text" maxlength="100" autocomplete="off" placeholder="www.example.com"
+                                name="websiteUrl" class="websiteurl-textbox">
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert store_name_error"></i>
+                                    <div class="a-alert-content ng-binding">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section " style="margin-bottom: 8px;">
+                    <div class="a-size-base">
+                        <div class="websiteInfo-heading a-text-bold" data-i18n-text="_body_PIN">
+                            </div>
+                        <div class="pv_radioButtonCall">
+                            <label for="call">
+                                <input type="radio" name="verificationType" id="call" disabled/><font data-i18n-text="_body_Call"></font></label>
+                        </div>
+                        <div class="pv_radioButtonCall">
+                            <label for="SMS">
+                                <input type="radio" name="verificationType" id="SMS" checked /><font data-i18n-text="_body_SMS"></font></label>
+                        </div>
+                        <div class="ws-row call_down hide">
+                            <div class="showCaptchaSpinner" id="seller-image-container">
+                                <!-- <img src="###" alt="PictureCode" width="200" height="70" /> -->
+                            </div>
+                            <div class="another_img">
+                                <span class='captcha_refresh_link' data-i18n-text="_body_CallChangImg"></span>
+                            </div>
+                            <div class="a-text-bold a-spacing-mini" data-i18n-text="_body_Characters">
+                                
+                            </div>
+                            <div class="ws-row">
+                                <div class="ws-span6 inline-block">
+                                    <input type="text" class="websiteurl-textbox" id='PictureCode' />
+                                </div>
+                                <div class="ws-span4 inline-block">
+                                    <input type="button" class="button-submit Verify" data-i18n-value="_body_Verify"/>
+                                </div>
+                            </div>
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding">
+                                        Captcha Validation failed</div>
+                                </div>
+                            </div>
+                            <div class="a-spacing-none">
+                                <p class="a-spacing-mini" data-i18n-text="_body_Tell">
+                                    </p>
+                                <div class="ws-span6">
+                                    <div class="intl-tel-input">
+                                        <div class="flag-dropdown">
+                                            <div class="selected-flag">
+                                                <div class="iti-flag cn">
+                                                </div>
+                                                <div class="arrow">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="text" id="country-call-input" placeholder="+86 131 2345 6789" disabled/>
+                                    </div>
+                                </div>
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_ValidPhone"></div>
+                                    </div>
+                                </div>
+                                <p class="color-tertiary" data-i18n-text="_body_Eg"></p>
+                                <div class="ws-row">
+                                    <p class="a-spacing-top-mini a-spacing-mini a-text-bold" data-i18n-text="_body_VerificationLanguage"></p>
+                                    <div class="ws-row a-spacing-top-mini">
+                                        <div class="address-dropdown ws-span6 pv_dropdown dropdown-disabled">
+                                            <select class="address-dropdown-select dropdown-select" name="lang" disabled> 
+                                            </select>
+                                        </div>
+                                        <div class="a-ws-span5">
+                                            <button class="CallMeButton button-submit" disabled data-i18n-text="_body_Callme">
+                                                
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section SMS_down">
+                    <div class="a-spacing-none">
+                        <p class="a-spacing-mini" data-i18n-text="_body_Phone">
+                            </p>
+                        <div class="ws-span6">
+                            <div class="intl-tel-input">
+                                <div class="flag-dropdown">
+                                    <div class="selected-flag">
+                                        <div class="iti-flag cn">
+                                        </div>
+                                        <div class="arrow">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" id="country-phone-input" placeholder="+86 131 2345 6789"/>
+                            </div>
+                        </div>
+                        <div class="a-alert-inline a-alert-inline-error hide">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content ng-binding" data-i18n-text="_body_ValidPhone"></div>
+                            </div>
+                        </div>
+                        <div class="a-alert-inline a-verify-inline hide">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content ng-binding">ffff</div>
+                            </div>
+                        </div>
+                        <p class="color-tertiary" data-i18n-text="_body_Eg">
+                            </p>
+                        <div class="ws-row">
+                            <p class="a-spacing-top-mini a-spacing-mini a-text-bold" data-i18n-text="_body_SMSVer">
+                                </p>
+                            <div class="ws-row a-spacing-top-mini">
+                                <div class="address-dropdown ws-span6 pv_dropdown">
+                                    <select class="address-dropdown-select dropdown-select" name="lang">
+                                        <option>English</option>
+                                        <option>German</option>
+                                        <option>Spanish</option>
+                                        <option>French</option>
+                                        <option>Italian</option>
+                                        <option>Japanese</option>
+                                        <option>Chinese</option>
+                                    </select>
+                                </div>
+                                <div class="a-ws-span5">
+                                    <button class="sendVerificationButton button-submit" data-i18n-text="_body_Textme" id="verify_now" disabled></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section">
+                    <div class="ws-row">
+                        <button class="button-submit" id="a-autoid-2-announce" data-i18n-text="_body_Next" disabled>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="a-box">
+            <div class="box-inner">
+                <div class="a-section">
+                    <div class="footerLinkSection">
+                        <a href="" class="foot-link">为此页评级</a> <a href="" class="foot-link">获取支持</a>
+                        <a href="" class="foot-link">政策和协议</a>
+                        <div class="languageSwitcherDropdown a-section">
+                            <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerDivider footDivder">
+                    <div class="divider-inner">
+                    </div>
+                </div>
+                <div class="spacing-top-mini">
+                    <span class='footerFriendlyName'>wbb</span> <span>© 1999-2018 年，亚马逊公司或其附属公司</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="code_overlay hide">
+        <div class="code_screen">
+            <div class="mob-view">
+                <p class="text-bold base-plus">
+                    输入通过 SMS 收到的 PIN  
+                </p>
+                <div class="pv_otpMainDiv">
+                    <p class="text-bold a-size-base">一次性 PIN</p>
+                    <input type="text" id="pin_enter"/>
+                    <button class="primaryAUIButton" id="verifyOTPButton">验证</button>
+                </div>
+                <p>
+                    <span class="a-color-tertiary">您希望更改号码重新验证吗？</span>&nbsp;&nbsp;&nbsp;
+                    <a href="javascript:;" class="cancle_code_screen">取消</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/gVerify.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="i18n/jquery.i18n.properties.js" ></script>
+<script type="text/javascript" src="i18n/language.js" ></script>
+<script type="text/javascript" src="js/pover_click.js"></script>
+<script type="text/javascript" src="js/webjs/seller_information.js"></script>
+</html>

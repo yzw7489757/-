@@ -1,0 +1,111 @@
+.as-header{
+    width: 100%;
+    height: 82px;
+    padding: 0 30px;
+}
+.as-header .as-logo {
+    float: left;
+    width: 236px;
+    margin-top: 26px;
+}
+.banner_box{
+    width: 100%;
+    height: 471px;
+    position:relative;
+}
+.back_img{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    background:url(../img/AZ_SOA_Hero._SL1280___.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner_drop,.word_back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(48,57,66,0.6);
+    z-index: 1;
+}
+.word_back{
+    background-color: rgba(0,0,0,0);
+    z-index: 2;
+    padding:0 15px;
+}
+.word_back p{
+    text-align: center;
+}
+.heading{
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.color-orange{
+    color: #f90;
+}
+.box_middle{
+    margin-top: 30px;
+    text-align: center;
+}
+.font-size-regular{
+    font-size: 15px;
+}
+.button_box{
+    display: inline-block;
+    padding:10px 5px;
+}
+.cta-button{
+    border-radius: 40px;
+    padding: 15px 42px;
+    min-width: 300px;
+    background-color: #f90;
+    display:block;
+    font-size: 20px;
+}
+.font-size-small{
+    font-size: 13px;
+}
+.word_right{
+    text-align: right!important;
+}
+.box_bottom{
+    margin-top: 50px;
+}
+.footer_nav{
+    text-align: center;
+    position: relative;
+    padding: 30px 0;
+    background: #303942;
+}
+.footer-logo{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.footer-link{
+    font-weight: 400;
+    font-size: 15px;
+    display: inline;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.footer-link:hover {
+    color: #00b7c6;
+}
+.divider {
+    height: 10px;
+    width: 4px;
+    margin: 0 10px;
+    display: inline;
+    border: 0;
+    border-right: 1px solid #FFF;
+}
+.footer_nav p{
+    font-weight: 400;
+    font-size: 11px;
+    margin-top: 10px;
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/return_information.css">
+</head>
+
+<body>
+    <div class="manage-returns-page">
+        <div class="header marBottom10">
+            <span class="a-size-extra-large">退货设置 &nbsp;&nbsp;</span>
+            <span>
+                <a href="">了解更多信息</a>
+            </span>
+        </div>
+        <div class="a-section">
+            <div class="a-box a-alert a-alert-info">
+                <div class="a-box-inner a-alert-container">
+                    <i class="a-icon a-icon-alert"></i>
+                    <div class="a-alert-content">
+                        <span>欢迎使用新的退货设置！退货设置现在特定于商城。如果您为多个地区启用了卖家帐户，则可以使用此页面顶部的商城开关来配置每个商城的设置。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="a-tab-container">
+            <ul>
+                <li>
+                    <span class="activeStyle"> 常规设置</span>
+                </li>
+                <li>
+                    <span> 无法退还商品的退款 </span>
+                </li>
+                <li>
+                    <span> 退货地址设置 </span>
+                </li>
+                <li>
+                    <span> 退货属性覆盖 </span>
+                </li>
+            </ul>
+            <div class="a-box-inner">
+                <!-- 常规设置 -->
+                <div class="generalSettingsContainer">
+                    <!-- one -->
+                    <div class="a-section">
+                        <p>电子邮件格式</p>
+                        <div class="emailPreference">
+                            <label>
+                                <input type="checkbox" class="">
+                                <i class="a-icon a-icon-checkbox"></i>
+                                <span class="a-label a-checkbox-label">
+                                    接收包含批准、关闭或回复链接的退货申请电子邮件
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <div class="a-section returnSettingsCommonMargin">
+                        <p> 默认的自动批准退货申请规则</p>
+                        <div data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
+                            <label for="radio-auth-type-manual">
+                                <input id="radio-auth-type-manual" type="radio" name="autoAuthType" value="Manual" checked="">
+                                <i class="a-icon a-icon-radio"></i>
+                                <span class="a-label a-radio-label">
+                                    我希望批准每个退货申请
+                                </span>
+                            </label>
+                        </div>
+                        <div data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
+                            <label for="radio-auth-type-in-policy">
+                                <input id="radio-auth-type-in-policy" type="radio" name="autoAuthType" value="InPolicy">
+                                <i class="a-icon a-icon-radio beforeActive"></i>
+                                <span class="a-label a-radio-label">
+                                    我希望亚马逊自动批准符合的所有退货申请
+                                    <a class="a-link-normal" href="">
+                                        亚马逊政策
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+                        <div data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
+                            <label for="radio-auth-type-in-policy">
+                                <input id="radio-auth-type-in-policy" type="radio" name="autoAuthType" value="InPolicy">
+                                <i class="a-icon a-icon-radio beforeActive"></i>
+                                <span class="a-label a-radio-label">
+                                    我希望亚马逊自动批准所有退货申请
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- three -->
+                    <div class="a-section returnSettingsCommonMargin">
+                        <p> 商品退货批准 (RMA) 编号设置</p>
+                        <div data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
+                            <label for="radio-auth-type-manual">
+                                <input id="radio-auth-type-manual" type="radio" name="autoAuthType" value="Manual" checked="">
+                                <i class="a-icon a-icon-radio"></i>
+                                <span class="a-label a-radio-label">
+                                    我想让亚马逊生成一个退货批准编号
+                                </span>
+                            </label>
+                        </div>
+                        <div data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
+                            <label for="radio-auth-type-in-policy">
+                                <input id="radio-auth-type-in-policy" type="radio" name="autoAuthType" value="InPolicy">
+                                <i class="a-icon a-icon-radio beforeActive"></i>
+                                <span class="a-label a-radio-label">
+                                    我想自定义一个退货批准编号
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- four -->
+                    <div class="a-section returnSettingsCommonMargin">
+                        <p> 退货期限</p>
+                        <div class="float_left bank-account-dropdown relative width48px ">
+                            <div id="choose_day" class="box-sizing width48px select  bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
+                                <p style="margin-top: 5px;font-size: 13px">30</p>
+                            </div>
+                            <div class="day none" style="height:277px;width: 68px;">
+                                <ul tabindex="-1" class="a-popover-inner a-popover-wrapper overflow_y">
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_0" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;1&quot;}" id="return-window-id_0" class="a-dropdown-link">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_1" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;2&quot;}" id="return-window-id_1" class="a-dropdown-link">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_2" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;3&quot;}" id="return-window-id_2" class="a-dropdown-link">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_3" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;4&quot;}" id="return-window-id_3" class="a-dropdown-link">
+                                            4
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_4" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;5&quot;}" id="return-window-id_4" class="a-dropdown-link">
+                                            5
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_5" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;6&quot;}" id="return-window-id_5" class="a-dropdown-link">
+                                            6
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_6" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;7&quot;}" id="return-window-id_6" class="a-dropdown-link">
+                                            7
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_7" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;8&quot;}" id="return-window-id_7" class="a-dropdown-link">
+                                            8
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_8" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;9&quot;}" id="return-window-id_8" class="a-dropdown-link">
+                                            9
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_9" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;10&quot;}" id="return-window-id_9" class="a-dropdown-link">
+                                            10
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_10" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;11&quot;}" id="return-window-id_10" class="a-dropdown-link">
+                                            11
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_11" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;12&quot;}" id="return-window-id_11" class="a-dropdown-link">
+                                            12
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_12" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;13&quot;}" id="return-window-id_12" class="a-dropdown-link">
+                                            13
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_13" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;14&quot;}" id="return-window-id_13" class="a-dropdown-link">
+                                            14
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_14" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;15&quot;}" id="return-window-id_14" class="a-dropdown-link">
+                                            15
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_15" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;16&quot;}" id="return-window-id_15" class="a-dropdown-link">
+                                            16
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_16" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;17&quot;}" id="return-window-id_16" class="a-dropdown-link">
+                                            17
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_17" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;18&quot;}" id="return-window-id_17" class="a-dropdown-link">
+                                            18
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_18" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;19&quot;}" id="return-window-id_18" class="a-dropdown-link">
+                                            19
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_19" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;20&quot;}" id="return-window-id_19" class="a-dropdown-link">
+                                            20
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_20" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;21&quot;}" id="return-window-id_20" class="a-dropdown-link">
+                                            21
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_21" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;22&quot;}" id="return-window-id_21" class="a-dropdown-link">
+                                            22
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_22" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;23&quot;}" id="return-window-id_22" class="a-dropdown-link">
+                                            23
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_23" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;24&quot;}" id="return-window-id_23" class="a-dropdown-link">
+                                            24
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_24" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;25&quot;}" id="return-window-id_24" class="a-dropdown-link">
+                                            25
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_25" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;26&quot;}" id="return-window-id_25" class="a-dropdown-link">
+                                            26
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_26" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;27&quot;}" id="return-window-id_26" class="a-dropdown-link">
+                                            27
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_27" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;28&quot;}" id="return-window-id_27" class="a-dropdown-link">
+                                            28
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_28" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;29&quot;}" id="return-window-id_28" class="a-dropdown-link">
+                                            29
+                                        </a>
+                                    </li>
+                                    <li tabindex="0" role="option" aria-labelledby="return-window-id_28" class="a-dropdown-item">
+                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;29&quot;}" id="return-window-id_28" class="a-dropdown-link">
+                                            30
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="float_left font-size16">
+                            天（自订单日期算起）内的退货申请将自动批准
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!-- 无法退还商品的退款 -->
+                <div>
+                    <span class="a-size-base-plus a-text-bold"> 无法退还商品的退款政策</span>
+                    <hr class="a-divider-normal">
+                    <div class="ruleBtn">
+                        <span class="a-button-inner a-spacing-top-small block a-button a-button-primary">
+                            <span class="a-button-text border_box block">
+                                添加新规则
+                            </span>
+                        </span>
+                    </div>
+                    <!-- 新规则 -->
+                    <div class="a-section">
+                        <span class="a-size-medium a-text-bold">新规则</spa>
+                            <div class="a-row">
+                                <div class="width82 a-column float_left">
+                                    <div class="a-row">
+                                        <div class="a-column2_4 float_left" style="width: 48.75093%;">
+                                            <span class="a-size-small a-text-bold">名称：</span>
+                                            <br>
+                                            <input type="text" class="box-sizing a-row">
+                                        </div>
+                                        <div class="float_right" style="width: 48.75093%;">
+                                            <span class="a-size-small a-text-bold"> 价格范围：</span>
+                                            <br>
+                                            <input type="text" class="box-sizing width31">
+                                            <span class="noSizeWeight">至</span>
+                                            <input type="text" class="box-sizing width31">
+                                            <span class="noSizeWeight">USD</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="width14 float_right"></div>
+                                <div class="clear"></div>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/webjs/prompt.js"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/webjs/return_information.js"></script>
+
+</html>

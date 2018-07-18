@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>添加商品 - 亚马逊</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/add_product.css" />
+    </head>
+    <body>
+        <div class="mainBlockWidth">
+            <div class="caption_box clear_both">
+                <div class="fl">
+                    <h1 class="size-extra-large spacing-top-large">添加商品</h1>
+                </div>
+                <div class="fr">
+                    <div class="div-gpt-ad">
+                        <a href="###" class="ad">
+                            <div class="mainImg"></div>
+                        </a>
+                        <div class="sellercentral">Advertisement</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorialDefault"></div>
+            <div class="grid clear_both">
+                <div class="leftBlockWidth fl">
+                    <div class="ReleaseNew">
+                        <div class="product-heading">
+                            <span class='size-extra-large'>发布一件新商品</span>
+                        </div>
+                        <p class="color-secondary">首先搜索亚马逊商品目录</p>
+                        <div id="search">
+                            <div class="searchInputWidth">
+                                <i class='a-icon icon-search'></i>
+                                <input type="text" id="product-search" placeholder="商品名称、UPC、EAN、ISBN 或 ASIN"/>
+                            </div>
+                            <div class="product-search-button">
+                                <button class="button button-search">搜索</button>
+                            </div>
+                        </div>
+                        <h4 class="add-a-product-group a-spacing-top-small">
+                            <span>若亚马逊的商品目录中没有该商品：</span>
+                            <a href="###">创建新商品信息</a>
+                        </h4>
+                        <h4 class="add-a-product-group a-spacing-top-small">
+                            <span>要管理您的销售应用程序， </span>
+                            <a href="###">单击此处</a>
+                        </h4>
+                        <h4 class="add-a-product-group a-spacing-top-small">
+                            <span>如果您已申请GTIN豁免，</span>
+                            <a href="###">请在此处检查状态</a>
+                        </h4>
+                    </div>
+                    <div class="search_result_show clear_both">
+                        <div class="search_left fl">
+                            <div class="search_reault_box">
+                                <div class="search_head">
+                                    <div class="a-search_innner">
+                                        <h3>限制您的搜索结果</h3>
+                                    </div>
+                                </div>
+                                <div class="search_all_classify">
+                                    <div class="a-search_innner">
+                                        <h3 class="medium_class h3">类别</h3>
+                                        <h3 class="h3">所有分类</h3>
+                                        <ul class="classify_list">
+                                            <li><span class="item_num"><a href="###">Apparel</a> (478617)</span></li>
+                                            <li><span class="item_num"><a href="###">Apparel</a> (478617)</span></li>
+                                            <li><span class="item_num"><a href="###">Apparel</a> (478617)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="not_find">
+                                <div class="not_find_head">
+                                    <div class="a-search_innner">
+                                        <h3>无法找到？</h3>
+                                    </div>
+                                </div>
+                                <div class="not_find_tip">
+                                    <div class="a-search_innner">
+                                        <p style="margin-bottom:14px">若亚马逊的商品目录中没有您想要的商品，您可以创建新商品的详细信息页面。</p>
+                                        <button class="secondaryAUIButton" id="create_a_new_product-announce" onclick="window.open('creat_new_product.html')">创建新商品信息</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_right fr">
+                            <div class="product_show">
+                                <div class="page_show">
+                                    <div class="a-search_innner clear_both">
+                                        <div class="product_tote fl">
+                                            <b>77114246</b> 个结果中的 <b>1</b> 至 <b>10</b>
+                                        </div>
+                                        <div class="products-pagination fr">
+                                            <ul class="a-pagination clear_both">
+                                                <li><a href="###">← &nbsp;上一页</a></li>
+                                                <li><a href="###" class="selected_page">1</a></li>
+                                                <li><a href="###">2</a></li>
+                                                <li><a href="###">3</a></li>
+                                                <li><a href="###">下一页&nbsp; →</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_list">
+                                    <div class="a-search_innner">
+                                        <div class="product_details clear_both">
+                                            <div class="product_img fl">
+                                                <img src="https://images-na.ssl-images-amazon.com/images/I/41gGXHMGacL._SS75_.jpg" width="75" height="75">
+                                            </div>
+                                            <div class="product_details_right fl">
+                                                <div class="product-description">
+                                                    <span class="text-bold">
+                                                        Phone Lasso Patch and Black Neck Lanyard/strap for Cell Phone or Smart Phone New
+                                                    </span>
+                                                    <span>EAN: 0713757167000</span>
+                                                    <ul class="offerCountDetails">
+                                                        <li>2</li>
+                                                        <li>新品</li>
+                                                        <li>&amp;</li>
+                                                        <li>非全新品</li>
+                                                        <li>促销</li>
+                                                    </ul>
+                                                    <a target="_blank" href="###">查看全部的产品详细信息</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Release_restrictions">
+                                            <div class="limitations-heading">
+                                                <a class="sell_link">
+                                                    <i class='a-icon a-icon-extender-expand a-icon-extender-drop'></i>
+                                                    <span>有商品发布限制</span>
+                                                </a>
+                                            </div>
+                                            <div class="expander-content">
+                                                <div class="listing-limitations-box">
+                                                    <div class="a-search_innner">
+                                                        <div class="condition clear_both">
+                                                            <ul class="unordered-list fl">
+                                                                <li>
+                                                                    <span class="text-bold">全新, 翻新商品, 二手 条件</span>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="button-container">
+                                                                <button class="primaryAUIButton">出售您的</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="listing-limitations-divider"></div>
+                                                        <div class="collection_require">
+                                                            <ul class="unordered-list">
+                                                                <li>
+                                                                    <span class="text-bold">收藏品 条件</span>
+                                                                    <span class='text-explain'>
+                                                                        您未获得在该产品类别下列示的批准，我们当前不接受申请。
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product_list">
+                                    <div class="a-search_innner">
+                                        <div class="product_details clear_both">
+                                            <div class="product_img fl">
+                                                <img src="https://images-na.ssl-images-amazon.com/images/I/41gGXHMGacL._SS75_.jpg" width="75" height="75">
+                                            </div>
+                                            <div class="product_details_right fl">
+                                                <div class="product-description">
+                                                    <span class="text-bold">
+                                                        Phone Lasso Patch and Black Neck Lanyard/strap for Cell Phone or Smart Phone New
+                                                    </span>
+                                                    <span>EAN: 0713757167000</span>
+                                                    <ul class="offerCountDetails">
+                                                        <li>2</li>
+                                                        <li>新品</li>
+                                                        <li>&amp;</li>
+                                                        <li>非全新品</li>
+                                                        <li>促销</li>
+                                                    </ul>
+                                                    <a target="_blank" href="###">查看全部的产品详细信息</a>
+                                                </div>
+                                            </div>
+                                            <div class="variant_button fl">
+                                                <button class="primaryAUIButton variant_show">显示商品变体</button>
+                                            </div>
+                                            <div class="what_this fl">(<a href="###">这是什么？</a>)</div>
+                                        </div>
+                                    </div>
+                                    <div class="loading_group hide">
+                                        <div class="product-loading"></div>
+                                    </div>
+                                    <div class="product_group">
+                                        <div class="a-box">
+                                            <div class="a-search_innner">
+                                                <div class="product_details clear_both">
+                                                    <div class="product_img fl"></div>
+                                                    <div class="product_details_right fl">
+                                                        <div class="product-description">
+                                                            <span class="text-bold">
+                                                                Phone Lasso Patch and Black Neck Lanyard/strap for Cell Phone or Smart Phone New
+                                                            </span>
+                                                            <span>ASIN: B074T6Z4QD</span>
+                                                            <span>UPC: 708744413611</span>
+                                                            <span>EAN: 0713757167000</span>
+                                                            <span>销售排名:235564</span>
+                                                            <ul class="offerCountDetails">
+                                                                <li>2</li>
+                                                                <li>新品</li>
+                                                                <li>&amp;</li>
+                                                                <li>非全新品</li>
+                                                                <li>促销</li>
+                                                            </ul>
+                                                            <a target="_blank" href="###">查看全部的产品详细信息</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="Release_restrictions">
+                                                    <div class="limitations-heading">
+                                                        <a class="sell_link">
+                                                            <i class='a-icon a-icon-extender-expand a-icon-extender-drop'></i>
+                                                            <span>有商品发布限制</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="expander-content">
+                                                        <div class="listing-limitations-box">
+                                                            <div class="a-search_innner">
+                                                                <div class="condition clear_both">
+                                                                    <ul class="unordered-list fl">
+                                                                        <li>
+                                                                            <span class="text-bold">全新, 翻新商品, 二手 条件</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="button-container">
+                                                                        <button class="primaryAUIButton">出售您的</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="listing-limitations-divider"></div>
+                                                                <div class="collection_require">
+                                                                    <ul class="unordered-list">
+                                                                        <li>
+                                                                            <span class="text-bold">收藏品 条件</span>
+                                                                            <span class='text-explain'>
+                                                                                您未获得在该产品类别下列示的批准，我们当前不接受申请。
+                                                                            </span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page_show page_show_bottom">
+                                    <div class="a-search_innner clear_both">
+                                        <div class="product_tote fl">
+                                            <b>77114246</b> 个结果中的 <b>1</b> 至 <b>10</b>
+                                        </div>
+                                        <div class="products-pagination fr">
+                                            <ul class="a-pagination clear_both">
+                                                <li><a href="###">← &nbsp;上一页</a></li>
+                                                <li><a href="###" class="selected_page">1</a></li>
+                                                <li><a href="###">2</a></li>
+                                                <li><a href="###">3</a></li>
+                                                <li><a href="###">下一页&nbsp; →</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightBlockWidth fr">
+                    <div class="ReleaseNew">
+                        <div class="a-spacing-bottom-small">
+                            <span class='a-size-large'>库存</span>
+                        </div>
+                        <div class="draft">
+                            <a href="###" class="widget-action-item">
+                                商品信息草稿
+                                <span class='fr Draft_listings_count'>-</span>
+                            </a>
+                            <a href="###" class="Suppressed_errors">
+                                禁止显示
+                                <span class='fr error_listings_count'>1</span>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <a href="###">管理库存</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

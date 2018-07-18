@@ -1,0 +1,16 @@
+_head_title=Amazon Password Assistance
+_body_Caption=Create new password
+_body_Describe=We'll ask for this password whenever you sign in.
+_body_NewPassword=New password
+_body_NewPasswordPlaceholder=At least 6 characters
+_body_AlertTip=Passwords must be at least 6 characters.
+_body_RePassword=Re-enter password
+_body_RePasswordError1=Passwords must match
+_body_RePasswordError2=Type your password again
+_body_SaveChanges=Save changes and sign in
+_body_Secure_tip=Secure password tips:
+_body_Secure_li1=Use at least 8 characters, a combination of numbers and letters is best.
+_body_Secure_li2=Do not use the same password you have used with us previously.
+_body_Secure_li3=Do not use dictionary words, your name, e-mail address, mobile phone number or other personal information that can be easily obtained.
+_body_Secure_li4=Do not use the same password for multiple online accounts.
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/payment_method.css">
+</head>
+
+<body>
+    <div class="a-section">
+        <div class="a-padding-large">
+            <div class="a-section a-spacing-base">
+                <div class="a-row">
+                    <div class="a-row">
+                        <div class="width74 a-column">
+                            <div class="a-row overflow_hidden">
+                                <div class="width48 a-spacing-base float_left">
+                                    <h1>付费方式</h1>
+                                </div>
+                                <div class="width48 a-spacing-top-micro align_right float_right">
+                                    <a href="">账户信息</a>
+                                </div>
+                            </div>
+                            <hr class="a-divider-normal">
+                        </div>
+                    </div>
+                    <div class="a-row overflow_hidden">
+                        <div class="width74 a-spacing-base a-column float_left">
+                            <div class="a-row">
+                                <div class="a-spacing-base align_right">
+                                    <a href="">添加新的付款方式</a>
+                                    <a href="">管理付款方式</a>
+                                </div>
+                            </div>
+                            <div class="a-row">
+                                <div class="a-spacing-base">
+                                    <div class="a-box marBot">
+                                        <div class="a-box-inner">
+                                            <div class="a-row a-ws-row overflow_hidden">
+                                                <div class="width65 float_left">
+                                                    <div class="a-row overflow_hidden ">
+                                                        <div class="width48 float_left a-spacing-top-mini">
+                                                            <div class="a-row">
+                                                                <h6 class="a-color-tertiary">信用卡</h6>
+                                                            </div>
+                                                            <div class="a-row  a-spacing-top-mini">
+                                                                <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                <span class="a-size-medium img-with-bottom-text">5723</span>
+                                                            </div>
+                                                            <div class="a-row a-spacing-top-small">
+                                                                <span class="width83 a-button">
+                                                                    <span class="heigh29 block">
+
+                                                                        <span class="pdTOP6 block">更换付费方式</span>
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="width48 float_left a-spacing-top-mini">
+                                                            <div class="a-row">
+                                                                <div class="a-row">
+                                                                    <h6 class="a-color-tertiary">到期时间</h6>
+                                                                </div>
+                                                                <div class="a-row">
+                                                                    <span class="a-size-base"> 12/2022</span>
+                                                                </div>
+                                                                <div class="a-row a-spacing-top-small">
+                                                                    <h6 class="a-color-tertiary">持卡人的姓名</h6>
+                                                                </div>
+                                                                <div class="a-row">
+                                                                    <span class="a-size-base">xu bao hong</span>
+                                                                </div>
+                                                                <div class="a-row a-spacing-top-small">
+                                                                    <h6 class="a-color-tertiary">帐单地址</h6>
+                                                                </div>
+                                                                <div class="a-row">
+                                                                    <span class="a-size-base">gongshu qu wanda shagnye zhongxin D zuo 718,</span>
+                                                                    <span class="a-size-base">zhejiang sheng,</span>
+                                                                    <span class="a-size-base">中国</span>
+                                                                    <span class="a-size-base a-text-bold"> - 310013</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="width31 float_right  a-spacing-top-mini">
+                                                    <div class="a-row relative">
+                                                        <h6 class="a-color-tertiary ">
+                                                            分配的商城
+                                                        </h6>
+                                                        <div class="a-divider a-divider-break"></div>
+                                                        <div class="ng-scope overflow_hidden height34">
+                                                            <div class="width14 float_left marRight2_7">
+                                                                <img src="./img/USA._V529822848_.png" alt="">
+                                                            </div>
+                                                            <div class="width31 float_left marRight2_7 a-spacing-top-small">
+                                                                <span class="a-size-small">Amazon.com</span>
+                                                            </div>
+
+                                                            <div class="width48 float_right">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="a-divider a-divider-break"></div>
+                                                        <div class="ng-scope overflow_hidden height34">
+                                                            <div class="width14 float_left marRight2_7">
+                                                                <img src="./img/Mexico._V529822910_.png" alt="">
+                                                            </div>
+                                                            <div class="width31 float_left marRight2_7 a-spacing-top-small">
+                                                                <span class="a-size-small">Amazon.com.mx</span>
+                                                            </div>
+                                                            <div class="width48 float_right align_right">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="a-divider a-divider-break a-spacing-none"></div>
+                                                        <div class="ng-scope overflow_hidden height34">
+                                                            <div class="width14 float_left marRight2_7">
+                                                                <img src="./img/Canada._V529822910_.png" alt="">
+                                                            </div>
+                                                            <div class="width31 float_left marRight2_7 a-spacing-top-small">
+                                                                <span class="a-size-small">Amazon.ca</span>
+                                                            </div>
+
+                                                            <div class="width48 float_right">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="a-divider a-divider-break a-spacing-none"></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width23 float_left a-spacing-top-extra-large border_box">
+                            <div class="a-row">
+                                <div class="a-row box question">
+                                    <div class="a-row box_header">
+
+                                        <div class="a-row a-text-left a-box-inner_td">
+                                            <span class="a-size-base-plus">常见问题</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="box_content a-box-inner">
+                                        <ul>
+                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                                <a href="JavaScript:void(0)">为什么我的信用卡显示为无效的信用卡？</a>
+                                            </li>
+                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                                <a href="JavaScript:void(0)">输入信用卡详细信息后会怎样？</a>
+                                            </li>
+                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                                <a href="JavaScript:void(0)">可接受哪些信用卡？</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

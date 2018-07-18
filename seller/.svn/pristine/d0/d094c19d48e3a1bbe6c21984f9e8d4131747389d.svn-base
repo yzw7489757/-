@@ -1,0 +1,48 @@
+{
+    head: {
+        title: "账户信息"
+    },
+    body: {
+        shopper:"卖家账户信息",
+        Welcome:"欢迎",
+        SellerInformation:"您的卖家资料",
+        CommodityState:"商品状态",
+        HolidaySetting:"假期设置",
+        CurrentState:"商品当前状态",
+        NotAvailableSale :"不可售 (商品在亚马逊上不可售)",
+        Service:"您的服务",
+        Administration:"管理",
+        Shop:"我要开店",
+        Major:"专业",
+        Personal:"个人",
+        Logistics:"亚马逊物流",
+        Register:"已注册",
+        PaymentInformation:"付款信息",
+        DepositMethod:"存款方式",
+        PaymentMethod:"付费方式",
+        BusinessInformation:"业务信息",
+        OfficeAddress:"办公地址",
+        CorporateName:"公司名称",
+        RegisteredAddress:"正式注册地址",
+        SellerMark:"您的卖家记号",
+        UploadingData:"上传数据处理报告语言",
+        DisplayName:"显示名称",
+        Deliver:"发货和退货信息",
+        ReturnInformation:"退货信息",
+        DistributionSetting:"配送设置",
+        InternationalReturn:"国际退货提供商",
+        PreferenceSetting:"购买配送偏好设置",
+        TaxInformation:"税务信息",
+        CommonProblem:"常见问题",
+        ClosingAccount:"我不小心注册了一个账户或者不再需要我的账户了。如何关闭账户？",
+        StopSelling:"我要去度假。如何暂时停售商品？",
+        SaleGoods:"为什么不再销售我的商品？",
+        IneffectiveInformation:"为何我的信用卡会发生错误或提示“信息无效”？",
+        RelatedLinks:"相关链接",
+        FirstOption:"通知首选项",
+        LoginSettings:"登录设置",
+        Closing:"关闭帐户"
+            
+        
+    }
+}

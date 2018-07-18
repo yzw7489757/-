@@ -1,0 +1,210 @@
+body{
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+}
+a{
+    color: #0066c0;
+}
+h1, h2, h3, h4{
+    padding-bottom: 4px;
+}
+.a-container{
+   min-width: 998px;
+   padding: 14px 18px 18px;
+}
+.a-color-state{
+    color: #c45500;
+}
+.a-span6{
+    width: 48.948%;
+}
+.search_box{
+    border-radius: 4px 4px 0 0;
+    background: #f3f3f3;
+    border: 1px #ddd solid;
+    padding: 14px 18px;
+}
+#category_search{
+    width: 478px;
+    vertical-align: middle;
+}
+.button{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    padding:0 10px;
+    border-radius: 3px;
+}
+.button-inner{
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+}
+.button-inner:hover{
+    border-color: #a2a6ac #979aa1 #82858a;
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+}
+.button-primary{
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+}
+.button-primary:hover{
+    background: linear-gradient(to bottom,#f5d78e,#eeb933);
+}
+#category_search_button{
+    width: 236px;
+}
+.find_it_on_amazon_box{
+    border-radius: 0 0 4px 4px;
+    margin-top: -1px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    padding: 8px 18px;
+}
+.find_on_amazon{
+    padding-bottom: 0;
+}
+#category_picker{
+    width: 1060px;
+}
+.careful{
+    border: 1px #ddd solid;
+    background: #fff;
+    padding: 14px 18px;
+}
+.box-inner{
+    border: 1px #ddd solid;
+    background: #f3f3f3;
+    padding: 14px 18px;
+    border-top: 0;
+}
+.bread_crumbs{
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.255;
+}
+#browse_category_carousel{
+    margin-bottom: 22px;
+}
+.pagination{
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px 0 11px;
+    line-height: 400px;
+}
+.pagination_inner:hover{
+    border-color: #a2a6ac #979aa1 #82858a;
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+}
+.button-disabled{
+    background: #f7f8fa;
+    border-color: #e0e0e0;
+    cursor: default;
+}
+#backward_button,#category_browse,#forward_button{
+    height: 400px;
+    float: left;
+}
+.button-disabled .a-icon-previous,.button-disabled .a-icon-next{
+    opacity: .4;
+}
+.a-icon-previous {
+    width: 11px;
+    height: 15px;
+    background-position: -123px -7px;
+    vertical-align: middle;
+}
+.a-icon-next {
+    width: 11px;
+    height: 15px;
+    background-position: -105px -7px;
+    vertical-align: middle;
+}
+#category_browse{
+    width:910px;
+}
+.card{
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background: #F4F4F4;
+    overflow-y: auto; 
+    width: 33.33%;
+    height: 100%;
+}
+.active_card{
+    background: #fff;    
+}
+.card_inner{
+    padding: 14px 18px;
+    position:relative;
+}
+.loading_box{
+    position:absolute;
+    text-align: center;
+    top:173px;
+    left:50%;
+    margin-left: -25px;
+}
+.scrollable-browse li{
+    margin-bottom: 6px;
+}
+.scrollable-browse .browse-link{
+    display:block;
+    font-size: 12px;
+}
+.a-icon-touch-link{
+    background-image: url(../img/spriteAllListingV8.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.browse-link .sprites{
+    height: 11px;
+    width: 11px;
+    background-position: -65px -15px;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+.lock-link .sprites{
+    height: 13px;
+    width: 13px;
+    background-position: -105px -12px;
+    margin-top: 3px;
+}
+.browse-link:hover .browse_path_label{
+    text-decoration: underline;
+}
+.browse-link .browse_path_label{
+    width: 91%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.cancel_box{
+    margin-top: 14px;
+}
+#cancel{
+    display:block;
+    margin: 0 auto; 
+    width: 174px;
+}
+.button-text{
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+}
+.button-text:hover{
+    border-color: #a2a6ac #979aa1 #82858a;
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+}

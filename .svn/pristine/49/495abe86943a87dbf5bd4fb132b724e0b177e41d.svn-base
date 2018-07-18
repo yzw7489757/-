@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta id="i18n_pagename" content="billing_deposit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+    <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+    <link rel="stylesheet" type="text/css" href="css/billing_deposit.css" />
+    <link rel="stylesheet" type="text/css" href="css/pover_click.css" />
+    <link rel="stylesheet" type="text/css" href="css/popover_hover.css" />
+</head>
+<body>
+    <div class="page-header">
+        <div class="a-padding-base">
+            <div class="a-row">
+                <div class="a-column">
+                    <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                </div>
+                <div class="a-span-last">
+                    <div class="header-settings-tab">
+                        <span class='a-size-small' data-i18n-text="_Settings"></span>
+                        <div class="header-list-item">
+                            <span class="a-list-item"><a class="a-link-normal ng-binding" href="" data-i18n-text="_Logout"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scope">
+        <ul class="navContentArea">
+            <li class="navStep">
+                <div class="navLineFirst">
+                </div>
+                <div class="navCircleActive navCircleCompleted">
+                    <div>
+                    </div>
+                </div>
+                <span class="stepTitleCompleted" data-i18n-text="_body_Agreement"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive navCircleCompleted">
+                    <div>
+                    </div>
+                </div>
+                <span class="stepTitleCompleted" data-i18n-text="_body_Information"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive">
+                    <div>3</div>
+                </div>
+                <span class="stepTitleActive" data-i18n-text="_body_Deposit"></span> </li>
+            <li class="navStep">
+                <div class="navLineMiddle">
+                </div>
+                <div class="navCircleActive navCircleReady">
+                    <div>4</div>
+                </div>
+                <span class="stepTitleActive stepTitleReady" data-i18n-text="_body_Tax"></span> </li>
+            <li class="navStep">
+                <div class="navLineLast">
+                </div>
+                <div class="navCircleActive navCircleReady">
+                    <div>5</div>
+                </div>
+                <span class="stepTitleActive stepTitleReady" data-i18n-text="_body_Product"></span> 
+            </li>
+        </ul>
+    </div>
+    <div class="headerDivider">
+        <div class="divider-inner">
+        </div>
+    </div>
+    <div class="spacing-top-base">
+        <div class="ws-row">
+            <div class="ws-span5">
+                <div class="billing">
+                    <p class="size-large text-center" data-i18n-text="_body_Caption1">
+                        </p>
+                    <div class="a-section a-spacing-base a-spacing-top-base">
+                        <div class="ws-row">
+                            <span class='b-size-medium' data-i18n-text="_body_SellingPlan"></span>
+                        </div>
+                    </div>
+                    <div class="ws-row clear_both">
+                        <div class="b-ws-span8 spacing-left">
+                            <span class='a-text-bold' data-i18n-text="_body_Professional"></span>
+                        </div>
+                        <div class="b-ws-span4 spacing-left text-right">
+                            <a href="javascript:;" class="drop_details" data-i18n-text="_body_ViewDetails"></a>
+                        </div>
+                    </div>
+                    <div class="subscriptions_fadeIn b-spacing-top-large hide">
+                        <div class="headerDivider">
+                            <div class="divider-inner">
+                            </div>
+                        </div>
+                        <div class="fee">
+                            <p class="b-size-base-plus b-color-tertiary" data-i18n-text="_body_ViewPlanDetails_Fee"></p>
+                        </div>
+                        <br />
+                        <div class="checkbox-fancy">
+                            <label>
+                                <input type="checkbox" class="valid_checkbox" checked disabled />
+                                <i class='a-icon-checkbox'></i>
+                            </label>
+                            <span class='a-checkbox-span' data-i18n-text="_body_ViewPlanDetails_checkboxT1"></span>
+                            <div class="PS_product_checkbox_padding">
+                                <span class='b-color-tertiary b-size-mini' data-i18n-text="_body_ViewPlanDetails_checkboxC1"></span>
+                                <br />
+                                <span class='b-color-tertiary b-size-mini' data-i18n-text="_body_ViewPlanDetails_Pay"></span>
+                            </div>
+                        </div>
+                        <div class="checkbox-fancy">
+                            <label>
+                                <input type="checkbox" class="valid_checkbox ng-dirty" />
+                                <i class='a-icon-checkbox'></i>
+                            </label>
+                            <span class='a-checkbox-span' data-i18n-text="_body_ViewPlanDetails_checkboxT2"></span>
+                            <div class="PS_product_checkbox_padding">
+                                <span class='b-color-tertiary b-size-mini' data-i18n-text="_body_ViewPlanDetails_checkboxC2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section a-spacing-base a-spacing-top-base">
+                        <div>
+                            <span class='b-size-medium' data-i18n-text="_body_CreditCard"></span>
+                        </div>
+                        <div>
+                            <p data-i18n-text="_body_CardInformation"></p>
+                        </div>
+                        <br />
+                        <div class="b-spacing-block clear_both">
+                            <div class="ws-span6 spacing-left">
+                                <div class="a-text-bold" data-i18n-text="_body_CardNumber">
+                                    </div>
+                                <input type="text" maxlength="24" class="Card_Number b-clo card"/>
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_CardNumberError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ws-span6 spacing-right clear_both">
+                                <div class="b-span5 b-column spacing-left">
+                                    <div class="a-text-bold" data-i18n-text="_body_ValidThrough">
+                                        </div>
+                                    <div class="address-dropdown pv_dropdown ccDropdown b-clo">
+                                        <select name="ccExpirationMonth" class="address-dropdown-select dropdown-select ccDropdownSelect ">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="b-column spacing-left b-span1 middle_img">
+                                    <img src="img/ccline._V276736681_.png" class="ccLine">
+                                </div>
+                                <div class="ws-span6 spacing-left clear_both">
+                                    <div class="a-text-bold" style="visibility: hidden;" data-i18n-text="_body_ValidThrough">
+                                        </div>
+                                    <div class="address-dropdown pv_dropdown yyDropdown">
+                                        <select name="ccExpirationMonth" class="address-dropdown-select dropdown-select yyDropdownSelect ">
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                            <option value="2036">2036</option>
+                                            <option value="2037">2037</option>
+                                            <option value="2038">2038</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="a-alert-inline a-alert-inline-error hide b-clo fl">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_CardDateError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ws-row">
+                            <p class="b-spacing-top-small a-text-bold" data-i18n-text="_body_CardholderName"></p>
+                            <input type="text" maxlength="50" class="b-clo Cardholder_Name card"/>
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding" data-i18n-text="_body_CardholderNameError">  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section a-spacing-base a-spacing-top-base">
+                        <div id="ExistingAddress">
+                            <div class="old_address a-spacing-top-mini">
+                                <label for="old_message" class="old_message_label">
+                                    <input type="radio" id='old_message' name="Address" checked />
+                                    <span class="existing-address-width">555, aaa, aa, 046102, CN</span>
+                                </label>
+                            </div>
+                            <div class="add_address a-spacing-top-mini">
+                                <label for="add_message" class="add_message_label">
+                                    <input type="radio" id='add_message' name="Address" />
+                                    <span class="existing-address-width a-text-bold" data-i18n-text="_body_NewAddress"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="a-section new_address_enter hide">
+                            <p class="b-spacing-top-small a-text-bold spacing-top-micro" data-i18n-text="_body_Addaddress_Street">
+                                </p>
+                            <div class="b-clo">
+                                <input type="text" maxlength="60" class="b-clo Street_address" />
+                            </div>
+                            <div class="a-alert-inline a-alert-inline-error hide">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content ng-binding">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-spacing-block clear_both">
+                                <div class="ws-span6 spacing-left">
+                                    <div class="a-text-bold spacing-top-micro" data-i18n-text="_body_Addaddress_City">
+                                        </div>
+                                    <input type="text" maxlength="50" class="City_Town b-clo" />
+                                    <div class="a-alert-inline a-alert-inline-error hide">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content ng-binding">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ws-span6 spacing-right">
+                                    <div class="a-text-bold spacing-top-micro" data-i18n-text="_body_Addaddress_Province">
+                                        </div>
+                                    <input type="text" maxlength="50" class="Province b-clo" />
+                                    <div class="a-alert-inline a-alert-inline-error hide">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content ng-binding">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-spacing-block clear_both">
+                                <div class="ws-span6 spacing-left">
+                                    <div class="a-text-bold spacing-top-micro" data-i18n-text="_body_Addaddress_Country">
+                                        </div>
+                                    <div class="address-dropdown">
+                                        <select name="country" class="address-dropdown-select">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ws-span6 spacing-right">
+                                    <div class="a-text-bold spacing-top-micro" data-i18n-text="_body_Addaddress_ZIP">
+                                        </div>
+                                    <input type="text" maxlength="50" class="Postal_code b-clo" />
+                                    <div class="a-alert-inline a-alert-inline-error hide">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content ng-binding">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-section deposit">
+                    <p class="size-large text-center" data-i18n-text="_body_Caption2">
+                        </p>
+                    <div class="enter_informtation">
+                        <div class="a-text-bold" data-i18n-text="_body_BankInformation">
+                            </div>
+                        <a href="javascript:;" class="ask_inform link-emphasis" data-i18n-quesition='_body_WhyAsk' data-i18n-content="_body_WhyAskContent" data-i18n-emphasis="" data-i18n-text="_body_WhyAsk"></a>
+                    </div>
+                    <br />
+                    <div class="ws-row">
+                        <div class="ws-span6">
+                            <div class="a-text-bold euBankAccountLabel" data-i18n-text="_body_BankLocation">
+                                </div>
+                            <div class="b-spacing-top-small">
+                                <div class="address-dropdown Bank_Location">
+                                    <select name="country" class="address-dropdown-select dropdown-select">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section a-spacing-top-base">
+                        <div class="ws-row clear_both">
+                            <div class="ws-span6 spacing-left">
+                                <div class="a-text-bold euBankAccountLabel">
+                                   <font data-i18n-text="_body_HolderName"></font>  <span class='hover_tip' data-i18n-tip="_body_HolderNameHover">
+                                        <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                    </span>
+                                </div>
+                                <input type="text" data-i18n-placeholder="_body_HolderName" class="Holder_Name spacing-top-micro card" />
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_HolderError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ws-span6 spacing-right">
+                                <div class="a-text-bold euBankAccountLabel">
+                                    <font data-i18n-text="_body_RoutingNumber"></font> <span class='hover_tip' data-i18n-tip="_body_RoutingNumberHover">
+                                        <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                    </span>
+                                </div>
+                                <input type="text" data-i18n-placeholder="_body_RoutingNumberInput" class="Routing_Number spacing-top-micro card" />
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_RoutingNumberError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ws-row clear_both spacing-top-micro">
+                            <div class="ws-span6 spacing-left">
+                                <div class="a-text-bold euBankAccountLabel">
+                                   <font data-i18n-text="_body_AccountNumber"></font>  <span class='hover_tip' data-i18n-tip="_body_AccountNumberHover">
+                                        <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                    </span>
+                                </div>
+                                <input type="text" class="Bank_Number spacing-top-micro card" />
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_CardNumberError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ws-span6 spacing-right">
+                                <div class="a-text-bold euBankAccountLabel" data-i18n-text="_body_Retype">
+                                    </div>
+                                <input type="text" class="Re-type_Number spacing-top-micro card" />
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding" data-i18n-text="_body_HolderError"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section step_button_box">
+                        <div class="two_submit clear_both">
+                            <button class="button-submit deposit_back spacing-left" onclick="javascript:location.href='seller_information.html'" data-i18n-text="_body_Back">
+                                </button>
+                            <button class="button-submit deposit_next spacing-right" data-i18n-text="_body_Next">
+                            </button>
+                            <!-- onclick="javascript:location.href='tax_information.html'"  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="a-box">
+            <div class="box-inner">
+                <div class="a-section">
+                    <div class="footerLinkSection">
+                        <a href="" class="foot-link">为此页评级</a> <a href="" class="foot-link">获取支持</a>
+                        <a href="" class="foot-link">政策和协议</a>
+                        <div class="languageSwitcherDropdown a-section">
+                            <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerDivider footDivder">
+                    <div class="divider-inner">
+                    </div>
+                </div>
+                <div class="spacing-top-mini">
+                    <span class='footerFriendlyName'>wbb</span> <span>© 1999-2018 年，亚马逊公司或其附属公司</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/pover_click.js"></script>
+<script type="text/javascript" src="js/popover_hover.js"></script>
+<script type="text/javascript" src="js/webjs/billing_deposit.js"></script>
+</html>

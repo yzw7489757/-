@@ -1,0 +1,184 @@
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding-bottom: 4px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #c60;
+}
+
+#content-frame {
+    width: 95%;
+    margin: 15px auto;
+    text-align: left;
+}
+
+div.bucketcontainer {
+    margin-top: 15px;
+}
+
+.cols-mc {
+    margin-right: 275px;
+}
+
+table.titlebar {
+    background: none;
+    border: none;
+    border-top: 1px solid #999;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table.data-entry .field,
+table.data-entry .label {
+    padding: 10px;
+}
+
+table.data-entry td {
+    border-top: 1px solid #ddd;
+}
+
+body,
+td,
+th {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.alien {
+    text-align: right;
+    vertical-align: top;
+}
+.ski-btn {
+    width: 100%;
+    padding: 0;
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none !important;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background: #eff0f3;
+    background: -webkit-linear-gradient(top, #f7f8fa, #e7e9ec);
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f8fa', endColorstr='#e7e9ec',GradientType=0);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+    border-radius: 2px;
+    margin: 0 0 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ski-btn-text {
+    color: #111111;
+    padding: 0px 10px 0px 11px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 29px;
+    display: block;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ski-btn-primary {
+    text-align: center;
+    font-size: 13px;
+    line-height: 29px;
+    border-color: #a88734 #9c7e31 #846a29;
+    background: #f0c14b;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    background: #f3d078;
+    background: -webkit-linear-gradient(top, #f7dfa5, #f0c14b);
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7dfa5', endColorstr='#f0c14b',GradientType=0);
+}
+a,
+a:visited,
+a:active,
+a:link {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.tiny-example {
+    font-size: 10px;
+    color: #666;
+}
+
+.width16 {
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 16.66666667%;
+}
+
+.width33 {
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 33.33333333%;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.float_left {
+    float: left !important;
+}

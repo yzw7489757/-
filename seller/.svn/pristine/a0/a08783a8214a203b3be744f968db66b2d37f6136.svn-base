@@ -1,0 +1,45 @@
+window.onload = function () {
+    var showTitle = true
+    $('.addNewaddressBtn').click(function (e) {
+        e.preventDefault();
+        $('.addNewaddress').hide()
+        $('.chooseaddress').show()
+    })
+    $('.chooseaddressBtn').click(function (e) {
+        e.preventDefault();
+        $('.addNewaddress').show()
+        $('.chooseaddress').hide()
+    })
+    $('.submitBtn').click(
+        function () {
+            if ($('.tel').val() == '') {
+                $('.tel_block').show()
+            }else(
+                $('.tel_block').hide()
+            )
+
+            if($('.zip_code').val() == ''){
+                $('.zip_code_block').show()
+            }else(
+                $('.zip_code_block').hide()
+            )
+
+            if($('.city').val() == ''){
+                $('.city_block').show()
+            }else(
+                $('.city_block').hide()
+            )
+            if($('.address').val() == ''){
+                $('.address_block').show()
+            }else(
+                $('.address_block').hide()
+            )
+            if($('.address').val() == ''||$('.city').val() == ''||$('.zip_code').val() == ''||$('.tel').val() == ''){
+                $('.address_invalid').show()
+            }else{
+                $('.address_invalid').hide()
+            }
+        }
+
+    )
+}

@@ -1,0 +1,157 @@
+.ai-dropdown {
+    margin: 0;
+    padding: 0px 30px 0px 10px;
+    height: 30px;
+    line-height: 14px;
+    font-size: 13px;
+    color: #111;
+    background: #eff0f3;
+    background: -webkit-linear-gradient(top, #f7f8fa, #e7e9ec);
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    width: 100%;
+}
+.bank-account-dropdown:before {
+    top: 8px;
+    border-color: transparent transparent #000 transparent !important;
+}
+.bank-account-dropdown:before, .bank-account-dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 3px dashed;
+    pointer-events: none;
+}
+.bank-account-dropdown:after {
+    border-top-style: solid;
+    border-bottom: none;
+}
+.bank-account-dropdown:after {
+    top: 16px;
+    border-color: #000 transparent;
+}
+.bank-account-dropdown:before, .bank-account-dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.a-input-text,
+input[type=text],
+input[type=number],
+input[type=tel],
+input[type=password],
+input[type=search],
+select.a-select-multiple,
+textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 1px 0 rgba(0, 0, 0, .07) inset;
+    outline: 0;
+}
+
+.onfocusInput:focus {
+    outline: 0;
+    -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+    border-color: rgba(231, 118, 0, 1);
+    -webkit-box-shadow: 0 0 5px rgba(231, 118, 0, 1);
+    
+}
+
+.a-alert-inline {
+    display: inline-block;
+    border: none;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+/* i */
+
+.a-icon {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-alert-inline .a-icon-alert {
+    height: 13px;
+    width: 14px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.a-alert-inline-error {
+    width: 5px;
+    background-position: -141px -130px;
+}
+
+.a-alert-container {
+    padding-left: 16px;
+    color: #c40000;
+}
+
+/* 错误提示边框 */
+
+/* .a-input-text input.a-form-error,
+.a-input-text.a-form-error,
+input[type=text] input.a-form-error,
+input[type=text].a-form-error,
+input[type=number] input.a-form-error,
+input[type=number].a-form-error,
+input[type=tel] input.a-form-error,
+input[type=tel].a-form-error,
+input[type=password] input.a-form-error,
+input[type=password].a-form-error,
+input[type=search] input.a-form-error,
+input[type=search].a-form-error,
+select.a-select-multiple input.a-form-error,
+select.a-select-multiple.a-form-error,
+textarea input.a-form-error,
+textarea.a-form-error {
+    border-color: #d00;
+    box-shadow: 0 0 0 3px rgba(221, 0, 0, .1);
+} */
+
+.radius4 {
+    border-radius: 4px 4px 4px 4px;
+}
+form {
+    margin-bottom: 14px;
+}
+.a-button-primary {
+    background: #f0c14b !important;
+    color: #111;
+}
+.a-button-text {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.address-inputName {
+    font-weight: bold;
+}

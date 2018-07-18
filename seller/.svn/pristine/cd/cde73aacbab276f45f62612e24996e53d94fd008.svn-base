@@ -1,0 +1,308 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
+}
+h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+}
+h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.465;
+    padding-bottom: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+}
+a {
+    text-decoration: none;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+b{
+    font-weight: 700;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+.a-box {
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+
+.a-row{
+    width: 100%;
+}
+.block{
+    display: block;
+}
+.inline_block{
+    display: inline-block
+}
+.none{
+    display:none
+}
+.border_box{
+    box-sizing: border-box
+}
+.relative{
+    position: relative
+}
+.overflow_hidden {
+    overflow: hidden;
+}
+.overflow_auto{
+    overflow: auto
+}
+.float_left {
+    float: left !important;
+}
+.float_right {
+    float: right !important;
+}
+.align_right{
+    text-align: right;
+}
+.a-text-bold {
+    font-weight: 700!important;
+}
+
+.a-padding-large {
+    padding: 18px 22px!important;
+}
+.a-box-inner{
+    padding: 18px 22px!important;
+}
+.a-box-inner_td{
+    padding: 12px 18px 11px;
+}
+.a-box-inner_input{
+    padding: 3px 7px;
+}
+.a-box-inner_radio{
+    padding: 14px 18px;
+}
+.a-padding-base {
+    padding: 10px 14px!important;
+}
+.faq_questionSet {
+    padding-bottom: 10px;
+}
+.a-spacing-top-mini {
+    margin-top: 6px!important;
+}
+.a-spacing-top-medium {
+    margin-top: 18px!important;
+}
+.a-spacing-top-micro {
+    margin-top: 4px!important;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+.a-spacing-base{
+    margin-bottom: 14px!important;
+}
+.a-spacing-small{
+    margin-bottom: 10px!important;
+}
+.marBtn10{
+    margin-bottom: 10px!important;
+}
+.a-spacing-micro, .a-ws .a-ws-spacing-micro {
+    margin-bottom: 4px!important;
+}
+.a-spacing-medium, .a-ws .a-ws-spacing-medium {
+    margin-bottom: 18px!important;
+}
+.width91{
+    width: 91.3948%;
+}
+.width83{
+    width: 83%!important;
+}
+.width74{
+    width: 74.448%;
+}
+.width48{
+    width: 48.60313%;
+}
+.width23{
+    width: 23.448%;
+}
+.width65{
+    width: 65.7198%;
+}
+.width31{
+    width: 31.48647%;
+}
+.width30{
+    width: 30.62933%;
+}
+.width99{
+    width: 99.95313%;
+}
+.width14{
+    width: 14.3698%;
+}
+.width5{
+    width: 5.81147%;
+}
+.width56{
+    width: 56.62933%;
+}
+.width39{
+    width: 39.296%;
+}
+.width47{
+    width: 47.96267%;
+}
+.pdTOP6{
+    padding-top: 6px;
+}
+.a-column {
+    margin-right: 2%;
+}
+.marRight2_7{
+    margin-right: 2.7%;
+}
+.marRight4{
+    margin-right: 4%;
+}
+.first_child{
+    border-radius: 4px 4px 0 0;
+}
+.last_chilid{
+    border-radius: 0 0 4px 4px;
+}
+.radius{
+    border-radius: 4px;
+}
+
+/* i */
+.a-icon {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+.a-alert .a-icon-alert {
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+.a-icon-alert {
+    background-position: -318px -35px;
+}
+/* 边框 */
+.a-alert-success .a-alert-container {
+    box-shadow: 0 0 0 4px #dff7df inset;
+    padding-left: 60px;
+}
+
+.a-color-success {
+    color: #008a00!important;
+}
+.a-size-medium {
+    font-size: 17px!important;
+    line-height: 1.255!important;
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+/* 按钮 */
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button-inner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+}
+.a-button-text {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+}
+.a-button-input {
+    position: absolute;
+    background-color: #fff;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .01;
+    filter: alpha(opacity=1);
+    outline: 0;
+    overflow: visible;
+    z-index: 20;
+}
+
+.bgcolor{
+   
+    background-color: #f3f3f3!important;
+ 
+}
+.a-ember {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}

@@ -1,0 +1,46 @@
+.tax-span5{
+    width: 45.3%;
+    margin: 0 auto;
+}
+.size-middle{
+    font-size: 18px;
+    font-weight: bold;
+}
+.tax_survey_table{
+    margin-top: 40px;
+    border-top:1px solid #ddd;
+    font-size: 14px;
+}
+h6{
+    font-size: 14px;
+}
+.tax_step{
+    padding:18px 0;
+    border-bottom:1px solid #ddd;
+}
+.tax_question{
+   font-weight: bold;
+   margin:4px 0; 
+}
+.tax_step label,.signature_agree label{
+    width: 49.5%;
+    display: inline-block;
+}
+.tax_step label,.tax_step input,.signature_agree label,.signature_agree input{
+    vertical-align: text-bottom;
+}
+.tax_step label input[type="radio"],.tax_step label input[type="checkbox"],.signature_agree input[type="radio"]{
+    margin-right: 5px;
+}
+.tax_address{
+    margin-left: 0;
+}
+.tax_address:hover{
+    background: linear-gradient(to top,#f7f8fa,#e7e9ec);
+}
+.post_address{
+    margin:40px 0 22px 0;
+}
+.signature_agree{
+    margin:45px 0;
+}
