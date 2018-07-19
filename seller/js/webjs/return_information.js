@@ -19,27 +19,27 @@ $(function () {
         $('.a-icon-checkbox').addClass('checkbox_hover')
     })
     // 默认的自动批准退货申请规则
-    function changeImghover(ulName, className) {
-
-        $(ulName).find('li').hover(function () {
-            var index = $(this).index()
-            // 
-            $(ulName).find('li').eq(index).find('i').addClass(className).siblings().parents('.autoAuthType').find('i').removeClass(className)
-            $(ulName).find('li').eq(0).find('i').addClass(className)
-        })
-    }
-    changeImghover('.return_request', 'radio_hover')
-    changeImghover('.RMA', 'radio_hover')
-
+    
     function changeImgclick(ulName, className) {
-        $(ulName).find('li').click(function () {
-            var index = $(this).index()
-            $(ulName).find('li').eq(0).find('i').removeClass(className)
-            $(ulName).find('li').eq(index).find('i').addClass(className).siblings().parents('li').removeClass(className)      
+        $(`${ulName} li`).click(function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            $(ulName).find('.a-icon-radio').removeClass(className);//先删除所有的
+            $(ulName).find('li').eq(0).find('i').addClass(className)
+            $(ulName).find('li').eq(index).find('i').addClass(className);      
+        })
+        $(`${ulName} li`).hover(function (e) {
+            e.preventDefault();
+            var index = $(this).index();
+            $(ulName).find('.a-icon-radio').removeClass(className);//先删除所有的
+            $(ulName).find('li').eq(0).find('i').addClass(className)
+            $(ulName).find('li').eq(index).find('i').addClass(className);      
         })
     }
     changeImgclick('.return_request', 'radio_hover')
     changeImgclick('.RMA', 'radio_hover')
+
+
 
     // 添加新规则
     $('.ruleBtn').click(function () { 
@@ -51,5 +51,12 @@ $(function () {
         $('.setting_adjustment').hide();
         $('.delete_adjustment').show();
         $('.setting_address').show();
-     })
+    })
+
+   // 选择原因 添加
+    $('.why ul li').click(function(){
+        var index = $(this).index();
+        console.log($(this).innerText)
+    })   
+    
 })

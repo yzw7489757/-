@@ -83,15 +83,15 @@ function dropdown_box(ulName, selectName) {
 
 //   
   function deteleList(text){
-    let $deleteBtn =$('deleteBtn')
+    let $deleteBtn =$('.deleteBtn')
     let $deleteLi = $('<li></li>')
-    $deleteLi.text(`<hr>
+    $deleteLi.html(`<hr>
                         <div class="a-row">
                             <div class="width74 a-column2_4 float_left">${text}</div>
                             <div class="width23 float_left">
                                 <span class="a-button-inner a-button-small  block a-button ">
                                     <span class="a-button-text border_box block">
-                                        添加
+                                        删除
                                     </span>
                                 </span>
                             </div>
@@ -99,4 +99,5 @@ function dropdown_box(ulName, selectName) {
                         </div>`)
     $deleteBtn.append($deleteLi)        
   }
+  deteleList('aaa')
   deteleList('aaa')
