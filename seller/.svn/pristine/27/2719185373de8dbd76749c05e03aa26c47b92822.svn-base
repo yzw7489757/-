@@ -1,0 +1,32 @@
+.content-area {
+    margin: 2px 2.5%;
+    width: 95%;
+}
+.content-area .header-orange {
+    color: #c60;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.content-module {
+    margin-top: 15px;
+}
+.titlebar span{
+    padding: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+    color: #000;
+}
+.titlebar {
+    background: #e6e6e6 url('../img/titlebargrad._V192548835_.gif') repeat-x;
+    border-color: #ccc;
+}
+
+.titlebar, .titlebar-blue {
+    margin: 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+}

@@ -92,20 +92,20 @@
                             <h6 class="tax_question" data-i18n-text="_body_Quesition1">
                                 </h6>
                             <label for="profit" class="profit_per">
-                                <input type="radio" name='who' checked  who='1'/><font data-i18n-text="_body_Quesition1Radio1"></font>
+                                <input type="radio" name='who' checked /><font data-i18n-text="_body_Quesition1Radio1"></font>
                             </label>
                             <label for="profit" class="profit_service">
-                                <input type="radio" name='who' disabled  who='0'/><font data-i18n-text="_body_Quesition1Radio2"></font>
+                                <input type="radio" name='who' disabled /><font data-i18n-text="_body_Quesition1Radio2"></font>
                             </label>
                         </li>
                         <li class="tax_step">
                             <h6 class="tax_question" data-i18n-text="_body_Quesition2">
                                 </h6>
                             <label for="American" class="American_y">
-                                <input type="radio" name='tax' disabled tax='1'/><font data-i18n-text="_body_Quesition2Radio1"></font>
+                                <input type="radio" name='tax' disabled /><font data-i18n-text="_body_Quesition2Radio1"></font>
                             </label>
                             <label for="American" class="American_n">
-                                <input type="radio" name='tax' checked  tax='0'/><font data-i18n-text="_body_Quesition2Radio2"></font>
+                                <input type="radio" name='tax' checked /><font data-i18n-text="_body_Quesition2Radio2"></font>
                             </label>
                         </li>
                         <li class="tax_step">

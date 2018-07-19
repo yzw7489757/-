@@ -1,17 +1,17 @@
 $(function(){
     inputctr.public.checkLogin();
+    inputctr.public.SellerRegisterLoading();
     var same_fover_address = $('.same_fover_address');
     var add_post_address = $('.add_post_address');
     var Beneficiary_select = $('.Beneficiary_select');
     var full_name = $('.full_name');
-    // 初始化数据
     var TaxId;
     var UpdateTax;
-    inputctr.public.SellerRegisterLoading();
     $.post(baseUrl+'/GetSellerRegister4',{userid:userid}, function(data){
         if(data){
             inputctr.public.SellerRegisterLoadingRemove();
         }
+        console.log(data,decodeURIComponent(data.error))
         if(data.result == 1){
             TaxId = data.tax_id;
             UpdateTax = 1;
@@ -22,7 +22,6 @@ $(function(){
             $('.signature_agree').find('input[name="agree"][agreeid='+data.is_esignature+']').prop('checked',true);
         }else{
             UpdateTax = 0;
-            TaxId = 0;
         }
     },'json')
     // 初始化添加地址
@@ -180,8 +179,8 @@ $(function(){
         inputctr.public.SellerRegisterLoading();
         var Tax_information ={
                 userid:userid,
-                receive_income:$('label[for="profit"]').children('input[name="who"]:checked').attr('who'),
-                is_usperson:$('label[for="American"]').children('input[name="tax"]:checked').attr('tax'),
+                receive_income:1,
+                is_usperson:0,
                 company_name:full_name.val(),
                 nationality:$('.nationality').val(),
                 owner_type:Beneficiary_select.val(),
@@ -191,6 +190,7 @@ $(function(){
                 tax_id:TaxId,
                 id:UpdateTax
         }
+        console.log(Tax_information)
         $.post(baseUrl+'/SellerRegister4',Tax_information, function(data){
             if(data){
                 inputctr.public.SellerRegisterLoadingRemove();

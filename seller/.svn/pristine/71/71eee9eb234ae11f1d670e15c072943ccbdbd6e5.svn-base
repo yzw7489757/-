@@ -5,40 +5,16 @@ $(function(){
     var subscriptions_fadeIn = $('.subscriptions_fadeIn');
     var new_address_enter = $('.new_address_enter');
     var ExistingAddress = $('#ExistingAddress');
-    var date = new Date();
-    var yy = date.getFullYear();
-    var mm = date.getMonth()+1;
-    var Today = yy;
-    // 收款
-    var Collect_Card = $('.Card_Number');
-    var Cardholder_Name = $('.Cardholder_Name');
-    var Card_Year = $('.yyDropdownSelect');
-    var Card_Month = $('.ccDropdownSelect');
-    // 存款
-    var Holder_Name = $(".Holder_Name");
-    var Routing_Number = $(".Routing_Number");
-    var Bank_Number = $(".Bank_Number");
-    var Re_type_Number = $(".Re-type_Number");
-    for(var y=0;y<20;y++){
-        Card_Year.append('<option value='+Today+'>'+Today+'</option>');
-        Today++;
-    }
     // 初始化
     var UpdateBill;
     var address_id;
     var addressid;
-    var old_address_show = {
-        address:'',
-        city:'',
-        province:'',
-        country:'',
-        zipcode:''
-    }
     inputctr.public.SellerRegisterLoading();
     $.post(baseUrl+'/GetSellerRegister3',{userid:userid}, function(data){
         if(data){
             inputctr.public.SellerRegisterLoadingRemove();
         }
+        console.log(data,decodeURIComponent(data.error))
         if(data.result == 1){
             UpdateBill = 1;
             addressid = data.address_id;
@@ -46,14 +22,6 @@ $(function(){
             Cardholder_Name.val(data.card_holder_name);
             Card_Month.children('option[value='+data.valid_through_month+']').prop("selected","selected");
             Card_Year.children('option[value='+data.valid_through_year+']').prop("selected","selected");
-            ExistingAddress.find('.old_message_label').children('.existing-address-width').text(decodeURIComponent(data.address)+','+decodeURIComponent(data.city)+','+decodeURIComponent(data.province)+','+data.zipcode+','+decodeURIComponent(data.country))
-            old_address_show = {
-               address:decodeURIComponent(data.address),
-               city:decodeURIComponent(data.city),
-               province:decodeURIComponent(data.province),
-               country:decodeURIComponent(data.country),
-               zipcode:data.zipcode 
-            }
             $('.bank_country').children('option[value='+data.bank_location+']').prop("selected","selected");
             Holder_Name.val(data.account_name);
             Routing_Number.val(data.routing_number);
@@ -62,6 +30,31 @@ $(function(){
         }else{
             UpdateBill = 0;
             addressid = 0;
+        }
+    },'json')
+    // 获取旧账单地址
+    var address_information = {
+        userid:userid,
+        sign:1
+    }
+    var old_address_show = {
+        address:'',
+        city:'',
+        province:'',
+        country:'',
+        zipcode:''
+    }
+    $.post(baseUrl+'/GetAddressList',address_information, function(data){
+        if(data.result == 1){
+            var old_address = data.List[data.List.length-1];
+            ExistingAddress.find('.old_message_label').children('.existing-address-width').text(decodeURIComponent(old_address.address)+','+decodeURIComponent(old_address.city)+','+decodeURIComponent(old_address.province)+','+old_address.zipcode+','+decodeURIComponent(old_address.country))
+            old_address_show = {
+               address:decodeURIComponent(old_address.address),
+               city:decodeURIComponent(old_address.city),
+               province:decodeURIComponent(old_address.province),
+               country:decodeURIComponent(old_address.country),
+               zipcode:old_address.zipcode 
+            }
         }
     },'json')
     // 查看计划详情
@@ -83,7 +76,16 @@ $(function(){
     var tip_hover = $('.deposit .hover_tip');
     var popover = $('.popover');
     popover_hover(tip_hover,popover);
-    
+    // 收款
+    var Collect_Card = $('.Card_Number');
+    var Cardholder_Name = $('.Cardholder_Name');
+    var Card_Month = $('.ccDropdownSelect');
+    var Card_Year = $('.yyDropdownSelect');
+    // 存款
+    var Holder_Name = $(".Holder_Name");
+    var Routing_Number = $(".Routing_Number");
+    var Bank_Number = $(".Bank_Number");
+    var Re_type_Number = $(".Re-type_Number");
     // 表单验证
     var regNum = /^\d{13,19}$/;
     var regRout = /^\d{9}$/;
@@ -135,7 +137,9 @@ $(function(){
         }
     })
     // 有效期验证
-    
+    var date = new Date();
+    var yy = date .getFullYear();
+    var mm = date .getMonth()+1;
     Card_Month.change(function() {
         if(Card_Year.val() == yy){
             if($(this).val() < mm){
@@ -240,12 +244,13 @@ $(function(){
                id:UpdateBill
            }     
         }
+        console.log(Bill_deposit)
         $.post(baseUrl+'/SellerRegister3',Bill_deposit, function(data){
             if(data){
                 inputctr.public.SellerRegisterLoadingRemove();
             }
             if(data.result == 1){
-                window.location.href='tax_information.html';
+                //window.location.href='tax_information.html';
             }else{
                 alert(decodeURIComponent(data.error)) 
             }

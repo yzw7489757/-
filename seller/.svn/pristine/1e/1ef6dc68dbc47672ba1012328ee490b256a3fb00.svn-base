@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_setting.css">
+</head>
+<body>
+    <div class="content-area">
+        <div class="a-row">
+            <span class="header-orange">
+                    配送设置
+            </span>
+        </div>
+        <div class="content-module">
+            <div class="float_left titlebar">
+                <span>默认配送地址</span>
+            </div>
+            <div class="float_right"></div>
+            <div class="clear "></div>
+        </div>
+
+    </div>
+</body>
+</html>

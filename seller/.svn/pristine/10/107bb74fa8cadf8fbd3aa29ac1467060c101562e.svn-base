@@ -5,6 +5,7 @@ $(function () {
     var business_name = $('.business_name');
     var ask_inform_box = $('.ask_inform_box');
     var ask_why = $('.ask_why');
+    
     // 初始化
     var UpdateInformation;
     var address_id;
@@ -13,6 +14,7 @@ $(function () {
         if(data){
             inputctr.public.SellerRegisterLoadingRemove();
         }
+        console.log(data)
         if(data.result == 1){
             UpdateInformation = 1;
             address_id = data.address_id;
@@ -25,12 +27,9 @@ $(function () {
             $('.websiteurl-textbox[name="websiteUrl"]').val(data.website);
             country_phone_select.val(data.phone);
             $(".address-textbox").attr('verify','true');
-            if(inputctr.public.isChinaphone(country_phone_select.val())){
-                verify_now.attr('disabled',false);
-            }
         }else{
             $(".address-textbox").attr('verify','false');
-            address_id = 0;
+            address_id = data.address_id;
             UpdateInformation = 0;
         }
     },'json')
@@ -100,20 +99,24 @@ $(function () {
         }
     })
     // 验证唯一的公司显示名称
+    var send_name = false;
     var store_name = $("#store_name");
     store_name.change(function(){
         if(!$(this).val()){
             return;
         }
-        inputctr.public.SellerRegisterLoading();
+        if(send_name){
+            return;
+        }
+        send_name = true;
         var shopName = $(this).val().trim();
         var that = $(this);
         $.post(baseUrl+'/GetShopName',{shopname:shopName}, function(data){
             if(data){
-                inputctr.public.SellerRegisterLoadingRemove();
+                send_name = false; 
             }
             if(data.result == 1){
-                that.removeClass('red_warning').attr('verify','true').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.success').removeClass('hide');
+                that.removeClass('red_warning').attr('verify','true').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.success').removeClass('hide').find('.a-alert-content').text(decodeURIComponent(data.error));
                 that.parent().siblings('.a-alert-inline-error').find('.fail').addClass('hide');
             }else{
                 that.addClass('red_warning').attr('verify','false').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.fail').removeClass('hide').find('.a-alert-content').text(decodeURIComponent(data.error));
@@ -201,6 +204,8 @@ $(function () {
             id:UpdateInformation,
             address_id:address_id
         }
+        console.log(seller_information)
+             
         $.post(baseUrl+'/SellerRegister2',seller_information, function(data){
             if(data){
                 inputctr.public.SellerRegisterLoadingRemove();

@@ -1,7 +1,6 @@
 $(function(){
     inputctr.public.checkLogin();
     var pruduct_question_select = $('.billing').find('.select_answer').children('input[type="radio"]');
-    var billing_length = $('.billing').children('div.a-section').length;
     var product_next = $(".product_next");
     var product_information = {
         is_product_upc:"",
@@ -14,23 +13,28 @@ $(function(){
         if(data){
             inputctr.public.SellerRegisterLoadingRemove();
         }
-        console.log(data,decodeURIComponent(data.error))
         if(data.result == 1){
            console.log(data)
         }
     },'json')
+    var send_flag = false;
     product_next.click(function(){
+        if(send_flag){
+            return;
+        }
+        send_flag = true;
         // 筛选 选中的input
         var pruduct_question_checked = pruduct_question_select.filter(function(index) {
                 return $(this).is(':checked');
             })
-        if(pruduct_question_checked.length < billing_length){
+        if(!pruduct_question_checked.length){
             $('.billing').siblings('.a-alert-inline-error').removeClass('hide');
             return;
         }else{
             $('.billing').siblings('.a-alert-inline-error').addClass('hide');
         }
         inputctr.public.SellerRegisterLoading();
+        //product_information 赋值
         var answer = [];
         for(var i=0;i<pruduct_question_checked.length;i++){
             answer.push($(pruduct_question_checked[i]).attr('choice'))
@@ -45,6 +49,7 @@ $(function(){
         $.post(baseUrl+'/SellerRegister5',product_information, function(data){
             if(data){
                 inputctr.public.SellerRegisterLoadingRemove();
+                send_flag = false;
             }
             if(data.result == 1){
                 window.location.href='product_category.html'

@@ -12,7 +12,7 @@ $(function(){
         if(data.result == 1){
             legal_name.val(data.legal_name)
         }else{
-            console.log(decodeURIComponent(data.error))
+            alert(decodeURIComponent(data.error))
         }
     },'json')
     
@@ -44,10 +44,10 @@ $(function(){
         }
         $.post(baseUrl+'/SellerRegister1',legal_inform, function(data){
             if(data){
-                send_flag = false;
-                 inputctr.public.SellerRegisterLoadingRemove();
+                send_flag = false; 
             }
             if(data.result == 1){
+                inputctr.public.SellerRegisterLoadingRemove();
                 window.location.href='seller_information.html'
             }else{
                 alert(decodeURIComponent(data.error))
