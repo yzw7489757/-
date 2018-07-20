@@ -1,0 +1,53 @@
+.ship_from_address_introduction {
+    margin-bottom: 20px;
+}
+.section_expander {
+    padding-right: 45px;
+}
+.a-section-expander-container {
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+.a-link-section-expander {
+    font-size: 17px;
+    line-height: 1.255;
+    display: block;
+    position: relative;
+    color: #111;
+    background-color: #f3f3f3;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    border-radius: 4px 4px 0 0;
+}
+.pd3{
+    padding: 3px;
+}
+.a-link-section-expander {
+    padding: 11px 54px 11px 18px;
+}
+.default_ship_from_address {
+    display: inline-block;
+    float: right;
+    top: 10px;
+    background-color: Orange;
+    color: #fff;
+    padding: 2px 3px 2px 3px;
+    border-radius: 3px;
+}
+.a-icon-img{
+    width: 15px;
+    height: 12px;
+}
+.a-icon-section-collapse{
+    position: absolute;
+    right: -35px;
+    top: 35%;
+}
+.a-icon-section-expand {
+    background-position: -5px -59px;
+}
+.a-section-expander-inner {
+    border: 1px solid #ddd;
+    padding: 12px 18px;
+    border-top: 0;
+}

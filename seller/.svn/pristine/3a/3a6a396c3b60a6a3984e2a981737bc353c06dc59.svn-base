@@ -1,0 +1,197 @@
+html,
+body {
+    min-width: 320px;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #303942;
+}
+
+.cb-header {
+    display: block;
+    padding: 0 3rem;
+    height: 8rem;
+}
+
+.cb-header img {
+    height: 3rem;
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.navbar.navbar-default .btn {
+    display: block
+}
+
+.cb-language-switcher {
+    display: inline-flex;
+    float: right;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.cb-header .navbar.navbar-default {
+    border: medium none;
+    background: transparent none repeat scroll 0% 0%;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    margin: 15px 30px;
+}
+
+.cb-header .navbar.navbar-default .btn {
+    font-size: 14px;
+    line-height: 1.42857;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FF9900;
+    color: #FFF;
+    border-radius: 1px;
+    margin: 10px;
+    padding: 6px 12px;
+}
+
+.land a {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.cb-language-switcher select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url(../img/caret.png) no-repeat scroll 95% 50%/1.5rem 1rem;
+    border-color: #C0C0C0 #D9D9D9 #D9D9D9;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    height: 4rem;
+    padding: 0 3rem 0 1rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cb-searchtool-main {
+    background-color: #303942;
+}
+
+.cb-searchtool-main .cb-searchtool-sub-main {
+    background-color: #303942;
+    padding: 40px 20px 60px;
+}
+
+.cb-searchtool-main .cb-searchtool-sub-main .cb-searchtool-row {
+    margin-left: 30px;
+}
+
+.cb-searchtool-dropdown {
+    background-color: white;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.cb-searchtool-sell-in {
+    border-radius: 0;
+    padding: 0 1px 0 1px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-offset-2 {
+        margin-left: 16.66667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-3 {
+        width: 25%;
+    }
+}
+
+.cb-searchtool-label-col {
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .col-md-4 {
+        width: 33.33333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-8 {
+        width: 66.66667%;
+    }
+}
+
+.cb-searchtool-sub-main .cb-searchtool-row select {
+    display: block;
+    height: 100%;
+    padding: 0 3rem 0 1rem;
+    border: 0;
+}
+
+.cb-searchtool-search-button-container {
+    padding-left: 2px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-offset-0 {
+        margin-left: 0%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-1 {
+        width: 8.33333%;
+    }
+}
+
+.cb-searchtool-button,
+.cb-searchtool-button:visited {
+    background-color: #FF9900;
+    color: #FFF;
+    border-radius: 4px;
+    padding: 8px 35px;
+    border: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

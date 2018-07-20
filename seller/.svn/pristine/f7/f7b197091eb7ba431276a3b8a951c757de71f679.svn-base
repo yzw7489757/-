@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/international_return_provider_detail.css">
+    <link rel="stylesheet" href="./css/international_return_provider_header.css">
+    <link rel="stylesheet" href="./css/international_return_provider_footer.css">
+</head>
+
+<body>
+    <header class="cb-header">
+        <div class="float_left">
+            <img src="./img/Global_Selling_Logo.png" alt="" style="margin-top: 30px;">
+        </div>
+        <div class="cb-language-switcher">
+
+            <nav class="navbar navbar-default">
+                <a class="btn">
+                    <span>Promotional Offers</span>
+                </a>
+            </nav>
+
+            <nav class="navbar navbar-default land">
+                <a href="">
+                    登陆
+                </a>
+            </nav>
+            <nav class="navbar navbar-default land">
+                <select id="language">
+                    <option value="string:it_IT" label="Italian italiano">Italian italiano</option>
+                    <option value="string:ko_KR" label="Korean 한국어">Korean 한국어</option>
+                    <option value="string:en_US" label="English">English</option>
+                    <option value="string:zh_CN" label="Chinese 中文" selected="selected">Chinese 中文</option>
+                    <option value="string:es_ES" label="Spanish Español">Spanish Español</option>
+                    <option value="string:fr_FR" label="French Français">French Français</option>
+                    <option value="string:ja_JP" label="Japanese 日本語">Japanese 日本語</option>
+                    <option value="string:de_DE" label="German Deutsche">German Deutsche</option>
+                </select>
+            </nav>
+
+        </div>
+        <div class="clear"></div>
+    </header>
+    <main class="cb-searchtool-main">
+        <div class="cb-searchtool-sub-main">
+            <div class="cb-searchtool-row">
+                <div class="float_left cb-searchtool-dropdown cb-searchtool-sell-in col-sm-offset-2 col-sm-3">
+
+                    <div class="float_left cb-searchtool-label-col col-md-4">
+                        <span>销售商城</span>
+                    </div>
+                    <div class="float_left cb-searchtool-label-col col-md-8">
+                        <select class="country">
+                            <option value="string:CN" label="中国">中国</option>
+                            <option value="string:CA" label="加拿大" selected="selected">加拿大</option>
+                            <option value="string:IN" label="印度">印度</option>
+                            <option value="string:MX" label="墨西哥">墨西哥</option>
+                            <option value="string:BR" label="巴西">巴西</option>
+                            <option value="string:DE" label="德国">德国</option>
+                            <option value="string:IT" label="意大利">意大利</option>
+                            <option value="string:JP" label="日本">日本</option>
+                            <option value="string:EU" label="欧洲">欧洲</option>
+                            <option value="string:FR" label="法国">法国</option>
+                            <option value="string:US" label="美国">美国</option>
+                            <option value="string:UK" label="英国">英国</option>
+                            <option value="string:ES" label="西班牙">西班牙</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+
+                <div class="float_left cb-searchtool-dropdown cb-searchtool-sell-in col-sm-3">
+                    <div class="float_left cb-searchtool-label-col col-md-4">
+                        <span>查找</span>
+                    </div>
+                    <div class="float_left cb-searchtool-label-col col-md-8">
+                        <select class="search">
+                            <option value="string:xfbacarrier" label="FBA国际物流提供商">FBA国际物流提供商</option>
+                            <option value="string:fbaprep" label="亚马逊物流准备和储存 ">亚马逊物流准备和储存 </option>
+                            <option value="string:storage" label="储存提供商">储存提供商</option>
+                            <option value="string:branding" label="品牌解决方案">品牌解决方案</option>
+                            <option value="string:compliance" label="品质合规解决方案" selected="selected">品质合规解决方案</option>
+                            <option value="string:trademark" label="商标申请">商标申请</option>
+                            <option value="string:returns" label="国际退货提供商">国际退货提供商</option>
+                            <option value="string:ebcontent" label="图文版品牌描述">图文版品牌描述</option>
+                            <option value="string:imaging" label="图片提供商">图片提供商</option>
+                            <option value="string:tax" label="外部税务顾问">外部税务顾问</option>
+                            <option value="string:translation" label="外部翻译提供商">外部翻译提供商</option>
+                            <option value="string:adoptimization" label="广告优化">广告优化</option>
+                            <option value="string:customs" label="报关服务">报关服务</option>
+                            <option value="string:xmfncarrier" label="自配送国际物流提供商">自配送国际物流提供商</option>
+                            <option value="string:accounts" label="账户管理">账户管理</option>
+                        </select>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cb-searchtool-search-button-container">
+                    <a href="" class="cb-searchtool-button btn">搜索</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </main>
+    <div class="pageLoaded">
+        <div>
+            <div class="cb-serviceprovider-breadcrumb">
+                <span>
+                    <a href="">欧洲</a>
+                </span>
+                <span>></span>
+                <span>
+                    <a href="">亚马逊物流准备和储存 </a>
+                </span>
+                <span>></span>
+                <span>CK1</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="col-lg-8 float_left cb-serviceprovider-logodiv">
+                <div class="cb-serviceprovider-imageouterbox">
+                    <div class="cb-serviceprovider-imagediv">
+                        <img src="./img/logo-ck1._V275591077_.png" alt="">
+                    </div>
+                </div>
+                <div class="cb-serviceprovider-namediv">
+                    <div class="cb-serviceprovider-name">CK1</div>
+                    <div>
+                        <div class="float_left ">
+                            <span class="cb-serviceprovider-colon">关于我们</span>
+                        </div>
+                        <div class="float_left"><span class="cb-serviceprovider-colon">:</span></div>
+                        <div class="float_left">Chukou1 is a leading international warehousing service provider in China. With 7 big operation centers
+                            in Europe, USA, Canada and Australia, Chukou1 offers professional logisitcs services, which include
+                            oversea warehousing and local distribution, cross-border shipping to FBA global warehouses from
+                            China, CK1-customized Special Express, and standard international postal & Express services.
+                            Chukou1 is also the recognized and recomended service provider on Amazon, wish. Alibaba, Aliexpress,
+                            Shopee and other international marketplaces.</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="float_right">
+                <div class="cb-serviceprovider-aggregateRow">
+                    <div>成为第一个评论者</div>
+                    <div>
+                        <span class="btn cb-servicerequest-button">联系供应商 › </span>
+                        <span class="btn btn-primary cb-browsetool-button">撰写评论 › </span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="cb-footer">
+        <div class="float_left col-lg-3 ">
+            <img src="./img/Global_Selling_Logo.png" alt="" class="cb-footer-logo">
+        </div>
+        <div class="float_left col-lg-6 ">
+            <div class="cb-footer-disclaimer">
+                <span class="cb-footer-disclaimer-message">请注意，亚马逊仅将这些商品信息作为信息资源提供。如果您选择保留税务顾问，可与该税务顾问直接签署合同，他们将按照您的指示为您提供服务。亚马逊不会对任何解决方案提供商或其服务提供担保。</span>
+            </div>
+            <div class="cb-footer-contactus">
+                <span class="cb-footer-disclaimer-message">如果您想要在此网站为亚马逊卖家提供服务信息，请在
+                    <a href="">此处</a>联系我们。</span>
+            </div>
+            <div class="cb-footer-copyright">
+                <span class="cb-footer-disclaimer-message">© 版权所有 2018，Amazon Services LLC。保留所有权利。亚马逊公司</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

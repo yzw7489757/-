@@ -1,0 +1,29 @@
+.cb-footer {
+    background-color: #303942;
+    margin-top: 12px;
+}
+.cb-footer .cb-footer-logo {
+    width: auto;
+    height: 35px;
+    margin-top: 40px;
+}
+.cb-footer .cb-footer-disclaimer {
+    padding-top: 25px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+.cb-footer .cb-footer-contactus {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+.cb-footer .cb-footer-copyright {
+    padding-top: 12px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.cb-footer-disclaimer-message {
+    color: #cbcdd0;
+    line-height: 22px;
+    font-size: 14px;
+}
