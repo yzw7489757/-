@@ -1,0 +1,124 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+    margin-top: -2px;
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    font-size: 17.5px;
+    font-weight: bold;
+}
+#taskContainer .modal-body {
+    max-height: 500px;
+    overflow-y: scroll;
+    position: relative;
+    padding: 15px;
+}
+.tasklist {
+    padding: 10px;
+    color: #666;
+    overflow: hidden;
+}
+.pull-left {
+    float: left!important;
+}
+.pull-right {
+    float: right!important;
+}
+p.pull-left,p.pull-right {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+#taskContainer .checklist-item-btn {
+    min-width: 70px;
+    box-sizing: border-box;
+    height: 21px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 3px 18px;
+    cursor: pointer;
+    background: #ff8a62;
+    text-align: center;
+    color: #FFF;
+}
+#taskContainer .checklist-item-complete .checklist-item-btn {
+    background: #5cb85c;
+    cursor: auto;
+}
+.checklist-item-complete .checklist-item-btn {
+    background: #5cb85c;
+    cursor: auto;
+}
+.checklist-item-btn {
+    min-width: 70px;
+    box-sizing: border-box;
+    height: 21px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 3px 18px;
+    cursor: pointer;
+    background: #ff8a62;
+    text-align: center;
+    color: #FFF;
+}
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn{
+    padding:5px 10px;
+}
+.task_begin{
+    font-size: 12px;
+    padding: 5px 15px;
+    cursor: pointer;
+}

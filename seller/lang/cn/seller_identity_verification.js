@@ -28,9 +28,9 @@
         },
         UploadContainer:{
             text1:"将文件拖拽到此处",
-            text1:"或",
-            text1:"选择文件",
-            text1:"文件类型：pdf、doc、png、gif、jpg"
+            text2:"或",
+            text3:"选择文件",
+            text4:"文件类型：pdf、doc、png、gif、jpg"
         },
         DocumentsError:"请提供此部分的必要文件",
         FileRemove:"删除",

@@ -1,0 +1,16 @@
+_head_title=Amazon 登录
+_body_ErrorTips=出现了一个问题
+_body_LabelLoginTitle=登录
+_body_LabelEmail=邮箱地址或手机号码
+_body_EmailError=输入正确的邮箱地址或手机号码
+_body_LabelPassword=密码
+_body_PasswordError=请输入正确的密码
+_body_LinkForgotpassword=忘记密码
+_body_BtnLogin=登录
+_body_LabelRemember_name=记住登录状态。
+_body_LabelRemember_details=详情
+_body_LabelRemember_header=关于记住登录状态
+_body_LabelRemember_inlineContent=<p>选择“记住登录状态”可减少您需要在此设备上登录的次数。</p>
+<p>为了确保您的帐户安全，请仅在您的个人设备上使用此选项。</p>
+_body_BtnRegister=立即注册
+

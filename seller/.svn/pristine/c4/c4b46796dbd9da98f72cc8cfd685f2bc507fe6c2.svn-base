@@ -1,0 +1,25 @@
+.a-tabs {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+.a-tabs li a {
+    -webkit-transition: all 100ms linear;
+    transition: all 100ms linear;
+    text-decoration: none;
+    line-height: 1;
+    padding: 15px 17px 15px 18px;
+    display: block;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    background-color: #fff;
+    color: #c45500;
+    border-top-color: #e77600;
+    font-weight: 700;
+}
+.a-alert-inline-info{
+    position: relative;
+}
+.a-icon-alert{
+    background-position: -166px -130px;
+}

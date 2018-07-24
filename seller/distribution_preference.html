@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_preference.css">
+</head>
+
+<body>
+    <div class="a-container">
+        <div class="a-section">
+            <h1>编辑所有位置的首选项</h1>
+            <span>您可以设置首选项，如标准包裹尺寸、确认设置和保险设置。这些首选项将应用到所有您购买的货件标签。 (点击“取消”以跳过此步骤)</span>
+            <div class="a-box">
+                <table class="a-keyvalue a-align-center">
+                    <tbody>
+                        <tr class="overflow_hidden">
+                            <th class="a-span3 a-text-right">
+                                <div>包裹类型</div>
+                            </th>
+
+                            <th class="a-span9" style="padding: 0">
+                                <div class="package_types_settings">
+                                    <div class="a-section">
+                                        <p class="a-color-tertiary a-text-left">
+                                            为您最常用的包装类型输入包裹和包装材料的尺寸和重量。
+                                        </p>
+                                        <table class="a-normal package_types">
+                                            <tbody>
+                                                <tr class="table_heading">
+                                                    <th class="a-text-left package_type_name_heading">商品名称</th>
+                                                    <th class="a-text-left package_length_heading">长度</th>
+                                                    <th class="a-text-left package_width_heading">宽度</th>
+                                                    <th class="a-text-left package_height_heading">高度</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="packageName">
+                                                        <input type="text" value="" name="packageName" class="a-input-text a-width-small">
+                                                    </td>
+                                                    <td class="length">
+                                                        <div class="a-input-text-addon-group-wrapper">
+                                                            <div class="a-input-text-addon-group">
+                                                                <input type="text" value="0.00" name="length" class="a-input-text a-width-small">
+                                                                <span class="a-input-text-addon">in</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="width">
+                                                        <div class="a-input-text-addon-group-wrapper">
+                                                            <div class="a-input-text-addon-group">
+                                                                <input type="text" value="0.00" name="width" class="a-input-text a-width-small">
+                                                                <span class="a-input-text-addon">in</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="height">
+                                                        <div class="a-input-text-addon-group-wrapper">
+                                                            <div class="a-input-text-addon-group">
+                                                                <input type="text" value="0.00" name="height" class="a-input-text a-width-small">
+                                                                <span class="a-input-text-addon">in</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="action a-text-left">
+                                                        <a class=" a-link-normal delete_package" href="javascript:void(0)">
+                                                            删除
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a class="block a-text-left" href="javascript:void(0)">+ 添加新包裹</a>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr class="overflow_hidden">
+                            <th class="a-span3 a-text-right">确认设置</th>
+                            <th class="a-span9" style="padding: 0">
+                                <div class="package_types_settings">
+                                    <div class="a-section">
+                                        <p class="a-color-tertiary a-text-left">
+                                            选择下方选项，即表示包裹需要确认。
+                                        </p>
+                                        <div class="a-section a-text-left">
+                                            <p>设置确认以下内容：</p>
+                                            <div class="primary_option">
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content" checked>
+                                                        <span class="a-label a-radio-label">无</span>
+                                                    </label>
+                                                </div>
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content">
+                                                        <span class="a-label a-radio-label">对于所有包裹</span>
+                                                    </label>
+                                                </div>
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content">
+                                                        <span class="a-label a-radio-label">对于价值大于以下值的包裹</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="a-input-text-addon-group-wrapper package_value">
+                                                <div class="a-input-text-addon-group">
+                                                    <span class="a-input-text-addon">$</span>
+                                                    <input type="text" value="" name="totalValueLowerThreshold" class="a-input-text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="a-section a-text-left">
+                                        <p>选择确认方式：</p>
+                                        <div class="primary_option">
+                                            <div class="a-radio primary_option">
+                                                <label for="">
+                                                    <input type="radio" name="confirmation_content" checked>
+                                                    <span class="a-label a-radio-label">签名确认</span>
+                                                </label>
+                                            </div>
+                                            <div class="a-radio primary_option">
+                                                <label for="">
+                                                    <input type="radio" name="confirmation_content">
+                                                    <span class="a-label a-radio-label">配送确认</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr class="overflow_hidden">
+                            <th class="a-span3 a-text-right">保险设置</th>
+                            <th class="a-span9" style="padding: 0">
+                                <div class="package_types_settings">
+                                    <div class="a-section">
+                                        <p class="a-color-tertiary a-text-left">
+                                            选择以下一个选项将在每个货件标签上包含包裹中商品的申报价值。
+                                        </p>
+                                        <div class="a-section a-text-left">
+                                            <p>购买申报价值等于包裹内含商品价值的货件标签：</p>
+                                            <div class="primary_option">
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content" checked>
+                                                        <span class="a-label a-radio-label">无</span>
+                                                    </label>
+                                                </div>
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content">
+                                                        <span class="a-label a-radio-label">对于所有包裹</span>
+                                                    </label>
+                                                </div>
+                                                <div class="a-radio primary_option">
+                                                    <label for="">
+                                                        <input type="radio" name="confirmation_content">
+                                                        <span class="a-label a-radio-label">对于价值大于以下值的包裹</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="a-input-text-addon-group-wrapper package_value">
+                                                <div class="a-input-text-addon-group">
+                                                    <span class="a-input-text-addon">$</span>
+                                                    <input type="text" value="" name="totalValueLowerThreshold" class="a-input-text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="a-row a-spacing-top-medium a-text-center">
+                <a href="./distribution_preference_cancel.html">
+                    <span class="a-button-inner block a-button ">
+                        <span class="a-button-text border_box block">
+                            取消
+                        </span>
+                    </span>
+                </a>
+
+                <span class=" a-button-inner block a-button a-button-primary">
+                    <span class="a-button-text border_box block">
+                        保存
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
