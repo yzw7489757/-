@@ -87,4 +87,25 @@ $(function () {
       $('.success_status').show()
     }
   })
+
+
+  $.ajax({
+		url: baseUrl+'/UpdateStoreDetails',
+    method: 'post',
+    dataType: "json", 
+		data: {
+      userid: '13',
+      shop_name: '11',
+      shop_link: '12'
+		},
+		success: function (res) {
+      console.log(res)
+      if(res.result == 1){
+        console.log('success!')
+      }
+    },
+    error:function () { 
+      console.log(res.error)
+    }
+	})
 })

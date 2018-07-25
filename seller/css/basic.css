@@ -48,7 +48,16 @@
 .a-text-bold {
     font-weight: 700 !important;
 }
+.a-text-left {
+    text-align: left !important;
+}
 
+.a-text-right {
+    text-align: right !important;
+}
+.a-text-center {
+    text-align: center!important;
+}
 .a-size-mini {
     font-size: 11px !important;
     line-height: 1.465 !important;
@@ -143,7 +152,9 @@ a:visited {
 .a-section {
     margin-bottom: 22px;
 }
-
+.a-spacing-medium, .a-ws .a-ws-spacing-medium {
+    margin-bottom: 18px!important;
+}
 .a-icon-section-collapse {
     background-position: -5px -82px;
     opacity: .64;
@@ -156,6 +167,9 @@ a:visited {
 
 .a-padding-large {
     padding: 18px 22px !important;
+}
+.a-padding-small {
+    padding: 6px 10px!important;
 }
 .width91{
     width: 91.3948%;

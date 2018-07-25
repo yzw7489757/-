@@ -1,12 +1,13 @@
-$(function() {
-  $(".update_deposit").click(function(e) {
+$(function () {
+  var prevData = null;
+  $(".update_deposit").click(function (e) {
     e.preventDefault();
     $(".table_one").hide();
     $(".table_two").show();
     $('.table_three').show();
     $('.table_four').show();
   });
-  $('.selectNowHaveSaleStyle').click(function (e) { 
+  $('.selectNowHaveSaleStyle').click(function (e) {
     e.preventDefault();
     $(".table_one").show();
     $(".table_two").hide();
@@ -14,35 +15,35 @@ $(function() {
     $('.table_four').hide();
   });
   let timer = null;
-  $('.hasModel').hover(function(){
+  $('.hasModel').hover(function () {
     clearTimeout(timer)
     $('.model').fadeIn(200).show();
-  },function(){
-    timer = setTimeout(function(){
+  }, function () {
+    timer = setTimeout(function () {
       $('.model').fadeOut(200).hide();
-    },300)
+    }, 300)
   })
   // var beforeValue = '';//记录上一次的值
   // $('select[name=bankCountrySelect]').click(function(){
   //   beforeValue = $('select[name=bankCountrySelect]').val();
   // })
-  $('select[name=bankCountrySelect]').change(function(){
-        $('.width99.a-spacing-top-base').hide()
-        $('#agreement').show();
-        let selectVal = $('select[name=bankCountrySelect]').val()
+  $('select[name=bankCountrySelect]').change(function () {
+    $('.width99.a-spacing-top-base').hide()
+    $('#agreement').show();
+    let selectVal = $('select[name=bankCountrySelect]').val()
     // console.log(beforeValue == selectVal);//没变就return
-    switch(selectVal){
+    switch (selectVal) {
       case 'string:CN': //中国
         $('.chinaese').show();
-        $('.set_deposit').click(function(){
-          function showError(inputName,targetId){
-                if($(inputName).val()==""){
-                  addwarn(targetId,2,'必填字段') 
-                }
-              }
-          showError('.carId_input','carId')
+        $('.set_deposit').click(function () {
+          function showError(inputName, targetId) {
+            if ($(inputName).val() == "") {
+              addwarn(targetId, 2, '必填字段')
+            }
+          }
+          showError('.carId_input', 'carId')
         })
-      break;
+        break;
       case 'string:CA': //加拿大
         $('#hasUser').show();
         $('#organization').show();
@@ -50,13 +51,13 @@ $(function() {
         $('#bankIds').show();
         $('#againBankIds').show();
         $('#userType').show();
-      break;
+        break;
       case 'string:LU': //卢森堡
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:IN': //印度
         $('#hasUser').show();
         $('#userType').show();
@@ -69,7 +70,7 @@ $(function() {
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:MX': //墨西哥
         $('#hasUser').show();
         $('#userType').show();
@@ -78,115 +79,115 @@ $(function() {
         $('#bankIds').show();
         $('#againBankIds').show();
         $('#agreement').hide();
-      break;
+        break;
       case 'string:AT': //奥地利
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:GR': //希腊
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:DE': //德国
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:IT': //意大利
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:SK': //斯洛伐克
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:SI': //斯洛文尼亚
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:NZ': //新西兰
         $('#hasUser').show();
         $('#bsb').show();
         $('#bankIds').show();
         $('#againBankIds').show();
-      break;
+        break;
       case 'string:BE': //比利时
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:FR': //法国
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:AU': //澳大利亚
         $('#hasUser').show();
         $('#bsb').show();
         $('#bankIds').show();
         $('#againBankIds').show();
-      break;
+        break;
       case 'string:IE': //爱尔兰
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:EE': //爱沙尼亚
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:US': //美国
         $('.hasUser').show();
         $('.nightBankCode').show();
         $('#bankIds').show();
         $('#againBankIds').show();
-      break;
+        break;
       case 'string:FI': //芬兰
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:GB': //英国
         $('#hasUser').show();
         $('#bankCodeType').show();
         $('#bankIds').show();
         $('#againBankIds').show();
-      break;
+        break;
       case 'string:NL': //荷兰
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:PT': //葡萄牙
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:ES': //西班牙
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
       case 'string:HK': //香港
         $('#hasUser').show();
         $('#liquidation').show();
@@ -194,40 +195,40 @@ $(function() {
         $('#bankIds').show();
         $('#againBankIds').show();
         $('#readSample').show();
-      break;
+        break;
       case 'string:MT': //马耳他
         $('#hasUser').show();
         $('#bic').show();
         $('#intBank').show();
         $('#iban').show();
-      break;
+        break;
 
     }
   });
 
-  $('.table_three input[type=radio][name=license]').change(function() {
-    if(this.value == 'yes'){
-        $('#cnaps').show();
-    }else{
+  $('.table_three input[type=radio][name=license]').change(function () {
+    if (this.value == 'yes') {
+      $('#cnaps').show();
+    } else {
       $('#cnaps').hide();
     }
   });
-  $('.table_three input[type=radio][name=enterprise]').change(function() {
-    if(this.value == 'yes'){
-        $('.licenseId').show();
-        $('.userId').hide();
-      }else{
-        $('.licenseId').hide();
-        $('.userId').show();
+  $('.table_three input[type=radio][name=enterprise]').change(function () {
+    if (this.value == 'yes') {
+      $('.licenseId').show();
+      $('.userId').hide();
+    } else {
+      $('.licenseId').hide();
+      $('.userId').show();
     }
   });
-  $('.table_three input[type=radio][name=bankId]').change(function() {
-    if(this.value == 'yes'){
-        $('.bankUser').show();
-        $('.credit').hide();
-      }else{
-        $('.bankUser').hide();
-        $('.credit').show();
+  $('.table_three input[type=radio][name=bankId]').change(function () {
+    if (this.value == 'yes') {
+      $('.bankUser').show();
+      $('.credit').hide();
+    } else {
+      $('.bankUser').hide();
+      $('.credit').show();
     }
   });
 
@@ -310,4 +311,92 @@ $(function() {
   //   // 转账编号
   //   showError('.transfer_input','transfer')
   // })
+
+
+  // 初始化存款方式
+  $.ajax({
+    url: baseUrl + '/InitializaDeposit',
+    method: 'post',
+    dataType: "json",
+    data: {
+      userid: '12',
+    },
+    success: function (res) {
+      console.log(res)
+      if (res.result == 1) {
+        var data = res.data
+        $('.bank_location').text(decodeURIComponent(data.bank_location))
+        $('.account_name').text(decodeURIComponent(data.account_name))
+      }
+    }
+  })
+  //初始化全部存款方式
+  $.ajax({
+    url: baseUrl + '/InitializaDeposit2',
+    method: 'post',
+    dataType: "json",
+    data: {
+      userid: '12',
+    },
+    success: function (res) {
+      console.log(res)
+      if (res.result == 1) {
+        var data = res.strDeposit
+        console.log(data)
+        $(data).each(function (i) {
+          console.log(data[i].account_name)
+        })
+        $('.bank_location2').text(decodeURIComponent(data[0].bank_location))
+        $('.account_name2').text(decodeURIComponent(data[0].account_name))
+        prevData = data
+      }
+    }
+  })
+  // 设置存款方式
+  $('.set_deposit').click(function () {
+    $.ajax({
+      url: baseUrl + '/SetDepositMade',
+      method: 'post',
+      dataType: "json",
+      data: {
+        userid: '12',
+        method_id: '13',
+        account_number: '14'
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.result == 1) {
+          if ($('.account_number_input').val()) {}
+        } else {
+          console.log(decodeURIComponent(res.error))
+        }
+      },
+      error: function (res) {
+        console.log(decodeURIComponent(res.error))
+      }
+    })
+  })
+  // 新增存款方式
+  $('.update_deposit').click(function () {
+    $.ajax({
+      url: baseUrl + '/AddDepositMethod',
+      method: 'post',
+      dataType: "json",
+      data: {
+        userid: '12',
+        bank_location: '13',
+        account_name: '14',
+        routing_number: '13',
+        account_number: '14'
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.result == 1) {
+          console.log(res.mathod_id)
+        } else {
+          console.log(decodeURIComponent(res.error))
+        }
+      }
+    })
+  })
 });

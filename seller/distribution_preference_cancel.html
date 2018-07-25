@@ -1,12 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_preference_cancel.css">
 </head>
+
 <body>
-    
+    <div class="a-container">
+        <div class="a-section">
+            <span class="a-size-extra-large">购买配送偏好设置</span>
+            <a href="">了解更多信息</a>
+            <div class="go-to-myo-link float_right">
+                <a href="" class="a-link-emphasis go-to-myo-link block">前往"管理订单"</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="a-row">
+            <div style="padding-right:400px">
+                <div class="a-row" style="padding-right:1%;float:left;">
+                    <div class="a-section">
+                        <!--  管理您的发货地址  -->
+                        <div class="a-spacing-medium">
+                            <div class="a-row a-box-group">
+                                <div class="a-box a-first ship_from_address_title_box a-text-left a-box-bg">
+                                    <div class="a-padding-small">
+                                        <div class="float_left">
+                                            <h3> 管理您的发货地址 </h3>
+                                        </div>
+                                        <div class="a-button float_right">
+                                            <span class="a-button-inner block">
+                                                <span class="a-button-text border_box block">
+                                                    + 添加新地址
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="a-box a-last a-box-normal">
+                                    <table class="a-keyvalue a-row" style="margin: 0;padding: 0;" cellspacing=0 cellpadding=0 border=0>
+                                        <tbody class="a-box-bg">
+                                            <tr id="ship_from_address_table_header">
+                                                <th class="a-span2 a-text-left a-align-center">
+                                                    <span class="a-text-bold">默认地址</span>
+                                                </th>
+                                                <th class="a-span6 a-text-left a-align-center">
+                                                    <span class="a-text-bold">地址</span>
+                                                </th>
+                                                <th class="a-span2 a-text-left a-align-center"></th>
+                                                <th class="a-span2 a-text-left a-align-center"></th>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="ship_from_address_table">
+                                            <tr class="ship_from_address_table_row" style="display: table-row;">
+                                                <td class="a-span2 a-text-left a-align-center">
+                                                    <div data-a-input-name="shipFromAddress" class="a-radio ship_from_address_radio_button">
+                                                        <label>
+                                                            <input type="radio" name="shipFromAddress" value="" checked="">
+                                                            <i class="a-icon a-icon-radio"></i>
+                                                            <span class="a-label a-radio-label">天津仓库</span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="a-span6 a-text-left a-align-center">wangma street</td>
+                                                <td class="a-span2 a-text-right a-align-center">
+                                                    <a class="a-link-normal editShipFromAddress" href="javascript:void(0)">编辑</a>
+                                                </td>
+                                                <td class="a-span2 a-text-right a-align-center">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr id="sbrui_element_ship_from_address_pagination">
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 以下内容的首选项： -->
+                        <div class="a-section a-spacing-medium">
+                            <span>以下内容的首选项： </span>
+                            <a href="">所有地址</a>
+                            <span>|</span>
+                            <a href="">天津仓库</a>
+                        </div>
+                        <!--  所有发货地址的首选项  -->
+                        <div class="a-spacing-medium">
+                            <div class="a-row a-box-group">
+                                <div class="a-box a-first ship_from_address_title_box a-text-left a-box-bg">
+                                    <div class="a-padding-small">
+                                        <div class="float_left">
+                                            <h3> 所有发货地址的首选项 </h3>
+                                        </div>
+                                        <div class="a-button float_right">
+                                            <span class="a-button-inner block">
+                                                <span class="a-button-text border_box block">
+                                                    编辑
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="a-box a-last a-box-normal">
+                                    <table class="a-keyvalue a-row" style="margin: 0;" cellspacing=0 cellpadding=0 border=0>
+                                        <tbody>
+                                            <tr>
+                                                <th class="a-span3 a-text-right">包裹类型 (0)</th>
+                                                <td class="a-span9 a-span9-pd">
+                                                    <div aria-live="polite" class="a-row">
+                                                        <p style=" margin:0;">无</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="a-span3 a-text-right">确认设置</th>
+                                                <td class="a-span9 a-span9-pd">
+                                                    <p style=" margin:0;">无</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="a-span3 a-text-right">保险设置</th>
+                                                <td class="a-span9 a-span9-pd">
+                                                    <p style=" margin:0;">无</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 天津仓库 的首选项 -->
+                        <div class="a-spacing-medium">
+                            <div class="a-row a-box-group">
+                                <div class="a-box a-first a-text-left a-box-bg warehouse_preferences_tile_box">
+                                    <div class="a-padding-small">
+                                        <div class="float_left">
+                                            <h3> 天津仓库 的首选项 </h3>
+                                            <span>wangma street, 天津, 天津, 310000, CN</span>
+                                        </div>
+                                        <div class="a-button float_right edit_button_section">
+                                            <span class="a-button-inner block">
+                                                <span class="a-button-text border_box block">
+                                                    编辑
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="a-box a-last a-box-normal">
+                                    <table class="a-keyvalue a-row" style="margin: 0;" cellspacing=0 cellpadding=0 border=0>
+                                        <tbody>
+                                            <tr>
+                                                <th class="a-span3 a-text-right">承运人优先次序</th>
+                                                <td class="a-span9 a-span9-pd">
+                                                    <table class="a-row a-keyvalue a-spacing-small" style="margin: 0;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="carrier_none">无</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p class="a-color-tertiary" style="margin: 0;">在对“购买配送”中提供的配送方式进行优先排序时，将使用这一承运人优先次序。</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>

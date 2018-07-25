@@ -1,0 +1,105 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+
+.a-container {
+    min-width: 1300px!important;
+}
+
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+a.a-link-emphasis {
+    position: relative;
+    padding-right: 9px;
+}
+a.a-icon-link-emphasis:after, a.a-link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 900px;
+    background-size: 400px 900px;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3px;
+    right: 1px;
+    top: 50%;
+    height: 6px;
+    margin-top: -3px;
+    background-position: -346px -86px;
+    vertical-align: top;
+}
+.ship_from_address_title_box {
+    height: 35px;
+}
+.a-box-bg{
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+}
+.a-box-group>.a-box.a-first, .a-box-group>.a-box:first-child {
+    border-radius: 4px 4px 0 0;
+    margin-top: 0;
+}
+.a-box-group>.a-box.a-last, .a-box-group>.a-box:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+.a-box-title .a-box {
+    border-top-color: #d8d8d8;
+}
+table.a-keyvalue td, table.a-keyvalue th {
+    border-top: 1px solid #e7e7e7;
+}
+.a-button .a-button-text {
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 6px 0 7px;
+}
+table.a-keyvalue {
+    margin-bottom: 22px;
+    border-bottom: 1px solid #e7e7e7;
+}
+table.a-keyvalue th {
+    padding: 7px 14px 6px;
+}
+th.a-span2 {
+    width: 17.43%;
+    
+}
+td.a-span3, th.a-span3 {
+    width: 26.18%;
+}  
+th.a-span6 {
+    width: 52.43%;
+   
+}
+td.a-span9, th.a-span9 {
+    width: 78.68%;
+}
+.a-span9-pd{
+    padding: 7px 14px 6px;
+}
+#ship_from_address_table_header {
+    height: 47px;
+}
+.ship_from_address_table_row {
+    height: 57px;
+}
+table.a-keyvalue th {
+    background-color: #f3f3f3;
+    color: #111;
+    font-weight: 400;
+}
+.warehouse_preferences_tile_box {
+    height: 49px;
+}
+.edit_button_section {
+    margin-top: 7px;
+}

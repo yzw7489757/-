@@ -10,16 +10,7 @@ body {
     padding: 14px 18px 18px;
 }
 
-.a-text-left {
-    text-align: left !important;
-}
 
-.a-text-right {
-    text-align: right !important;
-}
-.a-text-center {
-    text-align: center!important;
-}
 
 table.a-align-center td,
 table.a-align-center th {

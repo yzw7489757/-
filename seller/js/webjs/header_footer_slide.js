@@ -1,7 +1,7 @@
 $(function () {
   var $what = $('#what')
   var showList = true;
-  what.onclick = openwindow();
+  $what.onclick = openwindow();
 
 
   function openwindow() {
@@ -32,7 +32,7 @@ $(function () {
   var showToggle = true; //控制放大
   var timerForInput = null; //搜索框变化
   let divWidth = 410;
-  toggleChange.onclick = function () {
+  $toggleChange.onclick = function () {
     showToggle ? divWidth = 571 : divWidth = 410;
     //spaui.style.width = divWidth + 'px';
     $spaui.width(divWidth)
@@ -49,7 +49,7 @@ $(function () {
     //spaui.style.right = '0px';
     showToggle = !showToggle
   }
-  getSurport.onclick = function () {
+  $getSurport.onclick = function () {
     show ? spaui.style.right = -divWidth + 'px' : spaui.style.right = '0px';
     show = !show;
   }
