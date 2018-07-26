@@ -40,42 +40,47 @@
                                             <div class="a-row a-box">
                                                 <div class="a-box-inner">
                                                     <div class="a-row overflow_hidden">
-                                                        <div class="width65 a-spacing-top-mini float_left">
-                                                            <div class="a-row overflow_hidden">
-                                                                <div class="width31 a-spacing-top-mini float_left">
-                                                                    <div class="a-row">
-                                                                        <img src="./img/mastercard_curved_64px.png" alt="">
-                                                                        <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                        <span class="a-size-medium img-with-bottom-text">5723</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="width65 a-spacing-top-mini float_right">
-                                                                    <div class="a-row overflow_hidden">
-                                                                        <div class="width48 float_left">
-                                                                            <span class="a-color-tertiary">到期日期</span>
-                                                                            <span class="a-text-bold">12/2022</span>
+                                                        <div id="bankTmpl"></div>
+                                                        <script id="bankArray" type="text/x-dot-template">
+                                                            {{~it:value:index}}
+                                                            <div class="width65 a-spacing-top-mini float_left">
+                                                                <div class="a-row overflow_hidden">
+                                                                    <div class="width31 a-spacing-top-mini float_left">
+                                                                        <div class="a-row">
+                                                                            <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                            <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                            <span class="a-size-medium img-with-bottom-text">{{= value.card_number}}</span>
                                                                         </div>
-                                                                        <div class="width48 float_right">
-                                                                            <span>xu bao hong</span>
+                                                                    </div>
+                                                                    <div class="width65 a-spacing-top-mini float_right">
+                                                                        <div class="a-row overflow_hidden">
+                                                                            <div class="width48 float_left">
+                                                                                <span class="a-color-tertiary">到期日期</span>
+                                                                                <span class="a-text-bold">{{= value.valid_through_month}}/{{= value.valid_through_year}}</span>
+                                                                            </div>
+                                                                            <div class="width48 float_right">
+                                                                                <span>{{= value.card_holder_name}}</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="width31 a-spacing-top-mini float_right">
-                                                            <div class="a-row overflow_hidden">
-                                                                <div class="width48 a-spacing-top-mini float_left">
-                                                                    <div class="a-row">
-                                                                        <a href="./payment_method_info_editor.html">编辑</a>
+                                                            <div class="width31 a-spacing-top-mini float_right">
+                                                                <div class="a-row overflow_hidden">
+                                                                    <div class="width48 a-spacing-top-mini float_left">
+                                                                        <div class="a-row">
+                                                                            <a href="./payment_method_info_editor.html">编辑</a>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="width48 a-spacing-top-mini float_right">
-                                                                    <div class="a-row">
-                                                                        <span class="a-color-success">在售</span>
+                                                                    <div class="width48 a-spacing-top-mini float_right">
+                                                                        <div class="a-row">
+                                                                            <span class="a-color-success">在售</span>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                            {{~}}
+                                                        </script>
                                                     </div>
                                                 </div>
                                             </div>
@@ -104,6 +109,8 @@
     </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js "></script>
-<script src="./js/public.js " type="text/javascript "></script>
+<script src="./js/public.js " type="text/JavaScript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
 <script src="./js/webjs/payment_method_info.js" type="text/javascript"></script>
+
 </html>

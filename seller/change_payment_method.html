@@ -144,31 +144,44 @@
                                                             <div class="a-row a-box">
                                                                 <div class="a-box-inner">
                                                                     <div class="a-row overflow_hidden">
-                                                                        <div class="width5 float_left a-column2_7">
-                                                                            <input type="radio">
-                                                                        </div>
-                                                                        <div class="width91 float_right">
-                                                                            <div class="a-row">
-                                                                                <div class="width31 float_left">
-                                                                                    <div class="a-row">
-                                                                                        <img src="./img/mastercard_curved_64px.png" alt="">
-                                                                                        <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                                        <span class="a-size-medium img-with-bottom-text">5723</span>
+                                                                        <!-- 初始化付费方式(初始化信用卡列表) -->
+                                                                        <div id="bankTmpl"></div>
+                                                                        <script id="bankArray" type="text/x-dot-template">
+                                                                            {{~it:value:index}}
+                                                                            <div class="width5 float_left a-column2_7">
+                                                                                {{? index == 0 }}
+                                                                                <input type="radio" name="card" checked >
+                                                                                {{??}}
+                                                                                <input type="radio" name="card" >
+                                                                                {{?}}
+                                                                            </div>
+                                                                            <div class="width91 float_right">
+                                                                                <div class="a-row">
+                                                                                    <div class="width31 float_left">
+                                                                                        <div class="a-row">
+                                                                                            <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                                            <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                                            <span class="a-size-medium img-with-bottom-text">{{= value.card_number}}</span>
+                                                                                        </div>
                                                                                     </div>
-                                                                                </div>
-                                                                                <div class="width65 float_left">
-                                                                                    <div class="width48 float_left">
-                                                                                        <span class="a-color-tertiary">到期时间</span>
-                                                                                        <span class="a-text-bold">12/2022</span>
-                                                                                    </div>
-                                                                                    <div class="width48 float_left">
-                                                                                        <span class="a-text-bold">xu bao hong</span>
+                                                                                    <div class="width65 float_left">
+                                                                                        <div class="width48 float_left">
+                                                                                            <span class="a-color-tertiary">到期时间</span>
+                                                                                            <span class="a-text-bold">{{= value.valid_through_month}}/{{=
+                                                                                                value.valid_through_year}}
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="width48 float_left">
+                                                                                            <span class="a-text-bold">{{= decodeURIComponent(value.card_holder_name)}}</span>
+                                                                                        </div>
+                                                                                        <div class="clear"></div>
                                                                                     </div>
                                                                                     <div class="clear"></div>
+
                                                                                 </div>
-                                                                                <div class="clear"></div>
                                                                             </div>
-                                                                        </div>
+                                                                            {{~}}
+                                                                        </script>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -294,72 +307,36 @@
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div class="a-row a-box">
-                                                    <div class="a-row a-box-inner_radio">
-                                                        <div class="a-row">
-                                                            <label>
-                                                                <div class="a-row overflow_hidden">
-                                                                    <div class="width5 marRight2_7 float_left">
-                                                                        <input type="radio" checked name="address">
+                                                <!-- 初始化账单寄送地址 -->
+                                                <div id="addTmpl"></div>
+                                                <script id="addArray" type="text/x-dot-template">
+                                                    {{~it:value:index}}
+                                                    <div class="a-row a-box">
+                                                        <div class="a-row a-box-inner_radio">
+                                                            <div class="a-row">
+                                                                <label>
+                                                                    <div class="a-row overflow_hidden">
+                                                                        <div class="width5 marRight2_7 float_left">
+                                                                            <input type="radio" name="address">
+                                                                        </div>
+                                                                        <div class="width91 float_right">
+                                                                            <span class="a-size-base">{{= value.fullname}}</span>
+                                                                            <span class="a-size-base">7911 NE 33RD DR,</span>
+                                                                            <span class="a-size-base">PORTLAND,</span>
+                                                                            <span class="a-size-base">OR,</span>
+                                                                            <span class="a-size-base">97211-1960,</span>
+                                                                            <span class="a-size-base">{{= value.zipcode}},</span>
+                                                                            <span class="a-size-base">503-894-8090</span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="width91 float_right">
-                                                                        <span class="a-size-base">xu baohong</span>
-                                                                        <span class="a-size-base">7911 NE 33RD DR,</span>
-                                                                        <span class="a-size-base">PORTLAND,</span>
-                                                                        <span class="a-size-base">OR,</span>
-                                                                        <span class="a-size-base">97211-1960,</span>
-                                                                        <span class="a-size-base">美国,</span>
-                                                                        <span class="a-size-base">503-894-8090</span>
-                                                                    </div>
-                                                                </div>
-                                                            </label>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="a-row a-box">
-                                                    <div class="a-row a-box-inner_radio">
-                                                        <div class="a-row">
-                                                            <label for="">
-                                                                <div class="a-row overflow_hidden">
-                                                                    <div class="width5 marRight2_7 float_left">
-                                                                        <input type="radio" name="address">
-                                                                    </div>
-                                                                    <div class="width91 float_right">
-                                                                        <span class="a-size-base">gongshu qu wanda shagnye zhongxin D zuo 718,</span>
-                                                                        <span class="a-size-base">hangzhou shi,</span>
-                                                                        <span class="a-size-base">zhejiang sheng,</span>
-                                                                        <span class="a-size-base">310013,</span>
-                                                                        <span class="a-size-base">97211-1960,</span>
-                                                                        <span class="a-size-base">中国,</span>
-                                                                        <span class="a-size-base">+8613968018091</span>
-                                                                    </div>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="a-row a-box">
-                                                    <div class="a-row a-box-inner_radio">
-                                                        <div class="a-row overflow_hidden">
-                                                            <label for="">
-                                                                <div class="a-row">
-                                                                    <div class="width5 marRight2_7 float_left">
-                                                                        <input type="radio" name="address">
-                                                                    </div>
-                                                                    <div class="width91 float_right">
-                                                                        <span class="a-size-base">wangma street,</span>
-                                                                        <span class="a-size-base">天津,</span>
-                                                                        <span class="a-size-base">天津,</span>
-                                                                        <span class="a-size-base">310000,</span>
-                                                                        <span class="a-size-base">中国,</span>
-                                                                        <span class="a-size-base">15058149820</span>
+                                                    {{~}}
+                                                </script>
 
-                                                                    </div>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
 
@@ -570,7 +547,6 @@
                                                                         <input type="text" placeholder="使用“x”分隔分机号" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
 
-
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -597,7 +573,7 @@
                                         <div class="width48 float_left">
                                             <div class="a-spacing-top-small a-button a-button-primary a-row ">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5">提交</span>
+                                                    <span class="a-button-text block pdTop5 submitBtn">提交</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -642,6 +618,8 @@
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/public.js" type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
 <script src="./js/webjs/payment_method_info_editor.js" type="text/javascript"></script>
+<script src="./js/webjs/change_payment_method.js"></script>
 
 </html>

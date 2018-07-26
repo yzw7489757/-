@@ -1,7 +1,12 @@
 $(function () {
   var prevData = null;
+  var method_id = null;
+  var account_number = null;
+  var deposit = false
+  var data2=null;
   $(".update_deposit").click(function (e) {
     e.preventDefault();
+    deposit = true;
     $(".table_one").hide();
     $(".table_two").show();
     $('.table_three').show();
@@ -319,7 +324,7 @@ $(function () {
     method: 'post',
     dataType: "json",
     data: {
-      userid: '12',
+      userid: store_id,
     },
     success: function (res) {
       console.log(res)
@@ -336,37 +341,35 @@ $(function () {
     method: 'post',
     dataType: "json",
     data: {
-      userid: '12',
+      userid: store_id,
     },
     success: function (res) {
       console.log(res)
       if (res.result == 1) {
-        var data = res.strDeposit
-        console.log(data)
-        $(data).each(function (i) {
-          console.log(data[i].account_name)
-        })
-        $('.bank_location2').text(decodeURIComponent(data[0].bank_location))
-        $('.account_name2').text(decodeURIComponent(data[0].account_name))
-        prevData = data
+        data2 = res.strDeposit[0]
+        method_id = data2.method_id
+        account_number = data2.account_number
+        var bank = doT.template($('#bankArray').text());
+        $('#bankTmpl').html(bank(data2))
       }
     }
   })
-  // 设置存款方式
+
   $('.set_deposit').click(function () {
+    // 设置存款方式
     $.ajax({
       url: baseUrl + '/SetDepositMade',
       method: 'post',
       dataType: "json",
       data: {
-        userid: '12',
-        method_id: '13',
-        account_number: '14'
+        userid: store_id,
+        method_id: method_id,
+        account_number: account_number
       },
       success: function (res) {
         console.log(res)
         if (res.result == 1) {
-          if ($('.account_number_input').val()) {}
+
         } else {
           console.log(decodeURIComponent(res.error))
         }
@@ -375,28 +378,41 @@ $(function () {
         console.log(decodeURIComponent(res.error))
       }
     })
-  })
-  // 新增存款方式
-  $('.update_deposit').click(function () {
-    $.ajax({
-      url: baseUrl + '/AddDepositMethod',
-      method: 'post',
-      dataType: "json",
-      data: {
-        userid: '12',
-        bank_location: '13',
-        account_name: '14',
-        routing_number: '13',
-        account_number: '14'
-      },
-      success: function (res) {
-        console.log(res)
-        if (res.result == 1) {
-          console.log(res.mathod_id)
-        } else {
-          console.log(decodeURIComponent(res.error))
-        }
+    // 新增存款方式
+    if (deposit) {
+      // 银行所在地
+      var bank_location = $('.bank_location_select option:selected').text()
+      // 账户持有人姓名
+      var account_name = $('.account_name_input').val().trim()
+      // 银行识别代码
+      var routing_number = $('.routing_number_input').val().trim()
+      // 银行账号
+      var account_number2 = $('.account_number_input').val().trim()
+      if (bank_location && account_name && routing_number && account_number2) {
+        $.ajax({
+          url: baseUrl + '/AddDepositMethod',
+          method: 'post',
+          dataType: "json",
+          data: {
+            userid: store_id,
+            bank_location: bank_location,
+            account_name: account_name,
+            routing_number: routing_number,
+            account_number: account_number2
+          },
+          success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+
+            } else {
+              console.log(decodeURIComponent(res.error))
+            }
+          }
+        })
       }
-    })
+
+    }
   })
+
+
 });

@@ -12,7 +12,7 @@ var userid='';
 var account='';
 var TrainingID='';
 var studentID='';
-var store_id='';
+var store_id='1';
 var traintype='';
 $(function(){
 	// inputctr.public.catchError();

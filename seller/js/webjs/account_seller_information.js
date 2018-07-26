@@ -4,12 +4,13 @@ $(function () {
         method: 'post',
         dataType: "json", 
         data: {
-            userid: '15'
+            userid: store_id
         },
         success: function (res) {
             console.log(res)
             if(res.result==1){
                 var data = res.data;
+                console.log(decodeURIComponent(data.service_phone))
                 // 电子邮件
                 $('.pEmail').text(decodeURIComponent(data.service_email))
                 // 回复电子邮件
@@ -19,7 +20,7 @@ $(function () {
                 // 店面链接
                 $('.shop_link').text(decodeURIComponent(data.shop_link))
                 // 电话
-                $('.service_phone').text(data.service_phone)
+                $('.service_phone').text(decodeURIComponent(data.service_phone))
             }
         }
     })
