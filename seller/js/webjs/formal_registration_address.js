@@ -59,5 +59,26 @@ window.onload=function () {
             showText = true
         }          
     })
+    $.ajax({
+        url: baseUrl + '/GetAddressList',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: store_id,
+            sign:'1'
+        },
+        success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+                console.log('success!')
+               
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
 
  }

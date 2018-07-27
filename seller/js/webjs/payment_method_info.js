@@ -14,6 +14,18 @@ $(function () {
                 var data = res.data; 
                 var bank = doT.template($('#bankArray').text());
                 $('#bankTmpl').html(bank(data))
+                $('.edit_card').click(function (e) { 
+                    e.preventDefault();
+                    
+                    //console.log($(this).parents('.card_tmpl').eq(0).find('.card_name').text())
+                    if(window.sessionStorage){
+                        sessionStorage.setItem('card_name',$(this).parents('.card_tmpl').eq(0).find('.card_name').text())
+                        sessionStorage.setItem('method_id',$(this).parents('.card_tmpl').eq(0).attr('data-card'))
+                    }
+                    window.location.href="./payment_method_info_editor.html"
+                });
+               
+
             } else {
                 console.log(decodeURIComponent(res.error))
             }

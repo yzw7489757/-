@@ -145,45 +145,48 @@
                                                                 <div class="a-box-inner">
                                                                     <div class="a-row overflow_hidden">
                                                                         <!-- 初始化付费方式(初始化信用卡列表) -->
+
                                                                         <div id="bankTmpl"></div>
                                                                         <script id="bankArray" type="text/x-dot-template">
                                                                             {{~it:value:index}}
-                                                                            <div class="width5 float_left a-column2_7">
-                                                                                {{? index == 0 }}
-                                                                                <input type="radio" name="card" checked >
-                                                                                {{??}}
-                                                                                <input type="radio" name="card" >
-                                                                                {{?}}
-                                                                            </div>
-                                                                            <div class="width91 float_right">
-                                                                                <div class="a-row">
-                                                                                    <div class="width31 float_left">
-                                                                                        <div class="a-row">
-                                                                                            <img src="./img/mastercard_curved_64px.png" alt="">
-                                                                                            <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                                            <span class="a-size-medium img-with-bottom-text">{{= value.card_number}}</span>
+                                                                            <div class="banks" data-card="{{= value.method_id}}">
+                                                                                <div class="width5 float_left a-column2_7">
+                                                                                    {{? index == 0 }}
+                                                                                    <input type="radio" name="card" checked> {{??}}
+                                                                                    <input type="radio" name="card"> {{?}}
+                                                                                </div>
+                                                                                <div class="width91 float_right">
+                                                                                    <div class="a-row">
+                                                                                        <div class="width31 float_left">
+                                                                                            <div class="a-row">
+                                                                                                <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                                                <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                                                <span class="a-size-medium img-with-bottom-text">{{= value.card_number}}</span>
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                    <div class="width65 float_left">
-                                                                                        <div class="width48 float_left">
-                                                                                            <span class="a-color-tertiary">到期时间</span>
-                                                                                            <span class="a-text-bold">{{= value.valid_through_month}}/{{=
-                                                                                                value.valid_through_year}}
-                                                                                            </span>
-                                                                                        </div>
-                                                                                        <div class="width48 float_left">
-                                                                                            <span class="a-text-bold">{{= decodeURIComponent(value.card_holder_name)}}</span>
+                                                                                        <div class="width65 float_left">
+                                                                                            <div class="width48 float_left">
+                                                                                                <span class="a-color-tertiary">到期时间</span>
+                                                                                                <span class="a-text-bold">{{= value.valid_through_month}}/{{=
+                                                                                                    value.valid_through_year}}
+                                                                                                </span>
+                                                                                            </div>
+                                                                                            <div class="width48 float_left">
+                                                                                                <span class="a-text-bold">{{= decodeURIComponent(value.card_holder_name)}}</span>
+                                                                                            </div>
+                                                                                            <div class="clear"></div>
                                                                                         </div>
                                                                                         <div class="clear"></div>
-                                                                                    </div>
-                                                                                    <div class="clear"></div>
 
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            {{~}}
-                                                                        </script>
                                                                     </div>
+
+                                                                    {{~}}
+                                                                    </script>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -214,7 +217,7 @@
                                                                         <div class="width31 a-column2_7 a-spacing-top-mini float_left">
                                                                             <div class="a-row">
                                                                                 <div class="a-size-base a-text-bold">卡号</div>
-                                                                                <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                                <input type="text" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                             </div>
                                                                         </div>
                                                                         <div class="width31 a-column2_7 a-spacing-top-mini float_left">
@@ -223,7 +226,7 @@
                                                                                 <div class="a-row">
                                                                                     <div class="width47 a-column2_7 float_left">
                                                                                         <div class=" bank-account-dropdown relative">
-                                                                                            <select class="border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
+                                                                                            <select class="valid_through_month_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
                                                                                                 <option label="1" value="string:1" selected="selected">1</option>
                                                                                                 <option label="2" value="string:2">2</option>
                                                                                                 <option label="3" value="string:3">3</option>
@@ -242,7 +245,7 @@
                                                                                     </div>
                                                                                     <div class="width47 float_left">
                                                                                         <div class=" bank-account-dropdown relative">
-                                                                                            <select class="border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
+                                                                                            <select class="valid_through_year_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
                                                                                                 <option label="2018" value="string:2018" selected="selected">2018</option>
                                                                                                 <option label="2019" value="string:2019">2019</option>
                                                                                                 <option label="2020" value="string:2020">2020</option>
@@ -274,7 +277,7 @@
                                                                         <div class="width31 a-spacing-top-mini float_left">
                                                                             <div class="a-row">
                                                                                 <div class="a-size-base a-text-bold">持卡人姓名（与信用卡上一致）</div>
-                                                                                <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                                <input type="text" class="card_holder_name_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                             </div>
                                                                         </div>
                                                                         <div class="clear"></div>
@@ -311,25 +314,32 @@
                                                 <div id="addTmpl"></div>
                                                 <script id="addArray" type="text/x-dot-template">
                                                     {{~it:value:index}}
-                                                    <div class="a-row a-box">
-                                                        <div class="a-row a-box-inner_radio">
-                                                            <div class="a-row">
-                                                                <label>
-                                                                    <div class="a-row overflow_hidden">
-                                                                        <div class="width5 marRight2_7 float_left">
-                                                                            <input type="radio" name="address">
+                                                    <div class="adds" data-card="{{= value.billing_address_id}}">
+                                                        <div class="a-row a-box">
+                                                            <div class="a-row a-box-inner_radio">
+                                                                <div class="a-row">
+                                                                    <label>
+                                                                        <div class="a-row overflow_hidden">
+                                                                            <div class="width5 marRight2_7 float_left">
+                                                                                {{? index == 0 }}
+                                                                                <input type="radio" name="address" checked> {{??}}
+                                                                                <input type="radio" name="address"> {{?}}
+                                                                            </div>
+                                                                            <div class="width91 float_right">
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.address)}},</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.address2)}},</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.city)}},</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.country)}},</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.email)}}</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.fullname)}}</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.name)}}</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.phone)}}</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.province)}},</span>
+                                                                                <span class="a-size-base">{{= decodeURIComponent(value.zipcode)}}</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="width91 float_right">
-                                                                            <span class="a-size-base">{{= value.fullname}}</span>
-                                                                            <span class="a-size-base">7911 NE 33RD DR,</span>
-                                                                            <span class="a-size-base">PORTLAND,</span>
-                                                                            <span class="a-size-base">OR,</span>
-                                                                            <span class="a-size-base">97211-1960,</span>
-                                                                            <span class="a-size-base">{{= value.zipcode}},</span>
-                                                                            <span class="a-size-base">503-894-8090</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </label>
+                                                                    </label>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -362,7 +372,7 @@
                                                                         <div class="address-inputName">地址：
                                                                             <span>*</span>
                                                                         </div>
-                                                                        <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                        <input type="text" class="address_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
 
                                                                 </div>
@@ -373,7 +383,7 @@
                                                                 <div class="width99">
                                                                     <div class="a-spacing-small">
                                                                         <div class="address-inputName">地址行 2：</div>
-                                                                        <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                        <input type="text" class="address2_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -386,7 +396,7 @@
                                                                             <div class="address-inputName">地区/市：
                                                                                 <span>*</span>
                                                                             </div>
-                                                                            <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                            <input type="text" class="city_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                         </div>
 
                                                                     </div>
@@ -397,7 +407,7 @@
                                                                     <div class="width99">
                                                                         <div class="a-spacing-small">
                                                                             <div class="address-inputName">省/地区/州：</div>
-                                                                            <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                            <input type="text" class="province_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -411,7 +421,7 @@
                                                                             <div class="address-inputName">国家：
                                                                                 <span>*</span>
                                                                             </div>
-                                                                            <select class="border_box a-input-text onfocusInput a-row
+                                                                            <select class="country_select border_box a-input-text onfocusInput a-row
                                                                             a-spacing-top-micro a-box-inner_input" name="country">
                                                                                 <option label="Hungary" value="string:HU">Hungary</option>
                                                                                 <option label="Romania" value="string:RO">Romania</option>
@@ -530,7 +540,7 @@
                                                                     <div class="width99">
                                                                         <div class="a-spacing-small">
                                                                             <div class="address-inputName">邮编：</div>
-                                                                            <input type="text" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                            <input type="text" class="zipcode_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                         </div>
                                                                     </div>
 
@@ -544,7 +554,7 @@
                                                                         <div class="address-inputName">主要电话：
                                                                             <span>*</span>
                                                                         </div>
-                                                                        <input type="text" placeholder="使用“x”分隔分机号" class="border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                        <input type="text" placeholder="使用“x”分隔分机号" class="phone_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
 
                                                                 </div>
@@ -556,61 +566,59 @@
 
                                         </div>
                                     </form>
-                                </div>
-                                <div class="a-row">
-                                    <div class="width48 a-spacing-top-medium a-ws-row overflow_hidden">
-                                        <div class="width48 a-column float_left">
-                                            <div class="a-spacing-top-small a-button a-row ">
-                                                <span class="a-button-inner">
-                                                    <a href="./payment_method.html" class="a-button-color">
-                                                        <span class="a-button-text block pdTop5">
-                                                            上一步
-                                                        </span>
-                                                    </a>
-                                                </span>
-                                            </div>
+                                </div>  
+                            </div>
+                            
+                        </div>
+                        <div class="a-row">
+                                <div class="width48 a-spacing-top-medium a-ws-row overflow_hidden">
+                                    <div class="width48 a-column float_left">
+                                        <div class="a-spacing-top-small a-button a-row ">
+                                            <span class="a-button-inner">
+                                                <a href="./payment_method.html" class="a-button-color">
+                                                    <span class="a-button-text block pdTop5">
+                                                        上一步
+                                                    </span>
+                                                </a>
+                                            </span>
                                         </div>
-                                        <div class="width48 float_left">
-                                            <div class="a-spacing-top-small a-button a-button-primary a-row ">
-                                                <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 submitBtn">提交</span>
-                                                </span>
-                                            </div>
+                                    </div>
+                                    <div class="width48 float_left">
+                                        <div class="a-spacing-top-small a-button a-button-primary a-row ">
+                                            <span class="a-button-inner">
+                                                <span class="a-button-text block pdTop5 submitBtn">提交</span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                    </div>
+                    <div class="width23 float_left a-spacing-top-extra-large border_box">
+                        <div class="a-row">
+                            <div class="a-row box question">
+                                <div class="a-row box_header">
 
-
-                        </div>
-                        <div class="width23 float_left a-spacing-top-extra-large border_box">
-                            <div class="a-row">
-                                <div class="a-row box question">
-                                    <div class="a-row box_header">
-
-                                        <div class="a-row a-text-left a-box-inner_td">
-                                            <span class="a-size-base-plus">常见问题</span>
-                                        </div>
-
+                                    <div class="a-row a-text-left a-box-inner_td">
+                                        <span class="a-size-base-plus">常见问题</span>
                                     </div>
-                                    <div class="box_content a-box-inner">
-                                        <ul>
-                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
-                                                <a href="JavaScript:void(0)">为什么我的信用卡显示为无效的信用卡？</a>
-                                            </li>
-                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
-                                                <a href="JavaScript:void(0)">输入信用卡详细信息后会怎样？</a>
-                                            </li>
-                                            <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
-                                                <a href="JavaScript:void(0)">可接受哪些信用卡？</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+
+                                </div>
+                                <div class="box_content a-box-inner">
+                                    <ul>
+                                        <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                            <a href="JavaScript:void(0)">为什么我的信用卡显示为无效的信用卡？</a>
+                                        </li>
+                                        <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                            <a href="JavaScript:void(0)">输入信用卡详细信息后会怎样？</a>
+                                        </li>
+                                        <li class="a-spacing-top-medium faq_questionSet faq-text-underline">
+                                            <a href="JavaScript:void(0)">可接受哪些信用卡？</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

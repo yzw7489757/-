@@ -4,14 +4,16 @@ $(function () {
         method: 'post',
         dataType: "json",
         data: {
-            userid: '12',
+            userid: store_id,
         },
         success: function (res) {
             console.log(res)
             if (res.result == 1) {
                 var data = res.data.strChargeInfo; 
+                // 卡号
                $('.card_number').text(data.card_number)
-               $('.card_holder_name').text(data.card_holder_name)
+               // 持卡人姓名
+               $('.card_holder_name').text(decodeURIComponent(data.card_holder_name))
                $('.valid_through_month').text(data.valid_through_month) 
                $('.valid_through_year').text(data.valid_through_year)
             } else {
