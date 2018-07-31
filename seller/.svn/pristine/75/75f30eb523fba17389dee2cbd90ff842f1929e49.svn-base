@@ -1,0 +1,34 @@
+$(function () {
+       // 初始化付费方式(初始化信用卡列表) 
+       console.log(doT)
+    $.ajax({
+        url: baseUrl + '/InitializaCharge',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: store_id,
+        },
+        success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+                var data = res.data; 
+                var bank = doT.template($('#bankArray').text());
+                $('#bankTmpl').html(bank(data))
+                $('.edit_card').click(function (e) { 
+                    e.preventDefault();
+                    
+                    //console.log($(this).parents('.card_tmpl').eq(0).find('.card_name').text())
+                    if(window.sessionStorage){
+                        sessionStorage.setItem('card_name',$(this).parents('.card_tmpl').eq(0).find('.card_name').text())
+                        sessionStorage.setItem('method_id',$(this).parents('.card_tmpl').eq(0).attr('data-card'))
+                    }
+                    window.location.href="./payment_method_info_editor.html"
+                });
+               
+
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        }
+    })
+})

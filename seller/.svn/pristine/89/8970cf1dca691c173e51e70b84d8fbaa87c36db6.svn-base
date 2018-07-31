@@ -1,0 +1,236 @@
+$(function () {
+    inputctr.public.selectCountry();
+    inputctr.public.selectLang();
+    inputctr.public.checkLogin();
+    var business_name = $('.business_name');
+    var ask_inform_box = $('.ask_inform_box');
+    var ask_why = $('.ask_why');
+    var store_name = $("#store_name");
+    var country_phone_select = $("#country-phone-input");
+    var business_submit = $("#a-autoid-2-announce");
+    // 初始化
+    var UpdateInformation;
+    var address_id;
+    inputctr.public.SellerRegisterLoading();
+    $.post(baseUrl+'/GetSellerRegister2',{userid:amazon_userid}, function(data){
+        if(data){
+            inputctr.public.SellerRegisterLoadingRemove();
+            inputctr.public.judgeBegaintask('1004');
+        }
+        if(data.step != '2'){
+            inputctr.public.RegisterStep(data.step)
+        }
+        if(data.result == 1){
+            UpdateInformation = 1;
+            address_id = data.address_id;
+            $('.address-street').val(decodeURIComponent(data.address));
+            $('.address-city').val(decodeURIComponent(data.city));
+            $('.address-state').val(decodeURIComponent(data.province));
+            $('.address-dropdown-select[name="country"]').children('option[value='+decodeURIComponent(data.country)+']').prop("selected","selected");
+            $('.address-zip').val(data.zipcode);
+            store_name.val(decodeURIComponent(data.storename));
+            $('.websiteurl-textbox[name="websiteUrl"]').val(data.website);
+            country_phone_select.val(data.phone);
+            $(".address-textbox").attr('verify','true');
+            if(inputctr.public.isChinaphone(country_phone_select.val())){
+                verify_now.addClass('hide');
+                country_phone_select.attr('disabled',true);
+                var language = inputctr.public.getCookie('lang');
+                var VerifyText = $('.a-verify-inline').addClass('a-alert-verify-success').removeClass('hide').find('.a-alert-content');
+                if(!language || language=='zh'){
+                    VerifyText.text('验证成功');
+                }
+                if(language=='en'){
+                    VerifyText.text('Verification successful');
+                }
+                business_submit.attr('disabled',false);
+            }
+        }else{
+            $(".address-textbox").attr('verify','false');
+            address_id = 0;
+            UpdateInformation = 0;
+        }
+    },'json')
+    // 点击弹出提示框
+    popover_click(business_name, ask_inform_box)
+    popover_click(ask_why, ask_inform_box)
+    // Call / SMS
+    var call_label = $('.pv_radioButtonCall label[for="call"]');
+    var sms_label = $('.pv_radioButtonCall label[for="SMS"]');
+    var call_down = $('.call_down');
+    var SMS_down = $('.SMS_down');
+    call_label.click(function () {
+        call_down.removeClass('hide');
+        SMS_down.addClass('hide');
+    })
+    sms_label.click(function () {
+        call_down.addClass('hide');
+        SMS_down.removeClass('hide');
+    })
+    // 国家号码操作
+    var verify_now = $("#verify_now");
+    country_phone_select.focus(function () {
+        if(!$(this).val()){
+            $(this).val('+86')
+        }
+    })
+    country_phone_select.blur(function(){
+        if(!inputctr.public.isChinaphone($(this).val().trim())){
+            $(this).addClass('red_warning').parents('.ws-span6').siblings('.a-alert-inline-error').removeClass('hide');
+            verify_now.attr('disabled',true);
+        }else{
+            $(this).removeClass('red_warning').parents('.ws-span6').siblings('.a-alert-inline-error').addClass('hide');
+            verify_now.attr('disabled',false);
+        }
+    })
+    // 图形验证码
+    // var options = {
+    //     id: 'seller-image-container',
+    //     type: "number"
+    // }
+    // var getCode = inputctr.public.verifyCode(options);
+    //页面信息
+    var address_textbox = $(".address-textbox");
+    //页面信息验证
+    $(".address-textbox").change(function() { 
+        if(!$(this).val()){
+            if($(this).hasClass('store_name')){
+                $(this).addClass('red_warning').attr('verify','false').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.fail').removeClass('hide');
+                $(this).parent().siblings('.a-alert-inline-error').find('.success').addClass('hide');
+            }
+            $(this).addClass('red_warning').attr('verify','false').siblings('.a-alert-inline-error').removeClass('hide')
+        }else{
+            if($(this).hasClass('address-zip')){
+                if(!inputctr.public.ispostcode($(this).val().trim())){
+                    $(this).addClass('red_warning').attr('verify','false').siblings('.a-alert-inline-error').removeClass('hide')
+                }else{
+                    $(this).removeClass('red_warning').attr('verify','true').siblings('.a-alert-inline-error').addClass('hide');
+                }
+            }else{
+                if($(this).hasClass('store_name')){
+                    return;
+                }
+                $(this).removeClass('red_warning').attr('verify','true').siblings('.a-alert-inline-error').addClass('hide');
+            }
+        }
+    })
+    // 验证唯一的公司显示名称
+    store_name.change(function(){
+        if(!$(this).val()){
+            return;
+        }
+        inputctr.public.SellerRegisterLoading();
+        var shopName = $(this).val().trim();
+        var that = $(this);
+        $.post(baseUrl+'/GetShopName',{userid:amazon_userid,shopname:shopName}, function(data){
+            if(data){
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if(data.result == 1){
+                that.removeClass('red_warning').attr('verify','true').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.success').removeClass('hide');
+                that.parent().siblings('.a-alert-inline-error').find('.fail').addClass('hide');
+            }else{
+                that.addClass('red_warning').attr('verify','false').parent().siblings('.a-alert-inline-error').removeClass('hide').find('.fail').removeClass('hide').find('.a-alert-content').text(decodeURIComponent(data.error));
+                that.parent().siblings('.a-alert-inline-error').find('.success').addClass('hide');
+            }
+        },'json')
+    })
+    // 手机验证码
+    verify_now.click(function(){
+        inputctr.public.SellerRegisterLoading();
+        var ValidPhone = {
+            type:'1',
+            mobile:country_phone_select.val().trim()
+        }
+        $.post(baseUrl+'/SMSSend',ValidPhone, function(data){
+            if(data){
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if(data.result == 1){
+                var code_overlay = $(".code_overlay");
+                code_overlay.removeClass('hide');
+                $(".cancle_code_screen").click(function(){
+                    code_overlay.addClass('hide');
+                })
+                code_overlay.find("#pin_enter").val(data.vcode);
+                var verifyOTPButton = code_overlay.find("#verifyOTPButton");
+                verifyOTPButton.off('click').click(function(event){
+                    event.stopPropagation();
+                    if(!code_overlay.find("#pin_enter").val()){
+                        return;
+                    }
+                    code_overlay.addClass('hide');
+                    inputctr.public.SellerRegisterLoading();
+                    var verifyCoed = {
+                        type:ValidPhone.type,
+                        mobile:country_phone_select.val().trim(),
+                        vcode:code_overlay.find("#pin_enter").val()
+                    }
+                    $.post(baseUrl+'/SMSVerify',verifyCoed, function(verify){
+                        if(verify){
+                            inputctr.public.SellerRegisterLoadingRemove();
+                        }
+                        if(verify.result == 1){
+                            verify_now.addClass('hide')
+                            $('.a-verify-inline').addClass('a-alert-verify-success').removeClass('hide').find('.a-alert-content').text(decodeURIComponent(verify.error));
+                            business_submit.attr('disabled',false);
+                        }else{
+                           $('.a-verify-inline').addClass('a-alert-verify-error').removeClass('hide').find('.a-alert-content').text(decodeURIComponent(verify.error)); 
+                        }
+                    },'json')
+                })
+            }else{
+                alert(decodeURIComponent(data.error));
+            }
+        },'json')
+    })
+    
+    business_submit.click(function(){
+        console.log(UpdateInformation,address_id)
+             
+        var address_true = $(".address-textbox").filter(function(index) {
+            return $(this).attr('verify') != 'true';
+        })
+        if(address_true.length){
+            address_true.addClass('red_warning');
+            return;
+        }
+        inputctr.public.judgeRecodertask('1004','提供卖家的具体信息开始');
+        inputctr.public.SellerRegisterLoading();
+        var address_street = $('.address-street').val().trim();
+        var address_city = $('.address-city').val().trim();
+        var address_state = $('.address-state').val().trim();
+        var address_country = $('.address-dropdown-select[name="country"]').val();
+        var address_zip = $('.address-zip').val().trim();
+        var business_name = store_name.val().trim();
+        var websiteUrl = $('.websiteurl-textbox[name="websiteUrl"]').val().trim();
+        var country_phone = country_phone_select.val().trim();
+        var seller_information = {
+            userid:amazon_userid,
+            address:address_street,
+            city:address_city,
+            province:address_state,
+            country:address_country,
+            zipcode:address_zip,
+            storename:business_name,
+            website:websiteUrl,
+            mobile:country_phone,
+            id:UpdateInformation,
+            address_id:address_id
+        }
+        console.log(seller_information)
+        $.post(baseUrl+'/SellerRegister2',seller_information, function(data){
+            if(data){
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if(data.result == 1){
+                inputctr.public.judgeFinishtask('1004',link);
+            }else{
+                alert(decodeURIComponent(data.error))
+            }
+        },'json')
+    })
+    function link(){
+        window.location.href='billing_deposit.html';
+    }
+})

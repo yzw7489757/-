@@ -1,0 +1,551 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+}
+h5 {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+a {
+    text-decoration: none;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+.a-row{
+    width: 100%;
+}
+.block{
+    display: block;
+}
+.none{
+    display:none
+}
+.border_box{
+    box-sizing: border-box
+}
+.relative{
+    position: relative
+}
+.overflow_hidden {
+    overflow: hidden;
+}
+.pdleft16{
+    padding-left: 16px;
+}
+.marTop5{
+    margin-top: 5px;
+}
+.pdTop5{
+    padding-top: 5px;
+}
+.marTop30{
+    margin-top: 30px;
+}
+.float_left {
+    float: left !important;
+}
+.float_right {
+    float: right !important;
+}
+.align_right{
+    text-align: right;
+}
+.a-spacing-top-medium {
+    margin-top: 18px!important;
+}
+.a-spacing-top-micro {
+    margin-top: 4px!important;
+}
+.a-spacing-top-small {
+    margin-top: 10px!important;
+}
+.a-spacing-top-base {
+    margin-top: 14px!important;
+}
+.a-spacing-none, .a-ws .a-ws-spacing-none {
+    margin-bottom: 0!important;
+}
+.a-padding-large {
+    padding: 18px 22px!important;
+}
+.a-spacing-top-mini.a-button-stack, .a-spacing-top-mini.a-section {
+    padding-top: 6px;
+    margin-top: 0!important;
+}
+.a-box .a-box-inner {
+    padding: 14px 18px;
+}
+.width31{
+    width: 31.48647%;
+}
+.width91{
+    width: 91.3948%;
+}
+.width74{
+    width: 74.448%;
+}
+.width65{
+    width: 65.7198%;
+}
+.width14{
+    width: 14.3698%;
+}
+.width48{
+    width: 48.60313%;
+}
+.width5{
+    width: 5.81147%; 
+}
+.width22{
+    width: 22.92813%;
+}
+.width99{
+    width: 99.95313%;
+}
+.a-column {
+    margin-right: 2.7%;
+    min-height: 1px;
+}
+.a-box .a-divider.a-divider-break:after, .a-color-base-background .a-divider.a-divider-break:after, .a-divider.a-divider-break:after {
+    content: "";
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;  
+    margin-top: -1px;
+    z-index: 1;
+}
+.a-size-small {
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+.one_child{
+    border-radius: 4px 4px 4px 4px;
+}
+.first_child {
+    border-radius: 4px 4px 0 0;
+}
+.last_child {
+    border-radius:0 0 4px 4px ;
+}
+.a-alert-inline .a-alert-container {
+    padding: 0;
+}
+.a-box {
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+.a-box-inner {
+    padding: 14px 18px;
+}
+.a-size-medium {
+    font-size: 17px!important;
+    line-height: 1.255!important;
+    font-family: Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+.a-color-base {
+    color: #111!important;
+}
+.a-color-tertiary {
+    color: #767676!important;
+}
+.a-text-bold {
+    font-weight: 700!important;
+}
+.a-size-small {
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search] {
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+}
+
+.a-ember input, .a-ember select, .a-ember textarea {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+.a-input-text, input[type=text], input[type=number], input[type=tel], input[type=password], input[type=search], select.a-select-multiple, textarea {
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+
+/* i */
+.a-icon, .a-link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+.a-alert-inline .a-icon-alert {
+    height: 13px;
+    width: 14px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+} 
+.a-icon-alert{
+    background-position: -166px -130px;
+}
+.a-alert-inline .a-alert-container .a-alert-content {
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+}
+.a-alert-container{
+    padding-left: 16px;
+    color: #2b2b2b;
+}
+/* 识别银行账户 */
+.a-color-alternate-background {
+    background-color: #f3f3f3!important;
+}
+.a-size-medium {
+    font-size: 17px!important;
+    line-height: 1.255!important;
+    font-family: "Amazon Ember",Arial,sans-serif;   
+}
+.a-size-small {
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+.a-color-base {
+    color: #111!important;
+}
+.bankAccountVerificationLabel {
+    font-family: "Arial-BoldMT","Arial Bold","Arial";
+    font-weight: 700;
+    font-style: normal;
+    color: #666666;
+}
+.a-input-text:focus{
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+}
+/* 按钮 */
+.a-button-inner {
+    display: block;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+}
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button-primary {
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+.a-color-alternate-background {
+    background-color: #f3f3f3!important;
+}
+/* xia */
+
+.bank-account-dropdown-select {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 30px;
+    line-height: 14px;
+    font-size: 13px;
+    color: #111;
+    text-shadow: 0 1px white;   
+    background: #E1E4E9;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border:none;
+}
+input, select, textarea {
+    transition: all 100ms linear;
+}
+button, input, select, textarea {
+    vertical-align: middle;
+}
+
+.bank-account-dropdown-select:hover, .bank-account-dropdown:hover {
+    cursor: pointer;
+    background: #e1e4e9;
+}
+
+.a-ember input, .a-ember select, .a-ember textarea {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: -2px;
+}
+.bank-account-dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+}
+
+.bank-account-dropdown:before ,.bank-account-dropdown:after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 3px dashed;
+    pointer-events: none;
+}
+.bank-account-dropdown:before {
+    top: 8px;
+    border-color: transparent transparent #000   transparent
+}
+.bank-account-dropdown:after{
+    top: 16px;
+    border-color: #000 transparent;
+}
+.mgt22{
+    margin-top: 22px;
+}
+.bank-account-dropdown {
+    vertical-align: top;
+    border: 1px solid #adb1b8;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+    background: #f2f2f2;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+/* checkbox */
+.a-checkbox-label, {
+    padding-left: 5px;
+    display: inline-block;
+}
+.a-checkbox-fancy .a-icon-checkbox {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+}
+.a-checkbox-fancy input{
+    height: 16px;
+    width: 16px;
+}
+.a-checkbox-fancy .a-icon-checkbox, .a-checkbox-fancy.a-hover-disable:hover .a-icon-checkbox {
+    background-position: -6px -274px;
+}
+.ababsolute{
+    position: absolute;
+    left: 0px;
+    top: 1px;
+}
+.euBankAccountLabel {
+    font-family: "Arial-BoldMT","Arial Bold","Arial";
+    font-style: normal;
+    color: #666666;
+}
+.bank-account-dropdown:after {
+    /* margin-top: 5px; */
+    border-top-style: solid;
+    border-bottom: none;
+}
+.chinaese{
+    display: none;
+}
+#userTypeSelect{
+    border-radius: 1px;
+}
+.width25{
+    width: 25%;
+}
+.mg3{
+    margin-left:3%;
+    margin-right:3%;
+}
+.mgr3{
+    margin-right: 3%;
+}
+.a-alert-error {
+    border-color: #c40000;
+}
+.a-box {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+.a-alert-error .a-alert-container {
+    box-shadow: 0 0 0 4px #fcf4f4 inset;
+    padding-left: 63px;
+}
+
+.a-box .a-box-inner {
+    border-radius: 4px;
+    position: relative;
+    padding: 14px 18px;
+}
+.a-alert-error .a-alert-container {
+    background-color: #fff;
+}
+.a-alert .a-icon-alert {
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+.a-alert-error .a-icon-alert, .a-icon-error {
+    background-position: -248px -35px;
+}
+.a-hires .a-icon, .a-hires .a-link-emphasis:after {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x-8852bac7bd07ba976a42828c3641f6a896197566._V2_.png);
+}
+.titleText{
+    margin-left: 47px;
+}
+.a-text-right {
+    text-align: right!important;
+}
+.width99.a-spacing-top-base .hasModel{
+    position: relative;
+}
+
+.model{
+    display: none;
+    position: absolute;
+    top:20px;
+    left:0;
+    z-index: 299;
+    visibility: visible;
+    transform: translateX(-28%);
+    min-width: 340px;
+    box-sizing: border-box;
+}
+*{
+    box-sizing:border-box;
+}
+.model .a-icon, .a-hires .a-link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+}
+.tiny a:hover,.moreMessage:hover{
+    text-decoration: underline;
+    color:#c45500;
+    text-decoration-color: #c45500;
+}
+.a-icon-close {
+    width: 10px;
+    height: 9px;
+    background-position: -297px -5px;
+    opacity: .64;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+em, i {
+    font-style: italic;
+}
+.a-popover-inner {
+    padding: 14px 18px;
+    text-align: left;
+    overflow-x: hidden;
+}
+.model>div{
+    overflow: hidden;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.2);
+    height: 100%;
+    width: 100%;
+    padding:8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.13);
+    background-color: #fff;
+}
+.a-spacing-medium, .a-ws .a-ws-spacing-medium {
+    margin-bottom: 18px!important;
+}
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #0066c0;
+}
+
+.model .popup>span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #ccc;
+    position: absolute;
+    top: -8px;
+    left: 30%;
+    margin-left: -9px;
+}
+.model .popup>span>em{
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+    position: absolute;
+    top: 1px;
+    left: -8px;
+}
+
