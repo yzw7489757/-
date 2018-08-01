@@ -2,11 +2,11 @@ $(function () {
   var prevData = null;
   var method_id = null;
   var account_number = null;
-  var deposit = false
+ var deposit = false
   var data2 = null;
   $(".update_deposit").click(function (e) {
     e.preventDefault();
-    deposit = true;
+   deposit = true;
     $(".table_one").hide();
     $(".table_two").show();
     $('.table_three').show();
@@ -358,7 +358,7 @@ $(function () {
       }
     }
   })
-  console.log(method_id)
+  
   $('.set_deposit').click(function () {
     // 设置存款方式
     $.ajax({
@@ -413,10 +413,10 @@ $(function () {
             }
           }
         })
-      }
+    //  }
 
     }
   })
-
+// {"result":"1","error":"","SelectMethod_id":"23","strDeposit":[{"method_id":"2","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"%e5%ad%99%e7%ad%96","account_number":"621800054005002"},{"method_id":"23","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"%e4%bd%95%e8%89%af%e7%8e%89","account_number":"123123"},{"method_id":"24","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"32","account_number":"31"},{"method_id":"25","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"32","account_number":"31"},{"method_id":"26","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"32","account_number":"31"},{"method_id":"27","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"32","account_number":"31"},{"method_id":"31","bank_location":"%e7%be%8e%e5%9b%bd","account_name":"dxl","account_number":"62100000000"}]}
 
 });

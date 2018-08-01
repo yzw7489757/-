@@ -21,6 +21,7 @@ $(function () {
                     $('.valid_through_month_select option:selected').val(data.valid_through_month)
                     // 有效年份
                     $('.valid_through_year_select option:selected').val(data.valid_through_year)
+
                     // 持卡人姓名
                     $('.card_holder_name_input').val(decodeURIComponent(data.card_holder_name))
                 } else {
@@ -89,7 +90,7 @@ $(function () {
         $('.new_credit_card').hide();
         $('.billing_address').hide();
     })
-
+    
     //初始化账单寄送地址
     $.ajax({
         url: baseUrl + '/GetAddressList',

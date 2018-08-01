@@ -1,23 +1,36 @@
-$(function() {
-  var receive_income = '1';
-  var is_usperson = '1';
+$(function () {
+  var InputError = null; 
+  var nameInput = $('.nameInput').val();
+  var tel_input = $('.tel_input').val();
+  var tel_input2 = $('.tel_input2').val();
+  var city_town_input = $('.city_town_input').val();
+  var city_town_input2 = $('.city_town_input2').val();
+  var postal_code_input = $('.postal_code_input').val();
+  var postal_code_input2 = $('.postal_code_input2').val();
+  var TIN_input = $('.TIN_input').val();
+  var full_name_input = $('.full_name_input').val();
+  var organization_name_input = $('.organization_name_input').val()
+  var organization_country = $('.organization_country').text()
+  var right_country_p = $(".right_country_p").text()
+  var detailed_address_input2 = $('.detailed_address_input2').val()
+  var province_input2 = $('.province_input2').val()
   // 气泡显示与隐藏
   function showText(bubble_img, bubble_text) {
     var timer = null;
     $(bubble_img).hover(
-      function() {
+      function () {
         $(bubble_text).show();
       },
-      function() {
-        timer = setTimeout(function() {
+      function () {
+        timer = setTimeout(function () {
           $(bubble_text).hide();
         }, 10);
         $(bubble_text).hover(
-          function() {
+          function () {
             clearInterval(timer);
           },
-          function() {
-            timer = setTimeout(function() {
+          function () {
+            timer = setTimeout(function () {
               $(bubble_text).hide();
             }, 10);
           }
@@ -89,18 +102,18 @@ $(function() {
     "您的 TIN（Tax Identification Number，纳税人识别号）可以是您的 SSN（Social Security Number，社会保险号码）、ITIN（Individual Taxpayer Identification Number，个人纳税识别号码）、或 EIN（Employer Identification Number，雇主识别号码）。您可以在您的社保卡上找到您的 SSN。您可以从 IRS（颁发 ITIN 的机构）发布的 CP565 通告上找到您的 ITIN。您可以从 IRS（颁发 EIN 的机构）发布的 CP575A 通告上找到您的 EIN。请务必确保您输入的 TIN 是正确的 TIN。<br><br>如果您是一人有限责任公司（single-member LLC），请输入所有人的 SSN 或 EIN。请勿输入无效实体的 EIN。",
     "taxpayer"
   );
-//继续
-bubble("","","")
-// 受益所有人类型
-bubble("tip_beneficiary_type",
-`<p>收入的受益所有人通常是依据美国税收原则需要将收入包含在纳税申报表上的总收入中的人员。如果某个人员是作为代名人、代理人或托管人获得收入，或者该人员是中间人（其对于交易的参与可忽略不计），则该人员不是收入的受益所有人。在已付金额不构成收入的情况下，对受益所有权的认定就如同付款即收入一样。</p>
+  //继续
+  bubble("", "", "")
+  // 受益所有人类型
+  bubble("tip_beneficiary_type",
+    `<p>收入的受益所有人通常是依据美国税收原则需要将收入包含在纳税申报表上的总收入中的人员。如果某个人员是作为代名人、代理人或托管人获得收入，或者该人员是中间人（其对于交易的参与可忽略不计），则该人员不是收入的受益所有人。在已付金额不构成收入的情况下，对受益所有权的认定就如同付款即收入一样。</p>
 <p>外国合伙制公司、外国简单信托和外国授予人信托不是向合伙制公司或信托支付的收入的受益所有人。向外国合伙制公司支付的收入的受益所有人通常是合伙制公司中的合伙人，前提是该合伙人本身不是合伙制公司、外国简单或授予人信托、代名人或其他代理人。如果受益人不是外国合伙制公司、外国简单或授予人信托、代名人或其他代理人，则向外国简单信托支付的收入的受益所有人通常是信托的受益人。外国授予人信托的受益所有人是被视为信托所有人的人员。向外国复合信托（即，不是外国简单信托或外国授予人信托的外国信托）支付的收入的受益所有人是信托本身。</p>
 <p>外国合伙制公司、外国简单信托和外国授予人信托不是向合伙制公司或信托支付的收入的受益所有人。向外国合伙制公司支付的收入的受益所有人通常是合伙制公司中的合伙人，前提是该合伙人本身不是合伙制公司、外国简单或授予人信托、代名人或其他代理人。如果受益人不是外国合伙制公司、外国简单或授予人信托、代名人或其他代理人，则向外国简单信托支付的收入的受益所有人通常是信托的受益人。外国授予人信托的受益所有人是被视为信托所有人的人员。向外国复合信托（即，不是外国简单信托或外国授予人信托的外国信托）支付的收入的受益所有人是信托本身。</p>
 <p>有关受益所有人的更多信息，请访问 <a href="JavaScript:void(0)">IRS 网站 </a> </p>`,
-"beneficiaryType")
+    "beneficiaryType")
   // 个人 业务 是 否
   function chooseClass(btn1, btn2, className) {
-    $(btn1).click(function() {
+    $(btn1).click(function () {
       $(btn1).addClass(className);
       $(btn2).removeClass(className);
     });
@@ -130,7 +143,7 @@ bubble("tip_beneficiary_type",
   init();
 
   function chooseBtn(className) {
-    $(className).click(function() {
+    $(className).click(function () {
       //把所有隐藏
       init();
       switch (className) {
@@ -140,6 +153,7 @@ bubble("tip_beneficiary_type",
             $(".a-choose-persinal").is(".a-button-choose") &&
             $(".a-choose-yes").is(".a-button-choose")
           ) {
+            InputError = 1;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".tax_status_information").show();
@@ -153,17 +167,20 @@ bubble("tip_beneficiary_type",
             $(".footer_text").show();
             $(".address_h5").show();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           }
           //是+业务
           if (
             $(".a-choose-business").is(".a-button-choose") &&
             $(".a-choose-yes").is(".a-button-choose")
           ) {
+            InputError = 1;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".federal_tax_category").show();
             $(".country_located").hide();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           }
           break;
         case ".a-choose-no": //否
@@ -172,6 +189,7 @@ bubble("tip_beneficiary_type",
             $(".a-choose-persinal").is(".a-button-choose") &&
             $(".a-choose-no").is(".a-button-choose")
           ) {
+            InputError = 2;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".tax_status_information").show();
@@ -185,17 +203,20 @@ bubble("tip_beneficiary_type",
             $(".footer_text").show();
             $(".address_h5").show();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           }
           //否+业务
           if (
             $(".a-choose-business").is(".a-button-choose") &&
             $(".a-choose-no").is(".a-button-choose")
           ) {
+            InputError = 3;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".beneficiary_type").show();
             $(".other_types").hide();
             $(".LLC_show").hide();
+            $('.signSubmit').hide()
           }
           break;
         case ".a-choose-business": //业务
@@ -204,21 +225,25 @@ bubble("tip_beneficiary_type",
             $(".a-choose-yes").is(".a-button-choose")
           ) {
             //业务+是
+            InputError = 1;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".federal_tax_category").show();
             $(".country_located").hide();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           } else if (
             $(".a-choose-business").is(".a-button-choose") &&
             $(".a-choose-no").is(".a-button-choose")
           ) {
             //业务+否
+            InputError = 3;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".beneficiary_type").show();
             $(".other_types").hide();
             $(".LLC_show").hide();
+            $('.signSubmit').hide()
           }
           break;
         case ".a-choose-persinal": //个人
@@ -227,6 +252,7 @@ bubble("tip_beneficiary_type",
             $(".a-choose-persinal").is(".a-button-choose") &&
             $(".a-choose-no").is(".a-button-choose")
           ) {
+            InputError = 2;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".tax_status_information").show();
@@ -239,12 +265,14 @@ bubble("tip_beneficiary_type",
             $(".footer_text").show();
             $(".address_h5").show();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           }
           //个人+是
           if (
             $(".a-choose-persinal").is(".a-button-choose") &&
             $(".a-choose-yes").is(".a-button-choose")
           ) {
+            InputError = 1;
             $("div.myWarn").remove();
             $("input").removeClass("activebtn");
             $(".tax_status_information").show();
@@ -258,6 +286,7 @@ bubble("tip_beneficiary_type",
             $(".footer_text").show();
             $(".address_h5").show();
             $(".other_types").hide();
+            $('.signSubmit').hide()
           }
           break;
       }
@@ -278,9 +307,10 @@ bubble("tip_beneficiary_type",
   dropdown_box(".profit", "#choose_profit");
   dropdown_box(".one", "#choose_one");
   dropdown_box(".two", "#choose_two");
-  dropdown_box(".two", "#choose_two");
+  dropdown_box(".organizationCountryUl", "#choose_Organization_Country");
 
-  $(".one li").click(function() {
+  dropdown_box(".two", "#choose_two");
+  $(".one li").click(function () {
     init()
     // Str.replace(/s＋/g,"")
     if (
@@ -290,8 +320,8 @@ bubble("tip_beneficiary_type",
       $(".federal_tax_category_p").text().replace(/\s+/g, "") == "信托/地产"
 
     ) {
-        $(".LLC_show").hide();
-        $('.federal_tax_category').show();
+      $(".LLC_show").hide();
+      $('.federal_tax_category').show();
       $(".tax_status_information").show();
       $(".name_show").show();
       $(".permanent_email_address").show();
@@ -303,15 +333,15 @@ bubble("tip_beneficiary_type",
       $(".footer_text").show();
       $(".address_h5").show();
     }
-    console.log($(".federal_tax_category_p").text().replace(/\s+/g, "")== "C公司")
+    console.log($(".federal_tax_category_p").text().replace(/\s+/g, "") == "C公司")
     if (
       $(".federal_tax_category_p")
-        .text()
-        .replace(/\s+/g, "") == "有限责任公司"
+      .text()
+      .replace(/\s+/g, "") == "有限责任公司"
     ) {
-        $('.federal_tax_category').show();
-        $(".LLC_show").show();
-        $(".two li").click(function() {
+      $('.federal_tax_category').show();
+      $(".LLC_show").show();
+      $(".two li").click(function () {
         $(".tax_status_information").show();
         $(".name_show").show();
         $(".permanent_email_address").show();
@@ -323,23 +353,23 @@ bubble("tip_beneficiary_type",
         $(".footer_text").show();
         $(".address_h5").show();
       });
-    } 
+    }
 
     if (
       $(".federal_tax_category_p")
-        .text()
-        .replace(/\s+/g, "") == "其他"
+      .text()
+      .replace(/\s+/g, "") == "其他"
     ) {
-        $('.federal_tax_category').show();
-        $(".LLC_show").hide();
-        $(".other_types").show();
-        $(".other_types")
+      $('.federal_tax_category').show();
+      $(".LLC_show").hide();
+      $(".other_types").show();
+      $(".other_types")
         .find("input")
-        .click(function() {
+        .click(function () {
           if (
             $(".other_types")
-              .find("input")
-              .is(":checked")
+            .find("input")
+            .is(":checked")
           ) {
             //  个人  是
             $(".tax_status_information").show();
@@ -359,8 +389,8 @@ bubble("tip_beneficiary_type",
     }
   });
 
-  $(".profit li").click(function() {
-      
+  $(".profit li").click(function () {
+
     if ($(".choose_profit_p").html() != "合伙企业") {
       $(".tax_status_information").show();
       $(".permanent_email_address").show();
@@ -384,7 +414,7 @@ bubble("tip_beneficiary_type",
   }
 
   function Input_blur(target, targetId) {
-    $(target).blur(function(e) {
+    $(target).blur(function (e) {
       e.preventDefault();
       $("div.myWarn").remove();
       $("input").removeClass("activebtn");
@@ -404,7 +434,7 @@ bubble("tip_beneficiary_type",
     });
   }
   // SSN 或 ITIN' .TIN_input', 'TIN'
-  $(".TIN_input").blur(function(e) {
+  $(".TIN_input").blur(function (e) {
     e.preventDefault();
     $("div.myWarn").remove();
     $("input").removeClass("activebtn");
@@ -419,11 +449,9 @@ bubble("tip_beneficiary_type",
       $(".TIN_input").removeClass("activebtn");
       return;
     }
-    if (
-      !/^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/.test(
+    if (!/^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/.test(
         $(".tel_input").val()
-      )
-    ) {
+      )) {
       $(".TIN_input").addClass("activebtn");
       addwarn("TIN", 2, "无效税务标识号：检查格式和输入值");
       return;
@@ -447,8 +475,44 @@ bubble("tip_beneficiary_type",
   let ssnReg = new RegExp(
     /^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/
   ); //无效税务标识号：检查格式和输入值
-  $(".go_on_Btn").click(function(e) {
+  $(".go_on_Btn").click(function (e) {
     e.preventDefault();
+    switch (InputError) {
+      // 个人 + 是
+      case 1:
+        if (nameInput && tel_input && city_town_input && postal_code_input && TIN_input) {
+          $('.signSubmit').show()
+        };
+        break;
+      // 个人 + 否
+      case 2:
+        if ($('.checkbox').is(':checked')) {
+          if (full_name_input && tel_input && city_town_input && postal_code_input) {
+            $('.signSubmit').show()
+          };
+          break;
+        } else {
+          if (full_name_input && tel_input && tel_input2 && city_town_input && city_town_input2 && postal_code_input && postal_code_input2) {
+            $('.signSubmit').show()
+          };
+          break;
+        };
+      // 业务 + 否
+      case 3:
+        if ($('.checkbox').is(':checked')) {
+          if (organization_name_input && tel_input && city_town_input && postal_code_input && organization_country !="乌克兰") {
+            $('.signSubmit').show()
+          }else{
+            console.log(organization_country)
+          }
+          break;
+        } else {
+          if (organization_name_input && tel_input && tel_input2 && city_town_input && city_town_input2 && postal_code_input && postal_code_input2 && organization_country !="乌克兰") {
+            $('.signSubmit').show()
+          };
+          break;
+        };
+    }
     $("div.myWarn").remove();
     $("input").removeClass("activebtn");
     // 名称（参见您的所得税申报表）
@@ -466,19 +530,22 @@ bubble("tip_beneficiary_type",
     activeColor(".TIN_input", "TIN");
     //全名
     activeColor(".full_name_input", "full_name_div");
+    // 组织名称 
+    activeColor(".organization_name_input", "organization_name");
+
   });
 
   // checkbox
-  $(".checkbox").click(function() {
+  $(".checkbox").click(function () {
     if ($(".checkbox").is(":checked")) {
       $(".right_input").hide();
+      $('.edterAddress2').hide()
     } else {
       $(".right_input").show();
     }
   });
   // 已完成 左
-  // if ($('.a-choose-persinal').is('.activebtn') && $('.a-choose-no').is('.activebtn')) {
-  $(".finishBtn").click(function(e) {
+  $(".finishBtn").click(function (e) {
     e.preventDefault();
     $("div.myWarn").remove();
     $("input").removeClass("activebtn");
@@ -489,16 +556,53 @@ bubble("tip_beneficiary_type",
       addwarn("choose_country_parent", 2, "必填字段");
     }
   });
-  // }
-
+  // 
+  $('.ul2 li').click(function(){
+    right_country_p = $(".right_country_p").text()
+  })
   // 已完成 右
-  $(".finishBtn2").click(function(e) {
+  $(".finishBtn2").click(function (e) {
     e.preventDefault();
     $("div.myWarn").remove();
     $("input").removeClass("activebtn");
-    console.log($(".right_country_p").text() == "国家");
-    if ($(".right_country_p").text() == "国家") {
+    // 对input框重新赋值
+    tel_input2 = $('.tel_input2').val();
+    city_town_input2 = $('.city_town_input2').val();
+    postal_code_input2 = $('.postal_code_input2').val();
+    detailed_address_input2 = $('.detailed_address_input2').val()
+    province_input2 = $('.province_input2').val()
+    if (right_country_p === "国家") {
       addwarn("choose_country2_parent", 2, "必填字段");
     }
+    if(right_country_p != "国家" && tel_input2 && city_town_input2 && postal_code_input2){
+      $('.right_country_p2').text(right_country_p)
+      $('.street2').text(tel_input2)
+      $('.detailed_address2').text(detailed_address_input2)
+      $('.city2').text(city_town_input2)
+      $('.province2').text(province_input2)
+      $('.zipcode2').text(postal_code_input2)
+      $('.edterAddress2').show();
+      $('.right_input').hide()
+    }
   });
+  // 已完成 右 编辑
+  $('.edterAddressBtn').click(function (e) { 
+    e.preventDefault()
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
+    $('.edterAddress2').hide();
+    $('.right_input').show()
+   })
+
+  function today() {
+    var today = new Date();
+    var h = today.getFullYear(); // 年
+    var m = today.getMonth() + 1; // 月
+    var d = today.getDate(); // 日
+    m = m > 10 ? m : '0' + m
+    d = d > 10 ? d : '0' + d
+    return m + "-" + d + "-" + h;
+  }
+  var today = today()
+  $('.todayInput').val(today)
 });

@@ -667,6 +667,13 @@ input[type=email] {
     margin-left: -45px;
     margin-top: -15px;
 }
+.saveBtn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+    margin-top: -15px;
+}
 
 .clear {
     clear: both;
@@ -790,4 +797,44 @@ ul li>a:hover {
     content:'';
     display:table;
     clear:both;
+}
+.simplified-interview-question {
+    margin-bottom: 32px;
+}
+.margin-below-caption {
+    margin-bottom: 11px;
+}
+.checkbox-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.a-color-offset-background {
+    background-color: #f6f6f6!important;
+}
+.text-module {
+    color: #333;
+    margin-top: 20px;
+}
+
+.first-just-text {
+    font-weight: bold;
+}
+.a-ordered-list, .a-unordered-list, ol, ul {
+    padding: 0;
+}
+.a-ordered-list, ol {
+    margin: 0 0 0 20px;
+    color: #767676;
+}
+.text-list-module li {
+    padding-bottom: 10px;
+}
+.a-form-disabled {
+    color: #767676;
+}
+.todayInput{
+    border-color: rgba(186,186,186,.5) !important;
+    background-color: #f3f3f3 !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
 }

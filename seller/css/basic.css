@@ -140,7 +140,9 @@ a:visited {
     background-position: -90px -5px;
     opacity: .6;
 }
-
+.margin-top-small {
+    margin-top: 5px;
+}
 .a-spacing-top-base {
     margin-top: 14px !important;
 }
@@ -543,7 +545,13 @@ input[type=search] {
     left: 18px;
     top: 11px;
 }
-
+.a-alert-inline .a-icon-alert {
+    height: 13px;
+    width: 14px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
 .a-alert-info {
     border-color: #bbd3de;
 }
@@ -649,4 +657,15 @@ input[type=search] {
     height: 31px;
     padding: 3px 7px;
     line-height: normal;
+}
+
+.a-form-label {
+    font-weight: 700;
+}
+
+label, legend {
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
 }

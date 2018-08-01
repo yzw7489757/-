@@ -2,6 +2,88 @@ $(function () {
     var method_id = null;
     var billing_address_id = null;
     var checked = false;
+    $('.billing_addressBtn').click(function (e) {
+        e.preventDefault();
+        $('.billing_address').hide()
+        $('.send_address').show();
+    })
+    $('.send_addressBtn').click(function (e) {
+        e.preventDefault();
+        $('.billing_address').show()
+        $('.send_address').hide();
+    })
+    $('.replace_credit_card_a').click(function (e) {
+        e.preventDefault()
+        $('.replace_credit_card').hide();
+        $('.new_credit_card').show();
+        $('.billing_address').show();
+        //初始化账单寄送地址
+        $.ajax({
+            url: baseUrl + '/GetAddressList',
+            method: 'post',
+            dataType: "json",
+            data: {
+                userid: store_id,
+                sign: '1'
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.result == 1) {
+                    var data = res.List
+                    var add = doT.template($('#addArray').text());
+                    $('#addTmpl').html(add(data))
+                    $('#addTmpl input').each(function (i) {
+                        $('#addTmpl input').eq(i).click(function () {
+                            billing_address_id = $('input[name=address]:checked').parents('.adds').attr('data-card')
+                            console.log($('input[name=address]:checked').parents('.adds').attr('data-card'))
+                        })
+                    })
+                } else {
+                    console.log(decodeURIComponent(res.error))
+                }
+            },
+            error: function () {
+                console.log(decodeURIComponent(res.error))
+            }
+        })
+
+
+    })
+    $('.new_credit_card_a').click(function (e) {
+        e.preventDefault()
+        $('.replace_credit_card').show();
+        $('.new_credit_card').hide();
+        $('.billing_address').hide();
+    })
+    // 初始化  编辑付款方式
+    $.ajax({
+        url: baseUrl + '/InitializaChargeInfo',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: store_id,
+        },
+        success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+                var data = res.data.strChargeInfo;
+                // 卡号
+                $('.card_number').text(data.card_number)
+                // 有效月份
+                $('.valid_through_month').text(data.valid_through_month)
+                // 有效年份
+                $('.valid_through_year').text(data.valid_through_year)
+                // 持卡人姓名
+                $('.card_holder_name').text(decodeURIComponent(data.card_holder_name))
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
+
     // 初始化付费方式(初始化信用卡列表) 
     $.ajax({
         url: baseUrl + '/InitializaCharge',
@@ -18,46 +100,17 @@ $(function () {
                 $('#bankTmpl').html(bank(data))
                 $('#bankTmpl input').each(function (i) {
                     $('#bankTmpl input').eq(i).click(function () {
-                         method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
+                        method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
+                        //console.log(method_id)
                     })
                 })
-
+                
             } else {
                 console.log(decodeURIComponent(res.error))
             }
         }
     })
-
-    //初始化账单寄送地址
-    $.ajax({
-        url: baseUrl + '/GetAddressList',
-        method: 'post',
-        dataType: "json",
-        data: {
-            userid: store_id,
-            sign: '1'
-        },
-        success: function (res) {
-            console.log(res)
-            if (res.result == 1) {
-                var data = res.List
-                var add = doT.template($('#addArray').text());
-                $('#addTmpl').html(add(data))
-                $('#addTmpl input').each(function (i) {
-                    $('#addTmpl input').eq(i).click(function () {
-                        billing_address_id = $('input[name=address]:checked').parents('.adds').attr('data-card')
-                        console.log($('input[name=address]:checked').parents('.adds').attr('data-card'))
-                    })
-                })
-            } else {
-                console.log(decodeURIComponent(res.error))
-            }
-        },
-        error: function () {
-            console.log(decodeURIComponent(res.error))
-        }
-    })
-
+    console.log(method_id)
     //初始化账单寄送地址 新增邮寄地址
     $('.submitBtn').click(function (e) {
         e.preventDefault();
@@ -66,7 +119,7 @@ $(function () {
         // 有效期限（月）
         var valid_through_month = $('.valid_through_month_select option:selected').text()
         // 有效期限（年）
-        var valid_through_year=$('.valid_through_year_select option:selected').text()
+        var valid_through_year = $('.valid_through_year_select option:selected').text()
         // 持卡人姓名
         var card_holder_name = $('.card_holder_name_input').val().trim()
         // 街道地址
@@ -105,64 +158,67 @@ $(function () {
                 console.log(decodeURIComponent(res.error))
             }
         })
+        if (address && address2 && city && province && country && zipcode && phone) {
+            //新增邮寄地址
+            $.ajax({
+                url: baseUrl + '/AddAddressNew',
+                method: 'post',
+                dataType: "json",
+                data: {
+                    userid: store_id,
+                    address: address,
+                    address2: address2,
+                    city: city,
+                    province: province,
+                    country: country,
+                    zipcode: zipcode,
+                    phone: phone,
+                    type: '1',
+                    name: '',
+                    email: '',
+                    full_name: ''
+                },
+                success: function (res) {
+                    console.log(res)
+                    if (res.result == 1) {
 
-        
-        //新增邮寄地址
-        $.ajax({
-            url: baseUrl + '/AddAddressNew',
-            method: 'post',
-            dataType: "json",
-            data: {
-                userid: store_id,
-                address: address,
-                address2: address2,
-                city: city,
-                province: province,
-                country: country,
-                zipcode: zipcode,
-                phone:phone,
-                type: '1',
-                name:'',
-                email:'',
-                full_name:''
-            },
-            success: function (res) {
-                console.log(res)
-                if (res.result == 1) {
-
-                } else {
+                    } else {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                },
+                error: function (res) {
                     console.log(decodeURIComponent(res.error))
                 }
-            },
-            error: function (res) {
-                console.log(decodeURIComponent(res.error))
-            }
-        })
+            })
+        }
+
         //新增信用卡
-        $.ajax({
-            url: baseUrl + '/AddChargeMethod',
-            method: 'post',
-            dataType: "json",
-            data: {
-                userid: store_id,
-                card_number: card_number,
-                valid_through_month: valid_through_month,
-                valid_through_year: valid_through_year,
-                card_holder_name: card_holder_name,
-                billing_address_id: billing_address_id,
-            },
-            success: function (res) {
-                console.log(res)
-                if (res.result == 1) {
+        if (card_number && card_holder_name) {
+            $.ajax({
+                url: baseUrl + '/AddChargeMethod',
+                method: 'post',
+                dataType: "json",
+                data: {
+                    userid: store_id,
+                    card_number: card_number,
+                    valid_through_month: valid_through_month,
+                    valid_through_year: valid_through_year,
+                    card_holder_name: card_holder_name,
+                    billing_address_id: billing_address_id,
+                },
+                success: function (res) {
+                    console.log(res)
+                    if (res.result == 1) {
 
-                } else {
+                    } else {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                },
+                error: function (res) {
                     console.log(decodeURIComponent(res.error))
                 }
-            },
-            error: function (res) {
-                console.log(decodeURIComponent(res.error))
-            }
-        })
+            })
+        }
     })
 
 })

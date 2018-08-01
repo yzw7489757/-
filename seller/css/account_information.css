@@ -247,7 +247,7 @@ h6 {
 .box_content {
     border-top: 1px solid #ddd;
     /* overflow: hidden; */
-    margin-bottom:20px ;
+    /* margin-bottom:20px ; */
 }
 
 .box_content a {

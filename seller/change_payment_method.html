@@ -80,17 +80,19 @@
                                                                     <div class="a-row">
                                                                         <img src="./img/mastercard_curved_64px.png" alt="">
                                                                         <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                        <span class="a-size-medium img-with-bottom-text">5723</span>
+                                                                        <span class="a-size-medium img-with-bottom-text card_number">5723</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="width48 float_right">
                                                                     <h6 class="a-color-tertiary ">到期时间</h6>
                                                                     <div class="a-row">
-                                                                        <span class="a-size-base">12/2022</span>
+                                                                        <span class="a-size-base valid_through_month">12</span>
+                                                                        <span class="a-size-base ">/</span>
+                                                                        <span class="a-size-base valid_through_year">2022</span>
                                                                     </div>
                                                                     <h6 class="a-color-tertiary a-spacing-top-mini">持卡人的姓名</h6>
                                                                     <div class="a-row">
-                                                                        <span class="a-size-base">xu bao hong</span>
+                                                                        <span class="a-size-base card_holder_name">xu bao hong</span>
                                                                     </div>
                                                                     <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
                                                                     <div class="a-row">
@@ -122,6 +124,102 @@
 
                                     <div class="a-row">
                                         <div class="a-box-inner">
+                                            <!-- 新信用卡 -->
+                                            <div class="a-row new_credit_card none">
+                                                    <div class="a-row">
+                                                        <div class=" a-spacing-base float_left">
+                                                            <div id="ccHeading" class="a-alert-inline a-alert-inline-info">
+                                                                <i class="a-icon a-icon-alert"></i>
+                                                                <div class="a-alert-content ng-binding" style="padding-left: 16px;">
+                                                                    新信用卡
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="float_right">
+                                                            <a href="" class="new_credit_card_a">选择信用卡</a>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                    <div class="a-row a-spacing-base">
+                                                        <div class="a-row">
+                                                            <div class="a-row a-spacing-top-base">
+                                                                <div class="a-row a-box">
+                                                                    <div class="a-box-inner">
+                                                                        <div class="a-row overflow_hidden">
+                                                                            <div class="width31 a-column2_7 a-spacing-top-mini float_left">
+                                                                                <div class="a-row">
+                                                                                    <div class="a-size-base a-text-bold">卡号</div>
+                                                                                    <input type="text" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="width31 a-column2_7 a-spacing-top-mini float_left">
+                                                                                <div class="a-row">
+                                                                                    <div class="a-size-base a-text-bold">有效期限</div>
+                                                                                    <div class="a-row">
+                                                                                        <div class="width47 a-column2_7 float_left">
+                                                                                            <div class=" bank-account-dropdown relative">
+                                                                                                <select class="valid_through_month_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
+                                                                                                    <option label="1" value="string:1" selected="selected">1</option>
+                                                                                                    <option label="2" value="string:2">2</option>
+                                                                                                    <option label="3" value="string:3">3</option>
+                                                                                                    <option label="4" value="string:4">4</option>
+                                                                                                    <option label="5" value="string:5">5</option>
+                                                                                                    <option label="6" value="string:6">6</option>
+                                                                                                    <option label="7" value="string:7">7</option>
+                                                                                                    <option label="8" value="string:8">8</option>
+                                                                                                    <option label="9" value="string:9">9</option>
+                                                                                                    <option label="10" value="string:10">10</option>
+                                                                                                    <option label="11" value="string:11">11</option>
+                                                                                                    <option label="12" value="string:12">12</option>
+                                                                                                </select>
+                                                                                            </div>
+    
+                                                                                        </div>
+                                                                                        <div class="width47 float_left">
+                                                                                            <div class=" bank-account-dropdown relative">
+                                                                                                <select class="valid_through_year_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
+                                                                                                    <option label="2018" value="string:2018" selected="selected">2018</option>
+                                                                                                    <option label="2019" value="string:2019">2019</option>
+                                                                                                    <option label="2020" value="string:2020">2020</option>
+                                                                                                    <option label="2021" value="string:2021">2021</option>
+                                                                                                    <option label="2022" value="string:2022">2022</option>
+                                                                                                    <option label="2023" value="string:2023">2023</option>
+                                                                                                    <option label="2024" value="string:2024">2024</option>
+                                                                                                    <option label="2025" value="string:2025">2025</option>
+                                                                                                    <option label="2026" value="string:2026">2026</option>
+                                                                                                    <option label="2027" value="string:2027">2027</option>
+                                                                                                    <option label="2028" value="string:2028">2028</option>
+                                                                                                    <option label="2029" value="string:2029">2029</option>
+                                                                                                    <option label="2030" value="string:2030">2030</option>
+                                                                                                    <option label="2031" value="string:2031">2031</option>
+                                                                                                    <option label="2032" value="string:2032">2032</option>
+                                                                                                    <option label="2033" value="string:2033">2033</option>
+                                                                                                    <option label="2034" value="string:2034">2034</option>
+                                                                                                    <option label="2035" value="string:2035">2035</option>
+                                                                                                    <option label="2036" value="string:2036">2036</option>
+                                                                                                    <option label="2037" value="string:2037">2037</option>
+                                                                                                </select>
+                                                                                            </div>
+    
+                                                                                        </div>
+                                                                                        <div class="clear"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="width31 a-spacing-top-mini float_left">
+                                                                                <div class="a-row">
+                                                                                    <div class="a-size-base a-text-bold">持卡人姓名（与信用卡上一致）</div>
+                                                                                    <input type="text" class="card_holder_name_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="clear"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             <!-- 选择您要替换为的信用卡。 -->
                                             <div class="a-row replace_credit_card">
                                                 <div class="a-row">
@@ -151,9 +249,9 @@
                                                                             {{~it:value:index}}
                                                                             <div class="banks" data-card="{{= value.method_id}}">
                                                                                 <div class="width5 float_left a-column2_7">
-                                                                                    {{? index == 0 }}
-                                                                                    <input type="radio" name="card" checked> {{??}}
-                                                                                    <input type="radio" name="card"> {{?}}
+                                                                                  
+                                                                                    <input type="radio" name="card" > 
+                                                                                  
                                                                                 </div>
                                                                                 <div class="width91 float_right">
                                                                                     <div class="a-row">
@@ -192,102 +290,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- 新信用卡 -->
-                                            <div class="a-row new_credit_card none">
-                                                <div class="a-row">
-                                                    <div class=" a-spacing-base float_left">
-                                                        <div id="ccHeading" class="a-alert-inline a-alert-inline-info">
-                                                            <i class="a-icon a-icon-alert"></i>
-                                                            <div class="a-alert-content ng-binding" style="padding-left: 16px;">
-                                                                新信用卡
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="float_right">
-                                                        <a href="" class="new_credit_card_a">选择信用卡</a>
-                                                    </div>
-                                                    <div class="clear"></div>
-                                                </div>
-                                                <div class="a-row a-spacing-base">
-                                                    <div class="a-row">
-                                                        <div class="a-row a-spacing-top-base">
-                                                            <div class="a-row a-box">
-                                                                <div class="a-box-inner">
-                                                                    <div class="a-row overflow_hidden">
-                                                                        <div class="width31 a-column2_7 a-spacing-top-mini float_left">
-                                                                            <div class="a-row">
-                                                                                <div class="a-size-base a-text-bold">卡号</div>
-                                                                                <input type="text" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="width31 a-column2_7 a-spacing-top-mini float_left">
-                                                                            <div class="a-row">
-                                                                                <div class="a-size-base a-text-bold">有效期限</div>
-                                                                                <div class="a-row">
-                                                                                    <div class="width47 a-column2_7 float_left">
-                                                                                        <div class=" bank-account-dropdown relative">
-                                                                                            <select class="valid_through_month_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
-                                                                                                <option label="1" value="string:1" selected="selected">1</option>
-                                                                                                <option label="2" value="string:2">2</option>
-                                                                                                <option label="3" value="string:3">3</option>
-                                                                                                <option label="4" value="string:4">4</option>
-                                                                                                <option label="5" value="string:5">5</option>
-                                                                                                <option label="6" value="string:6">6</option>
-                                                                                                <option label="7" value="string:7">7</option>
-                                                                                                <option label="8" value="string:8">8</option>
-                                                                                                <option label="9" value="string:9">9</option>
-                                                                                                <option label="10" value="string:10">10</option>
-                                                                                                <option label="11" value="string:11">11</option>
-                                                                                                <option label="12" value="string:12">12</option>
-                                                                                            </select>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                    <div class="width47 float_left">
-                                                                                        <div class=" bank-account-dropdown relative">
-                                                                                            <select class="valid_through_year_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select">
-                                                                                                <option label="2018" value="string:2018" selected="selected">2018</option>
-                                                                                                <option label="2019" value="string:2019">2019</option>
-                                                                                                <option label="2020" value="string:2020">2020</option>
-                                                                                                <option label="2021" value="string:2021">2021</option>
-                                                                                                <option label="2022" value="string:2022">2022</option>
-                                                                                                <option label="2023" value="string:2023">2023</option>
-                                                                                                <option label="2024" value="string:2024">2024</option>
-                                                                                                <option label="2025" value="string:2025">2025</option>
-                                                                                                <option label="2026" value="string:2026">2026</option>
-                                                                                                <option label="2027" value="string:2027">2027</option>
-                                                                                                <option label="2028" value="string:2028">2028</option>
-                                                                                                <option label="2029" value="string:2029">2029</option>
-                                                                                                <option label="2030" value="string:2030">2030</option>
-                                                                                                <option label="2031" value="string:2031">2031</option>
-                                                                                                <option label="2032" value="string:2032">2032</option>
-                                                                                                <option label="2033" value="string:2033">2033</option>
-                                                                                                <option label="2034" value="string:2034">2034</option>
-                                                                                                <option label="2035" value="string:2035">2035</option>
-                                                                                                <option label="2036" value="string:2036">2036</option>
-                                                                                                <option label="2037" value="string:2037">2037</option>
-                                                                                            </select>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                    <div class="clear"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="width31 a-spacing-top-mini float_left">
-                                                                            <div class="a-row">
-                                                                                <div class="a-size-base a-text-bold">持卡人姓名（与信用卡上一致）</div>
-                                                                                <input type="text" class="card_holder_name_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -627,7 +630,7 @@
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/public.js" type="text/javascript"></script>
 <script src="./js/doT.min.js" type="text/javascript"></script>
-<script src="./js/webjs/payment_method_info_editor.js" type="text/javascript"></script>
+<!-- <script src="./js/webjs/payment_method_info_editor.js" type="text/javascript"></script> -->
 <script src="./js/webjs/change_payment_method.js"></script>
 
 </html>
