@@ -83,7 +83,7 @@ body {
     font-size: 15px;
 }
 label{
-    text-indent: -19px;
+    text-indent: 0 !important;
     position: relative;
 }
 label input{
@@ -95,6 +95,7 @@ label input{
     width: 17px;
     
 }
+
 label .a-icon-checkbox{
     height: 16px;
     width: 16px;
@@ -239,4 +240,7 @@ ul li a{
 
 .a-alert-error .a-icon-alert, .a-icon-error {
     background-position: -248px -35px;
+}
+.return_request li span,.RMA li span,.routine_setting li span{
+    padding-left:30px
 }

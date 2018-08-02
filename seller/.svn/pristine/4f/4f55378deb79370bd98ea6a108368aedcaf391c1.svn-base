@@ -1,0 +1,840 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+    color: #0066c0;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    color: #949494;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+h3 {
+    background: none;
+    border: 0px;
+    padding: 0px;
+    font-size: 12px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+select {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+form {
+    margin-bottom: 14px;
+}
+
+.overflow_y {
+    overflow-y: auto;
+}
+
+.a-form-label {
+    font-weight: 700;
+}
+
+.relative {
+    position: relative;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.simplified-interview-desktop {
+    max-width: 1600px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+
+.marBtm14 {
+    margin: 0 0 14px 0;
+}
+
+.a-row {
+    width: 100%;
+}
+
+.width99 {
+    width: 99.97953%;
+}
+
+.width65 {
+    width: 65.948%;
+}
+
+.width48 {
+    width: 48.948%;
+}
+
+.width39 {
+    width: 31.948%;
+}
+
+.width5 {
+    width: 5.53867%;
+}
+
+.height29 {
+    height: 29px;
+}
+
+.height31 {
+    height: 31px;
+}
+
+.height56 {
+    height: 56px;
+}
+
+.height62 {
+    height: 62px;
+}
+
+.a-column {
+    margin-right: 2%;
+}
+
+.border_box {
+    box-sizing: border-box
+}
+
+.relative {
+    position: relative
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.float_left {
+    float: left !important;
+}
+
+.float_right {
+    float: right !important;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.a-text-bold {
+    font-weight: 700 !important;
+}
+
+.marLeft6 {
+    margin-left: 6px;
+}
+
+.heading-module {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.page-heading {
+    margin-top: 10px;
+}
+
+.mobile-element-wrapper {
+    margin-top: 8px;
+}
+
+.locale-switch-body {
+    margin-top: 5px;
+}
+
+.locale-switch-module {
+    margin-bottom: 20px;
+}
+
+.simplified-interview-question {
+    margin-top: 32px;
+}
+
+.simplified-interview-question-buttom {
+    margin-bottom: 32px
+}
+
+.simplified-interview-question-wrapper {
+    margin-top: 32px;
+}
+
+.pdleft18 {
+    padding-left: 18px;
+}
+
+.marLeft_top_right16 {
+    margin: 16px 16px 0 16px
+}
+
+.marLeft_top_right32 {
+    margin: 32px 16px 0 16px
+}
+
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+}
+
+.a-button-select,
+.a-button-select:active:hover {
+    border-color: #adb1b8 #a2a6ac #a2a6ac;
+}
+
+.select {
+    line-height: 29px;
+    text-align: left;
+}
+
+.tip {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.tip2 {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.img {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.a-form-label-pd {
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+
+/* 个人简介 */
+
+.a-size-large {
+    font-size: 21px !important;
+    line-height: 1.3 !important;
+}
+
+/* 按钮 */
+
+.a-button-inner {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .6) inset;
+    background-color: #fff;
+    background-image: none;
+    filter: none;
+    height: auto;
+}
+
+.a-button-text {
+    white-space: normal;
+    text-align: left;
+    padding: 5px 10px 5px 32px;
+    line-height: 19px;
+    display: block;
+}
+
+.a-select-text {
+    padding: 0 10px 0 11px;
+}
+
+.min-width-toggle-button {
+    min-width: 90px;
+}
+
+.a-button-select {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none !important;
+    vertical-align: middle;
+}
+
+.a-button {
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+}
+
+.a-popover {
+    padding: 8px;
+    max-width: 440px;
+}
+
+.a-popover-inner2 {
+    background-color: #fff;
+    padding: 14px 18px;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+/* x */
+
+.a-icon-close {
+    opacity: .64;
+    filter: alpha(opacity=64);
+    width: 15px;
+    height: 16px;
+    background-position: -297px -5px;
+}
+
+.a-icon,
+.a-link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite.png);
+    -webkit-background-size: 400px 900px;
+    background-size: 400px 900px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-popover-inner .a-button-close {
+    position: static;
+    margin: -10px -14px 6px 6px;
+}
+
+.a-button-close {
+    display: block;
+    zoom: 1;
+    background-color: transparent;
+    border-radius: 3px;
+    border: none;
+    float: right;
+    padding: 8px;
+    position: absolute;
+    top: 17%;
+    right: 4px;
+    margin: -13px 0 0;
+    line-height: 0;
+}
+
+.a-button-choose {
+    border-color: #e77600;
+    background-color: #fef8f2;
+    font-weight: 700;
+}
+
+.personal {
+    width: 314px;
+    padding: 8px;
+    box-sizing: border-box;
+    position: absolute;
+    right: -310px;
+    top: -50px;
+}
+
+.business {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    right: -426px;
+    top: -230px;
+}
+
+
+/* 联邦税类别 */
+
+.federal_tax {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 140px;
+    right: -430px;
+}
+
+/* 名称（参见您的所得税申报表） */
+
+.ncome_tax {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 180px;
+    right: 85px;
+    z-index:999;
+}
+/* 全名 */
+.full_name{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 270px;
+    right: 85px;
+    z-index:999;
+}
+/* 国籍 */
+.nationality_text{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 225px;
+    right: -420px;
+    z-index:999; 
+}
+/* 邮寄地址 */
+.mailing_address{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 380px;
+    right: -420px;
+    z-index:999; 
+}
+/* 地址 国家 */
+.country_address{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 245px;
+    right: 85px;
+    z-index:999; 
+}
+/* 纳税人识别号（TIN） */
+.taxpayer{
+    padding: 8px;
+    box-sizing: border-box;
+    width: 430px;
+    position: absolute;
+    top: 590px;
+    right: -420px;
+    z-index:999; 
+}
+/*  受益所有人类型 */
+
+.beneficiary {}
+
+
+.onfocusInput:focus{
+    outline: 0;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s; 
+    border-color:rgba(231,118,0,1);  
+    -webkit-box-shadow:0 0 5px rgba(231,118,0,1) ; 
+}
+.activebtn{
+    border-color: #d00 !important;
+    box-shadow: 0 0 0 3px rgba(221,0,0,.1) !important;
+}
+
+.a-arrow-border>span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 8px 0;
+    border-style: solid;
+    border-color: transparent #ccc transparent;
+    position: relative;
+}
+
+.a-arrow-border>span>em {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 8px 0;
+    border-style: solid;
+    border-color: transparent #fff transparent;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+}
+
+.a-arrow-border-personal-absolute {
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    margin-top: -8px;
+}
+
+.a-arrow-border-business-absolute {
+    position: absolute;
+    top: 230px;
+    left: -7px;
+}
+
+/* 下拉框 */
+
+.bgcolor {
+    backgrorund: #eff1f3;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF7F8FA', endColorstr='#FFE7E9EC', GradientType=0);
+}
+
+.bg_hover_color {
+    background-color: #dcdfe3
+}
+
+.bank-account-dropdown:before {
+    top: 8px;
+    border-color: transparent transparent #000 transparent !important;
+}
+
+.bank-account-dropdown:before,
+.bank-account-dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 3px dashed;
+    pointer-events: none;
+}
+
+.bank-account-dropdown:after {
+    /* margin-top: 5px; */
+    border-top-style: solid;
+    border-bottom: none;
+}
+
+.bank-account-dropdown:after {
+    top: 16px;
+    border-color: #000 transparent transparent !important;
+}
+
+.bank-account-dropdown:before,
+.bank-account-dropdown:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 3px dashed;
+    pointer-events: none;
+}
+
+.boxed-question {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+}
+
+.a-input-text,
+input[type=text],
+input[type=search],
+input[type=number],
+input[type=tel],
+input[type=password],
+input[type=date],
+input[type=email] {
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 1px 0 rgba(0, 0, 0, .07) inset;
+    outline: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.address {
+    line-height: 1;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 8px 0 7px;
+}
+
+.lable {
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+
+.finishBtn {
+    box-sizing: border-box;
+    height: 31px;
+    width: 90px;
+}
+.finishBtn2 {
+    box-sizing: border-box;
+    height: 31px;
+    width: 90px;
+}
+.footer {
+    margin-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.a-form-actions {
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    background: -webkit-linear-gradient(top, #f3f3f3, #fff);
+    background: linear-gradient(to bottom, #f3f3f3, #fff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3F3F3', endColorstr='#FFFFFFFF', GradientType=0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05) inset;
+}
+
+.a-button-text {
+    background-color: transparent;
+    display: block;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    color: #999 !important;
+    cursor: default !important;
+    font-weight: 400;
+    text-shadow: none !important;
+}
+
+.a-button-inner2 {
+    background-color: #f9f3e5 !important;
+    border: 1px solid #e8e0cd !important;
+    min-width: 90px;
+    border-radius: 2px;
+}
+
+.go_on_Btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+    margin-top: -15px;
+}
+.saveBtn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+    margin-top: -15px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* 下拉框 */
+
+.ul ul>li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* 选择语言 */
+.ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    transform: translateY(-20%);
+}
+/* 国家 */
+.ul2 {
+    position: absolute;
+    left: 0;
+    top: -196px;
+    padding: 0;
+    transform: translateY(-20%);
+}
+/* 国籍 */
+.ul3 {
+    position: absolute;
+    left: 0;
+    top: -200px;
+    padding: 0;
+    transform: translateY(-20%);
+}
+/* 联邦税类别 */
+.ul4 {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    padding: 0;
+    transform: translateY(-20%);
+}
+/* LLC类型 */
+.ul5{
+    position: absolute;
+    left: 0;
+    top: 17px;
+    padding: 0;
+    transform: translateY(-20%); 
+}
+/* 受益所有人类型 */
+.beneficiaryType{
+    position: absolute;
+    right: -445px;
+    top: 87px;
+    padding: 0;
+    transform: translateY(-20%); 
+}
+.a-popover-inner {
+    padding: 8px 0;
+    border: 1px solid red;
+}
+
+.a-popover-wrapper {
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .2);
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .13);
+    background-color: #fff;
+}
+
+.a-dropdown-link {
+    padding: 2px 12px 1px 13px;
+    display: block;
+    white-space: nowrap;
+    outline: 0;
+    border: 1px solid transparent;
+    margin-left: 1px;
+    text-decoration: none;
+}
+
+ul li>a {
+    color: #111 !important;
+}
+
+ul li>a:hover {
+    background-color: #f3f3f3;
+    border-color: #e7e7e7;
+    border-top-color: #e7e7e7;
+    /* border-left-color: #e77600!important; */
+}
+
+.select_style {
+    background-color: #f3f3f3;
+    border-color: #e7e7e7;
+    border-top-color: #e7e7e7;
+    border-left-color: #e77600 !important;
+}
+
+.a-size-small {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+.a-color-tertiary {
+    color: #767676 !important;
+}
+
+.zIndex1 {
+    z-index: 1 !important;
+}
+
+.zIndex999 {
+    z-index: 999 !important;
+}
+.permanent_email_address:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+.simplified-interview-question {
+    margin-bottom: 32px;
+}
+.margin-below-caption {
+    margin-bottom: 11px;
+}
+.checkbox-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.a-color-offset-background {
+    background-color: #f6f6f6!important;
+}
+.text-module {
+    color: #333;
+    margin-top: 20px;
+}
+
+.first-just-text {
+    font-weight: bold;
+}
+.a-ordered-list, .a-unordered-list, ol, ul {
+    padding: 0;
+}
+.a-ordered-list, ol {
+    margin: 0 0 0 20px;
+    color: #767676;
+}
+.text-list-module li {
+    padding-bottom: 10px;
+}
+.a-form-disabled {
+    color: #767676;
+}
+.todayInput{
+    border-color: rgba(186,186,186,.5) !important;
+    background-color: #f3f3f3 !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
+}

@@ -1,7 +1,9 @@
 $(function () {
+    inputctr.public.checkLogin(); 
     var method_id = null;
     var billing_address_id = null;
     var checked = false;
+    var show = true; //设置付款方式1 为真时调用
     $('.billing_addressBtn').click(function (e) {
         e.preventDefault();
         $('.billing_address').hide()
@@ -14,6 +16,7 @@ $(function () {
     })
     $('.replace_credit_card_a').click(function (e) {
         e.preventDefault()
+        show = false;
         $('.replace_credit_card').hide();
         $('.new_credit_card').show();
         $('.billing_address').show();
@@ -23,19 +26,19 @@ $(function () {
             method: 'post',
             dataType: "json",
             data: {
-                userid: store_id,
+                userid: amazon_userid,
                 sign: '1'
             },
             success: function (res) {
                 console.log(res)
                 if (res.result == 1) {
+                   
                     var data = res.List
                     var add = doT.template($('#addArray').text());
                     $('#addTmpl').html(add(data))
                     $('#addTmpl input').each(function (i) {
                         $('#addTmpl input').eq(i).click(function () {
                             billing_address_id = $('input[name=address]:checked').parents('.adds').attr('data-card')
-                            console.log($('input[name=address]:checked').parents('.adds').attr('data-card'))
                         })
                     })
                 } else {
@@ -61,7 +64,7 @@ $(function () {
         method: 'post',
         dataType: "json",
         data: {
-            userid: store_id,
+            userid: amazon_userid,
         },
         success: function (res) {
             console.log(res)
@@ -75,6 +78,8 @@ $(function () {
                 $('.valid_through_year').text(data.valid_through_year)
                 // 持卡人姓名
                 $('.card_holder_name').text(decodeURIComponent(data.card_holder_name))
+                // 帐单地址
+                $('.strAddressInfo').text(decodeURIComponent(decodeURIComponent(res.data.strAddressInfo)))
             } else {
                 console.log(decodeURIComponent(res.error))
             }
@@ -90,27 +95,29 @@ $(function () {
         method: 'post',
         dataType: "json",
         data: {
-            userid: store_id,
+            userid: amazon_userid,
         },
         success: function (res) {
             console.log(res)
             if (res.result == 1) {
+                method_id = res.chargeId
+                res.data.forEach(function (item) {
+                    item.status = (item.method_id === res.chargeId) ? true : false
+                })
                 var data = res.data;
                 var bank = doT.template($('#bankArray').text());
                 $('#bankTmpl').html(bank(data))
                 $('#bankTmpl input').each(function (i) {
                     $('#bankTmpl input').eq(i).click(function () {
                         method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
-                        //console.log(method_id)
                     })
                 })
-                
+
             } else {
                 console.log(decodeURIComponent(res.error))
             }
         }
     })
-    console.log(method_id)
     //初始化账单寄送地址 新增邮寄地址
     $('.submitBtn').click(function (e) {
         e.preventDefault();
@@ -138,26 +145,29 @@ $(function () {
         var phone = $('.phone_input').val().trim()
 
         //设置付款方式1
-        $.ajax({
-            url: baseUrl + '/SetChargeMade',
-            method: 'post',
-            dataType: 'json',
-            data: {
-                userid: store_id,
-                method_id: method_id
-            },
-            success: function (res) {
-                console.log(res)
-                if (res.result == 1) {
+        if (show) {
+            $.ajax({
+                url: baseUrl + '/SetChargeMade',
+                method: 'post',
+                dataType: 'json',
+                data: {
+                    userid: amazon_userid,
+                    method_id: method_id
+                },
+                success: function (res) {
+                    console.log(res)
+                    if (res.result == 1) {
 
-                } else {
+                    } else {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                },
+                error: function () {
                     console.log(decodeURIComponent(res.error))
                 }
-            },
-            error: function () {
-                console.log(decodeURIComponent(res.error))
-            }
-        })
+            })
+        }
+
         if (address && address2 && city && province && country && zipcode && phone) {
             //新增邮寄地址
             $.ajax({
@@ -165,7 +175,7 @@ $(function () {
                 method: 'post',
                 dataType: "json",
                 data: {
-                    userid: store_id,
+                    userid: amazon_userid,
                     address: address,
                     address2: address2,
                     city: city,
@@ -199,12 +209,12 @@ $(function () {
                 method: 'post',
                 dataType: "json",
                 data: {
-                    userid: store_id,
+                    userid: amazon_userid,
                     card_number: card_number,
                     valid_through_month: valid_through_month,
                     valid_through_year: valid_through_year,
                     card_holder_name: card_holder_name,
-                    billing_address_id: billing_address_id,
+                    billing_address_id: 1,
                 },
                 success: function (res) {
                     console.log(res)

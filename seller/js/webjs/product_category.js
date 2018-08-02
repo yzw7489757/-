@@ -1,0 +1,29 @@
+﻿$(function () {
+    inputctr.public.checkLogin();
+    inputctr.public.judgeBegaintask('1008');
+    $(".js-finished").click(function () {
+
+        inputctr.public.judgeRecodertask('1008', '提交店铺开通审核资料');
+
+        var data = {
+            userid: amazon_userid,
+            categories: '',
+            categoryname: ''
+        }; 
+        inputctr.public.SellerRegisterLoading();
+        $.post(baseUrl + '/SellerRegister6', data, function (data) {
+            if (data) {
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if (data.result == 1) {
+                inputctr.public.judgeFinishtask('1008', link);
+
+            } else {
+                alert(decodeURIComponent(data.error))
+            }
+        }, 'json')
+    })
+    function link() {
+        window.location.href = 'account_information.html'
+    }
+})

@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="./css/payment_method_info_editor.css">
     <link rel="stylesheet" href="./css/payment_method.css">
     <link rel="stylesheet" href="./css/change_payment_method.css">
-
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
 </head>
 
-<body>
+<body><header id="sc-masthead" class="clearable">
+</header>
     <div class="a-section">
         <div class="a-padding-large">
             <div class="a-section a-spacing-base">
@@ -96,10 +99,7 @@
                                                                     </div>
                                                                     <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
                                                                     <div class="a-row">
-                                                                        <span class="a-size-base">wangma street,</span>
-                                                                        <span class="a-size-base">天津,</span>
-                                                                        <span class="a-size-base">中国</span>
-                                                                        <span class="a-size-base"> - 310000</span>
+                                                                        <span class="strAddressInfo"></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -149,7 +149,7 @@
                                                                             <div class="width31 a-column2_7 a-spacing-top-mini float_left">
                                                                                 <div class="a-row">
                                                                                     <div class="a-size-base a-text-bold">卡号</div>
-                                                                                    <input type="text" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                                    <input type="text" minlength="4" maxlength="16" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="width31 a-column2_7 a-spacing-top-mini float_left">
@@ -247,10 +247,13 @@
                                                                         <div id="bankTmpl"></div>
                                                                         <script id="bankArray" type="text/x-dot-template">
                                                                             {{~it:value:index}}
-                                                                            <div class="banks" data-card="{{= value.method_id}}">
+                                                                            <div class="banks overflow_hidden" data-card="{{= value.method_id}}">
                                                                                 <div class="width5 float_left a-column2_7">
-                                                                                  
-                                                                                    <input type="radio" name="card" > 
+                                                                                    {{? value.status == true}}
+                                                                                    <input type="radio" name="card" checked > 
+                                                                                    {{??}}
+                                                                                    <input type="radio" name="card">
+                                                                                    {{?}} 
                                                                                   
                                                                                 </div>
                                                                                 <div class="width91 float_right">
@@ -299,60 +302,7 @@
                             <div class="a-row">
                                 <div class="a-row  billing_address_par">
                                     <form action="">
-                                        <!-- 请选择账单寄送地址 -->
-                                        <div class="a-row billing_address border_box none">
-                                            <div class="marBtn10">
-                                                <div class="a-row overflow_hidden">
-                                                    <h1 class="a-size-base inline_block float_left">
-                                                        <b class="">请选择账单寄送地址</b>
-                                                    </h1>
-
-                                                    <a href="" class="inline_block float_right billing_addressBtn">
-                                                        <span>添加新的账单地址</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="a-spacing-small">
-                                                <!-- 初始化账单寄送地址 -->
-                                                <div id="addTmpl"></div>
-                                                <script id="addArray" type="text/x-dot-template">
-                                                    {{~it:value:index}}
-                                                    <div class="adds" data-card="{{= value.billing_address_id}}">
-                                                        <div class="a-row a-box">
-                                                            <div class="a-row a-box-inner_radio">
-                                                                <div class="a-row">
-                                                                    <label>
-                                                                        <div class="a-row overflow_hidden">
-                                                                            <div class="width5 marRight2_7 float_left">
-                                                                                {{? index == 0 }}
-                                                                                <input type="radio" name="address" checked> {{??}}
-                                                                                <input type="radio" name="address"> {{?}}
-                                                                            </div>
-                                                                            <div class="width91 float_right">
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.address)}},</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.address2)}},</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.city)}},</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.country)}},</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.email)}}</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.fullname)}}</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.name)}}</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.phone)}}</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.province)}},</span>
-                                                                                <span class="a-size-base">{{= decodeURIComponent(value.zipcode)}}</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {{~}}
-                                                </script>
-
-
-                                            </div>
-                                        </div>
-
+                                      
                                         <div class="a-row none send_address border_box none">
                                             <div class="marBtn10">
                                                 <div class="a-row overflow_hidden">
@@ -573,6 +523,58 @@
                             </div>
                             
                         </div>
+                          <!-- 请选择账单寄送地址 -->
+                          <div class="a-row billing_address border_box none">
+                            <div class="marBtn10">
+                                <div class="a-row overflow_hidden">
+                                    <h1 class="a-size-base inline_block float_left">
+                                        <b class="">请选择账单寄送地址</b>
+                                    </h1>
+
+                                    <a href="" class="inline_block float_right billing_addressBtn">
+                                        <span>添加新的账单地址</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="a-spacing-small">
+                                <!-- 初始化账单寄送地址 -->
+                                <div id="addTmpl"></div>
+                                <script id="addArray" type="text/x-dot-template">
+                                    {{~it:value:index}}
+                                    <div class="adds" data-card="{{= value.address_id}}">
+                                        <div class="a-row a-box">
+                                            <div class="a-row a-box-inner_radio">
+                                                <div class="a-row">
+                                                    <label>
+                                                        <div class="a-row overflow_hidden">
+                                                            <div class="width5 marRight2_7 float_left">
+                                                                <input type="radio" name="address"> 
+                                                            </div>
+                                                            <div class="width91 float_right">
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.address)}},</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.address2)}},</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.city)}},</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.country)}},</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.email)}}</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.fullname)}}</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.name)}}</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.phone)}}</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.province)}},</span>
+                                                                <span class="a-size-base">{{= decodeURIComponent(value.zipcode)}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{~}}
+                                </script>
+
+
+                            </div>
+                        </div>
+
                         <div class="a-row">
                                 <div class="width48 a-spacing-top-medium a-ws-row overflow_hidden">
                                     <div class="width48 a-column float_left">
@@ -626,9 +628,12 @@
             </div>
         </div>
     </div>
+    <div class="a-container-footer">
+    </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="./js/doT.min.js" type="text/javascript"></script>
 <!-- <script src="./js/webjs/payment_method_info_editor.js" type="text/javascript"></script> -->
 <script src="./js/webjs/change_payment_method.js"></script>

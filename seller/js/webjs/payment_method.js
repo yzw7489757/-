@@ -1,10 +1,11 @@
 $(function () {
+    inputctr.public.checkLogin(); 
     $.ajax({
         url: baseUrl + '/InitializaChargeInfo',
         method: 'post',
         dataType: "json",
         data: {
-            userid: store_id,
+            userid: amazon_userid,
         },
         success: function (res) {
             console.log(res)
@@ -16,6 +17,9 @@ $(function () {
                $('.card_holder_name').text(decodeURIComponent(data.card_holder_name))
                $('.valid_through_month').text(data.valid_through_month) 
                $('.valid_through_year').text(data.valid_through_year)
+               console.log(decodeURIComponent(res.data.strAddressInfo))
+               $('.strAddressInfo').text(decodeURIComponent(decodeURIComponent(res.data.strAddressInfo)))
+            
             } else {
                 console.log(decodeURIComponent(res.error))
             }

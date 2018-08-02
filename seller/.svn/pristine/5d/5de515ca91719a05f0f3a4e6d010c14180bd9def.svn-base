@@ -1,0 +1,37 @@
+$(function () {
+    $.get('remote-nav-html.html', function (data) {
+        $("#sc-masthead").html(data);
+
+        // Ŀ¼
+        $('.sc-hover-nav').each(function (i) {
+            $('.sc-hover-nav').eq([i]).attr('data-list', i)
+            $('.sc-hover-nav').eq(i).hover(function () {
+                $('.sc-hover-nav').eq([this.dataset.list])
+				.find('.sc-nav-arrow').eq(0).css({
+				    opacity: 1,
+				    visibility: 'visible'
+				});
+                $('.sc-hover-nav').eq([this.dataset.list])
+				.find('.sc-sub-nav').eq(0).css({
+				    display: 'block'
+				});
+            }, function () {
+                $('.sc-hover-nav').eq([this.dataset.list])
+				.find('.sc-nav-arrow').eq(0).css({
+				    opacity: 0,
+				    visibility: 'hidden'
+				});
+                $('.sc-hover-nav').eq([this.dataset.list])
+				.find('.sc-sub-nav').eq(0).css({
+				    display: 'none'
+				});
+            })
+        });
+        inputctr.public.LangShow();
+        inputctr.public.LoadLang();
+    })
+    $.get('remote-footer-html.html', function (data) {
+        $(".a-container-footer").html(data);
+    })
+
+})

@@ -1,0 +1,17 @@
+﻿<footer class="sc_footer">
+    <ul class="float_left container_left separated-list">
+        <li><a href="javascript:void(0);" id="what">为此页评级</a> </li>
+        <li><a href="javascript:void(0)" id="getSurport">获得支持</a> </li>
+        <li><a href="javascript:void(0)">政策与协议</a> </li>
+        <li>
+            <select name="" value="1" id="selectlang">
+                <option value="1">中文</option>
+                <option value="2">英文</option>
+            </select>
+        </li>
+    </ul>
+    <ol class="float_right container_right">
+        <li><a href="JavaScript:void(0)">zhongguo feng</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="JavaScript:void(0)">© 1999-2018 年，亚马逊公司或其附属公司</a> </li>
+    </ol>
+</footer>
