@@ -66,7 +66,7 @@
                                 <li>
                                     <label>
                                         <input type="checkbox" class="">
-                                        <i class="a-icon a-icon-checkbox "></i>
+                                        <i class="a-icon a-icon-checkbox"></i>
                                         <span class="a-label a-checkbox-label">
                                             接收包含批准、关闭或回复链接的退货申请电子邮件
                                         </span>
@@ -80,9 +80,7 @@
                             <ul class="return_request">
                                 <li data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
                                     <label for="radio-auth-type-manual">
-                                        <!-- <div style="display:inline-block ;border-radius: 50%"> -->
-                                            <input id="radio-auth-type-manual" type="radio" name="autoAuthType" value="Manual" checked="">
-                                        <!-- </div> -->
+                                        <input id="radio-auth-type-manual" type="radio" name="autoAuthType" value="Manual" checked="">
                                         <i class="a-icon a-icon-radio radio_click"></i>
                                         <span class="a-label a-radio-label">
                                             我希望批准每个退货申请
@@ -91,9 +89,7 @@
                                 </li>
                                 <li data-a-input-name="autoAuthType" class="a-radio a-radio-fancy labelPreference">
                                     <label for="radio-auth-type-in-policy">
-                                        <!-- <div style="display:inline-block ;border-radius: 50%"> -->
                                         <input id="radio-auth-type-in-policy" type="radio" name="autoAuthType" value="InPolicy">
-                                        <!-- </div> -->
                                         <i class="a-icon a-icon-radio"></i>
                                         <span class="a-label a-radio-label">
                                             我希望亚马逊自动批准符合的所有退货申请
@@ -1875,7 +1871,7 @@
                             <span>单击此链接添加新的退货地址或编辑现有退货地址</span>
                             <br>
                             <span>
-                                <a class="return_address"> 管理您的退货地址</a>
+                                <a href=""> 管理您的退货地址</a>
                             </span>
                         </div>
                         <div class="a-row">

@@ -249,6 +249,14 @@ $(function () {
       console.log(decodeURIComponent(res.error));
     }
   });
+
+  // 管理您的退货地址
+  $('.return_address').click(function (e) { 
+    e.preventDefault()
+    debugger;
+    $(".headList li").eq(0).addClass("activeStyle").siblings().removeClass("activeStyle");
+    $(".mainList>li").eq(0).removeClass("none").siblings().addClass("none"); 
+  })
   function utc(){
     var utcArr = new Date().toUTCString().split(' ');
     var time = utcArr[4].split(':')[0]>12? 
@@ -257,4 +265,7 @@ $(function () {
     return `${utcArr[1]} ${utcArr[2]} ${utcArr[3]} ${time}`
   }
   var time = utc()
+  
+
+
 });

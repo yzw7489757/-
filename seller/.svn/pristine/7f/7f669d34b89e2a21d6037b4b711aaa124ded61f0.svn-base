@@ -32,7 +32,7 @@
                         <div class="width74 a-spacing-base a-column float_left">
                             <div class="a-row">
                                 <div class="a-spacing-base align_right">
-                                    <a href="./change_payment_method.html">添加新的付款方式</a>
+                                    <a href="./add_payment_method.html">添加新的付款方式</a>
                                     <a href="./payment_method_info.html">管理付款方式</a>
                                 </div>
                             </div>

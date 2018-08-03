@@ -185,7 +185,7 @@
                                     </div>
                                 </div>
                                 <div class="float_left marLeft6">
-                                    <div class="a-button-choose a-row a-button-toggle a-button-inner min-width-toggle-button a-button a-choose-no">
+                                    <div class="a-row a-button-toggle a-button-inner min-width-toggle-button a-button a-choose-no">
                                         <span class="a-button-text">&nbsp;&nbsp;否</span>
                                     </div>
                                 </div>
@@ -459,7 +459,7 @@
                                             </div>
                                             <div class="locale-switch-body a-row bank-account-dropdown relative">
                                                 <div id="choose_nationality" class="select a-row border_box bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
-                                                    <p style="margin: 0" class="choose_country_p">中国</p>
+                                                    <p style="margin: 0" class="choose_country_p">乌克兰</p>
                                                 </div>
                                                 <div class="ul3 nationality none" style="height: 264px; min-width: 0px; width: 486px;">
                                                     <ul class=" a-row a-popover-inner a-popover-wrapper overflow_y ">
@@ -1477,7 +1477,7 @@
                                                 </div>
                                                 <div class="locale-switch-body a-row bank-account-dropdown relative " id="organization_country_parents">
                                                     <div id="choose_Organization_Country" class="select a-row border_box bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
-                                                        <p style="margin: 0" class="organization_country">中国</p>
+                                                        <p style="margin: 0" class="organization_country">乌克兰</p>
                                                     </div>
                                                     <div class="ul3 nationality organizationCountryUl none" style="height: 264px; min-width: 0px; width: 486px;">
                                                         <ul class=" a-row a-popover-inner a-popover-wrapper overflow_y ">
@@ -2503,7 +2503,7 @@
                                                         </div>
                                                         <div class="a-row bank-account-dropdown relative " id="choose_country_parent">
                                                             <div id="choose_country" class="select a-row border_box bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
-                                                                <p style="margin: 0" class="choose_country_p left_country_p">中国</p>
+                                                                <p style="margin: 0" class="choose_country_p left_country_p">国家</p>
                                                             </div>
                                                             <div class="ul2 country none" style="height: 264px;min-width: 0px;width: 486px;">
                                                                 <ul class=" a-row a-popover-inner a-popover-wrapper overflow_y ">
@@ -3501,7 +3501,7 @@
                                                             </div>
                                                             <div class="a-row bank-account-dropdown relative " id="choose_country_ever_parent">
                                                                 <div id="choose_country_ever" class="select a-row border_box bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
-                                                                    <p style="margin: 0" class="choose_country_p choose_country_ever_p">中国</p>
+                                                                    <p style="margin: 0" class="choose_country_p choose_country_ever_p">国家</p>
                                                                 </div>
                                                                 <div class="ul2 country_ever none" style="height: 264px;min-width: 0px;width: 486px;">
                                                                     <ul class=" a-row a-popover-inner a-popover-wrapper overflow_y ">
@@ -4519,7 +4519,7 @@
                                                             <span class="zipcode">5</span>
                                                         </div>
                                                         <div>
-                                                            <span class="left_country_span"></span>
+                                                            <span class="left_country_p"></span>
                                                         </div>
                                                         <div>
                                                             <button class="locale-switch-body edterAddressBtn">编辑</button>
@@ -4546,7 +4546,7 @@
                                                         <div class="a-row bank-account-dropdown relative " id="choose_country2_parent">
                                                             <div id="choose_country2" class="select a-row border_box bgcolor a-select-text a-native-dropdown a-button-select height29 bank-account-dropdown">
                                                                 <!-- <div> -->
-                                                                <p style="margin: 0" class="choose_country_p right_country_p">中国</p>
+                                                                <p style="margin: 0" class="choose_country_p right_country_p">国家</p>
                                                                 <!-- </div> -->
 
                                                             </div>

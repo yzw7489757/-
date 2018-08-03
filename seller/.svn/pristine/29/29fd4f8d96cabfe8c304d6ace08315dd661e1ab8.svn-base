@@ -47,11 +47,9 @@ body {
     color: #c45500;
     font-weight: 700;
     text-decoration: none;
-
 }
-.a-tab-container>ul>li:last-child:hover{
-    background: #f3f3f3;
-    border-color:transparent !important
+.a-tab-container>ul>li:nth-last-child :hover{
+    border: 0;
 }
 .activeStyle{
     border-color: #ddd;
@@ -116,7 +114,7 @@ label .a-icon-checkbox{
     vertical-align: middle;
     background-position: -6px -286px;
     position: absolute;
-    left: 2px;
+    left: 0;
     top:0;
 }
 .returnSettingsCommonMargin {

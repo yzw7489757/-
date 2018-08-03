@@ -26,24 +26,20 @@ $(function () {
   var left_country_p = $('.left_country_p').text()
   var choose_country_ever_p = $('.choose_country_ever_p').text()
   // 初始化显示
-  function init() {
-    InputError = 2;
-    $("div.myWarn").remove();
-    $("input").removeClass("activebtn");
-    $(".tax_status_information").show();
-    $(".full_name_show").show();
-    $(".permanent_email_address").show();
-    $(".address_show").hide();
-    $(".name_show").hide();
-    $(".right_hidden").show();
-    $(".permanent_address").show();
-    $(".taxpayer_identification_number").hide();
-    $(".footer_text").show();
-    $(".address_h5").show();
-    $(".other_types").hide();
-    $('.signSubmit').hide()
-  }
-  init()
+  InputError = 2;
+  $("div.myWarn").remove();
+  $("input").removeClass("activebtn");
+  $(".tax_status_information").show();
+  $(".full_name_show").show();
+  $(".permanent_email_address").show();
+  $(".address_show").hide();
+  $(".name_show").hide();
+  $(".right_hidden").show();
+  $(".taxpayer_identification_number").hide();
+  $(".footer_text").show();
+  $(".address_h5").show();
+  $(".other_types").hide();
+  $('.signSubmit').hide()
 
   // 气泡显示与隐藏
   function showText(bubble_img, bubble_text) {
@@ -160,21 +156,21 @@ $(function () {
   chooseClass(".a-choose-business", ".a-choose-persinal", "a-button-choose");
   chooseClass(".a-choose-persinal", ".a-choose-business", "a-button-choose");
 
-  // function init() {
-  //   $(".tax_status_information").hide();
-  //   $(".full_name_show").hide();
-  //   $(".permanent_email_address").hide();
-  //   $(".address_show").hide();
-  //   $(".name_show").hide();
-  //   $(".federal_tax_category").hide();
-  //   $(".beneficiary_type").hide();
-  //   $(".footer_text").hide();
-  //   $(".address_h5").hide();
-  // }
-  // init();
+  function init() {
+    $(".tax_status_information").hide();
+    $(".full_name_show").hide();
+    $(".permanent_email_address").hide();
+    $(".address_show").hide();
+    $(".name_show").hide();
+    $(".federal_tax_category").hide();
+    $(".beneficiary_type").hide();
+    $(".footer_text").hide();
+    $(".address_h5").hide();
+  }
+  init();
 
   //
-
+ 
   // function chooseBtn(className) {
   //   $(className).click(function () {
   //     //把所有隐藏
@@ -325,10 +321,10 @@ $(function () {
   //     }
   //   });
   // }
-  // chooseBtn(".a-choose-yes");
-  // chooseBtn(".a-choose-no");
-  // chooseBtn(".a-choose-business");
-  // chooseBtn(".a-choose-persinal");
+  chooseBtn(".a-choose-yes");
+  chooseBtn(".a-choose-no");
+  chooseBtn(".a-choose-business");
+  chooseBtn(".a-choose-persinal");
 
   // 下拉框
   // dropdown_box(".language", "#choose_lang");
@@ -509,172 +505,6 @@ $(function () {
     /^(?:(?!(\d)\1{2}-\1{2}-\1{4})(?!123-45-6789|000)\d{3}-\d{2}-\d{4})$/
   ); //无效税务标识号：检查格式和输入值
 
-
-  // checkbox
-  $(".checkbox").click(function () {
-    if ($(".checkbox").is(":checked")) {
-      $(".right_input").hide();
-      $('.edterAddress2').hide()
-    } else {
-      $(".right_input").show();
-    }
-  });
-  // $('.country li').click(function () {
-  //   left_country_p = $(".left_country_p").text()
-  // })
-  // 已完成 左
-  $(".finishBtn").click(function (e) {
-    e.preventDefault();
-    $("div.myWarn").remove();
-    $("input").removeClass("activebtn");
-    tel_input = $('.tel_input').val();
-    city_town_input = $('.city_town_input').val();
-    postal_code_input = $('.postal_code_input').val();
-    detailed_address_input = $('.detailed_address_input').val()
-    province_input = $('.province_input').val()
-
-    if (tel_input == "") {
-      activeColor(".tel_input", "tel");
-    } else {
-      if (city_town_input == "") {
-        activeColor(".city_town_input", "city_town");
-      } else {
-        if (postal_code_input == "") {
-          activeColor(".postal_code_input", "postal_code");
-        }
-      }
-    }
-
-    if (tel_input && city_town_input && postal_code_input) {
-      $.ajax({
-        url: baseUrl + '/AddAddressNew',
-        method: 'post',
-        dataType: "json",
-        data: {
-          userid: amazon_userid,
-          address: tel_input,
-          address2: detailed_address_input,
-          city: city_town_input,
-          province: province_input,
-          country: choose_country_ever_p,
-          zipcode: postal_code_input,
-          phone: '',
-          type: '1',
-          name: '2',
-          email: '',
-          full_name: ''
-        },
-        success: function (res) {
-          console.log(res)
-          if (res.result == 1) {
-            address_id = res.addressid
-            $('.left_country_span').text(choose_country_ever_p)
-            $('.street').text(tel_input)
-            $('.detailed_address').text(detailed_address_input)
-            $('.city').text(city_town_input)
-            $('.province').text(province_input)
-            $('.zipcode').text(postal_code_input)
-            $('.edterAddress').show();
-            $('.left_input').hide()
-            $('#choose_country_parent').hide()
-            $('.finishBtn').hide()
-            console.log(address_id)
-          } else {
-            console.log(decodeURIComponent(res.error))
-          }
-        },
-        error: function (res) {
-          console.log(decodeURIComponent(res.error))
-        }
-      })
-
-    }
-  });
-  $('.edterAddressBtn').click(function (e) {
-    e.preventDefault();
-    $('.edterAddress').hide();
-    $('.left_input').show()
-    $('#choose_country_parent').show()
-    $('.finishBtn').show()
-  })
-  // 
-  $('.country2 li').click(function () {
-    right_country_p = $(".right_country_p").text()
-  })
-  // 已完成 右
-  $(".finishBtn2").click(function (e) {
-    e.preventDefault();
-    $("div.myWarn").remove();
-    $("input").removeClass("activebtn");
-    // 对input框重新赋值
-    tel_input2 = $('.tel_input2').val();
-    city_town_input2 = $('.city_town_input2').val();
-    postal_code_input2 = $('.postal_code_input2').val();
-    detailed_address_input2 = $('.detailed_address_input2').val()
-    province_input2 = $('.province_input2').val()
-
-    if (tel_input2 == "") {
-      activeColor(".tel_input2", "tel2");
-    } else {
-      if (city_town_input2 == "") {
-        activeColor(".city_town_input", "city_town2");
-      } else {
-        if (postal_code_input2 == "") {
-          activeColor(".postal_code_input2", "postal_code2");
-        }
-      }
-    }
-
-    if (tel_input2 && city_town_input2 && postal_code_input2) {
-      $.ajax({
-        url: baseUrl + '/AddAddressNew',
-        method: 'post',
-        dataType: "json",
-        data: {
-          userid: amazon_userid,
-          address: tel_input2,
-          address2: detailed_address_input2,
-          city: city_town_input2,
-          province: province_input2,
-          country: right_country_p,
-          zipcode: postal_code_input2,
-          phone: '',
-          type: '1',
-          name: '',
-          email: '',
-          full_name: ''
-        },
-        success: function (res) {
-          console.log(res)
-          if (res.result == 1) {
-            mailing_address_id = res.addressid
-            $('.right_country_p2').text(right_country_p)
-            $('.street2').text(tel_input2)
-            $('.detailed_address2').text(detailed_address_input2)
-            $('.city2').text(city_town_input2)
-            $('.province2').text(province_input2)
-            $('.zipcode2').text(postal_code_input2)
-            $('.edterAddress2').show();
-            $('.right_input').hide()
-          } else {
-            console.log(decodeURIComponent(res.error))
-          }
-        },
-        error: function (res) {
-          console.log(decodeURIComponent(res.error))
-        }
-      })
-
-    }
-  });
-  // 已完成 右 编辑
-  $('.edterAddressBtn2').click(function (e) {
-    e.preventDefault()
-    $("div.myWarn").remove();
-    $("input").removeClass("activebtn");
-    $('.edterAddress2').hide();
-    $('.right_input').show()
-  })
   // 根据不同的情况，点击然后“签名并提交”的内容显示
   $(".go_on_Btn").click(function (e) {
     e.preventDefault();
@@ -691,9 +521,11 @@ $(function () {
     organization_country = $('.organization_country').text()
     right_country_p = $(".right_country_p").text()
     detailed_address_input = $('.detailed_address_input2').val()
-    if ($(".checkbox").is(":checked")) {
-      mailing_address_id = address_id
-    }
+    $(".checkbox").click(function () {
+      if ($(".checkbox").is(":checked")) {
+        mailing_address_id = address_id
+      }
+    });
     switch (InputError) {
       // 个人 + 是
       case 1:
@@ -776,8 +608,175 @@ $(function () {
     // activeColor(".full_name_input", "full_name_div");
     // // 组织名称 
     // activeColor(".organization_name_input", "organization_name");
+
+
   });
 
+  // checkbox
+  $(".checkbox").click(function () {
+    if ($(".checkbox").is(":checked")) {
+      mailing_address_id = address_id
+      $(".right_input").hide();
+      $('.edterAddress2').hide()
+    } else {
+      $(".right_input").show();
+    }
+  });
+  // $('.country li').click(function () {
+  //   left_country_p = $(".left_country_p").text()
+  // })
+  // 已完成 左
+  $(".finishBtn").click(function (e) {
+    e.preventDefault();
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
+    tel_input = $('.tel_input').val();
+    city_town_input = $('.city_town_input').val();
+    postal_code_input = $('.postal_code_input').val();
+    detailed_address_input = $('.detailed_address_input').val()
+    province_input = $('.province_input').val()
+
+    if (tel_input == "") {
+      activeColor(".tel_input", "tel");
+    } else {
+      if (city_town_input == "") {
+        activeColor(".city_town_input", "city_town");
+      } else {
+        if (postal_code_input == "") {
+          activeColor(".postal_code_input", "postal_code");
+        }
+      }
+    }
+
+    if (tel_input && city_town_input && postal_code_input) {
+      $.ajax({
+        url: baseUrl + '/AddAddressNew',
+        method: 'post',
+        dataType: "json",
+        data: {
+          userid: amazon_userid,
+          address: tel_input,
+          address2: detailed_address_input,
+          city: city_town_input,
+          province: province_input,
+          country: choose_country_ever_p,
+          zipcode: postal_code_input,
+          phone: '',
+          type: '1',
+          name: '',
+          email: '',
+          full_name: ''
+        },
+        success: function (res) {
+          console.log(res)
+          if (res.result == 1) {
+            address_id = res.addressid
+            $('.left_country_span').text(choose_country_ever_p)
+            $('.street').text(tel_input)
+            $('.detailed_address').text(detailed_address_input)
+            $('.city').text(city_town_input)
+            $('.province').text(province_input)
+            $('.zipcode').text(postal_code_input)
+            $('.edterAddress').show();
+            $('.left_input').hide()
+            $('#choose_country_parent').hide()
+            $('.finishBtn').hide()
+          } else {
+            console.log(decodeURIComponent(res.error))
+          }
+        },
+        error: function (res) {
+          console.log(decodeURIComponent(res.error))
+        }
+      })
+
+    }
+  });
+  $('.edterAddressBtn').click(function (e) {
+    e.preventDefault();
+    $('.edterAddress').hide();
+    $('.left_input').show()
+    $('#choose_country_parent').show()
+    $('.finishBtn').show()
+  })
+  // 
+  $('.country2 li').click(function () {
+    right_country_p = $(".right_country_p").text()
+  })
+  // 已完成 右
+  $(".finishBtn2").click(function (e) {
+    e.preventDefault();
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
+    // 对input框重新赋值
+    tel_input2 = $('.tel_input2').val();
+    city_town_input2 = $('.city_town_input2').val();
+    postal_code_input2 = $('.postal_code_input2').val();
+    detailed_address_input2 = $('.detailed_address_input2').val()
+    province_input2 = $('.province_input2').val()
+
+    if (tel_input2 == "") {
+      activeColor(".tel_input2", "tel2");
+    } else {
+      if (city_town_input2 == "") {
+        activeColor(".city_town_input", "city_town2");
+      } else {
+        if (postal_code_input2 == "") {
+          activeColor(".postal_code_input2", "postal_code2");
+        }
+      }
+    }
+    console.log(amazon_userid)
+    if (tel_input2 && city_town_input2 && postal_code_input2) {
+      $.ajax({
+        url: baseUrl + '/AddAddressNew',
+        method: 'post',
+        dataType: "json",
+        data: {
+          userid: amazon_userid,
+          address: tel_input2,
+          address2: detailed_address_input2,
+          city: city_town_input2,
+          province: province_input2,
+          country: right_country_p,
+          zipcode: postal_code_input2,
+          phone: '',
+          type: '1',
+          name: '',
+          email: '',
+          full_name: ''
+        },
+        success: function (res) {
+          console.log(res)
+          if (res.result == 1) {
+            mailing_address_id = res.addressid
+            $('.right_country_p2').text(right_country_p)
+            $('.street2').text(tel_input2)
+            $('.detailed_address2').text(detailed_address_input2)
+            $('.city2').text(city_town_input2)
+            $('.province2').text(province_input2)
+            $('.zipcode2').text(postal_code_input2)
+            $('.edterAddress2').show();
+            $('.right_input').hide()
+          } else {
+            console.log(decodeURIComponent(res.error))
+          }
+        },
+        error: function (res) {
+          console.log(decodeURIComponent(res.error))
+        }
+      })
+
+    }
+  });
+  // 已完成 右 编辑
+  $('.edterAddressBtn2').click(function (e) {
+    e.preventDefault()
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
+    $('.edterAddress2').hide();
+    $('.right_input').show()
+  })
   $('.saveBtn').click(function (e) {
     e.preventDefault();
     var tax_id = sessionStorage.getItem('tax_id')
@@ -796,8 +795,8 @@ $(function () {
           company_name: full_name_input,
           nationality: nationality,
           owner_type: '1',
-          address_id: address_id,
-          mailing_address_id: mailing_address_id,
+          address_id: '1',
+          mailing_address_id: '1',
           is_esignature: '1',
           id: '1',
           tax_id: tax_id,
@@ -806,8 +805,7 @@ $(function () {
         success: function (res) {
           console.log(res)
           if (res.result == 1) {
-            console.log(address_id)
-            console.log(mailing_address_id)
+
           }
         },
         error: function (res) {

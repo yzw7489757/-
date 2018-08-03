@@ -168,7 +168,7 @@ $(function () {
             })
         }
 
-        if (address &&  city && country && zipcode && phone) {
+        if (address && address2 && city && province && country && zipcode && phone) {
             //新增邮寄地址
             $.ajax({
                 url: baseUrl + '/AddAddressNew',
