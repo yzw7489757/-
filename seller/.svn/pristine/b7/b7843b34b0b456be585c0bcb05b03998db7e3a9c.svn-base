@@ -1,0 +1,255 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+}
+.manage-returns-page {
+    min-width: 981px;
+    padding: 14px 88px 20px;
+}
+.header {
+    margin: 22px 0 0 0;
+}
+.marBottom10{
+    margin-bottom: 10px;
+}
+.a-tab-container{
+    border: 1px solid #ddd;
+}
+.a-tab-container>ul{
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    height: 45px;
+    background-color: #f3f3f3;
+}
+.a-tab-container>ul:after{
+    content: '';
+    display: table;
+    clear: both;
+}.a-tab-container>ul:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.a-tab-container>ul>li{
+    float: left;
+    border:1px solid transparent;
+}
+.a-tab-container>ul>li>span{
+    line-height: 1;
+    padding: 15px 17px 15px 18px;
+    display: block;
+}
+.a-tab-container>ul>li:hover{
+    border-left-color: #ddd;
+    border-right-color: #ddd;
+    background-color: #fff;
+    border-top-color: #e77600;
+    color: #c45500;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+.a-tab-container>ul>li:last-child:hover{
+    background: #f3f3f3;
+    border-color:transparent !important
+}
+.activeStyle{
+    border-color: #ddd;
+    background-color: #fff;
+    border:1px solid transparent;
+    color: #c45500;
+    border-top-color: #e77600  !important;
+    font-weight: 700;
+    padding-bottom: 1px;
+    text-decoration: none;
+}
+.a-tab-container>ul>li:last-child{
+    float: right
+}
+.a-box-inner {
+    border-radius: 4px;
+    padding: 14px 18px;
+}
+.generalSettingsContainer {
+    font-size: 16px;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.a-box-inner .emailPreference {
+    margin-top: 6px;
+    margin-left: -2px;
+    text-align: left;
+    font-size: 15px;
+}
+.labelPreference {
+    margin-top: 6px;
+    margin-left: -2px;
+    text-align: left;
+    font-size: 15px;
+}
+label{
+    text-indent: 0 !important;
+    position: relative;
+}
+label input{
+    height: 16px;
+    width: 16px;
+}
+.a-radio-fancy input {
+    height: 17px;
+    width: 17px;
+    
+}
+
+label .a-icon-checkbox{
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    background-position: -6px -266px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.a-icon-radio {
+    height: 17px;
+    width: 17px;
+    vertical-align: middle;
+    background-position: -6px -286px;
+    position: absolute;
+    left: 2px;
+    top:0;
+}
+.returnSettingsCommonMargin {
+    margin-top: 4%;
+}
+
+
+/* 30天 */
+.width48px{
+    width: 48px;
+}
+.height29 {
+    height: 29px;
+}
+.font-size16{
+    font-size: 16px;
+}
+.day{
+    position: absolute;
+    left: 0;
+    top:-265px;
+    z-index: 100;
+}
+.type{
+    position: absolute;
+    left: 0;
+    top:30px;
+    z-index: 100;
+}
+/* 退货原因（可选）： */
+.why{
+    position: absolute;
+    left: 0;
+    top:-180px;
+    z-index: 100;
+}
+/* hr */
+.a-divider-normal {
+    margin-top: .5%;
+    margin-bottom: 14px;
+}
+
+.noSizeWeight{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.editProductCategoryBox {
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+}
+.selectedProductCategories {
+    padding: 3% 1% .5% 5%;
+}
+.addProductCategorySection {
+    padding: 0 1% 6.5% 5%;
+}
+ul li a{
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* 退货地址设置 */
+.a-box .a-box-inner .pdBottom{
+    padding-bottom: 4px;
+}
+.a-color-tertiary {
+    color: #767676!important;
+}
+
+/* 改变图片 checkbox */
+.input_click{
+    outline: 0;
+    -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+    border-color: rgba(231, 118, 0, 1);
+    -webkit-box-shadow: 0 0 5px rgba(231, 118, 0, 1);
+}
+.checkbox_hover{
+    background-position: -54px -266px !important;
+}
+
+.checkbox_click{
+    background-position: -30px -266px !important;
+}
+.radio_hover{
+    background-position: -54px -286px !important;
+}
+.radio_click{
+    background-position: -30px -286px !important;
+}
+/* 退货属性覆盖 */
+.returnAttribuetOverridesListSectionContainer {
+    margin-top: .5%;
+    border: 1px solid #ccc;
+    border-radius: .25%;
+    min-height: 15%;
+    padding-bottom: 1%;
+}
+.returnAttributeOverridesListSectionHeading {
+    padding: .5%;
+    margin-bottom: 0!important;
+    border-bottom: 1px solid #ccc;
+    height: 5%;
+    background-color: #e6e6e6;
+}
+.paddedTop {
+    padding-top: .5%;
+}
+.noRequestFound {
+    padding-top: 1%;
+    text-align: center;
+}
+
+/* i */
+.a-alert-error {
+    border-color: #c40000;
+}
+.a-alert .a-icon-alert {
+    height: 27px;
+    width: 30px;
+    position: absolute;
+    left: 18px;
+    top: 11px;
+}
+
+.a-alert-error .a-icon-alert, .a-icon-error {
+    background-position: -248px -35px;
+}
+/* .return_request li span,.RMA li span,.routine_setting li span{
+    padding-left:30px
+} */

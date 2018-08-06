@@ -1,0 +1,38 @@
+$(function () {
+    var showText = true;
+    $('.a-tabs li').click(function () {
+        var index = $(this).index();
+        $(".chooseText>li").eq(index).removeClass("none").siblings().addClass("none");
+    })
+    $('.Textdetail>li').click(function (e) { 
+        var index = $(this).index(); 
+        console.log(e.target.className)
+        if(e.target.className.indexOf('edit') != '-1'){
+            // 点击编辑
+            $('.Textdetail li').eq(index).find('.save_cancel_Btn').show()
+            $('.Textdetail li').eq(index).find('.editBtn').hide()
+        }else if(e.target.className.indexOf('cancel') != '-1'){
+            //点击取消
+            $('.Textdetail li').eq(index).find('.save_cancel_Btn').hide()
+            $('.Textdetail li').eq(index).find('.editBtn').show()
+        }else{
+            if(showText){
+                $('.Textdetail li').eq(index).find('.a-section-expander-inner').removeClass('none')
+                $('.Textdetail li').eq(index).find('.a-icon-section-collapse').css({
+                    'backgroundPosition':'-5px -82px'
+                })
+                $('.Textdetail li').eq(index).find('.editBtn').show()
+                showText = false;
+            }else{
+                $('.Textdetail>li').eq(index).find('.a-section-expander-inner').addClass('none')
+                $('.Textdetail li').eq(index).find('.a-icon-section-collapse').css({
+                    'backgroundPosition':'-5px -59px'
+                })
+                $('.Textdetail li').eq(index).find('.editBtn').hide()
+                showText = true;
+            }
+        }
+        
+    })
+
+})

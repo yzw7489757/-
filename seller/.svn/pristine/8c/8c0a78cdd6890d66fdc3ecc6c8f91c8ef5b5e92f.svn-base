@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/formal_registration_address.css">
+</head>
+
+<body>
+    <div class="a-container">
+        <div class="a-row a-section relative bubbleStyle">
+            <h1 class="float_left a-color-state a-size-large a-text-bold width300">正式注册地址</h1>
+            <div id="learnmorehelplink" class="float_left ">
+                <a class="more_info tip">了解更多信息</a>
+                <i class="a-icon a-icon-popover"></i>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="successAlert" class="none a-box a-alert a-alert-success a-spacing-base">
+            <div class="a-box-inner a-alert-container">
+                <i class="a-icon a-icon-alert"></i>
+                <div class="a-alert-content">
+                    信息已更新成功
+                </div>
+            </div>
+        </div>
+        <div class="a-row">
+            <div class="bgcolor a-link-section-expander relative main_text_btn">
+                <i class="a-icon-img block a-icon a-icon-section-collapse"></i>
+            </div>
+            <div class="a-section-expander-inner main_text">
+                <div class="a-padding-base">
+                    <!-- ome -->
+                    <div class="add_new_address">
+                        <div class="a-ws-spacing-base" style=" margin-bottom: 25px;">
+                            <div class="width69 float_left">&nbsp;</div>
+                            <div class="width17 float_left">
+                                <a href="" class="add_new_address_a">添加新地址</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-section">
+                            <div id="addTmpl">
+                            </div>
+                            <script id="addArray" type="text/x-dot-template">
+                                {{~it:value:index}}
+                                <div class="adds" data-card="{{= value.address_id}}">
+                                    <div class="a-row">
+                                        <div class="a-box a-column width40 float_left a-spacing-small">
+                                            <div class="a-color-offset-background">
+                                                <div class="a-padding-large">
+                                                    <div class="float_left">
+                                                        <input type="radio" name="address">
+
+                                                    </div>
+                                                    <div class="float_left a-radio-p">
+                                                        <p>{{= decodeURIComponent(value.fullname)}} </p>
+                                                        <p>{{= decodeURIComponent(value.country)}} </p>
+                                                        <p>{{= decodeURIComponent(value.address)}} </p>
+                                                        <p>{{= decodeURIComponent(value.address2)}} </p>
+                                                        <br>
+                                                        <p>{{= decodeURIComponent(value.city)}} </p>
+                                                        <p>{{= decodeURIComponent(value.province)}} </p>
+                                                        <p>{{= decodeURIComponent(value.zipcode)}} </p>
+                                                        <p>{{= decodeURIComponent(value.country)}} </p>
+                                                        <p>{{= decodeURIComponent(value.phone)}} </p>
+                                                        <p>{{= decodeURIComponent(value.email)}} </p>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="a-column width6 float_left">&nbsp;</div>
+                                        {{? index%2 == 1}}
+                                        <div class="clear"></div>
+                                        {{?}}
+
+                                    </div>
+                                </div>
+                                {{~}}
+                            </script>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <div class="select_existing_address none">
+                        <div class="a-ws-spacing-base" style=" margin-bottom: 25px;">
+                            <div class="width17 float_left">&nbsp;</div>
+                            <div class="width61 float_left">
+                                <a href="" class="select_existing_address_a">选择现有地址</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-section">
+                            <!-- 国家/地区 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        国家/地区
+                                    </div>
+                                </div>
+                                <div class="width61 float_left relative  a-button relative" style="width: 160px">
+                                    <div id="chooseCountry" class="a-button-text  bank-account-dropdown box-sizing" style="width: 160px">
+                                        <p style="margin: 0" class="country_select">选择国家/地区</p>
+                                    </div>
+                                    <div class="countrySelect a-popover-wrapper a-text-left none" style=" height: 200px;min-width: 0px;width: 160px;">
+
+                                        <ul class=" a-row a-popover-inner a-popover-wrapper overflow_y ">
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_0" class="a-dropdown-item" aria-checked="true">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CN&quot;}" id="DEFAULToraAddressCountry_0"
+                                                    class="a-dropdown-link a-active">
+                                                    中国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_1" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TW&quot;}" id="DEFAULToraAddressCountry_1"
+                                                    class="a-dropdown-link">
+                                                    中国台湾
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_2" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;HK&quot;}" id="DEFAULToraAddressCountry_2"
+                                                    class="a-dropdown-link">
+                                                    中国香港
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_3" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DK&quot;}" id="DEFAULToraAddressCountry_3"
+                                                    class="a-dropdown-link">
+                                                    丹麦
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_4" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;UA&quot;}" id="DEFAULToraAddressCountry_4"
+                                                    class="a-dropdown-link">
+                                                    乌克兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_5" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;UG&quot;}" id="DEFAULToraAddressCountry_5"
+                                                    class="a-dropdown-link">
+                                                    乌干达
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_6" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TD&quot;}" id="DEFAULToraAddressCountry_6"
+                                                    class="a-dropdown-link">
+                                                    乍得
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_7" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AM&quot;}" id="DEFAULToraAddressCountry_7"
+                                                    class="a-dropdown-link">
+                                                    亚美尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_8" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;IL&quot;}" id="DEFAULToraAddressCountry_8"
+                                                    class="a-dropdown-link">
+                                                    以色列
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_9" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;RU&quot;}" id="DEFAULToraAddressCountry_9"
+                                                    class="a-dropdown-link">
+                                                    俄罗斯
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_10" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BG&quot;}" id="DEFAULToraAddressCountry_10"
+                                                    class="a-dropdown-link">
+                                                    保加利亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_11" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;HR&quot;}" id="DEFAULToraAddressCountry_11"
+                                                    class="a-dropdown-link">
+                                                    克罗地亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_12" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;IS&quot;}" id="DEFAULToraAddressCountry_12"
+                                                    class="a-dropdown-link">
+                                                    冰岛
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_13" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GN&quot;}" id="DEFAULToraAddressCountry_13"
+                                                    class="a-dropdown-link">
+                                                    几内亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_14" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;LI&quot;}" id="DEFAULToraAddressCountry_14"
+                                                    class="a-dropdown-link">
+                                                    列支敦士登
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_15" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CA&quot;}" id="DEFAULToraAddressCountry_15"
+                                                    class="a-dropdown-link">
+                                                    加拿大
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_16" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GA&quot;}" id="DEFAULToraAddressCountry_16"
+                                                    class="a-dropdown-link">
+                                                    加蓬
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_17" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;HU&quot;}" id="DEFAULToraAddressCountry_17"
+                                                    class="a-dropdown-link">
+                                                    匈牙利
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_18" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ZA&quot;}" id="DEFAULToraAddressCountry_18"
+                                                    class="a-dropdown-link">
+                                                    南非
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_19" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BW&quot;}" id="DEFAULToraAddressCountry_19"
+                                                    class="a-dropdown-link">
+                                                    博茨瓦纳
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_20" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;LU&quot;}" id="DEFAULToraAddressCountry_20"
+                                                    class="a-dropdown-link">
+                                                    卢森堡
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_21" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;IN&quot;}" id="DEFAULToraAddressCountry_21"
+                                                    class="a-dropdown-link">
+                                                    印度
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_22" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ID&quot;}" id="DEFAULToraAddressCountry_22"
+                                                    class="a-dropdown-link">
+                                                    印度尼西亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_23" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CO&quot;}" id="DEFAULToraAddressCountry_23"
+                                                    class="a-dropdown-link">
+                                                    哥伦比亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_24" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CR&quot;}" id="DEFAULToraAddressCountry_24"
+                                                    class="a-dropdown-link">
+                                                    哥斯达黎加
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_25" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CM&quot;}" id="DEFAULToraAddressCountry_25"
+                                                    class="a-dropdown-link">
+                                                    喀麦隆
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_26" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TR&quot;}" id="DEFAULToraAddressCountry_26"
+                                                    class="a-dropdown-link">
+                                                    土耳其
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_27" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;EG&quot;}" id="DEFAULToraAddressCountry_27"
+                                                    class="a-dropdown-link">
+                                                    埃及
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_28" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SN&quot;}" id="DEFAULToraAddressCountry_28"
+                                                    class="a-dropdown-link">
+                                                    塞内加尔
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_29" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;RS&quot;}" id="DEFAULToraAddressCountry_29"
+                                                    class="a-dropdown-link">
+                                                    塞尔维亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_30" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CY&quot;}" id="DEFAULToraAddressCountry_30"
+                                                    class="a-dropdown-link">
+                                                    塞浦路斯
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_31" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MX&quot;}" id="DEFAULToraAddressCountry_31"
+                                                    class="a-dropdown-link">
+                                                    墨西哥
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_32" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TG&quot;}" id="DEFAULToraAddressCountry_32"
+                                                    class="a-dropdown-link">
+                                                    多哥
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_33" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DO&quot;}" id="DEFAULToraAddressCountry_33"
+                                                    class="a-dropdown-link">
+                                                    多米尼加共和国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_34" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AT&quot;}" id="DEFAULToraAddressCountry_34"
+                                                    class="a-dropdown-link">
+                                                    奥地利
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_35" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BD&quot;}" id="DEFAULToraAddressCountry_35"
+                                                    class="a-dropdown-link">
+                                                    孟加拉国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_36" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AO&quot;}" id="DEFAULToraAddressCountry_36"
+                                                    class="a-dropdown-link">
+                                                    安哥拉
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_37" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NE&quot;}" id="DEFAULToraAddressCountry_37"
+                                                    class="a-dropdown-link">
+                                                    尼日尔
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_38" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NP&quot;}" id="DEFAULToraAddressCountry_38"
+                                                    class="a-dropdown-link">
+                                                    尼泊尔
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_39" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PY&quot;}" id="DEFAULToraAddressCountry_39"
+                                                    class="a-dropdown-link">
+                                                    巴拉圭
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_40" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PA&quot;}" id="DEFAULToraAddressCountry_40"
+                                                    class="a-dropdown-link">
+                                                    巴拿马
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_41" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BR&quot;}" id="DEFAULToraAddressCountry_41"
+                                                    class="a-dropdown-link">
+                                                    巴西
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_42" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BF&quot;}" id="DEFAULToraAddressCountry_42"
+                                                    class="a-dropdown-link">
+                                                    布基纳法索
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_43" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GR&quot;}" id="DEFAULToraAddressCountry_43"
+                                                    class="a-dropdown-link">
+                                                    希腊
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_44" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DE&quot;}" id="DEFAULToraAddressCountry_44"
+                                                    class="a-dropdown-link">
+                                                    德国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_45" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;IT&quot;}" id="DEFAULToraAddressCountry_45"
+                                                    class="a-dropdown-link">
+                                                    意大利
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_46" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;LV&quot;}" id="DEFAULToraAddressCountry_46"
+                                                    class="a-dropdown-link">
+                                                    拉脱维亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_47" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NO&quot;}" id="DEFAULToraAddressCountry_47"
+                                                    class="a-dropdown-link">
+                                                    挪威
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_48" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CZ&quot;}" id="DEFAULToraAddressCountry_48"
+                                                    class="a-dropdown-link">
+                                                    捷克共和国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_49" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MA&quot;}" id="DEFAULToraAddressCountry_49"
+                                                    class="a-dropdown-link">
+                                                    摩洛哥
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_50" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BN&quot;}" id="DEFAULToraAddressCountry_50"
+                                                    class="a-dropdown-link">
+                                                    文莱
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_51" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SK&quot;}" id="DEFAULToraAddressCountry_51"
+                                                    class="a-dropdown-link">
+                                                    斯洛伐克
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_52" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SI&quot;}" id="DEFAULToraAddressCountry_52"
+                                                    class="a-dropdown-link">
+                                                    斯洛文尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_53" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;LK&quot;}" id="DEFAULToraAddressCountry_53"
+                                                    class="a-dropdown-link">
+                                                    斯里兰卡
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_54" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SG&quot;}" id="DEFAULToraAddressCountry_54"
+                                                    class="a-dropdown-link">
+                                                    新加坡
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_55" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NZ&quot;}" id="DEFAULToraAddressCountry_55"
+                                                    class="a-dropdown-link">
+                                                    新西兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_56" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;JP&quot;}" id="DEFAULToraAddressCountry_56"
+                                                    class="a-dropdown-link">
+                                                    日本
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_57" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CL&quot;}" id="DEFAULToraAddressCountry_57"
+                                                    class="a-dropdown-link">
+                                                    智利
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_58" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;KH&quot;}" id="DEFAULToraAddressCountry_58"
+                                                    class="a-dropdown-link">
+                                                    柬埔寨
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_59" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GE&quot;}" id="DEFAULToraAddressCountry_59"
+                                                    class="a-dropdown-link">
+                                                    格鲁吉亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_60" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BE&quot;}" id="DEFAULToraAddressCountry_60"
+                                                    class="a-dropdown-link">
+                                                    比利时
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_61" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MU&quot;}" id="DEFAULToraAddressCountry_61"
+                                                    class="a-dropdown-link">
+                                                    毛里求斯
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_62" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;FR&quot;}" id="DEFAULToraAddressCountry_62"
+                                                    class="a-dropdown-link">
+                                                    法国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_63" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PL&quot;}" id="DEFAULToraAddressCountry_63"
+                                                    class="a-dropdown-link">
+                                                    波兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_64" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TH&quot;}" id="DEFAULToraAddressCountry_64"
+                                                    class="a-dropdown-link">
+                                                    泰国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_65" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;HN&quot;}" id="DEFAULToraAddressCountry_65"
+                                                    class="a-dropdown-link">
+                                                    洪都拉斯
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_66" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;HT&quot;}" id="DEFAULToraAddressCountry_66"
+                                                    class="a-dropdown-link">
+                                                    海地
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_67" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AU&quot;}" id="DEFAULToraAddressCountry_67"
+                                                    class="a-dropdown-link">
+                                                    澳大利亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_68" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;IE&quot;}" id="DEFAULToraAddressCountry_68"
+                                                    class="a-dropdown-link">
+                                                    爱尔兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_69" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;EE&quot;}" id="DEFAULToraAddressCountry_69"
+                                                    class="a-dropdown-link">
+                                                    爱沙尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_70" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;TT&quot;}" id="DEFAULToraAddressCountry_70"
+                                                    class="a-dropdown-link">
+                                                    特立尼达和多巴哥
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_71" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BO&quot;}" id="DEFAULToraAddressCountry_71"
+                                                    class="a-dropdown-link">
+                                                    玻利维亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_72" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SE&quot;}" id="DEFAULToraAddressCountry_72"
+                                                    class="a-dropdown-link">
+                                                    瑞典
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_73" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CH&quot;}" id="DEFAULToraAddressCountry_73"
+                                                    class="a-dropdown-link">
+                                                    瑞士
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_74" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BY&quot;}" id="DEFAULToraAddressCountry_74"
+                                                    class="a-dropdown-link">
+                                                    白俄罗斯
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_75" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;CI&quot;}" id="DEFAULToraAddressCountry_75"
+                                                    class="a-dropdown-link">
+                                                    科特迪瓦
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_76" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PE&quot;}" id="DEFAULToraAddressCountry_76"
+                                                    class="a-dropdown-link">
+                                                    秘鲁
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_77" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;LT&quot;}" id="DEFAULToraAddressCountry_77"
+                                                    class="a-dropdown-link">
+                                                    立陶宛
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_78" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;JO&quot;}" id="DEFAULToraAddressCountry_78"
+                                                    class="a-dropdown-link">
+                                                    约旦
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_79" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NA&quot;}" id="DEFAULToraAddressCountry_79"
+                                                    class="a-dropdown-link">
+                                                    纳米比亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_80" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;RO&quot;}" id="DEFAULToraAddressCountry_80"
+                                                    class="a-dropdown-link">
+                                                    罗马尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_81" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US&quot;}" id="DEFAULToraAddressCountry_81"
+                                                    class="a-dropdown-link">
+                                                    美国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_82" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;KE&quot;}" id="DEFAULToraAddressCountry_82"
+                                                    class="a-dropdown-link">
+                                                    肯尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_83" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;FI&quot;}" id="DEFAULToraAddressCountry_83"
+                                                    class="a-dropdown-link">
+                                                    芬兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_84" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GB&quot;}" id="DEFAULToraAddressCountry_84"
+                                                    class="a-dropdown-link">
+                                                    英国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_85" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;NL&quot;}" id="DEFAULToraAddressCountry_85"
+                                                    class="a-dropdown-link">
+                                                    荷兰
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_86" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MZ&quot;}" id="DEFAULToraAddressCountry_86"
+                                                    class="a-dropdown-link">
+                                                    莫桑比克
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_87" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PH&quot;}" id="DEFAULToraAddressCountry_87"
+                                                    class="a-dropdown-link">
+                                                    菲律宾
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_88" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;SV&quot;}" id="DEFAULToraAddressCountry_88"
+                                                    class="a-dropdown-link">
+                                                    萨尔瓦多
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_89" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;PT&quot;}" id="DEFAULToraAddressCountry_89"
+                                                    class="a-dropdown-link">
+                                                    葡萄牙
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_90" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ES&quot;}" id="DEFAULToraAddressCountry_90"
+                                                    class="a-dropdown-link">
+                                                    西班牙
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_91" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;BJ&quot;}" id="DEFAULToraAddressCountry_91"
+                                                    class="a-dropdown-link">
+                                                    贝宁
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_92" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;GQ&quot;}" id="DEFAULToraAddressCountry_92"
+                                                    class="a-dropdown-link">
+                                                    赤道几内亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_93" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;VN&quot;}" id="DEFAULToraAddressCountry_93"
+                                                    class="a-dropdown-link">
+                                                    越南
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_94" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AZ&quot;}" id="DEFAULToraAddressCountry_94"
+                                                    class="a-dropdown-link">
+                                                    阿塞拜疆
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_95" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;DZ&quot;}" id="DEFAULToraAddressCountry_95"
+                                                    class="a-dropdown-link">
+                                                    阿尔及利亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_96" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AL&quot;}" id="DEFAULToraAddressCountry_96"
+                                                    class="a-dropdown-link">
+                                                    阿尔巴尼亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_97" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;OM&quot;}" id="DEFAULToraAddressCountry_97"
+                                                    class="a-dropdown-link">
+                                                    阿曼
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_98" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;AR&quot;}" id="DEFAULToraAddressCountry_98"
+                                                    class="a-dropdown-link">
+                                                    阿根廷
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_99" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;KR&quot;}" id="DEFAULToraAddressCountry_99"
+                                                    class="a-dropdown-link">
+                                                    韩国
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_100" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MK&quot;}" id="DEFAULToraAddressCountry_100"
+                                                    class="a-dropdown-link">
+                                                    马其顿
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_101" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MY&quot;}" id="DEFAULToraAddressCountry_101"
+                                                    class="a-dropdown-link">
+                                                    马来西亚
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_102" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;MG&quot;}" id="DEFAULToraAddressCountry_102"
+                                                    class="a-dropdown-link">
+                                                    马达加斯加
+                                                </a>
+                                            </li>
+                                            <li tabindex="0" role="option" aria-labelledby="DEFAULToraAddressCountry_103" class="a-dropdown-item">
+                                                <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;ML&quot;}" id="DEFAULToraAddressCountry_103"
+                                                    class="a-dropdown-link">
+                                                    马里
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- 地址 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        地址
+                                    </div>
+                                </div>
+                                <div class="width61 float_left">
+                                    <input type="text" class="address_input a-width-large onfocusInput box-sizing">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--地址行2 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        地址行2
+                                    </div>
+                                </div>
+                                <div class="width61 float_left">
+                                    <input type="text" class="address2_input a-width-large onfocusInput box-sizing">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- 市/镇 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        市/镇
+                                    </div>
+                                </div>
+                                <div class="width61 float_left">
+                                    <input type="text" class="city_input a-width-large onfocusInput box-sizing">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- 州/省/地区 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        州/省/地区
+                                    </div>
+                                </div>
+                                <div class="width61 float_left">
+                                    <input type="text" class="province_input a-width-large onfocusInput box-sizing">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- 邮编 -->
+                            <div class="a-spacing-base">
+                                <div class="width17 float_left align_right ">
+                                    <div class="marginRight13 marTop5">
+                                        邮编
+                                    </div>
+                                </div>
+                                <div class="width61 float_left">
+                                    <input type="text" class="zipcode_input a-width-large onfocusInput box-sizing">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- three -->
+                    <div class="address_editing none">
+                        <div class="width6 float_left a-column">&nbsp;</div>
+                        <div class="width40 float_left a-column">
+                            <p class="fullname_p"></p>
+                            <p class="country_p"></p>
+                            <p class="address_p"></p>
+                            <p class="address2_p"></p>
+                            <br>
+                            <p class="city_p"></p>
+                            <p class="province_p"></p>
+                            <p class="zipcode_p"></p>
+                            <p class="phone_p"></p>
+                            <p class="email_p"></p>
+                        </div>
+                        <div class="width31 float_right a-column">
+                            <a class="address_editing_a">编辑</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="Btn a-row">
+                        <hr class="a-divider-normal">
+                        <div style=" margin-top: 35px;">
+                            <div class="width48 float_left marginRight13">
+                                <div class="a-button a-button-inner float_right">
+                                    <button class=" a-button-text cancelBtn">取消</button>
+                                </div>
+
+                            </div>
+                            <div class="width48 float_left">
+                                <div class="a-button a-button-primary saveBtn">
+                                    <button class=" a-button-text">保存</button>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a-row">
+                <a href="./account_information.html">返回“账户信息”</a>
+            </div>
+        </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+<script src="./js/webjs/formal_registration_address.js" type="text/javascript"></script>
+
+</html>

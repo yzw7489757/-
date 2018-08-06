@@ -102,7 +102,7 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">短信:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
+                                                    <div style="padding-left:2.5%;float:left;">
                                                         <div class="a-spacing-mini">
                                                             <div class="a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -188,8 +188,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -266,8 +266,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -307,8 +307,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -348,8 +348,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;"  class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -426,8 +426,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -467,8 +467,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -546,8 +546,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;"  class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -587,8 +587,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -628,8 +628,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -669,8 +669,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;"  class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -748,8 +748,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -826,8 +826,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -867,8 +867,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -927,7 +927,7 @@
                                 <div class="a-row">
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
-                                            <div class="a-spacing-small originalInfo">
+                                            <div class="a-spacing-small">
                                                 <div style="padding-left:25px">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
@@ -946,9 +946,9 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;"  class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
-                                                            <span> </span>
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
+                                                            <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -1034,8 +1034,8 @@
                                                     <div style="width:100px;margin-left:-100px;float:left;">
                                                         <span class="preference-group-label">电子邮件:</span>
                                                     </div>
-                                                    <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                        <div class="a-spacing-mini originalInfo">
+                                                    <div style="padding-left:2.5%;float:left;">
+                                                        <div class="a-spacing-mini">
                                                             <span>5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
@@ -1046,16 +1046,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="a-row addInput ">
-                                                            <input type="email" class="box-sizing a-input-text onfocusInput a-row" style="width: 82.948%;">
-                                                            <img src="./img/close.png" alt="">
-                                                            <br>
-                                                            <span>
-                                                                <a href=""> 添加另一个</a>
-                                                            </span>
-                                                        </div>
                                                     </div>
-
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
@@ -1085,8 +1076,8 @@
                                                 <div style="width:100px;margin-left:-100px;float:left;">
                                                     <span class="preference-group-label">电子邮件:</span>
                                                 </div>
-                                                <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                    <div class="a-spacing-mini originalInfo">
+                                                <div style="padding-left:2.5%;float:left;">
+                                                    <div class="a-spacing-mini">
                                                         <span>5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
@@ -1126,8 +1117,8 @@
                                                 <div style="width:100px;margin-left:-100px;float:left;">
                                                     <span class="preference-group-label">电子邮件:</span>
                                                 </div>
-                                                <div style="padding-left:2.5%;float:left;" class="a-row addInput">
-                                                    <div class="a-spacing-mini originalInfo">
+                                                <div style="padding-left:2.5%;float:left;">
+                                                    <div class="a-spacing-mini">
                                                         <span>5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
@@ -1167,8 +1158,8 @@
                                                 <div style="width:100px;margin-left:-100px;float:left;">
                                                     <span class="preference-group-label">电子邮件:</span>
                                                 </div>
-                                                <div style="padding-left:2.5%;float:left;"  class="a-row addInput">
-                                                    <div class="a-spacing-mini originalInfo">
+                                                <div style="padding-left:2.5%;float:left;">
+                                                    <div class="a-spacing-mini">
                                                         <span>5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">

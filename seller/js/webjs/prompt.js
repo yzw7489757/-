@@ -81,7 +81,7 @@ function dropdown_box(ulName, selectName) {
     });
   }
 
-//   
+//  退货通知里面的删除按钮 
   function deteleList(target , text){
     let $deleteBtn =$(target);
     var hr = '';
@@ -105,3 +105,9 @@ function dropdown_box(ulName, selectName) {
                         </li>`)
     $deleteBtn.append($deleteLi)        
   }
+
+  // 通知首选项页面中编辑按钮
+  function  addInput(target) { 
+      let $addinput = $('.addInput')
+
+   }

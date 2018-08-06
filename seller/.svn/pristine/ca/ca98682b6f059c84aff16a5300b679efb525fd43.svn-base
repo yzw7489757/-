@@ -77,9 +77,6 @@ ul.a-tabs:after{
     width: 16px;
     height: 16px;
 }
-.editImg{
-    background-image: url(../img/tick.png) !important;
-}
 .preference-group-label {
     color: #777;
     font-style: italic;

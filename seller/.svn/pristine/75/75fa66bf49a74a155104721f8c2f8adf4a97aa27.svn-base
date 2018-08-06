@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta id="i18n_pagename" content="account_information">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" type="text/css" href="./css/account_information.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container">
+        <h3 data-i18n-text="_body_shopper">
+        </h3>
+        <div class="container_content">
+            <table class="a-normal">
+                <tbody>
+                    <tr>
+                        <td class="a-span3 container_left">
+                            <div class="box a-padding-small">
+                                <table>
+                                    <tr class="height">
+                                        <td>
+                                            <h5 class="a-text-left">
+                                                <span class="mgleft5" data-i18n-text="_body_Welcome"></span><span class="mgleft5 shop_name"></span>
+                                            </h5>
+                                        </td>
+                                        <td>
+                                            <h5 class="a-text-right">
+                                                <a href="./account_seller_information.html" class="a-text-right" data-i18n-text="_body_SellerInformation">
+                                                </a>
+                                            </h5>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="box ">
+                                <div class="box_header a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_CommodityState">
+                                                    </h5>
+                                                </td>
+                                                <td class="a-text-right">
+                                                    <h5>
+                                                        <a href="./holiday_setting.html" data-i18n-text="_body_HolidaySetting"></a>
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content  ">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-right width50 a-text-right-td" data-i18n-text="_body_CurrentState">
+                                                </td>
+                                                <td class="a-text-left width50 paleft10 a-text-left-td" data-i18n-text="_body_NotAvailableSale">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="box ">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_Service">
+                                                    </h5>
+                                                </td>
+                                                <td class="a-text-right">
+                                                    <h5>
+                                                        <a href="./administration.html" data-i18n-text="_body_Administration"></a>
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content  ">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-right width52 pd7146 " data-i18n-text="_body_Shop">
+                                                </td>
+                                                <td class="a-text-left pdleft10 width50 pd7146 span_block">
+                                                    <span class="cntext" data-i18n-text="_body_Major"></span><span class="enText ">( Amazon.com.mx
+                                                        )</span> <span class="cntext " data-i18n-text="_body_Personal"></span><span class="enText "
+                                                            style="margin-bottom: 0">( Amazon.com, Amazon.ca )</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content  ">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-right width52 pd7146" data-i18n-text="_body_Logistics">
+                                                </td>
+                                                <td class="a-text-left pdleft10 width50 pd7146 span_block">
+                                                    <span class="cntext" data-i18n-text="_body_Register"></span><span class="enText2">(
+                                                        Amazon.com, Amazon.ca, Amazon.com.mx )</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <td>
+                        <td class="a-span6 content_center pdlr17">
+                            <div class="box ">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_PaymentInformation">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content ">
+                                    <div class="a-box">
+                                        <div class="a-box-inner">
+                                            <div class="a-row a-ws-ror" style="height: 29px">
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./deposit_method.html" class="a-link-normal urlDetail" data-i18n-text="_body_DepositMethod">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./payment_method.html" class="a-link-normal urlDetail" data-i18n-text="_body_PaymentMethod">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box ">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_BusinessInformation">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content" style="height: 115px">
+                                    <div class="a-box">
+                                        <div class="a-box-inner " style="height: 115px">
+                                            <div class="a-row a-ws-ror">
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./company_address.html" class="a-link-normal urlDetail" data-i18n-text="_body_OfficeAddress">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./company_name.html" class="a-link-normal urlDetail" data-i18n-text="_body_CorporateName">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./formal_registration_address.html" class="a-link-normal urlDetail" data-i18n-text="_body_RegisteredAddress">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./seller_mark.html" class="a-link-normal urlDetail" data-i18n-text="_body_SellerMark">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./uploading_data.html" class="a-link-normal urlDetail" data-i18n-text="_body_UploadingData">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./account_seller_information.html" class="a-link-normal urlDetail" data-i18n-text="_body_DisplayName">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box ">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_Deliver">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content">
+                                    <div class="a-box">
+                                        <div class="a-box-inner">
+                                            <div class="a-row a-ws-ror" style="height: 58px">
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./return_information.html" class="a-link-normal urlDetail" data-i18n-text="_body_ReturnInformation">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./distribution_setting.html" class="a-link-normal urlDetail" data-i18n-text="_body_DistributionSetting">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./international_return_provider.html" class="a-link-normal urlDetail" data-i18n-text="_body_InternationalReturn">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./distribution_preference.html" class="a-link-normal urlDetail" data-i18n-text="_body_PreferenceSetting">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box ">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_TaxInformation">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content">
+                                    <div class="a-box">
+                                        <div class="a-box-inner">
+                                            <div class="a-row a-ws-ror" style="height: 58px">
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./company_name.html" class="a-link-normal urlDetail" data-i18n-text="_body_TaxInformation">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="JavaScript:void(0)" class="a-link-normal urlDetail">RFC ID </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="JavaScript:void(0)" class="a-link-normal urlDetail">VAT 信息 </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="a-span3 content_question">
+                            <div class="box question">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_CommonProblem">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content   pd0">
+                                    <ul>
+                                        <li><a href="JavaScript:void(0)" data-i18n-text="_body_ClosingAccount"></a></li>
+                                        <li><a href="JavaScript:void(0)" data-i18n-text="_body_StopSelling"></a></li>
+                                        <li><a href="JavaScript:void(0)" data-i18n-text="_body_SaleGoods"></a></li>
+                                        <li><a href="JavaScript:void(0)" data-i18n-text="_body_IneffectiveInformation"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="box other_opt">
+                                <div class="box_header  a-padding-small">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="a-text-left">
+                                                    <h5 data-i18n-text="_body_RelatedLinks">
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="box_content   pd0">
+                                    <div class="a-box">
+                                        <div class="a-box-inner">
+                                            <div class="a-row a-ws-ror" style="height: 87px">
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="./notifying_first_option.html" class="a-link-normal urlDetail" data-i18n-text="_body_FirstOption">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="JavaScript:void(0)" class="a-link-normal urlDetail" data-i18n-text="_body_LoginSettings">
+                                                    </a>
+                                                </div>
+                                                <div class="a-column a-span5 accountInfo-Url">
+                                                    <a href="JavaScript:void(0)" class="a-link-normal urlDetail" data-i18n-text="_body_Closing">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+    <div id="spaui" class="spaui">
+        <ul class="spaui_ul">
+            <li id="spaui-head" class="spaui-head">
+                <ul id="spaui-head-controls" class="spaui-head-controls">
+                    <li class="spaui-head-controls-home spaui-head-icon"><a href="javascript:void(0);"><span
+                        class="spaui-sprite spaui-home"></span></a></li>
+                    <li><a href="javascript:void(0);"><span class="spaui-sprite spaui-resize-large" id="toggleChange">
+                    </span></a></li>
+                    <li class="spaui-head-controls-search" id="spaui-head-controls-search" style="width: 302px;
+                        overflow: visible;"><span class="spaui-search-icon" id="spaui-search-icon"><span
+                            class="spaui-sprite spaui-search-icon-image"></span></span>
+                        <div id="spaui-search">
+                            <input type="text" id="spaui-search-box" class="spaui-search-box" placeholder="搜索"
+                                autocomplete="off">
+                            <div id="spaui-search-suggestions" class="spaui-search-suggestions" data-tools-title="工具"
+                                data-history-title="热门搜索" data-ngram-title="热门搜索" data-merged-title="热门搜索" data-help-title="帮助"
+                                data-autohelp-title="帮助" data-previous-title="历史记录" style="width: 275px; top: 25px;">
+                                <div id="spaui-search-suggestions-list">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="spaui-head-controls-close-affordance" class="spaui-head-controls-close-affordance"
+                        style="display: none;"><a href="JavaScript:void(0)" id="spaui-close-affordance" class="spaui-sprite spaui-close-affordance"
+                            title="关闭"></a></li>
+                    <li class="spaui-head-controls-close spaui-head-icon" role="menuitem"><a href="JavaScript:void(0)"
+                        id="spaui-close" class="spaui-sprite spaui-close" title="关闭"></a></li>
+                </ul>
+            </li>
+            <li id="spaui-panel" class="spaui-panel asp">
+                <ul id="spaui-content-ui" class="spaui-content-ui">
+                    <li class="spaui-content-ui-back" style="display: none"><a href="JavaScript:void(0)"
+                        style="display: block" id="spaui-content-ui-back" class="asp-color-secondary"><span>
+                            < </span>上一步 </a></li>
+                    <li class="spaui-content-ui-feedback asp-text-right">
+                        <div id="spaui-content-ui-feedback-text" class="asp-text-right">
+                            <a href="JavaScript:void(0)" style="display: block" id="spaui-content-ui-feedback"
+                                class="spaui-feedback-link">提供反馈 </a>
+                        </div>
+                    </li>
+                </ul>
+                <div id="spaui-help-hub-input" class="asp spaui-help-hub-input">
+                </div>
+                <div id="spaui-content" class="spaui-content" tabindex="-1">
+                    <div id="spaui-inner-content">
+                        <div class="spaui-get-support-card" data-feature-name="getSupportCard">
+                            <div class="spaui-get-support-card-header">
+                                <h2 class="asp-size-large asp-spacing-small spaui-get-support-card-header-title">
+                                    获得支持
+                                </h2>
+                                <div class="spaui-get-support-card-header-content">
+                                    让我们开始吧。请选择一个主题，我们会给出相关解决方案建议。
+                                </div>
+                            </div>
+                            <ul class="asp-nostyle asp-vertical spaui-get-support-card-body">
+                                <!-- 111 -->
+                                <li id="accountshipping" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-accountshipping">
+                                        </span><span class="spaui-get-support-card-item-title">账户和配送设置</span> <span class="spaui-sprite spaui-toggle-icon">
+                                        </span>
+                                    </div>
+                                    <!-- 下拉列表 -->
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                我可以有多个卖家账户吗？</span> <span class="spaui-get-support-card-item-body-link ">不可以。禁止操作和持有多个卖家账户。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如果我的银行账户信息被拒绝，该怎么办？</span> <span class="spaui-get-support-card-item-body-link ">请仔细核对您的“存款方式”信息。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061940" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何切换销售计划或向销售计划添加新功能？</span> <span class="spaui-get-support-card-item-body-link ">请转至您的“卖家账户信息”页面进行选择。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521100" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何向国际买家销售商品？</span> <span class="spaui-get-support-card-item-body-link ">访问“全球开店”控制面板</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061790" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何关闭我的卖家账户？</span> <span class="spaui-get-support-card-item-body-link ">请在此查看我们的项目列表。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                                <!-- 222 -->
+                                <li id="paymentstax" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-paymentstax">
+                                        </span><span class="spaui-get-support-card-item-title">付款和税务设置</span> <span class="spaui-sprite spaui-toggle-icon">
+                                        </span>
+                                    </div>
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                我要开店的相关费用有哪些？</span> <span class="spaui-get-support-card-item-body-link ">了解销售计划费用的相关信息。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                为什么需要提供纳税人身份信息？</span> <span class="spaui-get-support-card-item-body-link ">了解有关 IRS
+                                                    规定的更多信息。</span> </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061940" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何更新我的纳税身份设置？</span> <span class="spaui-get-support-card-item-body-link ">请使用“法人实体”页面更新您的税务设置。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521100" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如果我没有纳税身份号码，该使用什么？</span> <span class="spaui-get-support-card-item-body-link ">请使用您的
+                                                    EIN 或 SSN。</span> </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                                <!-- 333 -->
+                                <li id="addproducts" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-addproducts">
+                                        </span><span class="spaui-get-support-card-item-title">将商品添加至亚马逊目录</span> <span class="spaui-sprite spaui-toggle-icon">
+                                        </span>
+                                    </div>
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何添加在亚马逊销售的商品？</span> <span class="spaui-get-support-card-item-body-link ">首先，请检查该商品是否已列在亚马逊目录中。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                为什么我的商品不显示？</span> <span class="spaui-get-support-card-item-body-link ">请查看常见原因。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061940" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                对商品信息中的图片有哪些要求？</span> <span class="spaui-get-support-card-item-body-link ">每个商品都需要一个有效图片。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521100" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何使用“添加新商品”设置变体？</span> <span class="spaui-get-support-card-item-body-link ">请使用“添加新商品”中的“重要信息”选项卡。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                                <!-- 444 -->
+                                <li id="sellrestricted" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-sellrestricted">
+                                        </span><span class="spaui-get-support-card-item-title">销售品牌商品、卖家制造商品或受限商品</span>
+                                        <span class="spaui-sprite spaui-toggle-icon"></span>
+                                    </div>
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何获批销售受限商品或分类？</span> <span class="spaui-get-support-card-item-body-link ">首先，请检查商品是否存在限制。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何管理我自己制造或拥有品牌的商品？</span> <span class="spaui-get-support-card-item-body-link ">请申请加入亚马逊品牌注册计划。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521100" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何找到商品的 UPC？</span> <span class="spaui-get-support-card-item-body-link ">请检查商品条形码或进行在线搜索。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061940" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何销售没有 UPC 的商品？</span> <span class="spaui-get-support-card-item-body-link ">请申请 UPC
+                                                    豁免或注册您的品牌。</span> </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                                <!-- 555 -->
+                                <li id="fba" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-fba"></span>
+                                        <span class="spaui-get-support-card-item-title">亚马逊物流 (FBA)</span> <span class="spaui-sprite spaui-toggle-icon">
+                                        </span>
+                                    </div>
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                亚马逊收取的亚马逊物流费用是多少？</span> <span class="spaui-get-support-card-item-body-link ">我要开店、库存仓储、配送和可选服务费用</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何开始使用亚马逊物流？</span> <span class="spaui-get-support-card-item-body-link ">请添加您的商品并将其设置为“亚马逊配送”。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201061940" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                如何对我的商品进行准备和贴标？</span> <span class="spaui-get-support-card-item-body-link ">所有商品都需要具有保护性包装和可扫描的条形码。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521100" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                                我可以将所有库存运送到同一库房吗？</span> <span class="spaui-get-support-card-item-body-link ">通常情况下不可以。</span>
+                                        </a></span></li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                                <!-- 666 -->
+                                <li id="other" class="spaui-get-support-card-item spaui-closed"><span class="asp-list-item">
+                                    <div class="spaui-get-support-card-item-header" data-feature-name="getSupportItemHeader">
+                                        <span class="spaui-sprite spaui-get-support-icon spaui-get-support-card-other"></span>
+                                        <span class="spaui-get-support-card-item-title">找不到所需内容？</span> <span class="spaui-sprite spaui-toggle-icon">
+                                        </span>
+                                    </div>
+                                    <ul class="asp-nostyle asp-vertical spaui-get-support-card-item-body" style="display: none">
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201521040" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                            </span><span class="spaui-get-support-card-item-body-link ">访问卖家大学</span> </a></span>
+                                        </li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/gp/help/201146530" data-feature-name="getSupportCardLink"><span class="spaui-get-support-card-item-body-text">
+                                            </span><span class="spaui-get-support-card-item-body-link ">查看政策和协议</span> </a></span>
+                                        </li>
+                                        <li class="spaui-get-support-card-item-linkgroup"><span class="asp-list-item"><a
+                                            href="/hz/contact-us?categoryId=30003&typeId=30048" data-feature-name="getSupportCardLink">
+                                            <span class="spaui-get-support-card-item-body-text">仍然存在疑问？</span> <span class="spaui-get-support-card-item-body-link ">
+                                                联系我们</span> </a></span></li>
+                                    </ul>
+                                </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script src="./js/webjs/account_information.js"></script>
+</html>
