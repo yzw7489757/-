@@ -28,6 +28,10 @@ body {
     content: '';
     display: table;
     clear: both;
+}.a-tab-container>ul:after{
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .a-tab-container>ul>li{

@@ -107,7 +107,7 @@ $(function () {
       $('.urlCanNotReceive').hide();
     }
     $('.urlSuccessMes').show();
-    statusUrl = true
+    statusUrl = true;
   });
   $('.submitSpan').click(function () {
     $('.success_status').hide()
@@ -137,29 +137,33 @@ $(function () {
   $('.submitSpan').click(function () {
     var name = $('.name_input').val().trim()
     var link = $('.shop_link_input').val().trim()
-    if(name && link){
-      $.ajax({
-        url: baseUrl + '/UpdateStoreDetails',
-        method: 'post',
-        dataType: "json",
-        data: {
-          userid: amazon_userid,
-          shop_name: name,
-          shop_link: link
-        },
-        success: function (res) {
-          console.log(res)
-          if (res.result == 1) {
-            console.log('success!')
+    var successInfo = $('.successMes').css('display')
+    console.log(successInfo)
+    if (name && link ){
+      if (successInfo == 'block') {
+        $.ajax({
+          url: baseUrl + '/UpdateStoreDetails',
+          method: 'post',
+          dataType: "json",
+          data: {
+            userid: amazon_userid,
+            shop_name: name,
+            shop_link: link
+          },
+          success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+              console.log('success!')
+            }
+          },
+          error: function () {
+            console.log(res.error)
           }
-        },
-        error: function () {
-          console.log(res.error)
-        }
-      })
-    }  
+        })
+      }
+
+    }
   })
-  //检查商店名称是否重复 
 
 
 

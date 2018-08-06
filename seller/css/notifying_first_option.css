@@ -1,0 +1,108 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+.notification-preferences-container {
+    max-width: 960px;
+    min-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+ul.a-tabs {
+    margin: 0;
+    list-style-type: none;
+    border: 1px solid #ddd;
+    padding: 0;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+ul.a-tabs:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.a-tabs>li{
+    float: left;
+    border:1px solid transparent;
+}
+.a-tabs>li:hover{
+    border-left-color: #ddd;
+    border-right-color: #ddd;
+    background-color: #fff;
+    border-top-color: #e77600;
+    color: #c45500;
+    font-weight: 700;
+    text-decoration: none;
+}
+.a-tabs>li>a{
+    transition: all .1s linear;
+    text-decoration: none;
+    line-height: 1;
+    padding: 15px 17px 15px 18px;
+    display: block;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    position: relative;
+    background-color: transparent;
+}
+.section-expander{
+    border-radius: 4px 4px 0 0;
+    padding: 11px 54px 11px 18px;
+    background-color: #f3f3f3;
+}
+.a-section-expander-inner {
+    padding: 12px 18px;
+    border-top: 0;
+}
+.checkbox{
+    width: 25px;
+    margin-left: -25px;
+    float: left;
+}
+.checkbox .empty-check-icon{
+    background-image: url(../img/empty_checkbox.png);
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+}
+.checkbox .icon{
+    display: inline-block;
+}
+.check-icon{
+    background-image: url(../img/checked_img.png);
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+}
+.preference-group-label {
+    color: #777;
+    font-style: italic;
+}
+.preference-description {
+    color: #777;
+}
+table.a-bordered td, table.a-bordered th {
+    padding: 7px 14px 6px;
+}
+table.a-bordered tr:first-child th {
+    background: #f0f0f0;
+    background: #f3f3f3;
+    background: -webkit-linear-gradient(top,#f8f8f8,#eee);
+    background: linear-gradient(to bottom,#f8f8f8,#eee);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    border-color: #e7e7e7;
+    border: 1px solid #ddd;
+}
+.contacts-table td {
+    vertical-align: middle;
+}
+table.a-bordered tr:nth-child(even) {
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+}
+table.a-bordered tr:last-child {
+    border: 1px solid #ddd;
+}

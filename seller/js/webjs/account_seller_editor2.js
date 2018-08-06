@@ -1,8 +1,8 @@
 $(function () {
-    inputctr.public.checkLogin(); 
-    var service_email=null;
-    var service_phone=null;
-    var service_reply_email= null;
+    inputctr.public.checkLogin();
+    var service_email = null;
+    var service_phone = null;
+    var service_reply_email = null;
     $('.submit_span').click(function () {
         function enterUserMessage(input, warn, Nodeclass, reg) {
             if ($(input).val() == '' || !(reg.test($(input).val()))) {
@@ -27,55 +27,59 @@ $(function () {
             $('.update').hide();
         }
     })
-     //卖家信息
-  $.ajax({
-    url: baseUrl + '/GetShopInfo',
-    method: 'post',
-    dataType: "json",
-    data: {
-      userid: amazon_userid
-    },
-    success: function (res) {
-      console.log(res)
-      if (res.result == 1) {
-        var data = res.data;
-        console.log(decodeURIComponent(data.service_email))
-         // 客户服务电子邮件：
-         $('.service_email_input').val(decodeURIComponent(data.service_email))
-         // 客户服务电话：
-         $('.service_phone_input').val(decodeURIComponent(data.service_phone))
-         // 客户服务回复电子邮件：
-         $('.service_reply_email_input').val(decodeURIComponent(data.service_reply_email))
-      }
-    }
-  })
-  //修改客户服务详细信息
-  $('.submitBtnSpan').click(function(){
-      var service_email=$('.service_email_input').val().trim()
-      var service_phone=$('.service_phone_input').val().trim()
-      var service_reply_email=$('.service_reply_email_input').val().trim()
-      if(service_email && service_phone && service_reply_email){
-        $.ajax({
-            url: baseUrl + '/UpdateServiceDetails',
-            method: 'post',
-            data: {
-                userid: amazon_userid,
-                service_email: service_email,
-                service_phone: service_phone,
-                service_reply_email: service_reply_email
-            },
-            success: function (res) {
-                console.log(res)
-                if (res.result == 1) {
-                    console.log('success!')
-                }
-            },
-            error: function () {
-                console.log(res.error)
+    //卖家信息
+    $.ajax({
+        url: baseUrl + '/GetShopInfo',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid
+        },
+        success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+                var data = res.data;
+                console.log(decodeURIComponent(data.service_email))
+                // 客户服务电子邮件：
+                $('.service_email_input').val(decodeURIComponent(data.service_email))
+                // 客户服务电话：
+                $('.service_phone_input').val(decodeURIComponent(data.service_phone))
+                // 客户服务回复电子邮件：
+                $('.service_reply_email_input').val(decodeURIComponent(data.service_reply_email))
             }
-        })
-      }
-    
-  })
-    
+        }
+    })
+    //修改客户服务详细信息
+    $('.submitBtnSpan').click(function () {
+        var service_email = $('.service_email_input').val().trim()
+        var service_phone = $('.service_phone_input').val().trim()
+        var service_reply_email = $('.service_reply_email_input').val().trim()
+        var display = $('.update').css('display')
+        if (service_email && service_phone && service_reply_email) {
+            if (display == 'block') {
+                $.ajax({
+                    url: baseUrl + '/UpdateServiceDetails',
+                    method: 'post',
+                    data: {
+                        userid: amazon_userid,
+                        service_email: service_email,
+                        service_phone: service_phone,
+                        service_reply_email: service_reply_email
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.result == 1) {
+                            console.log('success!')
+                        }
+                    },
+                    error: function () {
+                        console.log(res.error)
+                    }
+                })
+            }
+
+        }
+
+    })
+
 });
