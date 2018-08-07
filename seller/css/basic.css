@@ -711,3 +711,12 @@ label, legend {
     display:block;
     color: #111 !important;
 }
+/*  */
+.in-amzn-btn,span.in-amzn-btn span{
+    background-image: url(../img/amznbtn-sprite03._V395592492_.png)
+}
+.headerText{
+    color: #E47911;
+    font-size: 120%;
+    font-weight: bold;
+}
