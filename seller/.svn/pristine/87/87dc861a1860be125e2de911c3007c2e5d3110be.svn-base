@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/landing_settings_name.css">
+</head>
+
+<body>
+    <div class="ap_pagelet">
+        <div class="ap_pagelet_title">
+            <span class="ap_cnep_header"> 更改您的姓名 </span>
+        </div>
+        <div class="ap_cnep_subtitle">您可以在此修改您姓名。完成更改后需要点击"保存更改"按钮。</div>
+        <div class="ap_form_wrapper">
+            <table class="ap_form_table">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <div class="ap_section_title">
+                                <h2>您的新姓名是什么？</h2>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div  class="form_alert" style="display:none;">
+                                输入您的新名字
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="align_right">
+                                <span  class="ap_input_label">
+                                    <label for="ap_customer_name">新姓名：</label>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <span  class="ap_forminput">
+                                <input  type="text" tabindex="1" value="xubaohong" style="height: 16px">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <span class="in-amzn-btn btn-prim-med" id="cnep_1D_submit_button" unselectable="on">
+                                <span>
+                                    <input type="submit"  value="保存更改" tabindex="4">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+
+</html>

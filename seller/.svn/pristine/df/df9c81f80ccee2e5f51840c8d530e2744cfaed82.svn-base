@@ -1,0 +1,91 @@
+body {
+    font: 13px/1.231 Verdana,arial,helvetica,clean,sans-serif;
+}
+.ap_cnep_pagelet {
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 600px;
+    margin-bottom: 25px;
+}
+
+.ap_form_wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    min-width: 510px;
+}
+.ap_cnep_label {
+    float: left;
+    width: 120px;
+    text-align: right;
+    vertical-align: bottom;
+    font-weight: bold;
+}
+.ap_cnep_val {
+    word-wrap: break-word;
+    margin-right: 10px;
+}
+.ap_cnep_val {
+    display: inline-block;
+    float: left;
+    text-align: left;
+    vertical-align: bottom;
+    width: 260px;
+}
+.ap_cnep_edit {
+    display: inline-block;
+    vertical-align: bottom;
+    float: left;
+    width: 100px;
+}
+
+span.btn-sec-sml span {
+    background-position: right -46px;
+}
+span.in-amzn-btn span, span.in-amzn-btn-disabled span {
+    display: inline-block;
+}
+span.btn-sec-sml {
+    padding: 0 0 0 7px;
+    background-position: left -394px;
+}
+
+span.btn-prim-sml, span.btn-sec-sml {
+    height: 21px;
+}
+span.in-amzn-btn {
+    color: #006!important;
+}
+span.in-amzn-btn, span.in-amzn-btn-disabled {
+    max-width: 280px;
+    display: inline-block;
+}
+span.btn-prim-sml input, span.btn-sec-sml input {
+    font-size: 11px!important;
+    display: inline-block;
+    height: 21px;
+    margin: 0 0 1px;
+    border-width: 0 !important;
+}
+span.in-amzn-btn input {
+    color: #006!important;
+    cursor: pointer;
+    background: 0;
+    font-family: arial,sans-serif;
+    outline-width: 0;
+    outline: 0;
+}
+span.btn-sec-sml span input {
+    padding: 0 8px 0 8px;
+    margin: 0 0 0 -7px;
+    position: relative;
+    float: left;
+}
+.ap_cnep_form_row{
+    margin-top: 20px;
+    width: 450px;
+    text-align: center;
+}
