@@ -21,7 +21,13 @@ $(function () {
                 // 店面链接
                 $('.shop_link').text(decodeURIComponent(data.shop_link))
                 // 电话
-                $('.service_phone').text(decodeURIComponent(data.service_phone))
+                if(data.service_phone == ''){
+                    $('.service_phone').text('（无）点击【编辑】进行设置') 
+                }else{
+                    console.log(data.service_phone == '')
+                    $('.service_phone').text(decodeURIComponent(data.service_phone))
+                }
+                
             }
         }
     })

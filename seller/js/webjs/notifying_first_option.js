@@ -61,7 +61,7 @@ $(function () {
     $('.editBtn').each(function (index, item) {
         $('.editBtn').eq(index).click(function () {
             addInput($(this).parents('.parentNode').find('.addInput'))
-            $(this).parents('.parentNode').find('.email').text()
+            // $(this).parents('.parentNode').find('.email').text()
         })  
     })
     

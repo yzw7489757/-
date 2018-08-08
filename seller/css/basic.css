@@ -579,7 +579,7 @@ input[type=search] {
     top: 11px;
 }
 .a-alert-inline .a-icon-alert {
-    height: 13px;
+    height: 20px;
     width: 14px;
     position: absolute;
     left: 2px;
@@ -695,6 +695,7 @@ input[type=search] {
     height: 31px;
     padding: 3px 7px;
     line-height: normal;
+    box-sizing: border-box;
 }
 
 .a-form-label {

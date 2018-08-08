@@ -1,5 +1,5 @@
 $(function () {
-    inputctr.public.checkLogin(); 
+  inputctr.public.checkLogin();
   var prevData = null;
   var method_id = null;
   var account_number = null;
@@ -8,6 +8,8 @@ $(function () {
   var show = true; // 设置存款方式
   $(".update_deposit").click(function (e) {
     e.preventDefault();
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
     deposit = true;
     show = false;
     $(".table_one").hide();
@@ -335,6 +337,7 @@ $(function () {
         var data = res.data
         $('.bank_location').text(decodeURIComponent(data.bank_location))
         $('.account_name').text(decodeURIComponent(data.account_name))
+        $('.account_number').text(data.account_number)
       }
     }
   })
@@ -351,8 +354,8 @@ $(function () {
       if (res.result == 1) {
         method_id = res.SelectMethod_id
         res.strDeposit.forEach(function (item) {
-        item.status = (item.method_id === res.SelectMethod_id) ? true : false
-      })
+          item.status = (item.method_id === res.SelectMethod_id) ? true : false
+        })
         var data = res.strDeposit
         var bank = doT.template($('#bankArray').text());
         $('#bankTmpl').html(bank(data));
@@ -364,34 +367,45 @@ $(function () {
       }
     }
   })
-  
-  $('.set_deposit').click(function () {  // 银行账号
+
+  $('.set_deposit').click(function () { // 银行账号
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
+    $('.errorInfo').hide()
     // 设置存款方式
-    if( show ){
+    if (show) {
       var account_number = $('.account_number_input').val().trim()
-      $.ajax({
-        url: baseUrl + '/SetDepositMade',
-        method: 'post',
-        dataType: "json",
-        data: {
-          userid: amazon_userid,
-          method_id: method_id,
-          account_number: account_number
-        },
-        success: function (res) {
-          console.log(res)
-          if (res.result == 1) {
-  
-          } else {
+      if (account_number) {
+        $.ajax({
+          url: baseUrl + '/SetDepositMade',
+          method: 'post',
+          dataType: "json",
+          data: {
+            userid: amazon_userid,
+            method_id: method_id,
+            account_number: account_number
+          },
+          success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+
+            } else {
+              $('.errorInfo').show()
+              console.log(decodeURIComponent(res.error))
+            }
+          },
+          error: function (res) {
+           
             console.log(decodeURIComponent(res.error))
           }
-        },
-        error: function (res) {
-          console.log(decodeURIComponent(res.error))
-        }
-      })
+        })
+      } else {
+        addwarn("account_number", 2, "必填字段");
+        $('.account_number_input').addClass('activebtn')
+      }
+
     }
-    
+
     // 新增存款方式
     if (deposit) {
       // 银行所在地
@@ -402,31 +416,62 @@ $(function () {
       var routing_number = $('.routing_number_input').val().trim()
       // 银行账号
       var account_number2 = $('.account_number_input2').val().trim()
-      if (bank_location && account_name && routing_number && account_number2) {
-        $.ajax({
-          url: baseUrl + '/AddDepositMethod',
-          method: 'post',
-          dataType: "json",
-          data: {
-            userid: amazon_userid,
-            bank_location: bank_location,
-            account_name: account_name,
-            routing_number: routing_number,
-            account_number: account_number2
-          },
-          success: function (res) {
-            console.log(res)
-            if (res.result == 1) {
-            } else {
-              console.log(decodeURIComponent(res.error))
-            }
-          }
-        })
-        
-
+      // 重新输入银行账号
+      var againBankIds_input = $('.againBankIds_input').val().trim()
+      // 为防止滥用您的银行账户，您需要验证末尾数字为
+      var SelectNumber = $('.account_number_input').val().trim()
+      if(!account_name){
+        addwarn("account_name", 2, "必填字段");
+        $('.account_name_input ').addClass('activebtn')
+      }if(!routing_number){
+        addwarn("routing_number", 2, "必填字段");
+        $('.routing_number_input').addClass('activebtn')
       }
+      if(!account_number2){
+        addwarn("account_number2", 2, "必填字段");
+        $('.account_number_input2').addClass('activebtn')
+      }
+      if(!SelectNumber){
+        addwarn("account_number", 2, "必填字段"); 
+        $('.account_number_input').addClass('activebtn')
+      }
+      if(!againBankIds_input){
+        $('.againBankIds_input').addClass('activebtn')
+        addwarn("againBankIds", 2, "必填字段");
+      }
+      if (account_name && routing_number && account_number2 && SelectNumber) {
+        $("div.myWarn").remove();
+        $('input').removeClass('activebtn')
+        if (againBankIds_input === account_number2) {
+          $.ajax({
+            url: baseUrl + '/AddDepositMethod',
+            method: 'post',
+            dataType: "json",
+            data: {
+              userid: amazon_userid,
+              bank_location: bank_location,
+              account_name: account_name,
+              routing_number: routing_number,
+              account_number: account_number2,
+              SelectNumber: SelectNumber
+            },
+            success: function (res) {
+              console.log(res)
+              if (res.result == 1) {
+                console.log(res)
+              }else{
+                $('.errorInfo').show()
+                console.log(decodeURIComponent(res.error))
+              }
+            }
+          })
+        }else{   
+          addwarn("againBankIds_id", 2, "账号不符");
+          $('.againBankIds_input').addClass('activebtn')
+        }
+      } 
     }
   })
- 
+
 
 })

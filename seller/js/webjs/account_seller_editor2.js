@@ -3,29 +3,88 @@ $(function () {
     var service_email = null;
     var service_phone = null;
     var service_reply_email = null;
+    //修改客户服务详细信息
     $('.submit_span').click(function () {
-        function enterUserMessage(input, warn, Nodeclass, reg) {
-            if ($(input).val() == '' || !(reg.test($(input).val()))) {
+        $('.update').hide();
+
+        function enterUserMessage(input, warn, warnError, Nodeclass, reg) {
+            if ($(input).val() == '') {
                 $(input).addClass(Nodeclass);
                 $(warn).show();
                 return false
+            } else if ($(input).val() != '' && !(reg.test($(input).val()))) {
+                $(input).addClass(Nodeclass);
+                $(warnError).show();
+                return false
             } else {
                 $(warn).hide();
+                $(warnError).hide();
                 $(input).removeClass(Nodeclass);
                 return true
             }
         }
         let email = new RegExp(/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/)
         let tel = new RegExp(/^[1][3,4,5,7,8][0-9]{9}$/);
-        let userEmail = enterUserMessage('#userEmailInput', '.group_input0_no', 'activebtn', email)
-        let userTel = enterUserMessage('#usertelphone', '.group_input1_no', 'activebtn', tel)
-        let saleEmail = enterUserMessage('#saleEmailInput', '.group_input2_no', 'activebtn', email)
-        console.log(userEmail, userTel, saleEmail)
-        if (userEmail && userTel && saleEmail) {
-            $('.update').show();
-        } else {
-            $('.update').hide();
+        let userEmail = enterUserMessage('#userEmailInput', '.group_input0_no', '.group_input0_error', 'activebtn', email)
+        let userTel = enterUserMessage('#usertelphone', '.group_input1_error', '.group_input1_no', '.activebtn', tel)
+        let saleEmail = enterUserMessage('#saleEmailInput', '.group_input2_no', '.group_input2_error', 'activebtn', email)
+        // 客户服务电子邮件
+        let service_email = $('.service_email_input').val()
+        // 客户服务回复电子邮件：
+        let service_reply_email = $('.service_reply_email_input').val()
+        // 客户服务电话：
+        let service_phone = $('.service_phone_input').val()
+        if (service_phone === "") {
+            $('.group_input1_no').hide()
+            if (userEmail && saleEmail) {
+                $.ajax({
+                    url: baseUrl + '/UpdateServiceDetails',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        service_email: service_email,
+                        service_phone: service_phone,
+                        service_reply_email: service_reply_email
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.resut == 1) {
+                            $('.update').show();
+                            console.log('success!')
+                        }
+                    },
+                    error: function () {
+                        console.log(res.error)
+                    }
+                })
+            }
+        } else if (userTel) {
+            if (userEmail && saleEmail) {
+                $.ajax({
+                    url: baseUrl + '/UpdateServiceDetails',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        service_email: service_email,
+                        service_phone: service_phone,
+                        service_reply_email: service_reply_email
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.resut == 1) {
+                            $('.update').show();
+                            console.log('success!')
+                        }
+                    },
+                    error: function () {
+                        console.log(res.error)
+                    }
+                })
+            }
         }
+
     })
     //卖家信息
     $.ajax({
@@ -49,37 +108,6 @@ $(function () {
             }
         }
     })
-    //修改客户服务详细信息
-    $('.submitBtnSpan').click(function () {
-        var service_email = $('.service_email_input').val().trim()
-        var service_phone = $('.service_phone_input').val().trim()
-        var service_reply_email = $('.service_reply_email_input').val().trim()
-        var display = $('.update').css('display')
-        if (service_email && service_phone && service_reply_email) {
-            if (display == 'block') {
-                $.ajax({
-                    url: baseUrl + '/UpdateServiceDetails',
-                    method: 'post',
-                    data: {
-                        userid: amazon_userid,
-                        service_email: service_email,
-                        service_phone: service_phone,
-                        service_reply_email: service_reply_email
-                    },
-                    success: function (res) {
-                        console.log(res)
-                        if (res.result == 1) {
-                            console.log('success!')
-                        }
-                    },
-                    error: function () {
-                        console.log(res.error)
-                    }
-                })
-            }
 
-        }
-
-    })
 
 });

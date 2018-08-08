@@ -143,7 +143,14 @@ $(function () {
         var zipcode = $('.zipcode_input').val().trim()
         // 手机号
         var phone = $('.phone_input').val().trim()
-
+        if(!card_number ){
+            addwarn("address", 2, "必填字段");
+            $('.card_number_input').addClass('activebtn')
+        }
+        if(!address){
+            addwarn("card_number", 2, "必填字段");
+            $('.address_input').addClass('activebtn')
+        }
         //设置付款方式1
         if (show) {
             $.ajax({
@@ -167,7 +174,7 @@ $(function () {
                 }
             })
         }
-
+        
         if (address &&  city && country && zipcode && phone) {
             //新增邮寄地址
             $.ajax({

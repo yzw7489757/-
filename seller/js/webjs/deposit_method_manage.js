@@ -13,6 +13,7 @@ $(function () {
         var data = res.data
         $('.bank_location').text(decodeURIComponent(data.bank_location))
         $('.account_name').text(decodeURIComponent(data.account_name))
+        $('.account_number').text(decodeURIComponent(data.account_number))
       }
     }
   })

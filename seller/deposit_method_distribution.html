@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/deposit_method_distribution.css">
     <link rel="stylesheet" href="./css/prompt.css">
 </head>
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                     <hr class="a-divider-normal">
-                    <div class="a-section a-spacing-base">
+                    <div class="a-section a-spacing-base errorInfo none">
                         <div class="a-row">
                             <div class="a-box a-alert a-alert-error">
                                 <div class="a-box-inner a-alert-container">
@@ -92,7 +93,7 @@
                                                     </div>
                                                     <div class="a-row">
                                                         <span class="a-color-tertiary">结束</span>
-                                                        <span class="a-size-medium">808</span>
+                                                        <span class="a-size-medium account_number">808</span>
                                                     </div>
                                                 </div>
                                                 <div class="a-spacing-top-small width48 float_left ">
@@ -162,7 +163,7 @@
                                                         <div class="a-row a-ws-row overflow_hidden">
                                                             <div class="width22 float_left">
                                                                 <span class="a-color-tertiary">结束</span>
-                                                                <span class="a-text-bold">808</span>
+                                                                <span class="a-text-bold">{{= decodeURIComponent(value.account_number)}}</span>
                                                             </div>
                                                             <div class="width22 float_left">
                                                                 <span class="a-color-tertiary">{{= decodeURIComponent(value.bank_location)}}</span>
@@ -204,7 +205,7 @@
                                             <div class="width48 float_left ">
                                                 <div class="a-section a-spacing-none bank-account-dropdown">
                                                     <select class="bank_location_select bank-account-dropdown-select celwidget ng-pristine ng-valid ng-not-empty ng-touched"
-                                                        name="bankCountrySelect">
+                                                        name="bankCountrySelect" disabled="disabled" >
                                                         <option label="中国" value="string:CN">中国</option>
                                                         <option label="加拿大" value="string:CA">加拿大</option>
                                                         <option label="卢森堡" value="string:LU">卢森堡</option>
@@ -284,7 +285,7 @@
                                                         </div>
                                                     </span>
                                                 </div>
-                                                <div class="a-row">
+                                                <div class="a-row" id="account_name">
                                                     <input type="text" class="account_name_input hasUser_input a-row a-input-text a-spacing-top-micro border_box" placeholder="姓名应与银行证件上的相同">
                                                 </div>
                                             </div>
@@ -408,8 +409,8 @@
                                                         <img src="./img/u368._V279572601_.png" alt="">
                                                     </span>
                                                 </div>
-                                                <div class="a-row">
-                                                    <input type="text" class="routing_number_input nightBankCode_input a-row a-input-text a-spacing-top-micro border_box" placeholder="9 位 数">
+                                                <div class="a-row" id="routing_number">
+                                                    <input type="text" class="routing_number_input nightBankCode_input a-row a-input-text a-spacing-top-micro border_box" placeholder="9 位 数" maxlength="9">
                                                 </div>
                                             </div>
                                             <div class="width99 a-spacing-top-base bankIds " id="bankIds">
@@ -417,8 +418,8 @@
                                                 <div class="a-row">
                                                     <span>银行账号</span>
                                                 </div>
-                                                <div class="a-row">
-                                                    <input type="text" class="account_number_input2 bankIds_input a-row a-input-text a-spacing-top-micro border_box" placeholder="介于 3 至 12 位数字之间">
+                                                <div class="a-row" id="account_number2">
+                                                    <input type="text" class="account_number_input2 bankIds_input a-row a-input-text a-spacing-top-micro border_box" placeholder="介于 3 至 12 位数字之间" maxlength="15" minlength="3">
                                                 </div>
                                             </div>
                                             <div class="width99 a-spacing-top-base againBankIds " id="againBankIds">
@@ -426,7 +427,7 @@
                                                 <div class="a-row">
                                                     <span>重新输入银行账号</span>
                                                 </div>
-                                                <div class="a-row">
+                                                <div class="a-row" id="againBankIds_id">
                                                     <input type="text" class="againBankIds_input a-row a-input-text a-spacing-top-micro border_box">
                                                 </div>
                                             </div>
@@ -656,7 +657,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="a-row  a-box" id="agreement">
+                                <div class="a-row  a-box " id="agreement" style="display:none">
                                     <div class="a-box-inner">
                                         <div class="a-row">
                                             <span class="a-size-small">此银行账户的所有付款将以银行所在国家/地区的货币完成。 将会按照要求使用 Amazon Payments 为卖家提供的亚马逊货币转换器将资金转换为银行所在国家的货币。
@@ -699,7 +700,7 @@
                                                         <img src="./img/u368._V279572601_.png" alt="">
                                                     </span>
                                                 </div>
-                                                <div class="a-row">
+                                                <div class="a-row " id="same_name_id">
 
                                                     <input type="text" class="same_name_input a-row a-input-text a-spacing-top-micro border_box" placeholder="姓名应与银行证件上的相同">
 
@@ -772,14 +773,14 @@
                                     识别您的银行账户
                                 </div>
                                 <div class="a-row a-size-small a-color-base">
-                                    为防止滥用您的银行账户，您需要验证末尾数字为808的账户详情，并提供完整的账号。
+                                    为防止滥用您的银行账户，您需要验证末尾数字为<span class="account_number">808</span>的账户详情，并提供完整的账号。
                                 </div>
                                 <div class="a-row a-ws-row">
                                     <div class="a-row a-spacing-top-base" id="bank">
                                         <div class="a-row bankAccountVerificationLabel">
                                             <span>银行账号</span>
                                         </div>
-                                        <div class="a-row">
+                                        <div class="a-row" id="account_number">
                                             <input type="text" class="account_number_input bank_input a-input-text a-spacing-top-micro border_box width48">
                                         </div>
 
@@ -794,14 +795,17 @@
                         <div class="width22 a-column float_left">
                             <div class="a-spacing-top-small a-button a-row ">
                                 <span class="a-button-inner">
-                                    <span class="a-button-text block pdTop5">取消</span>
+                                    <a href="./deposit_method.html" class="click_a">
+                                        <span class="a-button-text block ">取消</span>
+                                    </a>
                                 </span>
                             </div>
                         </div>
                         <div class="width22 a-column float_left">
                             <div class="a-spacing-top-small a-button a-button-primary a-row setting_deposit">
                                 <span class="a-button-inner">
-                                    <span class="a-button-text block pdTop5 set_deposit ">设置存款方式</span>
+                                    
+                                    <span class="a-button-text block  set_deposit ">设置存款方式</span>
                                 </span>
                             </div>
                         </div>
