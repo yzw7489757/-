@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/basic.css">
-    <!-- <link rel="stylesheet" href="./css/payment_method_info_editor.css">
-    <link rel="stylesheet" href="./css/payment_method.css"> -->
+    <!-- <link rel="stylesheet" href="./css/payment_method_info_editor.css"> -->
+    <link rel="stylesheet" href="./css/payment_method.css"> 
     <link rel="stylesheet" href="./css/change_payment_method.css">
     <link rel="stylesheet" href="./css/header_nav.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -77,36 +77,40 @@
                                                                     当前付费方式
                                                                 </h6>
                                                                 <div class="a-divider a-divider-break"></div>
-                                                                <div class="a-row a-spacing-top-mini">
-                                                                    <div class="width48 float_left">
-                                                                        <div class="a-row">
-                                                                            <h6 class="a-color-tertiary ">
-                                                                                信用卡
-                                                                            </h6>
+                                                                <div id="card_Div"></div>
+                                                                <script type="text/x-dot-template" id="card_tmpl">
+                                                                    <div class="a-row a-spacing-top-mini">
+                                                                        <div class="width48 float_left">
+                                                                            <div class="a-row">
+                                                                                <h6 class="a-color-tertiary ">
+                                                                                    信用卡
+                                                                                </h6>
+                                                                            </div>
+                                                                            <div class="a-row">
+                                                                                <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                                <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                                <span class="a-size-medium img-with-bottom-text card_number">{{=it.card_number}}</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="a-row">
-                                                                            <img src="./img/mastercard_curved_64px.png" alt="">
-                                                                            <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                            <span class="a-size-medium img-with-bottom-text card_number">5723</span>
+                                                                        <div class="width48 float_right">
+                                                                            <h6 class="a-color-tertiary ">到期时间</h6>
+                                                                            <div class="a-row">
+                                                                                <span class="a-size-base valid_through_month">{{=it.valid_through_month}}</span>
+                                                                                <span class="a-size-base ">/</span>
+                                                                                <span class="a-size-base valid_through_year">{{=it.valid_through_year}}</span>
+                                                                            </div>
+                                                                            <h6 class="a-color-tertiary a-spacing-top-mini">持卡人的姓名</h6>
+                                                                            <div class="a-row">
+                                                                                <span class="a-size-base card_holder_name">{{=it.card_holder_name}}</span>
+                                                                            </div>
+                                                                            <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
+                                                                            <div class="a-row">
+                                                                                <span class="strAddressInfo">{{=it.strAddressInfo}}</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="width48 float_right">
-                                                                        <h6 class="a-color-tertiary ">到期时间</h6>
-                                                                        <div class="a-row">
-                                                                            <span class="a-size-base valid_through_month">12</span>
-                                                                            <span class="a-size-base ">/</span>
-                                                                            <span class="a-size-base valid_through_year">2022</span>
-                                                                        </div>
-                                                                        <h6 class="a-color-tertiary a-spacing-top-mini">持卡人的姓名</h6>
-                                                                        <div class="a-row">
-                                                                            <span class="a-size-base card_holder_name">xu bao hong</span>
-                                                                        </div>
-                                                                        <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
-                                                                        <div class="a-row">
-                                                                            <span class="strAddressInfo"></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                </script>
+                                                                
                                                             </div>
 
                                                         </div>
@@ -253,7 +257,7 @@
                                                                         <div id="bankTmpl"></div>
                                                                         <script id="bankArray" type="text/x-dot-template">
                                                                             {{~it:value:index}}
-                                                                            <div class="banks overflow_hidden" data-card="{{= value.method_id}}">
+                                                                            <div class="banks overflow_hidden" data-card="{{= value.method_id}}" data-address="{{= value.strAddressInfo}}">
                                                                                 <div class="width5 float_left a-column2_7">
                                                                                     {{? value.status == true}}
                                                                                     <input type="radio" name="card" checked> {{??}}
@@ -266,18 +270,20 @@
                                                                                             <div class="a-row">
                                                                                                 <img src="./img/mastercard_curved_64px.png" alt="">
                                                                                                 <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                                                <span class="a-size-medium img-with-bottom-text">{{= value.card_number}}</span>
+                                                                                                <span class="a-size-medium card_number img-with-bottom-text">{{= value.card_number}}</span>
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="width65 float_left">
                                                                                             <div class="width48 float_left">
                                                                                                 <span class="a-color-tertiary">到期时间</span>
-                                                                                                <span class="a-text-bold">{{= value.valid_through_month}}/{{=
-                                                                                                    value.valid_through_year}}
+                                                                                                <span class="a-text-bold">
+                                                                                                    <em class="valid_through_month">{{= value.valid_through_month}}</em>
+                                                                                                    /
+                                                                                                    <em class="valid_through_year">{{=value.valid_through_year}}</em>
                                                                                                 </span>
                                                                                             </div>
                                                                                             <div class="width48 float_left">
-                                                                                                <span class="a-text-bold">{{= decodeURIComponent(value.card_holder_name)}}</span>
+                                                                                                <span class="a-text-bold card_holder_name">{{= decodeURIComponent(value.card_holder_name)}}</span>
                                                                                             </div>
                                                                                             <div class="clear"></div>
                                                                                         </div>

@@ -1,10 +1,17 @@
 $(function () {
-    var showText = true;
     var email = $('.email').text()
     $('.a-tabs li').click(function () {
         var index = $(this).index();
+        // $(this).addClass('active_tabs').siblings().removeClass('active_tabs')
         $(".chooseText>li").eq(index).removeClass("none").siblings().addClass("none");
     })
+    
+    $('.a-tabs li').hover(function () {
+            $(this).addClass('active_tabs').siblings().removeClass('active_tabs')
+        }, function () {
+            $(this).removeClass('active_tabs')
+        }
+    );
     $('.title').each(function (index, item) {
         $('.title').eq(index).click(function (e) {
             var TextdetailLi = $('.title').eq(index)
@@ -14,23 +21,39 @@ $(function () {
                 TextdetailLi.find('.editBtn').hide()
                 TextdetailLi.parents('.parentNode').find('.check-icon').addClass('editImg')
                 TextdetailLi.parents('.parentNode').find('.originalInfo').hide()
-
+                if(($(this).parents('.parentNode').find('.addInput_enter')).length == 0){
+                    addInput($(this).parents('.parentNode').find('.addInput'))
+                }
             } else if (e.target.className.indexOf('cancel') != '-1') {
                 //点击取消
                 TextdetailLi.parents('.parentNode').find('.originalInfo').show()
                 TextdetailLi.find('.save_cancel_Btn').hide()
                 TextdetailLi.find('.editBtn').show()
+                TextdetailLi.parents('.parentNode').find('.addInput_enter').remove()
                 TextdetailLi.parents('.parentNode').find('.check-icon').removeClass('editImg')
             }else if(e.target.className.indexOf('save') != '-1'){
-                
+                // TextdetailLi.parents('.parentNode');
+                let liInput = TextdetailLi.parents('.parentNode').find('.addInput_enter')
+                for(let i = 0 ;i<liInput.length;i++){
+                    let val = liInput.eq(i).find('input[type=email]').eq(0).val();
+                    TextdetailLi.parents('.parentNode').find('.email').eq(i).show().text(val)
+                }
+                TextdetailLi.parents('.parentNode').find('.addInput_enter').remove()
+                TextdetailLi.parents('.parentNode').find('.originalInfo').show()
+                TextdetailLi.find('.save_cancel_Btn').hide()
+                TextdetailLi.find('.editBtn').show()
+                TextdetailLi.parents('.parentNode').find('.check-icon').removeClass('editImg')
             }else {
-                if (showText) {
+                let show = TextdetailLi.parents('.parentNode').attr('data-show');
+                show === 'false' ? show = true : show = false;
+                console.log(show)
+                TextdetailLi.parents('.parentNode').attr('data-show',show)
+                if (show) {
                     TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').show()
                     TextdetailLi.find('.a-icon-section-collapse').css({
                         'backgroundPosition': '-5px -82px'
                     })
                     TextdetailLi.find('.editBtn').show()
-                    showText = false;
                 } else {
                     TextdetailLi.find('.save_cancel_Btn').hide()
                     TextdetailLi.find('.editBtn').hide()
@@ -39,38 +62,26 @@ $(function () {
                         'backgroundPosition': '-5px -59px'
                     })
                     TextdetailLi.find('.editBtn').hide()
-                    showText = true;
                 }
             }
-
         })
     })
+
     // 通知首选项页面中编辑按钮
     function addInput(target) {
-        let $addinputUl = target;
-        let $addinputLi = $(`
-            <li>
-                <input type="email" class="box-sizing a-input-text onfocusInput a-row inputText" style="width: 82.948%;">
+        function li(str){
+            return $(`
+            <li class="addInput_enter">
+                <input type="email" class="box-sizing a-input-text onfocusInput a-row inputText" style="width: 82.948%;" value=${str}>
                 <img src="./img/close.png" alt="" class="closeBtn" style="display: inline-block;">
                 <br>
             </li>           
             `);
-        $addinputUl.append($addinputLi)
+        }
+        for(let i = 0;i<target.length;i++){
+            // console.log(target.eq(i).parents('.a-row').eq(0).find('.email'))
+            let str = target.eq(i).parents('.a-row').eq(0).find('.email').text();
+            target.eq(i).append(li(str))
+        }
     }
-    // 编辑按钮出现input 
-    $('.editBtn').each(function (index, item) {
-        $('.editBtn').eq(index).click(function () {
-            addInput($(this).parents('.parentNode').find('.addInput'))
-            // $(this).parents('.parentNode').find('.email').text()
-        })  
-    })
-    
-    // 保存
-    $('.saveBtn').each(function (index,item) { 
-        $('.saveBtn').eq(index).click(function () { 
-            console.log($('.addInput li input').val())
-        })
-    })
-    
-    
 })

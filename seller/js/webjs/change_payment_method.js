@@ -58,6 +58,16 @@ $(function () {
         $('.new_credit_card').hide();
         $('.billing_address').hide();
     })
+    var obj = {
+        card_number:'1234',
+        valid_through_month:'5',
+        valid_through_year:'2018',
+        card_holder_name:'Seven',
+        strAddressInfo:'北京',
+    }
+    var card_html = doT.template($('#card_tmpl').text());
+    $('#card_Div').html(card_html(obj))
+
     // 初始化  编辑付款方式
     $.ajax({
         url: baseUrl + '/InitializaChargeInfo',
@@ -88,36 +98,91 @@ $(function () {
             console.log(decodeURIComponent(res.error))
         }
     })
+    var obj2 = [
+        {
+            method_id:'1',
+            card_number:'123',
+            valid_through_month:'4',
+            valid_through_year:'2018',
+            card_holder_name:'seven',
+            strAddressInfo:'北京',
+        },
+        {
+            method_id:'2',
+            card_number:'456',
+            valid_through_month:'6',
+            valid_through_year:'2099',
+            card_holder_name:'Floyd',
+            strAddressInfo:'杭州',
+        },
+        {
+            method_id:'3',
+            card_number:'789',
+            valid_through_month:'2',
+            valid_through_year:'2019',
+            card_holder_name:'Steven',
+            strAddressInfo:'地道',
+        }
+    ]
+
+
+    method_id = '1';
+    obj2.forEach(function (item) {
+        item.status = (item.method_id === '1') ? true :false
+    })
+    var bank = doT.template($('#bankArray').text());
+    $('#bankTmpl').html(bank(obj2))
+    $('#bankTmpl input').each(function (i) {
+        $('#bankTmpl input').eq(i).click(function () {
+            method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
+            //获取点击行的值，重新渲染
+            obj.card_number = $(this).parents('.banks').find('.card_number').text();
+            obj.valid_through_month = $(this).parents('.banks').find('.valid_through_month').text()
+            obj.valid_through_year = $(this).parents('.banks').find('.valid_through_year').text()
+            obj.strAddressInfo = $(this).parents('.banks').attr('data-address');
+            obj.card_holder_name = $(this).parents('.banks').find('.card_holder_name').text()
+            console.table(obj)
+            $('#card_Div').html(card_html(obj))
+        })
+    })
 
     // 初始化付费方式(初始化信用卡列表) 
-    $.ajax({
-        url: baseUrl + '/InitializaCharge',
-        method: 'post',
-        dataType: "json",
-        data: {
-            userid: amazon_userid,
-        },
-        success: function (res) {
-            console.log(res)
-            if (res.result == 1) {
-                method_id = res.chargeId
-                res.data.forEach(function (item) {
-                    item.status = (item.method_id === res.chargeId) ? true : false
-                })
-                var data = res.data;
-                var bank = doT.template($('#bankArray').text());
-                $('#bankTmpl').html(bank(data))
-                $('#bankTmpl input').each(function (i) {
-                    $('#bankTmpl input').eq(i).click(function () {
-                        method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
-                    })
-                })
+    // $.ajax({
+    //     url: baseUrl + '/InitializaCharge',
+    //     method: 'post',
+    //     dataType: "json",
+    //     data: {
+    //         userid: amazon_userid,
+    //     },
+    //     success: function (res) {
+    //         console.log(res)
+    //         if (res.result == 1) {
+    //             method_id = res.chargeId
+    //             res.data.forEach(function (item) {
+    //                 item.status = (item.method_id === res.chargeId) ? true : false
+    //             })
+    //             var data = res.data;
+    //             var bank = doT.template($('#bankArray').text());
+    //             $('#bankTmpl').html(bank(data))
+    //             $('#bankTmpl input').each(function (i) {
+    //                 $('#bankTmpl input').eq(i).click(function () {
+    //                     method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
+    //                         // 获取点击行的值，重新渲染
+    //                         obj.card_number = $(this).parents('.banks').find('.card_number').text();
+    //                         obj.valid_through_month = $(this).parents('.banks').find('.valid_through_month').text()
+    //                         obj.valid_through_year = $(this).parents('.banks').find('.valid_through_year').text()
+    //                         obj.strAddressInfo = $(this).parents('.banks').attr('data-address');
+    //                         obj.card_holder_name = $(this).parents('.banks').find('.card_holder_name').text()
+    //                         console.table(obj)
+    //                         $('#card_Div').html(card_html(obj))
+    //                 })
+    //             })
 
-            } else {
-                console.log(decodeURIComponent(res.error))
-            }
-        }
-    })
+    //         } else {
+    //             console.log(decodeURIComponent(res.error))
+    //         }
+    //     }
+    // })
     //初始化账单寄送地址 新增邮寄地址
     $('.submitBtn').click(function (e) {
         e.preventDefault();

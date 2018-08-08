@@ -26,12 +26,22 @@ body {
 .a-alert-inline-info{
     position: relative;
 }
-.a-icon-alert{
-    background-position: -166px -130px !important;
+.warnInfo .a-icon-alert{
+    background-position: -135px -120px;
+}
+.warnInfo .a-alert-content{
+    color: #c40000;
 }
 img {
     vertical-align: top;
     height: 27px;
+}
+.warnInfo{
+    padding-top:9px !important;
+    padding-bottom:9px !important;
+}
+.myWarn .a-box{
+    border:none !important;
 }
 .a-box-inner_radio{
     padding: 14px 18px;

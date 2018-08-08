@@ -10,7 +10,7 @@ function addwarn(target, type, text) {
   div.setAttribute("class", "a-row myWarn");
   div.innerHTML = `<div class="a-column ">
                                 <div  class="a-box a-alert-inline a-alert-inline-${imgtype}" >
-                                    <div class="a-box-inner a-alert-container">
+                                    <div class="a-box-inner a-alert-container warnInfo">
                                         <i class="a-icon a-icon-alert"></i>
                                         <div class="a-alert-content">
                                             ${text}

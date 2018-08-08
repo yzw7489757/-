@@ -166,7 +166,7 @@ inputctr.public.checkLogin=function(){
     var StudentAccount = inputctr.public.getCookie('account');
 	if(!inputctr.public.getCookie('amazon_userid') || (SuccessAccount != StudentAccount)){
 		var recodeUrl=encodeURIComponent(window.location.href);
-		window.location.href="login.html?rediect="+	recodeUrl;
+		// window.location.href="login.html?rediect="+	recodeUrl;
 	}else{
 		amazon_userid = inputctr.public.getCookie('amazon_userid');
         studentMallID = inputctr.public.getCookie('mallID');
@@ -634,35 +634,35 @@ inputctr.public.judgeTask=function(callback,parameter){
     TrainingID=inputctr.public.getCookie('TrainingID');
     studentID=inputctr.public.getCookie('studentID');
     traintype=inputctr.public.getCookie('traintype'); 
-    if(!studentID ||!TrainingID){
-        location.href="404page.html";
-    }else{
-        let taskList=sessionStorage.getItem('taskList');
-        if(!taskList){
-            let commitdata={
-                TrainingID:TrainingID,
-                studentID:studentID
-            }
-            $.post(TaskUrl+'/TrainingTaskUserList',commitdata,function(response){
-                let data=eval(response);
-                sessionStorage.setItem('taskList', JSON.stringify(data));
-                if(data.list.length>0){
-                    $('#taskButton').removeClass('hide');
-                }
-                if(!callback){}else{
-                    callback(parameter);
-                }
-            })
-        }else{
-            let taskListParse=JSON.parse(taskList);
-            if(taskListParse && taskListParse.list.length>0){
-                $('#taskButton').removeClass('hide');
-            }
-            if(!callback){}else{
-                    callback(parameter);
-            }
-        }
-    }
+    // if(!studentID ||!TrainingID){
+    //     // location.href="404page.html";
+    // }else{
+    //     let taskList=sessionStorage.getItem('taskList');
+    //     if(!taskList){
+    //         let commitdata={
+    //             TrainingID:TrainingID,
+    //             studentID:studentID
+    //         }
+    //         $.post(TaskUrl+'/TrainingTaskUserList',commitdata,function(response){
+    //             let data=eval(response);
+    //             sessionStorage.setItem('taskList', JSON.stringify(data));
+    //             if(data.list.length>0){
+    //                 $('#taskButton').removeClass('hide');
+    //             }
+    //             if(!callback){}else{
+    //                 callback(parameter);
+    //             }
+    //         })
+    //     }else{
+    //         let taskListParse=JSON.parse(taskList);
+    //         if(taskListParse && taskListParse.list.length>0){
+    //             $('#taskButton').removeClass('hide');
+    //         }
+    //         if(!callback){}else{
+    //                 callback(parameter);
+    //         }
+    //     }
+    // }
     
 }
 
