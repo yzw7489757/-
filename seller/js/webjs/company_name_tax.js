@@ -1,8 +1,9 @@
 $(function () {
   inputctr.public.checkLogin();
+  var showSign = true;
   var receive_income = 1; // 获得收益人（1 企业 2 业务）
   var is_usperson = 1 // 是否美国人（1 是 0 否）
-  var nationality = $('.choose_country_p').text() // 国籍
+  var nationality = $('.nationality_choose_country').text() // 国籍
   var full_name_input = $('.full_name_input').val(); // 法定公司名称
   var address_id = null; // 永久地址ID 
   var mailing_address_id = null; // 邮寄地址ID
@@ -155,10 +156,10 @@ $(function () {
   //         backgroundColor:' #dcdfe3',
   //     })
   // })
-  chooseClass(".a-choose-yes", ".a-choose-no", "a-button-choose");
-  chooseClass(".a-choose-no", ".a-choose-yes", "a-button-choose");
-  chooseClass(".a-choose-business", ".a-choose-persinal", "a-button-choose");
-  chooseClass(".a-choose-persinal", ".a-choose-business", "a-button-choose");
+  // chooseClass(".a-choose-yes", ".a-choose-no", "a-button-choose");
+  // chooseClass(".a-choose-no", ".a-choose-yes", "a-button-choose");
+  // chooseClass(".a-choose-business", ".a-choose-persinal", "a-button-choose");
+  // chooseClass(".a-choose-persinal", ".a-choose-business", "a-button-choose");
 
   // function init() {
   //   $(".tax_status_information").hide();
@@ -510,15 +511,7 @@ $(function () {
   ); //无效税务标识号：检查格式和输入值
 
 
-  // checkbox
-  $(".checkbox").click(function () {
-    if ($(".checkbox").is(":checked")) {
-      $(".right_input").hide();
-      $('.edterAddress2').hide()
-    } else {
-      $(".right_input").show();
-    }
-  });
+ 
   // $('.country li').click(function () {
   //   left_country_p = $(".left_country_p").text()
   // })
@@ -626,6 +619,7 @@ $(function () {
     }
 
     if (tel_input2 && city_town_input2 && postal_code_input2) {
+
       $.ajax({
         url: baseUrl + '/AddAddressNew',
         method: 'post',
@@ -675,9 +669,65 @@ $(function () {
     $('.edterAddress2').hide();
     $('.right_input').show()
   })
+ // checkbox
+ $(".checkbox").click(function () {
+  if ($(".checkbox").is(":checked")) {
+    tel_input = $('.tel_input').val();
+    tel_input2 = $('.tel_input2').val();
+    city_town_input = $('.city_town_input').val();
+    city_town_input2 = $('.city_town_input2').val();
+    postal_code_input = $('.postal_code_input').val();
+    postal_code_input2 = $('.postal_code_input2').val();
+    full_name_input = $('.full_name_input').val();
+    $(".right_input").hide();
+    $('.edterAddress2').hide()
+    if (full_name_input && tel_input && city_town_input && postal_code_input) {
+      $(".go_on_Btn").addClass('finishColor')
+    }
+  } else {
+    $(".go_on_Btn").removeClass('finishColor')
+    $(".right_input").show();
+    if (full_name_input && tel_input && tel_input2 && city_town_input && city_town_input2 && postal_code_input && postal_code_input2) {
+      $(".go_on_Btn").addClass('finishColor')
+    }
+  }
+});
+
+  function changeBtnColor(target) {
+    $(target).blur(function () {
+      tel_input = $('.tel_input').val();
+      tel_input2 = $('.tel_input2').val();
+      city_town_input = $('.city_town_input').val();
+      city_town_input2 = $('.city_town_input2').val();
+      postal_code_input = $('.postal_code_input').val();
+      postal_code_input2 = $('.postal_code_input2').val();
+      full_name_input = $('.full_name_input').val();
+      if ($(".checkbox").is(":checked")) {
+        if (full_name_input && tel_input && city_town_input && postal_code_input) {
+          $(".go_on_Btn").addClass('finishColor')
+        }
+      } else {
+        
+        if (full_name_input && tel_input && tel_input2 && city_town_input && city_town_input2 && postal_code_input && postal_code_input2) {
+          $(".go_on_Btn").addClass('finishColor')
+        }
+      }
+    })
+  }
+  changeBtnColor('.tel_input')
+  changeBtnColor('.tel_input2')
+  changeBtnColor('.city_town_input')
+  changeBtnColor('.city_town_input2')
+  changeBtnColor('.postal_code_input')
+  changeBtnColor('.postal_code_input2')
+  changeBtnColor('.full_name_input')
+
+
   // 根据不同的情况，点击然后“签名并提交”的内容显示
   $(".go_on_Btn").click(function (e) {
     e.preventDefault();
+    $("div.myWarn").remove();
+    $("input").removeClass("activebtn");
     nameInput = $('.nameInput').val();
     tel_input = $('.tel_input').val();
     tel_input2 = $('.tel_input2').val();
@@ -716,6 +766,7 @@ $(function () {
       case 2:
         if ($('.checkbox').is(':checked')) {
           if (full_name_input && tel_input && city_town_input && postal_code_input) {
+            $('.footer').hide()
             $('.signSubmit').show()
           } else {
             activeColor(".full_name_input", "full_name_div");
@@ -726,6 +777,7 @@ $(function () {
           break;
         } else {
           if (full_name_input && tel_input && tel_input2 && city_town_input && city_town_input2 && postal_code_input && postal_code_input2) {
+            $('.footer').hide()
             $('.signSubmit').show()
           } else {
             activeColor(".full_name_input", "full_name_div");
@@ -757,8 +809,7 @@ $(function () {
           break;
         };
     }
-    $("div.myWarn").remove();
-    $("input").removeClass("activebtn");
+
     // // 名称（参见您的所得税申报表）
     // activeColor(".name_input", "name");
     // // 街道和号码
@@ -777,11 +828,31 @@ $(function () {
     // // 组织名称 
     // activeColor(".organization_name_input", "organization_name");
   });
-
+  console.log($('.signBox'))
+  $('.signBoxLabel').click(function (e) {
+    e.preventDefault()
+    if(showSign){
+      $('input[name=signBox]').prop('checked',true)
+      $('.a-color-offset-background').show()
+      showSign = false;
+    }else{
+      $('input[name=signBox]').prop('checked',false)
+      $('.saveBtn').addClass('finishColor')
+      $('.a-color-offset-background').hide()
+      showSign = true;
+    }
+    
+   })
+  $('.signature').blur(function () {
+    if (!signature) {
+      $('.saveBtn').addClass('finishColor')
+    }
+  })
+  
   $('.saveBtn').click(function (e) {
     e.preventDefault();
     var tax_id = sessionStorage.getItem('tax_id')
-    nationality = $('.choose_country_p').text() // 国籍
+    nationality = $('.nationality_choose_country').text() // 国籍
     full_name_input = $('.full_name_input').val(); // 法定公司名称
     signature = $('.signature').val() //签名
     if (nationality && full_name_input && signature) {
@@ -806,8 +877,7 @@ $(function () {
         success: function (res) {
           console.log(res)
           if (res.result == 1) {
-            console.log(address_id)
-            console.log(mailing_address_id)
+            $(window).attr('location', '/seller/company_name.html')
           }
         },
         error: function (res) {
@@ -822,8 +892,8 @@ $(function () {
     var h = today.getFullYear(); // 年
     var m = today.getMonth() + 1; // 月
     var d = today.getDate(); // 日
-    m = m > 10 ? m : '0' + m
-    d = d > 10 ? d : '0' + d
+    m = m > 9 ? m : '0' + m
+    d = d > 9 ? d : '0' + d
     return m + "-" + d + "-" + h;
   }
   var today = today()

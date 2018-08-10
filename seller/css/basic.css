@@ -274,6 +274,9 @@ a:visited {
 .a-color-tertiary {
     color: #767676!important;
 }
+.startColor{
+    color: #F90;
+}
 hr {
     background-color: transparent;
     display: block;
@@ -598,6 +601,16 @@ input[type=search] {
     text-align: left;
     font-size: 12px;
     line-height: 15px;
+}
+.a-alert-error {
+    border-color: #c40000;
+}
+.a-alert-error .a-alert-container {
+    padding-left: 63px;
+    box-shadow: 0 0 0 4px #fcf4f4 inset;
+}
+.a-alert-error .a-icon-alert, .a-icon-error {
+    background-position: -248px -35px;
 }
 /* 下拉框 */
 

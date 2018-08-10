@@ -12,11 +12,17 @@ $(function () {
             $(this).removeClass('active_tabs')
         }
     );
+    $('.addBtn').click(function (e) { 
+        e.preventDefault();
+        $(".chooseText>li").eq('2').removeClass("none").siblings().addClass("none");
+     })
     $('.title').each(function (index, item) {
         $('.title').eq(index).click(function (e) {
             var TextdetailLi = $('.title').eq(index)
             if (e.target.className.indexOf('edit') != '-1') {
                 // 点击编辑
+                $('.addBtn').show();
+                $('.tipInfo').hide()
                 TextdetailLi.find('.save_cancel_Btn').show()
                 TextdetailLi.find('.editBtn').hide()
                 TextdetailLi.parents('.parentNode').find('.check-icon').addClass('editImg')
@@ -26,6 +32,8 @@ $(function () {
                 }
             } else if (e.target.className.indexOf('cancel') != '-1') {
                 //点击取消
+                $('.addBtn').hide();
+                $('.tipInfo').show()
                 TextdetailLi.parents('.parentNode').find('.originalInfo').show()
                 TextdetailLi.find('.save_cancel_Btn').hide()
                 TextdetailLi.find('.editBtn').show()

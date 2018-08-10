@@ -1,5 +1,9 @@
 $(function () { 
     inputctr.public.checkLogin();
+    if(window.sessionStorage && sessionStorage.getItem('successInfo')){ 
+        $('.successInfo').show()
+        sessionStorage.removeItem('successInfo')
+    }
     $.ajax({
         url: baseUrl + '/GetBusinessInfo',
         method: 'post',

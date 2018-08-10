@@ -96,3 +96,28 @@ body {
     left: 0;
     top:29px;
 }
+.adds::after,.a-row::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+.adds{
+    width: 50%;
+    float:left;
+    box-sizing: border-box;
+    padding:0 10px;
+
+}
+.width-90{
+    width: 90%;
+}
+hr.a-divider-normal {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}

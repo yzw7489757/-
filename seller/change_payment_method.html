@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/basic.css">
     <!-- <link rel="stylesheet" href="./css/payment_method_info_editor.css"> -->
-    <link rel="stylesheet" href="./css/payment_method.css"> 
+    <link rel="stylesheet" href="./css/payment_method.css">
     <link rel="stylesheet" href="./css/change_payment_method.css">
     <link rel="stylesheet" href="./css/header_nav.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -46,79 +46,75 @@
                                 <div class="a-spacing-base">
                                     <div class="a-box marBot">
                                         <div class="a-box-inner">
-                                            <!-- <div id="infoTmpl"></div>
-                                            <script id="info" type="text/x-dot-template">
-                                                {{~it:value:index}} -->
-                                                <div class="a-row a-ws-row overflow_hidden">
-                                                    <div class="width31 float_left  a-spacing-top-mini">
+                                            <div class="a-row a-ws-row overflow_hidden">
+                                                <div class="width31 float_left  a-spacing-top-mini">
+                                                    <div class="a-row relative">
+                                                        <h6 class="a-color-tertiary ">
+                                                            针对商城更换
+                                                        </h6>
+                                                        <div class="a-divider a-divider-break"></div>
+                                                        <div class="ng-scope overflow_hidden height34">
+                                                            <div class="width14 float_left marRight2_7">
+                                                                <img src="./img/USA._V529822848_.png" alt="">
+                                                            </div>
+                                                            <div class="width31 float_left marRight2_7 a-spacing-top-small">
+                                                                <span class="a-size-small">Amazon.com</span>
+                                                            </div>
+
+                                                            <div class="width48 float_right">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="width65 float_right">
+                                                    <div class="a-row  ">
                                                         <div class="a-row relative">
                                                             <h6 class="a-color-tertiary ">
-                                                                针对商城更换
+                                                                当前付费方式
                                                             </h6>
                                                             <div class="a-divider a-divider-break"></div>
-                                                            <div class="ng-scope overflow_hidden height34">
-                                                                <div class="width14 float_left marRight2_7">
-                                                                    <img src="./img/USA._V529822848_.png" alt="">
-                                                                </div>
-                                                                <div class="width31 float_left marRight2_7 a-spacing-top-small">
-                                                                    <span class="a-size-small">Amazon.com</span>
-                                                                </div>
-
-                                                                <div class="width48 float_right">
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="width65 float_right">
-                                                        <div class="a-row  ">
-                                                            <div class="a-row relative">
-                                                                <h6 class="a-color-tertiary ">
-                                                                    当前付费方式
-                                                                </h6>
-                                                                <div class="a-divider a-divider-break"></div>
-                                                                <div id="card_Div"></div>
-                                                                <script type="text/x-dot-template" id="card_tmpl">
-                                                                    <div class="a-row a-spacing-top-mini">
-                                                                        <div class="width48 float_left">
-                                                                            <div class="a-row">
-                                                                                <h6 class="a-color-tertiary ">
-                                                                                    信用卡
-                                                                                </h6>
-                                                                            </div>
-                                                                            <div class="a-row">
-                                                                                <img src="./img/mastercard_curved_64px.png" alt="">
-                                                                                <span class="img-with-bottom-text a-size-base">结束</span>
-                                                                                <span class="a-size-medium img-with-bottom-text card_number">{{=it.card_number}}</span>
-                                                                            </div>
+                                                            <div id="card_Div"></div>
+                                                            <script type="text/x-dot-template" id="card_tmpl">
+                                                                <div class="a-row a-spacing-top-mini">
+                                                                    <div class="width48 float_left">
+                                                                        <div class="a-row">
+                                                                            <h6 class="a-color-tertiary ">
+                                                                                信用卡
+                                                                            </h6>
                                                                         </div>
-                                                                        <div class="width48 float_right">
-                                                                            <h6 class="a-color-tertiary ">到期时间</h6>
-                                                                            <div class="a-row">
-                                                                                <span class="a-size-base valid_through_month">{{=it.valid_through_month}}</span>
-                                                                                <span class="a-size-base ">/</span>
-                                                                                <span class="a-size-base valid_through_year">{{=it.valid_through_year}}</span>
-                                                                            </div>
-                                                                            <h6 class="a-color-tertiary a-spacing-top-mini">持卡人的姓名</h6>
-                                                                            <div class="a-row">
-                                                                                <span class="a-size-base card_holder_name">{{=it.card_holder_name}}</span>
-                                                                            </div>
-                                                                            <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
-                                                                            <div class="a-row">
-                                                                                <span class="strAddressInfo">{{=it.strAddressInfo}}</span>
-                                                                            </div>
+                                                                        <div class="a-row">
+                                                                            <img src="./img/mastercard_curved_64px.png" alt="">
+                                                                            <span class="img-with-bottom-text a-size-base">结束</span>
+                                                                            <span class="a-size-medium img-with-bottom-text card_number">{{=it.card_number}}</span>
                                                                         </div>
                                                                     </div>
-                                                                </script>
-                                                                
-                                                            </div>
-
+                                                                    <div class="width48 float_right">
+                                                                        <h6 class="a-color-tertiary ">到期时间</h6>
+                                                                        <div class="a-row">
+                                                                            <span class="a-size-base valid_through_month">{{=it.valid_through_month}}</span>
+                                                                            <span class="a-size-base ">/</span>
+                                                                            <span class="a-size-base valid_through_year">{{=it.valid_through_year}}</span>
+                                                                        </div>
+                                                                        <h6 class="a-color-tertiary a-spacing-top-mini">持卡人的姓名</h6>
+                                                                        <div class="a-row">
+                                                                            <span class="a-size-base card_holder_name">{{=it.card_holder_name}}</span>
+                                                                        </div>
+                                                                        <h6 class="a-color-tertiary a-spacing-top-mini">帐单地址</h6>
+                                                                        <div class="a-row">
+                                                                            {{? it.strAddressInfo!='undefined'}}
+                                                                            <span class="strAddressInfo">{{=it.strAddressInfo ||'--'}}</span>
+                                                                            {{??}}
+                                                                            <span class="strAddressInfo"></span>
+                                                                            {{?}}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </script>
                                                         </div>
                                                     </div>
-
                                                 </div>
-                                                <!-- {{~}}
-                                            </script> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -155,9 +151,9 @@
                                                         <div class="a-row a-spacing-top-base">
                                                             <div class="a-row a-box">
                                                                 <div class="a-box-inner">
-                                                                    <div class="a-row overflow_hidden" id="card_number">
-                                                                        <div class="width31 a-column2_7 a-spacing-top-mini float_left">
-                                                                            <div class="a-row">
+                                                                    <div class="a-row overflow_hidden">
+                                                                        <div class="width31 a-column2_7 a-spacing-top-mini float_left" >
+                                                                            <div class="a-row"  id="card_number_id">
                                                                                 <div class="a-size-base a-text-bold">卡号</div>
                                                                                 <input type="text" minlength="4" maxlength="16" class="card_number_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                             </div>
@@ -167,7 +163,7 @@
                                                                                 <div class="a-size-base a-text-bold">有效期限</div>
                                                                                 <div class="a-row">
                                                                                     <div class="width47 a-column2_7 float_left">
-                                                                                        <div class=" bank-account-dropdown relative">
+                                                                                        <div class=" bank-account-dropdown relative" id="month_select_id">
                                                                                             <select class="valid_through_month_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select a-spacing-top-micro">
                                                                                                 <option label="1" value="string:1" selected="selected">1</option>
                                                                                                 <option label="2" value="string:2">2</option>
@@ -186,7 +182,7 @@
 
                                                                                     </div>
                                                                                     <div class="width47 float_left">
-                                                                                        <div class=" bank-account-dropdown relative">
+                                                                                        <div class=" bank-account-dropdown relative" id="year_select_id">
                                                                                             <select class="valid_through_year_select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select a-spacing-top-micro">
                                                                                                 <option label="2018" value="string:2018" selected="selected">2018</option>
                                                                                                 <option label="2019" value="string:2019">2019</option>
@@ -217,7 +213,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="width31 a-spacing-top-mini float_right">
-                                                                            <div class="a-row">
+                                                                            <div class="a-row" id="card_holder_name_id">
                                                                                 <div class="a-size-base a-text-bold">持卡人姓名（与信用卡上一致）</div>
                                                                                 <input type="text" class="card_holder_name_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                             </div>
@@ -309,230 +305,230 @@
                                 </div>
                             </div>
 
-                        </div> 
+                        </div>
                         <!-- 请选择账单寄送地址 -->
-                            <div class="a-row">
-                                <div class="a-row  billing_address_par">
-                                    <form action="">
+                        <div class="a-row">
+                            <div class="a-row  billing_address_par">
+                                <form action="">
 
-                                        <div class="a-row none send_address border_box none">
-                                            <div class="marBtn10">
-                                                <div class="a-row overflow_hidden">
-                                                    <h1 class="a-size-base inline_block float_left">
-                                                        <b class="">添加新的账单地址</b>
-                                                    </h1>
+                                    <div class="a-row none send_address border_box none">
+                                        <div class="marBtn10">
+                                            <div class="a-row overflow_hidden">
+                                                <h1 class="a-size-base inline_block float_left">
+                                                    <b class="">添加新的账单地址</b>
+                                                </h1>
 
-                                                    <a href="" class="inline_block float_right send_addressBtn">
-                                                        <span>请选择账单寄送地址</span>
-                                                    </a>
-                                                </div>
+                                                <a href="" class="inline_block float_right send_addressBtn">
+                                                    <span>请选择账单寄送地址</span>
+                                                </a>
                                             </div>
-                                            <div class="a-box a-spacing-small">
-                                                <div class="a-box-inner_radio">
-                                                    <div class="a-row">
-                                                        <div class="a-row a-size-base marBtn10">
+                                        </div>
+                                        <div class="a-box a-spacing-small">
+                                            <div class="a-box-inner_radio">
+                                                <div class="a-row">
+                                                    <div class="a-row a-size-base marBtn10">
+                                                        <div class="a-row">
+                                                            <div class="width99" id="address_id">
+                                                                <div class="a-spacing-small">
+                                                                    <div class="address-inputName">地址：
+                                                                        <span>*</span>
+                                                                    </div>
+                                                                    <input type="text" class="address_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-row a-size-base marBtn10">
+                                                        <div class="a-row">
+                                                            <div class="width99">
+                                                                <div class="a-spacing-small">
+                                                                    <div class="address-inputName">地址行 2：</div>
+                                                                    <input type="text" class="address2_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-row a-size-base marBtn10 overflow_hidden">
+                                                        <div class="width48 float_left">
                                                             <div class="a-row">
-                                                                <div class="width99" id="address">
+                                                                <div class="width99" id="city_id">
                                                                     <div class="a-spacing-small">
-                                                                        <div class="address-inputName">地址：
+                                                                        <div class="address-inputName">地区/市：
                                                                             <span>*</span>
                                                                         </div>
-                                                                        <input type="text" class="address_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                        <input type="text" class="city_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
 
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="a-row a-size-base marBtn10">
+                                                        <div class="width48 float_right">
                                                             <div class="a-row">
                                                                 <div class="width99">
                                                                     <div class="a-spacing-small">
-                                                                        <div class="address-inputName">地址行 2：</div>
-                                                                        <input type="text" class="address2_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                        <div class="address-inputName">省/地区/州：</div>
+                                                                        <input type="text" class="province_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="a-row a-size-base marBtn10 overflow_hidden">
-                                                            <div class="width48 float_left">
-                                                                <div class="a-row">
-                                                                    <div class="width99">
-                                                                        <div class="a-spacing-small">
-                                                                            <div class="address-inputName">地区/市：
-                                                                                <span>*</span>
-                                                                            </div>
-                                                                            <input type="text" class="city_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                    </div>
+                                                    <div class="a-row a-size-base marBtn10 overflow_hidden">
+                                                        <div class="width48 float_left">
+                                                            <div class="a-row">
+                                                                <div class="width99">
+                                                                    <div class="a-spacing-small">
+                                                                        <div class="address-inputName">国家：
+                                                                            <span>*</span>
                                                                         </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="width48 float_right">
-                                                                <div class="a-row">
-                                                                    <div class="width99">
-                                                                        <div class="a-spacing-small">
-                                                                            <div class="address-inputName">省/地区/州：</div>
-                                                                            <input type="text" class="province_input  border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="a-row a-size-base marBtn10 overflow_hidden">
-                                                            <div class="width48 float_left">
-                                                                <div class="a-row">
-                                                                    <div class="width99">
-                                                                        <div class="a-spacing-small">
-                                                                            <div class="address-inputName">国家：
-                                                                                <span>*</span>
-                                                                            </div>
-                                                                            <select class="country_select border_box a-input-text onfocusInput a-row
+                                                                        <select class="country_select border_box a-input-text onfocusInput a-row
                                                                             a-spacing-top-micro a-box-inner_input" name="country">
-                                                                                <option label="Hungary" value="string:HU">Hungary</option>
-                                                                                <option label="Romania" value="string:RO">Romania</option>
-                                                                                <option label="中国" value="string:CN">中国</option>
-                                                                                <option label="丹麦" value="string:DK">丹麦</option>
-                                                                                <option label="乌克兰" value="string:UA">乌克兰</option>
-                                                                                <option label="乌干达" value="string:UG">乌干达</option>
-                                                                                <option label="乍得" value="string:TD">乍得</option>
-                                                                                <option label="亚美尼亚" value="string:AM">亚美尼亚</option>
-                                                                                <option label="以色列" value="string:IL">以色列</option>
-                                                                                <option label="俄罗斯" value="string:RU">俄罗斯</option>
-                                                                                <option label="保加利亚" value="string:BG">保加利亚</option>
-                                                                                <option label="克罗地亚" value="string:HR">克罗地亚</option>
-                                                                                <option label="冰岛" value="string:IS">冰岛</option>
-                                                                                <option label="几内亚" value="string:GN">几内亚</option>
-                                                                                <option label="列支敦士登" value="string:LI">列支敦士登</option>
-                                                                                <option label="加拿大" value="string:CA">加拿大</option>
-                                                                                <option label="加蓬" value="string:GA">加蓬</option>
-                                                                                <option label="南非" value="string:ZA">南非</option>
-                                                                                <option label="博茨瓦纳" value="string:BW">博茨瓦纳</option>
-                                                                                <option label="卢森堡" value="string:LU">卢森堡</option>
-                                                                                <option label="印度" value="string:IN">印度</option>
-                                                                                <option label="印度尼西亚" value="string:ID">印度尼西亚</option>
-                                                                                <option label="台湾" value="string:TW">台湾</option>
-                                                                                <option label="哥伦比亚" value="string:CO">哥伦比亚</option>
-                                                                                <option label="哥斯达黎加" value="string:CR">哥斯达黎加</option>
-                                                                                <option label="喀麦隆" value="string:CM">喀麦隆</option>
-                                                                                <option label="土耳其" value="string:TR">土耳其</option>
-                                                                                <option label="圣马力诺" value="string:SM">圣马力诺</option>
-                                                                                <option label="埃及" value="string:EG">埃及</option>
-                                                                                <option label="塞内加尔" value="string:SN">塞内加尔</option>
-                                                                                <option label="塞尔维亚" value="string:RS">塞尔维亚</option>
-                                                                                <option label="塞浦路斯" value="string:CY">塞浦路斯</option>
-                                                                                <option label="墨西哥" value="string:MX">墨西哥</option>
-                                                                                <option label="多哥" value="string:TG">多哥</option>
-                                                                                <option label="多米尼加共和国" value="string:DO">多米尼加共和国</option>
-                                                                                <option label="奥地利" value="string:AT">奥地利</option>
-                                                                                <option label="孟加拉国" value="string:BD">孟加拉国</option>
-                                                                                <option label="安哥拉" value="string:AO">安哥拉</option>
-                                                                                <option label="尼日尔" value="string:NE">尼日尔</option>
-                                                                                <option label="尼泊尔" value="string:NP">尼泊尔</option>
-                                                                                <option label="巴拉圭" value="string:PY">巴拉圭</option>
-                                                                                <option label="巴拿马" value="string:PA">巴拿马</option>
-                                                                                <option label="巴西" value="string:BR">巴西</option>
-                                                                                <option label="布基纳法索" value="string:BF">布基纳法索</option>
-                                                                                <option label="希腊" value="string:GR">希腊</option>
-                                                                                <option label="德国" value="string:DE">德国</option>
-                                                                                <option label="意大利" value="string:IT">意大利</option>
-                                                                                <option label="拉脱维亚" value="string:LV">拉脱维亚</option>
-                                                                                <option label="挪威" value="string:NO">挪威</option>
-                                                                                <option label="捷克共和国" value="string:CZ">捷克共和国</option>
-                                                                                <option label="摩洛哥" value="string:MA">摩洛哥</option>
-                                                                                <option label="文莱" value="string:BN">文莱</option>
-                                                                                <option label="斯洛伐克" value="string:SK">斯洛伐克</option>
-                                                                                <option label="斯洛文尼亚" value="string:SI">斯洛文尼亚</option>
-                                                                                <option label="斯里兰卡" value="string:LK">斯里兰卡</option>
-                                                                                <option label="新加坡" value="string:SG">新加坡</option>
-                                                                                <option label="新西兰" value="string:NZ">新西兰</option>
-                                                                                <option label="日本" value="string:JP">日本</option>
-                                                                                <option label="智利" value="string:CL">智利</option>
-                                                                                <option label="柬埔寨" value="string:KH">柬埔寨</option>
-                                                                                <option label="格鲁吉亚" value="string:GE">格鲁吉亚</option>
-                                                                                <option label="比利时" value="string:BE">比利时</option>
-                                                                                <option label="毛里求斯" value="string:MU">毛里求斯</option>
-                                                                                <option label="法国" value="string:FR">法国</option>
-                                                                                <option label="波兰" value="string:PL">波兰</option>
-                                                                                <option label="泰国" value="string:TH">泰国</option>
-                                                                                <option label="洪都拉斯" value="string:HN">洪都拉斯</option>
-                                                                                <option label="海地" value="string:HT">海地</option>
-                                                                                <option label="澳大利亚" value="string:AU">澳大利亚</option>
-                                                                                <option label="爱尔兰" value="string:IE">爱尔兰</option>
-                                                                                <option label="爱沙尼亚" value="string:EE">爱沙尼亚</option>
-                                                                                <option label="特立尼达和多巴哥" value="string:TT">特立尼达和多巴哥</option>
-                                                                                <option label="玻利维亚" value="string:BO">玻利维亚</option>
-                                                                                <option label="瑞典" value="string:SE">瑞典</option>
-                                                                                <option label="瑞士" value="string:CH">瑞士</option>
-                                                                                <option label="白俄罗斯" value="string:BY">白俄罗斯</option>
-                                                                                <option label="直布罗陀" value="string:GI">直布罗陀</option>
-                                                                                <option label="科特迪瓦" value="string:CI">科特迪瓦</option>
-                                                                                <option label="秘鲁" value="string:PE">秘鲁</option>
-                                                                                <option label="立陶宛" value="string:LT">立陶宛</option>
-                                                                                <option label="约旦" value="string:JO">约旦</option>
-                                                                                <option label="纳米比亚" value="string:NA">纳米比亚</option>
-                                                                                <option label="美国" value="string:US" selected="selected">美国</option>
-                                                                                <option label="肯尼亚" value="string:KE">肯尼亚</option>
-                                                                                <option label="芬兰" value="string:FI">芬兰</option>
-                                                                                <option label="英国" value="string:GB">英国</option>
-                                                                                <option label="荷兰" value="string:NL">荷兰</option>
-                                                                                <option label="莫桑比克" value="string:MZ">莫桑比克</option>
-                                                                                <option label="菲律宾" value="string:PH">菲律宾</option>
-                                                                                <option label="萨尔瓦多" value="string:SV">萨尔瓦多</option>
-                                                                                <option label="葡萄牙" value="string:PT">葡萄牙</option>
-                                                                                <option label="西班牙" value="string:ES">西班牙</option>
-                                                                                <option label="贝宁" value="string:BJ">贝宁</option>
-                                                                                <option label="赤道几内亚" value="string:GQ">赤道几内亚</option>
-                                                                                <option label="越南" value="string:VN">越南</option>
-                                                                                <option label="阿塞拜疆" value="string:AZ">阿塞拜疆</option>
-                                                                                <option label="阿尔及利亚" value="string:DZ">阿尔及利亚</option>
-                                                                                <option label="阿尔巴尼亚" value="string:AL">阿尔巴尼亚</option>
-                                                                                <option label="阿曼" value="string:OM">阿曼</option>
-                                                                                <option label="阿根廷" value="string:AR">阿根廷</option>
-                                                                                <option label="韩国" value="string:KR">韩国</option>
-                                                                                <option label="香港" value="string:HK">香港</option>
-                                                                                <option label="马其顿" value="string:MK">马其顿</option>
-                                                                                <option label="马来西亚" value="string:MY">马来西亚</option>
-                                                                                <option label="马达加斯加" value="string:MG">马达加斯加</option>
-                                                                                <option label="马里" value="string:ML">马里</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="width48 float_right">
-                                                                <div class="a-row">
-                                                                    <div class="width99">
-                                                                        <div class="a-spacing-small">
-                                                                            <div class="address-inputName">邮编：</div>
-                                                                            <input type="text" class="zipcode_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
-                                                                        </div>
+                                                                            <option label="Hungary" value="string:HU">Hungary</option>
+                                                                            <option label="Romania" value="string:RO">Romania</option>
+                                                                            <option label="中国" value="string:CN">中国</option>
+                                                                            <option label="丹麦" value="string:DK">丹麦</option>
+                                                                            <option label="乌克兰" value="string:UA">乌克兰</option>
+                                                                            <option label="乌干达" value="string:UG">乌干达</option>
+                                                                            <option label="乍得" value="string:TD">乍得</option>
+                                                                            <option label="亚美尼亚" value="string:AM">亚美尼亚</option>
+                                                                            <option label="以色列" value="string:IL">以色列</option>
+                                                                            <option label="俄罗斯" value="string:RU">俄罗斯</option>
+                                                                            <option label="保加利亚" value="string:BG">保加利亚</option>
+                                                                            <option label="克罗地亚" value="string:HR">克罗地亚</option>
+                                                                            <option label="冰岛" value="string:IS">冰岛</option>
+                                                                            <option label="几内亚" value="string:GN">几内亚</option>
+                                                                            <option label="列支敦士登" value="string:LI">列支敦士登</option>
+                                                                            <option label="加拿大" value="string:CA">加拿大</option>
+                                                                            <option label="加蓬" value="string:GA">加蓬</option>
+                                                                            <option label="南非" value="string:ZA">南非</option>
+                                                                            <option label="博茨瓦纳" value="string:BW">博茨瓦纳</option>
+                                                                            <option label="卢森堡" value="string:LU">卢森堡</option>
+                                                                            <option label="印度" value="string:IN">印度</option>
+                                                                            <option label="印度尼西亚" value="string:ID">印度尼西亚</option>
+                                                                            <option label="台湾" value="string:TW">台湾</option>
+                                                                            <option label="哥伦比亚" value="string:CO">哥伦比亚</option>
+                                                                            <option label="哥斯达黎加" value="string:CR">哥斯达黎加</option>
+                                                                            <option label="喀麦隆" value="string:CM">喀麦隆</option>
+                                                                            <option label="土耳其" value="string:TR">土耳其</option>
+                                                                            <option label="圣马力诺" value="string:SM">圣马力诺</option>
+                                                                            <option label="埃及" value="string:EG">埃及</option>
+                                                                            <option label="塞内加尔" value="string:SN">塞内加尔</option>
+                                                                            <option label="塞尔维亚" value="string:RS">塞尔维亚</option>
+                                                                            <option label="塞浦路斯" value="string:CY">塞浦路斯</option>
+                                                                            <option label="墨西哥" value="string:MX">墨西哥</option>
+                                                                            <option label="多哥" value="string:TG">多哥</option>
+                                                                            <option label="多米尼加共和国" value="string:DO">多米尼加共和国</option>
+                                                                            <option label="奥地利" value="string:AT">奥地利</option>
+                                                                            <option label="孟加拉国" value="string:BD">孟加拉国</option>
+                                                                            <option label="安哥拉" value="string:AO">安哥拉</option>
+                                                                            <option label="尼日尔" value="string:NE">尼日尔</option>
+                                                                            <option label="尼泊尔" value="string:NP">尼泊尔</option>
+                                                                            <option label="巴拉圭" value="string:PY">巴拉圭</option>
+                                                                            <option label="巴拿马" value="string:PA">巴拿马</option>
+                                                                            <option label="巴西" value="string:BR">巴西</option>
+                                                                            <option label="布基纳法索" value="string:BF">布基纳法索</option>
+                                                                            <option label="希腊" value="string:GR">希腊</option>
+                                                                            <option label="德国" value="string:DE">德国</option>
+                                                                            <option label="意大利" value="string:IT">意大利</option>
+                                                                            <option label="拉脱维亚" value="string:LV">拉脱维亚</option>
+                                                                            <option label="挪威" value="string:NO">挪威</option>
+                                                                            <option label="捷克共和国" value="string:CZ">捷克共和国</option>
+                                                                            <option label="摩洛哥" value="string:MA">摩洛哥</option>
+                                                                            <option label="文莱" value="string:BN">文莱</option>
+                                                                            <option label="斯洛伐克" value="string:SK">斯洛伐克</option>
+                                                                            <option label="斯洛文尼亚" value="string:SI">斯洛文尼亚</option>
+                                                                            <option label="斯里兰卡" value="string:LK">斯里兰卡</option>
+                                                                            <option label="新加坡" value="string:SG">新加坡</option>
+                                                                            <option label="新西兰" value="string:NZ">新西兰</option>
+                                                                            <option label="日本" value="string:JP">日本</option>
+                                                                            <option label="智利" value="string:CL">智利</option>
+                                                                            <option label="柬埔寨" value="string:KH">柬埔寨</option>
+                                                                            <option label="格鲁吉亚" value="string:GE">格鲁吉亚</option>
+                                                                            <option label="比利时" value="string:BE">比利时</option>
+                                                                            <option label="毛里求斯" value="string:MU">毛里求斯</option>
+                                                                            <option label="法国" value="string:FR">法国</option>
+                                                                            <option label="波兰" value="string:PL">波兰</option>
+                                                                            <option label="泰国" value="string:TH">泰国</option>
+                                                                            <option label="洪都拉斯" value="string:HN">洪都拉斯</option>
+                                                                            <option label="海地" value="string:HT">海地</option>
+                                                                            <option label="澳大利亚" value="string:AU">澳大利亚</option>
+                                                                            <option label="爱尔兰" value="string:IE">爱尔兰</option>
+                                                                            <option label="爱沙尼亚" value="string:EE">爱沙尼亚</option>
+                                                                            <option label="特立尼达和多巴哥" value="string:TT">特立尼达和多巴哥</option>
+                                                                            <option label="玻利维亚" value="string:BO">玻利维亚</option>
+                                                                            <option label="瑞典" value="string:SE">瑞典</option>
+                                                                            <option label="瑞士" value="string:CH">瑞士</option>
+                                                                            <option label="白俄罗斯" value="string:BY">白俄罗斯</option>
+                                                                            <option label="直布罗陀" value="string:GI">直布罗陀</option>
+                                                                            <option label="科特迪瓦" value="string:CI">科特迪瓦</option>
+                                                                            <option label="秘鲁" value="string:PE">秘鲁</option>
+                                                                            <option label="立陶宛" value="string:LT">立陶宛</option>
+                                                                            <option label="约旦" value="string:JO">约旦</option>
+                                                                            <option label="纳米比亚" value="string:NA">纳米比亚</option>
+                                                                            <option label="美国" value="string:US" selected="selected">美国</option>
+                                                                            <option label="肯尼亚" value="string:KE">肯尼亚</option>
+                                                                            <option label="芬兰" value="string:FI">芬兰</option>
+                                                                            <option label="英国" value="string:GB">英国</option>
+                                                                            <option label="荷兰" value="string:NL">荷兰</option>
+                                                                            <option label="莫桑比克" value="string:MZ">莫桑比克</option>
+                                                                            <option label="菲律宾" value="string:PH">菲律宾</option>
+                                                                            <option label="萨尔瓦多" value="string:SV">萨尔瓦多</option>
+                                                                            <option label="葡萄牙" value="string:PT">葡萄牙</option>
+                                                                            <option label="西班牙" value="string:ES">西班牙</option>
+                                                                            <option label="贝宁" value="string:BJ">贝宁</option>
+                                                                            <option label="赤道几内亚" value="string:GQ">赤道几内亚</option>
+                                                                            <option label="越南" value="string:VN">越南</option>
+                                                                            <option label="阿塞拜疆" value="string:AZ">阿塞拜疆</option>
+                                                                            <option label="阿尔及利亚" value="string:DZ">阿尔及利亚</option>
+                                                                            <option label="阿尔巴尼亚" value="string:AL">阿尔巴尼亚</option>
+                                                                            <option label="阿曼" value="string:OM">阿曼</option>
+                                                                            <option label="阿根廷" value="string:AR">阿根廷</option>
+                                                                            <option label="韩国" value="string:KR">韩国</option>
+                                                                            <option label="香港" value="string:HK">香港</option>
+                                                                            <option label="马其顿" value="string:MK">马其顿</option>
+                                                                            <option label="马来西亚" value="string:MY">马来西亚</option>
+                                                                            <option label="马达加斯加" value="string:MG">马达加斯加</option>
+                                                                            <option label="马里" value="string:ML">马里</option>
+                                                                        </select>
                                                                     </div>
 
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="a-row a-size-base marBtn10">
+                                                        <div class="width48 float_right">
                                                             <div class="a-row">
                                                                 <div class="width99">
-                                                                    <div class="a-spacing-small">
-                                                                        <div class="address-inputName">主要电话：
-                                                                            <span>*</span>
-                                                                        </div>
-                                                                        <input type="text" placeholder="使用“x”分隔分机号" class="phone_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                    <div class="a-spacing-small" id="zipcode_id">
+                                                                        <div class="address-inputName">邮编：</div>
+                                                                        <input type="text" class="zipcode_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
                                                                     </div>
-
                                                                 </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-row a-size-base marBtn10">
+                                                        <div class="a-row">
+                                                            <div class="width99">
+                                                                <div class="a-spacing-small" id="phone_id">
+                                                                    <div class="address-inputName">主要电话：
+                                                                        <span>*</span>
+                                                                    </div>
+                                                                    <input type="text" placeholder="使用“x”分隔分机号" class="phone_input border_box a-input-text onfocusInput a-row a-spacing-top-micro a-box-inner_input">
+                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
-                                    </form>
-                                </div>
+
+                                    </div>
+                                </form>
                             </div>
+                        </div>
                         <!-- 请选择账单寄送地址 -->
                         <div class="a-row billing_address border_box none">
                             <div class="marBtn10">
@@ -558,7 +554,11 @@
                                                     <label>
                                                         <div class="a-row overflow_hidden">
                                                             <div class="width5 marRight2_7 float_left">
+                                                                {{? value.status== true}}
+                                                                <input type="radio" name="address" checked>
+                                                                {{??}}
                                                                 <input type="radio" name="address">
+                                                                {{?}}
                                                             </div>
                                                             <div class="width91 float_right">
                                                                 <span class="a-size-base">{{= decodeURIComponent(value.address)}},</span>
@@ -591,11 +591,11 @@
                                     <div class="a-spacing-top-small a-button a-row ">
                                         <span class="a-button-inner">
                                             <a href="./payment_method.html" class="a-button-color">
-                                                <a href="./payment_method.html" class="click_a">
+                                               
                                                     <span class="a-button-text block pdTop5">
                                                         上一步
                                                     </span>
-                                                </a>
+                                              
                                             </a>
                                         </span>
                                     </div>

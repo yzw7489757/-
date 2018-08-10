@@ -13,6 +13,7 @@
 
 <body>
     <div class="a-container">
+
         <div class="a-row a-section relative bubbleStyle">
             <h1 class="float_left a-color-state a-size-large a-text-bold width300">正式注册地址</h1>
             <div id="learnmorehelplink" class="float_left ">
@@ -21,7 +22,15 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div id="successAlert" class="none a-box a-alert a-alert-success a-spacing-base">
+        <div id="nullCheckError" class="a-box a-alert a-alert-error error-alert a-spacing-base " style="display: none; border-color: #c40000;">
+            <div class="a-box-inner a-alert-container">
+                <i class="a-icon a-icon-alert"></i>
+                <div class="a-alert-content">
+                    表格有以红色突出显示的空字段
+                </div>
+            </div>
+        </div>
+        <div id="successAlert" class="a-box a-alert a-alert-success a-spacing-base" style="display: none">
             <div class="a-box-inner a-alert-container">
                 <i class="a-icon a-icon-alert"></i>
                 <div class="a-alert-content">
@@ -51,12 +60,15 @@
                                 {{~it:value:index}}
                                 <div class="adds" data-card="{{= value.address_id}}">
                                     <div class="a-row">
-                                        <div class="a-box a-column width40 float_left a-spacing-small">
+                                        <div class="a-box a-column width-90 float_left a-spacing-small">
                                             <div class="a-color-offset-background">
                                                 <div class="a-padding-large">
                                                     <div class="float_left">
+                                                        {{? value.status == true}}
+                                                        <input type="radio" name="address" checked>
+                                                        {{??}}
                                                         <input type="radio" name="address">
-
+                                                        {{?}}
                                                     </div>
                                                     <div class="float_left a-radio-p">
                                                         <p>{{= decodeURIComponent(value.fullname)}} </p>
@@ -103,7 +115,7 @@
                                         国家/地区
                                     </div>
                                 </div>
-                                <div class="width61 float_left relative  a-button relative" style="width: 160px">
+                                <div class="width61 float_left relative  a-button relative country_select_div" style="width: 160px">
                                     <div id="chooseCountry" class="a-button-text  bank-account-dropdown box-sizing" style="width: 160px">
                                         <p style="margin: 0" class="country_select">选择国家/地区</p>
                                     </div>
@@ -825,7 +837,7 @@
                     </div>
 
                     <div class="Btn a-row">
-                        <hr class="a-divider-normal">
+                        <hr class="a-row a-divider-normal">
                         <div style=" margin-top: 35px;">
                             <div class="width48 float_left marginRight13">
                                 <div class="a-button a-button-inner float_right">

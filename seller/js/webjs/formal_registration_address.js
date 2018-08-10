@@ -1,5 +1,5 @@
 window.onload = function () {
-    inputctr.public.checkLogin(); 
+    inputctr.public.checkLogin();
     var showText = true;
     var timer = null
     dropdown_box(".countrySelect", "#chooseCountry");
@@ -52,15 +52,15 @@ window.onload = function () {
                 if (res.result == 1) {
                     var data = res.strAddress
                     console.log(data)
-                   $('.fullname_p').text(decodeURIComponent(data.full_name))
-                   $('.country_p').text(decodeURIComponent(data.country))
-                   $('.address_p').text(decodeURIComponent(data.address))
-                   $('.address2_p').text(decodeURIComponent(data.address2))
-                   $('.city_p').text(decodeURIComponent(data.city))
-                   $('.province_p').text(decodeURIComponent(data.province)) 
-                   $('.zipcode_p').text(decodeURIComponent(data.zipcode))
-                   $('.phone_p').text(decodeURIComponent(data.phone))
-                   $('.email_p').text(decodeURIComponent(data.email))
+                    $('.fullname_p').text(decodeURIComponent(data.full_name))
+                    $('.country_p').text(decodeURIComponent(data.country))
+                    $('.address_p').text(decodeURIComponent(data.address))
+                    $('.address2_p').text(decodeURIComponent(data.address2))
+                    $('.city_p').text(decodeURIComponent(data.city))
+                    $('.province_p').text(decodeURIComponent(data.province))
+                    $('.zipcode_p').text(decodeURIComponent(data.zipcode))
+                    $('.phone_p').text(decodeURIComponent(data.phone))
+                    $('.email_p').text(decodeURIComponent(data.email))
                 } else {
                     console.log(decodeURIComponent(res.error))
                 }
@@ -103,13 +103,16 @@ window.onload = function () {
         success: function (res) {
             console.log(res)
             if (res.result == 1) {
+                addressId = res.registered_address_Id;
+                res.List.forEach(function (item) { 
+                    item.status = (item.address_id === res.registered_address_Id) ? true : false
+                 })
                 var data = res.List
                 var add = doT.template($('#addArray').text());
                 $('#addTmpl').html(add(data))
                 $('#addTmpl input').each(function (i) {
                     $('#addTmpl input').eq(i).click(function () {
                         addressId = $('input[name=address]:checked').parents('.adds').attr('data-card')
-                        console.log(addressId)
                     })
                 })
                 console.log('success!')
@@ -122,8 +125,13 @@ window.onload = function () {
             console.log(decodeURIComponent(res.error))
         }
     })
+   
     // 更新用户表里注册地址(保存)
     $('.saveBtn').click(function () {
+        $('.a-alert-error').hide()
+        $('.a-alert-success').hide()
+        $('.country_select_div').removeClass('activebtn')
+        $('input').removeClass('activebtn')
         if ($('.select_existing_address').is(':hidden')) {
             $.ajax({
                 url: baseUrl + '/UpdateRegisteredAddress',
@@ -147,7 +155,9 @@ window.onload = function () {
                 }
             })
         } else {
+            console.log('2')
             // 添加新地址保存
+            var country = $('.country_select').text()
             // 地址
             var address = $('.address_input').val().trim();
             // 地址行2
@@ -160,36 +170,56 @@ window.onload = function () {
             var country = $('.country_select').text();
             // 邮编
             var zipcode = $('.zipcode_input').val().trim();
-            $.ajax({
-                url: baseUrl + '/AddAddressNew',
-                method: 'post',
-                dataType: "json",
-                data: {
-                    userid: amazon_userid,
-                    address: address,
-                    address2: address2,
-                    city: city,
-                    province: province,
-                    country: country,
-                    zipcode: zipcode,
-                    phone: '',
-                    type: '1',
-                    name: '',
-                    email: '',
-                    full_name: ''
-                },
-                success: function (res) {
-                    console.log(res)
-                    if (res.result == 1) {
-                        console.log('新增保存成功')
-                    } else {
+            if (country != "选择国家/地区" && address && city && province) {
+                $.ajax({
+                    url: baseUrl + '/AddAddressNew',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        address: address,
+                        address2: address2,
+                        city: city,
+                        province: province,
+                        country: country,
+                        zipcode: zipcode,
+                        phone: '',
+                        type: '1',
+                        name: '',
+                        email: '',
+                        full_name: ''
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.result == 1) {
+                            $('.a-alert-success').show()
+                            console.log('新增保存成功')
+                        } else {
+                            console.log(decodeURIComponent(res.error))
+                        }
+                    },
+                    error: function (res) {
                         console.log(decodeURIComponent(res.error))
                     }
-                },
-                error: function (res) {
-                    console.log(decodeURIComponent(res.error))
-                }
-            })
+                })
+            }
+            if(country === "选择国家/地区"){
+                $('.a-alert-error').show()
+                $('.country_select_div').addClass('activebtn')
+            }
+            if (!address) {
+                $('.a-alert-error').show()
+                $('.address_input').addClass('activebtn')
+            }
+            if (!city) {
+                $('.a-alert-error').show()
+                $('.city_input').addClass('activebtn')
+            }
+            if (!province) {
+                $('.a-alert-error').show()
+                $('.province_input').addClass('activebtn')
+            }
+    
         }
     })
 

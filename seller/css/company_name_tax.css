@@ -838,3 +838,8 @@ ul li>a:hover {
     box-shadow: none !important;
     cursor: not-allowed;
 }
+.finishColor{
+    background: #f4d078 !important;
+    border-color: #a88734 #9c7e31 #846a29 !important;
+    color: #111 !important;
+}

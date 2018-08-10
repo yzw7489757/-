@@ -1,5 +1,5 @@
 $(function () { 
-    inputctr.public.checkLogin(); 
+    inputctr.public.checkLogin();
     $.ajax({
         url: baseUrl + '/GetUserTax',
         method: 'post',
@@ -21,7 +21,6 @@ $(function () {
             $('.fullname').text(decodeURIComponent(data.full_name))
             $('.phone').text(decodeURIComponent(data.phone))
             $('.email').text(decodeURIComponent(data.email))
-            console.log(res.tax_id)
             sessionStorage.setItem('tax_id',res.tax_id)
           }
         },
@@ -29,4 +28,7 @@ $(function () {
             console.log(decodeURIComponent(res.error))
          }
       })
+    $('.goBack').click(function(){
+      $(location).attr('href','/seller/account_information.html')
+    })
  })

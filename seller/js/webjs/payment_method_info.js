@@ -1,7 +1,7 @@
 $(function () {
     inputctr.public.checkLogin(); 
        // 初始化付费方式(初始化信用卡列表) 
-       console.log(doT)
+    
     $.ajax({
         url: baseUrl + '/InitializaCharge',
         method: 'post',
@@ -16,8 +16,7 @@ $(function () {
                 var bank = doT.template($('#bankArray').text());
                 $('#bankTmpl').html(bank(data))
                 $('.edit_card').click(function (e) { 
-                    e.preventDefault();
-                    
+                    e.preventDefault(); 
                     //console.log($(this).parents('.card_tmpl').eq(0).find('.card_name').text())
                     if(window.sessionStorage){
                         sessionStorage.setItem('card_name',$(this).parents('.card_tmpl').eq(0).find('.card_name').text())

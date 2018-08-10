@@ -4,6 +4,8 @@ $(function () {
         window.location.href="../../company_address_choose.html"
      })
     $('.submitBtnAdd').click(function () {
+        $("div.myWarn").remove();
+        $("input").removeClass("activebtn");
          // 街道地址
          var address = $('.address_input').val().trim();
          // 公寓、楼层
@@ -40,7 +42,8 @@ $(function () {
                 success: function (res) {
                     console.log(res)
                     if (res.result == 1) {
-    
+                        //window.location.reload();
+                        $(window).attr('location', '/seller/company_address.html')
                     } else {
                         console.log(decodeURIComponent(res.error))
                     }
@@ -50,5 +53,22 @@ $(function () {
                 }
             })
          }
+         if (!address) {
+            addwarn("address_id", 2, "地址行 1 未填");
+            $('.address_input').addClass('activebtn')
+        }
+        if (!city) {
+            addwarn("city_input_id", 2, "城市未填");
+            $('.city_input').addClass('activebtn')
+        }
+        if (!zipcode) {
+            addwarn("zipcode_id", 2, "邮政编码为空");
+            $('.zipcode_input').addClass('activebtn')
+        }
+        if (!phone) {
+            addwarn("phone_id", 2, "电话号码字段未填");
+            $('.phone_input').addClass('activebtn')
+        }
+
     })
 })

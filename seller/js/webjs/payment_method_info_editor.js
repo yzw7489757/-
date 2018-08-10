@@ -20,9 +20,9 @@ $(function () {
                     // 卡号
                     $('.card_number').text(data.card_number)
                     // 有效月份
-                    $('.valid_through_month_select option:selected').val(data.valid_through_month)
+                    $('.valid_through_month_select').val(data.valid_through_month)
                     // 有效年份
-                    $('.valid_through_year_select option:selected').val(data.valid_through_year)
+                    $('.valid_through_year_select').val(data.valid_through_year)
 
                     // 持卡人姓名
                     $('.card_holder_name_input').val(decodeURIComponent(data.card_holder_name))

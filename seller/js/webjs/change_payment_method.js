@@ -1,11 +1,17 @@
 $(function () {
-    inputctr.public.checkLogin(); 
+    inputctr.public.checkLogin();
     var method_id = null;
-    var billing_address_id = null;
+    var billing_address_id = null;// 账单邮寄地址选中地址id
     var checked = false;
-    var show = true; //设置付款方式1 为真时调用
+    var showNewcard = false; //设置付款方式1 为真时调用
+    var showAddress = false; // 邮寄地址
+    var chooseCard = true;
+    var dataTemp = null; // 初始化  编辑付款方式
+    var card_html = null;
+    // 添加新的账单地址
     $('.billing_addressBtn').click(function (e) {
         e.preventDefault();
+        showAddress = true;
         $('.billing_address').hide()
         $('.send_address').show();
     })
@@ -14,9 +20,11 @@ $(function () {
         $('.billing_address').show()
         $('.send_address').hide();
     })
+    // 添加新的信用卡
     $('.replace_credit_card_a').click(function (e) {
         e.preventDefault()
-        show = false;
+        showNewcard = true;
+        chooseCard = false;
         $('.replace_credit_card').hide();
         $('.new_credit_card').show();
         $('.billing_address').show();
@@ -32,15 +40,20 @@ $(function () {
             success: function (res) {
                 console.log(res)
                 if (res.result == 1) {
+                    billing_address_id = res.registered_address_Id;
+                    res.List.forEach(function (item) { 
+                        item.status = (item.address_id === res.registered_address_Id) ? true : false
+                    })
                    
-                    var data = res.List
+                    let resData = res.List
                     var add = doT.template($('#addArray').text());
-                    $('#addTmpl').html(add(data))
+                    $('#addTmpl').html(add(resData))
                     $('#addTmpl input').each(function (i) {
                         $('#addTmpl input').eq(i).click(function () {
                             billing_address_id = $('input[name=address]:checked').parents('.adds').attr('data-card')
                         })
                     })
+                    console.log(res.List)
                 } else {
                     console.log(decodeURIComponent(res.error))
                 }
@@ -49,8 +62,6 @@ $(function () {
                 console.log(decodeURIComponent(res.error))
             }
         })
-
-
     })
     $('.new_credit_card_a').click(function (e) {
         e.preventDefault()
@@ -58,15 +69,6 @@ $(function () {
         $('.new_credit_card').hide();
         $('.billing_address').hide();
     })
-    var obj = {
-        card_number:'1234',
-        valid_through_month:'5',
-        valid_through_year:'2018',
-        card_holder_name:'Seven',
-        strAddressInfo:'北京',
-    }
-    var card_html = doT.template($('#card_tmpl').text());
-    $('#card_Div').html(card_html(obj))
 
     // 初始化  编辑付款方式
     $.ajax({
@@ -79,17 +81,9 @@ $(function () {
         success: function (res) {
             console.log(res)
             if (res.result == 1) {
-                var data = res.data.strChargeInfo;
-                // 卡号
-                $('.card_number').text(data.card_number)
-                // 有效月份
-                $('.valid_through_month').text(data.valid_through_month)
-                // 有效年份
-                $('.valid_through_year').text(data.valid_through_year)
-                // 持卡人姓名
-                $('.card_holder_name').text(decodeURIComponent(data.card_holder_name))
-                // 帐单地址
-                $('.strAddressInfo').text(decodeURIComponent(decodeURIComponent(res.data.strAddressInfo)))
+                dataTemp = res.data.strChargeInfo;
+                card_html = doT.template($('#card_tmpl').text());
+                $('#card_Div').html(card_html(dataTemp))
             } else {
                 console.log(decodeURIComponent(res.error))
             }
@@ -98,94 +92,50 @@ $(function () {
             console.log(decodeURIComponent(res.error))
         }
     })
-    var obj2 = [
-        {
-            method_id:'1',
-            card_number:'123',
-            valid_through_month:'4',
-            valid_through_year:'2018',
-            card_holder_name:'seven',
-            strAddressInfo:'北京',
+    //初始化付费方式(初始化信用卡列表) 
+    $.ajax({
+        url: baseUrl + '/InitializaCharge',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
         },
-        {
-            method_id:'2',
-            card_number:'456',
-            valid_through_month:'6',
-            valid_through_year:'2099',
-            card_holder_name:'Floyd',
-            strAddressInfo:'杭州',
-        },
-        {
-            method_id:'3',
-            card_number:'789',
-            valid_through_month:'2',
-            valid_through_year:'2019',
-            card_holder_name:'Steven',
-            strAddressInfo:'地道',
+        success: function (res) {
+            console.log(res)
+            let bankArrayData = res.data;
+            if (res.result == 1) {
+                method_id = res.chargeId
+                bankArrayData.forEach(function (item) {
+                    item.status = (item.method_id === res.chargeId) ? true : false
+                })
+                var bank = doT.template($('#bankArray').text());
+                console.log(bankArrayData)
+                $('#bankTmpl').html(bank(bankArrayData))
+
+
+                $('#bankTmpl input').each(function (i) {
+                    $('#bankTmpl input[type=radio]').eq(i).click(function () { 
+                            method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
+                            // 获取点击行的值，重新渲染
+                            dataTemp.card_number = $(this).parents('.banks').find('.card_number').text();
+                            dataTemp.valid_through_month = $(this).parents('.banks').find('.valid_through_month').text()
+                            dataTemp.valid_through_year = $(this).parents('.banks').find('.valid_through_year').text()
+                            dataTemp.strAddressInfo = $(this).parents('.banks').attr('dataTemp-address');
+                            dataTemp.card_holder_name = $(this).parents('.banks').find('.card_holder_name').text() 
+                        })
+                       
+                })
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
         }
-    ]
-
-
-    method_id = '1';
-    obj2.forEach(function (item) {
-        item.status = (item.method_id === '1') ? true :false
     })
-    var bank = doT.template($('#bankArray').text());
-    $('#bankTmpl').html(bank(obj2))
-    $('#bankTmpl input').each(function (i) {
-        $('#bankTmpl input').eq(i).click(function () {
-            method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
-            //获取点击行的值，重新渲染
-            obj.card_number = $(this).parents('.banks').find('.card_number').text();
-            obj.valid_through_month = $(this).parents('.banks').find('.valid_through_month').text()
-            obj.valid_through_year = $(this).parents('.banks').find('.valid_through_year').text()
-            obj.strAddressInfo = $(this).parents('.banks').attr('data-address');
-            obj.card_holder_name = $(this).parents('.banks').find('.card_holder_name').text()
-            console.table(obj)
-            $('#card_Div').html(card_html(obj))
-        })
-    })
-
-    // 初始化付费方式(初始化信用卡列表) 
-    // $.ajax({
-    //     url: baseUrl + '/InitializaCharge',
-    //     method: 'post',
-    //     dataType: "json",
-    //     data: {
-    //         userid: amazon_userid,
-    //     },
-    //     success: function (res) {
-    //         console.log(res)
-    //         if (res.result == 1) {
-    //             method_id = res.chargeId
-    //             res.data.forEach(function (item) {
-    //                 item.status = (item.method_id === res.chargeId) ? true : false
-    //             })
-    //             var data = res.data;
-    //             var bank = doT.template($('#bankArray').text());
-    //             $('#bankTmpl').html(bank(data))
-    //             $('#bankTmpl input').each(function (i) {
-    //                 $('#bankTmpl input').eq(i).click(function () {
-    //                     method_id = $('input[name=card]:checked').parents('.banks').attr('data-card')
-    //                         // 获取点击行的值，重新渲染
-    //                         obj.card_number = $(this).parents('.banks').find('.card_number').text();
-    //                         obj.valid_through_month = $(this).parents('.banks').find('.valid_through_month').text()
-    //                         obj.valid_through_year = $(this).parents('.banks').find('.valid_through_year').text()
-    //                         obj.strAddressInfo = $(this).parents('.banks').attr('data-address');
-    //                         obj.card_holder_name = $(this).parents('.banks').find('.card_holder_name').text()
-    //                         console.table(obj)
-    //                         $('#card_Div').html(card_html(obj))
-    //                 })
-    //             })
-
-    //         } else {
-    //             console.log(decodeURIComponent(res.error))
-    //         }
-    //     }
-    // })
     //初始化账单寄送地址 新增邮寄地址
     $('.submitBtn').click(function (e) {
         e.preventDefault();
+        $('#card_Div').html(card_html(dataTemp))
+        $("div.myWarn").remove();
+        $("input").removeClass("activebtn");
         // 信用卡号
         var card_number = $('.card_number_input').val().trim();
         // 有效期限（月）
@@ -208,16 +158,9 @@ $(function () {
         var zipcode = $('.zipcode_input').val().trim()
         // 手机号
         var phone = $('.phone_input').val().trim()
-        if(!card_number ){
-            addwarn("address", 2, "必填字段");
-            $('.card_number_input').addClass('activebtn')
-        }
-        if(!address){
-            addwarn("card_number", 2, "必填字段");
-            $('.address_input').addClass('activebtn')
-        }
-        //设置付款方式1
-        if (show) {
+
+        //设置付款方式1 选择您要替换为的信用卡。
+        if (chooseCard) {
             $.ajax({
                 url: baseUrl + '/SetChargeMade',
                 method: 'post',
@@ -229,7 +172,9 @@ $(function () {
                 success: function (res) {
                     console.log(res)
                     if (res.result == 1) {
-
+                      //  $(window).attr('location','../../payment_method.html')
+                        $(location).attr('href','/seller/payment_method.html')
+                        console.log('success!')
                     } else {
                         console.log(decodeURIComponent(res.error))
                     }
@@ -239,67 +184,115 @@ $(function () {
                 }
             })
         }
-        
-        if (address &&  city && country && zipcode && phone) {
-            //新增邮寄地址
-            $.ajax({
-                url: baseUrl + '/AddAddressNew',
-                method: 'post',
-                dataType: "json",
-                data: {
-                    userid: amazon_userid,
-                    address: address,
-                    address2: address2,
-                    city: city,
-                    province: province,
-                    country: country,
-                    zipcode: zipcode,
-                    phone: phone,
-                    type: '1',
-                    name: '',
-                    email: '',
-                    full_name: ''
-                },
-                success: function (res) {
-                    console.log(res)
-                    if (res.result == 1) {
+        if (showAddress) {
+            if (address && city && zipcode && phone) {
+                //新增邮寄地址
+                $.ajax({
+                    url: baseUrl + '/AddAddressNew',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        address: address,
+                        address2: address2,
+                        city: city,
+                        province: province,
+                        country: country,
+                        zipcode: zipcode,
+                        phone: phone,
+                        type: '1',
+                        name: '',
+                        email: '',
+                        full_name: ''
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.result == 1) {
 
-                    } else {
+                        } else {
+                            console.log(decodeURIComponent(res.error))
+                        }
+                    },
+                    error: function (res) {
                         console.log(decodeURIComponent(res.error))
                     }
-                },
-                error: function (res) {
-                    console.log(decodeURIComponent(res.error))
-                }
-            })
+                })
+            }
+            if (!address) {
+                addwarn("address_id", 2, "地址行 1 未填");
+                $('.address_input').addClass('activebtn')
+            }
+            if (!city) {
+                addwarn("city_id", 2, "城市未填");
+                $('.city_input').addClass('activebtn')
+            }
+            if (!zipcode) {
+                addwarn("zipcode_id", 2, "邮政编码为空");
+                $('.zipcode_input').addClass('activebtn')
+            }
+            if (!phone) {
+                addwarn("phone_id", 2, "电话号码字段未填");
+                $('.phone_input').addClass('activebtn')
+            }
+
         }
-
         //新增信用卡
-        if (card_number && card_holder_name) {
-            $.ajax({
-                url: baseUrl + '/AddChargeMethod',
-                method: 'post',
-                dataType: "json",
-                data: {
-                    userid: amazon_userid,
-                    card_number: card_number,
-                    valid_through_month: valid_through_month,
-                    valid_through_year: valid_through_year,
-                    card_holder_name: card_holder_name,
-                    billing_address_id: 1,
-                },
-                success: function (res) {
-                    console.log(res)
-                    if (res.result == 1) {
-
-                    } else {
+        if (showNewcard) {
+            var time = new Date();
+            var mouth = time.getMonth() + 1
+            var year = time.getFullYear()
+            var selectMouth = $('.valid_through_month_select  option:selected').text()
+            var selectYear = $('.valid_through_year_select  option:selected').text()
+            if (!card_number) {
+                addwarn("card_number_id", 2, "必填字段");
+                $('.card_number_input').addClass('activebtn')
+            }
+            if (!card_holder_name) {
+                addwarn("card_holder_name_id", 2, "必填字段");
+                $('.card_holder_name_input').addClass('activebtn')
+            }
+            if(selectYear < year){//选择的时间小于年份，直接返回
+                addwarn("year_select_id", 2, "有效期无效");
+                return
+            }
+            if ((year===selectYear)&&(selectMouth < mouth)) {//选择的月份小于当前的月份&&年份为当前
+                addwarn("month_select_id", 2, "有效期无效");
+                return 
+            }
+            
+            if (card_number && card_holder_name) {
+                $.ajax({
+                    url: baseUrl + '/AddChargeMethod',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        card_number: card_number,
+                        valid_through_month: valid_through_month,
+                        valid_through_year: valid_through_year,
+                        card_holder_name: card_holder_name,
+                        billing_address_id: billing_address_id,
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.result == 1) {
+                            console.log('success!')
+                            $(location).attr('href','/seller/payment_method.html') 
+                        } else {
+                            console.log(decodeURIComponent(res.error))
+                        }
+                    },
+                    error: function (res) {
                         console.log(decodeURIComponent(res.error))
+                        if (res.result == 1) {
+                            console.log('success!')
+                            $(location).attr('href','/seller/payment_method.html') 
+                        } else {
+                            console.log(decodeURIComponent(res.error))
+                        }
                     }
-                },
-                error: function (res) {
-                    console.log(decodeURIComponent(res.error))
-                }
-            })
+                })
+            }
         }
     })
 
