@@ -1,0 +1,132 @@
+$(function () {
+    inputctr.public.checkLogin(); 
+    $.ajax({
+        url: baseUrl + '/InitialPreference',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
+        },
+
+        success: function (res) {
+               if (res.result == 1) {
+                console.log(res)
+  
+ 
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
+
+    var showText = true;
+    var email = $('.email').text()
+    $('.a-tabs li').click(function () {
+       
+        var index = $(this).index();
+        $(this).addClass("a-active").siblings().removeClass("a-active")
+        $(".chooseText>li").eq(index).removeClass("none").siblings().addClass("none");
+    })
+    $('.title').each(function (index, item) {
+        $('.title').eq(index).click(function (e) {
+            var TextdetailLi = $('.title').eq(index)
+            if (e.target.className.indexOf('edit') != '-1') {
+                // 点击编辑
+                TextdetailLi.find('.save_cancel_Btn').show()
+                TextdetailLi.find('.editBtn').hide()
+                TextdetailLi.parents('.parentNode').find('.check-icon').attr("tabindex","-1").addClass('editImg')
+                TextdetailLi.parents('.parentNode').find('.originalInfo').hide()
+
+                //编辑中图标点击
+                TextdetailLi.parents('.parentNode').find('.check-icon').click(function(e){
+                   
+                    if(e.target.className.indexOf('editImg')!='-1'){
+                         $(e.target).removeClass("editImg");
+                         $(e.target).addClass("editEmptyImg");
+                    }
+                    else{
+                          $(e.target).addClass("editImg");
+                          $(e.target).removeClass("editEmptyImg");
+                    }
+                });
+
+             
+
+            } else if (e.target.className.indexOf('cancel') != '-1') {
+                //点击取消
+                TextdetailLi.parents('.parentNode').find('.originalInfo').show()
+                TextdetailLi.find('.save_cancel_Btn').hide()
+                TextdetailLi.find('.editBtn').show()
+                TextdetailLi.parents('.parentNode').find('.check-icon').removeClass('editImg')
+                //移除输入框
+                 TextdetailLi.parents('.parentNode').find('.inputBox').remove();
+
+            }else if(e.target.className.indexOf('save') != '-1'){
+                //点击保存
+                
+            }else {
+                if (showText) {
+                    TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').show()
+                    TextdetailLi.find('.a-icon-section-collapse').css({
+                        'backgroundPosition': '-5px -82px'
+                    })
+                    TextdetailLi.find('.editBtn').show()
+                    showText = false;
+                } else {
+                    TextdetailLi.find('.save_cancel_Btn').hide()
+                    TextdetailLi.find('.editBtn').hide()
+                    TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').hide()
+                    TextdetailLi.find('.a-icon-section-collapse').css({
+                        'backgroundPosition': '-5px -59px'
+                    })
+                    TextdetailLi.find('.editBtn').hide()
+                    showText = true;
+                }
+            }
+
+        })
+    })
+
+   function checkSet(className,value){
+    if(value==1){
+        $("."+className).find(".icon").addClass("empty-check-icon");
+         $("."+className).find(".icon").removeClass("check-icon");
+     }else{
+         $("."+className).find(".icon").removeClass("empty-check-icon");
+         $("."+className).find(".icon").addClass("check-icon");
+     }
+          
+   }
+
+    // 通知首选项页面中编辑按钮
+    function addInput(target) {
+        let $addinputUl = target;
+        let $addinputLi = $(`
+            <li class="inputBox">
+                <input type="email" class="box-sizing a-input-text onfocusInput a-row inputText" style="width: 82.948%;">
+                <img src="./img/close.png" alt="" class="closeBtn" style="display: inline-block;">
+                <br>
+            </li>           
+            `);
+        $addinputUl.append($addinputLi)
+    }
+    // 编辑按钮出现input 
+    $('.editBtn').each(function (index, item) {
+        $('.editBtn').eq(index).click(function () {
+            addInput($(this).parents('.parentNode').find('.addInput'))
+            $('.editBtn').eq(index)
+        })  
+    })
+    
+    // 保存
+    $('.saveBtn').each(function (index,item) { 
+        $('.saveBtn').eq(index).click(function () { 
+            console.log($('.addInput li input').val())
+        })
+    })
+    
+    
+})

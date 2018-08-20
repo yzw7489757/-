@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/manage_orders.css"/>
+    <link rel="stylesheet" type="text/css" href="css/manage_inventory.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="amazon-manage-order-wrap">
+    	<div id="amazon-manage-order">
+    		<div class="amazon-manage-order-header clearfix">
+    			<h1 class="pull-left">管理订单</h1>
+    			<div class="pull-right clearfix">
+    				<span class="pull-right a-button a-button-search" id="search-order-submit">
+    					<span class="a-button-inner">
+    						<span class="a-button-text" >搜索</span>
+    					</span>
+    				</span>
+    				<input class="pull-right" type="text" name="" id="search-order-input" value="" placeholder="搜索" />
+    				<span class="pull-right a-dropdown-container dropdown" id="search-order-condition" data-condition="orderid">
+    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    						<span class="a-button-inner">
+    							<span class="a-button-text a-declarative">
+    								<span class="a-dropdown-prompt">订单编号</span>
+    							</span>
+    							<i class="a-icon a-icon-dropdown"></i>
+    						</span>
+    					</span>
+    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+							<li  role="option" aria-checked="true">
+								<a  href="javascript:void(0)"  replace-text="订单编号" data-value="orderid" class="a-dropdown-link active">订单编号</a>
+							</li>
+							<li  role="option" aria-checked="false">
+								<a  href="javascript:void(0)"  replace-text="ASIN" data-value="asin"   class="a-dropdown-link">ASIN</a>
+							</li>
+							<li role="option" aria-checked="false">
+								<a  href="javascript:void(0)"  replace-text="买家电子邮件" data-value="email"   class="a-dropdown-link">买家电子邮件</a>
+							</li>
+							<li role="option" aria-checked="false">
+								<a  href="javascript:void(0)" replace-text="商品编号" data-value="sdp-listing-id" class="a-dropdown-link">商品编号</a>
+							</li>
+							<li role="option" aria-checked="false">
+								<a href="javascript:void(0)" replace-text="SKU" data-value="sku" class="a-dropdown-link">SKU</a>
+							</li>
+							<li role="option" aria-checked="false">
+								<a  href="javascript:void(0)"  replace-text="商品名称" data-value="product-name"  class="a-dropdown-link">商品名称</a>
+							</li>
+							<li role="option" aria-checked="false">
+								<a  href="javascript:void(0)"  replace-text="追踪编码"  data-value="tracking-id" class="a-dropdown-link">追踪编码</a>
+							</li>
+					  	</ul>
+    				</span>
+    			</div>
+    		</div>
+   			<div class="amazon-manage-order-content">
+   				<div class="tabs-container">
+   					<p class="a-color-tertiary">卖家自配送</p>
+   					<ul class="spa-tab-container clearfix">
+   						<li class="spa-tab-item active pull-left">
+   							<a  data-toggle="tab" role="tab" href="#amazon-manage-order-standing-by">
+   								<h4>
+   									<span class="spa-highlight">0</span> 
+   									<span>等待中</span>
+   								</h4>
+   							</a>
+   						</li>
+   						<li  class="spa-tab-item pull-left">
+   							<a data-toggle="tab" role="tab" href="#amazon-manage-order-not-shipped">
+	   							<h4>
+	   								<span class="spa-highlight">0</span> 
+	   								<span>未发货</span>
+	   							</h4>
+	   						</a>
+   						</li>
+   						<li  class="spa-tab-item pull-left">
+   							<a data-toggle="tab" role="tab" href="#amazon-manage-order-has-cancel">
+   								<h4>
+	   								<span class="spa-highlight">0</span> 
+	   								<span>已取消</span>
+	   							</h4>
+   							</a>
+   						</li>
+   						<li class="spa-tab-item pull-left">
+   							<a data-toggle="tab" role="tab" href="#amazon-manage-order-shipped">
+   								<h4>
+	   								<span class="spa-highlight">0</span> 
+	   								<span>已发运</span>
+	   							</h4>
+   							</a>
+   						</li>
+   					</ul>
+   				</div>
+   				<div class="amazon-manage-order-container">
+   					<div class="quick-filters-bar" id="amazon-manage-order-quick-filters-bar">
+   						<div class="a-row">
+   							<span data-test-id="quickFilter-text" class="a-color-tertiary">
+   								<span class="">快速筛选：</span>
+   							</span>
+   							<div class="myo-spa-quick-filter">
+   								<a href="javascript:;">
+   									<span class="a-text-bold">0</span> 
+   									<span class="">今天配送</span>
+   								</a>
+   							</div>
+   							<div class="myo-spa-quick-filter">
+   								<a  href="javascript:;">
+   									<span class="a-text-bold">0</span> 
+   									<span class="">未发货的优先配送订单</span>
+   								</a>
+   							</div>
+   						</div>
+   					</div>
+   					<div class="amazon-manage-order-filters-bar">
+   						<div id="dynamic-condition" style="display: inline-block;"></div>
+						<div class="myo-filter-topbar-badge blue" data-test-id="filter-clear-all">
+							<span>全部清除</span>
+						</div>
+						<div class="myo-filter-topbar-badge red" data-test-id="filter-delete">
+							<span>删除此快速筛选器</span>
+						</div>
+						<div class="myo-filter-topbar-badge blue" data-test-id="filter-save">
+							<div class="dropdown">
+								<span class="a-declarative" data-toggle="dropdown" onclick="manage_orders.SaveQuickFilter()" aria-haspopup="true" aria-expanded="false" id="myo-quickfilters-save" >
+									<span>另存为快速筛选器</span>
+								</span>
+								<div class="a-popover-preloadv dropdown-menu"  id="a-popover-myo-quickfilters-save">
+									<div class="myo-sqf-heading">
+										<span class="a-size-medium">将此过滤器集保存为快速过滤器</span>
+									</div>
+									<div class="myo-sqf-body">
+										<span>提供可让您轻松记起的自定义名称</span>
+										<div class="myo-sqf-body-shaded">
+											<form id="myo-sqf-form">
+												<input type="text" value="" maxlength="32" id="myo-sqf-name">
+											</form>
+											<span class="myo-sqf-error"></span>
+											<ul></ul>
+										</div>
+									</div>
+									<div class="myo-sqf-footer clearfix">
+										<button class="a-button a-button-primary  pull-right">保存</button>
+										<button class="a-button  pull-right">删除</button>
+									</div>
+								</div>
+							</div>
+						</div>
+   					</div>
+   					<div class="clearfix amazon-manage-order-layout">
+   						<div class="pull-left amazon-manage-order-sidebar">
+   							<div class="myo-well">
+   								<span>细化依据：</span>
+   								<form id="myo-filters-form">
+   									<div class="a-row">
+   										<span data-test-id="shipByDate" class="a-text-bold">配送日期</span>
+   										<div class="myo-options">
+   											<label data-test-id="all">
+   												<input type="radio" name="shipByDate" value="all"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">所有日期</span>
+   											</label>
+   											<label data-test-id="today">
+   												<input type="radio" name="shipByDate" value="today"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">今天配送</span>
+   											</label>
+   											<label data-test-id="tomorrow" >
+   												<input type="radio" name="shipByDate" value="tomorrow" onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">明天配送</span>
+   											</label>
+   										</div>
+   									</div>
+   									<div class="a-row">
+   										<span data-test-id="salesChannelMFN" class="a-text-bold">销售渠道</span>
+   										<div class="myo-options">
+   											<label data-test-id="A1AM78C64UM0Y8">
+   												<input type="checkbox" name="shipByChannel" value="A1AM78C64UM0Y8"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">Amazon.com.mx</span>
+   											</label>
+   											<label data-test-id="A2EUQ1WTGCTBG2">
+   												<input type="checkbox" name="shipByChannel" value="A2EUQ1WTGCTBG2"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">Amazon.ca</span>
+   											</label>
+   											<label data-test-id="ATVPDKIKX0DER">
+   												<input type="checkbox" name="shipByChannel" value="ATVPDKIKX0DER"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">Amazon.com</span>
+   											</label>
+   											<label data-test-id="A6W85IYQ5WB1C">
+   												<input type="checkbox" name="shipByChannel" value="A6W85IYQ5WB1C"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">IBA</span>
+   											</label>
+   										</div>
+   									</div>
+   									<div class="a-row">
+   										<span data-test-id="shippingService" class="a-text-bold">配送服务</span>
+   										<div class="myo-options">
+   											<label data-test-id="premium">
+   												<input type="radio" name="shippingService" value="premium"  onclick="manage_orders.ChangeFilterCondition()">
+   												<span class="myo-form-label">优先配送</span>
+   											</label>
+   										</div>
+   									</div>
+   								</form>
+   							</div>
+   						</div>
+   						<div class="pull-left  amazon-manage-order-main-content">
+   							<div class="a-spacing-mini row">
+   								<div class="col-lg-4 col-md-4">
+   									<span class="a-button a-button-dark" >
+				    					<span class="a-button-inner">
+				    						<span class="a-button-text">隐藏筛选条件</span>
+				    					</span>
+				    				</span>
+				    				<div class="total-orders-heading"><span class="">0 个订单</span></div>
+   								</div>
+   								<div class="col-lg-8 col-md-8">
+   									<span class="pull-right a-dropdown-container"  id="amazon-manage-order-refresh">
+				    					<span class="a-button">
+				    						<span class="a-button-inner">
+				    							<span class="a-button-text a-declarative">
+				    								<span class="a-dropdown-prompt">刷新</span>
+				    							</span>
+				    						</span>
+				    					</span>
+				    				</span>
+   									<span class="pull-right a-dropdown-container"  id="amazon-manage-order-preferences" onclick="manage_orders.SetTablePreferences()">
+				    					<span class="a-button">
+				    						<span class="a-button-inner">
+				    							<span class="a-button-text a-declarative">
+				    								<span class="a-dropdown-prompt">设置表格首选项</span>
+				    							</span>
+				    						</span>
+				    					</span>
+				    				</span>
+   									<span class="pull-right a-dropdown-container dropdown"  id="amazon-manage-order-page-size"  data-condition="100">
+				    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    						<span class="a-button-inner">
+				    							<span class="a-button-text a-declarative">
+				    								<span class="a-dropdown-prompt">每页结果： 100</span>
+				    							</span>
+				    							<i class="a-icon a-icon-dropdown"></i>
+				    						</span>
+				    					</span>
+				    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="每页结果： 15" data-value="15" class="a-dropdown-link">15</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="每页结果： 25" data-value="25" class="a-dropdown-link">25</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="每页结果： 50" data-value="50" class="a-dropdown-link">50</a>
+											</li>
+											<li role="option" aria-checked="true" >
+												<a href="javascript:void(0)" replace-text="每页结果： 100"  data-value="100" class="a-dropdown-link active">100</a>
+											</li>
+									  	</ul>
+				    				</span>
+				    				<span class="pull-right a-dropdown-container dropdown"  id="amazon-manage-order-sort-by"  data-condition="order_date_asc">
+				    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    						<span class="a-button-inner">
+				    							<span class="a-button-text a-declarative">
+				    								<span class="a-dropdown-prompt">订单日期（升序）</span>
+				    							</span>
+				    							<i class="a-icon a-icon-dropdown"></i>
+				    						</span>
+				    					</span>
+				    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+											<li role="option" aria-checked="true">
+												<a href="javascript:void(0)" replace-text="订单日期（升序）"  data-value="order_date_asc" class="a-dropdown-link active">订单日期（升序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="订单日期 (降序)" data-value="order_date_desc" class="a-dropdown-link">订单日期 (降序)</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="发货日期（升序）" data-value="ship_by_asc" class="a-dropdown-link">发货日期（升序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="发货日期（降序）" data-value="ship_by_desc" class="a-dropdown-link">发货日期（降序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="配送服务（升序）" data-value="shipping_service_asc" class="a-dropdown-link">配送服务（升序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="配送服务（降序）" data-value="shipping_service_desc" class="a-dropdown-link">配送服务（降序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="状态（升序）" data-value="status_asc" class="a-dropdown-link">状态（升序）</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="状态（降序）" data-value="status_desc" class="a-dropdown-link">状态（降序）</a>
+											</li>
+									  	</ul>
+				    				</span>
+				    				<span class="pull-right a-dropdown-container dropdown"  id="amazon-manage-order-date-range"  data-condition="recent-1day">
+				    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    						<span class="a-button-inner">
+				    							<span class="a-button-text a-declarative">
+				    								<span class="a-dropdown-prompt">日期范围：  最近一天</span>
+				    							</span>
+				    							<i class="a-icon a-icon-dropdown"></i>
+				    						</span>
+				    					</span>
+				    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+											<li role="option" aria-checked="true">
+												<a href="javascript:void(0)" replace-text="日期范围：  最近一天"  data-value="recent-1day" class="a-dropdown-link active">最近一天</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="日期范围：  最近3天" data-value="recent-3day" class="a-dropdown-link">最近3天</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="日期范围：  最近7天" data-value="recent-7day" class="a-dropdown-link">最近7天</a>
+											</li>
+											<li role="option" aria-checked="false">
+												<a href="javascript:void(0)" replace-text="日期范围：  最近14天" data-value="recent-14day" class="a-dropdown-link">最近14天</a>
+											</li>
+									  	</ul>
+				    				</span>
+   								</div>
+   							</div>
+   							<div  class="tab-content">
+			   					<div id="amazon-manage-order-standing-by"  class="tab-pane active">
+			   						<div class="header-filters">
+						                <div class="filter-selection clearfix">
+						                   <p class="pull-left">对<span>0</span>个订单的操作：</p>
+						                   <button class="pull-left a-button a-button-primary">购买配送</button>
+						                   <button class="pull-left a-button">打印装箱单</button>
+						                   <button class="pull-left a-button">确认发货</button>
+						                </div>
+						            </div>
+			   						<table class="a-horizontal-stripes">
+					                    <tbody>
+					                    	<tr>
+						                        <th id="select">
+						                            <label for="mt-select-all">
+						                                <input type="checkbox" id="mt-select-all">
+						                            </label>
+						                        </th>
+						                        <th>订单日期</th>
+						                        <th>订单ID/产品详情</th>
+						                        <th>买家姓名</th>
+						                        <th>账单国家/地区</th>
+						                        <th>买家配送服务</th>
+						                        <th>状态</th>
+						                        <th>送达日期</th>
+						                        <th>操作</th>
+						                    </tr>
+						                    <tr>
+						                        <td id="dGFvd3cx-select" data-column="select">
+						                            <label>
+						                                <input type="checkbox" value="dGFvd3cx">
+						                            </label>
+						                        </td>
+						                        <td>
+						                        	<p>Jan 16,2013</p>
+						                        	<p>3:12:45 PM PST</p>
+						                        </td>
+						                        <td>
+						                        	<div class="order-inforamtion">
+						                        		<a class="blue-color">DC24564f13</a>
+						                        		<div class="product-information">
+						                        			<p>Collectable Bamboo Scroll (Carving in English/Chinese on double-sided bamboo scroll ) : 36 Stratagems</p>
+						                        			<div class="row">
+						                        				<span class="col-lg-4 col-md-4">
+						                        					<span class="a-color-tertiary">QTY:</span>
+						                        					<span>1</span>
+						                        				</span>
+						                        				<span class="col-lg-4 col-md-4">
+						                        					<span class="a-color-tertiary">ASIN:</span>
+						                        					<span>1</span>
+						                        				</span>
+						                        				<span class="col-lg-4 col-md-4">
+						                        					<span class="a-color-tertiary">SKU:</span>
+						                        					<span>1</span>
+						                        				</span>
+						                        			</div>
+						                        		</div>
+						                        	</div>
+						                        </td>
+						                        <td><a class="blue-color">shanshan gao</a></td>
+						                        <td>美国</td>
+						                        <td>标准</td>
+						                        <td>未发货</td>
+						                        <td>
+						                        	<p>Jan 16,2013</p>
+						                        	to
+						                        	<p>Jan 16,2013</p>
+						                        </td>
+						                        <td class="action">
+						                        	<button class="primaryAUIButton  block" >print packing slip</button>
+						                        	<button class="primaryAUIButton  block" >confirm shipment</button>
+						                        	<button class="primaryAUIButton  block" >cancel order</button>
+						                        </td>
+						                    </tr>
+						                </tbody>
+			   						</table>
+			   					</div>
+			   					<div id="amazon-manage-order-not-shipped"  class="tab-pane">
+			   						<p class="no-data"> 未找到与指定搜索条件相匹配的订单。</p>
+			   					</div>
+			   					<div id="amazon-manage-order-has-cancel"  class="tab-pane">
+			   						<p class="no-data"> 未找到与指定搜索条件相匹配的订单。</p>
+			   					</div>
+			   					<div id="amazon-manage-order-shipped"  class="tab-pane">
+			   						<p class="no-data"> 未找到与指定搜索条件相匹配的订单。</p>
+			   					</div>
+   						</div>
+   						
+		   				</div>
+   					</div>
+   					
+   				</div>
+   				
+   			</div>
+    	</div>
+    </div>
+   <div class="a-container-footer"></div>
+   <div class="modal fade amazon-manage-order-modal" id="amazon-manage-order-set-table-preferences"  tabindex="-1" role="dialog" >
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">设置“管理订单”表的默认首选项</h4>
+	      </div>
+	      <div class="modal-body">
+	        <div>
+	        	<a>查看所有选项</a>
+	        	<a>取消选中所有（可选）选项</a>
+	        	<a>重置为默认首选项</a>
+	        </div>
+	        <div class="row orders-table-preference-group-set">
+	        	<div class="col-lg-4 orders-table-preference-group" data-test-id="orderDate">
+	        		<div class="orders-table-preference-group-title-container">
+	        			<span class="orders-table-preference-group-title ">订单日期</span>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked" disabled="disabled" value="day"><span>日期</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="time"><span>时间</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="timeFromOrderDate"><span>自下单日起经过的时间</span>
+	        			</label>
+	        		</div>
+	        	</div>
+	        	<div class="col-lg-4 orders-table-preference-group" data-test-id="orderDetails">
+	        		<div class="orders-table-preference-group-title-container">
+	        			<span class="orders-table-preference-group-title ">订单详情</span>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked" disabled="disabled" value="orderId"><span>订单编号</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked" disabled="disabled"  value="buyerName"><span>买家姓名</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="fulfillmentMethod"><span>配送渠道</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="salesChannel"><span>销售渠道</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="billingCountry"><span>账单国家/地区</span>
+	        			</label>
+	        		</div>
+	        	</div>
+	        	<div class="col-lg-4 orders-table-preference-group" data-test-id="productName">
+	        		<div class="orders-table-preference-group-title-container">
+	        			<span class="orders-table-preference-group-title ">商品名称</span>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox" checked="checked" disabled="disabled" value="name"><span>名称</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked" disabled="disabled"  value="quantity"><span>数量</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="sku"><span>SKU</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="asin"><span>ASIN</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="image"><span>图片</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="itemSubtotal"><span>商品小计</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="condition"><span>状况</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="listingId"><span>商品编号</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="orderItemId"><span>订单商品编号</span>
+	        			</label>
+	        		</div>
+	        	</div>
+	        </div>
+	         <div class="row orders-table-preference-group-set">
+	        	<div class="col-lg-6 orders-table-preference-group" data-test-id="customerOption">
+	        		<div class="orders-table-preference-group-title-container">
+	        			<span class="orders-table-preference-group-title ">买家选项</span>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked" disabled="disabled" value="customerShippingService"><span>买家配送服务</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="shipByDate"><span>配送日期</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  value="deliverByDate"><span>送达日期</span>
+	        			</label>
+	        		</div>
+	        	</div>
+	        	<div class="col-lg-6 orders-table-preference-group" data-test-id="orderStatus">
+	        		<div class="orders-table-preference-group-title-container">
+	        			<span class="orders-table-preference-group-title ">订单状态</span>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox" checked="checked" disabled="disabled" value="orderFulfillmentStatus"><span>订单配送状态</span>
+	        			</label>
+	        		</div>
+	        		<div>
+	        			<label>
+	        				<input type="checkbox"  checked="checked"  disabled="disabled"  value="statusWarnings"><span>状态警告</span>
+	        			</label>
+	        		</div>
+	        	</div>
+
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="a-button" data-dismiss="modal">取消</button>
+	        <button type="button" class="a-button  a-button-primary">保存首选项</button>
+	      </div>
+	    </div> 
+	  </div> 
+	</div> 
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_orders.js" type="text/javascript" charset="utf-8"></script>
+</html>
+

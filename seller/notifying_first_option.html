@@ -20,12 +20,12 @@
         </div>
         <div class="a-row a-box">
             <ul class="a-tabs">
-                <li>
+                <li  class="active_tabs">
                     <a href="javascript:void(0)">通知选项</a>
                 </li>
                 <li>
                     <a href="javascript:void(0)">联系人</a>
-                </li>
+                </li>       
             </ul>
             <ul class="a-box-inner chooseText">
                 <li>
@@ -36,8 +36,8 @@
                                 <div class="a-alert-content">
                                     在下方查看您的设置。点击“编辑”按钮来更改信息。如果您尚未提交资质审核材料，请先了解
                                     <a href="javascript:void(0)">
-                                        <b>所需提交的资质材料清单及如何提交</b>
-                                    </a>。
+                                        <b>所需提交的资质材料清单及如何提交。</b>
+                                    </a>
                                     <span class="a-declarative">
                                         <a class="a-link-normal learn-more-link" href="#">了解更多信息</a>
                                     </span>
@@ -45,7 +45,7 @@
                             </div>
                         </li>
                         <!-- 订单通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -63,7 +63,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save "data-type="UpdateOrderNotification">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -85,7 +85,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px "class="order_sms_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon empty-check-icon"></span>
                                                     </div>
@@ -104,15 +104,17 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini">
-                                                            <div class="a-alert-inline a-alert-inline-info tipInfo">
+                                                            <div class="a-alert-inline a-alert-inline-info">
+                                                                
                                                                 <div class="relative a-alert-container">
+
                                                                     <i class="a-icon a-icon-alert"></i>
+
                                                                     <div class="a-alert-content">
                                                                         要更改您的短信联系人信息，请转至“联系人”选项卡并编辑卖家默认联系人。
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="a-row addBtn none"><a href="javacsript:void(0)">添加</a></div>
                                                         </div>
                                                     </div>
                                                     <div class="clear"></div>
@@ -128,7 +130,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="order_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -139,7 +141,7 @@
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="shipping_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -150,7 +152,7 @@
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="multichannel_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -161,7 +163,7 @@
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="shipment_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -172,7 +174,7 @@
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="problem_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -191,7 +193,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email order_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -213,7 +215,7 @@
                             </div>
                         </li>
                         <!-- 退货和索赔通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -231,7 +233,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification2">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -250,7 +252,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="returns_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -270,7 +272,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email returns_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -292,7 +294,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="claims_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -312,7 +314,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email claims_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -334,7 +336,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="refund_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -354,7 +356,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email refund_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -376,7 +378,7 @@
                             </div>
                         </li>
                         <!-- 商品通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -394,7 +396,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification3">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -413,7 +415,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="listing_created_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -429,11 +431,11 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label ">电子邮件:</span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email listing_created_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -455,7 +457,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="listing_closed_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -471,11 +473,11 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label ">电子邮件:</span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email listing_closed_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -498,7 +500,7 @@
                             </div>
                         </li>
                         <!-- 报告 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -516,7 +518,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save"data-type="UpdateOrderNotification4">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -535,7 +537,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="open_listings_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -555,7 +557,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email open_listings_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -577,7 +579,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="order_fulfillment_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -597,7 +599,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email order_fulfillment_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -619,7 +621,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="sold_listings_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -639,7 +641,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email sold_listings_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -661,7 +663,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px" class="cancelled_listings_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -681,7 +683,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email cancelled_listings_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -704,7 +706,7 @@
                             </div>
                         </li>
                         <!-- 出价通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -722,7 +724,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification5">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -741,7 +743,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="makeoffer_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -761,7 +763,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email makeoffer_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -783,7 +785,7 @@
                             </div>
                         </li>
                         <!-- 帐户通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -801,7 +803,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification6">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -820,7 +822,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="business_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -840,7 +842,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email business_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -862,7 +864,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"  class="technical_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -882,7 +884,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email technical_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -903,8 +905,8 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- 紧急通知 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <!-- 紧急通知 --> 
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -922,7 +924,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification7">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -942,7 +944,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="emergency_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -962,7 +964,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span> </span>
+                                                            <span class="email emergency_phone phone"> 1</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -984,7 +986,7 @@
                             </div>
                         </li>
                         <!-- 消息 -->
-                        <li class="a-spacing-base parentNode" data-show="false">
+                        <li class="a-spacing-base parentNode"  data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
@@ -1002,7 +1004,7 @@
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary saveBtn">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save save">保存</span>
+                                                        <span class="a-button-text block pdTop5 save " data-type="UpdateOrderNotification8">保存</span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
@@ -1031,7 +1033,7 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px">
+                                                <div style="padding-left:25px"class="buyer_messages_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
@@ -1051,7 +1053,7 @@
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
-                                                            <span class="email">5017140@qq.com</span>
+                                                            <span class="email buyer_messages_email">5017140@qq.com</span>
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
@@ -1084,7 +1086,7 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px">
+                                            <div style="padding-left:25px"class="confirmation_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
@@ -1100,11 +1102,11 @@
                                         <div class="a-spacing-mini">
                                             <div style="padding-left:100px">
                                                 <div style="width:100px;margin-left:-100px;float:left;">
-                                                    <span class="preference-group-label">电子邮件:</span>
+                                                    <span class="preference-group-label ">电子邮件:</span>
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
-                                                        <span class="email">5017140@qq.com</span>
+                                                        <span class="email confirmation_email">5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
@@ -1126,7 +1128,7 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px">
+                                            <div style="padding-left:25px"class="delivery_failures_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
@@ -1142,11 +1144,11 @@
                                         <div class="a-spacing-mini">
                                             <div style="padding-left:100px">
                                                 <div style="width:100px;margin-left:-100px;float:left;">
-                                                    <span class="preference-group-label">电子邮件:</span>
+                                                    <span class="preference-group-label ">电子邮件:</span>
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
-                                                        <span class="email">5017140@qq.com</span>
+                                                        <span class="email delivery_failures_email">5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
@@ -1168,7 +1170,7 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px">
+                                            <div style="padding-left:25px"class="buyer_optout_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
@@ -1188,7 +1190,7 @@
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
-                                                        <span class="email">5017140@qq.com</span>
+                                                        <span class="email buyer_optout_email">5017140@qq.com</span>
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
@@ -1235,8 +1237,8 @@
                                     </div>
                                 </td>
                                 <td class="contact-actions-column">
-                                    <a class="a-link-normal" href="">
-                                        <span class="a-declarative">
+                                    <a class="a-link-normal" href="#">
+                                        <span class="a-declarative emailEdit ">
                                             编辑
                                         </span>
                                     </a>
@@ -1260,6 +1262,10 @@
             </ul>
             </li>
         </div>
+
+
+
+
 
 </body>
 <script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>

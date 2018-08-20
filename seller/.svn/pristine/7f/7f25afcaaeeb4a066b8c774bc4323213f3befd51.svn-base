@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/company_name.css">
+</head>
+
+<body>
+    <div class="a-row a-padding-large">
+        <div class="a-row">
+            <div class="width48 a-column ">
+                <div class="a-row overflow_hidden a-spacing-micro">
+                    <div class="width65 float_left">
+                        <h2 class="">法人实体</h2>
+                    </div>
+                    <div class="width30 a-spacing-top-micro align_right float_right">
+                        <a href="./account_information.html">账户信息</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="a-row a-spacing-top-medium a-spacing-base">
+                    <div class="a-row">
+                        <div class="a-row">
+                            <div class="a-box a-alert a-alert-success">
+                                <div class="a-box-inner_radio relative a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-row a-alert-content inline_block">
+                                        <div class="a-row a-color-success a-size-medium">税务信息已填写完整</div>
+                                        <div class="a-row">已验证成功您的税务信息。</div>
+                                        <div class="a-row a-spacing-top-medium overflow_hidden">
+                                            <div class="width56 marRight4 float_left ">
+                                                <span class="a-button">
+                                                    <span class="a-button-inner">
+                                                        <a href="./company_name_tax.html" style="color:#111">
+                                                            <input type="submit" value="" class="a-button-input">
+                                                            <span class="a-button-text">更新税务信息</span>
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="width39 a-spacing-top-small a-spacing-base float_right align_right">
+                                                <a href="">税务调查帮助指南</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-padding-base"> 要更新法律实体名称或地址，您必须通过单击“更新税务信息”以重新进行税务审查</div>
+                </div>
+                <div class="a-row  radius">
+                    <form action="" class="a-spacing-base">
+                        <div class="a-row a-spacing-top-small ">
+                            <div class="a-row bgcolor a-box">
+                                <div class="a-box-inner_radio ">
+                                    <div class="a-spacing-small">
+                                        <span class="a-text-bold"> 法定公司名称</span>
+                                    </div>
+                                    <div>
+                                        <span class="company_name">xubaohong</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="a-row  radius">
+                    <form action="" class="a-spacing-base">
+                        <div class="a-row a-spacing-top-small ">
+                            <div class="a-row bgcolor a-box">
+                                <div class="a-box-inner_radio ">
+                                    <div class="a-spacing-small">
+                                        <span class="a-text-bold"> 公司设立地址</span>
+                                    </div>
+
+                                    <div class="a-spacing-base ">
+                                        <div class="a-row">
+                                            <span class="a-ember country">wangcun cun wangcun 67 hao</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember address">jiangshan shi xiakou zhen</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember address2">324116</span>
+                                        </div>
+                                        <div class="a-row">
+                                            <span class="a-ember city">wangcun cun wangcun 67 hao</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember province">jiangshan shi xiakou zhen</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember zipcode">324116</span>
+                                        </div>
+
+                                        <div class="a-row">
+                                            <span class="a-ember fullname">wangcun cun wangcun 67 hao</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember phone">jiangshan shi xiakou zhen</span>
+                                        </div>
+                                        <div class="a-row ">
+                                            <span class="a-ember email">324116</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="a-row">
+                    <div class="width47 a-spacing-base goBack">
+                        <span class="a-button a-row">
+                            <span class="a-button-inner">
+                                <input type="submit" value="" class="a-button-input">
+                                    <span class="a-button-text" >
+                                        返回 
+                                    </span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/webjs/prompt.js"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+<script src="./js/webjs/company_name.js"></script>
+
+</html>

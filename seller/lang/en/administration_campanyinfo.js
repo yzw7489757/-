@@ -1,0 +1,37 @@
+{
+    head: {
+        title: "Account Info"
+    },
+    body: {
+        company_information:"Business Information ",
+        seller_display_name:" Display name:",
+        inspection_available:"Check availability",
+        company_address:"Business address:",
+        add_new_address:"Add new address",
+        address:" Address:",
+        address_line:" Address line 2: ",
+        city_town:" City/Town:",
+        state_province_region:"State/Province/Region:",
+        state_province_region_info:"You must enter a state for your business address.",
+        zip_code:"Postal/ZIP code: ",
+        zip_code_info:"You must enter a ZIP code for your business address. ",
+        Country:"Country:",
+        phone_number:"Phone number:",
+        add_extension_number:"Add extension",
+        cancel:"Cancel",
+        save:"Save",
+        account_setting_66:" Your account setup is 66% complete. (2/3)",
+        account_setting_100:"Your account setup is 100% complete.(3/3)",
+        service:"Service",
+        change:"Change",
+        common_problem:"FAQs",
+        Start_use:"How do I start using Login with Amazon?",
+        first:"You first need to complete the registration steps listed on this page.  Once registration is complete, you will be able to start using Login with Amazon.",
+        registration_later:"Can I stop now and complete my registration at a later time?",
+        second:"Yes, you can return to this page to complete your registration at any time. Just use the same user name and password you used for creating your account.",
+        modify_information:"Can I modify the information that I previously provided?",
+        third:"Yes, you can modify the information through the 'Change' link. ",
+        error:"Error",
+        errinfo:"You need to provide address details in at least one of the first 3 address fields."
+    }
+}

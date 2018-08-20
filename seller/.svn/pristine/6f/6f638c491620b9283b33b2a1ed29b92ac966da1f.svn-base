@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/deposit_method_manage.css">
+</head>
+
+<body>
+    <div class="ng-scope">
+        <div class="a-padding-large">
+            <div class="a-row">
+                <div class="width74 marRight ">
+                    <div class="a-row overflow_hidden border_box height47">
+                        <div class="float_left marBot">
+                            <h1>存款方式</h1>
+                        </div>
+                        <div class="float_right a-spacing-top-micro">
+                            <a href="./account_information.html">账户信息</a>
+                        </div>
+                    </div>
+                    <hr class="a-divider-normal">
+                    <div class="a-row">
+                        <div class="marBot">
+                            <h3>
+                                管理存款方法
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="a-row">
+                        <div class="a-row">
+                            <div class="a-box-group">
+                                <div class="a-box a-box-title">
+                                    <div class="a-box-inner">
+                                        <h5>
+                                            银行账户
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="a-box ng-scope">
+                                    <div class="a-box-inner">
+                                        <div class="a-row">
+                                            <div class="width99">
+                                                <div class="a-row overflow_hidden">
+                                                    <div class="width48 a-column float_left">
+                                                        <div class="a-row a-ws-row ng-scope overflow_hidden">
+                                                            <div class="width22 a-column float_left">
+                                                                <span class="a-color-state">
+                                                                    结束
+                                                                </span>
+                                                                <span  class="a-color-state account_number">
+                                                                    808
+                                                                </span>
+                                                            </div>
+                                                            <div class="width22 a-column float_left">
+                                                                <span  class="a-color-state bank_location">
+                                                                    美国
+                                                                </span>
+                                                            </div>
+                                                            <div class="width48 float_left">
+                                                                <span  class="a-color-state account_name">
+                                                                    baohong xu
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="width14 a-column float_left align_right">
+                                                        <span class="a-color-tertiary">有效</span>
+                                                    </div>
+                                                    <div class="width14 float_right align_right">
+                                                        <div class="">
+                                                            <a href="javascript:void(0)">停用</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-row">
+                            <div class="a-row a-spacing-top-medium">
+                                <div class="a-row a-span-last width22 column">
+                                    <span class="a-button-inner a-spacing-top-small block a-button width100">
+                                        <!-- <input type="submit" class="a-button-input"> -->
+                                        <span class="a-button-text border_box block">
+                                           <a href="./deposit_method.html" class="click_a"> 返回</a>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+<script src="./js/webjs/deposit_method_manage.js"></script>
+</html>

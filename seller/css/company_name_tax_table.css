@@ -1,0 +1,159 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+.a-ember body {
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+.heading-module {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.mobile-element-wrapper {
+    margin-top: 8px;
+}
+.width39 {
+    width: 31.948%;
+}
+.height29{
+    height: 29px;
+}
+.bgColor{
+    background-color: #EEE;
+    border: 1px solid #666;
+}
+.k1099_row{
+    border-bottom: 2px solid black;
+}
+.k1099_section{
+    width: 20%;
+    border-right: 2px solid black;
+}
+.k_section{
+    padding: 5px 5px 10px;
+    vertical-align: bottom;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+.k1099_section {
+    padding: 5px 5px 10px;
+    vertical-align: bottom;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+.k1099_w8Head2 {
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+    display: table-cell;
+}
+.lamePositionWrapper{
+    font-size: 10px;
+    margin-bottom: 0;
+    margin-top: 2.5em;
+}
+.k1099_formName {
+    font-size: 20px;
+    font-weight: bold;
+}
+.height69{
+    height: 69px;
+}
+.k1099_solo {
+    width: 95%;
+}
+td, th {
+    padding: 3px;
+}
+th {
+    text-align: left;
+}
+
+td, th {
+    vertical-align: top;
+}
+.a-unordered-list, ul {
+    margin: 0 0 0 18px;
+    color: #949494;
+}
+.a-unordered-list, ul li {
+    color: #000000 !important;
+}
+.k1099_partNum {
+    color: white;
+    background-color: black;
+    height: 30px;
+    padding: 2px 5px;
+    margin: 0 5px;
+}
+.k1099_sectionHeader {
+    font-weight: bold;
+    font-size: 14px;
+}
+input[type=text] {
+    display: block;
+    width: 100%;
+    border: 1px solid #999;
+    background-color: #f3f3f3 !important;
+}
+.k1099_b2 {
+    width: 325px;
+}
+.k1099_a1 {
+    width: 475px;
+}
+.k1099_section.k1099_a2 {
+    width: 475px;
+    border-right: 2px solid black;
+}
+p {
+    padding: 0;
+    margin: 0 0 14px 0;
+}
+.k_section ol li {
+    color: #000000 !important;
+}
+.k1099_signatureHeader {
+    font-size: 14px;
+    font-weight: bold;
+}
+.simplified-interview-question {
+    margin-bottom: 32px;
+}
+.simplified-interview-question-wrapper {
+    margin-top: 32px;
+}
+.fit-button-container {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.a-button-primary {
+    background: #f0c14b !important;
+    border-color: #a88734 #9c7e31 #846a29 !important;
+    color: #111;
+}
+.a-button {
+    background: #e7e9ec ;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button .a-button-text {
+    color: #111 !important;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>取消订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+   	<link rel="stylesheet" type="text/css" href="css/cancel_order.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+	<div class="amazon-confirm-shipment-wrap">
+		<div class="amazon-confirm-shipment">
+			<div class="amazon-confirm-shipment-header">
+				<h1>取消订单</h1>
+			</div>
+			<div class="bucketcontainer">
+				<ul class="selectProductType">
+                    <li class="titlebar">
+                        Order ID: <a class="blue-font">108-2563-963</a>
+                    </li>
+                    <li class="list-row-even">
+                     	<table>
+                     		<thead>
+                     			<tr>
+                     				<th class="product-details">
+                     					<div class="center">Product Details</div>
+                     				</th>
+                     				
+                     				<th class="quantity-ordered">
+                     					 <div class="center">Quantity Ordered</div>
+                     				</th>
+                     			</tr>
+                     		</thead>
+                     		<tbody>
+	                     		<tr>
+	                     			<td>
+			                        	<div class="product-information">
+			                        		<a class="product-name blue-font font-blod">
+			                        			Cuteforyou Cute Animal Shaped Cartoon Home Decoration Succulent Vase Flower Pots
+			                        		</a>
+			                        		<div class="infolist">
+			                        			<p>Quantity：</p>
+			                        			<p>1</p>
+			                        		</div>
+			                        		<div class="infolist">
+			                        			<p>MerChant SKU：</p>
+			                        			<p>145612D4561</p>
+			                        		</div>
+			                        		<div class="infolist">
+			                        			<p>ASIN：</p>
+			                        			<p>145612D4561</p>
+			                        		</div>
+			                        		<div class="infolist">
+			                        			<p>Listing ID：</p>
+			                        			<p>145612D4561</p>
+			                        		</div>
+			                        		<div class="infolist">
+			                        			<p>Order Item ID：</p>
+			                        			<p>145612D4561</p>
+			                        		</div>
+			                        		<div class="infolist">
+			                        			<p>Condition：</p>
+			                        			<p>145612D4561</p>
+			                        		</div>
+			                        	</div>
+	                     			</td>
+			                     	<td>
+			                     		<div class="center">
+				                        	<span>1</span>
+				                        </div>
+			                     	</td>	
+	                     		</tr>
+	                     			
+                     		</tbody>
+
+                     	</table>
+                    </li>
+                     <li class="titlebar">
+                        <div class="edit-cancel-order-reason">
+                        	<span>Reason for Cancellation:</span>
+                        	<select>
+                        		<option>选择取消原因</option>
+                        		<option>买家取消</option>
+                        		<option>买家交流</option>
+                        		<option>买家退款</option>
+                        		<option>库存不足</option>
+                        		<option>一般调整</option>
+                        		<option>地址无法投递</option>
+                        	</select>
+                        	<button class="primaryAUIButton">提交</button>
+                        </div>
+                    </li>
+                     <li class="list-row-even">
+                     	<table class="shipping-details">
+                     		<tbody>
+	                     		<tr>
+	                     			<td colspan="2">
+	                     				<div class="titlebar clearfix">
+					                       <span>Your Notes</span>
+						                   	<span class="pull-right note-button-group">
+						                    	<button>Undo</button>
+						                    	<button>Save</button>
+					                    	</span>
+					                    </div>
+	                     			</td>
+	                     		</tr>
+	                     		<tr>
+			                     	<td class="half-width">
+			                     		<div class="textalign-right font-blod">
+				                        	<span>Seller memo:</span>
+				                        </div>
+			                     	</td>	
+			                     	<td class="half-width">
+			                     		<div class="textalign-left take-note">
+				                        	 <textarea></textarea>
+				                        	 <p>The information you enter here is for you use only and will not be displayed to the buyer.</p>
+				                        </div>
+			                     	</td>
+	                     		</tr>
+                     		</tbody>
+
+                     	</table>
+                    </li>
+                </ul>
+			</div>
+			
+		</div>
+	</div>
+   <div class="a-container-footer"></div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+</html>
+

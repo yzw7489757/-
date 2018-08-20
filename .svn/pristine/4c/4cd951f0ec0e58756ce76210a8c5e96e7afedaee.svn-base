@@ -1,0 +1,37 @@
+.a-size-medium {
+    font-size: 17px;
+    line-height: 1.255;
+}
+.a-color-tertiary{
+    color: #767676;
+}
+.a-spacing-base{
+    margin-bottom: 14px;
+}
+.a-spacing-top-small{
+    margin-top: 10px;
+}
+.a-size-small {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.a-spacing-top-mini{
+    margin-top: 6px;
+}
+.a-text-bold{
+    font-weight: 700;
+}
+.a-color-base{
+    color:#111;
+}
+.a-link-normal:hover{
+    text-decoration: none;
+    color: #c45500;
+}
+.a-size-base{
+    font-size: 15px;
+    line-height: 1.25;
+}
+.a-text-normal{
+    font-weight: 400;
+}

@@ -1,0 +1,48 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+.a-tabs {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+.a-tabs li a {
+    -webkit-transition: all 100ms linear;
+    transition: all 100ms linear;
+    text-decoration: none;
+    line-height: 1;
+    padding: 15px 17px 15px 18px;
+    display: block;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    background-color: #fff;
+    color: #c45500;
+    border-top-color: #e77600;
+    font-weight: 700;
+}
+.a-alert-inline-info{
+    position: relative;
+}
+.warnInfo .a-icon-alert{
+    background-position: -135px -120px;
+}
+.warnInfo .a-alert-content{
+    color: #c40000;
+}
+img {
+    vertical-align: top;
+    height: 27px;
+}
+.warnInfo{
+    padding-top:9px !important;
+    padding-bottom:9px !important;
+}
+.myWarn .a-box{
+    border:none !important;
+}
+.a-box-inner_radio{
+    padding: 14px 18px;
+}

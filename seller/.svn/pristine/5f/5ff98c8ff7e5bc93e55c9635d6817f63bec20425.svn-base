@@ -1,0 +1,97 @@
+$(function () {
+    inputctr.public.checkLogin();
+    var addreassShow = false;
+    if (window.sessionStorage) {
+        $('.company_name').val(sessionStorage.getItem('company_name'))
+    }
+    $('.addNewaddress').click(
+        function (e) {
+            e.preventDefault();
+            addreassShow = true;
+            $('.address').show()
+            $('.address2').show()
+            $('.city_town').show()
+            $('.state_province_region').show()
+            $('.zip_code').show()
+            $('.contury').show()
+            $('.tel').show()
+            $('.reg-db-content-list').hide()
+            $('.addNewaddressBtn').hide()
+        }
+    )
+    $('.extension_numberBtn').click(
+        function (e) {
+            e.preventDefault();
+            $('.extension_number').show();
+            $('.extension_numberBtn').hide();
+        }
+    )
+    $('.submitBtn').click(function () {
+        $('.state_province_region').removeClass('errBgcolor')
+        $('.zip_code').removeClass('errBgcolor')
+        $('.errinfo').hide()
+        $('.scui-alert').hide()
+        // 街道地址
+        var address = $('.address_input').val().trim();
+        // 公寓、楼层
+        var address2 = $('.address2_input').val().trim();
+        // 市/镇
+        var city = $('.city_input').val().trim();
+        // 州/地区/省;
+        var province = $('.province_input').val().trim();
+        // 国家/地区
+        var country = $('.country_select option:selected').text();
+        // 邮编
+        var zipcode = $('.zipcode_input').val().trim();
+        // 手机号
+        var phone = $('.phone_input').val().trim();
+        if (addreassShow) {
+            if (zipcode && province) {
+                $.ajax({
+                    url: baseUrl + '/AddAddressNew',
+                    method: 'post',
+                    dataType: "json",
+                    data: {
+                        userid: amazon_userid,
+                        address: address,
+                        address2: address2,
+                        city: city,
+                        province: province,
+                        country: country,
+                        zipcode: zipcode,
+                        phone: phone,
+                        type: '1',
+                        name: '',
+                        email: '',
+                        full_name: ''
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.result == 1) {
+                            if (window.sessionStorage) {
+                                sessionStorage.setItem('successInfo', '1')
+                            }
+                            $(location).attr('href', '/seller/administration_submit.html')
+                        } else {
+                            console.log(decodeURIComponent(res.error))
+                        }
+                    },
+                    error: function (res) {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                })
+            }
+            if (!province) {
+                $('.state_province_region').addClass('errBgcolor')
+                $('.errinfo').show()
+                $('.scui-alert').show()
+            }
+            if (!zipcode) {
+                $('.zip_code').addClass('errBgcolor')
+                $('.errinfo').show()
+                $('.scui-alert').show()
+            }
+        }
+
+    })
+})

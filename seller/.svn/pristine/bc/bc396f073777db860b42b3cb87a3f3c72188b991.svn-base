@@ -1,0 +1,17 @@
+{
+  head: {
+    title: "登录设置"
+},
+body: {
+   LoginSettings:"登录设置",
+   Edit:"编辑:",
+   Name:"姓名:",
+   Email:"邮箱地址:",
+   MobilePhoneNumber:"手机号码:",
+   Password:"密码:",
+   AdvancedSecuritySettings:"高级安全设置:",
+   ModifyPhoneNumber:"如需修改您的手机号码，请前往亚马逊网站的“更改账户设置”页面。",
+   success:"成功",
+   successContent:"您成功地更改了您的帐户!",
+}
+}

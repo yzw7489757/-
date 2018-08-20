@@ -1,0 +1,29 @@
+{
+    body: {
+        payment_method:"付费方式",
+        account_information:"账户信息",
+        edit_charge_method:" 编辑付款方式",
+        for_mall_replacement:"针对商城更换",
+        current_payment_method:"当前付费方式",
+        credit_card:" 信用卡 ",
+        end:"结束",
+        expiry_time:" 到期时间",
+        name_of_cardholder:"持卡人的姓名" ,
+        billing_address:"帐单地址",
+        replace:"选择您要替换为的信用卡。",
+        add_new_credit_card:"添加新的信用卡",
+        new_credit_card:" 新信用卡",
+        choose_credit_card:"选择信用卡",
+        card_number:"卡号",
+        expiration_date:"有效期限",
+        same_name:"持卡人姓名（与信用卡上一致）",
+        bill_sent:"请选择账单寄送地址",
+        add_bill_sent:"添加新的账单地址",
+        last_step:"上一步",
+        submission:"提交",
+        common_problem:"常见问题",
+        invalid_credit_card:"为什么我的信用卡显示为无效的信用卡？",
+        detailed_information:"输入信用卡详细信息后会怎样？",
+        accepting_credit_cards:"可接受哪些信用卡？"
+    }
+}

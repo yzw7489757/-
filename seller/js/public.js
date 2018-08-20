@@ -1,7 +1,7 @@
 ﻿var inputctr = {};
 inputctr.public = {};
 //亚马逊请求接口
-var baseUrl='http://192.168.2.160:8090/QAMZNAPI.asmx';
+var baseUrl='http://192.168.2.164:8096/QAMZNAPI.asmx';
 //任务请求接口地址
 var TaskUrl='http://192.168.2.168:10000/CourseService.asmx';
 //派安盈请求接口地址

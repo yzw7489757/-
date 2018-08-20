@@ -1,0 +1,75 @@
+$(function () {
+    inputctr.public.checkLogin();
+    var password=sessionStorage.getItem('password')
+    //按钮点击
+    $('#cnep_1C_submit_button-input').click(function (e) {
+        e.preventDefault();
+        //密码错误
+        if($(" input[ name='nowPassword' ] ").val()!=password){
+            errorAlert(1);
+            return 0;
+        }
+        //两次密码不同
+        else if($(" input[  name='newPassword' ] ").val()!=$(" input[  name='newPasswordAgain' ] ").val()){
+            errorAlert(2);
+            return 0;
+        }
+        $.ajax({
+            url: baseUrl + '/UpdatePassword',
+            method: 'post',
+            dataType: "json",
+            data: {
+                userid: amazon_userid,
+                oldPassword: password,
+                newPassword: $(" input[  name='newPassword' ] ").val(),
+            },
+            success: function (res) {
+                console.log(res)
+                console.log(decodeURIComponent(res.error))
+                //保存成功返回上一页
+                if (res.result == 1) {
+                    window.location.replace("./landing_settings.html"+"?flag");
+                }else{
+                    errorAlert(3);
+                }
+            }
+        })
+    })
+    //错误弹窗
+    function errorAlert(type){
+        $(".message").remove();
+        var h6=$(` 
+            <h6>出现了一个问题</h6>
+            `)
+        var p;
+        if(type==1){
+          p=$(`
+            <p>
+            请输入您的密码<br>
+            </p>
+            `)
+      }
+      else if(type==2){
+        p=$(`
+            <p>
+            两次密码输入不一致，请重试。<br>
+            </p>
+            `)
+    }
+    else if(type==3){
+     p=$(`
+        <p>
+        新密码不能是去年用过的密码<br>
+        </p>
+        `)
+     }
+ var div=$(`
+    <div class="message error">
+    <span></span>
+    </div>
+    `);
+ div.append(h6).append(p);
+ $("body").prepend(div);
+}
+
+})

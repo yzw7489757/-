@@ -1,0 +1,12 @@
+{
+  head: {
+    title: "Change your name"
+},
+body: {
+   ChangeYourName:"Change your name",
+   ChangeYourNameContent:"If you want to change the name associated with your Amazon.com customer account, you may do so below. Be sure to click the Save Changes button when you are done.",
+   WhatIsName:"What is your new name?",
+   NewName:"New name:",
+   SaveChange:"Save changes",
+}
+}

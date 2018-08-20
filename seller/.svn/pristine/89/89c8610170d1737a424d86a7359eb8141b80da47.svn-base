@@ -1,0 +1,70 @@
+$(function () {
+    inputctr.public.checkLogin();
+    var showTitle = true
+    if(window.sessionStorage && sessionStorage.getItem('successInfo')){
+        $('.account_setting_66').hide()
+        $('.account_setting_100').show()
+        $('.unfinishedBtn').show()
+        $('.finishedBtn').show()
+        $('.infoWeb').show()
+        $('.messageboxsuccess').show()
+        $('.finishBtn').show()
+        $('.go_on_Btn').hide()
+        sessionStorage.removeItem('successInfo')
+    }
+    $('.usetitle').click(function (e) {
+        e.preventDefault();
+        if (showTitle) {   
+            $('.useContent').show()
+            showTitle = false
+        } else {
+            $('.useContent').hide()
+            showTitle = true
+        }
+    })
+    $('.stoptitle').click(function (e) {
+        e.preventDefault();
+        if (showTitle) {   
+            $('.stopContent').show()
+            showTitle = false
+        } else {
+            $('.stopContent').hide()
+            showTitle = true
+        }
+    })
+    $('.updatetitle').click(function (e) {
+        e.preventDefault();
+        if (showTitle) {   
+            $('.updateContent').show()
+            showTitle = false
+        } else {
+            $('.updateContent').hide()
+            showTitle = true
+        }
+    })
+
+    // 公司信息
+    $.ajax({
+        url: baseUrl + '/GetUserTax',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
+        },
+        success: function (res) {
+            console.log(res)
+            if (res.result == 1) {
+                var data = res.data;
+                $('.company_name').text(decodeURIComponent(res.company_name))
+                if(window.sessionStorage){
+                    sessionStorage.setItem('company_name',res.company_name)
+                }
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
+})

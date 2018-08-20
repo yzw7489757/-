@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/holiday_setting.css">
+</head>
+
+<body>
+    <div id="sc-content-container">
+        <div id="listingstatus-center" class="a-container">
+            <div class="a-section">
+                <table class="a-normal">
+                    <tbody>
+                        <tr>
+                            <td class="registration title"  style="width: 87px">
+                                <h1 class="a-size-large a-color-state a-text-bold">假期设置</h1>
+                            </td>
+                            <td >
+                                <div id="learnmorehelplink" class="relative">
+                                    <span class="a-declarative pdleft ">
+                                        <a href="javascript:void(0)" class="moreMessage">了解更多信息</a>
+                                        <i class="a-icon a-icon-popover"></i>
+                                        <div id="model">
+                                            <div class="popup">
+                                                <span><em></em></span>
+                                                <i class="a-icon a-icon-close"></i>
+                                                <div class="a-popover-inner">
+                                                    <div class="a-popover-content" id="a-popover-content-1">
+                                                        <div class="a-row a-spacing-medium">
+                                                            <span class="tiny">
+                                                                <a href="javascript:openModalDialog('/gp/help/help-popup.html/?itemID=200135620', 550, 550, 'scrollbars=yes', null, 'yes')">
+                                                                    如果您正准备去休假，或者您希望暂时从亚马逊网站上清除您的在售商品，请使用此功能来取消激活商品。
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="a-row a-spacing-medium">请注意，亚马逊物流商品将不受此假期设置影响，仍然处于在售状态。
+                                                        </div>
+                                                        <div class="a-row">在假期期间收到的任何买家-卖家消息仍需在 24 小时内回复。</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="a-section">
+                <form method="post" id="listingStatusPostForm">
+                    <table class="content_table a-normal registration-listingstatus-table">
+                        <tbody>
+                            <tr class="registration-listingstatus border ">
+                                <td class="a-text-left registration-listingstatus padding-left-small"></td>
+                                <td class="a-text-left registration-listingstatus padding-left-small ">
+                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5 startCheck">在售</p>
+                                </td>
+                                <td class="a-text-left registration-listingstatus padding-left-small ">
+                                    <p class="active_style pdleft5 a-button-inner a-button submitBtn_big pdTop5 stopCheck">停售</p>
+                                </td>
+                                <td class="a-text-left registration-listingstatus padding-left-small"></td>
+                            </tr>
+                            <tr class="registration-listingstatus border pdTop_Bot" style="height: 42px;
+                            box-sizing: border-box;">
+                                <td class="width17">
+                                    <span class="a-text-bold">Amazon.ca</span>
+                                </td>
+                                <td class="width8">
+                                    <div class="a-radio">
+                                        <label>
+                                            <input type="radio" value="1"  name="radio" class="readyCheck">
+                                            <span>在售</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="width8">
+                                    <div class="a-radio">
+                                        <label>
+                                            <input type="radio" checked value="0"   name="radio" class="tostopCheck">
+                                            <span >停售</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="width69">
+
+                                </td>
+                            </tr>
+                            <!-- 3 -->
+                        
+                          
+                        </tbody>
+                    </table>
+                    <table class="a-normal">
+                        <tbody>
+                            <tr class="registration-listingstatus">
+                                <td class="a-span6 a-text-right overflow_hidden submitBtn pdleft5" >
+                                    <p class="float_right a-button submitBtn_big" style="
+                                    text-align: center;
+                                    padding-top: 5px;
+                                ">取消</p>
+                                </td>
+                                <td class="submitBtn pdleft5">
+                                    <p class="float_left a-button-primary submitBtn_big" style="
+                                    text-align: center;
+                                    padding-top: 5px;
+                                ">保存</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/webjs/holiday_setting.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+</html>

@@ -1,16 +1,52 @@
 $(function () {
+    inputctr.public.checkLogin(); 
+    var data;
+    $.ajax({
+        url: baseUrl + '/InitialPreference',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
+        },
+
+        success: function (res) {
+               if (res.result == 1) {
+                console.log(res)
+                data=res.data;
+                //初始化通知首选项
+                dataSet();
+                //初始化联系人
+                InitialContactsInfo(res.data.order_sms_contact);
+            
+  
+ 
+            } else {
+                console.log(decodeURIComponent(res.error))
+            }
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
+
+
+
+
+   /* $('.a-tabs li').hover(function () {
+            $(this).addClass('active_tabs').siblings().removeClass('active_tabs')
+        }
+    );*/
     var email = $('.email').text()
     $('.a-tabs li').click(function () {
+       
         var index = $(this).index();
         // $(this).addClass('active_tabs').siblings().removeClass('active_tabs')
         $(".chooseText>li").eq(index).removeClass("none").siblings().addClass("none");
     })
     
-    $('.a-tabs li').hover(function () {
+    $('.a-tabs li').click(function () {
             $(this).addClass('active_tabs').siblings().removeClass('active_tabs')
-        }, function () {
-            $(this).removeClass('active_tabs')
-        }
+        }, 
     );
     $('.addBtn').click(function (e) { 
         e.preventDefault();
@@ -30,6 +66,29 @@ $(function () {
                 if(($(this).parents('.parentNode').find('.addInput_enter')).length == 0){
                     addInput($(this).parents('.parentNode').find('.addInput'))
                 }
+
+                 TextdetailLi.parents('.parentNode').find('.empty-check-icon').addClass('editEmptyImg')
+
+
+                //编辑中图标点击
+                TextdetailLi.parents('.parentNode').find('.icon').click(function(e){
+                   
+                    if(e.target.className.indexOf('editImg')!='-1'){
+                         $(e.target).removeClass("editImg");
+                         $(e.target).addClass("editEmptyImg");
+                         $(e.target).removeClass("check-icon");
+                         $(e.target).addClass("empty-check-icon");
+                    }
+                    else{
+                          $(e.target).addClass("editImg");
+                          $(e.target).removeClass("editEmptyImg");
+                          $(e.target).addClass("check-icon");
+                          $(e.target).removeClass("empty-check-icon");
+                    }
+                });
+
+             
+
             } else if (e.target.className.indexOf('cancel') != '-1') {
                 //点击取消
                 $('.addBtn').hide();
@@ -38,9 +97,33 @@ $(function () {
                 TextdetailLi.find('.save_cancel_Btn').hide()
                 TextdetailLi.find('.editBtn').show()
                 TextdetailLi.parents('.parentNode').find('.addInput_enter').remove()
-                TextdetailLi.parents('.parentNode').find('.check-icon').removeClass('editImg')
+                
+                TextdetailLi.parents('.parentNode').find('.icon').removeClass('editImg')
+                TextdetailLi.parents('.parentNode').find('.icon').removeClass('editEmptyImg')
+                 TextdetailLi.parents('.parentNode').find('.icon').unbind();
+                //移除输入框
+                 TextdetailLi.parents('.parentNode').find('.inputBox').remove();
+                 //移除警告框
+                 TextdetailLi.parents('.parentNode').find('.a-alert-error').remove();
+
             }else if(e.target.className.indexOf('save') != '-1'){
+                //点击保存
                 // TextdetailLi.parents('.parentNode');
+               // TextdetailLi.parents('.parentNode').find(".inputText")
+               
+               if(!checkRegular(TextdetailLi)){
+                return false;
+               }
+
+               
+        
+
+                //点击解绑
+                TextdetailLi.parents('.parentNode').find('.icon').removeClass('editEmptyImg')
+                TextdetailLi.parents('.parentNode').find('.icon').removeClass('editImg')
+                TextdetailLi.parents('.parentNode').find('.icon').unbind();
+
+
                 let liInput = TextdetailLi.parents('.parentNode').find('.addInput_enter')
                 for(let i = 0 ;i<liInput.length;i++){
                     let val = liInput.eq(i).find('input[type=email]').eq(0).val();
@@ -51,30 +134,273 @@ $(function () {
                 TextdetailLi.find('.save_cancel_Btn').hide()
                 TextdetailLi.find('.editBtn').show()
                 TextdetailLi.parents('.parentNode').find('.check-icon').removeClass('editImg')
+                 //移除警告框
+                 TextdetailLi.parents('.parentNode').find('.a-alert-error').remove();
+
+                dataSave($(e.target).attr("data-type"));
+
             }else {
                 let show = TextdetailLi.parents('.parentNode').attr('data-show');
                 show === 'false' ? show = true : show = false;
-                console.log(show)
+             
                 TextdetailLi.parents('.parentNode').attr('data-show',show)
                 if (show) {
-                    TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').show()
-                    TextdetailLi.find('.a-icon-section-collapse').css({
+                    if(TextdetailLi.find('.save_cancel_Btn').is(":visible")){
+
+                       TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').show()
+                       TextdetailLi.find('.a-icon-section-collapse').css({
                         'backgroundPosition': '-5px -82px'
                     })
-                    TextdetailLi.find('.editBtn').show()
-                } else {
-                    TextdetailLi.find('.save_cancel_Btn').hide()
-                    TextdetailLi.find('.editBtn').hide()
-                    TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').hide()
-                    TextdetailLi.find('.a-icon-section-collapse').css({
-                        'backgroundPosition': '-5px -59px'
+
+                   }
+                   else{
+                       TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').show()
+                       TextdetailLi.find('.a-icon-section-collapse').css({
+                        'backgroundPosition': '-5px -82px'
                     })
-                    TextdetailLi.find('.editBtn').hide()
+                       TextdetailLi.find('.editBtn').show()
+
+                   }
+                   
+                } else {
+                    if(TextdetailLi.find('.save_cancel_Btn').is(":visible")){
+                           TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').hide()
+                           TextdetailLi.find('.a-icon-section-collapse').css({
+                            'backgroundPosition': '-5px -59px'
+                        })
+                    }else{
+                           TextdetailLi.find('.save_cancel_Btn').hide()
+                           TextdetailLi.find('.editBtn').hide()
+                           TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').hide()
+                           TextdetailLi.find('.a-icon-section-collapse').css({
+                            'backgroundPosition': '-5px -59px'
+                        })
+                          // TextdetailLi.find('.editBtn').hide()
+
+                    }
                 }
             }
         })
     })
 
+function dataSave(url){
+  //  console.log(url);
+    var saveData;
+    switch(url){
+        case "UpdateOrderNotification":
+        saveData={
+            userid:amazon_userid,
+            order_sms_isopen:checkDecide("order_sms_isopen"),
+            order_isopen:checkDecide("order_isopen"),
+            shipping_isopen:checkDecide("shipping_isopen"),
+            multichannel_isopen:checkDecide("multichannel_isopen"),
+            shipment_isopen:checkDecide("shipment_isopen"),
+            problem_isopen:checkDecide("problem_isopen"),
+
+            order_email:strDataGet("order_email"),
+            shipping_email:strDataGet("order_email"),
+            multichannel_email:strDataGet("order_email"),
+            shipment_email:strDataGet("order_email"),
+            problem_email:strDataGet("order_email"),
+            order_sms_contact:data.order_sms_contact,
+        }
+        
+        break;
+         case "UpdateOrderNotification2":
+        saveData={
+            userid:amazon_userid,
+            returns_isopen:checkDecide("returns_isopen"),
+            claims_isopen:checkDecide("claims_isopen"),
+            refund_isopen:checkDecide("refund_isopen"),
+    
+            returns_email:strDataGet("returns_email"),
+            claims_email:strDataGet("claims_email"),
+            refund_email:strDataGet("refund_email"),
+       
+        }
+        break;
+          case "UpdateOrderNotification3":
+        saveData={
+            userid:amazon_userid,
+           listing_created_isopen:checkDecide("listing_created_isopen"),
+           listing_closed_isopen:checkDecide("listing_closed_isopen"),
+    
+            listing_created_email:strDataGet("listing_created_email"),
+            listing_closed_email:strDataGet("listing_closed_email"),
+           
+       
+        }
+        break;
+        case "UpdateOrderNotification4":
+        saveData={
+            userid:amazon_userid,
+            open_listings_isopen:checkDecide("open_listings_isopen"),
+            order_fulfillment_isopen:checkDecide("order_fulfillment_isopen"),
+            sold_listings_isopen:checkDecide("sold_listings_isopen"),
+            cancelled_listings_isopen:checkDecide("cancelled_listings_isopen"),
+   
+
+            open_listings_email:strDataGet("open_listings_email"),
+            order_fulfillment_email:strDataGet("order_fulfillment_email"),
+            sold_listings_email:strDataGet("sold_listings_email"),
+            cancelled_listings_email:strDataGet("cancelled_listings_email"),
+        }
+        break;
+          case "UpdateOrderNotification5":
+        saveData={
+            userid:amazon_userid,
+            makeoffer_isopen:checkDecide("makeoffer_isopen"),
+
+            makeoffer_email:strDataGet("makeoffer_email"),
+    
+        }
+        break;
+            case "UpdateOrderNotification6":
+        saveData={
+            userid:amazon_userid,
+            business_isopen:checkDecide("business_isopen"),
+            technical_isopen:checkDecide("technical_isopen"),
+
+            business_email:strDataGet("business_email"),
+            technical_email:strDataGet("technical_email"),
+        }
+        break;
+            case "UpdateOrderNotification7":
+        saveData={
+            userid:amazon_userid,
+            emergency_isopen:checkDecide("emergency_isopen"),
+
+            emergency_phone:strDataGet("emergency_phone"),
+
+        }
+        break;
+         case "UpdateOrderNotification8":
+        saveData={
+            userid:amazon_userid,
+            buyer_messages_isopen:checkDecide("buyer_messages_isopen"),
+            confirmation_isopen:checkDecide("confirmation_isopen"),
+            delivery_failures_isopen:checkDecide("delivery_failures_isopen"),
+            buyer_optout_isopen:checkDecide("buyer_optout_isopen"),
+   
+
+            buyer_optout_email:strDataGet("buyer_optout_email"),
+            delivery_failures_email:strDataGet("delivery_failures_email"),
+            confirmation_email:strDataGet("confirmation_email"),
+            buyer_messages_email:strDataGet("buyer_messages_email"),
+        }
+
+
+        
+        
+        break;
+
+
+        default:
+        console.log("none")
+    }
+             $.ajax({
+                url: baseUrl + "/"+url,
+                method: 'post',
+                dataType: "json",
+                data: saveData,
+                success: function (res) {
+                    if (res.result == 1) {    
+                        console.log("保存成功");
+
+                    } else {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                },
+                error: function (res) {
+                    console.log(decodeURIComponent(res.error))
+                }
+            })
+
+
+}
+
+  function checkDecide(className){
+    var obj=$("."+className).find(".icon");
+    if(obj.hasClass("check-icon")){
+        return  1 ;
+    }
+    else{
+        return  0 ;
+    }
+  }
+  function strDataGet(className){
+    var obj=$("."+className).text();
+    return obj;
+  }
+
+  //输入框正则
+  function checkRegular(TextdetailLi){ 
+    if(TextdetailLi.parents('.parentNode').find('.email').hasClass("phone")){
+        var reg=/^1[3|4|5|7|8|9][0-9]\d{4,8}$/;
+    }
+    else{
+        var reg=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    }
+                let liInput = TextdetailLi.parents('.parentNode').find('.addInput_enter')
+                for(let i = 0 ;i<liInput.length;i++){
+                    let val = liInput.eq(i).find('input[type=email]').eq(0).val();
+                    
+                    if(!(reg.test(val))){ 
+                        //alert("邮箱输入有误！"); 
+                        alertError(TextdetailLi);
+                        return false; 
+                    } 
+                }
+                return true;
+}
+function alertError(TextdetailLi){
+ 
+    if(TextdetailLi.parents('.parentNode').find('.a-alert-error').length!=0)
+        return false;
+
+    var div=$(`
+        <div class="a-box  a-alert a-alert-error a-spacing-base">
+            <div class="a-box-inner a-alert-container ">
+              <i class="a-icon a-icon-alert a-icon-error"></i>
+              <div class="a-alert-content">
+               Please fix invalid entries
+              </div>
+            </div>
+        </div>  
+            `);
+
+    TextdetailLi.parents('.parentNode').find('.a-section-expander-inner').prepend(div);;
+    
+
+}
+
+
+
+
+   //通过数据勾选方块
+   function dataSet(){
+    var value;
+    $.each(data,function(index){
+      if( index.substr(index.length-6,index.length)=="isopen"){
+        value=data[index]
+            if(value==0){
+                $("."+index).find(".icon").addClass("empty-check-icon");
+                 $("."+index).find(".icon").removeClass("check-icon");
+             }else{
+                 $("."+index).find(".icon").removeClass("empty-check-icon");
+                 $("."+index).find(".icon").addClass("check-icon");
+             }
+      }
+      else{
+        if(index=="emergency_phone")
+           // console.log("1");
+        $("."+index).text(data[index]);
+      }
+      //if( index.substr(index.length-5,index.length)=="email")
+    });
+
+          
+   }
     // 通知首选项页面中编辑按钮
     function addInput(target) {
         function li(str){
@@ -87,9 +413,41 @@ $(function () {
             `);
         }
         for(let i = 0;i<target.length;i++){
-            // console.log(target.eq(i).parents('.a-row').eq(0).find('.email'))
             let str = target.eq(i).parents('.a-row').eq(0).find('.email').text();
             target.eq(i).append(li(str))
         }
     }
+
+    
+
+
+
+
+
+ //初始化联系人
+ function InitialContactsInfo(contactId){
+
+
+    $.ajax({
+        url: baseUrl + '/InitialContactsInfo',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
+            contact_id:contactId,
+        },
+        success: function (res) {
+          console.log(res)
+          if (res.result == 1) {
+            $(".emailEdit").parents('.a-link-normal').attr("href","./landing_settings.html")
+          }
+        }
+      })
+
+}
+
+
+
+
+
 })

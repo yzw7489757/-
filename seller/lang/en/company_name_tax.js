@@ -1,0 +1,79 @@
+{
+  head: {
+    title: "Tax Information Interview"
+  },
+  body: {
+    TaxInformation Interview:"Tax Information Interview",
+
+    SelectLanguage:"Select Language",
+    AboutYou:"About You",
+    Question1:"Who will receive income from Amazon or its subsidiary?",
+    result1_1:"Individual",
+    result1_2:"Business",
+    Question2:"For U.S. tax purposes, are you a U.S. person?",
+    result2_1:"Yes",
+    result2_2:"No",
+
+    TaxIdentityInformation:"Tax Identity Information",
+    SignAndSubmit:"Sign and Submit",
+
+    FullName:"Full name",
+    CountryOfCitizenship:"Country Of Citizenship",
+    Address:"Address",
+    PermanentAddress:"Permanent Address",
+    Address:{
+      Street:"Street And Number",
+      Apartment:"Apartment, suite, unit, building, floor etc.",
+     CityOrTown:"City or town",
+      State:"State",
+      ZipCode:"ZipCode",
+    }
+    MailingAddress:"Mailing address",
+    MailingAddressCheckBox:"Same as Permanent Address",
+
+    Required:"Required",
+    Done:"Done",
+    Continue:"Continue",
+
+
+    tips1:"Complete the tax interview based on the individual or business who will receive the income.If you are an Individual, or either a Sole Proprietor or a Single-Member LLC where the owner is an individual, select "Individual".",
+    tips2:{
+      t1:"For U.S. federal tax purposes, you are considered a U.S. person if you are:",
+      c1_1:"An individual who is a U.S. citizen or U.S. resident alien,",
+      c1_2:"A partnership, corporation, company, or association created or organized in the United States or under the laws of the United States,",
+      c1_3:"An estate (other than a foreign estate), or",
+      c1_4:"A U.S. domestic trust.",
+      t2:"For U.S. federal tax purposes, you are considered a non-U.S. (foreign) person if you are:",
+      c2_1:"A nonresident alien individual,",
+      c2_2:"A foreign corporation,",
+      c2_3:"A foreign partnership,",
+      c2_4:"A foreign trust,",
+      c2_5:"A foreign estate, or",
+      c2_6:"Any other person that is not a U.S. person.",
+      t3_1:"Additionally, you will be considered a United States resident for tax purposes if you meet the ",
+      t3_2:" Substantial Presence Test",
+      t3_3:"for the calendar year.",
+      t4_1:"More information about these distinctions is available on the",
+      t4_2:" U.S. IRS Website .",
+      t4_3:"",
+    },
+    tips3:"If you are completing the information as an individual, use the information that appears on your tax return.",
+    tips4:{
+      c1:"If you are an individual, enter your country of citizenship. If you are a dual citizen, enter the country where you are both a citizen and a resident at the time you complete this form. If you are not a resident in any country in which you have citizenship, enter the country where you were most recently a resident.",
+      c2:"If you are an individual and your income is effectively connected with a U.S. trade or business, you must provide your country of residence for tax purposes.",
+    }
+    tips5:{
+      t1:"Your permanent residence address, the address in the country where you claim to be a resident for purposes of that country's income tax, is determined by some or all of the factors below. It is the address where the following occur:",
+      c1:"You own or rent your main home – where you spend most of your time",
+      c2:"You intend to return to it if you work, travel, or live elsewhere temporarily",
+      c3:"You maintain your driver's license",
+      c4:"You register to vote",
+      c5:"You maintain your primary bank account(s)",
+      c6:"You have your strongest family ties",
+      c7:"Your children live and attend school",
+      c8:"You own or run your main business",
+    }
+    tips6:"Enter the address at which you would prefer further communications from Amazon.",
+
+  }
+}

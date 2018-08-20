@@ -1,9 +1,10 @@
 $(function () {
-    inputctr.public.checkLogin(); 
+    inputctr.public.checkLogin();
     var show = true;
     var addIdArr = []
     var address_id = null;
     var address_data = null;
+
     //配送设置（设置配送地址为默认地址）
     $.ajax({
         url: baseUrl + "/InitialShippingSettings",
@@ -41,6 +42,7 @@ $(function () {
                     var new_index = null;
                     //再做一遍循环，拿到默认的那项，再重新渲染
                     for (let i = 0; i < address_data.length; i++) {
+
                         address_data[i].status = false;
                         if (address_data[i].address_id == new_id) {
                             address_data[i].status = true;
@@ -65,19 +67,62 @@ $(function () {
                         success: function (res) {
                             console.log(res);
                             if (res.result == 1) {
-                                console.log("success!");
+                               // window.location.reload();
+                                  console.log("success!");
                             } else {
                                 console.log(decodeURIComponent(res.error));
-
                             }
                         },
                         error: function (res) {
                             console.log(decodeURIComponent(res.error));
                         }
                     });
+                } else if (e.target.className.indexOf('delete_btn') != '-1') {
+                    // 点击删除的文字
+                    $.ajax({
+                        url: baseUrl + "/DelDistributionAddress",
+                        method: "post",
+                        dataType: "json",
+                        data: {
+                            addressId: address_id
+                        },
+                        success: function (res) {
+                            console.log(res);
+                            if (res.result == 1) {
+                                window.location.reload();
+                                //console.log("success!");
+                            } else {
+                                console.log(decodeURIComponent(res.error));
+                            }
+                        },
+                        error: function (res) {
+                            console.log(decodeURIComponent(res.error));
+                        }
+                    });
+                } else if (e.target.className.indexOf('edit_btn') != '-1') {
+                    console.log(address_id)
+                    // 点击编辑的文字
+                    // $.ajax({
+                    //     url: baseUrl + "/UpdateDistributionAddress",
+                    //     method: "post",
+                    //     dataType: "json",
+                    //     data: {
+                    //         addressId: address_id
+                    //     },
+                    //     success: function (res) {
+                    //         console.log(res);
+                    //         if (res.result == 1) {
+                    //             console.log("success!");
+                    //         } else {
+                    //             console.log(decodeURIComponent(res.error));
+                    //         }
+                    //     },
+                    //     error: function (res) {
+                    //         console.log(decodeURIComponent(res.error));
+                    //     }
+                    // });
                 } else {
                     //点击的是整行
-
                     if (show) {
                         $('.a-icon-img').eq(i).removeClass('a-icon-section-expand');
                         $('.a-section-expander-inner').eq(i).show();
@@ -125,6 +170,4 @@ $(function () {
             console.log(decodeURIComponent(res.error))
         }
     })
-
-
 })

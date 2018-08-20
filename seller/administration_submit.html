@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/administration_submit.css">
 </head>
 
 <body>
+    <header id="sc-masthead" class="clearable">
+    </header>
     <div id="content-frameout">
 
         <div id="content-frame">
@@ -60,26 +66,26 @@
                             <h3>公司信息</h3>
                             <ul class="reg-db-content-list">
                                 <li class="reg-db-subtitle"> 卖家显示名称：</li>
-                                <li class="reg-db-content"> zhongguo feng </li>
+                                <li class="reg-db-content company_name"> zhongguo feng </li>
                                 <li class="reg-db-subtitle"> 公司地址：</li>
                                 <li class="reg-db-content">
                                     <div>
-                                        <span>gongshu qu wanda shagnye zhongxin D zuo 718</span>
+                                        <span class="detailAddress">gongshu qu wanda shagnye zhongxin D zuo 718</span>
                                     </div>
                                     <div>
-                                        <span>hangzhou shi</span>
+                                        <span class="city">hangzhou shi</span>
                                     </div>
                                     <div>
-                                        <span>zhejiang sheng</span>
+                                        <span class="province">zhejiang sheng</span>
                                     </div>
                                     <div>
-                                        <span>310013</span>
+                                        <span class="zipcode">310013</span>
                                     </div>
                                     <div>
-                                        <span>中国</span>
+                                        <span class="country">中国</span>
                                     </div>
                                     <div>
-                                        <span>+8613968018091</span>
+                                        <span class="phone">+8613968018091</span>
                                     </div>
                                 </li>
                                 <li class="reg-db-subtitle"></li>
@@ -89,20 +95,37 @@
                             </ul>
                         </div>
                         <div class="reg-db-section">
-                            <div class="reg-db-status">
+                            <div class="reg-db-status unfinishedBtn">
                                 <a href="./administration_unfinished.html" class="buttonImage">
                                     <span class="buttonLarge secondaryLargeButton inner_button">
                                         <span class="button_label ">
-
                                             未完成
-
                                         </span>
                                     </span>
                                 </a>
                             </div>
+                            <div class="reg-db-status finishedBtn none">
+                                <a href="">已完成</a>
+                            </div>
                             <h3>网站信息</h3>
+                            <ul class="reg-db-content-list infoWeb none">
+                                <li class="reg-db-subtitle"> 公司网站 URL：</li>
+                                <li class="company_website reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="website_categories reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="site_subcategories reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="reg-db-subtitle"></li>
+                                <li class="reg-db-content">
+                                    <a href="./administration_unfinished.html" class="link_unfinished">更改</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="reg-db-section">
+                        <div class="reg-db-section go_on_Btn">
                             <div class="reg-db-status">
                                 <a href="" class="buttonImage">
                                     <span class="buttonLarge primaryLargeButton inner_button">
@@ -111,15 +134,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="reg-db-section none">
-                                <div class="reg-db-status">
-                                    <a href="" class="buttonImage">
-                                        <span class="buttonLarge primaryLargeButton inner_button">
-                                            <span class="button_label">完成注册</span>
-                                        </span>
-                                    </a>
-                                </div>
+                        <div class="reg-db-section none finishBtn">
+                            <div class="reg-db-status">
+                                <a href="" class="buttonImage">
+                                    <span class="buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label">完成注册</span>
+                                    </span>
+                                </a>
                             </div>
+                        </div>
                     </div>
                     <div class="cols-right float_right absolute">
                         <div class="reg-right-section account_setting_66">
@@ -134,16 +157,16 @@
                             </span>
                         </div>
                         <div class="reg-right-section none account_setting_100">
-                                <span class="reg-compPer-barwrap">
-                                    <div class="width100">
-                                        <span class="reg-compPer-bar-left" style="width: 100%;"></span>
-                                        <span class="reg-compPer-bar-right" style="width: 0%;"></span>
-                                    </div>
-                                </span>
-                                <span class="reg-compPer-label">
-                                        您的账户设置已完成 100%。 (3/3)
-                                </span>
-                            </div>
+                            <span class="reg-compPer-barwrap">
+                                <div class="width100">
+                                    <span class="reg-compPer-bar-left" style="width: 100%;"></span>
+                                    <span class="reg-compPer-bar-right" style="width: 0%;"></span>
+                                </div>
+                            </span>
+                            <span class="reg-compPer-label">
+                                您的账户设置已完成 100%。 (3/3)
+                            </span>
+                        </div>
                         <div class="cols-r1">
                             <div class="righttitle">
                                 常见问题
@@ -177,9 +200,12 @@
             </div>
         </div>
     </div>
+    <div class="a-container-footer">
+    </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="./js/webjs/administration_submit.js" type="text/javascript"></script>
 
 </html>
