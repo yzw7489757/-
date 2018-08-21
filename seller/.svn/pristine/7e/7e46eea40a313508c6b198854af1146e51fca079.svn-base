@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/administration_unfinished.css">
+    <link rel="stylesheet" href="./css/administration_campanyinfo.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="scui-alert scui-alert-error none">
+            <div class="scui-alert-inner">
+                <i class="scui-alert-icon scui-alert-error"></i>
+                <h4>错误</h4>
+                <ul class="multiple">
+                    <li>您的表格未填写完整/填写有误。请查看下方信息了解详情。</li>
+                </ul>
+            </div>
+        </div>
+    <div id="content-frameout">
+        <div id="content-frame">
+            <h1>
+                <div>
+                    <span>
+                        Login with Amazon
+                    </span>
+
+                </div>
+            </h1>
+            <div class="cols-two bucketcontainer overflow">
+                <div id="cols-main" class="relative" style="height: 330px">
+                    <div class="cols-mc">
+                        <div class="collapsedContent">
+                            <div id="signedUpForFeatureSets">
+                                <table class="data-entry2">
+                                    <tbody>
+                                        <!-- 公司网站 -->
+                                        <tr class="company_website_tr">
+                                            <td class="label  width40 bold alien">
+                                                <span> 公司网站 URL：</span>
+                                                <br>
+                                                <span></span>
+                                            </td>
+                                            <td class="field width60 relative">
+                                                <div class="a-input-text-wrapper">
+                                                    <input type="text" maxlength="50" class="company_website height21">
+                                                    <div class="errinfo none">
+                                                        <img src="./img/error-small._V192558633_.gif" alt="" class="errImg">
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <!-- 网站类别： -->
+                                        <tr class="address">
+                                            <td class="label  width40 bold alien border_top_color2">
+                                                <span> 网站类别：</span>
+                                                <br>
+                                                <span></span>
+                                            </td>
+                                            <td class="field width60 border_top_color2">
+                                                <div class="a-input-text-wrapper">
+                                                    <select class="toDefault" name="embuWebsiteInfo_WebsiteUrlCategory" onchange="" onkeyup="this.blur();this.focus();">
+
+                                                        <option value="eCommerceGoods">电子商务 - 消费品</option>
+
+                                                        <option value="eCommerceServices">电子商务 - 服务</option>
+
+                                                        <option value="Business">商业</option>
+
+                                                        <option value="Education">教育</option>
+
+                                                        <option value="Entertainment">娱乐</option>
+
+                                                        <option value="Games">游戏</option>
+
+                                                        <option value="News">新闻</option>
+
+                                                        <option value="Social">社交</option>
+
+                                                        <option value="Sports">体育用品</option>
+
+                                                        <option value="Technology">技术</option>
+
+                                                        <option value="Travel">旅游</option>
+
+                                                        <option value="Other">其他</option>
+                                                    </selectselect>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 网站子类别： -->
+                                        <tr class="tel">
+                                            <td class="label  width40 bold alien border_top_color2">
+                                                <span>网站子类别：</span>
+                                                <br>
+                                                <span></span>
+                                            </td>
+                                            <td class="field width60 overflow_hidden border_top_color2">
+                                                <div class="a-input-text-wrapper">
+                                                    <select name="embuWebsiteInfo_WebsiteUrlSubCategory" class="toDefault">
+
+                                                        <option value="AutomotiveIndustrial">汽车和工业</option>
+
+                                                        <option value="Books">图书</option>
+
+                                                        <option value="ClotheShoesJewelry">服饰、鞋靴和珠宝首饰</option>
+
+                                                        <option value="ElectronicsComputers">电子产品和电脑</option>
+
+                                                        <option value="HomeGardenTools">家居、园艺和工具</option>
+
+                                                        <option value="MoviesMusicGames">电影、音乐和游戏</option>
+
+                                                        <option value="SportsOutdoors">运动户外</option>
+
+                                                        <option value="ToysKidsBaby">玩具、婴幼儿商品</option>
+
+                                                        <option value="Other">其他</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cols-mc overflow_hidden border_top_color">
+
+                        <div class="bucketcontainer float_right">
+                            <span>
+                                <button class="awesomeButton buttonLarge primaryLargeButton">
+                                    <span class="button_label button_label_save submitBtn" style="float: left">
+                                        保存
+                                    </span>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="bucketcontainer float_right">
+                            <span>
+                                <button class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                    <span class="button_label" style="float: left">
+                                        <a href="./administration_submit.html" class="click_a">
+                                            取消
+                                        </a>
+                                    </span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cols-right float_right absolute">
+                        <div class="reg-right-section account_setting_66">
+                            <span class="reg-compPer-barwrap">
+                                <div class="width66">
+                                    <span class="reg-compPer-bar-left" style="width: 100%;"></span>
+                                    <span class="reg-compPer-bar-right" style="width: 0%;"></span>
+                                </div>
+                            </span>
+                            <span class="reg-compPer-label">
+                                您的账户设置已完成 66%。 (2/3)
+                            </span>
+                        </div>
+                        <div class="reg-right-section  none account_setting_100">
+                                <span class="reg-compPer-barwrap">
+                                    <div class="width100">
+                                        <span class="reg-compPer-bar-left" style="width: 100%;"></span>
+                                        <span class="reg-compPer-bar-right" style="width: 0%;"></span>
+                                    </div>
+                                </span>
+                                <span class="reg-compPer-label">
+                                    您的账户设置已完成 100%。 (3/3)
+                                </span>
+                            </div>
+                        <div class="cols-r1">
+                            <div class="righttitle">
+                                常见问题
+                            </div>
+                            <div class="righttable">
+                                <div>
+                                    <div class="helptitle usetitle">
+                                        <a href="" class=" a_link_color a_underline"> 网站 URL 是什么，如何使用？</a>
+                                    </div>
+                                    <div class="helpContent useContent display_none">
+                                        这是贵公司的网站。这将用于验证您要使用 Login with Amazon 的申请，但并不一定会显示给买家。
+                                    </div>
+                                    <div class="helptitle stoptitle">
+                                        <a href="" class=" a_link_color a_underline"> 我可以稍后更改网站 URL 吗？</a>
+                                    </div>
+                                    <div class="helpContent stopContent  display_none">
+                                        可以。您可在卖家平台账户的“账户信息”选项卡中编辑网站 URL。
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="./js/webjs/administration_submit.js" type="text/javascript"></script>
+<script src="./js/webjs/administration_unfinished.js"></script>
+
+</html>

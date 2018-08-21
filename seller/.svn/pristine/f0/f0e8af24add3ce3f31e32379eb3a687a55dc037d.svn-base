@@ -1,0 +1,13 @@
+{
+    body: {
+        payment_method:"付费方式",
+        account_information:"账户信息",
+        manage_charge_method:" 管理存款方法",
+        credit_card:"信用卡",
+        end:"结束",
+        expiry_time:"到期时间",
+        active:"在售",
+        edit:" 编辑",
+        back:"上一步" 
+    }
+}

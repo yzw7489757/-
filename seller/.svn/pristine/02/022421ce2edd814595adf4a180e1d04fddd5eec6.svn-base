@@ -1,0 +1,22 @@
+{
+    head: {
+        title: "账户信息"
+    },
+    body: {
+        seller_information:"卖家信息",
+        account_information:"账户信息",
+        edit_store_details:"编辑商店详细信息",
+        back_to_seller_information:"返回卖家资料",
+        customer_service_e_mail:"客户服务电子邮件：",
+        send_address:"（您的客户的电子邮件将发送至该地址。）",
+        service_phone:"客户服务电话：",
+        sisplay_to_buyers:"（此名称将在亚马逊网站上向买家显示。）",
+        reply_e_mail:"客户服务回复电子邮件",
+        replyaddress:"（您的买家对订单确认电子邮件所做的回复将会发送到此地址。）",
+        cancel:"取消",
+        submission:"提交",
+        must_be_completed:"必须填写电子邮件",
+        invalid_e_mail:"无效的电子邮件",
+        invalid_phone_number:"电话号码无效"    
+    }
+}

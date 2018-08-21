@@ -1,0 +1,148 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+.heading-module {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.mobile-element-wrapper {
+    margin-top: 8px;
+}
+.width39 {
+    width: 31.948%;
+}
+.height29{
+    height: 29px;
+}
+.a-alert-heading{
+    color: #007600;
+}
+h4 {
+    padding-bottom: 4px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.255;
+}
+.simplified-interview-question-wrapper {
+    margin-top: 32px;
+}
+.print-download-banner {
+    height: 30px;
+    background-color: #cccccc;
+}
+.icon-div {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+img{
+    height: 25px;
+    width: 25px;
+    vertical-align: top;
+}
+.icon-text {
+    font-size: 15px;
+    color: #767676;
+}
+.k1099_w8ben {
+    background-color: #EEE;
+    border: 1px solid #666;
+}
+.k1099_row {
+    border-bottom: 2px solid black;
+}
+.k1099_section {
+    padding: 5px 5px 10px;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 11px;
+}
+.w8Head1{
+    width: 100% !important;
+    text-align: center; 
+    border-bottom: 2px solid black;
+}
+.k1099_w8Head1 p {
+    font-size: 10px;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+.k1099_formName {
+    font-size: 20px;
+    font-weight: bold;
+}
+td, th {
+    padding: 3px;
+}
+
+th {
+    text-align: left;
+}
+ul {
+    margin: 0 0 0 18px;
+   
+}
+ul li{
+    color: #000000 !important;
+    list-style: disc;
+}
+ol {
+    margin: 0 0 0 20px;
+   
+}
+ol li{
+    list-style: decimal;
+    color: #000000 !important;
+}
+input[type=text] {
+    display: block;
+    width: 100%;
+    border: 1px solid #999;
+}
+.k1099_sectionHeader {
+    font-weight: bold;
+    font-size: 14px;
+}
+.k1099_partNum {
+    color: white;
+    background-color: black;
+    height: 30px;
+    padding: 2px 5px;
+    margin: 0 5px;
+}
+.k1099_section {
+    width: 100% !important;
+}
+p {
+    padding: 0;
+    margin: 0 0 14px 0;
+}
+.k1099_signatureHeader {
+    font-size: 14px;
+    font-weight: bold;
+}
+.buttons-module {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.buttons-module .button-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.float-center {
+    margin: 0 auto !important;
+    float: initial !important;
+}

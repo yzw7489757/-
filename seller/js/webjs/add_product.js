@@ -1,0 +1,7 @@
+$(function(){
+    var variant_show = $('.variant_show');
+    var product_group = $('.product_group');
+    variant_show.click(function(){
+        $(this).removeClass('primaryAUIButton').addClass('secondaryAUIButton').text('隐藏商品变体')
+    })
+})

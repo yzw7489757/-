@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/administration_submit.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div id="content-frameout">
+
+        <div id="content-frame">
+            <div class="messageboxsuccess reg-db-successbox none">
+                <form action="" class="overflow_hidden">
+                    <div class="reg-db-sb-text float_left">
+                        <div>
+                            <strong>祝贺您！</strong>
+                        </div>
+                        <div>祝贺您！您的账户设置已完成。请单击“完成注册”以继续前往卖家中心。</div>
+                    </div>
+                    <button class="awesomeButton buttonLarge primaryLargeButton float_right ">
+                        <span class="button_label">
+                            完成注册
+                        </span>
+                    </button>
+                </form>
+            </div>
+            <h1>
+                <div>
+                    <h1>
+                        注册概览
+                    </h1>
+                </div>
+            </h1>
+            <div class="cols-two bucketcontainer overflow">
+                <div id="cols-main" class="relative">
+                    <div class="cols-mc">
+                        <div class="reg-db-section overflow">
+                            <div class="reg-db-status">
+                                <a href="">已完成</a>
+                            </div>
+                            <h3>您的销售计划</h3>
+                            <ul class="reg-db-content-list">
+                                <li class="reg-db-subtitle">New service:</li>
+                                <li class="reg-db-content">Login with Amazon </li>
+                                <li class="reg-db-subtitle"></li>
+                                <li class="reg-db-content">
+                                    <a href="./administration.html" class="reg-edit-link a_underline a_link_color">更改</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reg-db-section">
+                            <div class="reg-db-status">
+                                <a href="">已完成</a>
+                            </div>
+                            <h3>公司信息</h3>
+                            <ul class="reg-db-content-list">
+                                <li class="reg-db-subtitle"> 卖家显示名称：</li>
+                                <li class="reg-db-content company_name"> zhongguo feng </li>
+                                <li class="reg-db-subtitle"> 公司地址：</li>
+                                <li class="reg-db-content">
+                                    <div>
+                                        <span class="detailAddress">gongshu qu wanda shagnye zhongxin D zuo 718</span>
+                                    </div>
+                                    <div>
+                                        <span class="city">hangzhou shi</span>
+                                    </div>
+                                    <div>
+                                        <span class="province">zhejiang sheng</span>
+                                    </div>
+                                    <div>
+                                        <span class="zipcode">310013</span>
+                                    </div>
+                                    <div>
+                                        <span class="country">中国</span>
+                                    </div>
+                                    <div>
+                                        <span class="phone">+8613968018091</span>
+                                    </div>
+                                </li>
+                                <li class="reg-db-subtitle"></li>
+                                <li class="reg-db-content">
+                                    <a href="./administration_campanyinfo.html" class="reg-edit-link a_underline a_link_color">更改</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reg-db-section">
+                            <div class="reg-db-status unfinishedBtn">
+                                <a href="./administration_unfinished.html" class="buttonImage">
+                                    <span class="buttonLarge secondaryLargeButton inner_button">
+                                        <span class="button_label ">
+                                            未完成
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="reg-db-status finishedBtn none">
+                                <a href="">已完成</a>
+                            </div>
+                            <h3>网站信息</h3>
+                            <ul class="reg-db-content-list infoWeb none">
+                                <li class="reg-db-subtitle"> 公司网站 URL：</li>
+                                <li class="company_website reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="website_categories reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="site_subcategories reg-db-content">Login with Amazon
+                                    <br>
+                                </li>
+                                <li class="reg-db-subtitle"></li>
+                                <li class="reg-db-content">
+                                    <a href="./administration_unfinished.html" class="link_unfinished">更改</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reg-db-section go_on_Btn">
+                            <div class="reg-db-status">
+                                <a href="" class="buttonImage">
+                                    <span class="buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label">继续</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reg-db-section none finishBtn">
+                            <div class="reg-db-status">
+                                <a href="" class="buttonImage">
+                                    <span class="buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label">完成注册</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols-right float_right absolute">
+                        <div class="reg-right-section account_setting_66">
+                            <span class="reg-compPer-barwrap">
+                                <div class="width66">
+                                    <span class="reg-compPer-bar-left" style="width: 100%;"></span>
+                                    <span class="reg-compPer-bar-right" style="width: 0%;"></span>
+                                </div>
+                            </span>
+                            <span class="reg-compPer-label">
+                                您的账户设置已完成 66%。 (2/3)
+                            </span>
+                        </div>
+                        <div class="reg-right-section none account_setting_100">
+                            <span class="reg-compPer-barwrap">
+                                <div class="width100">
+                                    <span class="reg-compPer-bar-left" style="width: 100%;"></span>
+                                    <span class="reg-compPer-bar-right" style="width: 0%;"></span>
+                                </div>
+                            </span>
+                            <span class="reg-compPer-label">
+                                您的账户设置已完成 100%。 (3/3)
+                            </span>
+                        </div>
+                        <div class="cols-r1">
+                            <div class="righttitle">
+                                常见问题
+                            </div>
+                            <div class="righttable">
+                                <div>
+                                    <div class="helptitle usetitle">
+                                        <a href="" class=" a_link_color a_underline">如何开始使用 Login with Amazon？</a>
+                                    </div>
+                                    <div class="helpContent useContent display_none">
+                                        首先，您需要完成此页面上列出的注册步骤。完成注册后，您便能够开始使用 Login with Amazon。
+                                    </div>
+                                    <div class="helptitle stoptitle">
+                                        <a href="" class=" a_link_color a_underline">我可以停下来，稍后再完成注册吗？</a>
+                                    </div>
+                                    <div class="helpContent stopContent  display_none">
+                                        是的，您可以随时回到该页面完成注册。请使用您创建账户时填写的电子邮件地址和密码登录以继续。
+                                    </div>
+                                    <div class="helptitle updatetitle">
+                                        <a href="" class=" a_link_color a_underline">我可以修改之前提供的信息吗？</a>
+                                    </div>
+                                    <div class="helpContent updateContent  display_none">
+                                        是，您可通过“更改”链接修改信息。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="./js/webjs/administration_submit.js" type="text/javascript"></script>
+
+</html>
