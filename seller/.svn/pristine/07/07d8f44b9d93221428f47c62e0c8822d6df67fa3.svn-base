@@ -1,0 +1,23 @@
+{
+    head: {
+        title: "Account Info"
+    },
+    body: {
+        seller_information:"Seller Information",
+        account_information:"Account Info",
+        edit_store_details:"Edit store details",
+        back_to_seller_information:"Back to seller profile",
+        customer_service_e_mail:"Customer Service E-mail:",
+        send_address:"(Your customers' e-mails will go to this address.)",
+        service_phone:"Customer Service Phone:",
+        sisplay_to_buyers:"(This will be displayed to customers on Amazon.)",
+        reply_e_mail:"Customer Service Reply-to E-mail:",
+        replyaddress:"(Your customers' replies to our order confirmation e-mails will go to this address.)",
+        cancel:"Cancel",
+        submission:"Submit",
+        must_be_completed:"Email is required",
+        invalid_e_mail:"Invalid email",
+        invalid_phone_number:"Invalid phone number",
+        successInfo:"Customer service details updated successfully."
+    }
+}

@@ -1,0 +1,15 @@
+_head_title=Deposit Methods
+_body_deposit_method=Deposit Methods
+_body_account_information= Account Info
+_body_management_deposit_method=Manage Deposit Methods
+_body_bank_account= BANK ACCOUNT NUMBER
+_body_end=ending in
+_body_alternative_deposit_method=Replace deposit method
+_body_country_region=  BANK LOCATION COUNTRY
+_body_holder_name=ACCOUNT HOLDER NAME 
+_body_distribution_mall=ASSIGNED MARKETPLACES
+_body_allocation_deposits=  Assign deposit methods
+_body_designated_bank_account=You must specify a bank account to these marketplaces for receiving payments
+_body_unallocated_mall=UN-ASSIGNED MARKETPLACES 
+_body_distribution=Assign 
+

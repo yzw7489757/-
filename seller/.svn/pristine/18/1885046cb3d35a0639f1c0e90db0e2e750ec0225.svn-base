@@ -1,0 +1,18 @@
+_head_title=Account Info
+_body_seller_information=Seller Information
+_body_account_information=Account Info
+_body_edit_store_details=Edit store details
+_body_back_to_seller_information=Back to seller profile
+_body_customer_service_e_mail=Customer Service E-mail:
+_body_send_address=(Your customers' e-mails will go to this address.)
+_body_service_phone=Customer Service Phone:
+_body_sisplay_to_buyers=(This will be displayed to customers on Amazon.)
+_body_reply_e_mail=Customer Service Reply-to E-mail:
+_body_replyaddress=(Your customers' replies to our order confirmation e-mails will go to this address.)
+_body_cancel=Cancel
+_body_submission=Submit
+_body_must_be_completed=Email is required
+_body_invalid_e_mail=Invalid email
+_body_invalid_phone_number=Invalid phone number
+_body_successInfo=Customer service details updated successfully.
+

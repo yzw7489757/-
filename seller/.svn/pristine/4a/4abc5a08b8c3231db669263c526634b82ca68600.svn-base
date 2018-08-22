@@ -1,0 +1,14 @@
+_head_title=Change password
+_body_ChangePassword=Change email
+_body_ChangePasswordContent=Use the form below to change the e-mail address for your Amazon.com account. Use the new address next time you log in or place an order.
+_body_WhatIsCurrentPassword=What is your current password?
+_body_CurrentPassword=Current password:
+_body_WhatIsNewPassword=What is your new password?
+_body_NewPassword=New password:
+_body_ReenterNewPassword=Reenter new password:
+_body_SaveChange=Save change
+_body_Problem=There was a problem
+_body_ProblemContent1=Enter your password
+_body_ProblemContent2=The two password input is inconsistent. Please try again.
+_body_ProblemContent3=The new password can not be used last year.
+

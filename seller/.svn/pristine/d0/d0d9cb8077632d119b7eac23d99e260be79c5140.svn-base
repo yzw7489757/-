@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta id="i18n_pagename" content="account_seller_editor2">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/account_seller_editor.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-section a-padding-large a-text-left ng-scope">
+        <div class="a-section a-spacing-base">
+            <div class="a-row a-ws-row">
+                <div class="a-column a-span12 a-ws-span6 a-ws-spacing-none width48">
+                    <div class="a-section a-spacing-none">
+                        <div class="a-row a-spacing-micro a-ws-row overflow_hidden">
+                            <h2 class="float_left marBottom4" data-i18n-text="_body_seller_information"></h2>
+                            <a href="./account_seller_information.html" class="float_right marTop4" data-i18n-text="_body_account_information"></a>
+                        </div>
+                        <hr>
+                        <div class="a-row a-ws-row ">
+                            <h3 class="float_left marBottom14" data-i18n-text="_body_edit_store_details"> </h3>
+                            <a href="./account_seller_information.html" class="float_right marBottom14" data-i18n-text="_body_back_to_seller_information"></a>
+                        </div>
+                    </div>
+                    <div class="update a-section a-spacing-base ng-scope sizing display_none" style="height: 47px;">
+                        <div class="a-row ng-scope">
+                            <div class="a-row">
+                                <div class="a-box a-alert a-alert-success">
+                                    <div class="a-box-inner a-alert-container relative">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content">
+                                            <div class="a-row ng-scope">
+                                                <span class="ng-binding" data-i18n-text="_body_successInfo"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section">
+                        <div class="a-row ">
+                            <div class="a-row a-spacing-base a-ws-row height">
+                                <div class="a-column a-span2 a-spacing-top-small a-ws-span1 float_left width14 width4 marRight">
+                                    <img src="./img/Mexico._V529822910_.png" alt="">
+                                </div>
+                                <div class="a-column a-span6 a-spacing-top-small float_left width48">
+                                    <span class="a-size-base a-text-bold ng-binding a-ember">Amazon.com.mx</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1 -->
+                        <div class="a-row">
+                            <form action="" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+                                <div class="a-section ng-scope">
+                                    <div class="a-row a-size-base a-ws-row">
+                                        <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
+                                            <div class="a-row a-spacing-none ng-scope">
+                                                <span class="a-text-bold ng-binding" data-i18n-text="_body_customer_service_e_mail"></span>
+                                                <span class="mandatoryTagClass">&nbsp;*</span>
+                                            </div>
+                                            <div class="a-row ng-scope">
+                                                <span class="a-size-small a-color-tertiary ng-binding" data-i18n-text="_body_send_address"></span>
+                                            </div>
+                                            <div class="a-row a-ws-row ">
+                                                <div class="a-column a-span12 a-ws-span6 width47 float_left">
+                                                    <input type="text" id="userEmailInput" class="service_email_input padding3_0 emailinput box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                        value="" autocomplete="off" style="height: 31px;" />
+                                                </div>
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div class="a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input0_no a-alert-container relative display_none">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block " data-i18n-text="_body_must_be_completed">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input0_error a-alert-container relative display_none">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block" data-i18n-text="_body_invalid_e_mail">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 2 -->
+                        <div class="a-row">
+                            <form action="" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+                                <div class="a-section ng-scope">
+                                    <div class="a-row a-size-base a-ws-row">
+                                        <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
+                                            <div class="a-row a-spacing-none ng-scope">
+                                                <span class="a-text-bold ng-binding"  data-i18n-text="_body_service_phone"></span>
+                                            </div>
+                                            <div class="a-row ng-scope">
+                                                <span class="a-size-small a-color-tertiary ng-binding"  data-i18n-text="_body_sisplay_to_buyers"></span>
+                                            </div>
+                                            <div class="a-row a-ws-row ">
+                                                <div class="a-column a-span12 a-ws-span6 width47 float_left">
+                                                    <input type="text" id="usertelphone" class="service_phone_input input_tel padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                        value="" autocomplete="off" style="height: 31px;" />
+                                                </div>
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div class="a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input1_no a-alert-container relative display_none">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block "  data-i18n-text="_body_invalid_phone_number"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 3 -->
+                        <div class="a-row">
+                            <form action="" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+                                <div class="a-section ng-scope">
+                                    <div class="a-row a-size-base a-ws-row">
+                                        <div class="a-column a-span12 a-ws-span6 grid-col-right-margin">
+                                            <div class="a-row a-spacing-none ng-scope">
+                                                <span class="a-text-bold ng-binding"  data-i18n-text="_body_reply_e_mail"> </span>
+                                                <span class="mandatoryTagClass">&nbsp;*</span>
+                                            </div>
+                                            <div class="a-row ng-scope">
+                                                <span class="a-size-small a-color-tertiary ng-binding"  data-i18n-text="_body_replyaddress"></span>
+                                            </div>
+                                            <div class="a-row a-ws-row ">
+                                                <div class="a-column a-span12 a-ws-span6 width47 float_left">
+                                                    <input type="text" id="saleEmailInput" class="service_reply_email_input padding3_0 box-sizing  onfocusInput a-input-text a-width-medium a-spacing-top-micro width-100 celwidget "
+                                                        value="" autocomplete="off" style="height: 31px;" />
+                                                </div>
+                                                <div class="a-column a-span12 a-ws-span6 messageDiv a-span-last a-ws-span-last width47 float_right">
+                                                    <div class="a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input2_no a-alert-container relative display_none">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block "  data-i18n-text="_body_must_be_completed">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="a-alert-inline a-alert-inline-error ng-scope ">
+                                                        <div class="group_input2_error a-alert-container relative display_none">
+                                                            <i class="a-icon a-icon-alert "></i>
+                                                            <div class="a-alert-content ng-binding inline-block "  data-i18n-text="_body_invalid_e_mail">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="a-row a-ws-row  overflow_hidden">
+                            <div class="a-column a-span12 a-spacing-base a-ws-span6 width47 float_left">
+                                <span class="a-button a-spacing-top-small a-button-span12 box-sizing">
+                                    <span class="a-button-inner">
+                                        <input type="button" class="a-button-input">
+                                        <a href="./account_seller_information.html" class="click_a">
+                                            <span class="a-button-text box-sizing"  data-i18n-text="_body_cancel"></span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="a-column a-span12 a-spacing-base a-ws-span6 a-span-last a-ws-span-last ng-scope width47 float_right">
+                                <span class="a-button a-button-normal a-button-group-last a-spacing-top-small a-button-span12 a-button-primary box-sizing">
+                                    <span class="a-button-inner">
+                                        <input type="button" class="a-button-input submitBtn">
+                                        <span class="submit_span a-button-text box-sizing submitBtnSpan" data-i18n-text="_body_submission"></span>
+                                    </span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/public.js " type="text/javascript "></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script src="./js/webjs/account_seller_editor2.js"></script>
+
+</html>

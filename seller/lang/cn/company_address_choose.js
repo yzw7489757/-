@@ -1,4 +1,7 @@
 {
+    head: {
+        title: "公司地址"
+    },
     body: {
         company_address:"公司地址",
         account_information:"账户信息",
@@ -10,7 +13,7 @@
         province_region_state:"省/地区/州：",
         country:"国家：",
         zip_code:"邮编：",
-        main_telephones::"主要电话：",
+        main_telephones:"主要电话：",
         back:"上一步",
         submit:"提交"
     }

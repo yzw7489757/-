@@ -1,0 +1,13 @@
+_head_title=存款方式
+_body_deposit_method=存款方式
+_body_account_information=账户信息
+_body_resubmit=无法验证现有银行账户详情。请提供正确的信息，然后重新提交。
+_body_last_number=末尾数字为
+_body_account_discontinuation=的银行账户将被停用
+_body_identifying_bank_accounts=识别您的银行账户
+_body_verify_end_numbers=为防止滥用您的银行账户，您需要验证末尾数字为
+_body_complete_account=的账户详情，并提供完整的账号。
+_body_bank_account= 银行账号
+_body_returnBtn= 返回 
+_body_submit=提交
+

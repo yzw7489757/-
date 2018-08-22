@@ -1,0 +1,27 @@
+_head_title=Account Info
+_body_deposit_method=Deposit Methods
+_body_account_information=Account Info
+_body_management_deposit_method=Replace deposit method
+_body_for_Amazon_mall= For marketplace
+_body_current_deposit_method= Current deposit method:
+_body_bank_account=BANK ACCOUNT NUMBER
+_body_end=ending in 
+_body_country_region=BANK LOCATION COUNTRY
+_body_Holder_name=ACCOUNT HOLDER NAME 
+_body_bank_account_name=Bank Account 
+_body_selection_allocation= Select a deposit method that you want to replace with
+_body_add_new_way_deposit= Add new deposit method
+_body_identifying_bank_accounts= Identify your bank account
+_body_prevent_abuse=To prevent misuse of your bank account, you need to verify your account details ending in
+_body_complete_account=and provide the complete account number.
+_body_choosing_existing_deposits= Select existing deposit method
+_body_location_Bank=Bank Location
+_body_charge= Disbursement may be subject to fees charged by your bank
+_body_same_name=Name as on bank documents
+_body_bank_dentification_code=9-Digit Routing Number
+_body_digits=9 digits
+_body_reinput=Re-type Bank Account Number
+_body_cancel=Cancel
+_body_set_deposit_method=Set Deposit Method
+_body_errInfo=Unable to verify existing bank account details. Please provide the correct information and submit again.
+

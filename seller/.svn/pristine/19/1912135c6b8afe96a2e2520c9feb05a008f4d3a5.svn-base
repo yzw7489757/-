@@ -1,0 +1,13 @@
+_head_title=Deposit Methods
+_body_deposit_method=Deposit Methods
+_body_account_information=Account Info
+_body_resubmit=Unable to verify existing bank account details. Please provide the correct information and submit again.
+_body_last_number=The bank account ending in
+_body_account_discontinuation=will be deactivated for
+_body_identifying_bank_accounts=Identify your bank account
+_body_verify_end_numbers=To prevent misuse of your bank account, you need to verify your account details ending in
+_body_complete_account=and provide the complete account number.
+_body_bank_account= Bank Account Number
+_body_returnBtn= Go Back 
+_body_submit=Submit
+
