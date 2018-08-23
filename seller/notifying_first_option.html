@@ -3,30 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta id="i18n_pagename" content="notifying_first_option">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/demo.css">
     <link rel="stylesheet" href="./css/notifying_first_option.css">
 </head>
 
 <body>
+    <header id="sc-masthead" class="clearable">
+    </header>
     <div class="notification-preferences-container">
         <div class="notification-preferences-container-title">
             <span>
-                <a href="javascript:void(0)">请单击此处给此页面评级</a>
+                <a href="javascript:void(0)" data-i18n-text='_body_RatePage'></a>
             </span>
         </div>
         <div class="a-row a-box">
             <ul class="a-tabs">
-                <li  class="active_tabs">
-                    <a href="javascript:void(0)">通知选项</a>
+                <li class="active_tabs">
+                    <a href="javascript:void(0)" data-i18n-text="_body_NotificationOptions"></a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">联系人</a>
-                </li>       
+                    <a href="javascript:void(0)" data-i18n-text="_body_Contacts"></a>
+                </li>
             </ul>
             <ul class="a-box-inner chooseText">
                 <li>
@@ -35,41 +42,42 @@
                             <div class="a-box-inner a-alert-container">
                                 <i class="a-icon a-icon-alert"></i>
                                 <div class="a-alert-content">
-                                    在下方查看您的设置。点击“编辑”按钮来更改信息。如果您尚未提交资质审核材料，请先了解
+                                    <span data-i18n-text="_body_viewSetting"></span>
+
                                     <a href="javascript:void(0)">
-                                        <b>所需提交的资质材料清单及如何提交。</b>
+                                        <b data-i18n-text='_body_Submissions'></b>
                                     </a>
                                     <span class="a-declarative">
-                                        <a class="a-link-normal learn-more-link" href="#">了解更多信息</a>
+                                        <a class="a-link-normal learn-more-link" href="#" data-i18n-text="_body_LearnMore"></a>
                                     </span>
                                 </div>
                             </div>
                         </li>
                         <!-- 订单通知 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">订单通知</div>
-                                            <div class="a-size-small">每当有买家购买您的商品时收到通知。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_OrderNotifications"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_OrderNotificationsContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn" style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save "data-type="UpdateOrderNotification">保存</span>
+                                                        <span class="a-button-text block pdTop5 save " data-type="UpdateOrderNotification" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -81,17 +89,17 @@
                             <div class="a-section-expander-inner a-box none">
                                 <div class="a-row">
                                     <div class="a-row a-spacing-base">
-                                        <span>选择通过短信接收的通知：</span>
+                                        <span data-i18n-text="_body_OrderNotificationsTitle1"></span>
                                     </div>
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px "class="order_sms_isopen">
+                                                <div style="padding-left:25px " class="order_sms_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon empty-check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>卖家订单通知（已出售、现在配送）</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck1_1"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -101,18 +109,18 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">短信:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_sms"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini">
                                                             <div class="a-alert-inline a-alert-inline-info">
-                                                                
+
                                                                 <div class="relative a-alert-container">
 
                                                                     <i class="a-icon a-icon-alert"></i>
 
-                                                                    <div class="a-alert-content">
-                                                                        要更改您的短信联系人信息，请转至“联系人”选项卡并编辑卖家默认联系人。
+                                                                    <div class="a-alert-content" data-i18n-text="_body_SMSContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -126,61 +134,61 @@
                                     </div>
                                     <hr class="a-spacing-base a-divider-normal">
                                     <div class="a-row a-spacing-base">
-                                        <span>选择通过电子邮件接收的通知：</span>
+                                        <span data-i18n-placeholder='_body_ReceiveViaEMAIL'></span>
                                     </div>
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="order_isopen">
+                                                <div style="padding-left:25px" class="order_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>卖家订单通知（已出售、现在配送）</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck2_1"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="shipping_isopen">
+                                                <div style="padding-left:25px" class="shipping_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>亚马逊物流订单通知</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck2_2"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="multichannel_isopen">
+                                                <div style="padding-left:25px" class="multichannel_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>多渠道配送通知</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck2_3"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="shipment_isopen">
+                                                <div style="padding-left:25px" class="shipment_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>货件已到达通知</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck2_4"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="problem_isopen">
+                                                <div style="padding-left:25px" class="problem_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <span>入库货件问题通知</span>
+                                                        <span data-i18n-text="_body_OrderNotificationsCheck2_5"></span>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -190,7 +198,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -198,8 +206,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -216,30 +224,30 @@
                             </div>
                         </li>
                         <!-- 退货和索赔通知 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">退货和索赔通知</div>
-                                            <div class="a-size-small">接收有关退货请求和客户索赔的通知。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_ReturnandClaim"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_ReturnandClaimContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn" style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification2">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification2" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -253,13 +261,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="returns_isopen">
+                                                <div style="padding-left:25px" class="returns_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>待处理的退货</div>
-                                                        <div class="preference-description a-size-small">退货条款</div>
+                                                        <div data-i18n-text="_body_ReturnandClaimCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReturnandClaimCheck1Content"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -269,7 +277,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -277,8 +285,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -295,13 +303,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="claims_isopen">
+                                                <div style="padding-left:25px" class="claims_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>索赔通知</div>
-                                                        <div class="preference-description a-size-small">有关买家具有争议的费用通知。</div>
+                                                        <div data-i18n-text="_body_ReturnandClaimCheck2"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReturnandClaimCheck2Content"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -311,7 +319,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -319,8 +327,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -337,13 +345,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="refund_isopen">
+                                                <div style="padding-left:25px" class="refund_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>退款通知</div>
-                                                        <div class="preference-description a-size-small">有关向买家发放退款的通知</div>
+                                                        <div data-i18n-text="_body_ReturnandClaimCheck3"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReturnandClaimCheck3Content"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -353,7 +361,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -361,8 +369,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -379,30 +387,30 @@
                             </div>
                         </li>
                         <!-- 商品通知 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">商品通知</div>
-                                            <div class="a-size-small">请选择在您的商品和库存发生变动时如何通知您。</div>
+                                            <div class="a-size-medium" data-i18n-text='_body_ListingNotifications'></div>
+                                            <div class="a-size-small" data-i18n-text="_body_ListingNotificationsContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn" style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification3">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification3" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -416,13 +424,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="listing_created_isopen">
+                                                <div style="padding-left:25px" class="listing_created_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>已创建“我的商品”</div>
-                                                        <div class="preference-description a-size-small">当我创建新商品信息时通知我</div>
+                                                        <div data-i18n-text="_body_ListingNotifications1Check"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ListingNotifications1CheckContent"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -432,7 +440,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label ">电子邮件:</span>
+                                                        <span class="preference-group-label " data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -440,8 +448,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -458,13 +466,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="listing_closed_isopen">
+                                                <div style="padding-left:25px" class="listing_closed_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>已关闭“我的商品”</div>
-                                                        <div class="preference-description a-size-small">当您的商品不可售时将会通知您。不可售的原因可能包括：缺货、过期或其他原因。</div>
+                                                        <div data-i18n-text="_body_ListingNotifications2Check"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ListingNotifications2CheckContent"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -474,7 +482,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label ">电子邮件:</span>
+                                                        <span class="preference-group-label " data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -482,8 +490,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -501,30 +509,30 @@
                             </div>
                         </li>
                         <!-- 报告 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">报告</div>
-                                            <div class="a-size-small">请选择在您的报告准备完毕时如何通知您。如果您不指定邮箱，我们将通知您的注册邮箱。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_Reports"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_ReportsContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn" style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save"data-type="UpdateOrderNotification4">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification4" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -538,13 +546,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="open_listings_isopen">
+                                                <div style="padding-left:25px" class="open_listings_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>可售商品报告</div>
-                                                        <div class="preference-description a-size-small"> 可售商品报告包含在生成报告时可供购买的所有当前商品。</div>
+                                                        <div data-i18n-text="_body_ReportsCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReportsCheck1Content"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -554,7 +562,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -562,8 +570,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -580,13 +588,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="order_fulfillment_isopen">
+                                                <div style="padding-left:25px" class="order_fulfillment_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>订单履行报告</div>
-                                                        <div class="preference-description a-size-small">订单配送报告包含所有已售出、已付款的商品。</div>
+                                                        <div data-i18n-text="_body_ReportsCheck2"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReportsCheck2Content"></div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -596,7 +604,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -604,8 +612,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -622,13 +630,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="sold_listings_isopen">
+                                                <div style="padding-left:25px" class="sold_listings_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>已售出商品报告</div>
-                                                        <div class="preference-description a-size-small"> 已售商品报告包含通过亚马逊网站售出的所有商品。</div>
+                                                        <div data-i18n-text="_body_ReportsCheck3"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_ReportsCheck3Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -638,7 +646,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -646,8 +654,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -669,8 +677,8 @@
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>已取消的商品报告</div>
-                                                        <div class="preference-description a-size-small"> 已取消的商品报告中包含由亚马逊取消的所有商品，不包含已售商品、由库存加载工具删除的商品，或者卖家取消的商品。</div>
+                                                        <div data-i18n-text="_body_ReportsCheck4"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text='_body_ReportsCheck4Content'> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -680,7 +688,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -688,8 +696,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -707,30 +715,30 @@
                             </div>
                         </li>
                         <!-- 出价通知 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">出价通知</div>
-                                            <div class="a-size-small">选择希望如何接收有关您的出价产品出价情况的通知</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_MakeAnOffer"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_MakeAnOfferContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn" style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification5">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification5" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -744,13 +752,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="makeoffer_isopen">
+                                                <div style="padding-left:25px" class="makeoffer_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>出价通知</div>
-                                                        <div class="preference-description a-size-small"> 接收有关买家出价活动的通知</div>
+                                                        <div data-i18n-text="_body_MakeAnOfferCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_MakeAnOfferCheck1Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -760,7 +768,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -768,8 +776,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -786,30 +794,30 @@
                             </div>
                         </li>
                         <!-- 帐户通知 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">帐户通知</div>
-                                            <div class="a-size-small">选择希望如何接收有关可能会影响您业务的问题的通知。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_AccountNotifications"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_AccountNotificationsContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn " style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification6">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification6" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -823,13 +831,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="business_isopen">
+                                                <div style="padding-left:25px" class="business_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>公司最新信息</div>
-                                                        <div class="preference-description a-size-small"> 关于新功能、促销机会、销售技巧等的实用信息。</div>
+                                                        <div data-i18n-text="_body_AccountNotificationsCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_AccountNotificationsCheck1Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -839,7 +847,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -847,8 +855,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -865,13 +873,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"  class="technical_isopen">
+                                                <div style="padding-left:25px" class="technical_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>技术通知</div>
-                                                        <div class="preference-description a-size-small"> 可能对您的业务造成影响的计划更改或服务中断。</div>
+                                                        <div data-i18n-text="_body_AccountNotificationsCheck2"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_AccountNotificationsCheck2Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -881,7 +889,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -889,8 +897,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -906,31 +914,31 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- 紧急通知 --> 
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <!-- 紧急通知 -->
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">紧急通知</div>
-                                            <div class="a-size-small">如果出现需要立即采取措施的重要问题，客户支持将使用紧急联系信息来联系卖家。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_EmergencyNotifications"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_EmergencyNotificationsContent"></div>
                                         </div>
                                         <div class="float_right">
                                             <div class="a-button a-button-primary editBtn " style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification7">保存</span>
+                                                        <span class="a-button-text block pdTop5 save" data-type="UpdateOrderNotification7" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -945,13 +953,13 @@
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="emergency_isopen">
+                                                <div style="padding-left:25px" class="emergency_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>紧急通知</div>
-                                                        <div class="preference-description a-size-small"> 如果出现需要立即采取措施的重要问题，客户支持将使用紧急联系信息来联系卖家。</div>
+                                                        <div data-i18n-text="_body_EmergencyNotificationsCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_EmergencyNotificationsCheck1Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -961,7 +969,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电话号码</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_phone"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -969,8 +977,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        单击“编辑”添加电话号码
+                                                                    <div class="a-alert-content" data-i18n-text="_body_phoneContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -987,30 +995,30 @@
                             </div>
                         </li>
                         <!-- 消息 -->
-                        <li class="a-spacing-base parentNode"  data-show="false">
+                        <li class="a-spacing-base parentNode" data-show="false">
                             <div class="a-row a-box title">
                                 <div class="section-expander relative">
                                     <i class="a-icon a-icon-section-collapse" style=" background-position: -5px -59px "></i>
                                     <div class="a-row">
                                         <div class="float_left">
-                                            <div class="a-size-medium">消息</div>
-                                            <div class="a-size-small">消息首选项控制您如何收到来自买家的有关您的商品详情和交易的信息。</div>
+                                            <div class="a-size-medium" data-i18n-text="_body_Messaging"></div>
+                                            <div class="a-size-small" data-i18n-text="_body_MessagingContent"></div>
                                         </div>
                                         <div class="float_right ">
                                             <div class="a-button a-button-primary editBtn " style="display: none">
                                                 <span class="a-button-inner">
-                                                    <span class="a-button-text block pdTop5 edit">编辑</span>
+                                                    <span class="a-button-text block pdTop5 edit" data-i18n-text="_body_edit"></span>
                                                 </span>
                                             </div>
                                             <div class="save_cancel_Btn none">
                                                 <div class="a-button a-button-primary saveBtn">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 save " data-type="UpdateOrderNotification8">保存</span>
+                                                        <span class="a-button-text block pdTop5 save " data-type="UpdateOrderNotification8" data-i18n-text="_body_save"></span>
                                                     </span>
                                                 </div>
                                                 <div class="a-button">
                                                     <span class="a-button-inner">
-                                                        <span class="a-button-text block pdTop5 cancel">取消</span>
+                                                        <span class="a-button-text block pdTop5 cancel" data-i18n-text="_body_cancel"></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1026,21 +1034,22 @@
                                         <div class="a-alert-container relative">
                                             <i class="a-icon a-icon-alert"></i>
                                             <div class="a-alert-content">
-                                                注意：在此处或
-                                                <a href="">电子邮件授权页面</a>配置的电子邮件地址将被允许回复亚马逊买家的消息。
+                                                <span data-i18n-text="_body_MessagingTip1"></span>
+                                                <a href="" data-i18n-text="_body_MessagingTip2"></a>
+                                                <span data-i18n-text="_body_MessagingTip3"></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="a-row a-spacing-base">
                                         <div class="a-column width48 float_left">
                                             <div class="a-spacing-small">
-                                                <div style="padding-left:25px"class="buyer_messages_isopen">
+                                                <div style="padding-left:25px" class="buyer_messages_isopen">
                                                     <div class="checkbox">
                                                         <span class="icon check-icon"></span>
                                                     </div>
                                                     <div style="padding-left:2%;float:left;">
-                                                        <div>买家消息</div>
-                                                        <div class="preference-description a-size-small"> 亚马逊买家向您发送消息时，您会收到通知。</div>
+                                                        <div data-i18n-text="_body_MessagingCheck1"></div>
+                                                        <div class="preference-description a-size-small" data-i18n-text="_body_MessagingCheck1Content"> </div>
                                                     </div>
                                                     <div class="clear"></div>
                                                 </div>
@@ -1050,7 +1059,7 @@
                                             <div class="a-spacing-mini">
                                                 <div style="padding-left:100px">
                                                     <div style="width:100px;margin-left:-100px;float:left;">
-                                                        <span class="preference-group-label">电子邮件:</span>
+                                                        <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                     </div>
                                                     <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                         <div class="a-spacing-mini originalInfo">
@@ -1058,8 +1067,8 @@
                                                             <div class="inline-block a-alert-inline a-alert-inline-info">
                                                                 <div class="relative a-alert-container">
                                                                     <i class="a-icon a-icon-alert"></i>
-                                                                    <div class="a-alert-content">
-                                                                        该值来自您的卖家默认联系人
+                                                                    <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1087,13 +1096,13 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px"class="confirmation_isopen">
+                                            <div style="padding-left:25px" class="confirmation_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
                                                 <div style="padding-left:2%;float:left;">
-                                                    <div>确认通知</div>
-                                                    <div class="preference-description a-size-small">来自卖家平台网页的消息送达亚马逊买家时，进行确认。</div>
+                                                    <div data-i18n-text="_body_MessagingCheck2"></div>
+                                                    <div class="preference-description a-size-small" data-i18n-text="_body_MessagingCheck2Content"></div>
                                                 </div>
                                                 <div class="clear"></div>
                                             </div>
@@ -1103,7 +1112,7 @@
                                         <div class="a-spacing-mini">
                                             <div style="padding-left:100px">
                                                 <div style="width:100px;margin-left:-100px;float:left;">
-                                                    <span class="preference-group-label ">电子邮件:</span>
+                                                    <span class="preference-group-label " data-i18n-text="_body_email"></span>
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
@@ -1111,8 +1120,8 @@
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
-                                                                <div class="a-alert-content">
-                                                                    该值来自您的卖家默认联系人
+                                                                <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1129,13 +1138,13 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px"class="delivery_failures_isopen">
+                                            <div style="padding-left:25px" class="delivery_failures_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
                                                 <div style="padding-left:2%;float:left;">
-                                                    <div>配送失败</div>
-                                                    <div class="preference-description a-size-small">消息无法送达亚马逊买家时，收到相关通知。</div>
+                                                    <div data-i18n-text="_body_MessagingCheck3"></div>
+                                                    <div class="preference-description a-size-small" data-i18n-text="_body_MessagingCheck3Content"></div>
                                                 </div>
                                                 <div class="clear"></div>
                                             </div>
@@ -1145,7 +1154,7 @@
                                         <div class="a-spacing-mini">
                                             <div style="padding-left:100px">
                                                 <div style="width:100px;margin-left:-100px;float:left;">
-                                                    <span class="preference-group-label ">电子邮件:</span>
+                                                    <span class="preference-group-label " data-i18n-text="_body_email"></span>
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
@@ -1153,8 +1162,8 @@
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
-                                                                <div class="a-alert-content">
-                                                                    该值来自您的卖家默认联系人
+                                                                <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1171,13 +1180,13 @@
                                 <div class="a-row a-spacing-base">
                                     <div class="a-column width48 float_left">
                                         <div class="a-spacing-small">
-                                            <div style="padding-left:25px"class="buyer_optout_isopen">
+                                            <div style="padding-left:25px" class="buyer_optout_isopen">
                                                 <div class="checkbox">
                                                     <span class="icon check-icon"></span>
                                                 </div>
                                                 <div style="padding-left:2%;float:left;">
-                                                    <div>买家退出</div>
-                                                    <div class="preference-description a-size-small">将消息发送给不再接收卖家信息的买家时收到通知</div>
+                                                    <div data-i18n-text="_body_MessagingCheck4"></div>
+                                                    <div class="preference-description a-size-small" data-i18n-text="_body_MessagingCheck4Content"></div>
                                                 </div>
                                                 <div class="clear"></div>
                                             </div>
@@ -1187,7 +1196,7 @@
                                         <div class="a-spacing-mini">
                                             <div style="padding-left:100px">
                                                 <div style="width:100px;margin-left:-100px;float:left;">
-                                                    <span class="preference-group-label">电子邮件:</span>
+                                                    <span class="preference-group-label" data-i18n-text="_body_email"></span>
                                                 </div>
                                                 <div style="padding-left:2.5%;float:left;" class="a-row ">
                                                     <div class="a-spacing-mini originalInfo">
@@ -1195,8 +1204,8 @@
                                                         <div class="inline-block a-alert-inline a-alert-inline-info">
                                                             <div class="relative a-alert-container">
                                                                 <i class="a-icon a-icon-alert"></i>
-                                                                <div class="a-alert-content">
-                                                                    该值来自您的卖家默认联系人
+                                                                <div class="a-alert-content" data-i18n-text="_body_emailContent">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1218,12 +1227,12 @@
                         <tbody>
                             <tr class="contacts-table-row contacts-table-row-header">
                                 <th colspan="3">
-                                    <span class="contact-name">卖家默认联系人</span>
+                                    <span class="contact-name" data-i18n-text="_body_MerchantDefaultContact"></span>
                                 </th>
                             </tr>
                             <tr class="contacts-table-row primary-contact-row">
-                                <td class="contact-name-column">
-                                    电子邮件
+                                <td class="contact-name-column" data-i18n-text="_body_email">
+
                                 </td>
                                 <td class="contact-email-column">
                                     <span class="contact-email">5017140@qq.com</span>
@@ -1231,29 +1240,29 @@
                                     <div class="a-alert-inline a-alert-inline-info relative">
                                         <div class="a-alert-container">
                                             <i class="a-icon a-icon-alert"></i>
-                                            <div class="a-alert-content">
-                                                您的默认电子邮件地址配置为您的登录电子邮件地址。您可以在此处更新您的登录详细信息。
+                                            <div class="a-alert-content" data-i18n-text="_body_emailContent2">
+
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="contact-actions-column">
                                     <a class="a-link-normal" href="#">
-                                        <span class="a-declarative emailEdit ">
-                                            编辑
+                                        <span class="a-declarative emailEdit " data-i18n-text="_body_edit">
+
                                         </span>
                                     </a>
                                 </td>
                             </tr>
                             <tr class="contacts-table-row primary-contact-row">
-                                <td class="contact-name-column">
-                                    电话号码
+                                <td class="contact-name-column" data-i18n-text="_body_phone">
+
                                 </td>
                                 <td class="contact-email-column">
                                 </td>
                                 <td class="contact-actions-column">
                                     <span class="a-declarative" data-action="a-modal">
-                                        <a class="a-link-normal edit-contact-link" href="#">编辑</a>
+                                        <a class="a-link-normal edit-contact-link" href="#" data-i18n-text="_body_edit"></a>
                                     </span>
                                 </td>
                             </tr>
@@ -1263,6 +1272,9 @@
             </ul>
             </li>
         </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
 
 
 
@@ -1274,5 +1286,8 @@
 <script src="./js/public.js " type="text/javascript"></script>
 <script src="./js/doT.min.js" type="text/javascript"></script>
 <script src="./js/webjs/notifying_first_option.js"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
 
 </html>

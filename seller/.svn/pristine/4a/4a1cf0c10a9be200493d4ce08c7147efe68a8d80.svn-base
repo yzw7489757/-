@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta id="i18n_pagename" content="landing_settings_email">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/landing_settings_email.css">
+</head>
+
+<body>
+    <div class="ap_cnep_pagelet">
+        <div class="headerText">
+            <span data-i18n-text="_body_ChangeEmail"></span>
+        </div>
+        <div class="ap_cnep_subtitle" data-i18n-text="_body_ChangeEmailContent"></div>
+        <table id="ap_cnep_table" class="ap_form_table">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <div id="ap_cnep_section1_title" class="ap_section_title">
+                            <h2 data-i18n-text="_body_WhatIsNewEmail"></h2>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+                            <span class="ap_input_label " data-i18n-text="_body_OldEmailAddress"</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="ap_forminput emailAddress">
+                            5017140@qq.com
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form_alert" style="display:none;" data-i18n-text='_body_ProblemContent5'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form_alert" style="display:none;"data-i18n-text='_body_ProblemContent6'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+                            <span id="ap_cnep_email_new_label" class="ap_input_label">
+                                <label for="ap_email_new" data-i18n-text="_body_NewEmailAddress"></label>
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="ap_forminput">
+                            <input type="email" style="height: 16px" class="newEmailAddress">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form_alert" style="display:none;"data-i18n-text='_body_ProblemContent7'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+                            <span class="ap_input_label">
+                                <label for="ap_email_new_check"data-i18n-text='_body_ProblemContent8'></label>
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="ap_forminput">
+                            <input type="againEmail" style="height: 16px">
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form_alert" style="display:none;" data-i18n-text='_body_ProblemContent9'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+                            <span class="ap_input_label">
+                                <label for="ap_password" data-i18n-text="_body_Password"></label>
+                            </span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="ap_forminput">
+                            <input name="password" type="password" style="height: 16px" >
+                        </span>
+                    </td>
+                    <td>
+                        <span>
+                            <div class="ap_caps_warn ap_standard_caps_warn_table" style="visibility:hidden;">
+                                <b data-i18n-text='_body_ProblemContent10'></b>
+                                <font color="black">
+                                    <span data-i18n-text='_body_ProblemContent11_1'></span>
+                                    <br>
+                                    <span data-i18n-text='_body_ProblemContent11_2'></span>
+                                </font>
+                            </div>
+
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="ap_section_title">
+                            <h2 data-i18n-text="_body_TypeCharacters">  </h2>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+
+                            <div class="ap_input_label">
+                                <span data-i18n-text="_body_Image"></span>
+                                <div id="ap_captcha_refresh" class="right tiny">
+                                    <span class="hidden faded" style="display: none;" data-i18n-text="_body_SeeANewChallenge">
+                                        
+                                    </span>
+                                    <span>
+                                        <a href="javascript:;" style="display: inline;" data-i18n-text="_body_SeeANewChallenge" id="myText">
+                                          
+                                        </a>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="mpanel2">
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form_alert" data-i18n-text='_body_ProblemContent12'>
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="right">
+                            <div class="ap_input_label" >
+                                <span data-i18n-text="_body_TypeCharacters"></span>
+                                <div class="tiny right">
+                                    <a href="javascript:void(0)" data-i18n-text="_body_HavingTrouble"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="text" id="myInput">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <span class="in-amzn-btn btn-prim-med" id="cnep_1D_submit_button" unselectable="on">
+                            <span>
+                                <input id="myBtn" type="submit" data-i18n-value="_body_SaveChange" tabindex="4" class="submitBtn">
+                            </span>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/webjs/landing_settings_email.js"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/webjs/verify.js"></script>
+<script type="text/javascript">
+    $('#mpanel2').codeVerify({
+        type: 1,//普通验证码类型
+        width: '200px',//宽度
+        height: '50px',//高度
+        fontSize: '30px',//验证码字体大小
+        codeLength: 6,//验证码长度
+        btnId: 'myBtn',//提交验证码ID
+        inputId:'myInput',//验证码输入框ID
+        textId:'myText',//看不清，换一张ID
+        ready: function () {},
+        success: function () {
+            // 通过回调
+            console.log('111')
+        },
+        error: function () {
+            // 不通过回调
+        }
+    });
+</script>
+</html>

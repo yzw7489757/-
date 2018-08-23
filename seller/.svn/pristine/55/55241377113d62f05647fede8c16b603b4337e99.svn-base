@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta id="i18n_pagename" content="landing_settings_name">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/landing_settings_name.css">
+</head>
+
+<body>
+    <div class="ap_pagelet">
+        <div class="ap_pagelet_title">
+            <span class="ap_cnep_header" data-i18n-text="_body_ChangeYourName">  </span>
+        </div>
+        <div class="ap_cnep_subtitle" data-i18n-text="_body_ChangeYourNameContent"></div>
+        <div class="ap_form_wrapper">
+            <table class="ap_form_table">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <div class="ap_section_title">
+                                <h2 data-i18n-text="_body_WhatIsName"></h2>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div  class="form_alert" style="display:none;" data-i18n-text='_body_TypeNewName'>
+                               
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="align_right">
+                                <span  class="ap_input_label">
+                                    <label for="ap_customer_name" data-i18n-text="_body_NewName"></label>
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <span  class="ap_forminput">
+                                <input  type="text" tabindex="1" value="xubaohong" style="height: 16px" class="newName">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <span class="in-amzn-btn btn-prim-med" id="cnep_1D_submit_button" unselectable="on" >
+                                <span >
+                                    <input type="submit"  value="保存更改" tabindex="4" class="submitBtn" data-i18n-text="_body_SaveChange">
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/webjs/landing_settings_name.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+
+</html>

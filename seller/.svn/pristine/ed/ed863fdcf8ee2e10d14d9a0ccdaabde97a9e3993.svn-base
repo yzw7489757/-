@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta id="i18n_pagename" content="holiday_setting">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/holiday_setting.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div id="sc-content-container">
+        <div id="listingstatus-center" class="a-container">
+            <div class="a-section">
+                <table class="a-normal">
+                    <tbody>
+                        <tr>
+                            <td class="registration title" style="width: 87px">
+                                <h1 class="a-size-large a-color-state a-text-bold" data-i18n-text="_body_holiday_setting"></h1>
+                            </td>
+                            <td>
+                                <div id="learnmorehelplink" class="relative">
+                                    <span class="a-declarative pdleft ">
+                                        <a href="javascript:void(0)" class="moreMessage" data-i18n-text="_body_account_information">了解更多信息</a>
+                                        <i class="a-icon a-icon-popover"></i>
+                                        <div id="model">
+                                            <div class="popup">
+                                                <span>
+                                                    <em></em>
+                                                </span>
+                                                <i class="a-icon a-icon-close"></i>
+                                                <div class="a-popover-inner">
+                                                    <div class="a-popover-content" id="a-popover-content-1">
+                                                        <div class="a-row a-spacing-medium">
+                                                            <span class="tiny">
+                                                                <a href="javascript:openModalDialog('/gp/help/help-popup.html/?itemID=200135620', 550, 550, 'scrollbars=yes', null, 'yes')" data-i18n-text="_body_take_a_vacation">
+                                                                    
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="a-row a-spacing-medium" data-i18n-text="_body_please_note_that">
+                                                        </div>
+                                                        <div class="a-row" data-i18n-text="_body_news"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="a-section">
+                <form method="post" id="listingStatusPostForm">
+                    <table class="content_table a-normal registration-listingstatus-table">
+                        <tbody>
+                            <tr class="registration-listingstatus border ">
+                                <td class="a-text-left registration-listingstatus padding-left-small"></td>
+                                <td class="a-text-left registration-listingstatus padding-left-small " style="padding-bottom: .7rem;">
+                                    <p class="pdleft5 a-button-inner a-button submitBtn_big pdTop5 startCheck" data-i18n-text="_body_on_sale"></p>
+                                </td>
+                                <td class="a-text-left registration-listingstatus padding-left-small " style="padding-bottom: .7rem;">
+                                    <p class="active_style pdleft5 a-button-inner a-button submitBtn_big pdTop5 stopCheck" data-i18n-text="_body_halt_the_sales"></p>
+                                </td>
+                                <td class="a-text-left registration-listingstatus padding-left-small"></td>
+                            </tr>
+                            <!-- 3 -->
+                            <tr class="registration-listingstatus border " style="height: 42px;
+                            box-sizing: border-box;">
+                                <td class="width17 pdTop_Bot" >
+                                    <span class="a-text-bold">Amazon.com</span>
+                                </td>
+                                <td class="width8 pdTop_Bot">
+                                    <div class="a-radio">
+                                        <label>
+                                            <input type="radio" value="0" name="radio1" class="readyCheck">
+                                            <span data-i18n-text="_body_on_sale"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="width8 pdTop_Bot">
+                                    <div class="a-radio">
+                                        <label>
+                                            <input type="radio" checked value="1" name="radio1" class="tostopCheck">
+                                            <span  data-i18n-text="_body_halt_the_sales"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="width69">
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="a-normal">
+                        <tbody>
+                            <tr class="registration-listingstatus">
+                                <td class="a-span6 a-text-right overflow_hidden submitBtn pdleft5">
+                                    <p class="float_right a-button submitBtn_big" style="
+                                    text-align: center;
+                                    padding: 5px 10px 5px 11px;
+                                "  data-i18n-text="_body_cancel"></p>
+                                </td>
+                                <td class="submitBtn pdleft5">
+                                    <p class="float_left a-button-primary submitBtn_big" style="
+                                    text-align: center;
+                                    padding: 5px 10px 5px 11px;
+                                "  data-i18n-text="_body_save"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="./js/webjs/prompt.js"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script src="./js/webjs/holiday_setting.js"></script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta id="i18n_pagename" content="company_address">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/company_address.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-row a-padding-large">
+        <div class="a-row">
+            <div class="width48 a-column ">
+                <div class="a-row overflow_hidden a-spacing-micro">
+                    <div class="width65 float_left">
+                        <h2 data-i18n-text="_body_company_address"></h2>
+                    </div>
+                    <div class="width30 a-spacing-top-micro align_right float_right">
+                        <a href="./account_information.html" data-i18n-text="_body_account_information"></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="a-row a-spacing-base none successInfo">
+                    <div class="a-row">
+                        <div class="a-row">
+                            <div class="a-box a-alert a-alert-success">
+                                <div class="a-box-inner_radio relative a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content inline_block">
+                                        <span data-i18n-text="_body_success"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-row a-section a-spacing-top-small">
+                    <div class="a-row">
+                        <form class="a-spacing-base">
+                            <div class="a-spacing-medium">
+                                <div class="a-row a-box first_child bgcolor">
+                                    <div class="a-box-inner_td">
+                                        <div class="a-row ">
+                                            <span class="naBillingAddressLabel" data-i18n-text="_body_current_enterprise_address">当前企业地址</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-row  a-box last_chilid">
+                                    <div class="a-box-inner_td">
+                                        <div class="a-spacing-base">
+                                            <div class="a-row">
+                                                <span class="address">gongshu qu wanda shagnye zhongxin D zuo 718</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span class="city">hangzhou shi</span>&nbsp;
+                                                <span class="province">zhejiang sheng</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span class="country">中国</span>&nbsp;
+                                                <span class="zipcode">310013</span>
+                                            </div>
+                                            <div class="a-row">
+                                                <span class="phone">+8613968018091</span>
+                                            </div>
+                                        </div>
+                                        <div class="a-row">
+                                            <a href="./company_address_choose.html">
+                                                <span data-i18n-text="_body_select_address">
+                                                    
+                                                </span>
+                                            </a>
+                                            <i class="a-icon a-icon-text-separator"></i>
+                                            <a href="./company_address_add.html">
+                                                <span data-i18n-text="_body_add_new_address"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="./js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+<script src="./js/webjs/company_address.js" type="text/javascript"></script>
+
+</html>

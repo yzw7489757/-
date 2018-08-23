@@ -1,0 +1,19 @@
+_head_title=正式注册地址
+_body_official_registration_address=正式注册地址
+_body_know_more=了解更多信息
+_body_add_new_address=添加新地址
+_body_select_existing_address=选择现有地址
+_body_country_region=国家/地区
+_body_choose_country_region=选择国家/地区
+_body_address=地址：
+_body_address_line=地址行 2：
+_body_region_city=市/镇
+_body_province_region_state=省/地区/州：
+_body_zip_code=邮编：
+_body_SaveChange=保存
+_body_cancel=取消
+_body_edit=编辑
+_body_back=返回'账户信息'
+_body_success=信息已更新成功
+_body_errinfo=表格有以红色突出显示的空字段
+
