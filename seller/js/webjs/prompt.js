@@ -16,7 +16,7 @@ function addwarn(target, type, text) {
                             <div  class="a-box a-alert-inline a-alert-inline-${imgtype}" >
                                 <div class="a-box-inner a-alert-container warnInfo">
                                     <i class="a-icon a-icon-alert"></i>
-                                    <div class="a-alert-content">
+                                    <div class="a-alert-content" data-i18n-text="">
                                         ${text}
                                     </div>
                                 </div>

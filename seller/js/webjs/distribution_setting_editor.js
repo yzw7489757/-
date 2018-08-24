@@ -137,37 +137,5 @@ $(function () {
             })
         })
     }
-    $.ajax({
-        url: baseUrl + '/GetAddressList',
-        method: 'post',
-        dataType: "json",
-        data: {
-            userid: amazon_userid,
-            sign: '1'
-        },
-        success: function (res) {
-            console.log(res)
-            if (res.result == 1) {
-                address_data = res.List
-                for (let i = 0; i < address_data.length; i++) {
-                    address_data[i].status = false;
-                    if (address_data[i].address_id == sessionStorage.getItem('address_id')) {
-                        address_data[i].status = true;
-                    }
-                }
-                new Promise((resolve, reject) => {
-                    var add = doT.template($('#addArray').text());
-                    $('#addTmpl ').html(add(address_data));
-                    resolve();
-                }).then(() => {
-                    add();
-                })
-            } else {
-                console.log(decodeURIComponent(res.error))
-            }
-        },
-        error: function (res) {
-            console.log(decodeURIComponent(res.error))
-        }
-    })
+    
 })

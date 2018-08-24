@@ -33,6 +33,7 @@ $(function () {
                     if(item.status){
                         addressId = res.registered_address_Id
                     }
+        
                 });
                 var data = res.List
                 var add = doT.template($('#addArray').text());

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-         <meta id="i18n_pagename" content="distribution_setting">
+    <meta id="i18n_pagename" content="distribution_setting">
     <title>Document</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -21,39 +21,35 @@
     <div class="content-area">
         <div class="a-row">
             <span class="header-orange" data-i18n-text='_body_ShippingSettings'>
-      
+
             </span>
         </div>
         <div class="content-module">
             <div class=" titlebar box-sizing">
-                <div class="float_left">
+                <div class="float_left pd7_14_6">
                     <span data-i18n-text='_body_DefaultShippingAddress'></span>
                 </div>
-                <div class="float_right">
-                    <span class="marTop4 awesomeButton buttonSmall secondarySmallButton inner_button">
-                        <span class="button_label float_left">
-                            <a href="./distribution_setting_editor.html" class="click_a" data-i18n-text='_body_Edit'>
-                              
-                            </a>
-                        </span>
+                <div class="float_right pd7_14_6">
+                    <span class="inner_button span_button">
+                        <span class="block a-button-text">编辑</span>
                     </span>
                 </div>
                 <div class="clear "></div>
             </div>
             <div class="data-entry">
-                <div class="float_left label box-sizing" data-i18n-text='_body_AddressName'>
-                   
+                <div class="float_left label box-sizing width34" data-i18n-text='_body_AddressName'>
+
                 </div>
-                <div class="float_right field box-sizing">
+                <div class="float_right field box-sizing width_right">
                     <span class="name"></span>
                 </div>
                 <div class="clear "></div>
             </div>
-            <div class="data-entry">
-                <div class="float_left label box-sizing" data-i18n-text='_body_FullAddress'>
-                   
+            <div class="data-entry data_entry_bg">
+                <div class="float_left label box-sizing width34" data-i18n-text='_body_FullAddress'>
+
                 </div>
-                <div class="float_right field box-sizing">
+                <div class="float_right field box-sizing width_right">
                     <span class="country"></span>
                     <span class="city"></span>
                     <span class="address"></span>
@@ -67,25 +63,34 @@
                 </div>
                 <div class="clear "></div>
             </div>
+            <div class="data-entry">
+                <div class="float_left label box-sizing width34">
+                    时区
+                </div>
+                <div class="float_right field box-sizing width_right">
+                    <span class="name"></span>
+                </div>
+                <div class="clear "></div>
+            </div>
         </div>
 
         <div class="content-module">
             <!-- 默认运费 -->
-            <div class=" titlebar box-sizing">
+            <div class=" titlebar box-sizing pd7_14_6">
                 <div class="float_left">
                     <span data-i18n-text='_body_DefaultShipping'></span>
                 </div>
                 <div class="float_right">
-                    <span class="marTop4 awesomeButton buttonSmall secondarySmallButton inner_button">
-                        <span class="button_label float_left"data-i18n-text='_body_Edit'></span>
+                    <span class="inner_button span_button">
+                        <span class="block a-button-text">编辑</span>
                     </span>
                 </div>
                 <div class="clear "></div>
             </div>
             <!-- 标准 -->
-            <div class="data-entry">
+            <div class="data-entry data_entry_bg">
                 <div class="float_left label box-sizing" data-i18n-text='_body_Standard'>
-                    
+
                 </div>
                 <div class="float_right field box-sizing">
                     <strong data-i18n-text='_body_Normal'></strong>
@@ -99,7 +104,7 @@
             <!-- 快速配送 -->
             <div class="data-entry">
                 <div class="float_left label box-sizing" data-i18n-text='_body_Expedited'>
-                   
+
                 </div>
                 <div class="float_right field box-sizing">
                     <strong data-i18n-text='_body_No'></strong>
@@ -110,7 +115,7 @@
                 <div class="clear "></div>
             </div>
             <!-- 两日送达 -->
-            <div class="data-entry">
+            <div class="data-entry data_entry_bg">
                 <div class="float_left label box-sizing">
                     <span data-i18n-text='_body_TwoDay'></span>
                     <span>
@@ -119,7 +124,7 @@
                     <br>
                     <span style="font-weight:  normal;" data-i18n-text='_body_TwoDayTip'></span>
                 </div>
-                <div class="float_right field box-sizing pdBottom22">
+                <div class="float_right field box-sizing pdBottom22" style="height: 49px;">
                     <strong data-i18n-text='_body_No' data-i18n-text='_body_No'></strong>
                     <span>
                         <a href="" data-i18n-text='_body_ViewRateTable'></a>
@@ -144,9 +149,9 @@
                 <div class="clear "></div>
             </div>
             <!-- 国际配送 -->
-            <div class="data-entry">
+            <div class="data-entry data_entry_bg">
                 <div class="float_left label box-sizing" data-i18n-text='_body_International'>
-                  
+
                 </div>
                 <div class="float_right field box-sizing">
                     <strong data-i18n-text='_body_No'></strong>
@@ -159,7 +164,7 @@
             <!-- 国际加急 -->
             <div class="data-entry">
                 <div class="float_left label box-sizing" data-i18n-text='_body_InternationalExpedited'>
-                
+
                 </div>
                 <div class="float_right field box-sizing">
                     <strong data-i18n-text='_body_No'></strong>
@@ -171,12 +176,546 @@
             </div>
         </div>
     </div>
+
     <div class="a-container-footer">
+    </div>
+    <div class="popup">
+        <div class="model-wrapper">
+            <div class="modal-popover-under-layer"></div>
+            <div class="a-popover-modal modal-content-big">
+                <div class="a-popover-header">
+                    <h4 class="a-popover-header-content">编辑默认配送地址</h4>
+                </div>
+                <div class="a-popover-inner">
+                    <table class="a-normal">
+                        <tr>
+                            <td class="a-span8">
+                                <div class="normal-font shipping_address_content">
+                                    <div class="alertBox"></div>
+                                    <div class="a-form-label margin-bottom">
+                                        <span>选择地址</span>
+                                    </div>
+                                    <hr class="a-divider-normal">
+                                    <div class="addressList-size" id="addressList">
+                                        <div id="addTmpl">
+                                        </div>
+                                        <script id="addArray" type="text/x-dot-template">
+                                            {{~it:value:index}}
+
+                                            <div class="add pd_margin_5" data-id="{{= value.method_id}}">
+                                                <div class="itemRadio">
+                                                    {{? value.status == true}}
+                                                    <input type="radio" class="radioBtn" checked> {{??}}
+                                                    <input type="radio" class="radioBtn"> {{?}}
+
+                                                </div>
+                                                <label class="itemAddress ">
+                                                    <span class="a-form-label">
+                                                        {{= decodeURIComponent(value.name)}}
+
+                                                    </span>
+                                                    <span>{{= decodeURIComponent(value.name)}}, {{= decodeURIComponent(value.city)}},{{=
+                                                        decodeURIComponent(value.province)}}, {{= decodeURIComponent(value.zipcode)}},
+                                                        {{= decodeURIComponent(value.country)}}</span>
+                                                    <div class="actionButton">
+                                                        <a class="editShipFromAddress">
+                                                            编辑
+                                                        </a>
+                                                        {{? value.status == true}}
+                                                        <a href="javascript:void(0)" class="selectColor">删除</a>
+                                                        {{??}}
+                                                        <a>删除</a>
+                                                        {{?}}
+                                                    </div>
+                                                </label>
+
+                                            </div>
+
+                                            {{~}}
+                                        </script>
+                                    </div>
+                                    <div>
+                                        <a class="add_new_address">+ 添加新地址</a>
+                                    </div>
+                                    <div class="a-form-label relative">
+                                        <div class="timeZoneTitle">
+                                            <span>选择正确的时区作为您的默认配送地址</span>
+                                        </div>
+                                        <hr class="a-divider-normal">
+                                        <div class="a-dropdown-container ">
+                                            <div id="choose_time" class="bank-account-dropdown a-button a-button-dropdown relative">
+                                                <p class="pstyle">(UTC-7:00) 美国/太平洋</p>
+                                            </div>
+                                            <div class="a-box time none">
+                                                <ul class="a-box  overflow_y">
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_0" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Midway&quot;}" id="timeZoneDropdown_0"
+                                                            class="a-dropdown-link">(UTC-11:00) 太平洋/中途岛</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_1" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Pago_Pago&quot;}" id="timeZoneDropdown_1"
+                                                            class="a-dropdown-link">(UTC-11:00) 太平洋/帕果 - 帕果</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_2" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Honolulu&quot;}" id="timeZoneDropdown_2"
+                                                            class="a-dropdown-link">(UTC-10:00) 太平洋/檀香山</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_3" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Hawaii&quot;}" id="timeZoneDropdown_3"
+                                                            class="a-dropdown-link">(UTC-10:00) 美国/夏威夷</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_4" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Adak&quot;}" id="timeZoneDropdown_4"
+                                                            class="a-dropdown-link">(UTC-9:00) 美洲/艾德克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_5" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Anchorage&quot;}" id="timeZoneDropdown_5"
+                                                            class="a-dropdown-link">(UTC-8:00) 美洲/安克雷奇</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_6" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Alaska&quot;}" id="timeZoneDropdown_6"
+                                                            class="a-dropdown-link">(UTC-8:00) 美国/阿拉斯加</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_7" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Los_Angeles&quot;}" id="timeZoneDropdown_7"
+                                                            class="a-dropdown-link">(UTC-7:00) 美洲/洛杉矶</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_8" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Phoenix&quot;}" id="timeZoneDropdown_8"
+                                                            class="a-dropdown-link">(UTC-7:00) 美洲/菲尼克斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_9" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Tijuana&quot;}" id="timeZoneDropdown_9"
+                                                            class="a-dropdown-link">(UTC-7:00) 美洲/提华纳</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-checked="true" aria-labelledby="timeZoneDropdown_10" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Pacific&quot;}" id="timeZoneDropdown_10"
+                                                            class="a-dropdown-link a-active">(UTC-7:00) 加拿大/太平洋</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_11" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Arizona&quot;}" id="timeZoneDropdown_11"
+                                                            class="a-dropdown-link">(UTC-7:00) 美国/亚利桑那</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_12" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Pacific&quot;}" id="timeZoneDropdown_12"
+                                                            class="a-dropdown-link">(UTC-7:00) 美国/太平洋</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_13" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Boise&quot;}" id="timeZoneDropdown_13"
+                                                            class="a-dropdown-link">(UTC-6:00) 美洲/博伊西</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_14" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Chihuahua&quot;}" id="timeZoneDropdown_14"
+                                                            class="a-dropdown-link">(UTC-6:00) 美洲/奇瓦瓦</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_15" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Denver&quot;}" id="timeZoneDropdown_15"
+                                                            class="a-dropdown-link">(UTC-6:00) 美洲/丹佛</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_16" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Guatemala&quot;}" id="timeZoneDropdown_16"
+                                                            class="a-dropdown-link">(UTC-6:00) 美洲/危地马拉</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_17" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Mountain&quot;}" id="timeZoneDropdown_17"
+                                                            class="a-dropdown-link">(UTC-6:00) 加拿大/山区</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_18" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Saskatchewan&quot;}" id="timeZoneDropdown_18"
+                                                            class="a-dropdown-link">(UTC-6:00) 加拿大/萨斯喀彻温</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_19" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Mountain&quot;}" id="timeZoneDropdown_19"
+                                                            class="a-dropdown-link">(UTC-6:00) 美国/山脉</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_20" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Bogota&quot;}" id="timeZoneDropdown_20"
+                                                            class="a-dropdown-link">(UTC-5:00) 美洲/波哥大</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_21" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Chicago&quot;}" id="timeZoneDropdown_21"
+                                                            class="a-dropdown-link">(UTC-5:00) 美洲/芝加哥</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_22" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Mexico_City&quot;}" id="timeZoneDropdown_22"
+                                                            class="a-dropdown-link">(UTC-5:00) 美洲/墨西哥城</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_23" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Central&quot;}" id="timeZoneDropdown_23"
+                                                            class="a-dropdown-link">(UTC-5:00) 加拿大/中部</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_24" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Central&quot;}" id="timeZoneDropdown_24"
+                                                            class="a-dropdown-link">(UTC-5:00) 美国/中部</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_25" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Caracas&quot;}" id="timeZoneDropdown_25"
+                                                            class="a-dropdown-link">(UTC-4:00) 美洲/加拉加斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_26" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Manaus&quot;}" id="timeZoneDropdown_26"
+                                                            class="a-dropdown-link">(UTC-4:00) 美洲/玛瑙斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_27" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/New_York&quot;}" id="timeZoneDropdown_27"
+                                                            class="a-dropdown-link">(UTC-4:00) 美洲/纽约</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_28" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/St_Thomas&quot;}" id="timeZoneDropdown_28"
+                                                            class="a-dropdown-link">(UTC-4:00) 美洲/圣托马斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_29" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Eastern&quot;}" id="timeZoneDropdown_29"
+                                                            class="a-dropdown-link">(UTC-4:00) 加拿大/东部</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_30" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/East-Indiana&quot;}" id="timeZoneDropdown_30"
+                                                            class="a-dropdown-link">(UTC-4:00) 美国/东印第安娜</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_31" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;US/Eastern&quot;}" id="timeZoneDropdown_31"
+                                                            class="a-dropdown-link">(UTC-4:00) 美国/东部</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_32" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Buenos_Aires&quot;}" id="timeZoneDropdown_32"
+                                                            class="a-dropdown-link">(UTC-3:00) 美洲/布宜诺斯艾利斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_33" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Montevideo&quot;}" id="timeZoneDropdown_33"
+                                                            class="a-dropdown-link">(UTC-3:00) 美洲/蒙得维的亚</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_34" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Santiago&quot;}" id="timeZoneDropdown_34"
+                                                            class="a-dropdown-link">(UTC-3:00) 美洲/圣地亚哥</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_35" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Brazil/East&quot;}" id="timeZoneDropdown_35"
+                                                            class="a-dropdown-link">(UTC-3:00) 巴西/东部</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_36" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Atlantic&quot;}" id="timeZoneDropdown_36"
+                                                            class="a-dropdown-link">(UTC-3:00) 加拿大/大西洋</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_37" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Canada/Newfoundland&quot;}" id="timeZoneDropdown_37"
+                                                            class="a-dropdown-link">(UTC-2:30) 加拿大/纽芬兰</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_38" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;America/Godthab&quot;}" id="timeZoneDropdown_38"
+                                                            class="a-dropdown-link">(UTC-2:00) 美洲/努克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_39" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Atlantic/South_Georgia&quot;}" id="timeZoneDropdown_39"
+                                                            class="a-dropdown-link">(UTC-2:00) 大西洋/南乔治亚岛</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_40" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Atlantic/Cape_Verde&quot;}" id="timeZoneDropdown_40"
+                                                            class="a-dropdown-link">(UTC-1:00) 大西洋/佛得角</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_41" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Atlantic/Azores&quot;}" id="timeZoneDropdown_41"
+                                                            class="a-dropdown-link">(UTC+0:00) 大西洋/亚速尔群岛</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_42" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Algiers&quot;}" id="timeZoneDropdown_42"
+                                                            class="a-dropdown-link">(UTC+1:00) 非洲/阿尔及尔</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_43" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Casablanca&quot;}" id="timeZoneDropdown_43"
+                                                            class="a-dropdown-link">(UTC+1:00) 非洲/卡萨布兰卡</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_44" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/London&quot;}" id="timeZoneDropdown_44"
+                                                            class="a-dropdown-link">(UTC+1:00) 欧洲/伦敦</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_45" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Cairo&quot;}" id="timeZoneDropdown_45"
+                                                            class="a-dropdown-link">(UTC+2:00) 非洲/开罗</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_46" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Harare&quot;}" id="timeZoneDropdown_46"
+                                                            class="a-dropdown-link">(UTC+2:00) 非洲/哈拉雷</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_47" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Windhoek&quot;}" id="timeZoneDropdown_47"
+                                                            class="a-dropdown-link">(UTC+2:00) 非洲/温特和克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_48" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Belgrade&quot;}" id="timeZoneDropdown_48"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/贝尔格莱德</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_49" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Berlin&quot;}" id="timeZoneDropdown_49"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/柏林</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_50" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Brussels&quot;}" id="timeZoneDropdown_50"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/布鲁塞尔</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_51" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Madrid&quot;}" id="timeZoneDropdown_51"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/马德里</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_52" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Paris&quot;}" id="timeZoneDropdown_52"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/巴黎</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_53" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Rome&quot;}" id="timeZoneDropdown_53"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/罗马</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_54" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Warsaw&quot;}" id="timeZoneDropdown_54"
+                                                            class="a-dropdown-link">(UTC+2:00) 欧洲/华沙</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_55" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Africa/Nairobi&quot;}" id="timeZoneDropdown_55"
+                                                            class="a-dropdown-link">(UTC+3:00) 非洲/内罗比</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_56" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Amman&quot;}" id="timeZoneDropdown_56"
+                                                            class="a-dropdown-link">(UTC+3:00) 亚洲/安曼</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_57" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Baghdad&quot;}" id="timeZoneDropdown_57"
+                                                            class="a-dropdown-link">(UTC+3:00) 亚洲/巴格达</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_58" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Beirut&quot;}" id="timeZoneDropdown_58"
+                                                            class="a-dropdown-link">(UTC+3:00) 亚洲/贝鲁特</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_59" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Jerusalem&quot;}" id="timeZoneDropdown_59"
+                                                            class="a-dropdown-link">(UTC+3:00) 亚洲/耶路撒冷</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_60" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Kuwait&quot;}" id="timeZoneDropdown_60"
+                                                            class="a-dropdown-link">(UTC+3:00) 亚洲/科威特</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_61" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Athens&quot;}" id="timeZoneDropdown_61"
+                                                            class="a-dropdown-link">(UTC+3:00) 欧洲/雅典</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_62" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Helsinki&quot;}" id="timeZoneDropdown_62"
+                                                            class="a-dropdown-link">(UTC+3:00) 欧洲/赫尔辛基</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_63" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Minsk&quot;}" id="timeZoneDropdown_63"
+                                                            class="a-dropdown-link">(UTC+3:00) 欧洲/明斯克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_64" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Moscow&quot;}" id="timeZoneDropdown_64"
+                                                            class="a-dropdown-link">(UTC+3:00) 欧洲/莫斯科</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_65" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Europe/Istanbul&quot;}" id="timeZoneDropdown_65"
+                                                            class="a-dropdown-link">(UTC+3:00) 欧洲/伊斯坦布尔</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_66" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Turkey&quot;}" id="timeZoneDropdown_66"
+                                                            class="a-dropdown-link">(UTC+3:00) 土耳其</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_67" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Baku&quot;}" id="timeZoneDropdown_67"
+                                                            class="a-dropdown-link">(UTC+4:00) 亚洲/巴库</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_68" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Muscat&quot;}" id="timeZoneDropdown_68"
+                                                            class="a-dropdown-link">(UTC+4:00) 亚洲/马斯喀特</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_69" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Tbilisi&quot;}" id="timeZoneDropdown_69"
+                                                            class="a-dropdown-link">(UTC+4:00) 亚洲/第比利斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_70" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Yerevan&quot;}" id="timeZoneDropdown_70"
+                                                            class="a-dropdown-link">(UTC+4:00) 亚洲/耶烈万</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_71" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Kabul&quot;}" id="timeZoneDropdown_71"
+                                                            class="a-dropdown-link">(UTC+4:30) 亚洲/喀布尔</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_72" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Tehran&quot;}" id="timeZoneDropdown_72"
+                                                            class="a-dropdown-link">(UTC+4:30) 亚洲/德黑兰</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_73" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Karachi&quot;}" id="timeZoneDropdown_73"
+                                                            class="a-dropdown-link">(UTC+5:00) 亚洲/卡拉奇</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_74" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Yekaterinburg&quot;}" id="timeZoneDropdown_74"
+                                                            class="a-dropdown-link">(UTC+5:00) 亚洲/叶卡捷琳堡</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_75" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Calcutta&quot;}" id="timeZoneDropdown_75"
+                                                            class="a-dropdown-link">(UTC+5:30) 亚洲/加尔各答</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_76" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Colombo&quot;}" id="timeZoneDropdown_76"
+                                                            class="a-dropdown-link">(UTC+5:30) 亚洲/科伦坡</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_77" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Kolkata&quot;}" id="timeZoneDropdown_77"
+                                                            class="a-dropdown-link">(UTC+5:30) 亚洲/加尔各答</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_78" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Katmandu&quot;}" id="timeZoneDropdown_78"
+                                                            class="a-dropdown-link">(UTC+5:45) 亚洲/加德满都</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_79" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Dhaka&quot;}" id="timeZoneDropdown_79"
+                                                            class="a-dropdown-link">(UTC+6:00) 亚洲/达卡</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_80" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Rangoon&quot;}" id="timeZoneDropdown_80"
+                                                            class="a-dropdown-link">(UTC+6:30) 亚洲/仰光</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_81" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Bangkok&quot;}" id="timeZoneDropdown_81"
+                                                            class="a-dropdown-link">(UTC+7:00) 亚洲/曼谷</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_82" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Krasnoyarsk&quot;}" id="timeZoneDropdown_82"
+                                                            class="a-dropdown-link">(UTC+7:00) 亚洲/克拉斯诺亚尔斯克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_83" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Novosibirsk&quot;}" id="timeZoneDropdown_83"
+                                                            class="a-dropdown-link">(UTC+7:00) 亚洲/新西伯利亚</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_84" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Irkutsk&quot;}" id="timeZoneDropdown_84"
+                                                            class="a-dropdown-link">(UTC+8:00) 亚洲/伊尔库茨克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_85" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Kuala_Lumpur&quot;}" id="timeZoneDropdown_85"
+                                                            class="a-dropdown-link">(UTC+8:00) 亚洲/吉隆坡</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_86" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Shanghai&quot;}" id="timeZoneDropdown_86"
+                                                            class="a-dropdown-link">(UTC+8:00) 亚洲/上海</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_87" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Taipei&quot;}" id="timeZoneDropdown_87"
+                                                            class="a-dropdown-link">(UTC+8:00) 亚洲/台北</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_88" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Perth&quot;}" id="timeZoneDropdown_88"
+                                                            class="a-dropdown-link">(UTC+8:00) 澳大利亚/珀斯</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_89" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Seoul&quot;}" id="timeZoneDropdown_89"
+                                                            class="a-dropdown-link">(UTC+9:00) 亚洲/首尔</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_90" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Tokyo&quot;}" id="timeZoneDropdown_90"
+                                                            class="a-dropdown-link">(UTC+9:00) 亚洲/东京</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_91" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Yakutsk&quot;}" id="timeZoneDropdown_91"
+                                                            class="a-dropdown-link">(UTC+9:00) 亚洲/雅库茨克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_92" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Palau&quot;}" id="timeZoneDropdown_92"
+                                                            class="a-dropdown-link">(UTC+9:00) 太平洋/帕劳</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_93" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Adelaide&quot;}" id="timeZoneDropdown_93"
+                                                            class="a-dropdown-link">(UTC+9:30) 澳大利亚/阿德莱德</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_94" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Darwin&quot;}" id="timeZoneDropdown_94"
+                                                            class="a-dropdown-link">(UTC+9:30) 澳大利亚/达尔文</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_95" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Vladivostok&quot;}" id="timeZoneDropdown_95"
+                                                            class="a-dropdown-link">(UTC+10:00) 亚洲/符拉迪沃斯托克</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_96" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Brisbane&quot;}" id="timeZoneDropdown_96"
+                                                            class="a-dropdown-link">(UTC+10:00) 澳大利亚/布里斯班</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_97" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Hobart&quot;}" id="timeZoneDropdown_97"
+                                                            class="a-dropdown-link">(UTC+10:00) 澳大利亚/霍巴特</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_98" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Melbourne&quot;}" id="timeZoneDropdown_98"
+                                                            class="a-dropdown-link">(UTC+10:00) 澳大利亚/墨尔本</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_99" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Australia/Sydney&quot;}" id="timeZoneDropdown_99"
+                                                            class="a-dropdown-link">(UTC+10:00) 澳大利亚/悉尼</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_100" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Guam&quot;}" id="timeZoneDropdown_100"
+                                                            class="a-dropdown-link">(UTC+10:00) 太平洋/关岛</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_101" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Saipan&quot;}" id="timeZoneDropdown_101"
+                                                            class="a-dropdown-link">(UTC+10:00) 太平洋/塞班</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_102" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Asia/Magadan&quot;}" id="timeZoneDropdown_102"
+                                                            class="a-dropdown-link">(UTC+11:00) 亚洲/马加丹</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_103" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Kosrae&quot;}" id="timeZoneDropdown_103"
+                                                            class="a-dropdown-link">(UTC+11:00) 太平洋/科斯瑞</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_104" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Auckland&quot;}" id="timeZoneDropdown_104"
+                                                            class="a-dropdown-link">(UTC+12:00) 太平洋/奥克兰</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_105" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Fiji&quot;}" id="timeZoneDropdown_105"
+                                                            class="a-dropdown-link">(UTC+12:00) 太平洋/斐济</a>
+                                                    </li>
+                                                    <li tabindex="0" role="option" aria-labelledby="timeZoneDropdown_106" class="a-dropdown-item">
+                                                        <a tabindex="-1" href="javascript:void(0)" data-value="{&quot;stringVal&quot;:&quot;Pacific/Tongatapu&quot;}" id="timeZoneDropdown_106"
+                                                            class="a-dropdown-link">(UTC+13:00) 太平洋/汤加塔布岛</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                            </td>
+                            <td class="a-span4">
+                                <div class="shipping_address_illustrate">
+                                    <div class="a-form-label">
+                                        <span>什么是默认配送地址？</span>
+                                    </div>
+                                    <div class="normal-font">
+                                        <span>
+                                            默认配送地址是用于配送订单的主要实际地址、电子邮件地址和电话号码。 此信息保存在您的帐户中，当您在“购买配送”首选项和“配送设置”页面中选择地址时会自动显示。
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="a-popover-footer ">
+                        <div>
+
+                            <span class=" a-button-inner  a-button">
+                                <span class="a-button-text border_box block btnstyle">取消</span>
+                            </span>
+                            <span class=" a-button-inner  a-button a-button-primary">
+                                <span class="a-button-text border_box block btnstyle saveBtn">保存</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
 <script src="./js/webjs/prompt.js" type="text/javascript"></script>
 <script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
 <script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="./js/webjs/distribution_setting.js" type="text/javascript"></script>
 <script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
