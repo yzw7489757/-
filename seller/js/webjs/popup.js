@@ -29,9 +29,16 @@ var method = {
             `
         )
         var _layerBg = $(".msg-layer-bg"),
-        _layer = $(".msg-layer"),
-        _close = $(".layer-close"),
-        _cansel = $(".layer-cancel"),
-        _commit = $(".layer-commit");
+            _layer = $(".msg-layer"),
+            _close = $(".layer-close"),
+            _cansel = $(".layer-cancel"),
+            _commit = $(".layer-commit");
+        var winH = $(window).height();
+            winW = $(window).width();
+        if (obj.title) {
+            _layer.find("h4").html(obj.title);
+        } else {
+            _layer.find("h4").parents('.a-popover-header').hide()
+        }
     }
 }
