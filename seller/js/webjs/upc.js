@@ -1,0 +1,36 @@
+$(function () {
+    inputctr.public.checkLogin();
+    LoadUPC();
+
+    $(".js-buy").click(function () {
+        var num = $("#upc_num").val().trim();
+        if (num != Number(num))
+            return;
+        if (confirm("确定购买吗？")) {
+            inputctr.public.AjaxMethods('GET', baseUrl + '/BuyUPC', { sellerID: amazon_userid, num: num }, function (data) {
+                if (data.result == 1) {
+                    LoadUPC();
+                } else {
+                    alert(data.error);
+                }
+            }, function (error) {
+            });
+        }
+    });
+});
+function LoadUPC() {
+    inputctr.public.AjaxMethods('GET', baseUrl + '/GetUserUPC', { sellerID: amazon_userid }, function (data) {
+        if (data.result == 1) {
+            var html = '';
+            for (var i = 0; i < data.data.length; i++) {
+                var upc = data.data[i].upc;
+                var isuse = data.data[i].is_use;
+                var bg = (isuse == 1) ? "background-color:#d55d5d;color:#ffffff;" : "background-color:#ffffff;color:#333;";
+                html += '<div style="float: left; margin: 5px 10px 5px 0px; padding: 5px 10px; border: 1px solid #d5d55d;' + bg + '">' + upc + '</div>';
+            }
+            html += '<div style="clear:both;"></div>';
+            $("#upc_list").html(html);
+        }
+    }, function (error) {
+    });
+}

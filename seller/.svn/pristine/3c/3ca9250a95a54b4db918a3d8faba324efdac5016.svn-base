@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_setting_byweight.css">
+</head>
+
+
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+
+
+
+
+
+    
+    <div class="content-area">
+     <div class="a-row">
+        <span class="header-orange" >选择好配送区域范围和配送服务</span>
+    </div>
+
+    <!-- 表格-->
+
+    <table>
+        <tbody>
+            <tr>
+                <th>
+                </th>
+
+                <th>
+                    普通配送
+                </th>
+
+                <th>
+                 快递配送
+
+             </th>
+
+             <th>
+                隔日达
+            </th>
+            
+            <th>
+                次日达
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-bold">
+                    美国大陆 街道
+                </span>
+            </td>
+            <td><input type="checkbox">17-28工作日</td>
+            <td><input type="checkbox">1-3工作日</td>
+            <td><input type="checkbox">2工作日</td>
+            <td><input type="checkbox">24小时</td>
+        </tr>
+        <tr>
+           <td>
+            <span class="text-bold">
+                美国大陆 邮政信箱
+            </span>
+        </td>
+        <td><input type="checkbox">17-28工作日</td>
+        <td><input type="checkbox">1-3工作日</td>
+        <td></td>
+        <td></td>
+    </tr>
+      <tr>
+           <td>
+            <span class="text-bold">
+                阿拉斯加和夏威夷 街道
+            </span>
+        </td>
+        <td><input type="checkbox">17-28工作日</td>
+        <td><input type="checkbox">1-3工作日</td>
+        <td></td>
+        <td></td>
+    </tr>
+      <tr>
+           <td>
+            <span class="text-bold">
+                阿拉斯加和夏威夷 邮政信箱
+            </span>
+        </td>
+        <td><input type="checkbox">17-28工作日</td>
+        <td><input type="checkbox">1-3工作日</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+       <td>
+        <span class="text-bold">
+            欧洲
+        </span>
+    </td>
+    <td><input type="checkbox">17-28工作日</td>
+    <td><input type="checkbox">1-3工作日</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+   <td>
+    <span class="text-bold">
+        亚洲
+    </span>
+</td>
+<td><input type="checkbox">17-28工作日</td>
+<td><input type="checkbox">1-3工作日</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="a-row a-spacing-top-medium a-text-center">
+             <a href=".\distribution_setting.html">
+                    <span class="a-button-inner block a-button ">
+                        <span class="a-button-text border_box block">
+                            取消
+                        </span>
+                    </span>
+            </a>
+            <a href=".\distribution_setting_byweight_freight_setup.html">
+                <span class=" a-button-inner block a-button a-button-primary">
+                    <span class="a-button-text border_box block">
+                       确定
+                    </span>
+                </span>
+            </a>
+            
+            </div>
+</div>
+
+
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="./js/webjs/distribution_setting.js" type="text/javascript"></script>
+
+
+</html>

@@ -75,6 +75,16 @@ $(function () {
             console.log(decodeURIComponent(res.error))
         }
     })
+
+    // 编辑
+    $('.editBtn_first').click(function () { 
+        $('.popup').show()
+     })
+
+     // 取消
+     $('.layer-cancel').click(function () { 
+        $('.popup').hide()
+      })
     $('.saveBtn').click(function () { 
         // 点击删除
         $.ajax({

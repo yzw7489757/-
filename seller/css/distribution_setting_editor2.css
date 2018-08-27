@@ -1,0 +1,101 @@
+.notification-preferences-container {
+    max-width: 960px;
+    min-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.bgcolor {
+    background: red !important;
+}
+
+.font_color_div {
+    color: #dddddd
+}
+
+.font_color_p {
+    color: red
+}
+
+.calculation_method {
+    border-radius: 50%;
+    background: #cccccc;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 20;
+}
+
+.calculation_method_container {
+    padding: 0 10px;
+}
+
+hr {
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    width: 405px;
+    ;
+}
+
+.marTop30 {
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+tr,
+th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 6px 10px;
+}
+.buttonLarge {
+    height: 22px;
+    padding-right: 6px;
+}
+
+.inner_button {
+    text-align: center;
+    display: block;
+    display: inline-block;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
+}
+.primaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+}
+.buttonLarge span {
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    margin-right: 7px;
+    padding-top: 2px;
+}
+
+.secondaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
+}
+.primaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left top;
+}
+.button_label {
+    width: 100%;
+    display: block;
+}
+.Btn{
+    display: flex;
+    justify-content: center;
+}
+.pd_20{
+    padding-right: 20px;
+}
