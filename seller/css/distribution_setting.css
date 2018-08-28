@@ -136,6 +136,18 @@ body {
     border: 1px solid #ddd;
     z-index: 106;
 }
+.modal-content {
+    position: fixed;
+    left: 30%;
+    top:0;
+    min-width: 500px;
+    max-width: 501px;
+    min-height: 100px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    z-index: 106;
+}
 .a-popover-header {
     text-align: left;
     background: #f2f2f2;
@@ -252,4 +264,43 @@ select {
 }
 .selectColor{
     color: rgb(117, 117, 117);
+}
+.addressEditTitle {
+    margin: 10px 0 5px;
+    font-weight: 700;
+}
+.font_color{
+    color: rgb(117, 117, 117);
+}
+.checkCodeLink {
+    display: inline-block;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.a-icon-error, .a-icon-info, .a-icon-success, .a-icon-warning {
+    height: 27px;
+    width: 30px;
+}
+.postalSuccessIcon {
+    margin-left: 10px;
+}
+hr{
+    margin-bottom: 14px;
+    margin-top: 15px;
+    width: 100%;
+}
+.country_city{
+    position: absolute;
+    left: 15px;
+    top: 193px;
+    z-index:  999;
+}
+.myWarn .a-box-inner{
+    padding: 0 !important
+}
+.myWarn .a-box{
+    border: 0
+}
+.myWarn .a-alert-content{
+    padding-left: 10px;
 }
