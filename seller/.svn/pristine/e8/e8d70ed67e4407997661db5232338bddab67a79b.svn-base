@@ -34,7 +34,7 @@
 	color: #004b91;
 	text-decoration: underline;
 }
-.titlebar .red-font{
+ .red-font{
 	color: red;
 }
 .Possible {
@@ -75,6 +75,10 @@
 }
 .list-row-even table tr td{
 	vertical-align: top;
+	border-bottom: 1px solid #ddd;
+}
+.list-row-even table tr:last-child td{
+	border-bottom: none;
 }
 .product-details{
 	width: 40%;
@@ -159,37 +163,31 @@ textarea:focus {
     margin-left: 4px;
     opacity: .7;
 }
+input.error,select.error,textarea.error {
+    border-color: #d00;
+    box-shadow: 0 0 0 3px rgba(221,0,0,.1) inset;
+}
+.small-input{
+	width: 100px !important;
+}
+.decrible{
+	font-size: 12px;
+	color: #aaa;
+	font-weight: normal;
+}
 .find_on {
     background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
     border-radius: 6px;
     overflow: hidden;
-}
-.button-label {
-    display: block;
-    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
-    font-weight: bold;
+    margin: 10px 5px;
 }
 .find_on .button-label {
     display: block;
     background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
     font-weight: bold;
 }
-.button {
+.button{
     padding: 4px 8px;
     cursor: pointer;
-}
-input.error,select.error,textarea.error {
-    border-color: #d00;
-    box-shadow: 0 0 0 3px rgba(221,0,0,.1) inset;
-}
-#seller-memo-list .time{
-	color: #666;
-	font-size: 12px;
-}
-#seller-memo-list .content{
-	color: #333;
-	font-size: 14px;
-}
-#seller-memo-list li{
-	margin-top: 10px;
+
 }

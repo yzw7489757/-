@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>订单退款</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+   	<link rel="stylesheet" type="text/css" href="css/refund_order.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+	<div class="amazon-confirm-shipment-wrap">
+		<div class="amazon-confirm-shipment">
+			<div class="amazon-confirm-shipment-header">
+				<h1>确认发货</h1>
+			</div>
+			<!--<div id="bucketcontainer-order-information"></div>
+			<script  id="bucketcontainer-order-information-tpl" type="text/html">-->
+				<div class="bucketcontainer">
+					<ul class="selectProductType">
+	                    <li class="titlebar">
+	                        Order ID: <a class="blue-font">123121</a>
+	                    </li>
+	                     <li class="Possible">
+	                       	<p>Select the reason for the refund,and if you choose,enter concessions in addition to the full refund amount,up to the maximum indicated.</p>
+	                    </li>
+	                     <li class="list-row-even">
+	                     	<table class="shipping-details" id="shipping-details-table">
+	                     		<tbody>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Reason for refund:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<select>
+				                     				<option value="">Select a reason</option>
+				                     			</select>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		 <tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Order total:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<p>$<span>16.99</span>(Includes item price and shipping)</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Prior refund:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<p class="red-font">($<span>0.00</span>)</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Refund amount:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<p >$<span>16.99</span></p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+		                     			<td colspan="2" style="background: #efefef;height: 20px;"></td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Shipping concession:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<div style="padding: 0px;"><span>$</span><input type="text" value="0.00" class="small-input"/><span>Max.$10.00</span></div>
+				                     			<p class="decrible">To refund return shipping charges to the buyer.</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Other concession:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<div style="padding: 0px;"><span>$</span><input type="text" value="0.00" class="small-input"/><span>Max.$20.00</span></div>
+				                     			<p class="decrible">To refund an addational amount to the buyer.</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+		                     			<td colspan="2" style="background: #efefef;height: 20px;"></td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Refund:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left">
+				                     			<p>$<span>19.2</span></p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<p>Memo to buyer:</p>
+					                        	<p class="decrible">optional</p>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left take-note">
+					                        	 <textarea></textarea>
+					                        	 <p>Enter a note that will be sent to the buyer.</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+		                     		<tr>
+		                     			<td colspan="2">
+		                     				<div class="center">
+		                     					<button class="find_on"> 				                        
+			                     					<span class="button-label button">Cancel</span>
+			                     				</button>
+			                     				<button class="find_on"> 				                        
+			                     					<span class="button-label button">Submit Full Refund</span>
+			                     				</button>
+		                     				</div>
+		                     			</td>
+		                     		</tr>
+		                     		<tr>
+		                     			<td colspan="2">
+		                     				<div class="titlebar clearfix">
+						                       <span>Your Notes</span>
+							                   	<span class="pull-right note-button-group">
+							                    	<button onclick="confirm_shipment.SaveSellerMemo()">Save</button>
+						                    	</span>
+						                    </div>
+		                     			</td>
+		                     		</tr>
+		                     		<tr>
+				                     	<td class="half-width">
+				                     		<div class="textalign-right font-blod">
+					                        	<span>Seller memo:</span>
+					                        </div>
+				                     	</td>	
+				                     	<td class="half-width">
+				                     		<div class="textalign-left take-note">
+					                        	 <textarea id="seller-memo"></textarea>
+					                        	 <p>The information you enter here is for you use only and will not be displayed to the buyer.</p>
+					                        </div>
+				                     	</td>
+		                     		</tr>
+	                     		</tbody>
+	
+	                     	</table>
+	                    </li>
+	                </ul>
+				</div>
+			<!--</script>-->
+		</div>
+	</div>
+   <div class="a-container-footer"></div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common_methods.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
+

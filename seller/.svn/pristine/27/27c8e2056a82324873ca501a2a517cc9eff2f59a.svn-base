@@ -210,8 +210,8 @@
         <div class="add pd_margin_5" data-id="{{= value.address_id}}">
             <div class="itemRadio">
                 {{? value.status == true}}
-                <input type="radio" name="radio" class="radioBtn" checked> {{??}}
-                <input type="radio" name="radio" class="radioBtn"> {{?}}
+                <input type="radio" class="radioBtn" checked> {{??}}
+                <input type="radio" class="radioBtn"> {{?}}
 
             </div>
             <label class="itemAddress ">

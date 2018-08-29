@@ -1,6 +1,5 @@
 $(function () {
     inputctr.public.checkLogin();
-    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx'
     var methos_id = null;
     var fld_code = null;
     var addressName;
@@ -871,7 +870,7 @@ $(function () {
         })
         dropdown_box(".country_city", "#choose_country")
      }
-    // 增加地址、修改地址
+
     function callback() {  
         $("div.myWarn").remove();
         $("input").removeClass("activebtn");
@@ -885,74 +884,36 @@ $(function () {
         tel = $('.tel').val().trim();
         E_mail = $('.E_mail').val().trim();//内层确定触发的事件
         if (addressName && line_one && state_province && city_town && postalcode && tel && country_region !="---无---") {
-            // 增加
-            if(window.sessionStorage && sessionStorage.getItem('add')){
-                $.ajax({
-                    url: baseUrl + '/AddAddressNew',
-                    method: 'post',
-                    dataType: "json",
-                    data: {
-                        userid: amazon_userid,
-                        address: line_one,
-                        address2: line_two,
-                        city: city_town,
-                        province: state_province,
-                        country: country_region,
-                        zipcode: postalcode,
-                        phone: tel,
-                        type: '3',
-                        name: addressName,
-                        email: E_mail,
-                        full_name: ''
-                    },
-                    success: function (res) {
-                        console.log(res)
-                        if(res.result == 1){
-                            window.location.reload();
-                            $('.box-inside').hide();
-                            $('.box-content').show();
-                        }
-                    },
-                    error: function (res) {
-                        console.log(decodeURIComponent(res.error))
+
+            $.ajax({
+                url: baseUrl + '/AddAddressNew',
+                method: 'post',
+                dataType: "json",
+                data: {
+                    userid: amazon_userid,
+                    address: line_one,
+                    address2: line_two,
+                    city: city_town,
+                    province: state_province,
+                    country: country_region,
+                    zipcode: postalcode,
+                    phone: tel,
+                    type: '1',
+                    name: addressName,
+                    email: E_mail,
+                    full_name: ''
+                },
+                success: function (res) {
+                    console.log(res)
+                    if(res.result == 1){
+                        $('.box-inside').hide();
+                        $('.box-content').show()
                     }
-                })
-                sessionStorage.removeItem('add')
-            }
-            // 修改
-            if(window.sessionStorage && sessionStorage.getItem('update')){
-                $.ajax({
-                    url: baseUrl + "/UpdateDistributionAddress",
-                    method: "post",
-                    dataType: "json",
-                    data: {
-                        userid: amazon_userid,
-                        addressId:address_id,
-                        address: line_one,
-                        address2: line_two,
-                        city: city_town,
-                        province: state_province,
-                        country: country_region,
-                        zipcode: postalcode,
-                        phone: tel,
-                        name: addressName,
-                        email: E_mail    
-                    },
-                    success: function (res) {
-                        console.log(res);
-                        if (res.result == 1) {
-                            window.location.reload();
-                            //console.log("success!");
-                        } else {
-                            console.log(decodeURIComponent(res.error));
-                        }
-                    },
-                    error: function (res) {
-                        console.log(decodeURIComponent(res.error));
-                    }
-                });
-                sessionStorage.removeItem('update')
-            }
+                },
+                error: function (res) {
+                    console.log(decodeURIComponent(res.error))
+                }
+            })
         }
         if (!addressName) {
             addwarn("addressNameId", 2, "请输入库房名称。");
@@ -984,7 +945,6 @@ $(function () {
         }
          
     }
-    //地址列表
     function GetAddressList() {
         // 默认地址
         $.ajax({
@@ -1002,7 +962,7 @@ $(function () {
                     address_data = res.List
                     for (let i = 0; i < address_data.length; i++) {
                         address_data[i].status = false;
-                        if (address_data[i].id_default === '1') {
+                        if (address_data[i].address_id == res.registered_address_Id) {
                             address_data[i].status = true;
                         }
                     }
@@ -1015,7 +975,7 @@ $(function () {
                             console.log(address_id)
                         })
                     })
-                 
+                    console.log($('.deleteBtn'))
                     //  删除
                     $('.deleteBtn').click(function (e) { 
                         e.preventDefault();
@@ -1115,9 +1075,7 @@ $(function () {
                                     $('.state_province').val(decodeURIComponent(data.name));
                                     $('.tel').val(decodeURIComponent(data.phone));
                                     $('.E_mail').val(decodeURIComponent(data.email));//内层确定触发的事件   
-                                    if(window.localStorage){
-                                        sessionStorage.setItem('update','update')
-                                    }
+                    
                                 } else {
                                     console.log(decodeURIComponent(res.error))
                                 }
@@ -1162,7 +1120,7 @@ $(function () {
     }
 
 
-    //配送设置 默认配送地址
+    //配送设置（初始化详细信息）
     $.ajax({
         url: baseUrl + "/InitialShippingSettings",
         method: "post",
@@ -1223,8 +1181,7 @@ $(function () {
                     success: function (res) {
                         console.log(res);
                         if (res.result == 1) {
-                            //window.location.reload()
-                            $('.box-content').show()
+                            $('.sb').hide()
                         } else {
                             console.log(decodeURIComponent(res.error));
                         }
@@ -1296,9 +1253,6 @@ $(function () {
             addresstable(); 
             $('input').val('') 
             country_region === '---无---'
-            if(window.sessionStorage){
-                sessionStorage.setItem('add','add')
-            }
         })    
     });
 

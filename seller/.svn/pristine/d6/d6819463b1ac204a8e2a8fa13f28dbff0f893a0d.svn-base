@@ -297,5 +297,5 @@ manage_orders.CancelOrder=function(orderno){
 }
 //退款
 manage_orders.RefundOrder=function(orderno){
-	location.href="refund_order.html"
+	
 }

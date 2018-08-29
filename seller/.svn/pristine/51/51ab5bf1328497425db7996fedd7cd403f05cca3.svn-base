@@ -255,7 +255,7 @@ select {
     line-height: 29px;
 }
 .selectColor{
-    color: rgb(117, 117, 117) !important;
+    color: rgb(117, 117, 117);
 }
 .addressEditTitle {
     margin: 10px 0 5px;

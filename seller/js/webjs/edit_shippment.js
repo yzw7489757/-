@@ -1,0 +1,175 @@
+let edit_shippment={};
+let oldInformation={};
+$(function(){
+	edit_shippment.GetOrderInformation();
+})
+//获取订单的详细信息
+edit_shippment.GetOrderInformation=function(){
+	let orderNo=inputctr.public.getQueryString('orderno');
+	let reauest_data={
+		orderNo:orderNo
+	}
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetOrderInfo',
+        data:reauest_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		data.orderno=orderNo;
+        		oldInformation=data;
+        		var html=template(document.getElementById('bucketcontainer-order-information-tpl').innerHTML,data);
+				document.getElementById('bucketcontainer-order-information').innerHTML = html;
+				edit_shippment.InitDate();
+				edit_shippment.GetCarrierInformation();
+				edit_shippment.GetSellerMemo();
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    });
+}
+//获取承运商的信息
+edit_shippment.GetCarrierInformation=function(){;
+	let reauest_data={};
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetCarrier',
+        data:reauest_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		let content='';
+        		for(var i=0;i<data.data.length;i++){
+        		 	content+='<option value="'+decodeURIComponent(data.data[i].fld_id)+'">'+decodeURIComponent(data.data[i].fld_name)+'</option>'
+        		}
+        		$('#shipping-carrier-information').html(content);
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    });
+}
+edit_shippment.InitDate=function(){
+	  laydate.render({
+          elem:'#ShipDate',
+          lang: 'en',
+          showBottom: false,
+          value: new Date(),
+          min:0,
+          isInitValue:true
+        });
+}
+//确认订单发货
+edit_shippment.ConfirmShipment=function(){
+	let flag=common_methods.public.CheckForm('#shipping-details-table',edit_shippment.SetErrorInfo,edit_shippment.ClearErrorInfo);
+	if(!flag){
+		return false;
+	}else{
+		let order_no=inputctr.public.getQueryString('orderno');
+		let ship_date=$('#ShipDate').val();
+		let carrier_id=$('#shipping-carrier-information').val();
+		let carrier=$('#shipping-carrier-information option:selected').html();
+		let service=$('#shipping-service').val();
+		let tracking_id=$('#tracking-ID-information').val();
+		let memo=$('#seller-memo').val();
+		let request_data={
+			order_no:order_no,
+			ship_date:ship_date,
+			carrier_id:carrier_id,
+			carrier:carrier,
+			service:service,
+			tracking_id:tracking_id,
+			memo:memo
+		}
+		$.ajax({
+	        type:'POST',
+	        url:baseUrl+'/ConfirmShipment',
+	        data:request_data,
+	        dataType:"json",
+	        success:function(data){
+	        	if(data.result==1){
+	        		location.href="manage_orders.html";
+	        	}else{
+	        		alert(decodeURIComponent(data.error));
+	        	}
+	        },
+	        error:function(XHR){
+	          
+	        }
+	    });
+	}
+}
+//设置错误提示
+edit_shippment.SetErrorInfo=function(currentInput, currenterrortext){
+	currentInput.addClass('error');
+}
+//清除错误提示
+edit_shippment.ClearErrorInfo=function(currentInput){
+	currentInput.removeClass('error');
+}
+//获取备注信息
+edit_shippment.GetSellerMemo=function(){
+	let order_no=inputctr.public.getQueryString('orderno');
+	let request_data={
+		orderNo:order_no,
+	} 
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetOrderMemo',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		let content='';
+        		for(let i=0;i<data.data.length;i++){
+        			content+='<li><p class="time">'+decodeURIComponent(data.data[i].createtime)+'</p><p class="content">'+decodeURIComponent(data.data[i].memo)+'</p></li>'
+        		}
+        		$('#seller-memo-list').html(content)
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    });
+}
+//保存新的备注
+edit_shippment.SaveSellerMemo=function(){
+	let order_no=inputctr.public.getQueryString('orderno');
+	let memo=$('#seller-memo').val();
+	let request_data={
+		sellerID:amazon_userid,
+		orderNo:order_no,
+		memo:memo
+	}
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/SaveOrderMemo',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		alert('保存成功！');
+        		edit_shippment.GetSellerMemo();
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    });
+}
+//确认修改订单
+edit_shippment.EditShipment=function(){
+	$('.show-shipping-information').addClass('hide');
+	$('.eid-shipping-information').removeClass('hide');
+}
