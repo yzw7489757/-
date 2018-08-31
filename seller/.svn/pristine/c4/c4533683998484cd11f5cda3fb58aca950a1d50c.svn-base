@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_setting_byweight_freight_setup.css">
+     
+</head>
+
+
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+
+     <script id="tableTrContent" type="text/x-dot-template">
+    <tbody id="{{=it.fld_id}}" class="tbodyBar">
+     <tr>
+            <td>
+                <span class="text-bold">
+                   {{= it.country}}
+                </span>
+            </td>
+            <td>预计送达时间</td>
+            <td class="shippingSection1">
+                {{ if (it.shippingLevel1!=undefined ) { }}
+                   {{=it.shippingLevel1.section}}工作日
+                 {{ } else { }}---{{ } }}
+            </td>
+            <td class="shippingSection2">
+                  {{ if (it.shippingLevel2!=undefined ) { }}
+                   {{=it.shippingLevel2.section}}工作日
+                 {{ } else { }}
+                   ---
+                {{ } }}
+            </td>
+            <td class="shippingSection3">
+                      {{ if (it.shippingLevel3!=undefined ) { }}
+                   {{=it.shippingLevel3.section}}工作日
+                 {{ } else { }}
+                   ---
+                {{ } }}
+            </td>
+            <td class="shippingSection4">
+                {{ if (it.shippingLevel4!=undefined ) { }}
+                   {{=it.shippingLevel4.section}}小时
+                 {{ } else { }}
+                   ---
+                {{ } }}
+            </td>
+    </tr>
+    <tr>
+         <td></td>
+        <td class="select">
+           
+        </td>
+        <td class="model_money1">
+                 {{ if (it.shippingLevel1!=undefined ) { }}
+              US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_money2">
+                 {{ if (it.shippingLevel2!=undefined ) { }}
+                US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_money3">
+                {{ if (it.shippingLevel3!=undefined ) { }}
+                 US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_money4">
+             {{ if (it.shippingLevel4!=undefined ) { }}
+                 US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+    </tr>
+    <tr>
+     <td>
+        
+    </td>
+    <td>单次配送</td>
+        <td class="model_fee1">
+                {{ if (it.shippingLevel1!=undefined ) { }}
+                 US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_fee2">
+            {{ if (it.shippingLevel2!=undefined ) { }}
+                  US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_fee3">
+             {{ if (it.shippingLevel3!=undefined ) { }}
+                 US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+        <td class="model_fee4">
+             {{ if (it.shippingLevel4!=undefined ) { }}
+                  US$
+                 {{ } else { }}
+                   ---
+                {{ } }}
+        </td>
+</tr>
+<tr  >
+    <td class="underBar" colspan="6"></td>
+</tr>
+</tbody>
+
+ </script>
+
+
+
+
+
+    <div class="relative Btn calculation">
+        <div class="calculation_block">
+            <div class="float_left calculation_method_container ">
+                <div class="calculation_method  font_color_div">1</div>
+                <p >运费设置计算方式</p>
+            </div>
+            <div class="float_left calculation_method_container ">
+                <div class="calculation_method  font_color_div">2</div>
+                <p >选择标准配送地区和服务级别</p>
+            </div>
+            <div class="float_left calculation_method_container  ">
+                <div class="calculation_method   font_color_div">3</div>
+                <p >设置运费</p>
+            </div>
+            <div class="float_left calculation_method_container ">
+                <div class="calculation_method  bgcolor font_color_div">4</div>
+                <p class="font_color_p">确认运费</p>
+            </div>
+            <hr>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    
+    <div class="content-area">
+       <div class="a-row">
+        <h1 class="header-orange" >确认运费</h1>
+        <span>设置运费 如果你看不到地区和服务级别，请单击“返回”回到上一页面，选择配送地区和服务级别</span>
+        <a href="#">了解更多详情。</a>
+    </div>
+
+    <!-- 表格-->
+
+   <table id="table">
+        <tbody>
+        <tr>
+            <td colspan="6"class="table-title">当前运费</td>
+        </tr>
+        <tr style="text-align: center">
+            <th  rowspan="2"> 标准运费 </th>
+            <th rowspan="2"> 运费组成  </th>
+            <th colspan="4"> 服务级别  </th>
+        </tr>
+        <tr style="text-align: right">
+           <th>普通配送</th>
+           <th> 快速配送</th>
+           <th>隔日达 </th>
+           <th>次日达</th>
+        </tr>
+
+
+</tbody>
+</table>
+
+<!--
+<div class="a-row a-spacing-top-medium a-text-center">
+<a href=".\distribution_setting.html">
+    <span class="a-button-inner block a-button ">
+        <span class="a-button-text border_box block">
+            取消
+        </span>
+    </span>
+</a>
+<a href=".\distribution_setting_byweight_freight_setup.html">
+      <span class="a-button-inner block a-button ">
+        <span class="a-button-text border_box block">
+            返回
+        </span>
+    </span>
+</a>
+
+    <span class=" a-button-inner block a-button a-button-primary">
+        <span class="a-button-text border_box block">
+         继续
+     </span>
+ </span>
+</div>-->
+
+
+   <div class="marTop30 Btn">
+            <div class="pd_20">
+             <a href=".\distribution_setting.html" class="click_a">
+                    <span class="buttonLarge secondaryLargeButton inner_button">
+                        <span class="button_label">取消</span>
+                    </span>
+                </a>
+            </div>
+                     <div class="pd_20">
+             <a href=".\distribution_setting_byweight_freight_setup.html" class="click_a">
+                    <span class="buttonLarge secondaryLargeButton inner_button">
+                        <span class="button_label">返回</span>
+                    </span>
+                </a>
+            </div>
+            <div>
+                <a class="click_a">
+                    <span class="buttonLarge primaryLargeButton inner_button buttonContinue">
+                        <span class="button_label go_on_Btn">确认</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/webjs/prompt.js" type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="./js/webjs/distribution_setting_byweight_freight_ensure.js" type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+
+
+</html>

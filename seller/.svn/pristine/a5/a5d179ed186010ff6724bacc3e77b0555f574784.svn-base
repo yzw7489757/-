@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta id="i18n_pagename" content="company_name_tax_table">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/company_name_tax_table.css">
+</head>
+
+<body>
+    <div class="a-container simplified-interview-desktop ">
+        <div class="a-row">
+            <div class="a-row">
+                <div class="a-column">
+                    <img src="./img/sc-logo-top.gif" alt="">
+                </div>
+            </div>
+            <div class="a-row">
+                <div>
+                    <div class="width48 float_left">
+                        <div class="heading-module">
+                            <h1 class="page-heading" data-i18n-text='_body_TaxInformationInterview'>税务信息调查</h1>
+                        </div>
+                    </div>
+                    <div class="width39 float_right">
+                        <div class="locale-switch-module">
+                            <div class="mobile-element-wrapper">
+                                <h3 data-i18n-text='_body_SelectLanguage'>选择语言</h3>
+                                <div class="locale-switch-body a-row ">
+                                    <div class="width99 bank-account-dropdown relative">
+                                        <div id="choose_lang" class="select border_box bgcolor a-select-text a-native-dropdown a-row a-button-select height29 bank-account-dropdown">
+                                            <p style="margin: 0" class="choose_country_p">Chinese</p>
+                                        </div>
+                                        <div class="ul language none" style="height: 290px; min-width:486px;width: auto;">
+                                            <ul class="a-row a-popover-inner a-popover-wrapper  ">
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">English</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Spanish</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link a-active ">Chinese</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link ">German</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">French</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Italian</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Russian</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a tabindex="-1" href="javascript:void(0)" class="a-dropdown-link">Czech</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Japanese</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Polish</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Portuguese</a>
+                                                </li>
+                                                <li class="a-dropdown-item">
+                                                    <a href="javascript:void(0)" class="a-dropdown-link">Dutch</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="a-column width69 bgColor simplified-interview-question-wrapper">
+            <div class="a-row a-text-center" style="    border-bottom: 1px solid;">
+                Reference Id: A09982243A5OAHS77YI7W
+            </div>
+            <div class="a-row k1099_row">
+                <div class="k1099_section float_left height69">
+                    <div class="lamePositionWrapper">
+                        <span>Form </span>
+                        <span class="k1099_formName">W-8BEN</span>
+                    </div>
+                </div>
+                <div class="k1099_section k1099_w8Head2 float_left">
+                    <h2>Certificate of Foreign Status of Beneficial Owner for United
+                        <br>States Tax Withholding and Reporting (Individuals)</h2>
+                </div>
+                <div class="k1099_section float_left lamePositionWrapper" style="border:0">
+                    <b>SUBSTITUTE </b>
+                    <span>(July 2017)</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="a-row k1099_row">
+                <div class="k_section k1099_solo">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Do NOT use this form if:</th>
+                                <th style="width: 120px; text-align: right;">Instead, use Form:</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>You are NOT an individual</li>
+                                    </ul>
+                                </td>
+
+                                <td align="right">W-8BEN-E</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>You are a U.S. citizen or other U.S. person, including a resident alien
+                                            individual</li>
+                                    </ul>
+                                </td>
+
+                                <td align="right">W-9</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>You are a beneficial owner claiming that income is effectively connected
+                                            with the
+                                            conduct of trade or business within the U.S. (other than personal services)
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <td align="right">W-8ECI</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>You are a beneficial owner who is receiving compensation for personal
+                                            services performed
+                                            in the United States</li>
+                                    </ul>
+                                </td>
+                                <td align="right">8233 or W-4</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>A person acting as an intermediary</li>
+                                    </ul>
+                                </td>
+
+                                <td align="right">W-8IMY</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class=" k1099_sectionHeader k1099_row">
+                <span class="k1099_partNum">Part I</span> Identification of Beneficial Owner
+            </div>
+            <div class="k1099_row">
+                <div style="width: 400px" class="k1099_section float_left">
+                    <span class="k1099_sectionNumber">1</span> Name of individual who is the beneficial owner
+                    <input class="full_name" data-encrypted="true" data-values="IndividualPersonName LegalName" type="text"
+                        readonly="readonly" disabled="disabled">
+                </div>
+                <div class="k_section k1099_b2 float_left">
+                    <span class="k1099_sectionNumber">2</span> Country of citizenship
+                    <input class="choose_country_nationality" class="choose_country_ever_p" name="k1099_citizenshipCountry"
+                        type="text" readonly="readonly" disabled="disabled">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="k1099_row">
+                <div class="k_section k1099_solo">
+                    <span class="k1099_sectionNumber">3</span> Permanent residence address (street, apt. or suite no.,
+                    or rural route).
+                    <b>Do not use a P.O. box or in-care-of address.</b>
+                    <input class="tel_input" data-encrypted="true" data-values="NonUSPermAddress1 NonUSPermAddress2 Address1 Address2"
+                        type="text" readonly="readonly" disabled="disabled">
+                </div>
+            </div>
+            <div class="k1099_row">
+                <div class="k1099_section k1099_notLast k1099_a1 float_left">
+                    City or town, state or province. Include postal code where appropriate.
+                    <input name="residenceCityState" class="detali" type="text" readonly="readonly" disabled="disabled"
+                        data-encrypted="true" data-values="NonUSPermPC Zip">
+                </div>
+                <div class="k1099_section k1099_a2 float_left">
+                    Country
+                    <input name="k1099_residenceCountry" class="nationality" type="text" readonly="readonly" disabled="disabled">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="k1099_row">
+                <div class="k1099_section k1099_solo" style="border: 0">
+                    <span class="k1099_sectionNumber">4</span> Mailing address (if different from above)
+                    <input class="tel_input2" data-encrypted="true" data-values="NonUSMailAddress1 NonUSMailAddress2 MailAddress MailAddress2"
+                        type="text" readonly="readonly" disabled="disabled">
+                </div>
+            </div>
+            <div class="k1099_row">
+                <div class="k1099_section k1099_notLast k1099_a1 float_left">
+                    City or town, state or province. Include postal code where appropriate.
+                    <input name="k1099_mailingCityState" class="detali2" type="text" readonly="readonly" disabled="disabled"
+                        data-encrypted="true" data-values="NonUSMailPC MailAddressPC" value=" ">
+                </div>
+                <div class="k1099_section k1099_a2 float_left">
+                    Country
+                    <input name="k1099_mailingCountry" class="nationality" type="text" readonly="readonly" disabled="disabled"
+                        value="">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="k1099_row k1099_sectionHeader">
+                <span class="k1099_partNum">Part III</span> Certification
+            </div>
+            <div>
+                <div class="k_section">
+                    <p>Under penalties of perjury, I declare that I have examined the information on this form and to
+                        the best
+                        of my knowledge and belief it is true, correct, and complete. I further certify under penalties
+                        of
+                        perjury that:
+                    </p>
+
+                    <ol>
+                        <li>I am the individual that is the beneficial owner (or am authorized to sign for the
+                            individual that
+                            is the beneficial owner) of all the income to which this form relates or am using this form
+                            to
+                            document myself for chapter 4 purposes,</li>
+
+                        <li>The person named on line 1 of this form is not a U.S. person,</li>
+                        <li>The income to which this form relates is (a) not effectively connected with the conduct of
+                            a trade
+                            or business in the United States, (b) effectively connected but is not subject to tax under
+                            an
+                            income tax treaty, or (c) the partner's share of a partnership's effectively connected
+                            income,
+                        </li>
+                        <li> The person named on line 1 of this form is a resident of the treaty country listed on line
+                            9 of the
+                            form (if any) within the meaning of the income tax treaty between the United States and
+                            that
+                            country, and </li>
+
+                        <li>For broker transactions or barter exchanges, the beneficial owner is an exempt foreign
+                            person as
+                            defined in the instructions.</li>
+                    </ol>
+                    <p>Furthermore, I authorize this form to be provided to any withholding agent that has control,
+                        receipt,
+                        or custody of the income of which I am the beneficial owner or any withholding agent that can
+                        disburse
+                        or make payments of the income of which I am the beneficial owner.
+                        <b> I agree that I will submit a new form within 30 days if any certification made on this form
+                            becomes
+                            incorrect.
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="k_signature">
+                <div class="k_section float_left">
+                    <span class="k1099_signatureHeader">Sign Here</span>
+                </div>
+                <div class="k_section float_left">
+                    <label>
+                        <input name="k_signature" class="signature" type="text" readonly="readonly" disabled="disabled"
+                            value="1">
+                        <br> Signature of beneficial owner (or individual authorized to sign for beneficial owner)
+                    </label>
+                </div>
+                <div class="k_section float_left">
+                    <label>
+                        <input name="k1099_signatureDate" class="todayInput" type="text" readonly="readonly" disabled="disabled"
+                            value="">
+                        <br> Date (MM-DD-YYYY)
+                    </label>
+                </div>
+                <div class="k_section float_left">
+                    <label>
+                        <input name="k1099_signatureCapacity" type="text" readonly="readonly" disabled="disabled" value="">
+                        <br> Capacity in which acting
+                    </label>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <div class="a-column width69">
+            <hr class="a-divider-normal simplified-interview-question-wrapper">
+            <div>
+                <span data-i18n-text='_body_Deal2Tip'>以上是依据您提供的信息对您的税务表格的预览。请查看并提交表格，或者根据需要进行更改。</span>
+            </div>
+            <div class="simplified-interview-question-wrapper">
+                <div class="width48 a-column float_left">
+                    <span class="a-button fit-button-container submit-interview-button">
+                        <a href="./company_name_tax.html" class="click_a">
+                            <span class="a-button-inner">
+                                <button class="a-button-text a-row updateBtn" type="button" data-i18n-text='_body_DealButtonChange'>
+                                    进行更改 
+                                </button>
+                            </span>
+                        </a>
+                    </span>
+                </div>
+                <div class="width48 float_left">
+                    <span class="a-button a-button-primary fit-button-container submit-interview-button">
+                        <span class="a-button-inner">
+                            <button class="a-button-text a-row" type="button">
+                                <a href="./company_name_tax_finish.html" class="click_a" data-i18n-text='_body_DealButtonSubmit'>
+                                    提交表格
+                                </a>
+                            </button>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/webjs/company_name_tax_table.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+
+
+</html>

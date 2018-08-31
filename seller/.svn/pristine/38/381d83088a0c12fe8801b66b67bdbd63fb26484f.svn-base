@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta id="i18n_pagename" content="distribution_setting">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/distribution_setting.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="content-area">
+        <div class="a-row">
+            <span class="header-orange" data-i18n-text='_body_ShippingSettings'>
+
+            </span>
+        </div>
+        <div class="content-module">
+            <div class=" titlebar box-sizing">
+                <div class="float_left pd7_14_6">
+                    <span data-i18n-text='_body_DefaultShippingAddress'></span>
+                </div>
+                <div class="float_right pd7_14_6">
+                    <span class="inner_button span_button editBtn_first">
+                        <span class="block a-button-text ">编辑</span>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <div class="data-entry">
+                <div class="float_left label box-sizing width34" data-i18n-text='_body_AddressName'>
+
+                </div>
+                <div class="float_right field box-sizing width_right">
+                    <span class="name"></span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <div class="data-entry data_entry_bg">
+                <div class="float_left label box-sizing width34" data-i18n-text='_body_FullAddress'>
+
+                </div>
+                <div class="float_right field box-sizing width_right">
+                    <span class="country"></span>
+                    <span class="city"></span>
+                    <span class="address"></span>
+                    <span class="address2"></span>
+                    <span class="email"></span>
+                    <span class="full_name"></span>
+                    <span class="name"></span>
+                    <span class="phone"></span>
+                    <span class="province"></span>
+                    <span class="zipcode"></span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <div class="data-entry">
+                <div class="float_left label box-sizing width34">
+                    时区
+                </div>
+                <div class="float_right field box-sizing width_right">
+                    <span class="name"></span>
+                </div>
+                <div class="clear "></div>
+            </div>
+        </div>
+
+        <div class="content-module">
+            <!-- 默认运费 -->
+            <div class=" titlebar box-sizing pd7_14_6">
+                <div class="float_left">
+                    <span data-i18n-text='_body_DefaultShipping'></span>
+                </div>
+                <div class="float_right">
+                    <a href="./distribution_setting_editor2.html" class="click_a">
+                        <span class="inner_button span_button">
+                            <span class="block a-button-text">编辑</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 标准 -->
+            <div class="data-entry data_entry_bg">
+                <div class="float_left label box-sizing" data-i18n-text='_body_Standard'>
+
+                </div>
+                <div class="float_right field box-sizing">
+                    <strong data-i18n-text='_body_No' class="standard_No"></strong>
+                    <strong data-i18n-text='_body_Yes' class="standard_Yes" style="display:none"></strong>
+                    <!--
+                    <span class="tiny-example" data-i18n-text='_body_TransitTime'></span>
+                -->
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 快速配送 -->
+            <div class="data-entry">
+                <div class="float_left label box-sizing" data-i18n-text='_body_Expedited'>
+
+                </div>
+                <div class="float_right field box-sizing">
+                    <strong data-i18n-text='_body_No' class="Expedited_No"></strong>
+                    <strong data-i18n-text='_body_Yes' class="Expedited_Yes" style="display:none"></strong>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 两日送达 -->
+            <div class="data-entry data_entry_bg">
+                <div class="float_left label box-sizing">
+                    <span data-i18n-text='_body_TwoDay'></span>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                    <br>
+                    <span style="font-weight:  normal;" data-i18n-text='_body_TwoDayTip'></span>
+                </div>
+                <div class="float_right field box-sizing pdBottom22" style="height: 49px;">
+                    <strong data-i18n-text='_body_No'  class="twoDay_No"></strong>
+                    <strong data-i18n-text='_body_Yes'  class="twoDay_Yes" style="display:none"></strong>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 一日送达 -->
+            <div class="data-entry">
+                <div class="float_left label box-sizing">
+                    <span data-i18n-text='_body_OneDay'></span>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="float_right field box-sizing">
+                    <strong data-i18n-text='_body_No' class="oneDay_No"></strong>
+                    <strong data-i18n-text='_body_Yes' class="oneDay_Yes" style="display:none"></strong>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 国际配送 -->
+            <div class="data-entry data_entry_bg">
+                <div class="float_left label box-sizing" data-i18n-text='_body_International'>
+
+                </div>
+                <div class="float_right field box-sizing">
+                    <strong data-i18n-text='_body_No'></strong>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+            <!-- 国际加急 -->
+            <div class="data-entry">
+                <div class="float_left label box-sizing" data-i18n-text='_body_InternationalExpedited'>
+
+                </div>
+                <div class="float_right field box-sizing">
+                    <strong data-i18n-text='_body_No'></strong>
+                    <span>
+                        <a href="" data-i18n-text='_body_ViewRateTable'></a>
+                    </span>
+                </div>
+                <div class="clear "></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="a-container-footer">
+    </div>
+    <!-- <div class="popup">
+        <div class="model-wrapper">
+            <div class="modal-popover-under-layer msg-layer-bg"></div>
+            <div class="a-popover-modal modal-content msg-layer showAlert">
+
+                <div class="a-popover-header">
+                    <h4 class="a-popover-header-content">编辑默认配送地址</h4>
+                </div>
+                
+                <div class="a-popover-footer layer-btn">
+                    <div>
+                        <span class=" a-button-inner  a-button">
+                            <span class="a-button-text border_box block btnstyle layer-cancel">取消</span>
+                        </span>
+                        <span class=" a-button-inner  a-button a-button-primary">
+                            <span class="a-button-text border_box block btnstyle layer-commit">保存</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+    <script id="addArray" type="text/x-dot-template">
+        {{~it:value:index}}
+
+        <div class="add pd_margin_5" data-id="{{= value.address_id}}">
+            <div class="itemRadio">
+                {{? value.status == true}}
+                <input type="radio" name="radio" class="radioBtn" checked> {{??}}
+                <input type="radio" name="radio" class="radioBtn"> {{?}}
+
+            </div>
+            <label class="itemAddress ">
+                <span class="a-form-label">
+                    {{= decodeURIComponent(value.name)}}
+
+                </span>
+                <span>{{= decodeURIComponent(value.name)}}, {{= decodeURIComponent(value.city)}},{{= decodeURIComponent(value.province)}},
+                    {{= decodeURIComponent(value.zipcode)}}, {{= decodeURIComponent(value.country)}}</span>
+                <div class="actionButton">
+                    <a class="editShipFromAddress editBtn">
+                        编辑
+                    </a>
+                    {{? value.status == true}}
+                    <a href="javascript:void(0)" class="selectColor">删除</a>
+                    {{??}}
+                    <a class="deleteBtn">删除</a>
+                    {{?}}
+                </div>
+            </label>
+
+        </div>
+        {{~}}
+    </script>
+    <script type="text/x-dot-template" id="timeZone_tmpl">
+        {{~it:value:index}}
+        <li fld_code="{{= value.fld_code}}">
+            <a href="javascript:void(0)" class="a-box">{{= decodeURIComponent(value.fld_name)}}</a>
+        </li>
+
+        {{~}}
+    </script>
+    <script  type="text/x-dot-template" id="delete_tmpl">
+        <div class="bold-font">{{= decodeURIComponent(it.name) ||'--'}}</div>
+        <div class="addressDetail-section normal-font">{{= decodeURIComponent(it.address) ||'--'}}, {{= decodeURIComponent(it.city) ||'--'}}, {{= decodeURIComponent(it.province) ||'--'}}, {{= decodeURIComponent(it.city) ||'--'}}, {{= decodeURIComponent(it.zipcode) ||'--'}}</div>
+        <hr class="a-divider-normal">
+        <div class="normal-font">
+            <span>如果您删除此地址，它将从已保存到您的帐户的其他页面（包括“购买配送服务”）中移除。</span>
+        </div>
+    </script>
+    <script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+    <script src="./js/public.js " type="text/javascript"></script>
+    <script src="./js/doT.min.js" type="text/javascript"></script>
+    <script src="js/webjs/seller_public.js" type="text/javascript"></script>
+    <script src="./js/webjs/distribution_setting.js" type="text/javascript"></script>
+    <script src="./js/webjs/prompt.js" type="text/javascript"></script>
+    <script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+    <script src="i18n/language.js" type="text/javascript"></script>
+    <script src="js/webjs/popup.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    font-size: .86rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: #373d3e;
+}
+.gw-cont {
+    padding: 18px 2.5%;
+    margin: 0 auto;
+    min-width: 200px;
+    
+}
+.gw-cont-bg{
+    background: #cccccc
+}
+.gw-center-col {
+    float: left;
+    width: 49.5%;
+}
+
+.gw-column {
+    float: left;
+    width: 24.25%;
+}
+.gw-left-col {
+    margin-right: 1%;
+}
+.a-padding-base {
+    padding: 10px 0 10px 14px;
+}
+.sc-widget-title {
+    margin-bottom: 0!important;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    border-bottom: 1px solid #879596;
+    position: relative;
+}
+.sc-widget-title .icon-more {
+    background-image: url(../img/sprite-1.1.19.png);
+    background-position: -208px -290px;
+    width: 20px;
+    height: 20px;
+  
+}
+.sc-widget-title .icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+.sc-widget-title h2  {
+    font-size: 1.2rem!important;
+    line-height: 29px!important;
+    font-family: "Amazon Ember",Arial,sans-serif!important;
+    font-weight: normal !important;
+    
+}
+.a-link-normal {
+    margin-left: 10px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #879596;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+.sc-widget-action-item-title{
+    font-size: .86rem;
+    color: #008296 !important;
+}
+.a-text-bold{
+    padding-right: 10px;
+    color: #008296;
+}
+.a-text-color{
+    color: #008296 ;
+}
+.a-size-medium {
+    font-size: 1rem!important;
+    line-height: 20px!important;
+    font-family: "Amazon Ember",Arial,sans-serif!important;
+}
+.a-padding-base {
+    padding: 10px 14px!important;
+}
+.sc-widget-action-items {
+    padding-bottom: 15px;
+}
+.margin10{
+    margin-bottom: 10px;
+}
+.margin15{
+    margin-bottom: 15px;
+}
+.sc-widget-section {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #879596;
+    margin: 10px 0;
+}
+.border-bottom-color{
+    border-bottom: 1px solid #879596;
+}
+.sc-widget-section h4{
+    font-size: 1rem;
+    padding-bottom: 4px;
+}
+.a-spacing-micro, .a-ws .a-ws-spacing-micro {
+    margin-bottom: 4px!important;
+}
+.a-text-beside-button {
+    display: inline-block;
+    padding: 4px 0 0 6px;
+    color: #008296;
+}
+.accountHealthLink{
+    margin-left: 10px;
+    padding: 3px 10px;
+}
+.a-size-base-plus {
+    font-size: 15px!important;
+    line-height: 1.4!important;
+}
+.a-unordered-list.a-nostyle.a-vertical {
+    margin: 0 0 10px 0;
+    padding: 0 14px 5px 0;
+    border-bottom: 1px solid #879596;
+}
+.a-alert-inline-info {
+    background: none repeat scroll 0 0 #F6F6F6;
+    color: #777;
+}
+.a-alert-content{
+    padding-left: 3px;
+    font-size: .86rem!important;
+    line-height: 20px!important;
+    font-family: "Amazon Ember",Arial,sans-serif!important;
+}
+.a-alert-inline .a-icon-alert {
+    left: 10px;
+    top: 15px;
+}
+.sc-footer {
+    padding: 14px 2.5%;
+    border-top: 1px solid #ddd;
+    margin-top: 44px;
+    margin-bottom: 0;
+    background: #f3f3f3;
+}
+ul.a-horizontal li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding-right: 10px;
+    border-right: 1px solid #e7e7e7;
+}
+ul.a-horizontal li:last-child{
+    border-right:0;
+}
+ul.a-horizontal li a{
+    color: #008296;
+}
+.sc-footer-section {
+    padding-bottom: 10px!important;
+    border-bottom: 1px solid #e7e7e7;
+}
+.sc-footer.sc-footer-sitemap {
+    margin-top: 7px!important;
+}
+.sc-footer-sitemap-col, .sc-footer-sitemap-section {
+    width: 15.6%;
+    margin-left: 1%;
+}
+.sc-footer-sitemap-row {
+    padding-bottom: 6px;
+}
+
+.sc-footer-sitemap-row {
+    margin-bottom: 14px;
+}
+.sc-footer-sitemap-row h6 {
+    font-weight: 500;
+    font-size: 1.2rem!important;
+    line-height: 29px!important;
+    font-family: "Amazon Ember",Arial,sans-serif!important;
+}
+.sc-footer-sitemap-row a {
+    color: #373d3e;
+    font-size: .8rem;
+}
+.sc-footer-sitemap-row a:hover {
+    color: #008296;
+    text-decoration:underline; 
+}
+.sc-footer-copy {
+    color: #aaa;
+    margin: 0;
+    clear: both;
+}

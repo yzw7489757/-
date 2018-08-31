@@ -1,0 +1,165 @@
+$(function () {
+	inputctr.public.checkLogin();
+	//载入数据
+
+	$.ajax({
+		url: baseUrl + '/GetUserShippingPrice',
+		method: 'post',
+		dataType: "json",
+		data: {
+			userid: amazon_userid,
+			shippingModel:2,
+		},
+		success: function (res) {
+			//console.log(res);
+			//console.log(res.result[0])
+			//var tpl;
+			var fldId=0;
+			var tpl;
+			//console.log(res);
+			res.result.forEach(function(e,index){
+				//console.log(res.result[index]);
+				res.result[index].country= decodeURIComponent(res.result[index].country);
+				var data2=JSON.parse(sessionStorage.getItem('data'+res.result[index].fld_id))
+
+
+				tpl = doT.template($("#tableTrContent").html());
+
+				$("#table").append(tpl(res.result[index]));
+
+			
+				
+
+			})
+
+			$(".tbodyBar").each(function(index,e){
+					MoneySet(e)
+	       })
+		}
+	})
+	$(".tbodyBar").each(function(index,e){
+					MoneySet(data2,e)
+	})
+
+//按钮点击保存
+$(".buttonContinue").click(function(){
+	upData=JSON.stringify(upData);
+		upData="{"+"\"service\":"+upData+"}";
+		console.log(upData);
+
+	$.ajax({
+		url: baseUrl + '/SetUserShippingPrice',
+		method: 'post',
+		dataType: "json",
+		data: {
+			userid: amazon_userid,
+			shippingModel:2,
+			strJson:upData,
+		},
+		success: function (res) {	
+				console.log(res)
+				console.log(decodeURIComponent(res.error))
+
+
+			},
+			error:function(res){
+				console.log(res)
+			}
+	})
+
+
+})
+var upData=new Array();
+//载入上一页传递过来的数据
+function MoneySet(e){
+	//console.log($(e).find(".model_money1"));
+	var data =JSON.parse(sessionStorage.getItem('data'+$(e).attr("id")))
+	var data1;
+
+
+	if(data.model=="1"){
+		$(e).find(".select").text("每件商品");
+	}
+	else{
+		$(e).find(".select").text("按重量(ibs)");
+	}
+	if(data.level1!=undefined){
+		$(e).find(".model_money1").text("$US"+data.level1.model_money);
+		$(e).find(".model_fee1").text("$US"+data.level1.model_fee);
+
+		data1={
+			fld_id:$(e).attr("id"),
+			service_level:"1",
+			cost:[{
+				id:data.level1.id,
+				model:data.model,
+				model_money:data.level1.model_money,
+				fee:data.level1.model_fee
+			}]
+		}
+		upData.push(data1);
+	
+	}
+	if(data.level2!=undefined){
+		$(e).find(".model_money2").text("$US"+data.level2.model_money);
+		$(e).find(".model_fee2").text("$US"+data.level2.model_fee);
+		data1={
+			fld_id:$(e).attr("id"),
+			service_level:"2",
+			cost:[{
+				id:data.level2.id,
+				model:data.model,
+				model_money:data.level2.model_money,
+				fee:data.level2.model_fee
+			}]
+		}
+		upData.push(data1);
+		
+	}
+
+	if(data.level3!=undefined){
+		$(e).find(".model_money3").text("$US"+data.level3.model_money);
+		$(e).find(".model_fee3").text("$US"+data.level3.model_fee);
+		data1={
+			fld_id:$(e).attr("id"),
+			service_level:"3",
+			cost:[{
+				id:data.level3.id,
+				model:data.model,
+				model_money:data.level3.model_money,
+				fee:data.level3.model_fee
+			}]
+		}
+		upData.push(data1);
+		
+	}
+
+	if(data.level4!=undefined){
+		$(e).find(".model_money4").text("$US"+data.level4.model_money);
+		$(e).find(".model_fee4").text("$US"+data.level4.model_fee);
+		data1={
+			fld_id:$(e).attr("id"),
+			service_level:"4",
+			cost:[{
+				id:data.level4.id,
+				model:data.model,
+				model_money:data.level4.model_money,
+				fee:data.level4.model_fee
+			}]
+		}
+		upData.push(data1);
+		
+	}
+
+	
+
+
+
+
+
+
+
+}
+
+
+})

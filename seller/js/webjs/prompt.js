@@ -1,6 +1,6 @@
 
 var urlNetwork = {
-    baseurl:'http://192.168.2.164:8096/QAMZNAPI.asmx?op='
+    baseurl:'http://192.168.2.164:8096/QAMZNAPI.asmx'
 }
 function addwarn(target, type, text) {
   /*

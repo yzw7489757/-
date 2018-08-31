@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/home_page.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="gw-cont gw-cont-bg">
+        <div class="a-row">
+            <div class="gw-column gw-left-col">
+                <!-- 您的订单 -->
+                <div class="a-box a-padding-base margin15">
+                    <div class="sc-widget-title">
+                        <h2>您的订单 </h2>
+                        <i class="icon icon-more"></i>
+                    </div>
+                    <div class="sc-widget-action-items">
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">等待中</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">未发货的优先配送订单</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">未发货</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">退货请求</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sc-widget-section">
+                        <h4>卖家自配送</h4>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>过去一天内</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>过去 7 天内</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sc-widget-section">
+                        <h4>亚马逊配送</h4>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>过去一天内</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>过去 7 天内</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="a-text-center">
+                        <a href="javascript:void(0)" class="sc-widget-action-item-title">查看您的订单</a>
+                    </div>
+                </div>
+                <!-- 绩效 -->
+                <div class="a-box a-padding-base margin15">
+                    <div class="sc-widget-title">
+                        <h2>绩效 </h2>
+                        <i class="icon icon-more"></i>
+                    </div>
+                    <div class="sc-widget-action-items">
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">买家消息</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">亚马逊商城交易保障索赔</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-link-normal">
+                            <div class="float_left">
+                                <a class="sc-widget-action-item-title">信用卡拒付索赔</a>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sc-widget-section">
+                        <h4>买家消息</h4>
+                        <div><span class="a-color-tertiary">等待回复的消息（过去 7 天内）</span></div>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>不到 24 小时</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-spacing-micro">
+                            <div class="float_left">
+                                <span>超过 24 小时</span>
+                            </div>
+                            <div class="float_right">
+                                <a class="a-text-bold">0</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sc-widget-action-items">
+                        <div class="accountHealthLink border-bottom-color">
+                            <span class="a-text-beside-button a-size-base-plus">账户状况</span>
+                        </div>
+                    </div>
+
+                    <div class="sc-widget-action-items">
+                        <h4>买家反馈</h4>
+                        <div><span class="a-color-tertiary">新卖家（尚无反馈）</span></div>
+                    </div>
+
+                </div>
+                <!-- 卖家论坛 -->
+                <div class="a-box a-padding-base margin15">
+                    <div class="sc-widget-title" style="border-bottom: 0">
+                        <h2>卖家论坛 </h2>
+                        <i class="icon icon-more"></i>
+
+                    </div>
+                    <ul class="a-unordered-list border-bottom-color sc-widget-action-items margin10">
+                        <li>
+                            <span class="a-text-color">Bunga bunga where are thou?</span>
+                        </li>
+                        <li>
+                            <span>已发布</span><span>111</span>
+                        </li>
+                    </ul>
+                    <div class="a-text-center">
+                        <a href="javascript:void(0)" class="sc-widget-action-item-title">查看论坛版块</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gw-center-col gw-left-col">
+                <div class="a-box a-padding-base">
+                    <div class="sc-widget-title" style="border-bottom: 0">
+                        <h2>新闻 </h2>
+                        <i class="icon icon-more"></i>
+                    </div>
+                    <div><span class="a-text-color a-size-medium">立即发布您的新品，享受免 LTSF 假日销售优惠</span></div>
+                    <div>今日起，我们将在限定时间内，为卖家的合格新品提供长期仓储费 (LTSF) 促销。 亚马逊将向参与促销的亚马逊物流卖家返还长达六个月的长期存储费用，适用对象为：2018 年 8 月 21
+                        日至 2018 年 11 月 30 日期间创建的符合资格类别*的亚马逊上的新ASIN，且商品于 2018 年 12 月 5 日前完成入仓。 要参与促销活动,
+                        您必须点击长期存储费促销帮助页面上的“我接受促销”链接选择加入活动。促销帮助页面还有本次促销的完整信息，包括资格条款和条件。 *符合条件的商品分类 服装、...</div>
+                    <div><a href="javascript:void(0)" class="sc-widget-action-item-title"> 查看所有近期的新闻</a></div>
+                </div>
+            </div>
+            <div class="gw-column">
+                <!-- 付款一览 -->
+                <div class="a-box a-padding-base margin15">
+                    <div class="sc-widget-title" style="border-bottom: 0">
+                        <h2>付款一览 </h2>
+                        <i class="icon icon-more"></i>
+
+                    </div>
+                    <div class="a-box-inner a-padding-none">
+                        <div class="a-alert-inline a-alert-inline-info">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content">
+                                    对您的信用卡 <span class="a-text-color">US$39.99</span>收取费用。
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-link-normal margin10">
+                        <div class="float_left">
+                            <span>余额</span>
+                        </div>
+                        <div class="float_right">
+                            <a class="a-text-bold">0</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-text-center">
+                        <a href="javascript:void(0)" class="sc-widget-action-item-title">查看付款一览</a>
+                    </div>
+                </div>
+                <!-- 管理您的问题日志  -->
+                <div class="a-box a-padding-base">
+                    <div class="sc-widget-title" style="border-bottom: 0">
+                        <h2>管理您的问题日志 </h2>
+                        <i class="icon icon-more"></i>
+
+                    </div>
+                    <div class="a-text-center">
+                        <a href="javascript:void(0)" class="sc-widget-action-item-title">查看您的问题日志</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="sc-footer">
+        <div class="sc-footer-section">
+            <ul class="a-horizontal">
+                <li><a>为此页评级</a></li>
+                <li><a>获得支持</a></li>
+                <li><a>政策和协议</a></li>
+                <li>
+                    <select class="selectlang">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="sc-footer-sitemap sc-footer-section">
+            <!-- 目录/绩效 -->
+            <div class="sc-footer-sitemap-col float_left">
+                <!-- 目录 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>目录</h6>
+                    <ul>
+                        <li><a href="">添加商品</a></li>
+                        <li><a href="">补全您的草稿</a></li>
+
+                    </ul>
+                </div>
+                <!-- 绩效 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>绩效</h6>
+                    <ul>
+                        <li><a href="">账户状况</a></li>
+                        <li><a href="">反馈</a></li>
+                        <li><a href="">亚马逊商城交易保障索赔</a></li>
+                        <li><a href="">信用卡拒付索赔</a></li>
+                        <li><a href="">业绩通知</a></li>
+                        <li><a href="">卖家大学</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 库存 /设置-->
+            <div class="sc-footer-sitemap-col float_left">
+                <!-- 库存 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>库存</h6>
+                    <ul>
+                        <li><a href="">管理库存</a></li>
+                        <li><a href="">管理 FBA 库存</a></li>
+                        <li><a href="">库存规划</a></li>
+                        <li><a href="">添加新商品</a></li>
+                        <li><a href="">管理亚马逊货件</a></li>
+
+                    </ul>
+                </div>
+                <!-- 设置 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>设置</h6>
+                    <ul>
+                        <li><a href="">账户信息</a></li>
+                        <li><a href="">通知首选项</a></li>
+                        <li><a href="">登录设置</a></li>
+                        <li><a href="">退货设置</a></li>
+                        <li><a href="">配送设置</a></li>
+                        <li><a href="">您的信息和政策</a></li>
+                        <li><a href="">亚马逊物流</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 订单 /其他亚马逊链接-->
+            <div class="sc-footer-sitemap-col float_left">
+                <!-- 订单 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>订单</h6>
+                    <ul>
+                        <li><a href="">管理订单</a></li>
+                        <li><a href="">订单报告</a></li>
+                        <li><a href=""> 管理退货</a></li>
+
+                    </ul>
+                </div>
+                <!-- 其他亚马逊链接 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>其他亚马逊链接</h6>
+                    <ul>
+                        <li><a href="">亚马逊网站主页</a></li>
+                        <li><a href="">您的回购账户</a></li>
+                        <li><a href="">Kindle Direct Publishing</a></li>
+                        <li><a href="">亚马逊联盟</a></li>
+                        <li><a href="">您的买家账户</a></li>
+                    </ul>
+                </div>
+            </div>
+             <!--广告-->
+             <div class="sc-footer-sitemap-col float_left">
+                    <!-- 广告 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>广告</h6>
+                    <ul>
+                        <li><a href="">早期评论者计划</a></li>    
+                    </ul>
+                </div>
+            </div>
+            <!--店铺-->
+            <div class="sc-footer-sitemap-col float_left">
+                    <!-- 店铺 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>店铺</h6>
+                    <ul>
+                        <li><a href="">管理店铺</a></li>    
+                    </ul>
+                </div>
+            </div>
+            <!--数据报告-->
+            <div class="sc-footer-sitemap-col float_left">
+                    <!-- 数据报告 -->
+                <div class="sc-footer-sitemap-row">
+                    <h6>数据报告</h6>
+                    <ul>
+                        <li><a href="">付款</a></li> 
+                        <li><a href="">库存和销售报告</a></li> 
+                        <li><a href="">退货报告</a></li> 
+                        <li><a href="">税务文件库</a></li>    
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="sc-footer-copy">
+            <ul class="a-horizontal">
+                <li>1dafc</li>
+                <li>© 1999-2018 年，亚马逊公司或其附属公司</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js " type="text/javascript"></script>
+<script src="./js/public.js " type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+
+</html>
