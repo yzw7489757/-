@@ -12,7 +12,8 @@ function teattrValueInit() {
   editor_doc.designMode = "on";
 
   teattrValue.Start();
-  var content = decodeURIComponent("zhongguo%20feng%20creat%20by%202018.");
+  var inputVal = $("input[name='attrValue']").val()
+  var content = decodeURIComponent(inputVal);
   // Some link wizard code depends on &quot; being unescaped here:
   content = content.replace(/&quot;/g, '\"');
 

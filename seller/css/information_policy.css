@@ -114,6 +114,23 @@ center {
     font-size: 12px;
     float: left;
 }
+.secondaryTinyButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -519px;
+}
+.buttonTiny {
+    height: 11px;
+    padding-right: 3px;
+}
+.secondaryTinyButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -498px;
+}
+
+.buttonTiny span {
+    padding: 1px 1px 2px 6px;
+    font-size: 8px;
+    margin-right: 1px;
+    text-transform: uppercase;
+}
 .scui-alert-warning {
     border-color: #8b6e00;
 }
@@ -164,4 +181,9 @@ center {
     -moz-box-shadow: 0 0 0 4px #fffae7 inset;
     box-shadow: 0 0 0 4px #fffae7 inset;
     padding-left: 63px;
+}
+.small-orange {
+    color: #c60;
+    font-size: 12px;
+    top: 3px;
 }
