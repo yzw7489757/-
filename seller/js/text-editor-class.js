@@ -1,0 +1,814 @@
+
+
+function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, useColorPalette, useLinkWizard,textComponent,standardLinkPrompt, standardLinkPrefix, cssFile)
+{
+  this.mName = name;
+  var self = this;
+  this.mCommand = "";
+  this.mViewingSource = false;
+  this.mEdFrame = edFrame;
+  this.mTabholderDesign = tabholderDesign;
+  this.mTabholderCode = tabholderCode;
+  this.mToolbar = toolbar;
+  this.mUseColorPalette = useColorPalette;
+  this.mTextComponent = textComponent;
+  this.mUseLinkWizard = useLinkWizard;
+  this.mStandardLinkPrompt = standardLinkPrompt;
+  this.mStandardLinkPrefix = standardLinkPrefix;
+
+  this.tbmouseover = tbmouseover;
+  this.tbmouseout = tbmouseout;
+  this.tbmousedown = tbmousedown;
+  this.tbmouseup = tbmouseup;
+  this.tbclick = tbclick;
+
+  this.Start = Start;
+  this.toggleCodeView = toggleCodeView;
+  this.createTable = createTable;
+  this.createLink = createLink;
+  this.changeColor = changeColor; 
+  this.dismisscolorpalette = dismisscolorpalette;
+  this.viewsource = viewsource;
+  this.InitToolbarButtons = InitToolbarButtons;
+  this.getSelection = getSelection;
+  this.getElement = getElement;
+  this.insertHTMLie = insertHTMLie;
+  this.insertNodeAtSelection = insertNodeAtSelection;
+  this.getOffsetTop = getOffsetTop;
+  this.getOffsetLeft = getOffsetLeft;
+  this.Select = Select;
+  this.usecss = usecss;
+  this.readonly = readonly;
+  this.setContent = setContent;
+  this.addCss = addCss;
+  this.appendTextAreaContent = appendTextAreaContent;
+  this.updateToolbarKeyUpCheck = updateToolbarKeyUpCheck;
+  this.updateToolbar = updateToolbar;
+  this.cssFile = cssFile;
+  
+  function appendTextAreaContent()
+  {
+    this.toggleCodeView();
+    if ( !this.mViewingSource )
+    {
+      this.mTextComponent.setAttribute("value", this.mEdFrame.contentWindow.document.body.innerHTML);
+    }
+    else
+    {
+      if(document.all)
+      {
+        this.mTextComponent.setAttribute("value", this.mEdFrame.contentWindow.document.body.innerText);
+      }
+      else
+      {
+        var html = this.mEdFrame.contentWindow.document.body.ownerDocument.createRange();
+        html.selectNodeContents(this.mEdFrame.contentWindow.document.body);
+        this.mTextComponent.setAttribute("value", html.toString());
+      }
+    }         
+  }
+
+  function tbmousedown(obj, e)
+  {
+    image = obj.getElementsByTagName("IMG")[0];
+    image.style.left = 2;
+    image.style.top = 2;
+    obj.style.border="inset 2px";
+    if(!document.all) e.preventDefault();
+  }
+
+  function tbmouseup(obj)
+  {
+    image = obj.getElementsByTagName("IMG")[0];
+    image.style.left = 1;
+    image.style.top = 1;    
+    obj.style.border="outset 2px";
+  }
+
+  function tbmouseout(obj)
+  {
+    obj.style.border="solid 2px #f4f4f4";
+  }
+
+  function tbmouseover(obj)
+  {
+    obj.style.border="outset 2px";
+  }
+
+  function getSelection(win)
+  {
+    var sel = null;
+    if(win)
+    {
+      if(document.all)
+      {
+        sel = win.document.selection.range;
+        if(!sel) sel = win.document.selection.createRange();
+      }
+      else
+      {
+        sel = win.getSelection();
+      }                       
+    }
+
+    return sel;
+  }
+
+  function getElement(oEl,sTag) 
+  {
+    while ( oEl != null && oEl.tagName != sTag )
+    {
+      if(document.all) oEl = oEl.parentElement;
+      else oEl = oEl.parentNode;
+    }
+
+    return oEl;
+  }
+
+
+
+  // works only in IE
+  function insertHTMLie(win, data)
+  {
+    var sel;
+    sel = win.document.selection.range;
+
+    if(!sel)
+    {
+      sel = win.document.selection.createRange();
+    }
+
+    if(sel)
+    {
+      sel.pasteHTML(data);
+    }
+  }
+
+
+  // only works in Mozilla compatible browsers
+  function insertNodeAtSelection(win, insertNode)
+  {
+    // get current selection
+    var sel;
+    sel = win.getSelection();
+
+    // get the first range of the selection
+    // (there's almost always only one range)
+    var range;
+    range = sel.getRangeAt(0);
+
+    // deselect everything
+    sel.removeAllRanges();
+
+    // remove content of current selection from document
+    range.deleteContents();
+
+    // get location of current selection
+    var container = range.startContainer;
+    var pos = range.startOffset;
+
+    // make a new range for the new selection
+    range = document.createRange();
+
+    if (container.nodeType==3 && insertNode.nodeType==3) 
+    {
+      // if we insert text in a textnode, do optimized insertion
+      container.insertData(pos, insertNode.nodeValue);
+
+      // put cursor after inserted text
+      range.setEnd(container, pos+insertNode.length);
+      range.setStart(container, pos+insertNode.length);               
+    } 
+    else 
+    {
+      var afterNode;
+      if (container.nodeType==3) 
+      {
+        // when inserting into a textnode
+        // we create 2 new textnodes
+        // and put the insertNode in between
+
+        var textNode = container;
+        container = textNode.parentNode;
+        var text = textNode.nodeValue;
+
+        // text before the split
+        var textBefore = text.substr(0,pos);
+        // text after the split
+        var textAfter = text.substr(pos);
+
+        var beforeNode = document.createTextNode(textBefore);
+        var afterNode = document.createTextNode(textAfter);
+
+        // insert the 3 new nodes before the old one
+        container.insertBefore(afterNode, textNode);
+        container.insertBefore(insertNode, afterNode);
+        container.insertBefore(beforeNode, insertNode);
+
+        // remove the old node
+        container.removeChild(textNode);
+      } 
+      else 
+      {               
+        // else simply insert the node
+        afterNode = container.childNodes[pos];
+        container.insertBefore(insertNode, afterNode);
+      }
+
+      range.setEnd(afterNode, 0);
+      range.setStart(afterNode, 0);
+    }
+
+    sel.addRange(range);
+  }
+
+  function getOffsetTop(elm) 
+  {
+    var mOffsetTop = elm.offsetTop;
+    var mOffsetParent = elm.offsetParent;
+
+    while(mOffsetParent)
+    {
+      mOffsetTop += mOffsetParent.offsetTop;
+      mOffsetParent = mOffsetParent.offsetParent;
+    }
+
+    return mOffsetTop;
+  }
+
+  function getOffsetLeft(elm) 
+  {
+    var mOffsetLeft = elm.offsetLeft;
+    var mOffsetParent = elm.offsetParent;
+
+    while(mOffsetParent)
+    {
+      mOffsetLeft += mOffsetParent.offsetLeft;
+      mOffsetParent = mOffsetParent.offsetParent;
+    }
+
+    return mOffsetLeft;
+  }
+
+  function changeColor(color)
+  {
+    this.dismisscolorpalette();
+    this.mEdFrame.contentWindow.document.execCommand(parent.command, false, color);
+    this.mEdFrame.contentWindow.focus();
+  }
+
+  function createLink(url)
+  {
+    this.mEdFrame.contentWindow.document.execCommand("CreateLink", false, url);
+  }
+
+
+  function createTable(rows, cols, border)
+  {
+    this.mEdFrame.contentWindow.focus();
+
+    // here's the IE case
+    if(document.all)
+    {
+      if ((rows > 0) && (cols > 0)) 
+      {
+        var htmlString = '<table border="' + border + '" cellpadding="2" cellspacing="2">';
+        htmlString += '<tbody>';
+        for (var i=0; i < rows; i++) 
+        {
+          htmlString += '<tr>';
+          for (var j=0; j < cols; j++) 
+          {
+            htmlString += '<td><br></td>';
+          }
+          htmlString += '</tr>';
+        }
+        htmlString += '</tbody></table>';
+        this.insertHTMLie(this.mEdFrame.contentWindow, htmlString);                   
+      }
+    }
+
+    // and the mozilla case
+    else
+    {                 
+      if ((rows > 0) && (cols > 0)) 
+      {
+        table = this.mEdFrame.contentWindow.document.createElement("table");
+        table.setAttribute("border", border);
+        table.setAttribute("cellpadding", "2");
+        table.setAttribute("cellspacing", "2");
+        tbody = this.mEdFrame.contentWindow.document.createElement("tbody");
+        for (var i=0; i < rows; i++) 
+        {
+          tr = this.mEdFrame.contentWindow.document.createElement("tr");
+          for (var j=0; j < cols; j++) 
+          {
+            td = this.mEdFrame.contentWindow.document.createElement("td");
+            br = this.mEdFrame.contentWindow.document.createElement("br");
+            td.appendChild(br);
+            tr.appendChild(td);
+          }
+          tbody.appendChild(tr);
+        }
+        table.appendChild(tbody);      
+        insertNodeAtSelection(this.mEdFrame.contentWindow, table);
+      }
+    }
+  }
+
+  function tbclick(obj, e)
+  {               
+    setCurrentEditor(this);
+
+    var altKey = false;
+    if(window.event) 
+      altKey = window.event.altKey;
+    else altKey = e.altKey;
+
+    if (obj.id == "forecolor") 
+    {
+      parent.command = obj.id;
+      if(altKey || this.mUseColorPalette == 0)
+      {
+        openModalDialog("/gp/color-picker.html", 325, 250, "scrollbars=no");
+      }       
+      else
+      {                       
+        document.getElementById("colorpalette" + this.mName).style.left = getOffsetLeft(obj);
+        document.getElementById("colorpalette" + this.mName).style.top = getOffsetTop(obj) + obj.offsetHeight;
+        if(document.all)
+        {
+          document.getElementById("colorpalette" + this.mName).style.width = '238px';
+          document.getElementById("colorpalette" + this.mName).style.height = '173px';
+        }
+        document.getElementById("colorpalette" + this.mName).style.visibility="visible";
+      }
+    } 
+    else if (obj.id == "createlink") 
+    {
+      var szURL = "";
+      var oEl = null;
+      var oSel = this.getSelection(this.mEdFrame.contentWindow);
+
+      // get the old href value
+      if(document.all)
+      {
+        if (oSel.parentElement) 
+        {
+          oEl = this.getElement(oSel.parentElement(),"A");
+        }
+        else
+        {
+          oEl = this.getElement(oSel.item(0),"A");
+        }                             
+      }
+      else
+      {
+        var range = oSel.getRangeAt(0);
+        var container = range.startContainer;
+        oEl = this.getElement(container, "A");
+      }
+
+      if (oEl)
+      {
+        szURL = oEl.href;
+        szURL = unescape(szURL);
+      }
+
+      // link-wizard style
+      if(this.mUseLinkWizard)
+      {
+        // now, if we got that, split it up into the arguments we are going to use
+        var szType             = "browse";
+        var selectedMerchantID = "default";
+        var szURLPopup         = "no";
+        var szLinkTitle        = "";
+
+        if(szURL.length > 0)
+        {
+          var linkArguments    = szURL.split("|");
+          var linkTypeAndValue = linkArguments[0];
+
+          // We must catch the case the the url itself has
+          // pipes in it.  We'll do this by looking for a
+          // yes/no field in the splits, assuming that to be
+          // the linkPopup value.
+          // 
+          // See TT: #0003414335 - bernard 8/30/07
+          var popupParameterIndex = 1;
+
+          if ( linkArguments.length > 4 )
+          {
+            for(var i = popupParameterIndex; i < linkArguments.length; i++)
+            {
+              if ( linkArguments[i] == 'yes' || 
+                   linkArguments[i] == 'no'  || 
+                   linkArguments[i] == '' ) 
+              {
+                break;
+              }
+
+              linkTypeAndValue += "|" + linkArguments[i];
+              popupParameterIndex++;
+            }
+          }
+
+          szURLPopup = linkArguments[popupParameterIndex];
+          if ( linkArguments[popupParameterIndex + 1] )
+          {
+            selectedMerchantID = linkArguments[popupParameterIndex + 1];
+          }
+
+          szLinkTitle = linkArguments[popupParameterIndex + 2];
+          szLinkTitle = encodeURIComponent(szLinkTitle);
+
+          var linkTypeAndValueArray = linkTypeAndValue.split(":");
+
+          szURL  = linkTypeAndValueArray[1];
+          szType = linkTypeAndValueArray[0];
+
+          if ( szURL.indexOf("http") == 0 )
+          {
+            szURL += ":" + linkTypeAndValueArray[2];
+          }       
+        }
+
+        szURL = encodeURIComponent(szURL);
+
+        // now open the content editor link wizard dialog
+        openModalDialog("/gp/content-editor/content-editor-link-dlog.html?linkTypeSelected=" + szType + "&linkValue=" + szURL + "&linkMerchantID="+ selectedMerchantID + "&linkPopupState=" + szURLPopup + "&linkTitle=" + szLinkTitle, 500, 300, "scrollbars=no");                           
+      }
+
+      // standard links
+      else
+      {                 
+        if(szURL != null && szURL.length > this.mStandardLinkPrefix.length)
+        {
+          szURL = szURL.substr(szURL.indexOf(this.mStandardLinkPrefix) + this.mStandardLinkPrefix.length, szURL.length - (szURL.indexOf(this.mStandardLinkPrefix) + this.mStandardLinkPrefix.length));
+        }
+        szURL = prompt(this.mStandardLinkPrompt, szURL);
+        if(szURL != null) this.mEdFrame.contentWindow.document.execCommand("CreateLink",false,this.mStandardLinkPrefix + szURL);
+      }
+    } 
+    else if (obj.id == "inserttable")
+    {
+      openModalDialog("/gp/content-editor/content-editor-table-dlog.html", 200, 150, "scrollbars=no");
+    }
+    else if(obj.id == "insertC")
+    {
+      this.mEdFrame.contentWindow.focus();
+      if(document.all) insertHTMLie(this.mEdFrame.contentWindow, '&copy;');                   
+      else insertNodeAtSelection(this.mEdFrame.contentWindow, document.createTextNode('\251'));    
+    }
+    else if(obj.id == "insertR")
+    {
+      this.mEdFrame.contentWindow.focus();
+      if(document.all) insertHTMLie(this.mEdFrame.contentWindow, '&reg;');                    
+      else insertNodeAtSelection(this.mEdFrame.contentWindow, document.createTextNode('\256'));    
+    }
+    else if(obj.id == "insertTM")
+    {
+      this.mEdFrame.contentWindow.focus();
+      if(document.all) insertHTMLie(this.mEdFrame.contentWindow, '&trade;');                  
+      else insertNodeAtSelection(this.mEdFrame.contentWindow, document.createTextNode('\u2122'));    
+    }
+    else 
+    {
+      this.mEdFrame.contentWindow.focus();
+      this.mEdFrame.contentWindow.document.execCommand(obj.id, false, null);
+    }
+  }
+        
+  function Select(selectbox)
+  {
+    var cursel = selectbox.selectedIndex;
+    var selected = selectbox.options[cursel].value;
+    /* First one is always a label */
+    if (cursel != 0) 
+    {
+      if(selectbox.id === 'headertag')
+      {
+       if(selected === 'clear') //if clearing header tags
+       {
+         var selection;
+         var headerNodes = new Array();
+         var regH = /^(?:h[1-6]|p)$/i;
+         var range;
+         var commonParent;
+         if(this.mEdFrame.contentWindow.getSelection){ //if firefox
+           selection = this.mEdFrame.contentWindow.getSelection();
+           range = selection.getRangeAt(0);
+           commonParent = range.commonAncestorContainer;
+         }else{ //else if IE
+           range = this.mEdFrame.contentWindow.document.selection.createRange();
+           commonParent = range.parentElement();
+         }
+         //check if current commonParent tag is header
+         if(regH.test(commonParent.tagName)){
+           headerNodes[0] = commonParent;
+         }else{
+           headerNodes[0] = getParentWithTag(commonParent, regH); //search to see if any parents are header tags
+           if(!headerNodes[0]){
+             headerNodes = getChildrenWithTag(commonParent, regH); //search children for header tags
+           }
+         }                                                                                 
+         //now to remove header tags from returned node(s)
+         for(var i = 0; i < headerNodes.length; i++){
+           removeNodeTag(headerNodes[i]);
+         }
+         
+         selectbox.selectedIndex = 0;  
+       }else{  //If clear is not selected formatblock with selected header tag
+         this.mEdFrame.contentWindow.document.execCommand('formatblock', false, selected);
+         selectbox.selectedIndex = 0;
+       }
+     }else{  //If not header tag selectbox
+      this.mEdFrame.contentWindow.document.execCommand(selectbox.id, false, selected);
+      selectbox.selectedIndex = 0;
+     }
+    }
+    updateToolbar();
+    this.mEdFrame.contentWindow.focus();
+  }
+
+  function getParentWithTag(parent, tagRegex) //returns first parent whos tag matches tagRegex or null if it hits the body tag
+  {
+   while(parent){
+     if(tagRegex.test(parent.tagName)){
+       return parent;
+     }
+     parent = parent.parentNode;
+   } 
+  }
+
+//searches all children of the parent node for the tag matching the regEx passed **recursive**
+  function getChildrenWithTag(parent, tagRegex)
+  {
+    var temp = new Array();
+    var matches = new Array();
+
+    if(parent.hasChildNodes()){
+      var children = parent.childNodes;
+      for(var i = 0; i < children.length; i ++){
+        if(tagRegex.test(children[i].tagName)){
+          matches.push(children[i]);
+        }else{
+          temp = getChildrenWithTag(children[i], tagRegex);
+          matches = matches.concat(temp);
+        }
+      }
+    } 
+    return matches;
+  }
+
+  function removeNodeTag(headerNode)
+  {
+    var parent = headerNode.parentNode;
+    if(headerNode.hasChildNodes()){ //copy over all possible 
+      var children = headerNode.childNodes;
+      var childNode;
+      var count = children.length-1; // must set var because children.length changes as you modify childNodes
+     for(var x = 0; x <= count; x++){ //go through children to insert before header
+        childNode = children[0]; //because insertBefore modifys the dom and in turn the children list on the fly
+        parent.insertBefore(childNode, headerNode);
+      }
+    }
+    parent.removeChild(headerNode);          
+  }
+
+  function updateToolbarKeyUpCheck(e) //IE only
+   {
+      var key;
+      if(this.mEdFrame.contentWindow.event){
+         key = this.mEdFrame.contentWindow.event.keyCode;
+      }else{ 
+        key = e.keyCode;
+      }
+      if(key && (key === 37 || key === 38 || key === 39 || key === 40)){ //if arrow key is pressed
+        updateToolbar();
+      }
+  }
+  
+  function updateToolbar() //IE only
+  {
+    //Because this function is called off of an event on the <body> of the html inside the iframe 'this' inside updateToolbar
+    //refers to the element that called the function. 
+    //To create closure and allow access to the elements inside AMZTextEditor we
+    //have to create a variable self that you reference in the updateToolbar function.
+    var range = self.mEdFrame.contentWindow.document.selection.createRange();
+    commonParent = range.parentElement();
+    //First checking header and p tags
+    var regH = /^(?:h[1-6]|p)$/i;
+    var headerNodes;
+    //check if current commonParent tag is header or p
+    if(regH.test(commonParent.tagName)){
+      headerNodes = commonParent;
+    }else{
+       headerNodes = getParentWithTag(commonParent, regH); //search to see if any parents are header tags
+    }                                                                                 
+    var hdSelector = parent.document.getElementById("headertag");
+    if(headerNodes){
+      //update header toolbar selector based on if a header was returned - uses first parent header found
+      var header = headerNodes.tagName;
+      for (var i=0;i<hdSelector.length;i++){
+        if(hdSelector.options[i].text === header)
+          hdSelector.selectedIndex = i;    
+      }            
+    }else{
+      hdSelector.selectedIndex = 0;
+    }
+    //Now checking font size
+    var regFont = /font/i;
+    var fontNodes;
+    //check if current commonParent tag is font
+    if(regFont.test(commonParent.tagName)){
+    fontNodes = commonParent;
+    }else{
+      fontNodes = getParentWithTag(commonParent, regFont); //search to see if any parents are font tags
+    }
+    var fontSelector = parent.document.getElementById("fontsize");
+    if(fontNodes){
+      //update font size toolbar selector based on if a font was returned
+      fontSelector.selectedIndex = fontNodes.size;
+    }else{
+      fontSelector.selectedIndex = 0;
+    }
+  
+  //Append to this function to check for size and other tags to update toolbar 
+  //(use getParentWithTag(node, regularExpression) to get wrapping tags) 
+  }
+
+  function dismisscolorpalette()
+  {
+    if(this.mUseColorPalette)
+      document.getElementById("colorpalette" + this.mName).style.visibility="hidden";
+  }
+
+  function InitToolbarButtons() 
+  {
+    kids = document.getElementsByTagName('DIV');
+
+    for (var i=0; i < kids.length; i++) 
+    {
+      if (kids[i].className == "imagebutton") 
+      {
+        kids[i].onmouseover = this.tbmouseover;
+        kids[i].onmouseout = this.tbmouseout;
+        kids[i].onmousedown = this.tbmousedown;
+        kids[i].onmouseup = this.tbmouseup;
+        kids[i].onclick = this.tbclick;
+      }
+    }
+  }
+        
+  function Start() 
+  {
+    if(!document.all) this.mEdFrame.contentWindow.document.execCommand('useCSS', false, true);
+
+    // mozilla/netscape specific 
+    if(document.addEventListener)
+    {
+      document.addEventListener("mousedown", killcolorpalette, true);
+      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("mousedown", killcolorpalette, true);
+      document.addEventListener("keypress", killcolorpalette, true);
+      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("keypress", killcolorpalette, true);
+    }
+    // IE specific
+    else if(document.attachEvent)
+    {
+      document.attachEvent("onmousedown", killcolorpalette);
+      document.getElementById("edit" + this.mName).contentWindow.document.attachEvent("onmousedown", killcolorpalette);
+      document.attachEvent("onkeypress", killcolorpalette);
+      document.getElementById("edit" + this.mName).contentWindow.document.attachEvent("onkeypress", killcolorpalette);
+    }               
+  }
+        
+  function setContent(content)
+  {
+    if(this.mViewingSource)
+    {
+      this.mEdFrame.contentWindow.document.body.innerText = content;
+    }
+    else 
+    {
+      this.mEdFrame.contentWindow.document.body.innerHTML = "";
+      if(content.length > 0)
+      {
+        this.mEdFrame.contentWindow.document.write(content);
+        this.mEdFrame.contentWindow.document.close();
+      }
+    }
+  }
+
+  function viewsource(source)
+  {
+    if (source) 
+    {
+      this.mTabholderDesign.style.display = 'none';
+      this.mTabholderCode.style.display = 'block';
+      ul_accessibility_fix(this.mEdFrame.contentWindow.document.body);
+
+      // IE version of this code
+      if(document.all)
+      {       
+        var iHTML = this.mEdFrame.contentWindow.document.body.innerHTML;
+        this.mEdFrame.contentWindow.document.body.innerText = iHTML; 
+      }
+
+      // mozilla/netscape version
+      else
+      {
+        var html = document.createTextNode(this.mEdFrame.contentWindow.document.body.innerHTML);
+        this.mEdFrame.contentWindow.document.body.innerHTML = "";
+        this.mEdFrame.contentWindow.document.body.appendChild(html);
+      }
+
+      this.mToolbar.style.visibility="hidden";  
+    } 
+    else 
+    {
+      this.mTabholderCode.style.display = 'none';
+      this.mTabholderDesign.style.display = 'block';
+
+      // IE version of this code
+      if(document.all)
+      {
+        iText = this.mEdFrame.contentWindow.document.body.innerText;
+        this.mEdFrame.contentWindow.document.body.innerHTML = "";
+        if(iText.length > 0)
+        {
+          this.mEdFrame.contentWindow.document.write(iText);
+          this.mEdFrame.contentWindow.document.close();
+        }
+       
+       this.mEdFrame.contentWindow.document.body.onkeyup=function(){window.parent["te"+name].updateToolbarKeyUpCheck(event);};
+       this.mEdFrame.contentWindow.document.body.onclick=function(){window.parent["te"+name].updateToolbar();};
+       this.addCss(this.mEdFrame.contentWindow.document, this.cssFile);
+       this.mEdFrame.contentWindow.document.body.className = name;
+      }
+      
+      // mozilla/netscape version
+      else
+      {
+        var html = this.mEdFrame.contentWindow.document.body.ownerDocument.createRange();
+        html.selectNodeContents(this.mEdFrame.contentWindow.document.body);
+        this.mEdFrame.contentWindow.document.body.innerHTML = html.toString();
+      }
+      ul_accessibility_fix(this.mEdFrame.contentWindow.document.body);
+      
+
+      this.mToolbar.style.visibility="visible";  
+    }
+  }
+
+  function ul_accessibility_fix(element) {
+    var children = element.childNodes;
+    for (var i = 0; i < children.length; i++) {
+      ul_accessibility_fix(children[i]);
+      if (element.nodeName == "UL" && children[i].nodeName == "UL") {
+        if (i == 0) {
+          var new_li = document.createElement("li");
+          element.insertBefore(new_li, children[i]);
+        }
+        else {
+          children[i-1].appendChild(children[i]);
+          i--;
+        }
+      }
+    }
+  }
+
+
+ function addCss(targetDoc, cssFile) {
+   if(cssFile!= ''){
+     var cssImport = '@import "' + cssFile +'";';
+     var styleElement = targetDoc.createElement("style"); 
+     targetDoc.getElementsByTagName("head")[0].appendChild(styleElement);
+     styleElement.type = "text/css";
+     if(styleElement.styleSheet){
+       styleElement.styleSheet.cssText = cssImport;
+     }else{ //for ff
+       styleElement.appendChild(targetDoc.createTextNode(cssImport));
+     }
+   }
+ } 
+ 
+  function usecss(flag)
+  {
+    this.mEdFrame.contentWindow.document.execCommand("useCSS", false, !flag);  
+  }
+
+  function readonly(flag)
+  {
+    this.mEdFrame.contentWindow.document.execCommand("readonly", false, flag);  
+  }
+
+  function toggleCodeView()
+  {
+    this.mViewingSource = !this.mViewingSource;
+    this.viewsource(this.mViewingSource);           
+  }
+
+}
+
+

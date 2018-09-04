@@ -1,0 +1,106 @@
+#sc-cted-wrapper {
+    width: 604px;
+  }
+
+  .sc-cted {
+    clear: both;
+  }
+
+  .sc-cted-li-buttons,
+  .sc-cted-li-editor {
+    background-color: #f4f4f4;
+  }
+
+  .sc-cted-li-editor iframe {
+    background-color: #fff;
+  }
+
+  .sc-cted-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sc-cted-list-tabs {
+    height: 21px;
+    position: relative;
+    z-index: 100;
+    border-bottom: 1px solid #666;
+  }
+
+  .sc-cted-button {
+    float: left;
+    margin: 3px;
+  }
+
+  .sc-cted-tab {
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #e6e6e6;
+    height: 18px;
+  }
+
+  .sc-cted-tab-endcap,
+  .sc-cted-endcap-mid {
+    width: 11px;
+    padding: 3px 1px 0;
+    height: 19px;
+    background-repeat: no-repeat;
+    border-bottom: none;
+
+  }
+
+  .sc-cted-designtab,
+  .sc-cted-codetab {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+
+  .sc-cted-tab1active .sc-cted-designtab {
+    color: #c36b09;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  .sc-cted-tab1active .sc-cted-endcap-mid {
+    background-image: url('../img/tab-middle-design-active.gif');
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0;
+  }
+
+  .sc-cted-tab1active .sc-cted-codetab {
+    height: 21px;
+  }
+
+  .sc-cted-tab1active .sc-cted-tab-endcap {
+    height: 18px;
+    background-image: url('../img/tab-right-code-inactive.gif');
+    padding: 0;
+  }
+
+  .sc-cted-tab2active .sc-cted-designtab {
+    height: 21px;
+  }
+
+  .sc-cted-tab2active .sc-cted-endcap-mid {
+    background-image: url('../img/tab-middle-code-active.gif');
+    padding: 0;
+  }
+
+  .sc-cted-tab2active .sc-cted-codetab {
+    color: #c36b09;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  .sc-cted-tab2active .sc-cted-tab-endcap {
+    background-image: url('../img/tab-right-code-active.gif');
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0;
+  }
+  .tiny p {
+      text-align: -webkit-left;
+  }
