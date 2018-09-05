@@ -1,25 +1,35 @@
-var teattrValue = new AMZTextEditor("attrValue",
-  document.getElementById("editattrValue"),
-  document.getElementById("tabHolderDesignattrValue"),
-  document.getElementById("tabHolderCodeattrValue"),
-  document.getElementById("toolbar2attrValue"),
+var teattrValue = new AMZTextEditor("0_attrValue",
+  document.getElementById("edit0_attrValue"),
+  document.getElementById("tabHolderDesignattrValue_0"),
+  document.getElementById("tabHolderCodeattrValue_0"),
+  document.getElementById("toolbar2attrValue_0"),
   0, 0,
-  document.getElementById("text_component_attrValue"),
+  document.getElementById("text_component_0_attrValue"),
+  "Enter a URL", "", "");
+var teattrValue_1 = new AMZTextEditor("1_attrValue",
+  document.getElementById("edit1_attrValue"),
+  document.getElementById("tabHolderDesignattrValue_1"),
+  document.getElementById("tabHolderCodeattrValue_1"),
+  document.getElementById("toolbar2attrValue_1"),
+  0, 0,
+  document.getElementById("text_component_1_attrValue"),
   "Enter a URL", "", "");
 
 function teattrValueInit() {
-  var editor_doc = document.getElementById("editattrValue").contentWindow.document;
+
+  var editor_doc = document.getElementById("edit0_attrValue").contentWindow.document;
   editor_doc.designMode = "on";
 
   teattrValue.Start();
-  var inputVal = $("input[name='attrValue']").val()
+
+  var inputVal = $("input[name='0_attrValue']").val()
   var content = decodeURIComponent(inputVal);
   // Some link wizard code depends on &quot; being unescaped here:
   content = content.replace(/&quot;/g, '\"');
 
   function update() {
     teattrValue.setContent(content);
-    var editor_doc = document.getElementById("editattrValue").contentWindow.document;
+    var editor_doc = document.getElementById("edit0_attrValue").contentWindow.document;
     //Below two lines work in IE only
     editor_doc.body.onkeyup = function () {
       window.parent.teattrValue.updateToolbarKeyUpCheck(event);
@@ -27,7 +37,7 @@ function teattrValueInit() {
     editor_doc.body.onclick = function () {
       window.parent.teattrValue.updateToolbar();
     };
-    editor_doc.body.className = "attrValue";
+    editor_doc.body.className = "attrValue_0";
     teattrValue.addCss(editor_doc, "");
 
   }
@@ -36,7 +46,7 @@ function teattrValueInit() {
   var iframeTimeoutMillis = 3000;
 
   function waitForDoc() {
-    var doc = document.getElementById("editattrValue").contentWindow.document;
+    var doc = document.getElementById("edit0_attrValue").contentWindow.document;
     if (doc.body) {
       update();
     } else if (iframeTimeoutMillis > 0) {
@@ -53,8 +63,60 @@ function teattrValueInit() {
   } catch (ex) {}
 }
 
-if (window.addEventListener) window.addEventListener("load", teattrValueInit, true);
-else if (window.attachEvent) window.attachEvent("onload", teattrValueInit);
+function teattrValueInit_fe() {
+
+  var editor_doc = document.getElementById("edit1_attrValue").contentWindow.document;
+  editor_doc.designMode = "on";
+
+  teattrValue_1.Start();
+
+  var inputVal = $("input[name='1_attrValue']").val()
+  var content = decodeURIComponent(inputVal);
+  // Some link wizard code depends on &quot; being unescaped here:
+  content = content.replace(/&quot;/g, '\"');
+
+  function update() {
+    teattrValue_1.setContent(content);
+    var editor_doc = document.getElementById("edit1_attrValue").contentWindow.document;
+    //Below two lines work in IE only
+    editor_doc.body.onkeyup = function () {
+      window.parent.teattrValue_1.updateToolbarKeyUpCheck(event);
+    };
+    editor_doc.body.onclick = function () {
+      window.parent.teattrValue_1.updateToolbar();
+    };
+    editor_doc.body.className = "attrValue_1";
+    teattrValue_1.addCss(editor_doc, "");
+
+  }
+
+  //wait for the iframe from timeOut amount of ms, then give up with empty content.
+  var iframeTimeoutMillis = 3000;
+
+  function waitForDoc() {
+    var doc = document.getElementById("edit1_attrValue").contentWindow.document;
+    if (doc.body) {
+      update();
+    } else if (iframeTimeoutMillis > 0) {
+      iframeTimeoutMillis -= 100;
+      setTimeout(waitForDoc, 100);
+    }
+  }
+  waitForDoc();
+
+  currentTE = teattrValue_1;
+  try {
+    //this only works in firefox
+    editor_doc.execCommand("styleWithCSS", false, false);
+  } catch (ex) {}
+}
+
+if (window.addEventListener) {
+  window.addEventListener("load", teattrValueInit_fe, true);
+  window.addEventListener("load", teattrValueInit, true);
+} else if (window.attachEvent) {
+  window.attachEvent("onload", teattrValueInit);
+}
 
 function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, useColorPalette, useLinkWizard, textComponent, standardLinkPrompt, standardLinkPrefix, cssFile) {
   // name 文本输入框id
@@ -574,7 +636,10 @@ function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, u
   }
 
   function updateToolbar() //IE only
-  {
+  { 
+    if(navigator.appName !== 'Microsoft Internet Explorer'){
+      return
+    }
     //Because this function is called off of an event on the <body> of the html inside the iframe 'this' inside updateToolbar
     //refers to the element that called the function. 
     //To create closure and allow access to the elements inside AMZTextEditor we
@@ -647,9 +712,9 @@ function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, u
     // mozilla/netscape specific 
     if (document.addEventListener) {
       document.addEventListener("mousedown", killcolorpalette, true);
-      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("mousedown", killcolorpalette, true);
+      document.getElementById("edit" +this.mName).contentWindow.document.addEventListener("mousedown", killcolorpalette, true);
       document.addEventListener("keypress", killcolorpalette, true);
-      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("keypress", killcolorpalette, true);
+      document.getElementById("edit" +this.mName).contentWindow.document.addEventListener("keypress", killcolorpalette, true);
     }
     // IE specific
     else if (document.attachEvent) {

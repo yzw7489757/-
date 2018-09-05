@@ -384,7 +384,7 @@ inputctr.public.initImgUploader = function(imguploader,serverUrl,fileQueuedcallb
 	    // 选择文件的按钮。可选。
 	    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
 	    pick: imguploader,
-	    // 选择文件。
+	    // 选择文件。 
 	    accept: {
 	        title: 'File',
 	        extensions: 'gif,jpg,png,doc,pdf,docx',
