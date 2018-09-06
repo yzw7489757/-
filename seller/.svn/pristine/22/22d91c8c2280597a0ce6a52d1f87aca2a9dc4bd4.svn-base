@@ -125,17 +125,20 @@
             </tr>
             <tr>
                 <td valign="top" align="left">
-                    <span class="header-orange">关于卖家</span>
+                    <span class="header-orange">常见问题</span>
                     <br>
                     <span class="tiny">
-                        在“关于卖方”页面上，您可以向顾客介绍您的业务并创建您的品牌。在此部分中可以介绍您如何开始您的业务、您已从事了多长时间、您公司的理念是什么、是否有实际的店面和/或您拥有多少员工。请尽管详细阐述这些主题及其他内容。
-                        <a href="javascript:void(0)">了解更多信息</a>
-                        <p>不得在任何品种、图片或支持信息中加入
-                            URL，也不得在亚马逊流程的任何部分中加入您网站的超链接。禁止任何企图将亚马逊用户导向其他网站或销售流程的行为。特别要禁止任何引导、促使或鼓励亚马逊用户离开亚马逊网站的广告、营销信息（特价优惠）或“行动呼吁”。
-                        </p>
+                        使用此页面可以对未在其他“帮助”页面上解答的有关政策或产品的问题进行解答。我们建议使用可用的格式化工具并采用标准的 Q&A 格式。
                         <p>
-                            <b>注：</b> 无需在此插入客户服务联系信息。我们将根据您在“账户管理”选项卡下配置部分中提供的信息，自动维护您的客户服务联系信息。
+                            例如：
+                            <br>
+                            <b>Q:</b><span>您如何确保发出的商品完整无缺地送达顾客手中？ </span>
+                            <br>
+                            <b>A:</b><span> Acme 的所有货件都采用如下方式包装和配送：确保安全送货，所选的送货商都拥有极佳的口碑。 </span>
+                            <br>
+                            <a href="javascript:void(0)">了解更多信息</a>
                         </p>
+
                     </span>
 
                     <form method="POST" action="">
@@ -150,13 +153,13 @@
                                                 <tr>
                                                     <td bgcolor="#F4F4F4" align="right" valign="top" width="40%" style="
                                                     text-align: -webkit-right;">
-                                                        <span class="tiny"><b>关于卖家帮助内容：</b><br>
+                                                        <span class="tiny"><b>常见问题</b><br>
                                                             (最多 10,000 个字符)
                                                         </span>
                                                     </td>
                                                     <td bgcolor="#FFFFFF" align="left" valign="middle" width="60%">
                                                         <input type="hidden" id="text_component_attrValue" name="attrValue"
-                                                            value="zhongguo feng creat by 2018.">
+                                                            value="Q:Are the products provided by zhongguo feng&nbsp;all new products?&nbsp;<div>A:Yes all the products is new.</div><div><br /></div><div>Q:Where the product shipped?</div><div>A:Our products are shipped from China, some use FBA.</div>">
                                                         <ul id="sc-cted-wrapper" class="sc-cted-container">
                                                             <li class="sc-cted-list-tabs sc-cted">
                                                                 <ul id="sc-cted-tabwrapper" class="sc-cted-container">
@@ -339,7 +342,7 @@
                                         <td>
                                             <button name="Save" id="ID" class="awesomeButton buttonLarge primaryLargeButton"
                                                 type="submit">
-                                                <span class="button_label saveBtn">保存</span>
+                                                <span class="button_label saveBtn" >保存</span>
                                             </button>
                                         </td>
                                     </tr>
@@ -369,5 +372,5 @@
 <script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="js/text-edit.js" type="text/javascript"></script>
 <script src="js/webjs/information_policy.js" type="text/javascript"></script>
-<script src="js/webjs/information_policy_seller.js"></script>
+<script src="js/webjs/information_policy_answer.js" type="text/javascript"></script>
 </html>

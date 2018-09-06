@@ -1,0 +1,49 @@
+$(function () {
+    var baseUrl = "http://192.168.2.164:8096/QAMZNAPI.asmx"
+    var shippingPolicies = $("input[name='1_attrValue']").val() 
+    var shippingRates = $("input[name='0_attrValue']").val()
+    
+    // 获取关于卖家内容
+    $.ajax({
+        url: baseUrl + '/GetAboutShipping',
+        method: 'post',
+        dataType: "json",
+        data: {
+            userid: amazon_userid,
+        },
+        success: function (res) {
+            console.log(res);
+            shippingPolicies = $("input[name='0_attrValue']").val(decodeURIComponent(res.shippingPolicies))
+            shippingRates = $("input[name='1_attrValue']").val(decodeURIComponent(res.shippingRates))
+        },
+        error: function (res) {
+            console.log(decodeURIComponent(res.error))
+        }
+    })
+   
+    //设置关于卖家内容
+    $('button').click(function (e) {
+        e.preventDefault(); 
+        shippingPolicies = document.getElementById("edit0_attrValue").contentWindow.document.body.innerHTML
+        shippingRates = document.getElementById("edit1_attrValue").contentWindow.document.body.innerHTML
+        $.ajax({
+            url: baseUrl + '/SetAboutShipping',
+            method: 'post',
+            dataType: "json",
+            data: {
+                userid: amazon_userid,
+                shippingPolicies:shippingPolicies,
+                shippingRates:shippingRates
+            },
+            success: function (res) {
+                console.log(res);
+                if(res.result == 1){
+                    $('.submitInfo').show()
+                } 
+            },
+            error: function (res) {
+                console.log(decodeURIComponent(res.error))
+            }
+        })
+    })
+})

@@ -1,0 +1,189 @@
+body, td, th {
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+table{
+    width: 95%;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    margin-top: 12px;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    -webkit-border-horizontal-spacing: 4px;
+    -webkit-border-vertical-spacing: 4px;
+}
+table tr td{
+    text-align: left;
+    font-weight: normal;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.h1, .header-orange {
+    color: #c60;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.small {
+    font-size: 12px;
+}
+.list_table{
+    background-color: rgb(244, 244, 244);
+    vertical-align: middle;
+    padding: 4px;
+    border: 1px solid  grey;
+}
+.width33{
+    width:33%;
+}
+.list_table a{
+    text-decoration: underline;
+}
+a:visited {
+    color: #963;
+}
+
+a:link {
+    color: #004b91;
+}
+.title_text{
+    padding: 4px;
+    display: inline-block;
+    border: 1px solid  grey;
+    width: 99%;
+    box-sizing: border-box;
+    border-bottom: 0;
+}
+.tiny{
+    background-color: rgb(244, 244, 244);
+    text-align: -webkit-right;
+    vertical-align: top;
+    width: 40%;
+    font-size: 10px;
+}
+.second{
+    width: 60%;
+}
+
+.sc-cted-tab {
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px 0;
+    background-color: #e6e6e6;
+}
+center {
+    display: block;
+    text-align: -webkit-center;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
+}
+
+.buttonLarge {
+    height: 22px;
+    padding-right: 6px;
+}
+.inner_button {
+    text-align: center;
+    display: block;
+    display: inline-block;
+}
+.secondaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+.primaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+}
+.primaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left top;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+.secondaryTinyButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -519px;
+}
+.buttonTiny {
+    height: 11px;
+    padding-right: 3px;
+}
+.secondaryTinyButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -498px;
+}
+
+.buttonTiny span {
+    padding: 1px 1px 2px 6px;
+    font-size: 8px;
+    margin-right: 1px;
+    text-transform: uppercase;
+}
+.scui-alert-warning {
+    border-color: #8b6e00;
+}
+
+.scui-alert {
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #ddd;
+    line-height: 18px;
+    margin: 1.5em auto;
+    width: 95%;
+}
+.scui-alert .scui-alert-inner {
+    padding: 14px 18px 12px 60px;
+    border-radius: 4px;
+    position: relative;
+    text-align: left;
+}
+.scui-alert .scui-alert-icon {
+    background-image: url(../img/aui_sprite_0037-1x._V1_.png);
+    background-repeat: no-repeat;
+    background-size: 400px 600px;
+    display: inline;
+    vertical-align: top;
+    width: 30px;
+    height: 27px;
+    position: absolute;
+    top: 11px;
+    left: 18px;
+    _left: -45px;
+}
+.scui-alert-warning .scui-alert-icon {
+    background-position: -283px -35px;
+}
+.scui-alert-warning h4 {
+    color: #7c6200;
+}
+
+.scui-alert h4 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.255;
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+.scui-alert-warning>.scui-alert-inner:only-child {
+    -webkit-box-shadow: 0 0 0 4px #fffae7 inset;
+    -moz-box-shadow: 0 0 0 4px #fffae7 inset;
+    box-shadow: 0 0 0 4px #fffae7 inset;
+    padding-left: 63px;
+}
+.small-orange {
+    color: #c60;
+    font-size: 12px;
+    top: 3px;
+}

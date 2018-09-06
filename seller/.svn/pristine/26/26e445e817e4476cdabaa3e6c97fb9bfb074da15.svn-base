@@ -125,17 +125,13 @@
             </tr>
             <tr>
                 <td valign="top" align="left">
-                    <span class="header-orange">关于卖家</span>
+                    <span class="header-orange">隐私政策</span>
                     <br>
                     <span class="tiny">
-                        在“关于卖方”页面上，您可以向顾客介绍您的业务并创建您的品牌。在此部分中可以介绍您如何开始您的业务、您已从事了多长时间、您公司的理念是什么、是否有实际的店面和/或您拥有多少员工。请尽管详细阐述这些主题及其他内容。
+                        请针对亚马逊与您共享的买家信息说明您的隐私政策。您的政策将显示在亚马逊隐私政策的下方。请在制定保密声明时，参阅您与亚马逊签署的《商业解决方案》中有关使用买家信息的内容。
+                        <b> 请勿张贴违反亚马逊网站的政策的保密声明。 </b>
                         <a href="javascript:void(0)">了解更多信息</a>
-                        <p>不得在任何品种、图片或支持信息中加入
-                            URL，也不得在亚马逊流程的任何部分中加入您网站的超链接。禁止任何企图将亚马逊用户导向其他网站或销售流程的行为。特别要禁止任何引导、促使或鼓励亚马逊用户离开亚马逊网站的广告、营销信息（特价优惠）或“行动呼吁”。
-                        </p>
-                        <p>
-                            <b>注：</b> 无需在此插入客户服务联系信息。我们将根据您在“账户管理”选项卡下配置部分中提供的信息，自动维护您的客户服务联系信息。
-                        </p>
+
                     </span>
 
                     <form method="POST" action="">
@@ -150,13 +146,13 @@
                                                 <tr>
                                                     <td bgcolor="#F4F4F4" align="right" valign="top" width="40%" style="
                                                     text-align: -webkit-right;">
-                                                        <span class="tiny"><b>关于卖家帮助内容：</b><br>
+                                                        <span class="tiny"><b>保密帮助内容：</b><br>
                                                             (最多 10,000 个字符)
                                                         </span>
                                                     </td>
                                                     <td bgcolor="#FFFFFF" align="left" valign="middle" width="60%">
                                                         <input type="hidden" id="text_component_attrValue" name="attrValue"
-                                                            value="zhongguo feng creat by 2018.">
+                                                            value="We fully respect and implement the Amazon Privacy Policy.">
                                                         <ul id="sc-cted-wrapper" class="sc-cted-container">
                                                             <li class="sc-cted-list-tabs sc-cted">
                                                                 <ul id="sc-cted-tabwrapper" class="sc-cted-container">
@@ -310,7 +306,7 @@
                                                                 <div class="clear"></div>
                                                             </li>
                                                             <li class="sc-cted-li-editor sc-cted">
-                                                                <iframe id="editattrValue" src="./blank.html" width="600"
+                                                                <iframe id="editattrValue" src="/blank.html" width="600"
                                                                     height="200"></iframe>
                                                             </li>
                                                         </ul>
@@ -346,9 +342,6 @@
                                 </tbody>
                             </table>
                         </center>
-
-
-
                         <input type="hidden" name="CSRF" value="gEHPEdxh1Su4Wb34lkwKN9nk1hsCP0O1wpL/C7YAAAAJAAAAAFuOA09yYXcAAAAA">
 
                     </form>
@@ -369,5 +362,5 @@
 <script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="js/text-edit.js" type="text/javascript"></script>
 <script src="js/webjs/information_policy.js" type="text/javascript"></script>
-<script src="js/webjs/information_policy_seller.js"></script>
+<script src="js/webjs/information_policy_privacy.js" type="text/javascript"></script>
 </html>
