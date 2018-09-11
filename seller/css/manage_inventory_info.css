@@ -1,0 +1,34 @@
+body{
+    font-family: 'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+}
+.madagascar-main-body {
+    padding: 0 18px;
+}
+.madagascar-main-body ul{
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.madagascar-main-body ul li{
+    list-style: disc;
+}
+.lineae{
+    height: 0;
+    border: 2px solid blue;
+}
+.madagascar-main-body .img{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.madagascar-main-body .need_respond{
+    margin:10px 0
+}
+.madagascar-main-body .need_respond .a-box{
+    background-color: #dddddd
+}
+.madagascar-main-body .need_respond .battery_information{
+    margin-bottom: 20px;
+}

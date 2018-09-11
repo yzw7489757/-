@@ -13,9 +13,6 @@ $(function () {
             userid: amazon_userid
         },
         success: function (res) {
-            if (res) {
-                inputctr.public.judgeBegaintask('1107');
-            }
             console.log(res);
             $('.logo').attr('src', res.shopLogoImg)
         },
@@ -49,7 +46,6 @@ $(function () {
     // 设置公司徽标
     $('input').on('change', function (e) {
         //e.preventDefault();
-        inputctr.public.judgeRecodertask('1107', '设计上传卖家logo开始');
         run(this, function (data) {
             if (imgType) {
                 $.ajax({
@@ -74,7 +70,6 @@ $(function () {
                             }
                         }
                         image.src = shopLogoImg
-                        
                     },
                     error: function (res) {
                         console.log(decodeURIComponent(res.error))
@@ -103,7 +98,7 @@ $(function () {
             },
             success: function (res) {
                 console.log(res);
-                inputctr.public.judgeFinishtask('1107');
+
             },
             error: function (res) {
                 console.log(decodeURIComponent(res.error))

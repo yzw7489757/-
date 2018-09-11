@@ -43,22 +43,22 @@
         {
             "number":"1101",
             "taskname":"开通店铺独立访问地址",
-            "taskurl":"account_seller_editor.html"
+            "taskurl":""
         },
         {
             "number":"1102",
             "taskname":"编辑客户服务信息",
-            "taskurl":"account_seller_editor2.html"
+            "taskurl":""
         },
         {
             "number":"1103",
             "taskname":"检查账号收款付款账户正确性",
-            "taskurl":"deposit_method.html"
+            "taskurl":""
         },
         {
             "number":"1104",
             "taskname":"查看默认配送设置，确认默认配送地址正确性",
-            "taskurl":"distribution_setting.html"
+            "taskurl":""
         },
         {
             "number":"1104",
@@ -73,12 +73,12 @@
         {
             "number":"1106",
             "taskname":"编写关于卖家信息用于展示买家",
-            "taskurl":"information_policy_seller.html"
+            "taskurl":""
         },
         {
             "number":"1107",
             "taskname":"设计上传卖家logo",
-            "taskurl":"information_policy_logo.html"
+            "taskurl":""
         },
         {
             "number":"1108",
@@ -93,7 +93,7 @@
         {
             "number":"1202",
             "taskname":"了解并购买产品UPC码",
-            "taskurl":"upc.htm"
+            "taskurl":""
         },
         {
             "number":"1203",
