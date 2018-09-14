@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="madagascar-main-body">
+        <h3>转化为"亚马逊物流"</h3>
+        <div class="info">
+            <b>为何我会看到此页面？</b>
+            <br>
+            <span>当您选择转换新商品信息或现有商品信息时，亚马逊物流要求您提供有关商品信息的更多信息，以确保合规性。</span>
+        </div>
+        <div class="info">
+            <b>此表格适用于所有商品吗？</b>
+            <br>
+            <span>是的，您必须为下表中的所有商品提供更多信息，为了确保亚马逊遵守所有适用法规，您将需要提供商品信息，说明商品是否使用电池，是否被视为危险品，是否受运输、储存、废弃物或其他标准的管制。</span>
+        </div>
+        <div class="info">
+            <b>什么类型的消费商品会被视为危险品？</b>
+            <br>
+            <span>危险品存在于多种消费品分类中，包括个护用品（如易燃香氛）、食品（例如含气溶胶的喷雾）、家居用品（如腐蚀性浴室清洁剂）以及使用电池的商品（如手机），它不包括可能会以危险的方式使用的刀具，尖锐商品，重型商品或其他商品。</span>
+        </div>
+        <div class="info">
+            <span>普通危险品的更多实例可以从<a href="javascript:viod(0)">此处</a>中找到。</span>
+        </div>
+        <div class="a-box">
+            <div class="table" style="background: #f0f6f9;">
+                <div>显示1个 <b>SKU</b></div>
+                <table border="1" style="background: #e0f3fd;">
+                    <tr style="vertical-align: bottom;">
+                        <td>买家SKU</td>
+                        <td class="width_50">商品名称</td>
+                        <td>状况</td>
+                        <td>商品例外情况</td>
+                        <td>必填信息</td>
+                        <td class="width_1">标记为删除</td>
+                    </tr>
+                    <tr style="background: #fff;">
+                        <td>BC001</td>
+                        <td>111</td>
+                        <td>卖家</td>
+                        <td>仅亚马逊条形码 <a href="./manage_inventory_info.html">为什么？</a></td>
+                        <td><a href="javascript:viod(0)">添加危险品信息</a></td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div class="lineae"></div>
+                <div class="btn" style="background: #e0f3fd;">
+                    <div class="float_left">
+                        <a href="./manage_inventory_choose.html" class="click_a">
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">返回</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="float_right">
+                        <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                            <span class="button_label saveBtn">保存并继续</span>
+                        </button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+    <div class="model-wrapper none">
+        <div class="model-wrapper-bg">
+            <div class="box-content model-content" style="width:900px">
+                <div class="a-row a-box">
+                    <div>
+                        <div style="background: #e0f3fd;">
+                            <div class="float_left">
+                                <h2 class="a-padding-small">要求的商品信息</h2>
+                            </div>
+                            <div class="float_right">
+                                <div class="pdRight closeBtn">X</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-box-inner">
+                            <div class="a-box-inner">
+                                <div>为确保所有商品的合规性，亚马逊物流要求您在转换新的或现有商品时提供更多商品相关信息</div>
+                                <ul>
+                                    <li>您需要为电池、包含电池的商品或可能被视为危险品（也称为"危险物质"）的任何商品提供相关信息。危险品存在于多种消费品分类中，包括个护用品（如易燃香氛）、食品（例如含气溶胶的喷雾）、家居用品（如腐蚀性浴室清洁剂）。<a
+                                            href="javascript:void(0)">请查看可能属于受管制危险品的亚马逊商品实例</a></li>
+                                    <li>要了解有关危险物品的更多信息，请参阅<a href="javascript:void(0)">危险品识别指南</a></li>
+                                </ul>
+                            </div>
+                            <div class="lineae"></div>
+                            <div>
+                                <div class="float_left img">11</div>
+                                <div class="float_left">
+                                    <div>111</div>
+                                    <div>状况：新品</div>
+                                    <div>卖家SKU：BC001</div>
+                                    <div>ASIN:111</div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="need_respond">
+                                <div><b>* 需要回应</b></div>
+                                <div class="a-box" style="background: #f0f6f9;">
+                                    <div class="a-box-inner">
+                                        <div class="battery_information">
+                                            <div class="float_left">
+                                                <b>电池信息*</b>
+                                                <br>
+                                                <span>此商品是否试用电池或商品本身是电池？</span>
+                                            </div>
+                                            <div class="float_right">
+                                                <input type="radio" name="info"> 是
+                                                <input type="radio" name="info"> 否
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <div class="float_left">
+                                                <b>商品法规信息*</b>
+                                                <br>
+                                                <span>此商品是否属于运输、废弃处置和/或储存方面受到管制的危险品/危险物质？</span>
+                                            </div>
+                                            <div class="float_right">
+                                                <input type="radio" name="type"> 是
+                                                <input type="radio" name="type"> 否
+                                                <input type="radio" name="type"> 不确定
+                                            </div>
+                                            <div class="clear"></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="need_respond">
+                                <div><b>* 需要回应</b></div>
+                                <div>以确保您的选择是正确的。有关危险品安全的更多信息。请前往危险品识别指南</div>
+                            </div>
+                            <div class="lineae"></div>
+                        </div>
+
+                        <div class="a-box" style="background: #e0f3fd;">
+                            <div class="a-box-inner">
+                                <div class="float_left">
+
+                                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="button_label">返回</span>
+                                    </span>
+
+                                </div>
+                                <div class="float_right">
+                                    <a href="./manage_inventory_restocking.html">
+                                        <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                            <span class="button_label saveBtn">提交</span>
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_dangerous.js" type="text/javascript"></script>
+
+</html>

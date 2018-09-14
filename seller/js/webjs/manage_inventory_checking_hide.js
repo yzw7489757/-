@@ -1,0 +1,5 @@
+$(function () { 
+    $('.look_goods').click(function () { 
+        $('.model-wrapper').show()
+     })
+ })

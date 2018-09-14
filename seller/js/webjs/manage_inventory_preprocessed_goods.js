@@ -1,0 +1,17 @@
+$(function () {
+    $('#select').change(function () {
+        if ($(this).val() == 'all') {
+            $('.optionText').text('适用于全部')
+        } else if ($(this).val() == 'seller') {
+            $('.optionText').text('卖家')
+        } else if ($(this).val() == 'amazon') {
+            $('.optionText').text('亚马逊')
+        }
+    })
+    $('.selection_classification').click(function () {
+        $('.model-wrapper').show()
+    })
+    $('.closeBtn').click(function () {
+        $('.model-wrapper').hide()
+    })
+})

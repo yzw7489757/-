@@ -1,0 +1,90 @@
+body{
+    font-family: 'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+}
+.madagascar-main-body {
+    padding: 0 18px;
+}
+.madagascar-main-body h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+    color: #c45500 !important;
+    text-align: left !important;
+    margin-top: 18px !important;
+}
+.madagascar-main-body ul{
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.madagascar-main-body ul li{
+    list-style: disc;
+}
+.madagascar-main-body .info{
+    margin-top: 10px;
+}
+.madagascar-main-body .table{
+    border-radius: 10px;
+    background-color:#ddd;
+    padding: 10px;
+    /* margin-top: 20px; */
+}
+.madagascar-main-body table{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.madagascar-main-body .table a{
+    text-decoration: underline;
+}
+.madagascar-main-body table tr td{
+    padding-left: 5px;
+}
+.width_1{
+    width: 1%;
+}
+.width_50{
+    width: 50%;
+}
+.lineae{
+    height: 0;
+    border: 2px solid blue;
+}
+.inner_button {
+    text-align: center;
+    display: block;
+    display: inline-block;
+}
+
+.buttonLarge {
+    height: 22px;
+    padding-right: 6px;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px;
+}
+.secondaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+.primaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+}
+
+.buttonLarge {
+    height: 22px;
+    padding-right: 6px;
+}
+.primaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left top;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+.madagascar-main-body .btn{
+    padding: 10px;
+}

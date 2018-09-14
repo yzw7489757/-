@@ -1,0 +1,11 @@
+$(function () { 
+    $('#select').change(function () { 
+        if($(this).val() == 'all'){
+           $('.optionText').text($(this).val())
+         }else if($(this).val() == 'seller'){
+            $('.optionText').text($(this).val())
+         }else if($(this).val() == 'amazon'){
+            $('.optionText').text($(this).val())
+         }
+     })
+ })

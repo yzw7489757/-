@@ -1,0 +1,26 @@
+$(function () { 
+    
+    $('.showTitle li').click(function () { 
+        var index = $(this).index();
+        $('.showTitle>li').find('span').addClass('dispplay_none')
+        $(this).addClass('activeColor').siblings().removeClass('activeColor');
+        $(this).find('span').removeClass('dispplay_none')
+        $('.showContent>li').eq(index).removeClass('none').siblings().addClass('none')
+        $('.showtext>li').eq(index).removeClass('none').siblings().addClass('none')
+     })
+     
+
+      // 检查并修改商品
+    $('.checkupBtn').click(function () { 
+        $('.checkupBtn').hide();
+        $('.hiddengoodsBtn').removeClass('dispplay_none');
+        $('.hiddenInfo').show();
+     })
+     // 隐藏商品
+     $('.hiddengoodsBtn').click(function () { 
+        $('.hiddengoodsBtn').addClass('dispplay_none');
+        $('.checkupBtn').show()
+        $('.hiddenInfo').hide();
+     })
+    
+ })

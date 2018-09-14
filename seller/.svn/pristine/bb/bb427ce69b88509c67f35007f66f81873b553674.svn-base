@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+    <link rel="stylesheet" href="./css/manage_inventory_setNumber.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container ">
+        <div>
+            <span class="a-color-state a-size-large">
+                发/补货
+            </span>
+            <a href="javascript:void(0)">了解更多信息</a>
+        </div>
+        <div>
+            PLN(4/28/18 12:04 AM) <a href="javascript:void(0)">重命名</a>
+        </div>
+        <ul class="showTitle">
+            <li class="activeColor">
+                设置数量
+                <span></span>
+            </li>
+            <li>
+                预处理商品
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                为商品贴标
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                检查货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                一览
+                <span class="dispplay_none"></span>
+            </li>
+        </ul>
+        <ol class="olSKU showContent ">
+            <li>
+                <ol>
+                    <li>
+                        <div><b>发货地址</b></div>
+                        <div>zhongguo feng</div>
+                        <div>wanda shangyezhongxin Dzuo</div>
+                        <div>718</div>
+                        <div>hangzhou,zhejiangsheng</div>
+                        <div>310000</div>
+                        <div>CN</div>
+                        <div><a href="javascript:void(0)">从另一地址发货</a></div>
+                    </li>
+                    <li>
+                        <div><b>目标商城</b></div>
+                        <div>US</div>
+                    </li>
+                    <li>
+                        <div>包装类型 <a href="javascript:void(0)">这是什么？</a></div>
+                        <div class="mixingBox">
+                            <span>混装商品</span>
+                            <br>
+                            <a href="javascript:void(0)">更改为并箱装运</a>
+                        </div>
+                        <div class="originalBox none">
+                            <span>原厂包装发货商品</span>
+                            <br>
+                            <a href="javascript:void(0)">更改为混装装运</a>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <ol class="olSKU showtext">
+            <!-- 1 -->
+            <li>
+                <!-- 所有商品 所有商品 需要删除-->
+                <div>
+                    <ul class="commodity">
+                        <li class="selectColor">所有商品</li>
+                        <li>必填信息</li>
+                        <li>需要删除</li>
+                    </ul>
+                    <div class="a-row a-color-tertiary">
+                        <div class="margin15">提供缺少的信息，删除不合格商品，并指定要包括在此入库计划中的每种商品的数量</div>
+                        <div class="margin15">显示<span>1</span>到<span>1</span>件<span>1</span>商品</div>
+                        <table class="a-row">
+                            <tbody>
+                                <tr>
+                                    <td>卖家SKU</td>
+                                    <td>商品名称</td>
+                                    <td>状况</td>
+                                    <td class="width31">需要操作</td>
+                                    <td class="width8">商品数量</td>
+                                    <td class="width14 hiddenTr none">每个箱子配置的商品数</td>
+                                    <td class="width8 hiddenTr none">箱子数量</td>
+                                    <td class="width5 a-text-right">删除</td>
+                                </tr>
+                                <tr style="background-color:#ddd ;height: 40px;">
+                                    <td>&nbsp;</td>
+                                    <td colspan="2"><input type="checkbox"> 显示ASIN/FNSKU</td>
+                                    <td colspan="2">请输入要运送的单品数量</td>
+                                    <td class="hiddenTr none"><input type="text"></td>
+                                    <td class="hiddenTr none"><input type="text"></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>bc001</td>
+                                    <td>123</td>
+                                    <td>新品</td>
+                                    <td>
+                                        <div class="Lack_parcel_size">
+                                            <div>缺少包裹尺寸</div>
+                                            <div>请提供制造商原始包装中的商品尺寸。</div>
+                                            <div>
+                                                <input type="text" class="input_one">
+                                                X
+                                                <input type="text" class="input_two">
+                                                X
+                                                <input type="text" class="input_three">
+                                                <select name="" id="" class="width14">
+                                                    <option value="英寸">英寸</option>
+                                                </select>
+                                            </div>
+                                            <div> 缺少包装重量</div>
+                                            <div>请提供制造商原始包装中的商品重量</div>
+                                            <div>
+                                                <input type="text" class="input_weight">
+                                                <select name="" id="" class="width14">
+                                                    <option value="磅">磅</option>
+                                                </select>
+                                            </div>
+                                            <div style="margin-top: 10px">
+                                                <button class="a-button-text a-button-inner2 saveBtn">保存</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td  class="vertical-align-top"><input type="text" class="inputNum"></td>
+                                    <td colspan="3" class="vertical-align-top a-text-right">X</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="float_left">
+                                <div>
+                                    总计
+                                </div>
+                                <div>显示<span>1</span>到<span>1</span>件<span>1</span>商品</div>
+                            </div>
+                            <div class="float_right">
+                                <span>0</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                        <div>
+                            <div class="float_left">
+                                <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                    <span class="button_label">删除计划</span>
+                                </span>
+                                <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                    <span class="button_label">复制计划</span>
+                                </span>
+                            </div>
+                            <div class="float_right">
+                                <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                    <span class="button_label goBtn">继续</span>
+                                </button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div>
+                            <div class="float_right">
+                                请查看“必填信息”和“需要删除”选项卡，以修正任何库存问题。
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        </ol>
+
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_setNumber.js" type="text/javascript"></script>
+
+</html>

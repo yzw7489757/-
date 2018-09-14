@@ -1,0 +1,5 @@
+$(function () { 
+    $('.handlingGoodBtn').click(function () { 
+        $('.model-wrapper').show()
+     })
+ })

@@ -1,0 +1,186 @@
+.message-container{
+	width: 100%;
+	padding-left: 332px;
+}
+.filter-condition{
+	width: 332px;
+	margin-left: -100%;
+	border: 1px solid #e5e5e5;
+	position: relative;
+	top: 0px;
+	float: left;
+	margin-bottom: 20px;
+}
+.filter-condition h4{
+	font-weight: bold;
+	margin: 0px;
+}
+.filter-condition .title{
+	background: #f0f0f0;
+	background: -moz-linear-gradient(top, #f6f6f6, #ededed);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ededed));
+    background: -webkit-linear-gradient(top, #f6f6f6, #ededed);
+    background: -o-linear-gradient(top, #f6f6f6, #ededed);
+    background: -ms-linear-gradient(top, #f6f6f6, #ededed);
+    background: linear-gradient(top, #f6f6f6, #ededed);
+	padding:12px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.filter-condition ul{
+	margin-bottom: 0px;
+}
+.filter-condition ul li{
+	padding:8px 12px;
+	border-bottom: 1px solid #e5e5e5;
+}.filter-condition ul li:last-child{
+	border: none;
+}
+.filter-condition ul li:nth-child(even){
+	background: #f5f5f5;
+}
+.filter-condition ul li a{
+	font-size: 14px;
+	font-weight: bold;
+}
+.message-container{
+	width: 100%;
+	float: left;
+}
+.message-container .message-wrap .content-header{
+	padding: 12px;
+	background: #f1f1f1;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+}
+.message-container .message-wrap .content-header .all-message{
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+}
+.message-container .message-wrap .content-header .all-message i{
+	color: #666;
+}
+.message-container .message-wrap .content-header p{
+	display: inline-block;
+	margin-bottom: 0px;
+	position: relative;
+	padding-left: 34px;
+}
+.message-container .message-wrap .content-header p a{
+	font-weight: bold;
+}
+.a-icon-alert {
+    height: 27px;
+    width: 30px;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+.message-container .message-wrap .content-header p .a-icon-alert {
+    background-position: -350px -35px;
+}
+
+.search-container,
+.all-message-content .message{
+	margin: 20px;
+}
+.all-message-content .message{
+	margin-top: 30px;
+}
+.search-container input{
+	width: 300px;
+}
+.search-container button{
+	height: 31px;
+	margin-left: -2px;
+	padding: 0px 8px;
+}
+
+
+#buyer-message-detail-wrap{
+	margin: 20px;
+	border-radius: 4px 4px 0 0;
+    border: 1px #ddd solid;
+    width: 70%;
+}
+.buyer-message-detail{
+	background: #f3f3f3;
+	width: 100%;
+	padding: 14px 18px;
+}
+
+.order-information .order-detail{
+	width: 100%;
+	padding-left: 140px;
+}
+.order-information .order-detail .detail{
+	width: 100%;
+	padding-left: 1.5%;
+}
+.order-information .order-detail .detail h4{
+	margin-top: 0px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+.order-information .order-detail .detail .order-no{
+	margin-bottom: 4px;
+}
+.order-information .order-detail .detail .from{
+	background:#e4e4e4;
+	padding: 4px 10px;
+	display: inline-block;
+}
+.order-information .order-cover{
+	width: 140px;
+	margin-left: -100%;
+}
+.order-information .order-cover img{
+	max-width: 100%;
+}
+.chart-container{
+	padding: 14px 18px;
+	border-bottom: 1px solid #ddd;
+}
+.chart-container P{
+	margin-bottom: 6px;
+}
+.chart-container .name{
+	font-weight: bold;
+}
+.left-buyer-message,.right-buyer-message{
+	margin: 6px 0px;
+}
+.left-buyer-message{
+	text-align: left;
+}
+.right-buyer-message{
+	text-align: right;
+}
+.seller-reply{
+	width: 96%;
+	margin: 20px auto;
+}
+#editor{
+    max-height: 80px;
+    height: 80px;
+    background-color: white;
+    border-collapse: separate;
+    border: 1px solid rgb(204, 204, 204);
+   	padding: 6px 12px;
+    box-sizing: content-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    outline: none;
+}
+.reply-btn-container{
+	margin-top: 20px;
+	text-align: right;
+}
+
+.reply-btn-container button{
+	padding: 0px 12px;
+	height: 30px;
+}

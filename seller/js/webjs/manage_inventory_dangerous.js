@@ -1,0 +1,36 @@
+$(function () {
+    var radio = false;
+    // 添加危险品信息
+    $('.errinfo').click(function (e) {
+        e.preventDefault();
+        $('.model-wrapper').show();
+    })
+    $('.editTable').click(function (e) {
+        e.preventDefault();
+        $('.model-wrapper').show();
+    })
+
+    // 关闭按钮
+    $('.closeBtn').click(function () {
+        $('.model-wrapper').hide();
+    })
+    
+    // 提交
+    $('.submitBtn').click(function () {
+        if($("input:radio[name='info']:checked") && $("input:radio[name='type']:checked")){
+            $('.model-wrapper').hide();
+            radio = true;
+            if(radio){
+                $('.unfinish').hide();
+                $('.finish').show();
+            }
+        }else{
+            alert('请选择电池信息&&商品法规信息！')
+        }
+    })
+    // 保存并继续
+    $('.saveBtn').click(function () { 
+        $(window).attr('location', '/seller/manage_inventory_restocking.html')
+    })
+
+})

@@ -1,0 +1,5 @@
+$(function () { 
+    $('.approveBtn').click(function () { 
+        $('.model-wrapper').show()
+     })
+ })

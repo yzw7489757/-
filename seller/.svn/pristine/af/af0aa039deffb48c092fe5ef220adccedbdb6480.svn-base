@@ -1,0 +1,16 @@
+$(function () {
+    var input_one = $('.input_one').val();
+    var input_two = $('.input_two').val();
+    var input_three = $('.input_three').val();
+    var input_weight = $('.input_weight').val();
+    $('.saveBtn').click(function () {
+        input_one = $('.input_one').val();
+        input_two = $('.input_two').val();
+        input_three = $('.input_three').val();
+        input_weight = $('.input_weight').val();
+        if(input_one && input_two && input_three && input_weight){
+            alert('1')
+        }
+    })
+
+})

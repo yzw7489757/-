@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/common.css"/> -->
+		<title></title>
+		<link rel="shortcut icon" href="img/favicon.ico">
+	</head>
+	<body>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let taskid=inputctr.public.getQueryString('taskid'); 
+			$(function(){ 
+				inputctr.public.showLoading();
+				mallID=inputctr.public.getQueryString('mallID');
+				studentID=inputctr.public.getQueryString('userid');
+				account=inputctr.public.getQueryString('account');
+				TrainingID=inputctr.public.getQueryString('TrainingID');
+				traintype=inputctr.public.getQueryString('traintype'); 
+                if(studentID != parseInt(studentID) ||TrainingID != parseInt(TrainingID) ||traintype != parseInt(traintype) ||taskid != parseInt(taskid)){
+                    alert("数据有误");
+                    return;
+                }
+                
+				inputctr.public.clearCookie('mallID');
+				inputctr.public.clearCookie('studentID');
+				inputctr.public.clearCookie('account');
+				inputctr.public.clearCookie('TrainingID');
+				inputctr.public.clearCookie('traintype'); 
+				inputctr.public.clearCookie('amazon_userid');
+				  
+				inputctr.public.setCookie('mallID',mallID); 
+				inputctr.public.setCookie('studentID',studentID);  
+				inputctr.public.setCookie('account',account);
+				inputctr.public.setCookie('TrainingID',TrainingID); 
+				inputctr.public.setCookie('traintype',traintype); 
+				$.getJSON('js/TaskConfig.js',function(result){
+					judgeRegister(result.taskConfig);
+				})
+			})
+			function judgeRegister(TaskList){				//判断有没有注册过
+				$.post(baseUrl+'/GetUserID',{stuid:studentID,trainingmode:traintype},function(data){    
+                    if(data.result=="1"){
+                        inputctr.public.setCookie('amazon_userid',data.user_id);
+                        if(data.isfinished==0){
+                        	if(traintype=='1'){
+                        		//综合实训开始实训
+                        		inputctr.public.begaintriann();
+                        	}else if(traintype=='0' && taskid!='0'){
+                        		//单向训练开始实训 
+                        		inputctr.public.begaintriann(begaintriannCallback,TaskList);
+                        	}else{
+                        		location.href="Register.html";
+                        	}
+                        }else{ 
+                        	if(traintype=='0' && taskid!='0' && taskid >= 1100){
+                        		//单向训练开始实训
+                        		for(var i=0;i<TaskList.length;i++){
+                        			if(TaskList[i].number==taskid){
+                        				if(!TaskList[i].taskurl){
+                        					location.href="/seller/home_page.html";
+                        				}else{
+                        					location.href=TaskList[i].taskurl;
+                        				}
+                        			}
+                        		}
+                        	}else{
+                        		location.href="/seller/home_page.html";
+                        	}
+                        } 
+                    }else{
+                    	location.href="/seller/create_account.html";
+                    }  
+				},'json')
+			}
+			function begaintriannCallback(TaskList){
+				for(var i=0;i<TaskList.length;i++){
+					if(TaskList[i].number==taskid){
+						if(!TaskList[i].taskurl){
+							location.href="/seller/home_page.html";
+						}else{
+							location.href=TaskList[i].taskurl;
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

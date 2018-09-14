@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_info.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="madagascar-main-body">
+        <div style="background: #e0f3fd;">
+            <h2 class="a-padding-small">要求的商品信息</h2>
+        </div>
+        <div class="a-box-inner">
+            <div>为确保所有商品的合规性，亚马逊物流要求您在转换新的或现有商品时提供更多商品相关信息</div>
+            <ul>
+                <li>您需要为电池、包含电池的商品或可能被视为危险品（也称为"危险物质"）的任何商品提供相关信息。危险品存在于多种消费品分类中，包括个护用品（如易燃香氛）、食品（例如含气溶胶的喷雾）、家居用品（如腐蚀性浴室清洁剂）。<a
+                        href="javascript:void(0)">请查看可能属于受管制危险品的亚马逊商品实例</a></li>
+                <li>要了解有关危险物品的更多信息，请参阅<a href="javascript:void(0)">危险品识别指南</a></li>
+            </ul>
+        </div>
+        <div class="lineae"></div>
+        <div>
+            <div class="float_left img">11</div>
+            <div class="float_left">
+                <div>111</div>
+                <div>状况：新品</div>
+                <div>卖家SKU：BC001</div>
+                <div>ASIN:111</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="need_respond">
+            <div><b>* 需要回应</b></div>
+            <div class="a-box"  style="background: #f0f6f9;">
+                <div class="a-box-inner">
+                    <div class="battery_information">
+                        <div class="float_left">
+                            <b>电池信息*</b>
+                            <br>
+                            <span>此商品是否试用电池或商品本身是电池？</span>
+                        </div>
+                        <div class="float_right">
+                            <input type="radio"> 是
+                            <input type="radio"> 否
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="float_left">
+                            <b>商品法规信息*</b>
+                            <br>
+                            <span>此商品是否属于运输、废弃处置和/或储存方面受到管制的危险品/危险物质？</span>
+                        </div>
+                        <div class="float_right">
+                            <input type="radio"> 是
+                            <input type="radio"> 否
+                            <input type="radio"> 不确定
+                        </div>
+                        <div class="clear"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="need_respond">
+            <div><b>* 需要回应</b></div>
+            <div>以确保您的选择是正确的。有关危险品安全的更多信息。请前往危险品识别指南</div>
+        </div>
+        <div class="lineae"></div>
+        <div class="a-box" style="background: #e0f3fd;">
+            <div class="a-box-inner">
+                <div class="float_left">
+                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                        <span class="button_label">返回</span>
+                    </span>
+                </div>
+                <div class="float_right">
+                    <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                        <span class="button_label saveBtn">提交</span>
+                    </button>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>买家消息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-combined.no-icons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/buyer_message_detail.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+    <div id="buyer-message-wrap">
+    	<div class="buyer-message-container clearfix" >
+    		<div class="message-container">
+	    		<div class="message-wrap">
+	    			<div class="content-header clearfix">
+	    				<a class="all-message">
+	    					<i class="glyphicon glyphicon-chevron-left"></i>所有消息
+	    				</a>
+	    				<p>
+	    					<i class="a-icon a-icon-alert"></i>
+	    					您可以点击"此处"访问原来的消息界面：<a>此处</a>
+	    				</p>
+	    			</div>
+	    			<div class="all-message-content">
+			    		<div class="search-container">
+							<input type="text" class="pull-left" placeholder="输入订单编号或电子邮箱地址"/>
+							<button class="secondaryAUIButton">搜索</button>
+						</div>
+						<div id="buyer-message-detail-wrap">
+					    	<div class="buyer-message-detail">
+					    		<div class="order-information clearfix">
+						    		<div class="pull-left order-detail">
+						    			<div class="detail">
+						    				<h4>Polo Ralph Lauren Mens Perry Lined Winter Jacket Polo Ralph Lauren Mens Perry Lined Winter Jacket (2XB, RL Black\/Red Pony)</h4>
+						    				<div class="order-no">
+						    					Order:<span>200169-6932-563987</span>
+						    				</div>
+						    				<div class="from">
+						    					4699844655@qq.com
+						    				</div>
+						    			</div>
+						    		</div>
+						    		<div class="pull-left order-cover">
+						    			<img src="img/AZ_SOA_Hero._SL1280___.jpg"/>
+						    		</div>
+						    	</div>
+					    	</div>
+						    <div class="chart-container">
+						    	<div class="left-buyer-message clearfix">
+						    		<div class="pull-left">
+							    		<p class="name">4699844655@qq.com</p>
+							    		<p>Polo Ralph Lauren Mens Perry Lined Winter Jacket Polo Ralph Lauren Me</p>
+							    	</div>
+						    	</div>
+						    	<div class="right-buyer-message clearfix">
+						    		<div class="pull-right">
+						    			<p class="name">4699844655@qq.com</p>
+						    			<p>Polo Ralph Lauren Mens Perry Lined Winter Jacket Polo Ralph Lauren Me</p>
+						    		</div>
+						    	</div>
+						    </div>	
+						    <div class="seller-reply">
+						    	<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+									<div class="btn-group">
+										<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font Size" aria-expanded="false"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a data-edit="fontSize 5" class="fs-Five btn-info">Huge</a></li>
+											<li><a data-edit="fontSize 3" class="fs-Three">Normal</a></li>
+											<li><a data-edit="fontSize 1" class="fs-One">Small</a></li>
+										</ul>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Text Highlight Color" aria-expanded="false"><i class="fa fa-paint-brush"></i>&nbsp;<b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<p>&nbsp;&nbsp;&nbsp;Text Highlight Color:</p>
+					                        <li><a data-edit="backColor #00FFFF">Blue</a></li>
+											<li><a data-edit="backColor #00FF00">Green</a></li>
+											<li><a data-edit="backColor #FF7F00">Orange</a></li>
+											<li><a data-edit="backColor #FF0000">Red</a></li>
+											<li><a data-edit="backColor #FFFF00">Yellow</a></li>
+										</ul>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font Color" aria-expanded="false"><i class="fa fa-font"></i>&nbsp;<b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<p>&nbsp;&nbsp;&nbsp;Font Color:</p>
+											<li><a data-edit="foreColor #000000">Black</a></li>
+					                        <li><a data-edit="foreColor #0000FF">Blue</a></li>
+					                        <li><a data-edit="foreColor #30AD23">Green</a></li>
+											<li><a data-edit="foreColor #FF7F00">Orange</a></li>
+											<li><a data-edit="foreColor #FF0000">Red</a></li>
+											<li><a data-edit="foreColor #FFFF00">Yellow</a></li>
+										</ul>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-default btn-info" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+										<a class="btn btn-default btn-info" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+										<a class="btn btn-default btn-info" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+										<a class="btn btn-default" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-default" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+										<a class="btn btn-default" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+										<a class="btn btn-default" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-outdent"></i></a>
+										<a class="btn btn-default" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+									</div>
+									<div class="btn-group">
+										<a class="btn btn-default" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+										<a class="btn btn-default" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+										<a class="btn btn-default" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+										<a class="btn btn-default btn-info" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+									</div>
+									<div class="btn-group">
+											<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Hyperlink" aria-expanded="false"><i class="fa fa-link"></i></a>
+											<div class="dropdown-menu input-append">
+												<input placeholder="URL" type="text" data-edit="createLink">
+												<button class="btn" type="button">Add</button>
+											</div>
+										</div>
+										<div class="btn-group">
+											<a class="btn btn-default" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-unlink"></i></a>
+											<span class="btn btn-default" title="Insert picture (or just drag &amp; drop)" id="pictureBtn"> <i class="fa fa-picture-o"></i>
+												<input class="imgUpload" type="file" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 41px; height: 30px;" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage">
+											</span>
+										</div>
+									<div class="btn-group">
+										<a class="btn btn-default" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+										<a class="btn btn-default" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+									</div>
+								</div>
+						    	<div id="editor"></div>
+						    	<div class="reply-btn-container">
+						    		<button id="seller-reply-button" class="primaryAUIButton">发 送</button>
+						    	</div>
+						    </div>
+						</div>
+			    	</div>
+	    		</div>
+	    	</div>
+	     	<div class="filter-condition">
+	     		<div class="title">
+	     			<h4>筛选条件</h4>
+	     		</div>
+	     		<ul>
+	     			<li>
+	     				<a>所有消息</a>
+	     			</li>
+	     			<li>    
+	     				<a>需要回复</a>
+	     			</li>
+	     			<li>
+	     				<a>未读</a>
+	     			</li>
+	     			<li>
+	     				<a>按日期筛选</a>
+	     			</li>
+	     			<li>
+	     				<a>已存档</a>
+	     			</li>
+	     		</ul>
+	     	</div>
+    	</div>
+    	
+    </div>
+    
+   	<div class="a-container-footer"></div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.hotkeys.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script src="js/bootstrap-wysiwyg.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script> 
+<script src="js/webjs/buyer_message_detail.js" type="text/javascript" charset="utf-8"></script>
+</html>
+

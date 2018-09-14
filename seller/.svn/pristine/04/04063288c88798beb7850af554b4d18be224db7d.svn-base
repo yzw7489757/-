@@ -1,0 +1,25 @@
+$(function () { 
+       // 检查并修改商品
+       $('.checkupBtn').click(function () { 
+        $('.checkupBtn').hide();
+        $('.hiddengoodsBtn').removeClass('dispplay_none');
+        $('.hiddenInfo').show();
+     })
+     // 隐藏商品
+     $('.hiddengoodsBtn').click(function () { 
+        $('.hiddengoodsBtn').addClass('dispplay_none');
+        $('.checkupBtn').show()
+        $('.hiddenInfo').hide();
+     })
+
+     $('#packing_box_select').bind("change",function () { 
+         if($(this).val() == 'multiple_boxes'){
+            $('.multiple_boxes').show()
+            $('.a_box').hide()
+         }else if($(this).val() == 'a_box'){
+            $('.multiple_boxes').hide()
+            $('.a_box').show()
+            $('.cargoLabelText').removeClass('opacity')
+         }
+      })
+ })

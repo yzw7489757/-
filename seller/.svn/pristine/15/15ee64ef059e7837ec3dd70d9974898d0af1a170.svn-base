@@ -1,0 +1,441 @@
+$(function(){
+    // 下拉选项弹框
+    var other_filter = $(".other-filter");
+    var splitdropdown = $('.splitdropdown');
+    var other_filter_down = $(".other-filter-down");
+    var search_num_down = $('.search_num_down');
+    var popover_down = $('.popover_down');
+    var search_num = $(".search_num");
+    function dropdown(e,popover_down,dir){
+        dir = dir || 'l';
+        e.click(function(){
+            var Wh = $(window).height();
+            var popover_h = popover_down.height();
+            var t = $(this).offset().top-1;
+            if((t + popover_h) > Wh){
+                t = t - popover_h + e.outerHeight(true);
+            }
+            var l = $(this).offset().left-1;
+            if(dir == 'r'){
+                var r = $(window).width() - l - $(this).outerWidth(true);
+                popover_down.css({
+                    top: t,
+                    right: r,
+                    left:"auto",
+                    display:'block'
+                })
+            }else{
+                popover_down.css({
+                    top: t,
+                    left: l,
+                    right:"auto",
+                    display:'block'
+                })
+            }
+        })
+    }
+    dropdown(other_filter,other_filter_down)
+    //dropdown(splitdropdown,'r')
+    dropdown(search_num,search_num_down,'r')
+    $(document).click(function(event) {
+       if(!$(event.target).hasClass('drop_ul')){
+            popover_down.css({
+                top: "auto",
+                left: "auto",
+                right:"auto",
+                display:'none'
+            })
+        }
+    })
+    // input "radio" "checked" 应用于N件选定商品
+    function select(){
+        var mt_select_all = $("#mt-select-all");
+        var procuct_input = $("td[data-column='select']").find('input[type="checkbox"]');
+        var declarative = $(".declarative");
+        mt_select_all.off('click').click(function(){
+            if($(this).prop('checked')){
+                procuct_input.prop('checked',true);
+                declarative.attr("disabled",false);
+                declarative.children('span').text(procuct_input.length);
+            }else{
+                procuct_input.prop('checked',false);
+                declarative.attr("disabled",true);
+                declarative.children('span').text('0');
+            }
+        })
+        procuct_input.off('click').click(function(){
+            var product_select_all = procuct_input.filter(function(index) {
+               return $(this).is(':not(:checked)');
+            })
+            if(procuct_input.is(":checked")){
+                declarative.attr("disabled",false);
+                declarative.children('span').text(procuct_input.length - product_select_all.length);
+            }else{
+                declarative.attr("disabled",true);
+                declarative.children('span').text('0');
+            }
+            if(!product_select_all.length){
+                mt_select_all.prop('checked',true);
+            }else{
+                mt_select_all.prop('checked',false);
+            }
+        })  
+    }
+    // 变体展示
+    // var Variant_show = $('.Variant_show');
+    // Variant_show.click(function(){
+    //     $(this).children('.mt-variation-expand').toggleClass('active');
+    // })
+    // 其他筛选条件
+    other_filter_down.find('.drop_link').click(function(){
+        var filter = $(this).attr('filter');
+        switch (filter)
+        {
+        case '1': $('#DATE_RANGE_START_SECTION').removeClass('hide');
+          break;
+        case '2': $('#DATE_RANGE_END_SECTION').removeClass('hide');
+          break;
+        case '3': $('#MIN_PRICE_SECTION').removeClass('hide');
+          break;
+        case '4': $('#MAX_PRICE_SECTION').removeClass('hide');
+          break;
+        }
+    })
+    // 页面数据交互
+    inputctr.public.checkLogin();
+    inputctr.public.SellerRegisterLoading();
+    var manage_table = $('.a-horizontal-stripes');
+    var myitable_gotopage = $('#myitable-gotopage');
+    var manage_list = manage_table.find('tbody');
+    var manage_inventory = {
+        amazonUserid:parseInt(amazon_userid),
+        key:'',
+        status:'',
+        fulfilled:'',
+        startDate:'',
+        endDate:'',
+        minPrice:'',
+        maxPrice:'',
+        pageSize:10,
+        currentPage:1,
+        orderBy:'',
+        desc:''
+    }
+    // 关闭筛选条件
+    var icon_close_filter = $('.a-icon-close-filter');
+    icon_close_filter.click(function(){
+        if($(this).parents('.mt-filter').find('input[type="text"]').val() == false){
+            $(this).parents('.mt-filter').addClass('hide');
+            return;
+        }
+        var filterId = $(this).parents('.mt-filter').find('input[type="text"]').attr('id');
+        $(this).parents('.mt-filter').addClass('hide').find('input[type="text"]').val('');
+        if(filterId == 'DATE_RANGE_START_VAR'){
+            manage_inventory.startDate = '';
+            renderPost1();
+        }
+        if(filterId == 'DATE_RANGE_END_VAR'){
+            manage_inventory.endDate = '';
+            renderPost1();
+        }
+        if(filterId == 'MIN_PRICE_VAR'){
+            manage_inventory.minPrice = '';
+            renderPost1();
+        }
+        if(filterId == 'MAX_PRICE_VAR'){
+            manage_inventory.maxPrice = '';
+            renderPost1();
+        }
+    })
+    // 点击表头栏 排序
+    manage_table.find('th').children('a').click(function(){
+        $(this).toggleClass('desc');
+        if($(this).hasClass('desc')){
+            manage_inventory.desc = 'asc';
+            $(this).children('.desc-icon-down').addClass('desc-icon-up');
+        }else{
+            manage_inventory.desc = 'desc';
+            $(this).children('.desc-icon-down').removeClass('desc-icon-up');
+        }
+        manage_inventory.orderBy = $(this).attr('orderBy');
+        renderPost1();
+    })
+    // 每页搜索结果
+    var search_num_size = search_num.attr('size');
+    search_num_down.find('.drop_link').click(function(){
+        let size = $(this).attr('size');
+        if(size == search_num_size){
+            return;
+        }
+        search_num.text($(this).text()).attr('size',size);
+        manage_inventory.pageSize = parseInt(size);
+        renderPost1();
+    })
+    // 初始化
+    function renderPost(){
+        inputctr.public.SellerRegisterLoading();
+        $.post(baseUrl+'/ProductList',{json:JSON.stringify(manage_inventory)}, function(data){
+            if(data){
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if(data.result == 1){
+                manage_render(data);
+                manage_inventory.currentPage = 1;
+            }else{
+                var error_html = '<tr>'+
+                                    '<td colspan="20" style="text-align:center;line-height:54px;font-size:14px;">'+
+                                        'You currently have no listings that meet this criteria. Use the filters below the search bar to view more of your listings.'+
+                                    '</td>'+
+                                '</tr>'
+                manage_list.html(error_html);
+            }             
+        },'json')
+    }renderPost()
+    // 列表渲染
+    function manage_render(data){
+        search_num_size = search_num.attr('size');
+        var totalPagecount = $('.mt-totalpagecount');
+        var count_value = $('#count-value');
+        count_value.text(data.totalRecords);
+        myitable_gotopage.attr('max',data.totalPages);
+        totalPagecount.text('共 '+data.totalPages+' 页');
+        manage_list.empty();
+        $.each(data.data, function(i, val) {
+             var is_sale = (val.is_onsale == 1) ? '在售' : '禁售';
+             var sale_display = (val.is_onsale == 1) ? 'inline-block' : 'none';
+             var shipping_mode = (val.shipping_mode == 1) ? '卖家' : '亚马逊';
+             var inbound_quantity = (val.inbound_quantity > 0) ? val.inbound_quantity : '-';
+             var unfulfillable_quantity = (val.unfulfillable_quantity > 0) ? val.unfulfillable_quantity : '-';
+             var reserved_quantity = (val.reserved_quantity > 0) ? val.reserved_quantity : '-';
+             var FNSKU = (Number(val.FNSKU) != 0) ? val.FNSKU : '-';
+             var minimum_price = (Number(val.minimum_price) != 0) ? val.minimum_price : '';
+             var maximum_price = (Number(val.maximum_price) != 0) ? val.maximum_price : '';
+             var img_display = (Number(val.product_image) == 0) ? 'none' : 'block';
+             var product_image = (Number(val.product_image) != 0) ? val.product_image : '';
+             var list_html = '<tr>'+
+                                 '<td id="dGFvd3cx-select_'+i+'" data-column="select">'+
+                                     '<label>'+
+                                         '<input type="checkbox" value="dGFvd3cx">'+
+                                     '</label>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-parent_'+i+'" data-column="parent"></td>'+
+                                 '<td id="dGFvd3cx-status_'+i+'" data-column="status" class="mt-header-left">'+
+                                     '<span>'+is_sale+'</span>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-image_'+i+'" data-column="image" class="mt-header-center">'+
+                                     '<div class="myi-image">'+
+                                         '<a href="javascript:;">'+
+                                             '<img src="'+decodeURIComponent(product_image)+'" width="60" height="60" style="display:'+img_display+'">'+
+                                         '</a>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-sku_'+i+'" data-column="sku" class="mt-header-left">'+
+                                     '<span>'+val.seller_sku+'</span>'+
+                                     '<div class="mt-table-header-detail">'+val.condition+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-listing_id_'+i+'" data-column="listing_id" class="mt-header-center">'+
+                                     '<div class="clamped">'+
+                                         '<a href="javascript:;">'+val.goods_id+'</a>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-title_'+i+'" data-column="title" class="mt-header-left">'+
+                                     '<div class="clamped wordbreak">'+
+                                         '<a href="javascript:;">'+val.goods_name+'</a>'+
+                                     '</div>'+
+                                     '<div class="mt-table-header-detail">'+val.product_id+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-date_'+i+'" data-column="date" class="mt-header-left">'+
+                                     '<div class="dGFvd3cx-date-date">'+val.create_time+'</div>'+
+                                     '<div class="mt-table-header-detail date-status-changed">'+val.last_update+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-quantity_'+i+'" data-column="quantity" class="mt-header-right">'+
+                                      '<div class="quantity-sell">'+
+                                          '<input type="text" value="'+val.quantity+'" maxlength="8" id="on_sell_num_'+i+'" class="input-text" style="display:'+sale_display+'"/>'+
+                                      '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-inboundQuantity_'+i+'" data-column="inboundQuantity" class="mt-header-center">'+
+                                     '<div class="inboundQuantity_num">'+inbound_quantity+'</div>'+
+                                 '</td>'+
+                                 '<td id="UnfulfillableQuantity_'+i+'" data-column="unfulfillableQuantity" class="mt-header-center">'+
+                                     '<div class="UnfulfillableQuantity_num">'+unfulfillable_quantity+'</div>'+
+                                 '</td>'+
+                                 '<td id="reservedQuantity_'+i+'" data-column="reservedQuantity" class="mt-header-center">'+
+                                     '<div class="reservedQuantity_num">'+reserved_quantity+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-fee_preview_widget_'+i+'" data-column="fee_preview_widget" class="mt-header-center">'+
+                                     '<a href="javascript:;">$'+val.your_price+'</a>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-price_'+i+'" data-column="price" class="mt-header-right">'+
+                                     '<div class="mt-combination">'+
+                                         '<div id="dGFvd3cx-price-price_'+i+'" class="mt-icon-field">'+
+                                             '<i class="mt-icon">$</i>'+
+                                             '<input type="text" class="input-text mt-icon-input"/>'+
+                                         '</div>'+
+                                         '<div id="dGFvd3cx-price-shipping_'+i+'" data-column="shipping">'+
+                                             '<span class="mt-text-content">+ --</span>'+
+                                         '</div>'+
+                                         '<div id="dGFvd3cx-price-shipping_template_'+i+'">'+
+                                             '<a href="javascript:;">Migrated Template</a>'+
+                                         '</div>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-lowPrice_'+i+'" data-column="lowPrice" class="mt-header-right">'+
+                                     '<div class="dGFvd3cx-lowPrice-lowPrice">'+
+                                         '<a href="javascript:;">$ 6.89</a>'+
+                                     '</div>'+
+                                     '<div class="dGFvd3cx-lowPrice-lowprice_shipping">'+
+                                         '<span class="mt-table-header-detail">+ $0.00</span>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-fnsku_'+i+'" data-column="fnsku" class="mt-header-center">'+
+                                     '<div class="reservedQuantity_num">'+FNSKU+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-fulfillment_channel_'+i+'" data-column="fulfillment_channel" class="mt-header-center">'+
+                                     '<div class="reservedQuantity_num">'+shipping_mode+'</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-minimumPrice_'+i+'" data-column="minimumPrice" class="mt-header-right">'+
+                                     '<div class="mt-combination">'+
+                                         '<div class="mt-icon-field">'+
+                                             '<i class="mt-icon">$</i>'+
+                                             '<input type="text" class="input-text mt-icon-input" value="'+minimum_price+'" />'+
+                                         '</div>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-maximumPrice_'+i+'" data-column="maximumPrice" class="mt-header-right">'+
+                                     '<div class="mt-combination">'+
+                                         '<div class="mt-icon-field">'+
+                                             '<i class="mt-icon">$</i>'+
+                                             '<input type="text" class="input-text mt-icon-input" value="'+maximum_price+'" />'+
+                                         '</div>'+
+                                     '</div>'+
+                                 '</td>'+
+                                 '<td id="dGFvd3cx-action_'+i+'" data-column="action" class="mt-header-center">'+
+                                     '<div class="mt-button clear_both">'+
+                                         '<button class="secondaryAUIButton edit fl" onclick="window.open(\'edit_product.html?goodsID=' + val.goods_id + '\')">编辑</button>'+
+                                         '<button class="secondaryAUIButton splitdropdown fl drop_ul">'+
+                                             '<i class="a-icon a-icon-dropdown drop_ul"></i>'+
+                                         '</button>'+
+                                     '</div>'+
+                                 '</td>'+
+                             '</tr>';
+            manage_list.append(list_html);
+        })
+        manage_list.on('click', '.edit', function() {
+            inputctr.public.judgeBegaintask('1209');
+            inputctr.public.judgeBegaintask('1210');
+            inputctr.public.judgeBegaintask('1211');
+        });
+        select();
+    }
+// 筛选页面数据
+    //商品状态 配送类型
+    var all_goods = $('#all_goods');
+    var on_sell = $('#on_sell');
+    var forbid_sell = $('#forbid_sell');
+    var all_delivery = $('#all_delivery');
+    var on_amazon = $('#on_amazon');
+    var seller_logistics = $('#seller-logistics');
+    function status(target){
+        target.change(function(){
+            if($(this).attr('name') == 'goods'){
+                manage_inventory.status = $(this).attr('status');
+            }
+            if($(this).attr('name') == 'delivery'){
+                manage_inventory.fulfilled = $(this).attr('status');
+            }
+            renderPost1();
+        })
+    }
+    status(all_goods);
+    status(on_sell);
+    status(forbid_sell);
+    status(all_delivery);
+    status(on_amazon);
+    status(seller_logistics);
+    // 其他筛选条件 日期
+    function date(date,selector){
+        if(selector == '#DATE_RANGE_START_VAR'){
+            manage_inventory.startDate = date;
+        }
+        if(selector == '#DATE_RANGE_END_VAR'){
+            manage_inventory.endDate = date;
+        }
+        renderPost1();
+    }
+    laydate.render({
+      elem:'#DATE_RANGE_START_VAR',
+      lang: 'en',
+      format: 'dd/MM/yyyy',
+      showBottom: false,
+      done: function(value){
+            date(value,this.elem.selector)
+        }
+    })
+    laydate.render({
+      elem:'#DATE_RANGE_END_VAR',
+      lang: 'en',
+      format: 'dd/MM/yyyy',
+      showBottom: false,
+      done: function(value){
+            date(value,this.elem.selector)
+        }
+    })
+    // 价格筛选
+    var min_price_var = $('#MIN_PRICE_VAR');
+    var max_price_var = $('#MAX_PRICE_VAR');
+    function priceVar(target){
+        target.change(function() {
+            if($(this).attr('id') == 'MIN_PRICE_VAR'){
+                manage_inventory.minPrice = $(this).val().trim();
+            }
+            if($(this).attr('id') == 'MAX_PRICE_VAR'){
+                manage_inventory.maxPrice = $(this).val().trim();
+            }
+            renderPost1();
+        })
+    }
+    priceVar(min_price_var);
+    priceVar(max_price_var);
+    // 关键词搜索
+    var button_search = $('.button-search');
+    var myitable_search = $('#myitable-search');
+    button_search.click(function(){
+        if(myitable_search.val() == false){
+            return;
+        }
+        manage_inventory.key = myitable_search.val().trim();
+        renderPost1();
+    })
+    // 页码搜索
+    var myitable_gotopage_button = $('#myitable-gotopage-button');
+    function pageSearch(){
+        if(myitable_gotopage.val() > Number(myitable_gotopage.attr('max'))){
+            myitable_gotopage.addClass('error');
+        }else if(myitable_gotopage.val() < Number(myitable_gotopage.attr('min'))){
+            myitable_gotopage.addClass('error');
+        }else{
+            myitable_gotopage.removeClass('error');
+        }
+        if(myitable_gotopage.hasClass('error')){
+            return;
+        }
+        if(Number(myitable_gotopage.attr('max')) <= 1){
+            return;
+        }
+        manage_inventory.currentPage = parseInt(myitable_gotopage.val().trim());
+        myitable_gotopage.blur();
+        renderPost();
+    }
+    myitable_gotopage_button.click(function(){
+        pageSearch();
+    })
+    $(document).keyup(function(event) {
+       if(event.keyCode == 13){
+           pageSearch();
+        }
+    }) 
+    function renderPost1(){
+         myitable_gotopage.val('1');
+         renderPost();
+    }
+}) 

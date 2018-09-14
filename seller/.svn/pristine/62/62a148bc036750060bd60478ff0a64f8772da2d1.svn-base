@@ -1,0 +1,46 @@
+$(function () {
+    var input_one = $('.input_one').val();
+    var input_two = $('.input_two').val();
+    var input_three = $('.input_three').val();
+    var input_weight = $('.input_weight').val();
+    var inputNum = $('.inputNum').val();
+    var showTr = false;
+    $('.saveBtn').click(function () {
+        input_one = $('.input_one').val();
+        input_two = $('.input_two').val();
+        input_three = $('.input_three').val();
+        input_weight = $('.input_weight').val();
+        if(input_one && input_two && input_three && input_weight){
+            alert('1')
+        }else{
+            alert('input为空')
+        }
+    })
+    // 混装商品 原厂包装发货商品
+    $('.mixingBox a').click(function () { 
+        $('.mixingBox').hide()
+        $('.originalBox').show()
+        showTr = true;
+        if(showTr){
+            $('.hiddenTr').removeClass('none')
+        }
+     })
+     $('.originalBox a').click(function () { 
+        $('.originalBox').hide()
+        $('.mixingBox').show()
+        showTr = false;
+        if(!showTr){
+            $('.hiddenTr').addClass('none')
+        }
+     })
+    
+    // 继续
+    $('.goBtn').click(function () { 
+        inputNum = $('.inputNum').val();
+        if(inputNum != ""){
+            $(location).attr('href', '/seller/manage_inventory_preprocessed_goods.html');
+        }else{
+            alert('商品数量为空')
+        }
+     })
+})

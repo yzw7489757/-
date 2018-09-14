@@ -1,0 +1,8 @@
+$(function () { 
+    $('.saveBtn').click(function () { 
+        $('.model-wrapper').show();
+     })
+     $('.closeBtn').click(function () { 
+        $('.model-wrapper').hide();
+      })
+ })

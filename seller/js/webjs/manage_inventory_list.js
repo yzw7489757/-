@@ -1,0 +1,10 @@
+$(function () { 
+    $('.cargoTitle li').click(function () { 
+        var index = $(this).index();
+        $(this).addClass('selectColor').siblings().removeClass('selectColor');
+        $('.cargo>li').eq(index).removeClass('none').siblings().addClass('none')
+      })
+    $('.anotherGoods').click(function () { 
+        $(window).attr('location', '/seller/manage_inventory_checking_cargo.html')
+     })
+ })
