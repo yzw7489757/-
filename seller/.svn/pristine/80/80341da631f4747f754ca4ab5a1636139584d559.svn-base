@@ -3,19 +3,11 @@ $(function () {
     var sizeInput2 = $('.sizeInput2').val();
     var sizeInput3 = $('.sizeInput3').val();
     var inputweight = $('.inputweight').val();
-    var moreSizeInput1 = $('.moreSizeInput1').val();
-    var moreSizeInput2 = $('.moreSizeInput2').val();
-    var moreSizeInput3 = $('.moreSizeInput3').val();
-    var moreSizeweight = $('.moreSizeweight').val();
     function inputValue() { 
         sizeInput1 = $('.sizeInput1').val();
         sizeInput2 = $('.sizeInput2').val();
         sizeInput3 = $('.sizeInput3').val();
         inputweight = $('.inputweight').val();
-        moreSizeInput1 = $('.moreSizeInput1').val();
-        moreSizeInput2 = $('.moreSizeInput2').val();
-        moreSizeInput3 = $('.moreSizeInput3').val();
-        moreSizeweight = $('.moreSizeweight').val();
      }
     // 检查并修改商品
     $('.checkupBtn').click(function () {
@@ -39,21 +31,11 @@ $(function () {
             $('.a_box').show()
         }
     })
-    // 删除
-    $('.deleteBtn').click(function () {
-        $(this).parent().parent().remove();
-    })
     // 确认
     $('.confirmBtn').click(function () { 
         inputValue();
         if(sizeInput1 && sizeInput2 && sizeInput3 && inputweight){
             $('.successInfo').show()
-        }
-     })
-     $('.moreConfirmBtn').click(function () { 
-        inputValue();
-        if(moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && moreSizeweight){
-            alert('保存成功')
         }
      })
     // 完成货件

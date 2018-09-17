@@ -1,0 +1,18 @@
+$(function(){
+    $('#select').change(function () {
+        if ($(this).val() == '适用于全部') {
+            $("select[name=childSelect]").find('option[value="适用于全部"]').attr('selected', true)
+        }
+    })
+    // 删除
+    $('.deleteBtn').click(function () {
+        $(this).parent().parent().remove();
+    })
+    $('.goBtn').click(function () { 
+        $(location).attr('href', '/seller/manage_inventory_checking_cargo.html');
+     })
+     // 返回
+    $('.returnBtn').click(function () {
+        $(location).attr('href', '/seller/manage_inventory_preprocessed_goods.html');
+    })
+})

@@ -166,12 +166,12 @@
                                     <td>
                                         <input type="text" value="20" class="align_right">
                                     </td>
-                                    <td><img src="./img/icon_4.png" alt="" class="deleteBtn"></td>
+                                    <td><img src="./img/icon_4.png" alt=""></td>
                                 </tr>
                                 <tr>
                                     <td colspan="3">总计</td>
                                     <td style="padding-left: 93px;">20</td>
-                                    <td><img src="./img/icon_4.png" alt="" class="deleteBtn"></td>
+                                    <td><img src="./img/icon_4.png" alt=""></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -393,13 +393,13 @@
                                     <td>
                                         <span>-</span>
                                     </td>
-                                    <td><input type="text" class="moreSizeweight"></td>
+                                    <td><input type="text"></td>
                                     <td class="a-text-right">
-                                        <input type="text" style="width: 50px" class="moreSizeInput1">
+                                        <input type="text" style="width: 50px">
                                         <img src="./img/close.png" alt="">
-                                        <input type="text" style="width: 50px" class="moreSizeInput2">
+                                        <input type="text" style="width: 50px">
                                         <img src="./img/close.png" alt="">
-                                        <input type="text" style="width: 50px" class="moreSizeInput3">
+                                        <input type="text" style="width: 50px">
                                     </td>
                                 </tr>
                             </tbody>
@@ -411,7 +411,7 @@
                                     <span class="button_label">保存以供日后使用</span>
                                 </span>
                                 <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
-                                    <span class="button_label moreConfirmBtn">确认</span>
+                                    <span class="button_label">确认</span>
                                 </span>
                             </div>
                             <div class="clear"></div>
@@ -538,17 +538,9 @@
                             </span>
                         </div>
                         <div class="float_right">
-                            <div class="none">
-                                <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
-                                    <span class="button_label finishBtn">完成货件</span>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="awesomeButton darkredButtonLarge darkredButton inner_button">
-                                    <span class="button_label">完成货件</span>
-                                </span>
-                            </div>
-
+                            <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
+                                <span class="button_label finishBtn">完成货件</span>
+                            </span>
                         </div>
                         <div class="clear"></div>
                     </div>
