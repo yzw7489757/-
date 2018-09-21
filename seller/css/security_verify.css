@@ -1,0 +1,66 @@
+body{
+    font-size: 13px;
+}
+.a-padding-base{
+    padding: 10px 14px!important;
+}
+.verify-box{
+    width: 700px;
+}
+.verify-box .a-box-inner{
+    padding: 14px 14px;
+}
+#accordion-phone-header{
+    position: relative;
+    padding: 0 18px 10px 23px;
+    display:block;
+    color:#111;
+}
+#accordion-phone-header:hover{
+    text-decoration: none;
+}
+.a-icon-radio-active{
+    position: absolute;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    vertical-align: middle;
+    background-position: -30px -294px;
+    margin-top: 2px;
+}
+.a-letter-space{
+    display: inline-block;
+    width: .385em;
+}
+.a-form-label{
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+.a-input-text{
+    width: 150px!important;
+}
+.a-button-31{
+    height: 31px;
+    line-height: 30px;
+    margin-left: 5px;
+    transition: all 0.4s;
+}
+.loading-img{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.verity-error-alert{
+    color: #c40000;
+    font-size: 12px;
+    position:relative;
+    padding-left: 14px;
+}
+.verity-error-alert .a-icon-alert-error{
+    height: 13px;
+    width: 14px;
+    background-position: -141px -130px;
+    position:absolute;
+    left: 2px;
+    top: 2px;
+}

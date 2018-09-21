@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Two-Step Verification</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/header_nav.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/security_verify.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="a-content">
+            <div class="verify-box a-padding-base">
+                <div class="a-box">
+                    <div class="a-box-inner">
+                        <a href="javascript:;" id="accordion-phone-header">
+                            <i class="a-icon a-icon-radio-active"></i>
+                            <div>
+                                <span class="a-size-medium a-text-bold">Phone number</span>
+                                <span class="a-letter-space"></span>
+                                <span class="a-color-tertiary">Receive codes on your phone</span>
+                            </div>
+                        </a>
+                        <div class="a-row a-spacing-base">
+                            <label class="a-form-label">Enter the phone number where you want to receive codes.</label>
+                            <input type="text" maxlength="20" id="verity-phone" class="a-input-text"/>
+                            <button class="primaryAUIButton a-button-inner a-button-31" id="send-code-sms">Send code</button>
+                            <img src="img/snake._V1_.gif" class="loading-img hide" />
+                            <div class="error-alert hide">
+                                <i class="a-icon a-icon-alert-error"></i>
+                                Enter your correct phone number.
+                            </div>
+                        </div>
+                        <div class="a-row a-spacing-base">
+                            <label class="a-form-label">Enter the code that is sent to your device.</label>
+                            <input type="text" maxlength="6" id="verify-phone-code-input" class="a-input-text" autocomplete="off"/>
+                            <button class="primaryAUIButton a-button-inner a-button-31" id="verify-phone-submit-button" disabled>Verify code and continue</button>
+                            <img src="img/snake._V1_.gif" class="loading-img hide"/>
+                            <div class="error-alert hide">
+                                <i class="a-icon a-icon-alert-error"></i>
+                                This code is invalid.
+                            </div>
+                            <div class="hide verity-error-alert">
+                                <i class="a-icon a-icon-alert-error"></i>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script src="js/webjs/seller_public.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/webjs/security_verify.js"></script>
+</html>

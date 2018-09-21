@@ -1,0 +1,69 @@
+$(function(){
+    var register = $("#continue");
+    inputctr.public.judgeBegaintask('1002');
+    register.click(function(){
+        inputctr.public.judgeRecodertask('1002','注册任务开始');
+        var name = $("#ap_customer_name").val().trim();
+        var email = $("#ap_email").val().trim();
+        var password = $("#ap_password").val().trim();
+        var sure_password = $("#ap_password_check").val();
+        if(!name){
+            $("#auth-customerName-missing-alert").removeClass('auth-inlined-error-message');
+            return;
+        }else{
+            $("#auth-customerName-missing-alert").addClass('auth-inlined-error-message');
+        }
+        if(!inputctr.public.isemail(email)){
+            $("#auth-email-missing-alert").removeClass('auth-inlined-error-message');
+            return;
+        }else{
+            $("#auth-email-missing-alert").addClass('auth-inlined-error-message');
+        }
+        if(password.length < 6){
+            $("#ap_password").siblings('.a-alert-inline-info').find('.a-alert-content').css({color: '#c40000'})
+            return;
+        }else{
+            $("#ap_password").siblings('.a-alert-inline-info').find('.a-alert-content').css({color: '#2b2b2b'})
+        }
+        if(sure_password != password){
+            $("#auth-passwordCheck-missing-alert").removeClass('auth-inlined-error-message');
+            return; 
+        }else{
+            $("#auth-passwordCheck-missing-alert").addClass('auth-inlined-error-message');
+        }
+        inputctr.public.SellerRegisterLoading();
+        var stuid = inputctr.public.getCookie('studentID');
+        var trainingmode = inputctr.public.getCookie('traintype');
+        var stuaccount = inputctr.public.getCookie('account');
+        var language = inputctr.public.getCookie('userLanguage');
+        var classID = inputctr.public.getCookie('classid');
+        var className = inputctr.public.getCookie('classname');
+        var orgID = inputctr.public.getCookie('orgid');
+        var sellerMessage = {
+            name:name,
+            email:email,
+            pwd:password,
+            stuid:stuid,
+            stuaccount:stuaccount,
+            trainingmode:trainingmode,
+            orgID: orgID,
+            classID:classID,
+            className:className
+        }
+        $.post(baseUrl+'/SellerRegister', {json:JSON.stringify(sellerMessage)}, function(data) {
+            if(data){
+               inputctr.public.SellerRegisterLoadingRemove();
+            }
+            if(data.result == 1){
+                inputctr.public.judgeFinishtask('1002',CommitSuccess(sellerMessage));
+            }else{
+                $("#auth-error-message-box").removeClass('hide').find("span.a-list-item").text(decodeURIComponent(data.error));
+            }
+        },'json')  
+    })
+    function CommitSuccess(sellerMessage){
+        $("#auth-error-message-box").addClass('hide');
+        inputctr.public.setCookie('user_email',Base64.encode(sellerMessage.email));
+        window.location.href='login.html';
+    }
+})

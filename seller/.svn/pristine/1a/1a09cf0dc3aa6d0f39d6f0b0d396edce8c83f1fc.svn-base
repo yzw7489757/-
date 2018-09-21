@@ -1,0 +1,52 @@
+$(function(){
+    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
+    if (window.sessionStorage) {
+        var planNo = sessionStorage.getItem('planId')
+    }
+    $('#select').change(function () {
+        if ($(this).val() == '适用于全部') {
+            $("select[name=childSelect]").find('option[value="适用于全部"]').attr('selected', true)
+        }
+    })
+    // 商品信息初始化
+    $.post(baseUrl + '/GetdeliveryAdr', {
+        planNo: planNo
+    }, function (res) {
+        console.log(res)
+        var data = res.goodsInfo[0];
+        // 卖家sku
+        $('.sellerSku').text(data.sellerSku)
+        // 商品名称
+        $('.goodsName').text(decodeURIComponent(data.goodsName))
+        // 配送类型：-1 所有 1卖家 2 亚马逊
+        if (data.shippingMode == '-1') {
+            $('.shippingMode').text('所有')
+            $("select[name=childSelect]").find('option[value="适用于全部"]').attr('selected', true)
+        } else if (data.shippingMode == '1') {
+            $('.shippingMode').text('卖家')
+            $("select[name=childSelect]").find('option[value="卖家"]').attr('selected', true)
+        } else if (data.shippingMode == '2') {
+            $('.shippingMode').text('亚马逊')
+            $("select[name=childSelect]").find('option[value="亚马逊"]').attr('selected', true)
+        }
+        // 商品数量
+        $('.goodsNum').text(data.goodsNum)
+        if ($("input[name=info]:checked").length > 0 && $("input[name=type]:checked").length > 0) {
+            $('.unfinish').hide();
+            $('.finish').show();
+            DangerousInfo();
+        }
+    }, 'json')
+
+    // 删除
+    $('.deleteBtn').click(function () {
+        $(this).parent().parent().remove();
+    })
+    $('.goBtn').click(function () { 
+        $(location).attr('href', '/seller/manage_inventory_checking_cargo.html');
+     })
+     // 返回
+    $('.returnBtn').click(function () {
+        $(location).attr('href', '/seller/manage_inventory_preprocessed_goods.html');
+    })
+})
