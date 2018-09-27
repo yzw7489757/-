@@ -1,0 +1,235 @@
+.account-header{
+    padding:10px 0;
+}
+body{
+    font-size: 13px;
+    color:#111;
+}
+a{
+    color: #0066c0;
+}
+a:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+.status-nav,.distribution-nav{
+    border-bottom: 1px solid #ccc;
+    padding:0 18px;
+}
+.status-nav:after,.distribution-nav:after{
+    clear: both;
+}
+.status-nav:before,.status-nav:after,.distribution-nav:after,.distribution-nav:before{
+    display: table;
+    content: " ";
+}
+.status-nav li,.distribution-nav li{
+    float: left;
+    min-width: 85px;
+    text-align: center;
+    margin-bottom: -1px;
+}
+.status-nav li a,.distribution-nav li a{
+    padding:5px 0;
+    display: block;
+    border: 1px solid transparent;
+}
+.distribution-nav li a{
+    padding:5px 15px;
+}
+.status-nav li.active a,.distribution-nav li.active a{
+    border:1px solid #ccc;
+    border-bottom-color: transparent;
+    background-color: #fff;   
+    color:#111;
+    font-weight: 600;
+}
+.status-nav li.active a:hover,.distribution-nav li.active a:hover{
+    text-decoration: none;
+}
+/*账户状况*/
+.feedback{
+    padding: 0 10px;
+}
+.status-tab{
+    padding:0 10px;
+}
+.customer-service{
+    width: 520px;
+    margin-right: 25px;
+}
+.service-header{
+    border-bottom: 1px solid #ccc;
+    border-radius: 0!important;
+}
+.right-mode{
+    width: 235px;
+    color:#6C6C6C;
+}
+.defect-box,.policy-list{
+    height: 75px;
+    background: #E0F1FC;
+    padding: 12px;
+}
+.defect-right{
+    width: 210px;color:#6C6C6C;
+}
+.defect-rate,.target,.target-rate,.cycle-date,.order-num{
+    color:#6C6C6C;
+}
+.defect-standard{
+    padding-left: 11px;
+}
+.defect-standard h5{
+    font-size: 13px;
+    font-weight: 700;
+}
+.standard-list{
+    padding-left: 25px;
+}
+.standard-list li{
+    list-style: disc;
+    padding: 22px 0;
+    padding-right: 12px;
+    border-bottom: 1px solid #E4E4E4;
+}
+.standard-list .list-item{
+    display:block;
+}
+.right-feedback{
+    width: 202px;
+}
+.commodity-policy{
+    width: 307px;
+    margin-right: 25px;
+}
+.complaint-num{
+    font-size: 22px;
+}
+.a-icon-collapse{
+    width: 7px;
+    height: 7px;
+    background-position: -382px -86px;
+    margin-top: 4px;
+    margin-left: 5px;
+    opacity:.8;
+    cursor: pointer;
+}
+.distribution-performance{
+    width: 265px;
+}
+#mode{
+    height: 21px;
+    outline: none;
+}
+.status-li .a-box{
+    min-height: 450px;
+}
+/*绩效指标*/
+.table-bg{
+    background: #F2F2F3;
+}
+.thead{
+    padding:5px;
+    background: linear-gradient(#F3F3F3, #E3E3E3);
+}
+.tbody{
+    padding: 10px 20px;
+}
+.check-list{
+    border:1px solid #ccc;
+    background: #fff;
+    padding:14px 0;
+}
+.check-list li{
+    width: 33.33%;
+    border-right: 2px solid #ccc;
+    padding-left: 18px;
+    float:left;
+}
+.check-list li:last-child{
+    border-right: 0;
+}
+.target-rate{
+    margin-left: 21px;
+}
+.rate-number{
+    font-size: 24px;
+    color:#239037;
+    line-height: 24px;
+}
+.target-rate span{
+    display:block;
+}
+.beta-list{
+    margin-top: 10px;
+    border-left: 1px solid #ccc;
+}
+.beta-list li{
+    width: 50%;
+    float:left;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    line-height: 28px;
+    margin-top: -1px;
+    border-left: 0;
+}
+.beta-list li.hidden{
+    visibility: hidden;
+}
+.beta-list li img{
+    vertical-align: middle;
+}
+.dissatisfied-rate{
+    display:inline-block;
+    margin-left: 15px;
+}
+.status-defect-table{
+    border:1px solid #ccc;
+}
+.status-defect-table tr td{
+    width: 25%;
+}
+.status-defect-table2 tr td{
+    width: 20%;
+}
+.status-defect-table .cycle-thead td,.status-defect-table tbody td{
+    text-align: center;
+}
+.status-defect-table tbody td{
+    padding: 5px;
+}
+.status-defect-table tbody .order-tip{
+    text-align: left;
+}
+.status-defect-table .cycle-thead{
+    background: #fff;
+}
+.apply-data,.history-data{
+    padding: 2px 5px;
+}
+.Performance-goals .goals{
+    color:#DE6B1F;
+}
+.norm-list{
+    padding-left: 25px;
+}
+.norm-list li{
+    list-style: disc;
+}
+.sc_footer{
+    margin-top: 0;
+}
+/*买家反馈*/
+.Grade-title h1{
+    font-size: 16px;
+    font-weight: 600;
+}
+.Grade-title h1 .new{
+    color:#C35A14;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.count-tip{
+    margin-right: 10%;
+}

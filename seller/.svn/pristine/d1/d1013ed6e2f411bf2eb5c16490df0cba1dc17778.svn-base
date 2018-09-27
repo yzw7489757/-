@@ -1,0 +1,162 @@
+let buyer_message={};
+$(function(){
+	buyer_message.GetBuyerMessage('1','0');
+})
+buyer_message.GetBuyerMessage=function(num,type){
+	$('#message-container').removeClass('hide');
+	$('#buyer-message-detail-container').addClass('hide');
+	let begin='';
+	let end='';
+	if(type=='3'){
+		begin=$('#customize-begin-date').val();
+		end=$('#customize-end-date').val();
+		if((new Date(begin)).getTime()>(new Date(end)).getTime()){
+			alert('开始时间不能大于结束时间！');
+			return false;
+		}
+	}else{
+		$('.filter-condition li').find('.select-date').addClass('hide');
+	}
+	let search=$('#search-message-condition').val();
+	let request_data={
+			json:{
+				pageSize:10,
+				currentPage:num,
+				sellerID:amazon_userid,
+				type:type,
+				begin:begin,
+				end:end,
+				key:search
+			}
+	}
+	request_data.json=JSON.stringify(request_data.json);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/BuyerMessage',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		var html=template(document.getElementById('message-container-tpl').innerHTML,data);
+				document.getElementById('message-container').innerHTML = html;
+				buyer_message.Pagination(data, num, buyer_message.GetBuyerMessage,type)
+        	}else{
+        		data.data=[];
+        		var html=template(document.getElementById('message-container-tpl').innerHTML,data);
+				document.getElementById('message-container').innerHTML = html;
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+buyer_message.Pagination= function (alldata, num,callback_function,callback_data) {
+    //分页
+    $(".message-history-pagination").paging({
+        pageNo: num,
+        totalPage:parseInt(alldata.totalPages),
+        totalSize:parseInt(alldata.totalRecords),
+        callback: function (num) {
+            callback_function(num,callback_data)
+        }
+    })
+}
+
+//筛选日期
+buyer_message.ToggleDateSelect=function(target,type){
+	if(type=='show'){
+		$(target).parents('li').find('.select-date').removeClass('hide');
+	}else{
+		$(target).parents('li').find('.select-date').addClass('hide');
+		buyer_message.GetBuyerMessage('1','0');
+	}
+}
+
+
+//查看消息详情
+buyer_message.ShowBuyerMessageDetail=function(fld_id){
+	let request_data={
+			id:fld_id
+		}
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/BuyerMessageInfo',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		$('.content-header .back-to-all-message').removeClass('hide');
+        		$('#message-container').addClass('hide');
+        		data.data[0].fld_id=fld_id;
+        		var html=template(document.getElementById('buyer-message-detail-container-tpl').innerHTML,data);
+				document.getElementById('buyer-message-detail-container').innerHTML = html;
+				buyer_message.InitEdit();
+				$('#buyer-message-detail-container').removeClass('hide');
+        	}else{
+        		 alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+
+//返回消息列表
+buyer_message.BackToMessageList=function(){
+	$('.content-header .back-to-all-message').addClass('hide');
+    $('#message-container').removeClass('hide');
+    $('#buyer-message-detail-container').addClass('hide');
+}
+buyer_message.InitEdit=function(){
+	$('#editor').wysiwyg();
+}
+//发送消息
+buyer_message.SendMessage=function(id,headpic){
+	let message=$('#editor').html();
+	if(!message){
+		alert('请输入回复内容！');
+		return false;
+	}else{
+		$('#editor').html('');
+		let request_data={
+			json:{
+				id:id,
+				user_type:2,
+				user_id:amazon_userid,
+				content:message
+			}
+		}
+		request_data.json=JSON.stringify(request_data.json);
+		$.ajax({
+	        type:'POST',
+	        url:baseUrl+'/BuyerMessageInfoReply',
+	        data:request_data,
+	        dataType:"json",
+	        success:function(data){
+	        	if(data.result==1){
+	        		let currentDate=new Date();
+	        		let time=inputctr.formatTime('yyyy-MM-ddTHH:mm:ss.S',currentDate)
+	        		$('#buyer-message-detail-container .chart-container .nodata').remove();
+	        		let content='<div class="right-buyer-message clearfix">'
+						    	+'<div class="pull-right">'
+						    	+'<img class="avatar-32" src="'+headpic+'"  onerror="this.src=\'img/default-header.png\'">'
+						    	+'</div>'
+						    	+'<div class="message-infornation pull-right">'
+						    	+'<div class="information">'
+						    	+'<p class="content">'+message+'</p>'
+							    +'<p class="name">'+time+'</p>'
+						    	+'</div></div></div>';
+					$('#buyer-message-detail-container .chart-container').append(content);
+	        	}else{
+	        		 alert(decodeURIComponent(data.error));
+	        	}
+	        },
+	        error:function(XHR){
+	          
+	        }
+	    }); 
+	}
+	
+}

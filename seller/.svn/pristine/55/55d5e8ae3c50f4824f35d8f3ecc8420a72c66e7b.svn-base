@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>活动</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/campaign_first_entry.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="amazon-campaign-first-entry-container">
+    	<div class="banner-box">
+	    	<div class="banner-wrap">
+	    		<div class="campaign-decrible">
+	    			<div class="first-entry-logo"><img src="img/first-entry.png"/></div>
+	    			<p class="second-title">Help more shoppers discover and buy yuor products.</p>
+	    			<p class="thired-title">No monthly fee.<em>only pay when someone click your ad.</em></p>
+	    		</div>
+	    		<div class="creat-ad-campaign-container">
+	    			<h1>Start Advertising Now</h1>
+	    			<p class="change-payment-methods">Payment for ads click will be discounted form your selles account.<a>Change</a></p>
+	    			<button class="primaryAUIButton">Creat ad campaign</button>
+	    			<p class="free-click">$50 in free clicks when you start</p>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
