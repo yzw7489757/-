@@ -20,6 +20,10 @@
         Unavailable:"显示名称不可用",
         repeat:"商铺名称重复",
         successInfo:"商店详细信息已成功更新。",
-        Shop_name_not_available:"商店名称不可用"
+        Shop_name_not_available:"商店名称不可用",
+        link_empty:"店铺链接为空",
+        link_invalid:"店铺链接无效",
+        UnavailableLink:"店铺链接不可用",
+        link_repeat:"店铺链接重复"
     }
 }

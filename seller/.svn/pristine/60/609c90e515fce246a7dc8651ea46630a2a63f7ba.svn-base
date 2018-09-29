@@ -1,0 +1,180 @@
+$(function () {
+    var input_one = $('.input_one').val(); // 长
+    var input_two = $('.input_two').val(); // 宽
+    var input_three = $('.input_three').val(); // 高
+    var input_weight = $('.input_weight').val(); // 重量
+    var inputNum = $('.inputNum').val(); // 商品数量
+    var box_goods_num = $('.box_goods_num').val(); // 每个箱子商品数量
+    var box_num = $('.box_num').val(); // 箱子数量
+    var showTr = false;
+    var showBtn = false;
+    var packMethod; // 包装类型（1 混装商品 2 原厂包装）
+    var planGoodsId;
+    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
+    var strGoodsBoxJson;
+    if (window.sessionStorage) {
+        var planId = sessionStorage.getItem('planId')
+    }
+    function inputValue() {
+        input_one = $('.input_one').val();
+        input_two = $('.input_two').val();
+        input_three = $('.input_three').val();
+        input_weight = $('.input_weight').val();
+        inputNum = $('.inputNum').val();
+        box_goods_num = $('.box_goods_num').val();
+        box_num = $('.box_num').val();
+    }
+    // 按钮变换颜色
+    function notemptyInput() {
+        inputValue();
+        if (input_one && input_two && input_three && input_weight) {
+            $('.saveBtn').addClass('secondaryLargeButton')
+            $('.redgoBtn').show();
+            $('.yellowgoBtn').hide();
+            showBtn = true;
+        }else{
+            $('.saveBtn').removeClass('secondaryLargeButton')
+            $('.redgoBtn').hide();
+            $('.yellowgoBtn').show();
+            showBtn = false;
+        }
+    }
+    // 按钮变换颜色
+    function changeBtnColor(target) {
+        $(target).blur(function () {
+            notemptyInput()
+        })
+    }
+    changeBtnColor('.input_one')
+    changeBtnColor('.input_two')
+    changeBtnColor('.input_three')
+    changeBtnColor('.input_weight')
+    // 保存
+    $('.saveBtn').click(function () {
+        inputValue();
+        if (packMethod == 1) {
+            if (input_one && input_two && input_three && input_weight) {
+                SetingNumber();
+                console.log(packMethod)
+            }
+        } else {
+            if (input_one && input_two && input_three && input_weight && box_goods_num && box_num) {
+                SetingNumber();
+                console.log(packMethod)
+            }
+        }
+    })
+    // 设置商品箱子信息
+    function SetingNumber() {
+        inputValue();
+        strGoodsBoxJson = JSON.stringify({
+            goodsArr: [{
+                planGoodsId: planGoodsId,
+                boxLength: input_one,
+                boxWidth: input_two,
+                boxHeight: input_three,
+                boxWeights: input_weight,
+                boxGoodsNum:box_goods_num,
+                boxNum:box_num,
+                goodsNum:inputNum
+            }]
+        });
+        $.post(baseUrl + '/SetingNumber', {
+            strGoodsBoxJson: strGoodsBoxJson
+        }, function (res) {
+            console.log(res);
+            if (res.result == '1') {
+                console.log('success!')
+            }
+        }, 'json')
+    }
+    // 混装商品 原厂包装发货商品
+    $('.mixingBox>a').click(function () {
+        $('.mixingBox').hide();
+        $('.originalBox').show();
+        $('.hiddenTr').removeClass('none');
+        packMethod = 2;
+        UpdatePackMethod();
+    })
+    $('.originalBox>a').click(function () {
+        $('.mixingBox').show();
+        $('.originalBox').hide();
+        $('.hiddenTr').addClass('none');
+        packMethod = 1;
+        UpdatePackMethod()
+    })
+
+
+    // 更改包装类型
+    function UpdatePackMethod() {
+        $.post(baseUrl + '/UpdatePackMethod', {
+            planId: planId,
+            packMethod: packMethod
+        }, function (res) {
+            console.log(res);
+            if (res.result == '1') {
+                console.log(decodeURIComponent(res.msg))
+            }
+        }, 'json')
+    }
+
+    // 计划商品初始化
+    $.post(baseUrl + '/GetdeliveryAdr', {
+        planNo: planId
+    }, function (res) {
+        console.log(res);
+        var data = res.goodsInfo[0];
+        // 卖家sku
+        $('.sellerSku').text(data.sellerSku)
+        // 商品名称
+        $('.goodsName').text(decodeURIComponent(data.goodsName))
+        // 配送类型：-1 所有 1卖家 2 亚马逊
+        if (data.shippingMode == '-1') {
+            $('.shippingMode').text('所有')
+        } else if (data.shippingMode == '1') {
+            $('.shippingMode').text('卖家')
+        } else if (data.shippingMode == '2') {
+            $('.shippingMode').text('亚马逊')
+        }
+        // 商品数量
+        $('.goodsNum').val(data.goodsNum)
+        // 重量
+        $('.boxWeights').val(data.boxWeights)
+        // 长
+        $('.box_length').val(data.box_length)
+        // 宽
+        $('.box_width').val(data.box_width)
+        // 高
+        $('.box_height').val(data.box_height)
+        // 每个箱子商品数量
+        $('.box_goods_num').val(data.box_goods_num)
+        // 箱子数量
+        $('.box_num').val(data.box_num)
+        if (window.sessionStorage) {
+            sessionStorage.setItem('planGoodsId', data.planGoodsId)
+            planGoodsId = sessionStorage.getItem('planGoodsId')
+        }
+        console.log(res.packMethod === '2')
+        if (res.packMethod === '1') {
+            packMethod = 1;
+            $('.mixingBox').show();
+            $('.originalBox').hide();
+            $('.hiddenTr').addClass('none');
+        } else {
+            packMethod = 2;
+            $('.mixingBox').hide();
+            $('.originalBox').show();
+            $('.hiddenTr').removeClass('none');
+        }
+        notemptyInput()
+    }, 'json')
+    // 继续
+    $('.goBtn').click(function () {
+        inputNum = $('.inputNum').val();
+        if (inputNum != "" && showBtn) {
+            $(location).attr('href', '/seller/manage_inventory_preprocessed_goods.html');
+        } else {
+            alert('保存失败')
+        }
+    })
+})

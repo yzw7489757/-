@@ -1,0 +1,33 @@
+.titlebar {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px;
+}
+.Possible{
+    padding: 0;
+    border:0;
+}
+select{
+    outline: none;
+}
+.close-resaon-table{
+    border:1px solid #ccc;
+    margin-top: -1px;
+}
+.close-resaon-table tr td{
+    width: 50%;
+    padding: 5px;
+}
+.close-resaon-table tr td:first-child{
+    text-align: right;
+    font-weight: 600;
+}
+.close-resaon-table tr td:last-child{
+    text-align: left;
+}
+#message-to-buyer{
+    width: 90%;
+    min-height: 80px;
+    outline:none;
+    resize: vertical;
+}

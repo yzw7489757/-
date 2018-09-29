@@ -71,7 +71,25 @@ $(function () {
     })
     $('.moreConfirmBtn').click(function () {
         inputValue();
-        if (moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && moreSizeweight) {
+        strBoxJson = JSON.stringify({
+            planNo: planId,
+            cargoNo: cargoNo,
+            planGoods: [{
+                plan_goods_id: planGoodsId,
+                goodsBox:[{
+                    box_weights: moreSizeweight,
+                    box_length: moreSizeInput1,
+                    box_width: moreSizeInput2,
+                    box_height: moreSizeInput3,
+                    box_goods_num:box_goods_num,
+                    box_num: box_num
+                }]
+            }]   
+        });
+        $('.addInput tr').each(function (i) { 
+            console.log($('.addInput tr').eq(i).text())
+         })
+        if (moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && moreSizeweight ) {
             alert('保存成功')
         }
     })
@@ -79,43 +97,53 @@ $(function () {
     $('.add_configuration').click(function () {
         var html = $(`
         <tr>
-        <td class=" width18 align_right">
-            <div class="a-spacing-small">
-                <input type="text" class="a-text-right box_goods_num">
-            </div>
-        </td>
-        <td class=" pdLeft45 align_right">
-            <div class="a-spacing-small addNumInput">
+            <td class=" width18 align_right">
                 <div class="a-spacing-small">
-                    <input type="text" class="a-text-right box_num">
-                    <img src="./img/icon_4.png" alt="closeImg" class="pdleft10 closeBtn ">
+                    <input type="text" class="a-text-right box_goods_num">
                 </div>
-            </div>
+            </td>
+            <td class=" pdLeft45 align_right">
+                <div class="a-spacing-small addNumInput">
+                    <div class="a-spacing-small">
+                        <input type="text" class="a-text-right box_num">
+                        <img src="./img/icon_4.png" alt="closeImg" class="pdleft10 closeBtn ">
+                    </div>
+                </div>
 
-        </td>
-        <td class=" width9 align_right">
-            <div class="a-spacing-small height21">
-                <span>-</span>
-            </div>
+            </td>
+            <td class=" width9 align_right">
+                <div class="a-spacing-small height21">
+                    <span>-</span>
+                </div>
 
-        </td>
-        <td class="pdLeft45 align_right">
-            <div class="a-spacing-small">
-                <input type="text" class="moreSizeweight ">
-            </div>
-        </td>
-        <td class="a-text-right ">
-            <div class="a-spacing-small">
-                <input type="text" class="moreSizeInput1 a-text-center ">
-                <img src="./img/close.png" alt="">
-                <input type="text" class="moreSizeInput2 a-text-center ">
-                <img src="./img/close.png" alt="">
-                <input type="text" class="moreSizeInput3 a-text-center ">
-            </div>
-        </td>
-    </tr>
+            </td>
+            <td class="pdLeft45 align_right">
+                <div class="a-spacing-small">
+                    <input type="text" class="moreSizeweight ">
+                </div>
+            </td>
+            <td class="a-text-right ">
+                <div class="a-spacing-small">
+                    <input type="text" class="moreSizeInput1 a-text-center ">
+                    <img src="./img/close.png" alt="">
+                    <input type="text" class="moreSizeInput2 a-text-center ">
+                    <img src="./img/close.png" alt="">
+                    <input type="text" class="moreSizeInput3 a-text-center ">
+                </div>
+            </td>
+        </tr>
         `)
-        $('.addInput tr').eq(0).after(html)
+        for(let i = 0 ;i<$('.addInput tr').length;i++){
+            // inputweight = $(this).find($('.inputweight')).val();
+            // moreSizeInput1 = $(this).find($('.moreSizeInput1')).val();
+            // moreSizeInput2 = $(this).find($('.moreSizeInput2')).val();
+            // moreSizeInput3 = $(this).find($('.moreSizeInput3')).val();
+            // moreSizeweight = $(this).find($('.moreSizeweight')).val();
+            // box_goods_num = $(this).find($('.box_goods_num')).val();
+            // box_num = $(this).find($('.box_num')).val();
+            
+        }
+        
         if ($('.addInput tr').length > '2') {
             $('.addInput tr').eq(0).find('.closeBtn').show();
         }
@@ -194,16 +222,7 @@ $(function () {
                 shippingMethod: shippingMethod,
                 shippingService: shippingService,
                 shipmentPacking: shipmentPacking,
-                provideMode: provideMode,
-                goodsBox: [{
-                    plan_goods_id: planGoodsId,
-                    box_weights: moreSizeweight,
-                    box_length: moreSizeInput1,
-                    box_width: moreSizeInput2,
-                    box_height: moreSizeInput3,
-                    box_goods_num: box_goods_num,
-                    box_num: box_num
-                }]
+                provideMode: provideMode
             });
             $.post(baseUrl + '/SetCargo', {
                 strGoodsCargo: strGoodsCargo
@@ -233,6 +252,54 @@ $(function () {
         })
     }, 'json')
 
+    
+    // 获取进度操作数据
+    $.post(baseUrl + '/GetSchedule', {
+        tag: '5',
+        planId: planId
+    }, function (res) {
+        console.log(res);
+        $('.cargoName').text(decodeURIComponent(res.cargoName));
+        $('.cargoNo').text(decodeURIComponent(res.cargoNo));
+        $('.shippingNumber').text(decodeURIComponent(res.shippingNumber));
+        $('.name').text(decodeURIComponent(res.adrInfo.name));
+        $('.address').text(decodeURIComponent(res.adrInfo.address));
+        $('.address2').text(decodeURIComponent(res.adrInfo.address2));
+        $('.detailAddress').text(`${decodeURIComponent(res.adrInfo.city)} ${decodeURIComponent(res.adrInfo.province)}`);
+        $('.zipcode').text(decodeURIComponent(res.adrInfo.zipcode));
+        $('.country').text(decodeURIComponent(res.adrInfo.country));
+        $('.goodsNum').text(decodeURIComponent(res.goodsNum));
+        $('.createTime').text(res.createTime)
+        $('.cargoStatus').text(decodeURIComponent(res.cargoStatus))
+    }, 'json')
+
+   // 6.4 查看货件内商品
+    $.post(baseUrl + '/GetCargoGoods', {
+        planId: planId
+    }, function (res) {
+        console.log(res)
+        var data = res.goodsLable[0];
+        // 卖家sku
+        $('.sellerId').text(data.sellerId)
+        // 商品名称
+        $('.goodsName').text(decodeURIComponent(data.goodsName))
+        // 配送类型：-1 所有 1卖家 2 亚马逊
+        if (data.packModel == '-1') {
+            $('.shippingMode').text('所有')
+        } else if (data.packModel == '1') {
+            $('.shippingMode').text('卖家')
+        } else if (data.packModel == '2') {
+            $('.shippingMode').text('亚马逊')
+        }
+        // 发货（1是 0否）
+        if (data.deliveried == '1') {
+            $('.deliveried').text('是')
+        } else {
+            $('.deliveried').text('否')
+        }
+        // 货件数量
+        $('.goodsNum').text(res.goodsNum)
+    }, 'json')
     // 返回
     $('.returnBtn').click(function () {
         $(location).attr('href', '/seller/manage_inventory_pretreatment_cargo.html');

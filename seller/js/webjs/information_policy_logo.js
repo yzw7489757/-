@@ -32,10 +32,10 @@ $(function () {
         }
         try {
             file = input_file.files[0];
-            if(!/image\/(jpg|gif|jpeg)/.test(file.type)){
-                alert('文件类型不符')
-                return;
-            }
+            // if(!/image\/(jpg|gif|jpeg)/.test(file.type)){
+            //     alert('文件类型不符')
+            //     return;
+            // }
 
             var render = new FileReader();
             render.onload = function () {
@@ -43,7 +43,7 @@ $(function () {
             }
             render.readAsDataURL(file)
         } catch (e) {
-            console.log('图片转换出错', e.toString())
+           alert('图片转换出错', e.toString())
         }
     }
 
@@ -65,13 +65,13 @@ $(function () {
                         let image = new Image();
                         image.onload = function () {
                             console.log(image.width, image.height)
-                            if(image.width<=120&&image.height<=30){
-                                console.log('success')
-                                toUpload = true;
-                            }else{
-                                console.log('faild')
-                                toUpload = false;
-                            }
+                            // if(image.width<=120&&image.height<=30){
+                            //     alert('图片大小合适')
+                            //     toUpload = true;
+                            // }else{
+                            //     alert('图片大小不合适')
+                            //     toUpload = false;
+                            // }
                         }
                         image.src = shopLogoImg   
                         
@@ -85,10 +85,10 @@ $(function () {
 
     $('button').click(function (e) {
         e.preventDefault()
-        if(!toUpload){
-            console.log('徽标图像必须为 120 像素宽 x 30 像素高。') 
-            return;
-        }
+        // if(!toUpload){
+        //     alert('徽标图像必须为 120 像素宽 x 30 像素高。') 
+        //     return;
+        // }
         $.ajax({
             url: baseUrl + '/SetShopLogo',
             method: 'post',
@@ -100,7 +100,8 @@ $(function () {
             success: function (res) {
                 console.log(res);
                 if(res.result=="1"){
-                    console.log('success!')
+                    alert('上传成功!')
+                    console.log(decodeURIComponent(res.error))
                     inputctr.public.judgeFinishtask('1107');
                 }
                

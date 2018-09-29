@@ -20,6 +20,10 @@
         Unavailable:"Invalid Store name",
         repeat:"Repeat shop name",
         successInfo:"Store details updated successfully.",
-        Shop_name_not_available:"Shop name not available"
+        Shop_name_not_available:"Shop name not available",
+        link_empty:"The link of the commodity is empty.",
+        link_invalid:"Invalid trade link",
+        UnavailableLink:"Invalid Store link",
+        link_repeat:"Repeat shop link"
     }
 }

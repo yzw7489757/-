@@ -86,7 +86,8 @@ $(function () {
             if (res.result == 1) {
                 dataTemp = res.data.strChargeInfo;
                 card_html = doT.template($('#card_tmpl').text());
-                $('#card_Div').html(card_html(dataTemp))
+                $('#card_Div').html(card_html(dataTemp));
+                console.log(res.strAddressInfo)
                 execI18n()
             } else {
                 console.log(decodeURIComponent(res.error))
@@ -186,15 +187,10 @@ $(function () {
                     console.log(decodeURIComponent(res.error))
                 }
             })
-        }
+        } 
         if (showAddress) {
             if (address && city && zipcode && phone) {
-                //新增邮寄地址
-                $.ajax({
-                    url: baseUrl + '/AddAddressNew',
-                    method: 'post',
-                    dataType: "json",
-                    data: {
+                var data= {
                         userid: amazon_userid,
                         address: address,
                         address2: address2,
@@ -207,7 +203,13 @@ $(function () {
                         name: '',
                         email: '',
                         full_name: ''
-                    },
+                    };
+                //新增邮寄地址
+                $.ajax({
+                    url: baseUrl + '/AddAddress',
+                    method: 'post',
+                    dataType: "json",
+                    data:{json:JSON.stringify(data)},
                     success: function (res) {
                         console.log(res)
                         if (res.result == 1) {

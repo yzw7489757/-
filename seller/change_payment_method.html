@@ -105,10 +105,10 @@
                                                                         </div>
                                                                         <h6 class="a-color-tertiary a-spacing-top-mini" data-i18n-text="_body_billing_address">帐单地址</h6>
                                                                         <div class="a-row">
-                                                                            {{? it.strAddressInfo!='undefined'}}
-                                                                            <span class="strAddressInfo">{{=decodeURIComponent(it.strAddressInfo) ||'--'}}</span>
+                                                                            {{? it.strAddressInfo ='undefined'}}
+                                                                            <span class="strAddressInfo">--</span>
                                                                             {{??}}
-                                                                            <span class="strAddressInfo"></span>
+                                                                            <span class="strAddressInfo">{{=decodeURIComponent(it.strAddressInfo)}}</span>
                                                                             {{?}}
                                                                         </div>
                                                                     </div>

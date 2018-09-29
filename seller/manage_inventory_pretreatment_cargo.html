@@ -59,18 +59,18 @@
                 <ol class="contentTitle">
                     <li>
                         <div><b>货件名称/编号</b></div>
-                        <div>货件名称：<span>123</span></div>
-                        <div>编号:<span>123</span></div>
-                        <div>货件追踪编号:<span>123</span></div>
+                        <div><span>货件名称：</span> <span class="cargoName"></span></div>
+                        <div><span>编号：</span> <span class="cargoNo"></span></div>
+                        <div><span>货件追踪信号：</span> <span class="shippingNumber"></span></div>
                     </li>
                     <li>
                         <div><b>发货地址</b></div>
-                        <div>zhongguo feng</div>
-                        <div>wanda shangyezhongxin Dzuo</div>
-                        <div>718</div>
-                        <div>hangzhou,zhejiangsheng</div>
-                        <div>310000</div>
-                        <div>CN</div>
+                        <div class="name">zhongguo feng</div>
+                        <div class="address">wanda shangyezhongxin Dzuo</div>
+                        <div class="address2">718</div>
+                        <div class="detailAddress">hangzhou,zhejiangsheng</div>
+                        <div class="zipcode">310000</div>
+                        <div class="country">CN</div>
                         <!-- <div><a href="javascript:void(0)">从另一地址发货</a></div> -->
                     </li>
                     <li>
@@ -83,7 +83,7 @@
                     <li>
                         <div><b>货件内商品</b></div>
                         <div>1 MSKU</div>
-                        <div>20 商品数量</div>
+                        <div><span class="goodsNum"></span> 商品数量</div>
                     </li>
                     <li>
                         <div><b>服务费用</b></div>
@@ -92,9 +92,9 @@
                     </li>
                     <li>
                         <div><b>货件状态</b></div>
-                        <div>处理中</div>
-                        <div>已创建：2018-4-28</div>
-                        <div>已更新：2018-4-28</div>
+                        <div class="cargoStatus">处理中</div>
+                        <div>已创建：<span class="createTime"></span></div>
+                        <div>已更新：<span class="createTime"></span></div>
                     </li>
                 </ol>
             </li>
@@ -160,10 +160,10 @@
 
                                 </tr>
                                 <tr>
-                                    <td>bc001</td>
-                                    <td>123</td>
-                                    <td>新品</td>
-                                    <td>
+                                    <td class="sellerId">bc001</td>
+                                    <td class="goodsName">123</td>
+                                    <td class="shippingMode">新品</td>
+                                    <td class="deliveried">
                                         <input type="text" value="20" class="align_right">
                                     </td>
                                     <td><img src="./img/icon_4.png" alt="" class="deleteBtn"></td>
@@ -177,7 +177,7 @@
                         </table>
                         <div class="bgcolor">
                             <div class="pdTop10">
-                                <div class="float_left width50" style="padding-left: 400px;">
+                                <div class="float_left width50" style="padding-left: 325px;">
                                     <select name="" id="" style="width: 350px">
                                         <option value="">每页纸最多21个标签（A4纸，63.5毫米 X 38.1毫米）</option>
                                     </select>
@@ -373,7 +373,7 @@
                             <tbody>
                                 <tr>
                                     <td>货件内商品</td>
-                                    <td class="width10">货件数量</td>
+                                    <td class="width10">商品数量</td>
                                     <td class="width14">每个箱子配置的商品数</td>
                                     <td class="width10">箱子数量</td>
                                     <td class="width5">总量</td>
@@ -390,11 +390,11 @@
                         </table>
                         <div class="addbottomColor">
                             <div class="float_left width45">
-                                <table class="nobottomColor">
+                                <table class="nobottomColor a-row">
                                     <tbody>
                                         <tr>
-                                            <td>123</td>
-                                            <td class="width7">20</td>
+                                            <td style="width: 80%;" class="goodsName">123</td>
+                                            <td class="width7" class="goodsNum">20</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -471,14 +471,14 @@
                                     <td>货件内商品</td>
                                     <td class="width8">货件数量</td>
                                     <td class="width8">箱子重量</td>
-                                    <td class="width14 a-text-right">箱子尺寸</td>
+                                    <td class="width17 a-text-right">箱子尺寸</td>
                                 </tr>
                                 <tr style="background-color:#ddd ;height: 40px;">
                                     <td colspan="4"><input type="checkbox"> 显示ASIN/FNSKU</td>
                                 </tr>
                                 <tr>
-                                    <td>123</td>
-                                    <td>20</td>
+                                    <td class="goodsName">123</td>
+                                    <td class="goodsNum">20</td>
                                     <td><input type="text" value="18" class="align_right inputweight"></td>
 
                                     <td class="a-text-right">
