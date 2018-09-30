@@ -54,13 +54,13 @@ $(function () {
         if (data.deliveried == '1') {
             $('.deliveried').text('是')
         } else {
-            $('.deliveried').text('否')
+            $('.deliveried').text('0')
         }
         // 收货（1是 0否）
         if (data.Collected == '1') {
             $('.Collected').text('是')
         } else {
-            $('.Collected').text('否')
+            $('.Collected').text('0')
         }
     }, 'json')
 
@@ -70,6 +70,12 @@ $(function () {
         planId: planId
     }, function (res) {
         console.log(res);
+        var detail = res.boxInfo;
+        let detailTmpl = doT.template($('#addArray').text());
+        $('#addTmpl').html(detailTmpl(detail));
+        let detailTmpl2 = doT.template($('#addArray2').text());
+        $('#addTmpl2').html(detailTmpl2(detail));
+
         // 箱号
         $('.cargoId').text(res.cargoId);
         // 追踪编号
@@ -80,10 +86,13 @@ $(function () {
         } else {
             $('.shippingStatus').text(decodeURIComponent(res.shippingStatus));
         }
-        // 重量
-        $('.weights').text(res.weights);
-        // 尺寸
-        $('.size').text(res.size)
+       
+        // // 重量
+        // $('.weights').text(res.weights);
+        // // 尺寸
+        // $('.size').text(res.size)
+     
+        
     }, 'json')
 
     // 保存货件跟踪编号

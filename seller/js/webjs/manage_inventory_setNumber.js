@@ -125,6 +125,7 @@ $(function () {
     }, function (res) {
         console.log(res);
         var data = res.goodsInfo[0];
+        
         // 卖家sku
         $('.sellerSku').text(data.sellerSku)
         // 商品名称
@@ -172,7 +173,7 @@ $(function () {
         $('.detailAddress').text(`${decodeURIComponent(res.adrInfo.city)} ${decodeURIComponent(res.adrInfo.province)}`);
         $('.zipcode').text(decodeURIComponent(res.adrInfo.zipcode));
         $('.country').text(decodeURIComponent(res.adrInfo.country));
-        $('.shopName').text(decodeURIComponent(res.shopName))
+        $('.shopName').text(decodeURIComponent(res.storeName))
         notemptyInput()
     }, 'json')
     // 继续

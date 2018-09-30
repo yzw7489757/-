@@ -25,25 +25,24 @@ $(function () {
     function changeBtnColor(target) {
         $(target).blur(function () {
             inputValue();
-            if (country && name && addressOne && city && stateProvinceRegion && zipCode) {
+            if (country && addressOne && city && stateProvinceRegion && zipCode) {
                 $('.unfinishBtn').hide();
                 $('.finishBtn').show()
                 if (window.sessionStorage) {
-                    adrId = sessionStorage.getItem('adrId')
+                    adrId = sessionStorage.getItem('adrId');
                 }
             }
         })
     }
-    changeBtnColor('.country')
-    changeBtnColor('.name')
-    changeBtnColor('.addressOne')
-    changeBtnColor('.city')
-    changeBtnColor('.stateProvinceRegion')
-    changeBtnColor('.zipCode')
+    changeBtnColor('.country');
+    changeBtnColor('.addressOne');
+    changeBtnColor('.city');
+    changeBtnColor('.stateProvinceRegion');
+    changeBtnColor('.zipCode');
 
     function DelDistributionAddress() {
         inputValue()
-        if(country && addressOne && name && city && stateProvinceRegion && zipCode){
+        if(country && addressOne  && city && stateProvinceRegion && zipCode){
             $.post(baseUrl + '/UpdateDistributionAddress', {
                 addressId: adrId,
                 country: country,
@@ -88,11 +87,10 @@ $(function () {
                 adrId = $(this).parents('.adds').attr('adrId');
                 // 国家地区
                 var detailCountry = $(this).parents('.adds').find('.detailCountry').text();
-                console.log(detailCountry)
                 setOption(detailCountry)
-              
+                console.log($(this).parents('.adds').attr('name'))
                 // 名称
-                $('.name').val($(this).parents('.adds').find('.detailName').text());
+                $('.name').val($(this).parents('.adds').attr('name'));
                 // 地址行1
                 $('.addressOne').val($(this).parents('.adds').find('.detailAddress').text().split('-')[2]);
                 // 地址行2

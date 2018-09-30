@@ -139,16 +139,16 @@
                                             <td>尺寸</td>
                                         </tr>
                                         <tr>
-                                            <td class="cargoId">1</td>
+                                            <td class="cargoId"></td>
                                             <td><input type="text" placeholder="输入追踪编号" class="trackNo"> </td>
+                                            
                                             <td class="shippingStatus">-</td>
-                                            <td class="weights">18</td>
-                                            <td class="size">
-                                                <span>25</span>
-                                                <span>X</span>
-                                                <span>12</span>
-                                                <span>X</span>
-                                                <span>12</span>
+
+                                            <td class="weights" id="addTmpl">
+                                                
+                                            </td>
+                                            <td class="size" id="addTmpl2">
+                                                
                                             </td>
                                         </tr>
                                         <tr>
@@ -167,13 +167,13 @@
                                         <span class="awesomeButton returnButtonLarge returnButton inner_button">
                                             <span class="button_label returnBtn">返回</span>
                                         </span>
-                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
                                             <span class="button_label">删除货件</span>
                                         </span>
-                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
                                             <span class="button_label">返回“货件处理进度”</span>
                                         </span>
-                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
                                             <span class="button_label">复制</span>
                                         </span>
 
@@ -212,7 +212,7 @@
                                     <tr>
                                         <td class="sellerId">bc001</td>
                                         <td class="goodsName">123</td>
-                                        <td class="shippingMode">新品</td>
+                                        <td><span class="shippingMode"></span>配送</td>
                                         <td class="deliveried">
                                            qqq
                                         </td>
@@ -220,7 +220,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3">总计</td>
-                                        <td>20</td>
+                                        <td>0</td>
                                         <td>0</td>
                                     </tr>
                                 </tbody>
@@ -253,6 +253,18 @@
     <div class="a-container-footer">
     </div>
 </body>
+<script id="addArray" type="text/x-dot-template">
+    {{~it:value:index}}
+        {{= decodeURIComponent(value.weights)}}
+        <br>
+    {{~}}
+</script>
+<script id="addArray2" type="text/x-dot-template">
+    {{~it:value:index}}
+        {{= decodeURIComponent(value.size)}}
+        <br>
+    {{~}}
+</script>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="js/public.js" type="text/javascript"></script>
 <script src="js/webjs/seller_public.js" type="text/javascript"></script>

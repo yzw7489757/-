@@ -29,13 +29,13 @@ $(function () {
         if (data.deliveried == '1') {
             $('.deliveried').text('是')
         } else {
-            $('.deliveried').text('否')
+            $('.deliveried').text('0')
         }
         // 收货（1是 0否）
         if (data.Collected == '1') {
             $('.Collected').text('是')
         } else {
-            $('.Collected').text('否')
+            $('.Collected').text('0')
         }
     
     }, 'json')
@@ -59,7 +59,7 @@ $(function () {
         // 货件编号
         $('.cargoNo').text(res.cargoNo)
         // 商品数量
-        $('.goodsNum').text(res.goodsNum)
+        $('.goodsNum').text(res.planGoodsInfo[0].goodsNum)
     }, 'json')
     // 处理货件
     $('.handlinggoodsBtn').click(function () { 

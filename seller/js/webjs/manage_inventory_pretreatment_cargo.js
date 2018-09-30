@@ -10,10 +10,12 @@ $(function () {
     var box_goods_num = $('.box_goods_num').val();
     var box_num = $('.box_num').val();
     var shippingMethod; // 配送方式（1 小包裹快递 2 汽运零担）
-    var shippingService; // 承运人编号
+    var shippingService = 3; // 承运人编号
     var shipmentPacking = "1"; // 如何包装（1 多个箱子  2 所有商品装于一个箱子）
-    var provideMode = "3"; // 箱内物品信息提供方式（1 使用网页表格 2 上传文件 3 跳过箱子信息并收取手动处理费用 ）
-
+    var provideMode; // 箱内物品信息提供方式（1 使用网页表格 2 上传文件 3 跳过箱子信息并收取手动处理费用 ）
+    var goodsBox;
+    var moreConfirmTrue = true;
+    var boxConfiguration = false;
     var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
     if (window.sessionStorage) {
         var planId = sessionStorage.getItem('planId')
@@ -29,12 +31,18 @@ $(function () {
         sizeInput2 = $('.sizeInput2').val();
         sizeInput3 = $('.sizeInput3').val();
         inputweight = $('.inputweight').val();
-        moreSizeInput1 = $('.moreSizeInput1').val();
-        moreSizeInput2 = $('.moreSizeInput2').val();
-        moreSizeInput3 = $('.moreSizeInput3').val();
-        moreSizeweight = $('.moreSizeweight').val();
-        box_goods_num = $('.box_goods_num').val();
-        box_num = $('.box_num').val();
+        goodsBox = []
+        $('.addInput tr').each(function(index,item){
+            if(index==$('.addInput tr').length-1) return
+            let obj = {};
+            obj.box_weights = $(this).find('.moreSizeweight').val();
+            obj.box_length = $(this).find('.moreSizeInput1').val();
+            obj.box_width = $(this).find('.moreSizeInput2').val();
+            obj.box_height = $(this).find('.moreSizeInput3').val();
+            obj.box_goods_num = $(this).find('.box_goods_num').val();
+            obj.box_num = $(this).find('.box_num').val();
+            goodsBox.push(obj)
+        })
     }
     // 检查并修改商品
     $('.checkupBtn').click(function () {
@@ -50,7 +58,7 @@ $(function () {
     })
 
     $('#packing_box_select').bind("change", function () {
-        if ($(this).val() == 'multiple_boxes') {
+        if ($(this).val() == 'multiple_boxes') {                                 
             $('.multiple_boxes').show()
             $('.a_box').hide()
         } else if ($(this).val() == 'a_box') {
@@ -76,22 +84,23 @@ $(function () {
             cargoNo: cargoNo,
             planGoods: [{
                 plan_goods_id: planGoodsId,
-                goodsBox:[{
-                    box_weights: moreSizeweight,
-                    box_length: moreSizeInput1,
-                    box_width: moreSizeInput2,
-                    box_height: moreSizeInput3,
-                    box_goods_num:box_goods_num,
-                    box_num: box_num
-                }]
+                goodsBox: goodsBox
             }]   
         });
-        $('.addInput tr').each(function (i) { 
-            console.log($('.addInput tr').eq(i).text())
-         })
-        if (moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && moreSizeweight ) {
-            alert('保存成功')
-        }
+        if(moreConfirmTrue){
+            $.post(baseUrl + '/SetBox', {
+                strBoxJson: strBoxJson
+            }, function (res) {
+                console.log(res);
+                if (res.result == '1') {
+                    moreConfirmTrue = false;
+                    alert(decodeURIComponent(res.error))
+                    changeFinishBtn();
+                    $('.moreConfirmBtn').parent().addClass('secondaryLargeButton ');
+                    $('.primaryLargeButton').find('span').removeClass('moreConfirmBtn')
+                }
+            }, 'json')
+        }    
     })
     // 添加其他箱子配置 添加
     $('.add_configuration').click(function () {
@@ -109,7 +118,6 @@ $(function () {
                         <img src="./img/icon_4.png" alt="closeImg" class="pdleft10 closeBtn ">
                     </div>
                 </div>
-
             </td>
             <td class=" width9 align_right">
                 <div class="a-spacing-small height21">
@@ -133,21 +141,13 @@ $(function () {
             </td>
         </tr>
         `)
-        for(let i = 0 ;i<$('.addInput tr').length;i++){
-            // inputweight = $(this).find($('.inputweight')).val();
-            // moreSizeInput1 = $(this).find($('.moreSizeInput1')).val();
-            // moreSizeInput2 = $(this).find($('.moreSizeInput2')).val();
-            // moreSizeInput3 = $(this).find($('.moreSizeInput3')).val();
-            // moreSizeweight = $(this).find($('.moreSizeweight')).val();
-            // box_goods_num = $(this).find($('.box_goods_num')).val();
-            // box_num = $(this).find($('.box_num')).val();
-            
-        }
-        
+        const index = $('.addInput tr').length -2;
+        $('.addInput tr').eq(index).after(html);
         if ($('.addInput tr').length > '2') {
             $('.addInput tr').eq(0).find('.closeBtn').show();
         }
     })
+    
     // 添加其他箱子配置 删除
     $('.addInput').on("click", '.closeBtn', function () {
         $(this).parent().parent().parent().parent().remove();
@@ -157,7 +157,7 @@ $(function () {
     });
     // 完成货件按钮变换颜色
     function changeFinishBtn() { 
-        if (moreSizeweight && moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && box_goods_num && box_num && shippingMethod) {
+        if (!moreConfirmTrue && shippingMethod && provideMode) {
             $('.finish').show();
             $('.unfinish').hide();
         }
@@ -165,10 +165,10 @@ $(function () {
     // 配送方式（1 小包裹快递 2 汽运零担）
     $('input[name="type"]').change(function () {
         inputValue();
-
         if ($(this).val() == 'spd') {
             shippingMethod = 1;
             changeFinishBtn();
+            
         } else {
             shippingMethod = 2;
             changeFinishBtn();
@@ -186,10 +186,13 @@ $(function () {
     $('input[name="info"]').change(function () {
         if ($(this).val() == 'table') {
             provideMode = 1;
+            changeFinishBtn()
         } else if ($(this).val() == 'updateFile') {
             provideMode = 2;
+            changeFinishBtn()
         } else {
             provideMode = 3;
+            changeFinishBtn()
         }
     })
 
@@ -200,8 +203,7 @@ $(function () {
             changeFinishBtn();
             if ($(target).val() == "") {
                 alert('箱子配置为空')
-            }
-            
+            } 
         });
     }
     Input_blur('.moreSizeweight');
@@ -213,14 +215,12 @@ $(function () {
     // 完成货件
     $('.finishBtn').click(function () {
         inputValue();
-        if (moreSizeweight && moreSizeInput1 && moreSizeInput2 && moreSizeInput3 && box_goods_num && box_num && shippingMethod) {
-            $('.finish').show();
-            $('.unfinish').hide();
+        if (!moreConfirmTrue && shippingMethod && provideMode) {           
             strGoodsCargo = JSON.stringify({
                 planNo: planId,
                 cargoNo: cargoNo,
                 shippingMethod: shippingMethod,
-                shippingService: shippingService,
+                shippingService: "3",
                 shipmentPacking: shipmentPacking,
                 provideMode: provideMode
             });
@@ -229,19 +229,18 @@ $(function () {
             }, function (res) {
                 console.log(res);
                 if (res.result == '1') {
-                    console.log('success!')
                     $(location).attr('href', '/seller/manage_inventory_list.html');
                 }
             }, 'json')
         } else {
-            alert('请选择配送方式 && 填写箱子配送信息')
+            alert('请选择配送方式 && 箱内物品信息提供方式 && 保存箱子配置')
         }
+        
     })
 
     // 获取承运人
     $.post(baseUrl + '/GetShippingCarrier', function (res) {
         console.log(res);
-        console.log('success!')
         var data = res.carrierInfo
         var add = doT.template($('#addArray').text());
         $('#addTmpl').html(add(data))
@@ -295,10 +294,10 @@ $(function () {
         if (data.deliveried == '1') {
             $('.deliveried').text('是')
         } else {
-            $('.deliveried').text('否')
+            $('.deliveried').text('0')
         }
         // 货件数量
-        $('.goodsNum').text(res.goodsNum)
+        $('.goodsNum').text(data.goodsNum)
     }, 'json')
     // 返回
     $('.returnBtn').click(function () {

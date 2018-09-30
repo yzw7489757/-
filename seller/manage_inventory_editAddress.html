@@ -36,7 +36,7 @@
                     </div>
                     <script id="addArray" type="text/x-dot-template">
                         {{~it:value:index}}
-                        <div class="adds" adrId="{{= value.adrId}}">
+                        <div class="adds" adrId="{{= value.adrId}}" name="{{= decodeURIComponent(value.name)}}">
                             <div class="detailAddress">{{= decodeURIComponent(value.province)}}-{{= decodeURIComponent(value.city)}}-{{= decodeURIComponent(value.address)}}-{{= decodeURIComponent(value.zipcode)}}</div>
                             <div class="detailAddress2">{{= decodeURIComponent(value.address2)}}</div>
                             <div class="detailPhone">{{= decodeURIComponent(value.phone)}}</div>
@@ -197,7 +197,7 @@
                                 <div class="float_left width_15 a-text-right">
                                     <b>名称:</b>
                                     <span class="pdleft10">
-                                        <img src="./img/1.png" alt="start">
+                                        <span class="pdleft10">&nbsp;</span>
                                     </span>
                                 </div>
                                 <div class="float_left">

@@ -237,7 +237,9 @@ a:visited {
 .width31 {
     width: 31.948%;
 }
-
+.width26{
+    width: 26%;
+}
 .width23 {
     width: 23.15093%;
 }
@@ -261,6 +263,9 @@ a:visited {
 }
 .width5{
     width: 5.81147%;
+}
+.width2{
+    width: 2%;
 }
 .a-column {
     margin-right: 2%;
