@@ -12,83 +12,68 @@ $(function () {
     var planGoodsId;
     var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
     var strGoodsBoxJson;
+    var goodsArr;
+    var obj;
     if (window.sessionStorage) {
         var planId = sessionStorage.getItem('planId')
     }
+
     function inputValue() {
-        input_one = $('.input_one').val();
-        input_two = $('.input_two').val();
-        input_three = $('.input_three').val();
-        input_weight = $('.input_weight').val();
-        inputNum = $('.inputNum').val();
-        box_goods_num = $('.box_goods_num').val();
-        box_num = $('.box_num').val();
+        goodsArr = [];
+        $('#showTmpl .adds').each(function (index, item, array) {
+            obj = {};
+            obj.planGoodsId = $(this).attr('planGoodsId')
+            obj.boxLength = $(this).find('.input_one').val();
+            obj.boxWidth = $(this).find('.input_two').val();
+            obj.boxHeight = $(this).find('.input_three').val();
+            obj.boxWeights = $(this).find('.input_weight').val();
+            obj.goodsNum = $(this).find('.inputNum').val();
+            obj.boxGoodsNum = $(this).find('.box_goods_num').val();
+            obj.boxNum = $(this).find('.box_num').val();
+            goodsArr.push(obj)
+        })
     }
     // 按钮变换颜色
     function notemptyInput() {
         inputValue();
-        if (input_one && input_two && input_three && input_weight) {
-            $('.unfinishBtn').hide();
-            $('.finishBtn').show()
-            
-            showBtn = true;
-        }else{
-            $('.unfinishBtn').show();
-            $('.finishBtn').hide()
-           
-            showBtn = false;
-        }
-    }
-    // 按钮变换颜色
-    function changeBtnColor(target) {
-        $(target).blur(function () {
-            notemptyInput()
+        $('#showTmpl .adds').each(function (item) {
+            if (obj.boxLength && obj.boxWidth && obj.boxHeight && obj.boxWeights) {
+                $('.unfinishBtn').hide();
+                $('.finishBtn').show();
+                showBtn = true;
+            } else {
+                $('.unfinishBtn').show();
+                $('.finishBtn').hide();
+                showBtn = false;
+            }
         })
     }
-    changeBtnColor('.input_one')
-    changeBtnColor('.input_two')
-    changeBtnColor('.input_three')
-    changeBtnColor('.input_weight')
-    // 保存
-    $('.saveBtn').click(function () {
-        inputValue();
-        if (packMethod == 1) {
-            if (input_one && input_two && input_three && input_weight) {
-                SetingNumber();
-            }
-        } else {
-            if (input_one && input_two && input_three && input_weight && box_goods_num && box_num) {
-                SetingNumber();
-            }
-        }
-    })
-    // 设置商品箱子信息
-    function SetingNumber() {
-        inputValue();
-        strGoodsBoxJson = JSON.stringify({
-            goodsArr: [{
-                planGoodsId: planGoodsId,
-                boxLength: input_one,
-                boxWidth: input_two,
-                boxHeight: input_three,
-                boxWeights: input_weight,
-                boxGoodsNum:box_goods_num,
-                boxNum:box_num,
-                goodsNum:inputNum
-            }]
-        });
-        $.post(baseUrl + '/SetingNumber', {
-            strGoodsBoxJson: strGoodsBoxJson
-        }, function (res) {
-            console.log(res);
-            if (res.result == '1') {
-                alert('保存成功!');
-                $('.redgoBtn').show();
-                $('.yellowgoBtn').hide();
-                $('.Lack_parcel_size').text('-')
-            }
-        }, 'json')
+    // input 按钮变换颜色
+    function changeBtnColor() {
+        $('#showTmpl .adds input').each(function (item) {
+            console.log($(this))
+            $(this).change(function () {
+                // if (obj.boxLength && obj.boxWidth && obj.boxHeight && obj.boxWeights) {
+                //     $('.unfinishBtn').hide();
+                //     $('.finishBtn').show();
+                //     showBtn = true;
+                // } else {
+                //     $('.unfinishBtn').show();
+                //     $('.finishBtn').hide();
+                //     showBtn = false;
+                // }
+                console.log($(this).val());
+            })
+           
+        })
     }
+    changeBtnColor()
+
+    // changeBtnColor('.input_one')
+    // changeBtnColor('.input_two')
+    // changeBtnColor('.input_three')
+    // changeBtnColor('.input_weight')
+
     // 混装商品 原厂包装发货商品
     $('.mixingBox>a').click(function () {
         $('.mixingBox').hide();
@@ -104,7 +89,6 @@ $(function () {
         packMethod = 1;
         UpdatePackMethod()
     })
-
 
     // 更改包装类型
     function UpdatePackMethod() {
@@ -124,38 +108,9 @@ $(function () {
         planNo: planId
     }, function (res) {
         console.log(res);
-        var data = res.goodsInfo[0];
-        
-        // 卖家sku
-        $('.sellerSku').text(data.sellerSku)
-        // 商品名称
-        $('.goodsName').text(decodeURIComponent(data.goodsName))
-        // 配送类型：-1 所有 1卖家 2 亚马逊
-        if (data.shippingMode == '-1') {
-            $('.shippingMode').text('所有')
-        } else if (data.shippingMode == '1') {
-            $('.shippingMode').text('卖家')
-        } else if (data.shippingMode == '2') {
-            $('.shippingMode').text('亚马逊')
-        }
-        // 商品数量
-        $('.goodsNum').val(data.goodsNum)
-        // 重量
-        $('.boxWeights').val(data.boxWeights)
-        // 长
-        $('.box_length').val(data.box_length)
-        // 宽
-        $('.box_width').val(data.box_width)
-        // 高
-        $('.box_height').val(data.box_height)
-        // 每个箱子商品数量
-        $('.box_goods_num').val(data.box_goods_num)
-        // 箱子数量
-        $('.box_num').val(data.box_num)
-        if (window.sessionStorage) {
-            sessionStorage.setItem('planGoodsId', data.planGoodsId)
-            planGoodsId = sessionStorage.getItem('planGoodsId')
-        }
+        detail = res.goodsInfo;
+        let detailTmpl = doT.template($('#showArray').text());
+        $('#showTmpl').html(detailTmpl(detail));
         if (res.packMethod === '1') {
             packMethod = 1;
             $('.mixingBox').show();
@@ -174,8 +129,26 @@ $(function () {
         $('.zipcode').text(decodeURIComponent(res.adrInfo.zipcode));
         $('.country').text(decodeURIComponent(res.adrInfo.country));
         $('.shopName').text(decodeURIComponent(res.storeName))
-        notemptyInput()
+        notemptyInput();
+
     }, 'json')
+    // 保存
+    $('.saveBtn').click(function () {
+        strGoodsBoxJson = JSON.stringify({
+            goodsArr: goodsArr
+        });
+        $.post(baseUrl + '/SetingNumber', {
+            strGoodsBoxJson: strGoodsBoxJson
+        }, function (res) {
+            console.log(res);
+            if (res.result == '1') {
+                alert('保存成功!');
+                $('.redgoBtn').show();
+                $('.yellowgoBtn').hide();
+                $('.Lack_parcel_size').text('-')
+            }
+        }, 'json')
+    })
     // 继续
     $('.goBtn').click(function () {
         inputNum = $('.inputNum').val();

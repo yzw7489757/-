@@ -9,7 +9,6 @@ $(function () {
     var zipCode = $('.zipCode').val(); // 邮编
     var phone = $('.phone').val(); // 电话
     var adrId;
-    
 
     function inputValue() {
         country = $('.country_select option:selected').text();

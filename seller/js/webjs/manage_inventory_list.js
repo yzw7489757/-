@@ -85,14 +85,7 @@ $(function () {
             $('.shippingStatus').text('-');
         } else {
             $('.shippingStatus').text(decodeURIComponent(res.shippingStatus));
-        }
-       
-        // // 重量
-        // $('.weights').text(res.weights);
-        // // 尺寸
-        // $('.size').text(res.size)
-     
-        
+        }   
     }, 'json')
 
     // 保存货件跟踪编号
