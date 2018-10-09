@@ -1,0 +1,24 @@
+_head_title=Edit store details
+_body_seller_information=Seller Information
+_body_account_information=Account Info
+_body_edit_store_details=Edit store details
+_body_back_to_seller_information=Back to seller profile
+_body_display_name=Choose your unique business display name:
+_body_buyers_show=(This will be displayed to customers on Amazon.).
+_body_store_links=Storefront Link:
+_body_visit_storefront=(Your customers can access your storefront using this link.)
+_body_cancel=Cancel
+_body_submission=Submit
+_body_can_ordered= Available
+_body_must_display_name=Display name is required
+_body_Name_empty=The name of the commodity is empty.
+_body_name_invalid=Invalid trade name
+_body_Unavailable=Invalid Store name
+_body_repeat=Repeat shop name
+_body_successInfo=Store details updated successfully.
+_body_Shop_name_not_available=Shop name not available
+_body_link_empty=The link of the commodity is empty.
+_body_link_invalid=Invalid trade link
+_body_UnavailableLink=Invalid Store link
+_body_link_repeat=Repeat shop link
+

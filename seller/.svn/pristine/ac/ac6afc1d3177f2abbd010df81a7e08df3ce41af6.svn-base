@@ -1,0 +1,252 @@
+body{
+    font-family: 'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+}
+.madagascar-main-body {
+    padding: 0 18px;
+}
+.madagascar-main-body h3 {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.255;
+    color: #c45500 !important;
+    text-align: left !important;
+    margin-top: 18px !important;
+}
+.madagascar-main-body ul{
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.madagascar-main-body ul li{
+    list-style: disc;
+}
+.madagascar-main-body .info{
+    margin-top: 10px;
+}
+.madagascar-main-body .table{
+    border-radius: 10px;
+    background-color:#ddd;
+    padding: 10px;
+    /* margin-top: 20px; */
+}
+.madagascar-main-body table{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.madagascar-main-body .table a{
+    text-decoration: underline;
+}
+.madagascar-main-body table tr td{
+    padding-left: 5px;
+}
+table tr td{
+    vertical-align: top;
+}
+.tableInput tbody tr td input[type=text]{
+    width: 50px;
+}
+.width_1{
+    width: 1%;
+}
+.width_50{
+    width: 50%;
+}
+.width45{
+    width: 45%;
+}
+.width55{
+    width: 55%;
+}
+.width18{
+    width: 18%;
+}
+.width9{
+    width: 9.5%;
+}
+.pdLeft45{
+    padding-left: 45px;
+}
+.lineae{
+    height: 0;
+    border: 2px solid blue;
+}
+.inner_button {
+    text-align: center;
+    display: block;
+    display: inline-block;
+}
+
+.buttonLarge {
+    height: 24px;
+    padding-right: 9px;
+}
+.secondaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -96px !important;
+    cursor: pointer;
+}
+.secondaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -64px !important;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+.primaryLargeButton {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -31px;
+    cursor: pointer;
+}
+.primaryLargeButton span {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left 1px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+}
+/* .buttonLarge {
+    height: 23px;
+    padding-right: 7px;
+} */
+
+.madagascar-main-body .btn{
+    padding: 10px;
+}
+.model-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 107;
+}
+.model-wrapper-bg {
+    position: fixed;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.4);
+}
+.model-content {
+    position: absolute;
+    z-index: 106;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+}
+
+.box-content {
+    min-height: 100px;
+}
+.pdRight{
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.hook{
+    width: 15px;
+}
+.marRight5{
+    margin-right: 5px;
+}
+.opacity3{
+    opacity: 0.3;
+}
+.lavenderBtn{
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -160px;
+    cursor: pointer;
+}
+.lavenderBtn span{
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left -128px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+    color: #767676;
+}
+.arrowButton{
+    background: transparent url(../img/amznbtn-sprite03._V395592492_.png) no-repeat right -784px;
+    cursor: pointer;
+}
+.arrowButton span{
+    background: transparent url(../img/amznbtn-sprite03._V395592492_.png) no-repeat left -100px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+    height: 28px;
+}
+.arrowButtonLarge{
+    padding-right:31px;
+    height: 28px;
+}
+.returnButton{
+    background: transparent url(../img/amznbtn-sprite03._V395592492_.png) no-repeat left -616px;
+    cursor: pointer;
+}
+.returnButton span{
+    background: transparent url(../img/amznbtn-sprite03._V395592492_.png) no-repeat right -156px;
+    padding: 3px 10px 7px 0px;
+    font-size: 12px;
+    float: left;
+    height: 28px; 
+}
+.returnButtonLarge{
+    padding-left: 31px;
+}
+.thirdLargeButton{
+    background: transparent url(../img/p_6.png) no-repeat right;
+    cursor: pointer;
+}
+.thirdLargeButton span{
+    background: transparent url(../img/amznbtn-sprite03._V395592492_.png) no-repeat left -155px;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+    height: 28px; 
+}
+.thirdLarge{
+    padding-right: 14px;
+    height: 28px;
+}
+.darkredButton{
+    background: transparent url(../img/p_5.png) no-repeat right -28px;
+    cursor: pointer;
+}
+.darkredButton span{
+    background: transparent url(../img/p_5.png) no-repeat left top;
+    padding: 3px 4px 7px 10px;
+    font-size: 12px;
+    float: left;
+    height: 28px; 
+}
+.darkredButtonLarge{
+    padding-right: 33px;
+}
+.contentTitle li{
+    padding-right: 30px;
+}
+.showContent li{
+    margin-left: 0px !important;
+}
+.errorColor{
+    color: #f9d23c;
+}
+.pdleft10{
+    padding-left: 10px;
+}
+.pdLeftRight80{
+    padding: 0 85px;
+}
+.height21{
+    height: 21px;
+}
+.nobottomColor tr{
+    border: 0;
+}
+.addbottomColor{
+    border-bottom: 2px solid #cccccc;
+}

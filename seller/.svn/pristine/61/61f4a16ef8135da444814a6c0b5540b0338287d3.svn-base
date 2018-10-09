@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+    <link rel="stylesheet" href="./css/manage_inventory_setNumber.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container ">
+        <div>
+            <span class="a-color-state a-size-large">
+                发/补货
+            </span>
+            <a href="javascript:void(0)">了解更多信息</a>
+        </div>
+        <div>
+            PLN(4/28/18 12:04 AM) <a href="javascript:void(0)">重命名</a>
+        </div>
+        <ul class="showTitle">
+            <li>
+                设置数量
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理商品
+                <span class="dispplay_none"></span>
+            </li>
+            <li class="activeColor">
+                为商品贴标
+                <span></span>
+            </li>
+            <li>
+                检查货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                一览
+                <span class="dispplay_none"></span>
+            </li>
+        </ul>
+        <ol class="olSKU showContent ">
+            <li>
+                <ol class="contentTitle">
+                    <li>
+                        <div><b>发货地址</b></div>
+                        <div class="name">zhongguo feng</div>
+                        <div class="address">wanda shangyezhongxin Dzuo</div>
+                        <div class="address2">718</div>
+                        <div class="detailAddress">hangzhou,zhejiangsheng</div>
+                        <div class="zipcode">310000</div>
+                        <div class="country">CN</div>
+                        <!-- <div><a href="javascript:void(0)">从另一地址发货</a></div> -->
+                    </li>
+                    <li>
+                        <div><b>目标商城</b></div>
+                        <div class="storeName">US</div>
+                    </li>
+                    <li>
+                        <div>包装类型 <a href="javascript:void(0)">这是什么？</a></div>
+                        <div class="packMethod">混装商品</div>
+                    </li>
+                    <li>
+                        <div><b>主题</b></div>
+                        <div>1 MSKU</div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <ol class="olSKU showtext">
+            <!-- 3 -->
+            <li>
+                <div>
+                    <ul class="commodity a-spacing-medium">
+                        <li class="selectColor">需要贴标</li>
+                        <li>所有商品</li>
+                    </ul>
+                    <div class="a-row a-color-tertiary">
+                        <div class="a-spacing-small">所有商品必须具有可扫描的条形码。对于无需贴标签的共享库存商品，需要为每件商品贴上亚马逊商品标签，您可以在此页面打印并贴上标签，您也可以让亚马逊为您提供贴标服务。</div>
+                        <div class="margin15 a-spacing-small">显示<span>1</span>到<span>1</span>件<span>1</span>商品</div>
+                        <table class="a-row">
+                            <tbody  id="showTmpl">
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bgcolor a-spacing-small">
+                        <div class="pdTop10">
+                            <div class="float_left width50" style="padding-left:328px;">
+                                <select name="" id="" style="width: 350px">
+                                    <option value="">每页纸最多21个标签（A4纸，63.5毫米 X 38.1毫米）</option>
+                                </select>
+                            </div>
+                            <div class="float_left width50">
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label printlabelBtn">为此页面打印标签</span>
+                                </span>
+                                <div>标签总数：<span class="labelQuantitySpan"></span></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                    <div class="a-spacing-small">
+                        <div>显示<span>1</span>到<span>1</span>件<span>1</span>商品</div>
+                    </div>
+                    <div>
+                        <hr>
+                        <div>
+                            <div class="float_left">
+
+                                <span class="awesomeButton returnButtonLarge returnButton inner_button">
+                                    <span class="button_label returnBtn">返回</span>
+                                </span>
+                                <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                                    <span class="button_label">删除计划</span>
+                                </span>
+                                <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                                    <span class="button_label">复制计划</span>
+                                </span>
+
+                            </div>
+                            <div class="float_right">
+
+                                <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
+                                    <span class="button_label goBtn">继续</span>
+                                </span>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ol>
+
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script  id="showArray" type="text/x-dot-template">
+     <tr>
+        <td class="width5">卖家SKU</td>
+        <td>商品名称</td>
+        <td class="width8">状况</td>
+        <td class="width5">商品数量</td>
+        <td class="width5">贴标方</td>
+        <td class="width10">要打印的贴标数量</td>
+        <td class="width5">标签成本</td>
+        <td>删除</td>
+    </tr>
+    <tr style="background-color:#ddd ;height: 40px;">
+        <td>&nbsp;</td>
+        <td colspan="3"><input type="checkbox"> 显示ASIN/FNSKU</td>
+        <td colspan="4">
+            <select id="select">
+                <option value="适用于全部">适用于全部</option>
+                <option value="卖家">卖家</option>
+                <option value="亚马逊">亚马逊</option>
+            </select>
+        </td>
+    </tr>
+    {{~it:value:index}}
+    <tr  class="adds" planGoodsId="{{= value.planGoodsId}}">
+        <td class="sellerSku">{{= decodeURIComponent(value.sellerId)}}</td>
+        <td class="goodsName">{{= decodeURIComponent(value.goodsName)}}</td>
+        <td>
+            {{? value.packModel == "-1"}}
+            所有配送
+            {{?? value.packModel == "1"}}
+            卖家配送
+            {{??}}
+            亚马逊配送
+            {{?}}
+        </td>
+        <td class="goodsNum">
+            {{= decodeURIComponent(value.goodsNum)}}
+        </td>
+        <td>
+            <select name="childSelect">
+                {{? value.labelOwner == "0"}}
+                <option value="适用于全部" selected>适用于全部</option>
+                <option value="卖家">卖家</option>
+                <option value="亚马逊">亚马逊</option>
+                {{?? value.labelOwner == "1"}}
+                <option value="适用于全部">适用于全部</option>
+                <option value="卖家" selected>卖家</option>
+                <option value="亚马逊">亚马逊</option>
+                {{??}}
+                <option value="适用于全部">适用于全部</option>
+                option value="卖家">卖家</option>
+                <option value="亚马逊" selected>亚马逊</option>
+                {{?}}
+            </select>
+        </td>
+        <td><input type="text" value="{{= decodeURIComponent(value.labelQuantity)}}" class="labelQuantity"> </td>
+        <td>-</td>
+        <td><img src="./img/icon_4.png" alt="close" class="deleteBtn"></td>
+    </tr>
+    {{~}}
+</script>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_labeling_goods.js" type="text/javascript"></script>
+<script src="js/doT.min.js" type="text/javascript"></script>
+</html>

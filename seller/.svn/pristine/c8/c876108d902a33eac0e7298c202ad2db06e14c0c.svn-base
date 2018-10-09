@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+    <link rel="stylesheet" href="./css/manage_inventory_setNumber.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container ">
+        <div>
+            <span class="a-color-state a-size-large">
+                发/补货
+            </span>
+            <a href="javascript:void(0)">了解更多信息</a>
+        </div>
+        <div>
+            PLN(4/28/18 12:04 AM) <a href="javascript:void(0)">重命名</a>
+        </div>
+        <ul class="showTitle">
+            <li>
+                设置数量
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理商品
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                为商品贴标
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                检查货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li class="activeColor">
+                预处理货件
+                <span></span>
+            </li>
+            <li>
+                一览
+                <span class="dispplay_none"></span>
+            </li>
+        </ul>
+        <ol class="olSKU showContent ">
+            <li>
+                <ol class="contentTitle">
+                    <li>
+                        <div><b>货件名称/编号</b></div>
+                        <div><span>货件名称：</span> <span class="cargoName"></span></div>
+                        <div><span>编号：</span> <span class="cargoNo"></span></div>
+                        <div><span>货件追踪信号：</span> <span class="shippingNumber"></span></div>
+                    </li>
+                    <li>
+                        <div><b>发货地址</b></div>
+                        <div class="name">zhongguo feng</div>
+                        <div class="address">wanda shangyezhongxin Dzuo</div>
+                        <div class="address2">718</div>
+                        <div class="detailAddress">hangzhou,zhejiangsheng</div>
+                        <div class="zipcode">310000</div>
+                        <div class="country">CN</div>
+                        <!-- <div><a href="javascript:void(0)">从另一地址发货</a></div> -->
+                    </li>
+                    <li>
+                        <div><b>配送地址</b></div>
+                        <div>Amazon.com.kyd,LLC</div>
+                        <div>333 LBJFWY</div>
+                        <div>Dallas,TX75241-7203</div>
+                        <div>US(FTW1)</div>
+                    </li>
+                    <li>
+                        <div><b>货件内商品</b></div>
+                        <div>1 MSKU</div>
+                        <div><span class="goodsNum"></span> 商品数量</div>
+                    </li>
+                    <li>
+                        <div><b>服务费用</b></div>
+                        <div>亚马逊物流人工处理费用 <a href="javascript:void(0)">待处理的箱子配置</a></div>
+                        <div>贴标和预处理 <a href="javascript:void(0)">已针对总体入库计划予以计算</a></div>
+                    </li>
+                    <li>
+                        <div><b>货件状态</b></div>
+                        <div class="cargoStatus">处理中</div>
+                        <div>已创建：<span class="createTime"></span></div>
+                        <div>已更新：<span class="createTime"></span></div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <ol class="olSKU showtext">
+            <!-- 5 -->
+            <li>
+                <hr>
+                <div>
+                    <div class="float_right">
+                        <a href="javascript:void(0)">显示更多</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="a-color-state a-size-middle a-spacing-mini">1.检查货件内容</div>
+                    <hr>
+                    <div>
+                        <div class="a-box a-alert a-alert-info">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content">
+                                    <span>您可以在此处查看和修改商品数量，但是只能更改5%的数量或6件商品。如果您想要向货件添加更多的商品或新商品。您必须复制货件或创建新的货件。任何超出允许范围的输入数量可能需要支付额外的放置费用。
+                                        <a href="javascript:void(0)">了解更多信息</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="float_right">
+                            <a href="javascript:void(0)">下载SKU列表</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div>
+                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button checkupBtn">
+                            <span class="button_label">检查并修改商品</span>
+                        </span>
+                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button hiddengoodsBtn dispplay_none">
+                            <span class="button_label">隐藏商品</span>
+                        </span>
+                    </div>
+                    <div class="hiddenInfo none">
+                        <div class="a-box a-alert a-alert-warning a-section">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content">
+                                    <span>除非您已经在运输流程的准备货件步骤中提供了箱内物品信息，否则我们建议您不要打包和密封包装箱。</span>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="a-row">
+                            <tbody>
+                                <tr>
+                                    <td class="width14">卖家SKU</td>
+                                    <td>商品名称</td>
+                                    <td class="width14">状况</td>
+                                    <td colspan="2" class="width23">已发货</td>
+                                </tr>
+                                <tr style="background-color:#ddd ;height: 40px;">
+
+                                    <td colspan="5" class="a-text-center"><input type="checkbox"> 显示ASIN/FNSKU</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="sellerId">bc001</td>
+                                    <td class="goodsName">123</td>
+                                    <td><span class="shippingMode"></span>配送</td>
+                                    <td class="deliveried">
+                                        <input type="text" value="20" class="align_right">
+                                    </td>
+                                    <td><img src="./img/icon_4.png" alt="" class="deleteBtn"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">总计</td>
+                                    <td>0</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="bgcolor">
+                            <div class="pdTop10">
+                                <div class="float_left width50" style="padding-left: 325px;">
+                                    <select name="" id="" style="width: 350px">
+                                        <option value="">每页纸最多21个标签（A4纸，63.5毫米 X 38.1毫米）</option>
+                                    </select>
+                                </div>
+                                <div class="float_left width50">
+                                    <!-- <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                        <span class="button_label saveBtn">为此页面打印标签</span>
+                                    </button> -->
+                                    <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label confirmBtn">为此页面打印标签</span>
+                                    </span>
+                                    <div>标签总数：<span>0</span></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="a-color-state a-size-middle a-spacing-mini">2.配送服务</div>
+                    <hr>
+                    <div>
+                        <div class="float_left a-column">
+                            <div class="a-spacing-mini">配送方式</div>
+                            <div>
+                                <div class="float_left">
+                                    <input type="radio" name="type" value="spd">
+                                </div>
+                                <div class="float_left">
+                                    <span>小包裹快递（SPD）</span>
+                                    <br>
+                                    <span>我正在配送多个箱子</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div>
+                                <div class="float_left">
+                                    <input type="radio" name="type">
+                                </div>
+                                <div class="float_left">
+                                    <span>汽运零担（LTL）</span>
+                                    <br>
+                                    <span>我要运送托拍，货件重量至少为150帮</span>
+                                    <br>
+                                    <a href="javascript:void(0)">我应该选择哪种方法</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="float_left">
+                            <div class="a-spacing-mini">配送商</div>
+                            <div>亚马逊合作承运人</div>
+                            <div>折扣多、追踪便捷的运输<a href="javascript:void(0)">了解更多信息</a></div>
+                            <div class="a-color-tertiary">
+                                <div class="float_left">
+                                    <input type="radio" name="seller" disabled>
+                                </div>
+                                <div class="float_left">
+                                    <span>UPS</span>
+                                    <br>
+                                    <span>配送地址之间的区域目前无法使用此亚马逊合作承运人</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="a-color-tertiary">
+                                <div class="float_left">
+                                    <input type="radio" name="seller" disabled>
+                                </div>
+                                <div class="float_left">
+                                    <span>FedEx</span>
+                                    <br>
+                                    <span>配送地址之间的区域目前无法使用此亚马逊合作承运人</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="a-spacing-mini">我喜欢使用的</div>
+                            <div>
+                                <div class="float_left margin-top-small">
+                                    <input type="radio" name="seller" checked>
+                                </div>
+                                <div class="float_left ">
+                                    其他承运人：
+                                    <span id="addTmpl"></span>
+                                    <script id="addArray" type="text/x-dot-template">
+                                        <select class="select">
+                                            {{~it:value:index}}
+                                            <option data-id="{{= value.id}}">{{= decodeURIComponent(value.name)}}</option>
+                                            {{~}}
+                                        </select>
+                                    </script>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="a-color-state a-size-middle a-spacing-mini">3.货件包装</div>
+                    <hr>
+                    <div>
+                        <div class="a-box a-alert a-alert-info">
+                            <div class="a-box-inner a-alert-container">
+                                <i class="a-icon a-icon-alert"></i>
+                                <div class="a-alert-content">
+                                    <span>提供箱子信息的工具</span>
+                                    <br>
+                                    <span>
+                                        如果您向我们提供箱内物品的信息，我们就能够更高效的接受您的货件，并提高您的库存的准确性。
+                                        <a href="javascript:void(0)">了解更多信息</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-spacing-medium">
+                        <span class="a-spacing-medium inline-block">此货件如何包装？</span>
+                        <br>
+                        <select name="select_box" id="packing_box_select">
+                            <option value="multiple_boxes" selected>多个箱子</option>
+                            <option value="a_box">所有商品装于一个箱子</option>
+                        </select>
+
+                    </div>
+                    <div class="multiple_boxes">
+                        <div class="a-spacing-medium">
+                            <div class="float_left">
+                                您如何提供箱内物品信息？ <a href="javascript:void(0)">了解更多信息</a>
+                            </div>
+                            <div class="float_right">
+                                <a href="javascript:void(0)">了解或应用20条形码</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="a-section">
+                            <div class="float_left width23">
+                                <div>
+                                    <div class="float_left">
+                                        <input type="radio" class="marginLeft10" name="info" value="table">
+                                    </div>
+                                    <div class="float_left">
+                                        <b>使用网页表格</b>
+                                        <br>
+                                        <span>在网页表格中填写箱子信息</span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="float_left width23">
+                                <div>
+                                    <div class="float_left">
+                                        <input type="radio" class="marginLeft10" name="info" value="updateFile">
+                                    </div>
+                                    <div class="float_left">
+                                        <b>上传文件</b>
+                                        <br>
+                                        <span>填写装箱单，并上传到卖家平台</span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="float_left width23">
+                                <div>
+                                    <div class="float_left">
+                                        <input type="radio" class="marginLeft10" name="info" value="">
+                                    </div>
+                                    <div class="float_left">
+                                        <b>跳过箱子信息并收取手动处理费用</b>
+                                        <br>
+                                        <span>亚马逊将手动处理您的箱内物品</span><a href="javascript:void(0)">了解更多信息</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div>
+                            <div class="a-box a-alert a-alert-info">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        <span>
+                                            您可以点击“保存”，稍后再继续按钮，保存当前进度，稍后再接着输入箱内商品信息 。
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="a-row tableInput">
+                            <tbody>
+                                <tr>
+                                    <td>货件内商品</td>
+                                    <td class="width10">商品数量</td>
+                                    <td class="width14">每个箱子配置的商品数</td>
+                                    <td class="width10">箱子数量</td>
+                                    <td class="width5">总量</td>
+                                    <td class="width10">箱子重量（）</td>
+                                    <td class="width14 a-text-right">箱子尺寸（）</td>
+                                </tr>
+                                <tr style="background-color:#ddd ;height: 40px;">
+                                    <td colspan="4"><input type="checkbox"> 显示ASIN/FNSKU</td>
+
+                                    <td colspan="3">-</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="addbottomColor">
+                            <div class="float_left width45">
+                                <table class="nobottomColor a-row">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 80%;" class="goodsName">123</td>
+                                            <td class="width7 goodsNum" >20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="float_right width55">
+                                <table class="tableInput nobottomColor a-row addInput">
+                                    <tbody>
+                                        <tr>
+                                            <td class=" width18 align_right">
+                                                <div class="a-spacing-small">
+                                                    <input type="text" class="a-text-right box_goods_num">
+                                                </div>
+                                            </td>
+                                            <td class=" pdLeft45 align_right">
+                                                <div class="a-spacing-small addNumInput">
+                                                    <div class="a-spacing-small">
+                                                        <input type="text" class="a-text-right box_num">
+                                                        <img src="./img/icon_4.png" alt="closeImg" class="pdleft10 closeBtn ">
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                            <td class=" width9 align_right">
+                                                <div class="a-spacing-small height21">
+                                                    <span>-</span>
+                                                </div>
+
+                                            </td>
+                                            <td class="pdLeft45 align_right">
+                                                <div class="a-spacing-small">
+                                                    <input type="text" class="moreSizeweight ">
+                                                </div>
+                                            </td>
+                                            <td class="a-text-right ">
+                                                <div class="a-spacing-small">
+                                                    <input type="text" class="moreSizeInput1 a-text-center ">
+                                                    <img src="./img/close.png" alt="">
+                                                    <input type="text" class="moreSizeInput2 a-text-center ">
+                                                    <img src="./img/close.png" alt="">
+                                                    <input type="text" class="moreSizeInput3 a-text-center ">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div style="padding-left: 184px;">
+                                                    <a href="javascript:void(0)" class="add_configuration">添加其他箱子配置</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div>剩余箱子数</div>
+                        <div>
+                            <div class="float_right">
+                                <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                    <span class="button_label">保存以供日后使用</span>
+                                </span>
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label moreConfirmBtn">确认</span>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div>欢迎您提供宝贵意见</div>
+                    </div>
+                    <div class="a_box none">
+                        <table class="a-row">
+                            <tbody>
+                                <tr>
+                                    <td>货件内商品</td>
+                                    <td class="width8">货件数量</td>
+                                    <td class="width8">箱子重量</td>
+                                    <td class="width17 a-text-right">箱子尺寸</td>
+                                </tr>
+                                <tr style="background-color:#ddd ;height: 40px;">
+                                    <td colspan="4"><input type="checkbox"> 显示ASIN/FNSKU</td>
+                                </tr>
+                                <tr>
+                                    <td class="goodsName">123</td>
+                                    <td class="goodsNum">20</td>
+                                    <td><input type="text" value="18" class="align_right inputweight"></td>
+
+                                    <td class="a-text-right">
+                                        <input type="text" style="width: 50px" class="sizeInput1">
+                                        <img src="./img/close.png" alt="">
+                                        <input type="text" style="width: 50px" class="sizeInput2">
+                                        <img src="./img/close.png" alt="">
+                                        <input type="text" style="width: 50px" class="sizeInput3">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="float_right">
+                                <div style="color: green;" class="successInfo none">
+                                    <img src="./img/img31._V271985466_.png" alt="hook" class="hook margin-top-small">
+                                    您已成功提交箱子信息。
+                                </div>
+                                <!-- <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                    <span class="button_label confirmBtn">确认</span>
+                                </button> -->
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label confirmBtn">确认</span>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="a-color-state a-size-middle a-spacing-mini">4.货件标签</div>
+                    <hr>
+                    <div class=" cargoLabelText">
+                        <div class="float_left width47">
+                            <div class="a-box a-alert a-alert-warning a-section">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        <span class="errorColor">您已经请求更改货件中的箱子数量</span>
+                                        <br>
+                                        <span>请注意，更改货件中的箱子数量时，您必须重新打印标签以确保每个箱子都有独一无二的标签。</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a-spacing-mini">箱子数量 纸张类型</div>
+                            <div class="a-spacing-mini">
+                                <div class="float_left width8 a-column align_right">
+                                    2
+                                </div>
+                                <div class="float_left a-column">
+                                    <select name="" id="">
+                                        <option value="">普通纸张</option>
+                                    </select>
+                                </div>
+                                <div class="float_left">
+                                    <!-- <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                        <span class="button_label saveBtn">打印箱子标签</span>
+                                    </button> -->
+                                    <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label confirmBtn">打印箱子标签</span>
+                                    </span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="a-box a-alert a-alert-info">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        <span>每个箱子标签都是唯一的，确保打印所有的箱子标签。<a href="javascript:void(0)">了解更多信息</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float_right width47">
+                            <div>说明</div>
+                            <div>包装包装箱</div>
+                            <ul class="packing_box_ol">
+                                <li>打印的装箱单无需放在箱子里。</li>
+                                <li>出于安全原因，内含多件商品的箱子重量不得超过50磅，内含一件商品且重量超过50磅的箱子必须在顶部和侧面标上“多人合搬”。</li>
+                                <li>仅使用批准的包装材料</li>
+                            </ul>
+                            <div>为包装箱贴标</div>
+                            <ul class="packing_box_ol">
+                                <li>打印全套标签，因为每个标签都是唯一的，请不要打印、重复使用或修改标签以将其用于其他货箱。</li>
+                                <li>为每个包装箱贴上货件标签和相应的承运人标签。</li>
+                                <li>不要将标签贴在箱子的接缝处。</li>
+                            </ul>
+                            <div><a href="javascript:void(0)">了解有关货件准备和路线安排要求的更多信息。</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="float_left ">
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">处理另一个货件</span>
+                            </span>
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">删除货件</span>
+                            </span>
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">复制</span>
+                            </span>
+                        </div>
+                        <div class="float_right">
+                            <div class="none finish">
+                                <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
+                                    <span class="button_label finishBtn">完成货件</span>
+                                </span>
+                            </div>
+                            <div class="unfinish">
+                                <span class="awesomeButton darkredButtonLarge darkredButton inner_button">
+                                    <span class="button_label finishBtn">完成货件</span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/doT.min.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_pretreatment_cargo.js" type="text/javascript"></script>
+
+</html>

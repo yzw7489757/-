@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Edit Product Info</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/product_details.css" />
+        <link rel="stylesheet" type="text/css" href="css/edit_product.css" />
+        <link rel="stylesheet" type="text/css" href="css/add_other_conditions.css" />
+        <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+    </head>
+    <body>
+        <div class="header">
+            <a href="###" class="logo">
+                <img src="img/sc-logo-top.gif" alt="logo">
+            </a>
+        </div>
+        <div class="container product_details_box">
+            <div class="product_details">
+                <div class="reconciledDetailsHeaderTitle">
+                    <strong>
+                        Cuteforyou Cute Animal Shaped Cartoon Home Decoration Succulent Vase Flower Pots
+                    </strong>
+                    <a href="###" target="_blank">(View amazon detail page)</a>
+                </div>
+                <div class="reconciledDetailsHeaderContent clear_both">
+                    <div class="reconciledImage fl" style="width:160px;margin-right: 205px;">
+                        <img src="img/camera_icon.png" id="reconciledImage" width="160">
+                    </div>
+                    <div class="reconciledDetailsAttributes fl">
+                        <strong>Cate Path:&nbsp;</strong>*******<br />
+                        <strong>ASIN:&nbsp;</strong>****** <br />
+                        <strong>Product Name:&nbsp;</strong>****** <br />
+                        <strong>Brand Name:&nbsp;</strong>****** <br />
+                        <strong>Manufacturer:&nbsp;</strong>****** <br />
+                        <strong>Category (item-type):&nbsp;</strong>****** <br /><br />
+                        <strong>Marketplace:&nbsp;</strong>****** <br /><br />
+                        <strong>List Price:&nbsp;</strong><span class="smallnegative">$******</span> <br /><br />
+                        <strong>Amazon Sales Rank:&nbsp;</strong>*****
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav_tab clear_both">
+                <div class="tab active notification-required">
+                    <span class="icon"></span>
+                    <span class='text'>Offer</span>
+                </div>
+                <div class="view-toggle-tab-bar fr hide">
+                    <div class="aui-switch">
+                        <input type="checkbox" class="toggle-input" id="advanced-view-switch-top" checked/>
+                        <span class="switch-text">
+                            Advanced View
+                        </span>
+                        <label for="advanced-view-switch-top" class="switch-background">
+                            <span class="switch-control"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb"></div>
+            <div class="content">
+                <!-- Offer -->
+                <div class="segment">
+                    <div class="row">
+                        <div class="attributeGroup clear_both">
+                            <div class="label-wrapped fl">
+                                <label for="item_name" class="tooltip-enabled">
+                                    <span> Your Price </span>
+                                    <span class="help-text-icon"></span>
+                                </label>
+                            </div>
+                            <div class="field-wrapped fl">
+                                <div class="a-spacing-top-mini">Lowest price for <span class="a-text-bold">New</span></div>
+                                <div>
+                                    <span id="ship-price"><span class="a-color-price">$0.00</span> + $0.00 shipping</span>
+                                    <button class="secondaryAUIButton a-button-inner a-button-31" id="Math-Low-Price">Math Low Price</button>
+                                </div>
+                                <div class="currency-container">
+                                    <span class='currency_number-symbol'>$</span>
+                                    <input type="text" name="list_price" id="list_price" placeholder="Ex: 25.99" autocomplete="off" class="verity-submit" />
+                                </div>
+                                <div>
+                                    <span class="add-ship-price"> + $0.00 shipping</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="attributeGroup clear_both">
+                            <div class="label-wrapped fl">
+                                <label for="item_name" class="tooltip-enabled">
+                                    <span> Seller SKU  </span>
+                                    <span class="help-text-icon"></span>
+                                </label>
+                            </div>
+                            <div class="field-wrapped fl">
+                                <input type="text" name="SKU" class="Seller-SKU verity-submit" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="attributeGroup clear_both">
+                            <div class="label-wrapped fl">
+                                <label for="item_name" class="tooltip-enabled">
+                                    <span>  Condition  </span>
+                                </label>
+                            </div>
+                            <div class="field-wrapped fl">
+                                <div class="Condition_statement">
+                                    <select name="cpsia_cautionary_statement1" class="attribute_select Condition_statement_select verity-submit">
+                                        <option value="">- Select -</option>
+                                        <option value="New">New</option>
+                                        <option value="Refurbished">Refurbished</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Like New">Like New</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Very Good">Very Good</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="attributeGroup clear_both">
+                            <div class="label-wrapped fl">
+                                <label for="item_name" class="tooltip-enabled">
+                                    <span> Quantity</span>
+                                </label>
+                            </div>
+                            <div class="field-wrapped fl">
+                                <input type="number" class="Quantity verity-submit" style="width: 50%;" autocomplete="off"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="attributeGroup clear_both">
+                            <div class="label-wrapped fl">
+                                <label for="item_name" class="tooltip-enabled">
+                                    <span>  Shipping-Template  </span>
+                                    <span class="help-text-icon"></span>
+                                </label>
+                            </div>
+                            <div class="field-wrapped fl">
+                                <div class="merchant_shipping_group_name">
+                                    <select name="merchant_shipping_group_name" id="merchant_shipping_group_name" class="attribute_select">
+                                        <option value="0">- Select -</option>
+                                        <option value="1" selected>Migrated Template</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="listingFormButtons">
+                <div class="button_content">
+                    <div class="actions">
+                        <button class="secondaryAUIButton" id="Cancel_submit" onclick="javascript:history.go(-1)">Cancel</button>
+                        <button id="main_submit_button" class="primaryAUIButton">Save and finish</button>
+                        <div class="view-toggle-bottom-bar fr hide">
+                            <div class="aui-switch">
+                                <input type="checkbox" class="toggle-input" id="advanced-view-switch-bottom" checked/>
+                                <span class="switch-text">
+                                    Advanced View
+                                </span>
+                                <label for="advanced-view-switch-bottom" class="switch-background">
+                                    <span class="switch-control"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer clear_both">
+            <div class="links fl">
+                <a href="###" class="Rate">Rate this page</a>
+                <a href="###">Contact Seller Support</a>
+            </div>
+            <div class="copyright fr">
+                1996-2018, Amazon, Inc. or its affiliates
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/follow_sell.js"></script>
+</html>
