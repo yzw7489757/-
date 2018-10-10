@@ -52,7 +52,7 @@ $(function(){
                             '</a>'+
                         '</li>'+
                         '<li>'+
-                            '<a class="drop_link">'+
+                            '<a href="manage_inventory_fulfillment_order.html"  class="drop_link">'+
                                 '创建多渠道配送订单'+
                             '</a>'+
                         '</li>'+
@@ -391,7 +391,7 @@ $(function(){
         var splitdropdown = $('.splitdropdown');
         dropdown(splitdropdown,split_down,'r')
     }
-// 筛选页面数据
+ //筛选页面数据
     //商品状态 配送类型
     var all_goods = $('#all_goods');
     var on_sell = $('#on_sell');

@@ -6,8 +6,9 @@ $(function () {
     var printlabel = false;
     var goodsLable ;
     var obj ;
+    var planId;
     if (window.sessionStorage) {
-        var planId = sessionStorage.getItem('planId')
+        planId = sessionStorage.getItem('planId')
     }
     
     $('select[name="childSelect"]').change(function () {
@@ -91,10 +92,11 @@ $(function () {
         })
         var strGoodsLableJson;
         strGoodsLableJson = JSON.stringify({
-            goodsLable: goodsLable
+            goodsLable: goodsLable   
         });
         $.post(baseUrl + '/SetGoodsLable', {
-            strGoodsLableJson: strGoodsLableJson
+            strGoodsLableJson: strGoodsLableJson,
+            planId:planId
         }, function (res) {
             console.log(res);
             if (res.result == '1') {

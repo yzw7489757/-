@@ -9,7 +9,7 @@ $(function () {
     })
 
     $.post(baseUrl + '/GetCargoGoods', {
-        planId: planId
+        planId: cargoNo
     }, function (res) {
         console.log(res)
         var data = res.goodsLable[0];
@@ -46,20 +46,17 @@ $(function () {
         cargoNo: cargoNo
     }, function (res) {
         console.log(res);
-        $('.country').text(decodeURIComponent(res.adrInfo.country))
-        $('.province').text(decodeURIComponent(res.adrInfo.province))
-        $('.city').text(decodeURIComponent(res.adrInfo.city))
-        $('.address').text(decodeURIComponent(res.adrInfo.address))
-        $('.address2').text(decodeURIComponent(res.adrInfo.address2))
-        $('.zipcode').text(decodeURIComponent(res.adrInfo.zipcode))
+        $('.city').text(decodeURIComponent(res.city))
+        $('.address').text(decodeURIComponent(res.address))
+        $('.zipcode').text(decodeURIComponent(res.zipcode))
         // 商品数量
-        $('.sellerSku').text(res.planGoodsInfo[0].goodsNum)
+        $('.sellerSku').text(res.goodsNum)
         // 货件名
         $('.cargoName').text(res.cargoName)
         // 货件编号
         $('.cargoNo').text(res.cargoNo)
         // 商品数量
-        $('.goodsNum').text(res.planGoodsInfo[0].goodsNum)
+        $('.goodsNum').text(res.goodsNum)
     }, 'json')
     // 处理货件
     $('.handlinggoodsBtn').click(function () { 

@@ -274,7 +274,7 @@ $(function () {
 
    // 6.4 查看货件内商品
     $.post(baseUrl + '/GetCargoGoods', {
-        planId: planId
+        planId: cargoNo
     }, function (res) {
         console.log(res)
         var data = res.goodsLable[0];
@@ -282,6 +282,8 @@ $(function () {
         $('.sellerId').text(data.sellerId)
         // 商品名称
         $('.goodsName').text(decodeURIComponent(data.goodsName))
+        // 商品数量
+        $('.goodsNum').val(data.goodsNum)
         // 配送类型：-1 所有 1卖家 2 亚马逊
         if (data.packModel == '-1') {
             $('.shippingMode').text('所有')

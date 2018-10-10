@@ -546,8 +546,10 @@ $(function () {
                                         $('input[type="radio"]:checked').parents('.add').addClass('address-item-select')
                                         $('.add input').each(function (i) {
                                                 $('.add input').eq(i).click(function () {
-                                                        $('input').parents('.add').removeClass('address-item-select')
-                                                        $('input[type="radio"]:checked').parents('.add').addClass('address-item-select')
+                                                        $('input').parents('.add').removeClass('address-item-select');
+                                                        $('input[type="radio"]:checked').parents('.add').addClass('address-item-select');
+                                                        address_id = $(this).parents('.add').attr('data-id');
+                                                        console.log(address_id)
                                                         if(!address_data[i].status){
                                                                $('.pstyle').text('设置时区')
                                                                $('.ul li').click(function () { 
@@ -640,7 +642,7 @@ $(function () {
                                         //  编辑地址
                                         $('.editBtn').click(function () {
                                                 $('.box-content').hide()
-                                                address_id = $(this).parents('.add').attr('data-id')
+                                                address_id = $(this).parents('.add').attr('data-id');
                                                 $.ajax({
                                                         url: baseUrl + '/InitialiAddress',
                                                         method: 'post',
@@ -736,9 +738,9 @@ $(function () {
                                 $('.province').text(decodeURIComponent(data.province))
                                 $('.zipcode').text(decodeURIComponent(data.zipcode))
                                 console.log("success!");
-                                if (window.sessionStorage) {
-                                        sessionStorage.setItem('address_id', decodeURIComponent(data.address_id))
-                                }
+                                // if (window.sessionStorage) {
+                                //         sessionStorage.setItem('address_id', decodeURIComponent(data.address_id))
+                                // }
 
                         } else {
                                 console.log(decodeURIComponent(res.error));
@@ -779,6 +781,7 @@ $(function () {
                                         success: function (res) {
                                                 console.log(res);
                                                 if (res.result == 1) {
+                                                        $('.box-content').hide();
                                                         inputctr.public.judgeFinishtask('1104', successInfo);
                                                 } else {
                                                         console.log(decodeURIComponent(res.error));

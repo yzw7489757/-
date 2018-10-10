@@ -42,6 +42,9 @@ body{
 .madagascar-main-body table tr td{
     padding: 5px;
 }
+.a-form-label {
+    font-weight: 700;
+}
 table tr td{
     vertical-align: top;
 }
@@ -257,4 +260,36 @@ table tr td{
 }
 .titleColor{
     color: #c45500
+}
+.borderRinght{
+    border-right: 1px solid #ddd;
+    height: 78px;
+}
+.navTitle{
+    background: #4646e2;
+    overflow: hidden;
+    height: 35px;
+}
+.navTitle li{
+    float: left;
+    font-size: 20px;
+    line-height: 35px;
+    list-style: none !important;
+    padding:0 20px;
+    color: #fff;
+    background: #ddd;
+    position: relative;
+}
+.selectLi{
+    background: #c45500 !important;
+    color: #111 !important;
+}
+.titleText {
+    margin-left: 47px;
+}
+.a-alert-show{
+    border: 1px solid #fffae7 ;
+}
+.addNum{
+    background: #ddd;
 }
