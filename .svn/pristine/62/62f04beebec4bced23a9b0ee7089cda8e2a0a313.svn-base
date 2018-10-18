@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{_head_title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_identity_verification.css" />
+    </head>
+    <body>
+        <div class="content-container">
+            <div class="content-width">
+                <h1 class="saw-module-header">
+                    {{_body_Authentication}}
+                </h1>
+                <div class="saw-module-container">
+                    <span>{{_body_Registration}}</span>
+                </div>
+                <div id="saw-module-incomplete-message" class="alert-error-tip hidden">
+                    <div class="alert-error-container">
+                        <h4 class="alert-heading">{{_body_ErrorHeading}}</h4>
+                        <i class="a-icon icon-alert-tip"></i>
+                        <div class="alert-error-content">
+                            {{_body_ErrorMessage}}
+                        </div>
+                    </div>
+                </div>
+                <div class="saw-module-wrapper a-section">
+                    <h3 class="saw-module-header">
+                        {{_body_Business}}
+                    </h3>
+                    <div class="saw-module-container" id="questionnaireDiv">
+                        <div id="questionnaire">
+                            <div id='myq_select_country_question'>
+                                <span class="myq-question">{{_body_SelectCountry}}</span>
+                                <div class="myq-option-list-div">
+                                    <div class="button-dropdown">
+                                        <div class="button-inner">
+                                            <span>{{_body_CountryDropdown}}</span>
+                                            <i class="a-icon icon-dropdown"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myq_registration_individual_or_business" class="myq-questionnaire-div">
+                                <span class="myq-question">{{_body_Individual}}</span>
+                                <div class="myq-option-list-div">
+                                    <div class="myq-option a-radio">
+                                        <label>
+                                            <input type="radio" name="individual_or_business" checked/>
+                                            <span class="a-radio-label">{{_body_IndividualRadio1}}</span>
+                                        </label>
+                                    </div>
+                                    <div class="myq-option a-radio">
+                                        <label>
+                                            <input type="radio" name="individual_or_business" disabled/>
+                                            <span class="a-radio-label">{{_body_IndividualRadio2}}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionnaire-input">
+                    <div class="a-span9">
+                        <div class="saw-module-wrapper">
+                            <h3 class="saw-module-header">{{_body_Document}}</h3>
+                            <div class="a-section saw-module-container">
+                                <div class="doc-upload-section a-section">
+                                    <span class="myq-application-radio-doc">{{_body_Application}}</span>
+                                    <div id="container-dnd-ni--individual" class="myq-application-form-radio-expander">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">{{_body_DocumentRequire_tip}}</span>
+                                            <ul id="requirements-content-ni" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list1}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list2}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list3}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list4}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list5}}<a href="###" target="_blank">{{_body_DocumentRequire_list5a}}</a>{{_body_DocumentRequire_list52}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_DocumentRequire_list6}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-required-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            {{_body_DocumentsError}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-individual" class="document-upload-container">
+                                                <span class="dnd-text">{{_body_UploadContainer_text1}}</span>
+                                                <br />
+                                                {{_body_UploadContainer_text2}}
+                                                <br />
+                                                <button class="select-files-button button-inner">{{_body_UploadContainer_text3}}</button>
+                                                <br />
+                                                <span class="text-span-supported-files">{{_body_UploadContainer_text4}}</span>
+                                            </div>
+                                            <div id="file-list-dnd-ni--individual" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-ni--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-ni--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-ni--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">{{_body_FileRemove}}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    {{_body_FormOptional1}}
+                                                </span>
+                                                <span class="a-text-bold">{{_body_FormOptional2}}</span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-comments">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="doc-upload-section a-section">
+                                    <b style="line-height: 3;">{{_body_DocumentType}}</b>
+                                    <div id="credit_card">
+                                        <label>
+                                            <input type="radio" name="radio-documents" id="radio-button-cc--individual" />
+                                            <span class="a-radio-label">{{_body_CreditCard}}</span>
+                                        </label>
+                                    </div>
+                                    <div id="container-dnd-cc--individual" class="myq-application-form-radio-expander myq-option hidden">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">{{_body_CCRequire_tip}}</span>
+                                            <ul id="requirements-content-cc" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">{{_body_CCRequire_list1}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_CCRequire_list2}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_CCRequire_list3}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-cc-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            {{_body_DocumentsError}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-cc--individual" class="document-upload-container">
+                                                <span class="dnd-text">{{_body_UploadContainer_text1}}</span>
+                                                <br />
+                                                {{_body_UploadContainer_text2}}
+                                                <br />
+                                                <button class="select-files-button button-inner">{{_body_UploadContainer_text3}}</button>
+                                                <br />
+                                                <span class="text-span-supported-files">{{_body_UploadContainer_text4}}</span>
+                                            </div>
+                                            <div id="file-list-dnd-cc--individual" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-cc--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-cc--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-cc--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">{{_body_FileRemove}}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    {{_body_FormOptional1}}
+                                                </span>
+                                                <span class="a-text-bold">{{_body_FormOptional2}}</span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-cc">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="bank_account">
+                                        <label>
+                                            <input type="radio" name="radio-documents" id="radio-button-bas--individual" />
+                                            <span class="a-radio-label">{{_body_BankAccount}}</span>
+                                        </label>
+                                    </div>
+                                    <div id="container-dnd-bas--individual" class="myq-application-form-radio-expander myq-option hidden">
+                                        <div class="document-requirements">
+                                            <span class="a-text-bold">{{_body_BARequire_tip}}</span>
+                                            <ul id="requirements-content-bas" class="a-unordered-list a-vertical">
+                                                <li>
+                                                    <span class="a-list-item">{{_body_BARequire_list1}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_BARequire_list2}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_BARequire_list3}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_BARequire_list4}}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="a-list-item">{{_body_BARequire_list5}}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-upload-wrapper">
+                                            <div id="myq-bas-documents-error" class="hidden">
+                                                <div class="a-alert-inline a-alert-inline-error">
+                                                    <div class="a-box-inner a-alert-container">
+                                                        <i class="a-icon a-icon-alert"></i>
+                                                        <div class="a-alert-content">
+                                                            {{_body_DocumentsError}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file-list-dnd-ni--individual"></div>
+                                            <div id="document-upload-container-dnd-bas--individual" class="document-upload-container">
+                                                <span class="dnd-text">{{_body_UploadContainer_text1}}</span>
+                                                <br />
+                                                {{_body_UploadContainer_text2}}
+                                                <br />
+                                                <button class="select-files-button button-inner">{{_body_UploadContainer_text3}}</button>
+                                                <br />
+                                                <span class="text-span-supported-files">{{_body_UploadContainer_text4}}</span>
+                                            </div>
+                                            <div id="file-list-dnd-bas--individual-table" class="file-list hidden">
+                                                <div class="file-list-box-group">
+                                                    <div id="file-dnd-bas--individual-0-box-inner" class="flie-box-inner">
+                                                        <span id="file-name-dnd-bas--individual-0" class="file-name-td"> as_logo.png </span>
+                                                        <a id="file-remove-dnd-bas--individual-0" target-file-name="as_logo.png" class="a-link-normal file-remove">{{_body_FileRemove}}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myq-application-form-document-comments-container">
+                                                <span class="myq-application-form-optional a-text-bold">
+                                                    {{_body_FormOptional1}}
+                                                </span>
+                                                <span class="a-text-bold">{{_body_FormOptional2}}</span>
+                                                <input type="text" maxlength="1024" id="myq-application-form-individual-bas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-span9">
+                    <div class="a-section saw-module-wrapper">
+                        <h3 class="saw-module-header">{{_body_ContactInformation}}</h3>
+                        <div class="saw-module-container">
+                            <div id="myq-application-form-contact-info-email" class="myq-application-form-contact-info">
+                                <div class="myq-application-form-text-input-heading">
+                                    <span class="a-text-bold">
+                                        {{_body_EmailAddress}}
+                                    </span>
+                                    {{_body_EmailExchange}}
+                                </div>
+                                <div class='myq-application-form-text-input-container'>
+                                    <input type="text" maxlength="90" id="myq-application-form-email-input" placeholder="{{_body_EmailAddressPlaceholder}}" name="emails" class="a-input-text">
+                                </div>
+                                <div id="myq-required-email-address-error" class="hidden">
+                                    <div class="a-alert-inline a-alert-inline-error">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content">
+                                                {{_body_EmailAddressError}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myq-application-form-contact-info-phone" class="myq-application-form-contact-info">
+                                <div class="myq-application-form-text-input-heading">
+                                    <span class="myq-application-form-optional a-text-bold">
+                                        {{_body_FormOptional1}}
+                                    </span>
+                                    <span class="a-text-bold">
+                                         {{_body_PhoneAddress}}
+                                    </span>
+                                    {{_body_PhoneExchange}} 
+                                </div>
+                                <div class='myq-application-form-text-input-container space-none'>
+                                    <input type="text" maxlength="30" id="myq-application-form-phone-input" name="phone" class="a-input-text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit_box">
+                    <div id="myq-application-form-button-container-spacing">
+                        <div id="button_container_without_ack">
+                            <button class="button-dropdown button-text" id="button-save-draft-category">{{_body_Save}}</button>
+                            <button class="button-text button-primary">{{_body_Submit}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_identity_verification.js"></script>
+</html>

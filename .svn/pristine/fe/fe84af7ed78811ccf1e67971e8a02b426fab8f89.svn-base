@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Product category</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+        <link rel="stylesheet" type="text/css" href="css/billing_deposit.css" />
+        <link rel="stylesheet" type="text/css" href="css/product_category.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfont2.css" />
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="a-padding-base">
+                <div class="a-row">
+                    <div class="a-column">
+                        <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                    </div>
+                    <div class="a-span-last">
+                        <div class="header-settings-tab">
+                            <span class='a-size-small'>Settings</span>
+                            <div class="header-list-item">
+                                <span class="a-list-item">
+                                    <a class="a-link-normal ng-binding" href="">Logout</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scope">
+            <ul class="navContentArea">
+                <li class="navStep">
+                    <div class="navLineFirst"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Seller agreement</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Seller Information</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Billing / Deposit</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Billing / Deposit</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive">
+                        <div>5</div>
+                    </div>
+                    <span class="stepTitleActive">Tax information</span>
+                </li>
+            </ul>
+        </div>
+        <div class="headerDivider">
+            <div class="divider-inner"></div>
+        </div>
+        <div class="spacing-top-base">
+            <div class="ws-row">
+                <div class="ws-span48">
+                    <div class="category">
+                        <div class="head-box">
+                            <p class="size-large caption">Tell us about your product categories.You can add or edit your choices later as well</p>
+                            <a href="###" class="Skip">Skip for now</a>
+                        </div>
+                        <ul class="cetegory_box clear_both">
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-music'></i>
+                                </div>
+                                <p class="title">Books,Music,Movies & Games</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Books</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Music</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Musical langmentes</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Video Games</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Video,DVD and Blu-ray</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-tool'></i>
+                                </div>
+                                <p class="title">Home,Garden,Tools</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Home & Garden</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Tools & Home impotantment</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Margjor Appliances</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-cycleqiche'></i>
+                                </div>
+                                <p class="title">Sport & Outdoors</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Outdoors</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Sports</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-wanju'></i>
+                                </div>
+                                <p class="title">Toys,Kids & Baby</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Baby Products</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Toys Games</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-caigouriyongpin'></i>
+                                </div>
+                                <p class="title">Home,Garden,Tools</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Home & Garden</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Tools & Home impotantment</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Margjor Appliances</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-camera1'></i>
+                                </div>
+                                <p class="title">Sport & Outdoors</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Outdoors</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Sports</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-shangyi'></i>
+                                </div>
+                                <p class="title">Books,Music,Movies & Games</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Books</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Music</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Musical langmentes</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Video Games</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Video,DVD and Blu-ray</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-qiche'></i>
+                                </div>
+                                <p class="title">Home,Garden,Tools</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Home & Garden</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Tools & Home impotantment</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Margjor Appliances</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-ebook'></i>
+                                </div>
+                                <p class="title">Sport & Outdoors</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Outdoors</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Sports</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-Coin'></i>
+                                </div>
+                                <p class="title">Home,Garden,Tools</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Home & Garden</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Tools & Home impotantment</span>
+                                    </div>
+                                    <div class="checkbox-fancy">
+                                        <label>
+                                            <input type="checkbox" class="valid_checkbox">
+                                            <i class="a-icon-checkbox"></i>
+                                        </label>
+                                        <span class="a-checkbox-span">Margjor Appliances</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-box">
+                                    <i class='iconfont icon-what'></i>
+                                </div>
+                                <p class="title">Sport & Outdoors</p>
+                                <div class="disport_select">
+                                    <div class="checkbox-fancy">
+                                        <span class="a-checkbox-span">Sports</span>
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="a-section step_button_box">
+                <div class="product_submit clear_both">
+                    <button class="button-submit product_back spacing-left">Back</button>
+                    <button class="button-submit product_next spacing-right">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a-box">
+                <div class="box-inner">
+                    <div class="a-section">
+                        <div class="footerLinkSection">
+                            <a href="" class="foot-link">Rate this page</a>
+                            <a href="" class="foot-link">Get support</a>
+                            <a href="" class="foot-link">Policies and Agreements</a>
+                            <div class="languageSwitcherDropdown a-section">
+                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                                    <option value="en">English</option>
+                                    <option value="cn">中文</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headerDivider footDivder">
+                        <div class="divider-inner"></div>
+                    </div>
+                    <div class="spacing-top-mini">
+                        <span class='footerFriendlyName'>wbb</span>
+                        <span>© 1999-2018, Amazon.com, Inc. or its affiliates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</html>

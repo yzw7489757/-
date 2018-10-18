@@ -1,0 +1,83 @@
+<div id="authportal-center-section">
+    <div id="authportal-main-section">
+        <div class="auth-pagelet-container">
+            <div class="a-spacing-base">
+                <div class="a-box a-spacing-base">
+                    <div class="a-box-inner a-padding-extra-large">
+                        <h1>
+                            Password assistance
+                        </h1>
+                        <p>
+                            Enter the email address or mobile phone number associated with your Amazon account,
+                            then click Continue.
+                        </p>
+                        <div class="a-section a-spacing-large">
+                            <div class="a-column a-span5">
+                                <label for="ap_email" class="a-form-label">
+                                    Email or mobile phone number
+                                </label>
+                            </div>
+                            <input type="email" maxlength="128" id="ap_email" name="email" tabindex="1" class="a-input-text a-span12 auth-required-field">
+                            <div id="auth-password-missing-alert" class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        Enter your email or mobile phone number
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section">
+                            <div id="image-captcha-section" class="a-section a-spacing-large">
+                                <div class="a-section a-spacing-base">
+                                    <h4>
+                                        Enter the characters you see
+                                    </h4>
+                                    <div id='auth-captcha-image-container' class="a-section a-text-center">
+                                        <img src="###" data-refresh-url="" id="auth-captcha-image" width="200" height="70">
+                                    </div>
+                                    <div class="a-row a-text-center">
+                                        <a href="" id="auth-captcha-refresh-link">See a new challenge</a>
+                                    </div>
+                                    <div id="auth-switch-captcha-to-audio-container" class="a-row a-text-center">
+                                        <a href="" id="auth-switch-captcha-to-audio">Hear the challenge</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="auth-captcha-guess" class="a-form-label">
+                                Type characters
+                            </label>
+                            <input type="text" id="auth-captcha-guess" autocomplete="off" name="guess" tabindex="2"
+                                class="a-input-text a-span12 auth-required-field">
+                            <div id="auth-guess-missing-alert" class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        Enter the characters as they are given in the challenge.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section a-text-center">
+                            <a class="a-link-normal" href="###">Having trouble or sight impaired? </a>
+                        </div>
+                        <span class="a-button a-button-span12 a-button-primary" id="a-autoid-0"><span class="a-button-inner">
+                            <input id="continue" tabindex="3" class="a-button-input" type="submit" aria-labelledby="a-autoid-0-announce">
+                            <span class="a-button-text" aria-hidden="true" id="a-autoid-0-announce">Continue
+                            </span></span></span>
+                    </div>
+                </div>
+                <div class="a-section a-spacing-large">
+                    <h4 id="ap_forgotpassword1A_footer_string_header">
+                        Has your email or mobile number changed?
+                    </h4>
+                    <p id="ap_forgotpassword1A_footer_string_paragraph">
+                        If you no longer use the email address associated with your Amazon account, you
+                        may contact<a href="###"> Customer Service </a>,for help restoring access to your
+                        account.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Billing / Deposit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+        <link rel="stylesheet" type="text/css" href="css/billing_deposit.css" />
+        <link rel="stylesheet" type="text/css" href="css/pover_click.css" />
+        <link rel="stylesheet" type="text/css" href="css/popover_hover.css" />
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="a-padding-base">
+                <div class="a-row">
+                    <div class="a-column">
+                        <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                    </div>
+                    <div class="a-span-last">
+                        <div class="header-settings-tab">
+                            <span class='a-size-small'>Settings</span>
+                            <div class="header-list-item">
+                                <span class="a-list-item">
+                                    <a class="a-link-normal ng-binding" href="">Logout</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scope">
+            <ul class="navContentArea">
+                <li class="navStep">
+                    <div class="navLineFirst"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Seller agreement</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">Seller Information</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive">
+                        <div>3</div>
+                    </div>
+                    <span class="stepTitleActive">Billing / Deposit</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleReady">
+                        <div>4</div>
+                    </div>
+                    <span class="stepTitleActive stepTitleReady">Tax information</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineLast"></div>
+                    <div class="navCircleActive navCircleReady">
+                        <div>5</div>
+                    </div>
+                    <span class="stepTitleActive stepTitleReady">Product information</span>
+                </li>
+            </ul>
+        </div>
+        <div class="headerDivider">
+            <div class="divider-inner"></div>
+        </div>
+        <div class="spacing-top-base">
+            <div class="ws-row">
+                <div class="ws-span5">
+                    <div class="billing">
+                        <p class="size-large text-center">Set up your billing method</p>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div class="ws-row">
+                                <span class='b-size-medium'>Your selling plan:</span>
+                            </div>
+                        </div>
+                        <div class="ws-row clear_both">
+                            <div class="b-ws-span8 spacing-left">
+                                <span class='a-text-bold'>Professional selling plan </span>
+                            </div>
+                            <div class="b-ws-span4 spacing-left text-right">
+                                <a href="javascript:;" class="drop_details">view plan details</a>
+                            </div>
+                        </div>
+                        <div class="subscriptions_fadeIn b-spacing-top-large hide">
+                            <div class="headerDivider">
+                                <div class="divider-inner"></div>
+                            </div>
+                            <div class="fee">
+                                <p class="b-size-base-plus b-color-tertiary">Total monthly subscription fee : $39.99 + additional selling fees. You will only be charged once you complete setting up your account.</p>
+                            </div>
+                            <br />
+                            <div class="checkbox-fancy">
+                                <label>
+                                    <input type="checkbox" class="valid_checkbox" checked disabled/>
+                                    <i class='a-icon-checkbox'></i>
+                                </label>
+                                <span class='a-checkbox-span'>Fulfillment by  Amazon</span>
+                                <div class="PS_product_checkbox_padding">
+                                    <span class='b-color-tertiary b-size-mini'>Gain access to Amazon's world-class fulfillment resources and expertise, acclaimed customer services and PRIME and FREE shipping options. </span>
+                                    <br />
+                                    <span class='b-color-tertiary b-size-mini'>Pay per use</span>
+                                </div>
+                            </div>
+                            <div class="checkbox-fancy">
+                                <label>
+                                    <input type="checkbox" class="valid_checkbox ng-dirty"/>
+                                    <i class='a-icon-checkbox'></i>
+                                </label>
+                                <span class='a-checkbox-span'>Sell on Amazon Business</span>
+                                <div class="PS_product_checkbox_padding">
+                                    <span class='b-color-tertiary b-size-mini'>Enable business seller features and gain access to Amazon business buyers. No additional fee. Amazon business sellers must adhere to the program performance requirements. </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div>
+                                <span class='b-size-medium'>Your credit card information</span>
+                            </div>
+                            <div>
+                                <p>
+                                    Your first monthly subscription fee ($39.99) will be charged upon account creation. You’ll be able to list products after we perform payment validation, which typically takes an hour (but could take up to 24 hours).
+                                </p>
+                            </div>
+                            <br />
+                            <div class="b-spacing-block clear_both">
+                                <div class="ws-span6 spacing-left">
+                                    <div class="a-text-bold">Card Number</div>
+                                    <input type="text" maxlength="24" class="Card_Number b-clo" />
+                                    <div class="a-alert-inline a-alert-inline-error hide">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content ng-binding"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ws-span6 spacing-right clear_both">
+                                    <div class="b-span5 b-column spacing-left">
+                                        <div class="a-text-bold">Valid through</div>
+                                        <div class="address-dropdown pv_dropdown ccDropdown b-clo">
+                                            <select name="ccExpirationMonth" class="address-dropdown-select dropdown-select ccDropdownSelect ">
+                                                <option value="0" selected="selected">1</option>
+                                                <option value="1">2</option>
+                                                <option value="2">3</option>
+                                                <option value="3">4</option>
+                                                <option value="4">5</option>
+                                                <option value="5">6</option>
+                                                <option value="6">7</option>
+                                                <option value="7">8</option>
+                                                <option value="8">9</option>
+                                                <option value="9">10</option>
+                                                <option value="10">11</option>
+                                                <option value="11">12</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="b-column spacing-left b-span1 middle_img">
+                                        <img src="img/ccline._V276736681_.png" class="ccLine">
+                                    </div>
+                                    <div class="ws-span6 spacing-left clear_both">
+                                        <div class="a-text-bold">Valid through</div>
+                                        <div class="address-dropdown pv_dropdown yyDropdown">
+                                            <select name="ccExpirationMonth" class="address-dropdown-select dropdown-select yyDropdownSelect ">
+                                                <option value="0" selected="selected">2018</option>
+                                                <option value="1">2019</option>
+                                                <option value="2">2020</option>
+                                                <option value="3">2021</option>
+                                                <option value="4">2022</option>
+                                                <option value="5">2023</option>
+                                                <option value="6">2024</option>
+                                                <option value="7">2025</option>
+                                                <option value="8">2026</option>
+                                                <option value="9">2027</option>
+                                                <option value="10">2028</option>
+                                                <option value="11">2029</option>
+                                                <option value="12">2030</option>
+                                                <option value="13">2031</option>
+                                                <option value="14">2032</option>
+                                                <option value="15">2033</option>
+                                                <option value="16">2034</option>
+                                                <option value="17">2035</option>
+                                                <option value="18">2036</option>
+                                                <option value="19">2037</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ws-row">
+                                <p class="b-spacing-top-small a-text-bold">Cardholder's Name</p>
+                                <div class="b-clo">
+                                    <input type="text" maxlength="50" class="b-clo Cardholder_Name" />
+                                </div>
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div id="ExistingAddress">
+                                <div class="old_address a-spacing-top-mini">
+                                    <label for="old_message" class="old_message_label">
+                                        <input type="radio" id='old_message' name="Address" checked/>
+                                        <span class="existing-address-width">555, aaa, aa, 046102, CN</span>
+                                    </label>
+                                </div>
+                                <div class="add_address a-spacing-top-mini">
+                                    <label for="add_message" class="add_message_label">
+                                        <input type="radio" id='add_message' name="Address" />
+                                        <span class="existing-address-width a-text-bold">Add a new address</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="a-section new_address_enter hide">
+                                <p class="b-spacing-top-small a-text-bold spacing-top-micro">Street address</p>
+                                <div class="b-clo">
+                                    <input type="text" maxlength="60" class="b-clo Street_address" />
+                                </div>
+                                <div class="a-alert-inline a-alert-inline-error hide">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content ng-binding"></div>
+                                    </div>
+                                </div>
+                                <div class="b-spacing-block clear_both">
+                                    <div class="ws-span6 spacing-left">
+                                        <div class="a-text-bold spacing-top-micro">City / Town</div>
+                                        <input type="text" maxlength="50" class="City_Town b-clo" />
+                                        <div class="a-alert-inline a-alert-inline-error hide">
+                                            <div class="a-box-inner a-alert-container">
+                                                <i class="a-icon a-icon-alert"></i>
+                                                <div class="a-alert-content ng-binding"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ws-span6 spacing-right">
+                                        <div class="a-text-bold spacing-top-micro">State / Region / Province</div>
+                                        <input type="text" maxlength="50" class="Province b-clo" />
+                                        <div class="a-alert-inline a-alert-inline-error hide">
+                                            <div class="a-box-inner a-alert-container">
+                                                <i class="a-icon a-icon-alert"></i>
+                                                <div class="a-alert-content ng-binding"></div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                                 <div class="b-spacing-block clear_both">
+                                    <div class="ws-span6 spacing-left">
+                                        <div class="a-text-bold spacing-top-micro">Country</div>
+                                        <div class="address-dropdown">
+                                            <select name="country" class="address-dropdown-select">
+                                                <option value="United States" selected="selected">United States</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="Albania">Albania</option>
+                                                <option value="Angola">Angola</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="Belarus">Belarus</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                <option value="Bulgaria">Bulgaria</option>
+                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                <option value="Cambodia">Cambodia</option>
+                                                <option value="Cameroon">Cameroon</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="China">China</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                                                <option value="Croatia">Croatia</option>
+                                                <option value="Cyprus">Cyprus</option>
+                                                <option value="Czech Republic">Czech Republic</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Dominican Republic">Dominican Republic</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                <option value="Estonia">Estonia</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="Gabon">Gabon</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Gibraltar">Gibraltar</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="Guinea">Guinea</option>
+                                                <option value="Haiti">Haiti</option>
+                                                <option value="Honduras">Honduras</option>
+                                                <option value="Hong Kong">Hong Kong</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Iceland">Iceland</option>
+                                                <option value="India">India</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Ireland">Ireland</option>
+                                                <option value="Israel">Israel</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Jordan">Jordan</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Korea (South)">Korea (South)</option>
+                                                <option value="Latvia">Latvia</option>
+                                                <option value="Liechtenstein">Liechtenstein</option>
+                                                <option value="Lithuania">Lithuania</option>
+                                                <option value="Luxembourg">Luxembourg</option>
+                                                <option value="Macedonia">Macedonia</option>
+                                                <option value="Madagascar">Madagascar</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Mauritius">Mauritius</option>
+                                                <option value="Mexico">Mexico</option>
+                                                <option value="Morocco">Morocco</option>
+                                                <option value="Mozambique">Mozambique</option>
+                                                <option value="Namibia">Namibia</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Niger">Niger</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Oman">Oman</option>
+                                                <option value="Panama">Panama</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Philippines">Philippines</option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Portugal">Portugal</option>
+                                                <option value="Romania">Romania</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Senegal">Senegal</option>
+                                                <option value="Serbia">Serbia</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Slovakia">Slovakia</option>
+                                                <option value="Slovenia">Slovenia</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="Spain">Spain</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Taiwan">Taiwan</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Togo">Togo</option>
+                                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                <option value="Turkey">Turkey</option>
+                                                <option value="Uganda">Uganda</option>
+                                                <option value="Ukraine">Ukraine</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="Vietnam">Vietnam</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="ws-span6 spacing-right">
+                                        <div class="a-text-bold spacing-top-micro">ZIP / Postal code</div>
+                                        <input type="text" maxlength="50" class="Postal_code b-clo" />
+                                        <div class="a-alert-inline a-alert-inline-error hide">
+                                            <div class="a-box-inner a-alert-container">
+                                                <i class="a-icon a-icon-alert"></i>
+                                                <div class="a-alert-content ng-binding"></div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-section deposit">
+                        <p class="size-large text-center">Set up your deposit method</p>
+                        <div class="enter_informtation">
+                            <div class="a-text-bold">Enter your bank information to receive payments from Amazon</div>
+                            <a href="javascript:;" class="ask_inform link-emphasis">Why do we ask for your bank information?</a>
+                        </div>
+                        <br />
+                        <div class="ws-row">
+                            <div class="ws-span6">
+                                <div class="a-text-bold euBankAccountLabel">Bank Location</div>
+                                <div class="b-spacing-top-small">
+                                    <div class="address-dropdown Bank_Location">
+                                        <select name="country" class="address-dropdown-select dropdown-select">
+                                            <option value="United States" selected="selected">United States</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Gibraltar">Gibraltar</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Korea (South)">Korea (South)</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macedonia">Macedonia</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Namibia">Namibia</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherlands">Netherlands</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russia">Russia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Serbia">Serbia</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section a-spacing-top-base">
+                            <div class="ws-row clear_both">
+                                <div class="ws-span6 spacing-left">
+                                    <div class="a-text-bold euBankAccountLabel">Account Holder's Name
+                                        <span class='hover_tip' tip='Name'>
+                                            <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                        </span>
+                                    </div>
+                                    <input type="text" placeholder="Name as on bank documents" class="Holder_Name spacing-top-micro" />
+                                </div>
+                                <div class="ws-span6 spacing-right">
+                                    <div class="a-text-bold euBankAccountLabel">9-Digit Routing Number
+                                        <span class='hover_tip' tip='Routing'>
+                                            <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                        </span>
+                                    </div>
+                                    <input type="text" placeholder="9 digits" class="Routing_Number spacing-top-micro" />
+                                </div>
+                            </div>
+                            <div class="ws-row clear_both spacing-top-micro">
+                                <div class="ws-span6 spacing-left">
+                                    <div class="a-text-bold euBankAccountLabel">Bank Account Number
+                                        <span class='hover_tip' tip='Number'>
+                                            <img src="img/u368._V279572601_.png" alt="hover_tip" />
+                                        </span>
+                                    </div>
+                                    <input type="text" placeholder="Name as on bank documents" class="Bank_Number spacing-top-micro" />
+                                </div>
+                                <div class="ws-span6 spacing-right">
+                                    <div class="a-text-bold euBankAccountLabel">Re-type Bank Account Number</div>
+                                    <input type="text" class="Re-type_Number spacing-top-micro" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-section step_button_box">
+                            <div class="two_submit clear_both">
+                                <button class="button-submit deposit_back spacing-left">Back</button>
+                                <button class="button-submit deposit_next spacing-right">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a-box">
+                <div class="box-inner">
+                    <div class="a-section">
+                        <div class="footerLinkSection">
+                            <a href="" class="foot-link">Rate this page</a>
+                            <a href="" class="foot-link">Get support</a>
+                            <a href="" class="foot-link">Policies and Agreements</a>
+                            <div class="languageSwitcherDropdown a-section">
+                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headerDivider footDivder">
+                        <div class="divider-inner"></div>
+                    </div>
+                    <div class="spacing-top-mini">
+                        <span class='footerFriendlyName'>wbb</span>
+                        <span>© 1999-2018, Amazon.com, Inc. or its affiliates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/pover_click.js"></script>
+    <script type="text/javascript" src="js/popover_hover.js"></script>
+    <script type="text/javascript" src="js/webjs/billing_deposit.js"></script>
+</html>

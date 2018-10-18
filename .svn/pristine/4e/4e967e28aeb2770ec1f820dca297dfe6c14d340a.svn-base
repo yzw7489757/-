@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{_head_title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/register.css" />
+    </head>
+    <body>
+        <div class="as-header">
+            <header>
+                <a href="###" class="as-logo">
+                    <img src="img/as_logo.png" style="width:100%;"/>
+                </a>
+            </header>
+        </div>
+        <div class="banner_box">
+            <div class="back_img"></div>
+            <div class="banner_drop"></div>
+            <div class="word_back">
+                <p class="heading color-white">
+                    "<span>
+                        <span class='color-orange'>{{_body_Over}}</span>
+                        <span>{{_body_Heading}}</span>
+                    </span>"
+                </p>
+                <p class="box_middle">
+                    <span class='font-size-regular color-white'>
+                        {{_body_Name}}<br />
+                        {{_body_Design}}
+                    </span>
+                </p>
+                <div class="box_middle">
+                    <div class="button_box">
+                        <a href="ToPage.aspx?page=login1" class="cta-button color-white">{{_body_Start}}</a>
+                    </div>
+                    <p>
+                        <span class='font-size-small color-white'>{{_body_Fees}}</span>
+                    </p>
+                </div>
+                <div class="box_middle box_bottom">
+                    <p class="word_right">
+                        <span class='color-white'>
+                            {{_body_Shose}}<br />{{_body_By}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <nav class='footer_nav2'></nav>
+            <nav class='footer_nav'>
+                <a class="footer-logo">
+                    <img src="img/AS_REV._V287027702_.png" alt="Amazon Services" title="Amazon Services" width="140">
+                </a>
+                <a href="" class="footer-link">{{_body_Footer_link1}}</a>
+                <hr class="divider">
+                <a href="" class="footer-link">{{_body_Footer_link2}}</a>
+                <hr class="divider">
+                <a href="" class="footer-link">{{_body_Footer_link3}}</a>
+                <hr class="divider">
+                <a href="" class="footer-link">{{_body_Footer_link4}}</a>
+                <hr class="divider">
+                <a href="" class="footer-link">{{_body_Footer_link5}}</a>
+                <hr class="divider">
+                <a href="" class="footer-link">{{_body_Footer_link6}}</a>
+                <p class="color-white">{{_body_Rights}}</p>
+            </nav>
+        </footer>
+    </body>
+</html>

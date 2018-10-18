@@ -1,0 +1,14 @@
+.ap_cnep_pagelet {
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.ap_pagelet_title {
+    text-align: left;
+    margin-bottom: 4px;
+}
+.ap_cnep_subtitle {
+    margin-bottom: 5px;
+}

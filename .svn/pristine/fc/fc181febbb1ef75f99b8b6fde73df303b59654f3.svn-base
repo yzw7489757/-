@@ -1,0 +1,247 @@
+.text-center{
+    text-align: center;
+}
+.size-large{
+    margin-bottom: 14px;
+}
+.ws-span5 {
+     padding-left: 0; 
+     width: 31.948%;
+}
+.navCircleCompleted{
+    background-image: url(../img/img31._V271985466_.png);
+    border:none;
+}
+.stepTitleCompleted{
+    color: #009A2C;
+}
+.a-size-base:after,.clear_both:after{
+    content:'';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.address-inputName,.a-text-bold{
+    font-weight: 700;
+}
+.address-textbox,.websiteurl-textbox{
+    width: 100%;
+}
+.spacing-top-micro{
+    margin-top: 4px;
+}
+.ws-span6{
+    width: 48.75093%!important;
+}
+.spacing-left{
+    float: left;
+}
+.spacing-right{
+    float:right;
+}
+.address-dropdown{
+    width: 100%;
+    vertical-align: top;
+    border: 1px solid #adb1b8;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(top,transparent,rgba(0,0,0,.06)) #FFF;
+    background: -moz-linear-gradient(top,transparent,rgba(0,0,0,.06)) #FFF;
+    background: -o-linear-gradient(top,transparent,rgba(0,0,0,.06)) #FFF;
+    background: linear-gradient(to bottom,transparent,rgba(0,0,0,.06)) #FFF;
+    box-shadow: 0 1px 1px rgba(0,0,0,.08);
+}
+.address-dropdown:after, .address-dropdown:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 3px dashed;
+    border-color: #000 transparent;
+    pointer-events: none;
+}
+.address-dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+}
+.address-dropdown:after {
+    margin-top: 5px;
+    border-top-style: solid;
+    border-bottom: none;
+}
+.address-dropdown-select {
+    width: 100%;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 30px;
+    line-height: 14px;
+    font-size: 13px;
+    color: #111;
+    text-shadow: 0 1px #fff;
+    background: #FFF;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border: none;
+    border-radius: 0;
+}
+.address-dropdown-select:hover, .address-dropdown:hover ,.pv_dropdown,.dropdown-select{
+    cursor: pointer;
+    background: #e1e4e9;
+}
+.a-spacing-base{
+    margin-bottom: 14px;
+}
+.a-spacing-top-base {
+    margin-top: 14px;
+}
+.link-emphasis{
+    position: relative;
+    padding-right: 9px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.link-emphasis:after {
+    background-image: url(../img/AmazonUIBaseCSS-sprite_1x-28bd59af93d9b1c745bb0aca4de58763b54df7cf._V2_.png);
+    -webkit-background-size: 400px 670px;
+    background-size: 400px 670px;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3px;
+    right: 1px;
+    top: 50%;
+    height: 6px;
+    margin-top: -3px;
+    background-position: -346px -86px;
+    vertical-align: top;
+}
+.dn_messageDivV2{
+    line-height: 35px;
+}
+.store_name_error{
+    top: 10px;
+}
+.ws-span10{
+    width: 82.88427%;
+}
+.pv_radioButtonCall{
+    display: inline-block;
+    padding-right: 15px;
+}
+.pv_radioButtonCall input{
+    margin-right: 14px;
+    position:relative;
+    top: 2px; left: 2px;
+}
+.showCaptchaSpinner{
+    padding-top: 6px;
+    height: 70px;
+}
+.another_img{
+    line-height: 30px;
+}
+.captcha_refresh_link{
+    color:#0066c0;
+    cursor:pointer;
+}
+.a-spacing-mini{
+    margin-bottom: 6px;
+}
+.a-spacing-top-mini{
+    margin-top: 6px;
+}
+.ws-span4{
+    width: 31.68427%;
+}
+.inline-block{
+    display:inline-block;
+}
+.Verify{
+    width: 50px;height: 29px;
+    margin-right: 0;
+}
+.intl-tel-input{
+    width: 100%;
+    position: relative;
+}
+.intl-tel-input .flag-dropdown{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1px;
+}
+.intl-tel-input .selected-flag {
+    z-index: 1;
+    position: relative;
+    width: 42px;
+    height: 100%;
+    padding: 0 0 0 8px;
+}
+.intl-tel-input .selected-flag .iti-flag {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.iti-flag {
+    width: 20px;
+    box-shadow: 0 0 1px 0 #888;
+    background-image: url(../img/flags._V311938856_.png);
+    background-color: #DBDBDB;
+    background-position: 100% 100%;
+}
+.iti-flag.cn {
+    height: 14px;
+    background-position: -1049px 0;
+}
+.intl-tel-input .selected-flag .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 4px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
+}
+.intl-tel-input #country-phone-input{
+    position: relative;
+    z-index: 0;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    padding-left: 48px;
+    margin-left: 0;
+    transition: background-color 100ms ease-out;
+}
+.color-tertiary{
+    color: #767676;
+    margin-top: 6px;
+    margin-bottom: 14px;
+}
+.a-ws-span5{
+    width: 40.2176%;
+    float:right;
+}
+.sendVerificationButton{
+    margin-right: 0;
+}
+.CallMeButton{
+    width: 100%;
+}
+#a-autoid-2-announce{
+    width: 160px;
+    margin-top: 22px;
+}

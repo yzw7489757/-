@@ -1,0 +1,27 @@
+$(function(){
+    var drop_details = $('.drop_details');
+    var subscriptions_fadeIn = $('.subscriptions_fadeIn');
+    var new_address_enter = $('.new_address_enter');
+    var ExistingAddress = $('#ExistingAddress');
+    drop_details.click(function() {
+        subscriptions_fadeIn.toggleClass('hide')
+    })
+    ExistingAddress.find('.add_message_label').click(function() {
+        new_address_enter.removeClass('hide')
+    })
+    ExistingAddress.find('.old_message_label').click(function() {
+        new_address_enter.addClass('hide')
+    })
+    // click提示框
+    var ask_inform = $('.ask_inform');
+    var ask_inform_box = $('.ask_inform_box');
+    var answer_content = {
+        quesition:ask_inform.attr("quesition"),
+        content:ask_inform.attr("content"),
+    }
+    popover_click(ask_inform,ask_inform_box,answer_content);
+    // hover提示框
+    var tip_hover = $('.deposit .hover_tip');
+    var popover = $('.popover');
+    popover_hover(tip_hover,popover)
+})

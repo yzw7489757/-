@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/email_post.css" />
+    </head>
+    <body>
+        <div class="email_box">
+            <div class="hello">卖家您好，</div>
+            <p class="no-word">
+                请在未来30天内至<a href="https://sellercentral.amazon.com/hz/approvalrequest/register">(https://sellercentral.amazon.com/hz/approvalrequest/register)</a>提交以下文件开始卖家资质审核。请您提交全部文件。
+            </p>
+            <p>
+                1. 提交政府签发的居民身份证正反两面的彩色扫描副本，以及手持身份证照片，并将三个图像合并到一个文件中。请勿提交屏幕截图。
+            </p>
+            <ul>
+                手持身份证照片要求：
+                <li>双手持身份证置于胸前，身份证正面朝前。身份证正面的信息以及照片必须清晰可读</li>
+                <li>本人全脸五官无遮蔽并且清晰可见，拍摄时请正面面对相机</li>
+                <li>请在光线良好环境下，使用高像素手机或数码相机进行拍摄，为确保图像质量，建议由家人或朋友协助拍摄</li>
+            </ul>
+            <p>2. 您提供的银行对账单 我们无法验证,请前往开户行加盖银行公章。</p>
+            <p class="space">您也可以提供您个人的公共事业单位出具的电费、水费、燃气费账单。</p>
+            <ol>
+                具体要求如下： 
+                <li>账单上必须包含您身份证上的完整姓名。</li>
+                <li>水费、电费、燃气账单必须是公共事业单位出具。 </li>
+                <li>账单必须是在过去90天内发出的。</li>
+                <li>您可以隐藏货币金额，但文档必须保持完整并且其他信息清晰可见。 </li>
+                <li> 如果您有多个副本，请将它们合并到一个文件中进行上传。</li>
+            </ol>
+            <br />
+            <br />
+            <br />
+            <div>欢迎向亚马逊提交反馈，从而帮助亚马逊改善您的开店体验。</div>
+            <br />
+            <br />
+            <p>您对我们提供的支持是否满意？</p>
+            <br />
+            <br />
+            <div class="satisfaction">
+                <a href="###">是</a>
+                <a href="###">否</a>
+            </div> 
+            <br />
+            <br />
+            <p>如果您需要咨询新的问题，请在“联系卖家支持”页面创建新问题：<a href="###">https://sellercentral.amazon.com/gp/contact-us/contact-amazon.html</a></p>
+            <br />
+            <p>如果您对当前的问题（5070197911）还有其他疑问，请点击: <a href="###">https://sellercentral.amazon.com/gp/case-dashboard/view-case.html/ref=sc_cd_lobby_vc?caseID=5070197911</a></p>
+            <br />
+            <p>感谢您的合作与支持！</p>
+            <br />
+            <p>Thank you for selling with Amazon,</p>
+            <br />
+            <p>mengmeng l.</p>
+            <p>Amazon.com Seller Support</p>
+            <p>=======================================</p>
+            <p>MORE WAYS TO GET HELP:</p>
+            <p>Visit our Seller Forums for help from other sellers: <a href="">http://sellercentral.amazon.com/forums</a> Browse all Seller Help topics: <a href="">http://sellercentral.amazon.com/gp/help</a></p>
+            <br />
+            <p>To contact us again about this issue, please use the Contact Us form in Seller Central using the following link:</p>
+            <br />
+            <a href="">http://sellercentral.amazon.com/gp/contact-us/contact-amazon-form.html?caseID=5070197911</a>
+            <br />
+            <br />
+            <p>Please note: this e-mail was sent from a notification-only address that cannot accept incoming e-mail. Please do not reply to this message.</p>
+        </div>
+    </body>
+</html>

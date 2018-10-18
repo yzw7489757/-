@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{_head_title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+        <link rel="stylesheet" type="text/css" href="css/billing_deposit.css" />
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="a-padding-base">
+                <div class="a-row">
+                    <div class="a-column">
+                        <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                    </div>
+                    <div class="a-span-last">
+                        <div class="header-settings-tab">
+                            <span class='a-size-small'>{{_Settings}}</span>
+                            <div class="header-list-item">
+                                <span class="a-list-item">
+                                    <a class="a-link-normal ng-binding" href="">{{_Logout}}</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scope">
+            <ul class="navContentArea">
+                <li class="navStep">
+                    <div class="navLineFirst"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Agreement}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Information}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Deposit}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive">
+                        <div>4</div>
+                    </div>
+                    <span class="stepTitleActive">{{_body_Tax}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineLast"></div>
+                    <div class="navCircleActive navCircleReady">
+                        <div>5</div>
+                    </div>
+                    <span class="stepTitleActive stepTitleReady">{{_body_Product}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="headerDivider">
+            <div class="divider-inner"></div>
+        </div>
+        <div class="spacing-top-base">
+            <div class="ws-row">
+                <div class="ws-span5">
+                    <div class="billing">
+                        <p class="size-large text-center">{{_body_Caption}}</p>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div class="ws-row">
+                                <p style="font-size: 1.17em;">
+                                    <span class='a-text-bold'>{{_body_TextBold}}</span>
+                                    {{_body_TextP}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a-section step_button_box">
+                <div class="tax_submit clear_both">
+                    <button class="button-submit tax_back spacing-left">{{_body_Back}}</button>
+                    <button class="button-submit tax_next spacing-right">{{_body_Next}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a-box">
+                <div class="box-inner">
+                    <div class="a-section">
+                        <div class="footerLinkSection">
+                            <a href="" class="foot-link">{{_body_Rate}}</a>
+                            <a href="" class="foot-link">{{_body_Support}}</a>
+                            <a href="" class="foot-link">{{_body_Policies}}</a>
+                            <div class="languageSwitcherDropdown a-section">
+                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headerDivider footDivder">
+                        <div class="divider-inner"></div>
+                    </div>
+                    <div class="spacing-top-mini">
+                        <span class='footerFriendlyName'>wbb</span>
+                        <span>{{_body_Inc}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript">
+        var margin_top = $(window).height() - $('.spacing-top-base').offset().top -  $('.spacing-top-base').height() - $(".footer").height();
+        $('.footer').css('margin-top', margin_top);   
+    </script>
+</html>

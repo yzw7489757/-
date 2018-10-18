@@ -1,0 +1,11 @@
+.width20{
+    width: 20%;
+}
+.width80{
+    width: 80%;
+}
+table,
+tr,
+th {
+   text-align: center;
+}

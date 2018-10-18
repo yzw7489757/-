@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{_head_title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_agreement.css" />
+        <link rel="stylesheet" type="text/css" href="css/seller_information.css" />
+        <link rel="stylesheet" type="text/css" href="css/billing_deposit.css" />
+        <link rel="stylesheet" type="text/css" href="css/product _information.css" />
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="a-padding-base">
+                <div class="a-row">
+                    <div class="a-column">
+                        <img class="header-logo mob-hide" src="img/sc-unfied-new.png">
+                    </div>
+                    <div class="a-span-last">
+                        <div class="header-settings-tab">
+                            <span class='a-size-small'>{{_Settings}}</span>
+                            <div class="header-list-item">
+                                <span class="a-list-item">
+                                    <a class="a-link-normal ng-binding" href="">{{_Logout}}</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scope">
+            <ul class="navContentArea">
+                <li class="navStep">
+                    <div class="navLineFirst"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Agreement}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Information}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Deposit}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive navCircleCompleted">
+                        <div></div>
+                    </div>
+                    <span class="stepTitleCompleted">{{_body_Tax}}</span>
+                </li>
+                <li class="navStep">
+                    <div class="navLineMiddle"></div>
+                    <div class="navCircleActive">
+                        <div>5</div>
+                    </div>
+                    <span class="stepTitleActive">{{_body_Product}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="headerDivider">
+            <div class="divider-inner"></div>
+        </div>
+        <div class="spacing-top-base">
+            <div class="ws-row">
+                <div class="ws-span8">
+                    <div class="billing">
+                        <p class="size-large">
+                            {{_body_Caption}}
+                            <a href="###" class="Skip">{{_body_Skip}}</a>
+                        </p>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div class="heading-quesition a-text-bold">{{_body_Question1_question}}</div>
+                            <a href="###">{{_body_Question1_what}}</a>
+                            <div class="select_answer">
+                                <input type="radio" name="Codes" class="Product_Codes Product_Codes_Y" id="Codes_y"/>
+                                <label for="Codes_y">{{_body_Question1_radioY}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="Codes" class="Product_Codes Product_Codes_N" id="Codes_n"/>
+                                <label for="Codes_n">{{_body_Question1_radioN}}</label>
+                            </div>
+                        </div>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div class="heading-quesition a-text-bold">{{_body_Question2_question}}</div>
+                            <a href="###">{{_body_Question2_what}}</a>
+                            <div class="select_answer">
+                                <input type="radio" name="manufacture" class="Product_Codes manufacture_Y" id="manufacture_y"/>
+                                <label for="manufacture_y">{{_body_Question2_radioY}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="manufacture" class="Product_Codes manufacture_N" id="manufacture_n"/>
+                                <label for="manufacture_n">{{_body_Question2_radioN}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="manufacture" class="Product_Codes manufacture_S" id="manufacture_s"/>
+                                <label for="manufacture_s">{{_body_Question2_radioS}}</label>
+                            </div>
+                        </div>
+                        <div class="a-section a-spacing-base a-spacing-top-base">
+                            <div class="heading-quesition a-text-bold">{{_body_Question3_question}}</div>
+                            <div class="select_answer">
+                                <input type="radio" name="many" class="Product_Codes many_1" id="many_1"/>
+                                <label for="many_1">{{_body_Question3_radioY}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="many" class="Product_Codes many_2" id="many_2"/>
+                                <label for="many_2">{{_body_Question3_radioN}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="many" class="Product_Codes many_3" id="many_3"/>
+                                <label for="many_3">{{_body_Question3_radioS}}</label>
+                            </div>
+                            <div class="select_answer">
+                                <input type="radio" name="many" class="Product_Codes many_4" id="many_4"/>
+                                <label for="many_4">{{_body_Question3_more}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a-section step_button_box">
+                <div class="product_submit clear_both">
+                    <button class="button-submit product_back spacing-left">{{_body_Back}}</button>
+                    <button class="button-submit product_next spacing-right">{{_body_Next}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a-box">
+                <div class="box-inner">
+                    <div class="a-section">
+                        <div class="footerLinkSection">
+                            <a href="" class="foot-link">{{_body_Rate}}</a>
+                            <a href="" class="foot-link">{{_body_Support}}</a>
+                            <a href="" class="foot-link">{{_body_Policies}}</a>
+                            <div class="languageSwitcherDropdown a-section">
+                                <select class='languageSwitcherDropdownSelect' name='languageSwitcher' id="languageSwitcher">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headerDivider footDivder">
+                        <div class="divider-inner"></div>
+                    </div>
+                    <div class="spacing-top-mini">
+                        <span class='footerFriendlyName'>wbb</span>
+                        <span>{{_body_Inc}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript">
+        var margin_top = $(window).height() - $('.spacing-top-base').offset().top -  $('.spacing-top-base').height() - $(".footer").height();
+        if(margin_top<=0){
+            margin_top = '7em'
+        }
+        $('.footer').css('margin-top', margin_top);   
+    </script>
+</html>

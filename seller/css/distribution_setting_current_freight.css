@@ -1,0 +1,8 @@
+table tr:nth-of-type(2) th{
+    width: 20%;
+}
+table,
+tr,
+th {
+   text-align: center;
+}
