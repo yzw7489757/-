@@ -83,7 +83,7 @@ $(function () {
                         <td>${res.date}</td>
                         <td>
                             <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
-                                <span class="button_label loadBtn" path="${decodeURIComponent(res.url)}">下载11</span>
+                                <span class="button_label loadBtn" path="${decodeURIComponent(res.url)}">下载</span>
                             </span>
                         </td>
                     </tr>
