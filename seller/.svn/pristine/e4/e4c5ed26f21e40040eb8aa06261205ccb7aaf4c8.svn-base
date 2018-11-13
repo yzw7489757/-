@@ -1,0 +1,118 @@
+﻿
+<div id="sc-logo-top">
+    <a href="homepage.htm" title="主页">
+        <img src="./img/accoount_information_logo.png" id="sc_logo_top_image" border="0"
+            class="sc-unified" />
+    </a>
+</div>
+<i class="fl iconfont vertical-align qi">&#xe662;</i>
+<div id="sc-snes" class="sc-drop-nav sc-hover-nav">
+</div>
+<div id="sc-navtabs">
+    <ul id="sc-top-nav-root">
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="#">目录 <span class="sc-nav-arrow"></span></a>
+            <ul id="sc-sub-nav" class="sc-sub-nav">
+                <li><a href="add_product.html">添加商品</a> </li>
+                <li><a href="JavaScript:void(0)">补全您的草稿</a> </li>
+                <li><a href="upc.htm">UPC码</a> </li>
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="#">库存 <span class="sc-nav-arrow"></span></a>
+            <ul id="sc-sub-nav" class="sc-sub-nav"> 
+                <li><a href="manage_inventory.html">管理库存</a> </li>
+                <li><a href="JavaScript:void(0)">管理 FBA 库存</a> </li>
+                <li><a href="JavaScript:void(0)">库存规划</a> </li>
+                <li><a href="add_product.html">添加新商品</a> </li>
+                <li><a href="JavaScript:void(0)">管理亚马逊货件</a> </li> 
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="#">订单 <span class="sc-nav-arrow"></span></a>
+            <ul class="sc-sub-nav">
+                <li><a href="manage_orders.html">管理订单</a> </li>
+                <li><a href="JavaScript:void(0)">订单报告</a> </li>
+                <li><a href="manage_returns.html">管理退货</a> </li>
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="JavaScript:void(0)">广告 <span class="sc-nav-arrow"></span></a>
+            <ul class="sc-sub-nav">
+                <li><a href="JavaScript:void(0)">早期评论者计划</a> </li>
+                <li><a href="campaign_manager.html">广告</a> </li>
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="JavaScript:void(0)">店铺 <span class="sc-nav-arrow"></span></a>
+            <ul class="sc-sub-nav">
+                <li><a href="JavaScript:void(0)">管理店铺</a> </li>
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="JavaScript:void(0)">数据报告 <span class="sc-nav-arrow"></span></a>
+            <ul class="sc-sub-nav">
+                <li><a href="JavaScript:void(0)">付款</a> </li>
+                <li><a href="JavaScript:void(0)">库存和销售报告</a> </li>
+                <li><a href="JavaScript:void(0)">退货报告</a> </li>
+                <li><a href="JavaScript:void(0)">税务文件库</a> </li>
+            </ul>
+        </li>
+        <li class="sc-level1 sc-drop-nav sc-hover-nav"><a class="sc-menu-trigger sc-tab-a"
+            href="JavaScript:void(0)">绩效 <span class="sc-nav-arrow"></span></a>
+            <ul class="sc-sub-nav">
+                <li><a href="account_status.html">账户状况</a> </li>
+                <li><a href="JavaScript:void(0)">反馈</a> </li>
+                <li><a href="JavaScript:void(0)">亚马逊商城交易保障索赔</a> </li>
+                <li><a href="JavaScript:void(0)">信用卡拒付索赔</a> </li>
+                <li><a href="JavaScript:void(0)">业绩通知</a> </li>
+                <li><a href="JavaScript:void(0)">卖家大学</a> </li>
+                <li><a href="JavaScript:void(0)">获取客户见解</a> </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="nav_right">
+    <div class="nav_right_opt sc-quicklink">
+      <a class="sc-ql-a" href='javascript:inputctr.public.loadTaskConfig();'>任务</a> <em>|</em> <a href="buyer_message.html" class="sc-ql-a">买家消息</a> <em>|</em> <a class="sc-ql-a" style=" display:none;">帮助</a> <em style=" display:none;">|</em> <a id="sc-ql-sz"
+            class="sc-ql-a">设置</a> <span class="sc-nav-arrow-right"></span>
+        <ul id="sc-sub-nav-right" class="sc-sub-nav-right">
+            <li class="sc-sub-nav-right-hover"><a href="JavaScript:inputctr.public.SellerLoginOut()">
+                退出</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="account_information.html">账户信息</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="/seller/notifying_first_option.html">通知首选项</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="/seller/landing_settings.html">登录设置</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="/seller/return_information.html">退货设置</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="/seller/distribution_setting.html">配送设置</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="/seller/information_policy.html">您的信息和政策</a> </li>
+            <li class="sc-sub-nav-right-hover"><a href="JavaScript:void(0)">亚马逊物流</a> </li>
+        </ul>
+    </div>
+    <div class="nav_right_opt " id="sc-global-search-form" style=" display:none;">
+        <div class="sc-global-search-input">
+            <input type="text" placeholder="搜索" />
+            <div>
+                <img class="sc-search-button" src="./img/search-icon._CB372224688_.png" />
+            </div>
+        </div>
+        <p class="sc-global-search-p">
+        </p>
+    </div>
+    <div class="nav_right_opt pd010">
+      <!--  <div class="nav_right_opt_select">
+            <select id="selectzg" disabled>
+                <option value="1">www.amazon.com</option>
+            </select>
+            --><select id="languageSwitcher" class="selectlang">
+            </select>
+       <!-- </div>-->
+        <p class="nav_right_opt_select_p">
+        </p>
+    </div>
+    <div class="nav_right_opt nav_right_opt_img">
+        <div class="nav_right_opt line-height_40">
+            <span class="inline_block line-height_34 maright shop_name" id="shop_name">zhongguo feng</span>
+            <!--<img src="./img/USAmazon._CB171112299_.png" alt="" />-->
+        </div>
+    </div>
+</div>

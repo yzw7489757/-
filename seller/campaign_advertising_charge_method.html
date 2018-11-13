@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>广告支付方式</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/campaign_advertising_charge_method.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+    <div class="amazon-advertising-charge-method">
+    	 <div class="amazon-advertising-charge-method-container">
+    	 	<div class="amazon-advertising-charge-method-header">
+    			<h1>Advertising Charge Method</h1>
+    		</div>
+    	  	<div class="advertising-describe">
+    	  		Please select or add a new card.The selected payment method will be charged for your advertising costs,which are managed in the Advertising tab.Changed to your advertising account charges.
+    	  	</div>
+    	  	<div id="payment-methods-wrap"></div>
+    	  	<script  id="payment-methods-wrap-tpl" type="text/html">
+	    		<div class="payment-methods-container">
+	    			<div class="amazon-advertising-charge-method-second-header">
+		    			<p>Select an existing card</p>
+		    		</div>
+		    		<table class="payment-methods-table" id="charge-methods-list-table">
+		    			<thead>
+		    				<tr>
+		    					<th>Your Payment Methods</th>
+		    					<th>Type</th>
+		    					<th>Cardholder's Name</th>
+		    				</tr>
+		    			</thead>
+		    			<tbody>
+		    				<%for(var i=0;i<data.length;i++){%>
+		    					<tr>
+			    					<td>
+			    						<div>
+			    							<%if(i==0){%>
+			    								<input type="radio" name="methSelect" id="<%:=decodeURIComponent(data[i].method_id)%>" checked="checked" value=""  onclick="campaign_advertising_charge_method.AddNewCreditCard(this)"/>
+			    							<%}else{%>
+			    								<input type="radio" name="methSelect" id="<%:=decodeURIComponent(data[i].method_id)%>" value=""  onclick="campaign_advertising_charge_method.AddNewCreditCard(this)"/>
+			    							<%}%>
+			    							
+			    							<label for="<%:=decodeURIComponent(data[i].method_id)%>"><b>Visa</b> ending with <%:=decodeURIComponent(data[i].card_number)%> ending with <%:=decodeURIComponent(data[i].card_number)%></label>
+			    						</div>
+			    					</td>
+			    					<td>
+			    						<spam>Credit Card</spam>
+			    					</td>
+			    					<td>
+			    						<span><%:=decodeURIComponent(data[i].card_holder_name)%></span>
+			    					</td>
+			    				</tr>
+			    				
+		    				<%}%>
+		    				
+		    			</tbody>
+		    		</table>
+		    		<div class="amazon-advertising-charge-method-second-header">
+		    			<p>Add a new payment method</p>
+		    		</div>
+		    		<table class="payment-methods-table">
+		    			<tbody>
+		    				<tr>
+		    					<td>
+		    						<div>
+		    							<input type="radio" name="methSelect" id="addCreditCard" value="" onclick="campaign_advertising_charge_method.AddNewCreditCard(this)" />
+		    							<label for="addCreditCard">Add a new Credit Card</label>
+		    						</div> 
+		    					</td>
+		    				</tr>
+		    			</tbody>
+		    		</table>
+		    		<div class="payment-method-commit">
+		    			<button class="highlighted-button pull-right" onclick="campaign_advertising_charge_method.SetChargeMethod()">
+	                        <span class="highlighted-button-label button">Continue</span>
+	                    </button>
+		    		</div>
+			      	<div id="add-new-card-information" class="hide">
+				      	<div class="card-information">
+				      		<label>您的信用卡信息</label>
+				      		<div class="clearfix card-information-list">
+				      			<div class="pull-left">
+				      				<label>卡号</label>
+				      				<input type="text" name="" class="pull-left" id="card_number"/>
+				      			</div>
+				      			<div class="pull-right">
+				      				<label>有效期</label>
+				      				 <div class="clearfix">
+				      				 	<span class="pull-left a-dropdown-container dropdown"   data-condition="1" id="valid_through_month">
+					    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    						<span class="a-button-inner">
+					    							<span class="a-button-text a-declarative">
+					    								<span class="a-dropdown-prompt">1</span>
+					    							</span>
+					    							<i class="a-icon a-icon-dropdown"></i>
+					    						</span>
+					    					</span>
+					    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+												<li role="option" aria-checked="true">
+													<a href="javascript:void(0)" replace-text="1"  data-value="1" class="a-dropdown-link active">1</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2" data-value="2" class="a-dropdown-link">2</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="3" data-value="3" class="a-dropdown-link">3</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="4" data-value="4" class="a-dropdown-link">4</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="5" data-value="5" class="a-dropdown-link">5</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="6" data-value="6" class="a-dropdown-link">6</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="7" data-value="7" class="a-dropdown-link">7</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="8" data-value="8" class="a-dropdown-link">8</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="9" data-value="9" class="a-dropdown-link">9</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="10" data-value="10" class="a-dropdown-link">10</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="11" data-value="11" class="a-dropdown-link">11</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="12" data-value="12" class="a-dropdown-link">12</a>
+												</li>
+										  	</ul>
+					    				</span>
+					    				<span class="pull-left date-fenge-line"></span>
+					    				<span class="pull-left a-dropdown-container dropdown"   data-condition="2018"  id="valid_through_year">
+					    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    						<span class="a-button-inner">
+					    							<span class="a-button-text a-declarative">
+					    								<span class="a-dropdown-prompt">2018</span>
+					    							</span>
+					    							<i class="a-icon a-icon-dropdown"></i>
+					    						</span>
+					    					</span>
+					    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+												<li role="option" aria-checked="true">
+													<a href="javascript:void(0)" replace-text="2018"  data-value="2018" class="a-dropdown-link active">2018</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2019" data-value="2019" class="a-dropdown-link">2019</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2020" data-value="2020" class="a-dropdown-link">2020</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2021" data-value="2021" class="a-dropdown-link">2021</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2022" data-value="2022" class="a-dropdown-link">2022</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2023" data-value="2023" class="a-dropdown-link">2023</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2024" data-value="2024" class="a-dropdown-link">2024</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2025" data-value="2025" class="a-dropdown-link">2025</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2026" data-value="2026" class="a-dropdown-link">2026</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2027" data-value="2027" class="a-dropdown-link">2027</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2028" data-value="2028" class="a-dropdown-link">2028</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="2029" data-value="2029" class="a-dropdown-link">2029</a>
+												</li>
+										  	</ul>
+					    				</span>
+				      				 </div>
+				      			</div>
+				      		</div>
+				      		<div class="card-information-list">
+				      			<label>持卡人姓名</label>
+				      			<input type="text" id="card_holder_name" value="" />
+				      		</div>
+				      	</div>
+				      	<div class="billing-address" id="billing-address-container">
+				      		<ul></ul>
+				      	</div>
+				      	<button class="highlighted-button" onclick="campaign_advertising_charge_method.AddNewCreditCardCommitdata()">
+	                        <span class="highlighted-button-label button">确定</span>
+	                    </button>
+			      	</div>
+	    		</div>
+    	  		 
+    	  	</script>
+
+	    	  		
+    	  	 
+    	</div>
+    </div>
+    <div class="a-container-footer"></div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/campaign_advertising_charge_method.js" type="text/javascript" charset="utf-8"></script>

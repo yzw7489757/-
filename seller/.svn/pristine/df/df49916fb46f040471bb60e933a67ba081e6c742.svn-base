@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="madagascar-main-body">
+        <div class="a-spacing-small">
+            <h3>创建移除订单</h3>
+            <div>查看订单详情，然后点击”下单“完成请求，若要修改订单，请点击”返回“。</div>
+        </div>
+        <ul class="navTitle">
+            <li>
+                提供详情
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li class="selectLi">
+                检查并下单
+                <div class="border-triangle select-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li>
+                订单一览
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+        </ul>
+
+        <div class="a-box">
+            <div class="table" style="background: #f0f6f9;">
+                <div class="float_left width65 a-column">
+                    <div class="a-box a-alert a-alert-error a-section">
+                        <div class="a-box-inner a-alert-container">
+                            <i class="a-icon a-icon-alert"></i>
+                            <div class="a-alert-content">
+                                <div class="a-row ">
+                                    <h4>错误</h4>
+                                    <div class="a-spacing-medium">我们无法检索您的请求的估算价格。您可以重新尝试获取估算价格或在没有估算价格的情况下下单。</div>
+                                    <div>
+                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                            <span class="button_label">上传库存模板文件</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left">
+                            <h4 class="titleColor">指定订单SKU商品</h4>
+                        </div>
+                        <div class="float_right">
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">更改单位或商品</span>
+                            </span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <table border="1" style="background: #e0f3fd;" class="tableInput">
+                        <tr style="vertical-align: bottom;">
+                            <td>卖家SKU</td>   
+                            <td class="width2">可配送数量<br>有货</td>
+                            <td class="width2">不可配送数量<br>有货</td>  
+                        </tr>
+                        <tr style="background: #fff;">
+                            <td>
+                                <p class="goodsName"></p>
+                                <p class="sellerSku"></p>
+                                <p><b>ASIN:</b> <span class="asin"></span>&nbsp;&nbsp;&nbsp; <b>FNSKU:</b> <span class="fnsku"></span> </p>
+                            </td>
+                            <td class="usableNum">--</td>
+                            <td class="unavailableNum">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float_left width31">
+                    <div class="a-box a-alert-show">
+                        <div class="a-box-inner">
+                            <div>
+                                <div class="float_left">
+                                    <h4 class="titleColor">订单一览</h4>
+                                </div>
+                                <div class="float_right">
+                                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="button_label">更改</span>
+                                    </span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <hr>
+                            <div>
+                                <b>订单编号：</b><span class="orderId">123</span>
+                            </div>
+                            <div>
+                                <b>移除方法：</b><span class="removeMode">123</span>
+                            </div>
+                            <div class="a-spacing-top-small a-spacing-small">
+                                <h4>订单一览</h4>
+                            </div>
+                            <hr>
+                            <div>
+                                我们将会向您收取退还和弃置亚马逊库存费用中显示的每单位费用。退还库存需要10至14个工作日来完成取件，包装和运输，我们将于移除库存后的45天内收取费用。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div>
+            <div class="lineae"></div>
+            <div class="btn" style="background: #e0f3fd;">
+                <div class="float_left">
+                    <span class="awesomeButton returnButtonLarge returnButton inner_button">
+                        <span class="button_label returnBtn">返回</span>
+                    </span>
+                    <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                        <span class="button_label">取消</span>
+                    </span>
+                </div>
+                <div class="float_right">
+                    <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
+                        <span class="button_label placeOrderBtn">下单</span>
+                    </span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_remove_check.js" type="text/javascript"></script>
+
+</html>

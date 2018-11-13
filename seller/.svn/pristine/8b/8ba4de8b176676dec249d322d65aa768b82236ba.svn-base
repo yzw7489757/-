@@ -1,0 +1,322 @@
+let campaign_addKeywords={};
+$(function(){
+	campaign_addKeywords.GetProductList('1');
+})
+campaign_addKeywords.GetProductList=function(num){
+	let search=$('#search-order-input').val();
+	let search_by=$('#search-product-condition').attr('data-condition');
+	let pageSize=20;
+	let request_data={
+			data:{
+				pageSize:pageSize,
+				currentPage:num,
+				seller_id:amazon_userid,
+				search_by:search_by,
+				key:search
+			}
+	}
+	request_data.data=JSON.stringify(request_data.data);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetSellerGoods',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		if(data.data.keys.length>0){
+        			var html=template(document.getElementById('suggestedkeywords-conatiner-tpl').innerHTML,data);
+					document.getElementById('suggestedkeywords-conatiner').innerHTML = html;
+        		}else{
+        			var html=template(document.getElementById('suggestedkeywords-conatiner-tpl').innerHTML,data);
+					document.getElementById('suggestedkeywords-conatiner').innerHTML = html;
+        		}
+        		
+				if(inputctr.public.getQueryString('campaingType')=='1'){
+					//自动
+					$('#Automatic-targeting').removeClass('hide');
+				}else if(inputctr.public.getQueryString('campaingType')=='2'){
+					//手动
+					$('#Manual-targeting').removeClass('hide');
+				}else{
+					
+				}
+        		
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        		
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+campaign_addKeywords.Pagination= function (alldata, num,callback_function) {
+    //分页
+    $(".order-history-pagination").paging({
+        pageNo: num,
+        totalPage:parseInt(alldata.totalPages),
+        totalSize:parseInt(alldata.totalRecords),
+        callback: function (num) {
+            callback_function(num)
+        }
+    })
+}
+campaign_addKeywords.SelectCurrentKeyword=function(target){
+	let product_id=$(target).parents('.product_details').attr('data-id');
+	//用来判断该产品是否已经选中
+	let flag=1;
+	$('#select-product-group ul li').each(function(){
+		if($(this).attr('data-id')==product_id){
+			flag=0;
+		}
+	})
+	if(flag==1){
+		let product_info=$(target).parents('.product_details').find('.product_details_right').html();
+		let product_cover=$(target).parents('.product_details').find('.product_img').html();
+		let content='<li data-id="'+product_id+'">'
+			 		+'<div class="product_details clearfix">'
+					+'<div class="product_details_right pull-left">'+product_info+'</div>'
+					+'<div class="product_img pull-left">'+product_cover+'</div>' 
+					+'<div class="close" onclick="campaign_addKeywords.DeleteSelectProduct(this)"></div>'
+					+'</div></li>';
+		$('#select-product-group ul').append(content);
+		campaign_addKeywords.SelectNumber();
+	}
+	
+}
+
+campaign_addKeywords.DeleteSelectProduct=function(target){
+	$(target).parents('li').remove();
+	campaign_addKeywords.SelectNumber();
+}
+//当前选中产品的数量
+campaign_addKeywords.SelectNumber=function(){
+	let num=$('#select-product-group ul li').length;
+	if(num>0){
+		$('.has-chose-product .selected-product-num').removeClass('hide');
+		$('.has-chose-product .selected-product-num .select-num').html(num);
+	}else{
+		$('.has-chose-product .selected-product-num').addClass('hide');
+	}
+}
+
+//选择全部的合格的产品
+campaign_addKeywords.SelectAllEligibleProduct=function(){
+	let all_content='';
+	let  has_choose=$('#select-product-group ul li');
+	$('#all-eligible-product .product_details').each(function(){
+		if($(this).attr('qualified-mark')=='ellglble'){
+			let current_product=$(this);
+			let flag=1;
+			has_choose.each(function(){
+				if($(this).attr('data-id')==current_product.attr("data-id")){
+					flag=0
+				}else{}
+			})
+			if(flag==1){
+				let product_id=$(this).attr('data-id');
+				let product_info=$(this).find('.product_details_right').html();
+				let product_cover=$(this).find('.product_img').html();
+				let content='<li data-id="'+product_id+'">'
+					 		+'<div class="product_details clearfix">'
+							+'<div class="product_details_right pull-left">'+product_info+'</div>'
+							+'<div class="product_img pull-left">'+product_cover+'</div>' 
+							+'<div class="close" onclick="campaign_addKeywords.DeleteSelectProduct(this)"></div>'
+							+'</div></li>';
+				all_content+=content;
+			}
+			
+		}
+	})
+	$('#select-product-group ul').append(all_content);
+}
+
+//选择关键词
+campaign_addKeywords.SelectCurrentKeyWords=function(target){
+	let keywords_id=$(target).parents('tr').attr('data-id');
+	//用来判断该产品是否已经选中
+	let flag=1;
+	$('#selected-keywords-table tbody tr').each(function(){
+		if($(this).attr('data-id')==keywords_id){
+			flag=0;
+		}
+	})
+	let defaultBid=$('input[name="reference-price"]').val();
+	if(flag==1){
+		let keyword=$(target).parents('tr').find('.keyword').html();
+		let match=$(target).parents('tr').find('.match').html();
+		let content='<tr data-id="'+keywords_id+'"><td  class="keywords">'+keyword+'</td>'
+					+'<td class="match">'+match+'</td>'
+					+'<td><div><input type="text" name="" id="" value="'+defaultBid+'" class="pull-left" />'
+					+'<div class="close" onclick="campaign_addKeywords.DeleteKeywords(this)"></div></div></td></tr>';
+		$('#selected-keywords-table tbody').append(content);
+		campaign_addKeywords.SelectKeyWordsNumber();
+	}
+	
+}
+//当前选中关键词的数量
+campaign_addKeywords.SelectKeyWordsNumber=function(){
+	let num=$('#selected-keywords-table tbody tr').length;
+	if(num>0){
+		$('.select-keywords-number span').html(num);
+		$('.select-keywords-number').removeClass('hide');
+		$('#selected-keywords-table').removeClass('hide');
+	}else{
+		$('.select-keywords-number').addClass('hide');
+		$('#selected-keywords-table').addClass('hide');
+	}
+}
+//删除选中的关键词
+campaign_addKeywords.DeleteKeywords=function(target){
+	$(target).parents('tr').remove();
+	campaign_addKeywords.SelectKeyWordsNumber();
+}
+//选中全部关键词
+campaign_addKeywords.SelectAllKeywords=function(){
+	let has_choose=$('#selected-keywords-table tbody tr');
+	let allcontent='';
+	let defaultBid=$('input[name="reference-price"]').val();
+	$('#all-suggest-keyWords .data-row').each(function(){
+		let keywords_id=$(this).attr('data-id');
+		//用来判断该关键词是否已经选中
+		let flag=1;
+		has_choose.each(function(){
+			if($(this).attr('data-id')==keywords_id){
+				flag=0;
+			}
+		})
+		if(flag==1){
+			let keyword=$(this).find('.keyword').html();
+			let match=$(this).find('.match').html();
+			let content='<tr data-id="'+keywords_id+'"><td  class="keywords">'+keyword+'</td>'
+						+'<td class="match">'+match+'</td>'
+						+'<td><div><input type="text" name="" id=""  value="'+defaultBid+'"  class="pull-left" />'
+						+'<div class="close" onclick="campaign_addKeywords.DeleteKeywords(this)"></div></div></td></tr>';
+			$('#selected-keywords-table tbody').append(content);
+			campaign_addKeywords.SelectKeyWordsNumber();
+		}
+	})
+	
+	
+}
+//添加自己的关键词
+campaign_addKeywords.AddOwnKeyWords=function(){
+	let keywprds=$('#ownkeywords-textarea').val();
+	let keywprdsList=keywprds.split('\n');
+	let content='';
+	let match='Droad';
+	let defaultBid=$('input[name="reference-price"]').val();
+	for(let i=0;i<keywprdsList.length;i++){
+		content+='<tr data-id="'+keywprdsList[i]+'"><td class="keywords">'+keywprdsList[i]+'</td>'
+					+'<td class="match">'+match+'</td>'
+					+'<td><div><input type="text" name="" id="" value="'+defaultBid+'" class="pull-left" />'
+					+'<div class="close" onclick="campaign_addKeywords.DeleteKeywords(this)"></div></div></td></tr>';
+		
+	}
+	$('#selected-keywords-table tbody').append(content);
+	campaign_addKeywords.SelectKeyWordsNumber();
+}
+//数据提交
+campaign_addKeywords.CreateADGroupAuto=function(){
+	let name=$('input[name="AdGroupName"]').val();
+	if(!name){
+		alert('请填写组名！')
+		return false;
+	}
+	let campaign_id=inputctr.public.getQueryString('campaingId');
+	let skuid='';
+	$('#select-product-group ul li').each(function(){
+		skuid+=$(this).attr('data-id')+',';
+	})
+	if(!skuid){
+		alert('请选择产品！')
+		return false;
+	}
+	let type=inputctr.public.getQueryString('campaingType');
+	let bid='';
+	
+	if(type=='1'){
+		//自动
+		bid=$('#Automatic-targeting input[name="reference-price"]').val();
+	}else{
+		//手动
+		bid=$('#Manual-targeting input[name="reference-price"]').val();
+	}
+	bid=campaign_addKeywords.FormatPrice(bid);
+	if(!bid){
+		alert('价格格式错误！');
+		return false;
+	}
+	let keywords=[];
+	let match='Droad';
+	$('#selected-keywords-table tbody tr').each(function(){
+		let keyword=$(this).find('.keywords').html();
+		let keywordbid=$(this).find('td input').val();
+		let kbid=campaign_addKeywords.FormatPrice(keywordbid);
+		if(!kbid){
+			alert('价格格式错误！');
+			return false;
+		}else{
+			keywordbid=campaign_addKeywords.FormatPrice(keywordbid);
+			let current={
+				keyword:keyword,
+				match:match,
+				bid:keywordbid
+			}
+			keywords.push(current);
+		}
+		
+	})
+	let request_data={
+			data:{
+				seller_id:amazon_userid,
+				 name:name,
+				 campaign_id:campaign_id,
+				 skuid:skuid,
+				 bid:bid,
+				 type:type,
+				 keywords:keywords
+			}
+	}
+	request_data.data=JSON.stringify(request_data.data);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/CreateADGroupAuto',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		let flag=inputctr.public.getQueryString('flag');
+        		if(flag=='group'){
+        			location.href="campaign_detail.html?campaignid="+campaign_id;	
+        		}else{
+        			location.href="campaign_manager.html"	
+        		}
+        	 	
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        },
+        error:function(XHR){
+          
+        }
+	})
+}
+//处理输入的价格
+campaign_addKeywords.FormatPrice=function(price){
+	let flag=1;
+	let bid='';
+	if(!inputctr.public.isPrice(price)){
+		flag=0;
+		return false;
+	}else{
+		if(price.indexOf('$')==0){
+			bid=price.substr(1,price.length);
+		}else{
+			bid=price;
+		}
+		return bid;
+	}
+	
+}

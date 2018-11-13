@@ -1,0 +1,75 @@
+var E = window.wangEditor
+var editor = new E('#editor')
+editor.customConfig.menus = ['head', 'bold','fontSize', 'fontName', 'italic', 'underline', 'strikeThrough', 'justify','undo','redo' ]
+editor.create();
+laydate.render({
+  elem:'#Start-Date',
+  lang: 'en',
+  format: 'dd/MM/yyyy',
+  min:0,
+  showBottom: false
+})
+laydate.render({
+  elem:'#End-Date',
+  lang: 'en',
+  min:0,
+  format: 'dd/MM/yyyy',
+  showBottom: false
+})
+$(function(){
+    $(window).scrollTop(0);
+    $('.Rreview-button').click(function() {
+        console.log(editor.txt.html())
+    })
+    var Claim_Code = $('.Claim-Code');
+    Claim_Code.click(function(event) {
+        $('.claim_show').fadeToggle(100);
+        $(this).children('i').toggleClass('a-step-drown');
+    })
+    var Customsize_messageing = $('.Customsize-messageing');
+    Customsize_messageing.click(function(event) {
+        $('.customsize_show').fadeToggle(100);
+        $(this).children('i').toggleClass('a-step-drown');
+    })
+    var buyer_purchases = $('#buyer-purchases');
+    var buyerArr = ['At least this quality of items','At least amount (in $)','For every quantity of items purchased'];
+    buyer_purchases.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'buyer_purchases',buyerArr);
+    })
+
+    var Percent_off = $('#Percent_off');
+    var percentArr = ['Percent off'];
+    Percent_off.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'Percent_off',percentArr);
+    })
+    var applies_to = $('#applies-to');
+    var appliesArr = ['Purchased Items','Qualifying Item'];
+    applies_to.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'applies_to',appliesArr);
+        $(this).children('span').on('DOMNodeInserted',function(){
+            $(this).off('DOMNodeInserted');
+            if($(this).text() == 'Qualifying Item'){
+                $('#Qualifying-tr').fadeIn(150);
+            }else{
+                $('#Qualifying-tr').fadeOut(150);
+            }
+        })
+    })
+
+    var day_time_am = $('#day-time-am');
+    AmArr = ['1:00 AM','2:00 AM','3:00 AM','4:00 AM','5:00 AM','6:00 AM','7:00 AM','8:00 AM','9:00 AM','10:00 AM','10:00 AM','12:00 AM']
+    day_time_am.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'day_time_am',AmArr);
+    })
+
+    var day_time_pm = $('#day-time-pm');
+    PmArr = ['1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM','6:00 PM','7:00 PM','8:00 PM','9:00 PM','10:00 PM','10:00 PM','12:00 PM']
+    day_time_pm.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'day_time_pm',PmArr);
+    })
+})

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>View Promotion</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/money_off.css" />
+        <link rel="stylesheet" type="text/css" href="css/view_promotion.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="off-content">
+            <h1 class="off-title">View Promotion</h1>
+            <div class="go_to">
+                <button class="secondaryAUIButton a-button-inner a-button-31 Manage" onclick="javascript:location.href='promotion.html?step=2'">Go to Manage Promotions</button>
+                <button class="secondaryAUIButton a-button-inner a-button-31 Manage" onclick="javascript:location.href='manage_claim_codes.html'">Manage claim codes</button>
+                <button class="secondaryAUIButton a-button-inner a-button-31 Manage" onclick="javascript:location.href='edit_promotion.html'">Edit promotion</button>
+                <button class="secondaryAUIButton a-button-inner a-button-31 Manage">End promotion</button>
+            </div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Step 1:Conditions
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">Buyer purchases</td>
+                            <td class="right-td">
+                                <span>At least this quality of items</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Purchased Items</td>
+                            <td class="right-td">
+                                <span>Select one</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Buyer gets</td>
+                            <td class="right-td">
+                                <span>Percent off</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Applies to</td>
+                            <td class="right-td">
+                                <span>Purchased Items</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Qualifying Item</td>
+                            <td class="right-td">
+                                <span>SVVGDC45</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Buy benefit applies to a quantity of</td>
+                            <td class="right-td">
+                                <span>10</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Step 2:Scheduling
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">Start Date</td>
+                            <td class="right-td">
+                                <span>1:00 AM PDT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">End Date</td>
+                            <td class="right-td">
+                                <span>1:00 PM PDT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Internal Description</td>
+                            <td class="right-td">
+                                <span>Mother's Day Free Shipping</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Tracking ID</td>
+                            <td class="right-td">
+                                <span>Buy One Get One 1:00 AM PDT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Promotion ID</td>
+                            <td class="right-td">
+                                <span>TSGFSHFSF485</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+</html>

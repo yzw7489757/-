@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory.css">
+    <link rel="stylesheet" href="./css/manage_inventory_achievements.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container">
+        <ul>
+            <li><a href="javascript:void(0)">控制面板</a></li>
+            <li><a href="javascript:void(0)" class="active"><b>绩效</b><span>新功能</span></a></li>
+            <li><a href="javascript:void(0)">管理冗余库存</a></li>
+            <li><a href="javascript:void(0)">库龄</a></li>
+            <li><a href="javascript:void(0)">管理亚马逊物流退货<span>新功能</span></a></li>
+        </ul>
+        <ol>
+            <li>控制面板</li>
+            <!-- 库存绩效 -->
+            <li>
+                <div class="title a-spacing-top-big">
+                    <h2 class="float_left">库存绩效</h2>
+                    <div class="float_left">
+                        <a href="javascript:void(0)">了解更多信息</a> |
+                        <a href="javascript:void(0)">观看演示</a> |
+                        <a href="javascript:void(0)">对我们的工作做出评价</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="a-box a-alert a-alert-info">
+                    <div class="a-box-inner a-alert-container">
+                        <i class="a-icon a-icon-alert"></i>
+                        <div class="a-alert-content">
+                            <h4>提醒：新亚马逊物流库存仓储限制将于2018年7月1日生效</h4>
+                            <span data-i18n-text="_body_Tips">自2018年7月1日起，仓储限制将基于您的库存绩效指标并根据体积计算，请访问库存绩效控制面板，了解您下一季度是否可以享受无限量仓储，或者可能收到仓储限制。请参阅新亚马逊物流库存仓储限制页面，获取更多信息。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-box  a-spacing-top-big">
+                    <div class="a-box-inner">
+                        <div>您库存绩效指数的计算基于您确保畅销商品有货，维持良好库存水平和解决商品信息问题的能力。</div>
+                        <div class="inventory_performance">
+                            <div class="float_left height281">
+                                <div class="pd-inner">
+                                    <div>
+                                        您的库存绩效指数
+                                    </div>
+                                    <div class="a-box a-alert a-alert-info">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content">
+                                                <span data-i18n-text="_body_Tips">过去13周没有足够的数量来计算您的IPI.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative inline-block">
+                                        <img src="./img/p.gif" alt="">
+                                        <div class="achievements IPI"></div>
+                                        <span class="IPIspan">1</span>
+                                    </div>
+                                    <div>根据历史的表现每周更新</div>
+                                </div>
+                            </div>
+                            <div class="float_left">
+                                <div class="pd-inner">
+                                    <div><b>最高影响因素</b></div>
+                                    <div class="influential_factors">
+                                        <div class="float_left influential_factors_div">冗余库存</div>
+                                        <div class="float_left relative inline-block">
+                                            <img src="./img/progressBar.png" alt="">
+                                            <div class="achievements redundancy"></div>
+                                            <span class="redundancSpan">1</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="influential_factors">
+                                        <div class="float_left influential_factors_div">销量</div>
+                                        <div class="float_left relative inline-block">
+                                            <img src="./img/progressBar.png" alt="">
+                                            <div class="achievements SalesVolume"></div>
+                                            <span class="SalesVolumeSpan">1</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="influential_factors">
+                                        <div class="float_left influential_factors_div">无在售信息的亚马逊库存</div>
+                                        <div class="float_left relative inline-block">
+                                            <img src="./img/progressBar.png" alt="">
+                                            <div class="achievements noSalesStock"></div>
+                                            <span class="noSalesStockSpan">1</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="influential_factors">
+                                        <div class="float_left influential_factors_div">有存货库存</div>
+                                        <div class="float_left  relative inline-block">
+                                            <img src="./img/progressBar.png" alt="">
+                                            <div class="achievements cargoStock"></div>
+                                            <span class="cargoStockSpan">1</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="float_left height281 ">
+                                <div class="pd-inner">
+                                    <div>
+                                        您的库存绩效指数
+                                    </div>
+                                    <div class="a-box a-alert a-alert-info">
+                                        <div class="a-box-inner a-alert-container">
+                                            <i class="a-icon a-icon-alert"></i>
+                                            <div class="a-alert-content">
+                                                <span data-i18n-text="_body_Tips">在..中，您支付了..的亚马逊物流仓储费，即您的亚马逊物流销售收入的..%,请按照建议提高您的指标，您将会发现您的盈利能力也会随之提高。</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="clear"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="improving_performance">
+                    <h3>改善绩效的方法</h3>
+                    <hr>
+                    <div class="improving_performance_div">
+                        <div class="float_left ">
+                            <div class="a-spacing-base">标准尺寸商品仓储</div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">当前用量（立方英尺）</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">下段时间的仓储限制</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="float_left ">
+                            <div class="a-spacing-base">大件商品仓储</div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">当前用量（立方英尺）</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">下段时间的仓储限制</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="float_left ">
+                            <div class="a-spacing-base">服装仓储</div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">当前用量（立方英尺）</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">下段时间的仓储限制</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="float_left ">
+                            <div class="a-spacing-base">鞋靴仓储</div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">当前用量（立方英尺）</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                            <div class="standard_size">
+                                <span class="standard_size_span">下段时间的仓储限制</span>
+                                <span>0.00</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <p class="clear"></p>
+                    </div>
+                </div>
+            </li>
+            <!-- 管理冗余库存 -->
+            <li>
+                <div class="title a-spacing-top-big a-spacing-base">
+                    <div class="float_left">
+                        <h2>管理冗余库存</h2>
+                        <p>有机会提高库存绩效的商品</p>
+                    </div>
+                    <div class="float_left">
+                        <a href="javascript:void(0)">了解更多信息</a> |
+                        <a href="javascript:void(0)">观看演示</a> |
+                        <a href="javascript:void(0)">对我们的工作做出评价</a>
+                    </div>
+                    <div class="float_right">
+                        <button class="secondaryAUIButton">商品设置</button>
+                        <button class="secondaryAUIButton">下载报告</button>
+                        <button class="secondaryAUIButton">首选项</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="a-box a-alert a-alert-info">
+                    <div class="a-box-inner a-alert-container">
+                        <i class="a-icon a-icon-alert"></i>
+                        <div class="a-alert-content">
+                            <h4>提醒：新亚马逊物流库存仓储限制将于2018年7月1日生效</h4>
+                            <span data-i18n-text="_body_Tips">自2018年7月1日起，仓储限制将基于您的库存绩效指标并根据体积计算，请访问库存绩效控制面板，了解您下一季度是否可以享受无限量仓储，或者可能收到仓储限制。请参阅新亚马逊物流库存仓储限制页面，获取更多信息。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_div a-spacing-base">
+                    <b>按条件显示推荐</b>
+                    <button class="secondaryAUIButton">所有推荐</button>
+                    <button class="secondaryAUIButton">开展促销活动</button>
+                    <button class="secondaryAUIButton">创建移除订单</button>
+                    <button class="secondaryAUIButton">推广商品</button>
+                    <button class="secondaryAUIButton">改进关键词</button>
+                    <button class="secondaryAUIButton">编辑商品信息</button>
+                    <button class="secondaryAUIButton">改进建议</button>
+                </div>
+                <div class="a-box a-alert a-alert-info">
+                    <div class="a-box-inner a-alert-container">
+                        <i class="a-icon a-icon-alert"></i>
+                        <div class="a-alert-content">
+                            <span data-i18n-text="_body_Tips">您的搜索未返回任何结果</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_box clear_both">
+                    <button class="secondaryAUIButton declarative fl drop_ul" disabled="">
+                        应用于<span>0</span>件选定商品
+                        <i class="a-icon a-icon-dropdown drop_ul"></i>
+                    </button>
+                    <div id="search" class="fl">
+                        <div class="searchInputWidth">
+                            <i class="a-icon icon-search"></i>
+                            <input type="search" class="keyWordry "  placeholder="搜索 SKU、标题、ISBN、ASIN">
+                        </div>
+                        <div class="product-search-button">
+                            <button class="button button-search">搜索</button>
+                        </div>
+                    </div>
+                    <div class="mt-header-count fl">
+                        <span class="num">136</span><span>件商品</span>
+                    </div>
+                </div>
+                <div class="table-content">
+                    <table class="a-horizontal-stripes">
+                        <thead>
+                            <tr>
+                                <th id="select">
+                                    <label for="mt-select-all">
+                                        <input type="checkbox" id="mt-select-all" />
+                                    </label>
+                                </th>
+                                <th class="mt-header-center">图片</th>
+                                <th class="mt-header-left goods_name align_center">
+                                    <span> 商品名称</span>
+                                    <div class="mt-table-header-detail">ASIN <br> SKU <br>状况</div>
+                                </th>
+                                <th class="mt-header-center">
+                                    <span> 总额</span>
+                                </th>
+                                <th class="mt-header-center">
+                                    <a orderby="quantity">
+                                        供应天数
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th class="mt-header-left mt-sort-down">
+                                    <a orderBy='createtime' class="mt-sort-link">
+                                        预计冗余数据
+                                        <i class="desc-icon-down"></i></a>
+                                </th>
+                                <th class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        预计仓储费
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th class="mt-header-center">
+                                    售出商品数量
+                                    <div class="mt-table-header-detail">（最近90天）</div>
+                                </th>
+                                <th class="mt-header-center">
+                                    您的商品价格
+                                    <div class="mt-table-header-detail">+ 配送费</div>
+                                </th>
+                                <th class="mt-header-center">
+                                    最低价格
+                                    <div class="mt-table-header-detail">+ 配送费</div>
+                                </th>
+                                <th class="mt-header-center">
+                                    <button class="primaryAUIButton saveall-clicked" disabled>保存所有</button>
+                                </th>
+                            </tr>
+                        </thead>
+                       <tbody id="ryTmpl">
+                           
+                       </tbody>
+                    </table>
+                </div>
+                <div class="mt-foot-page clear_both">
+                    <div class="mt-foot-skiptopage fl">
+                        <span>页面</span>
+                        <input type="number" value="1" class="currentPagery" name="gotopage" min="1" max="14">
+                        <span class="mt-totalpagecount">共 <span class="totalPages"></span> 页</span>
+                        <input type="button" class="secondaryAUIButton goToRy" id="myitable-gotopage-button" value="前往">
+                    </div>
+                    <div class="search_result_num fr">
+                        <button class="secondaryAUIButton fl search_num drop_ul buttonSizeRy" size="10">
+                            每页10个搜索结果
+                            <i class="a-icon a-icon-dropdown drop_ul"></i>
+                        </button>
+                       
+                    </div>
+                </div>
+            </li>
+            <!-- 亚马逊物流库龄 -->
+            <li>
+                <div class="title a-spacing-top-big a-spacing-base">
+                    <div class="float_left">
+                        <h2 class="inline-block">亚马逊物流库龄</h2>
+                        <a href="javascript:void(0)">了解更多信息</a> |
+                        <a href="javascript:void(0)">对我们的工作做出评价</a>
+                        <br>
+                        <span>按亚马逊物流库领及预计长期仓储费（LTSF）统计的库存商品数量。通过设置以下内容避免LTSF金额 <a href="javascript:void(0)">长期储存自动移除</a></p>
+                    </div>
+
+                    <div class="float_right">
+                        <button class="secondaryAUIButton">下载报告</button>
+                        <button class="secondaryAUIButton">首选项</button>
+                        <span>
+                            库存设置
+                        </span>
+                        <img src="./img/config.png" alt="">
+                        <span>
+                            新品
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div class="a-box a-alert a-alert-info">
+                    <div class="a-box-inner a-alert-container">
+                        <i class="a-icon a-icon-alert"></i>
+                        <div class="a-alert-content">
+                            <h4>提醒：新亚马逊物流库存仓储限制将于2018年7月1日生效</h4>
+                            <span data-i18n-text="_body_Tips">自2018年7月1日起，仓储限制将基于您的库存绩效指标并根据体积计算，请访问库存绩效控制面板，了解您下一季度是否可以享受无限量仓储，或者可能收到仓储限制。请参阅新亚马逊物流库存仓储限制页面，获取更多信息。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-box a-alert a-alert-info">
+                    <div class="a-box-inner a-alert-container">
+                        <i class="a-icon a-icon-alert"></i>
+                        <div class="a-alert-content">
+                            <span data-i18n-text="_body_Tips">您的搜索未返回任何结果</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_box clear_both">
+                    <button class="secondaryAUIButton declarative fl drop_ul" disabled="">
+                        应用于<span>0</span>件选定商品
+                        <i class="a-icon a-icon-dropdown drop_ul"></i>
+                    </button>
+                    <div id="search" class="fl">
+                        <div class="searchInputWidth">
+                            <i class="a-icon icon-search"></i>
+                            <input type="search" class="keyWordkl myitable-search"  placeholder="搜索 SKU、标题、ISBN、ASIN">
+                        </div>
+                        <div class="product-search-button">
+                            <button class="button button-search">搜索</button>
+                        </div>
+                    </div>
+                    <div class="mt-header-count fl">
+                        <span class="num">136</span><span>件商品</span>
+                    </div>
+                </div>
+                <div class="table-content">
+                    <table class="a-horizontal-stripes">
+                        <thead>
+                            <tr>
+                                <th id="select">
+                                    <label for="mt-select-all">
+                                        <input type="checkbox" id="mt-select-all" />
+                                    </label>
+                                </th>
+                                <th id="image" class="mt-header-center">图片</th>
+                                <th id="skucondition" class="mt-header-left goods_name ">
+                                    <span> 商品名称</span>
+                                    <div class="mt-table-header-detail">ASIN <br> SKU <br>状况</div>
+                                </th>
+                                <th id="name" class="mt-header-center usableNum">
+                                    <span style="padding: 0 20px;"> 可用</span>
+                                </th>
+                                <th id="kucun" class="mt-header-center">
+                                    <span>库领</span>
+                                    <!-- <div>
+                                        <a href="javascript:void(0)">0-90</a>
+                                        <a href="javascript:void(0)">91-180</a>
+                                        <a href="javascript:void(0)">181-270</a>
+                                        <a href="javascript:void(0)">271-365</a>
+                                        <a href="javascript:void(0)">365+</a>
+                                    </div> -->
+                                </th>
+                                <th id="date" class="mt-header-left mt-sort-down">
+                                    <a class="mt-sort-link" orderBy='createtime'>
+                                        预计LTSF
+                                        <i class="desc-icon-down"></i></a>
+                                    <div class="mt-table-header-detail">件数</div>
+                                </th>
+                                <th id="fnsku" class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        售出商品数量
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                    <div class="mt-table-header-detail">（最近90天）</div>
+                                </th>
+                                <th id="quantity" class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        亚马逊物流售出率
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                    <div class="mt-table-header-detail">（最近90天）</div>
+                                </th>
+                                <th id="price" class="mt-header-center">
+                                    您的商品价格
+                                    <div class="mt-table-header-detail">+ 配送费</div>
+                                </th>
+                                <th id="minprice" class="mt-header-center">
+                                    最低价格
+                                    <div class="mt-table-header-detail">+ 配送费</div>
+                                </th>
+                                <th id="inboundQuantity" class="mt-header-center">
+                                    购买按钮价格
+                                    <div class="mt-table-header-detail">+ 配送费</div>
+                                </th>
+                                </th>
+
+                                <th id="saveall" class="mt-header-center">
+                                    <button class="primaryAUIButton saveall-clicked" disabled>保存所有</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="addTmpl">
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-foot-page clear_both">
+                    <div class="mt-foot-skiptopage fl">
+                        <span>页面</span>
+                        <input type="number" value="1" class="currentPageKl" name="gotopage" min="1" max="14">
+                        <span class="mt-totalpagecount">共 <span class="totalPages"></span> 页</span>
+                        <input type="button" class="secondaryAUIButton" id="myitable-gotopage-button" value="前往">
+                    </div>
+                    <div class="search_result_num fr">
+                        <button class="secondaryAUIButton fl search_num drop_ul buttonSizeKl" size="10">
+                            每页10个搜索结果
+                            <i class="a-icon a-icon-dropdown drop_ul"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <!-- 管理亚马逊物流退货 -->
+            <li>
+                <div class="title a-spacing-top-big">
+                    <h2 class="float_left">管理亚马逊物流退货</h2>
+                    <div class="float_left">
+                        <a href="javascript:void(0)">退货政策</a> |
+                        <a href="javascript:void(0)">请对我们的服务做出反馈</a>
+                    </div>
+                    <div class="float_right">
+                        <button class="secondaryAUIButton">管理卖家自行配送退货</button>
+                        <button class="secondaryAUIButton">退货报告</button>
+                        <button class="secondaryAUIButton">亚马逊物流设置</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="search_box clear_both">
+                    <button class="secondaryAUIButton declarative fl drop_ul" disabled="">
+                        应用于<span>0</span>件选定商品
+                        <i class="a-icon a-icon-dropdown drop_ul"></i>
+                    </button>
+                    <div id="search" class="fl">
+                        <div class="searchInputWidth">
+                            <i class="a-icon icon-search"></i>
+                            <input type="search" class="keyWordwl myitable-search" placeholder="搜索 SKU、标题、ISBN、ASIN">
+                        </div>
+                        <div class="product-search-button">
+                            <button class="button button-search">搜索</button>
+                        </div>
+                    </div>
+                    <div class="mt-header-count fl">
+                        <span id="count-value">136</span><span>件商品</span>
+                    </div>
+                </div>
+                <div class="a-box">
+                    <div class="a-box-inner">
+                        <span class="a-color-tertiary">筛选条件：</span><span class="a-color-tertiary">买家评论</span>
+                        <input type="radio" name="all" id="">全部
+                        <input type="radio" name="all" id="">包含买家评论
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <span class="a-color-tertiary">买家退款日期:</span>
+                        <input type="radio" name="radio" id="">最近一天
+                        <input type="radio" name="radio" id="">过去7天
+                        <input type="radio" name="radio" id="">过去30天
+                        <input type="radio" name="radio" id="">过去90天
+
+                    </div>
+                </div>
+                <div class="table-content">
+                    <table class="a-horizontal-stripes">
+                        <thead>
+                            <tr>
+                                <th id="bh" class="mt-header-left">
+                                    <a orderBy='createtime'>
+                                        订单编号
+                                        <i class="desc-icon-down"></i></a>
+                                </th>
+                                <th id="image" class="mt-header-center">图片</th>
+                                <th id="skucondition" class="mt-header-left">
+                                    <span> 商品名称</span>
+                                    <div class="mt-table-header-detail">ASIN <br> SKU <br>状况</div>
+                                </th>
+                                <th id="name" class="mt-header-left">
+                                    <a orderBy='quantity'>
+                                        买家退货原因
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th id="kucun" class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        批准退货日期
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th id="date" class="mt-header-left mt-sort-down">
+                                    <a class="mt-sort-link" orderBy='createtime'>
+                                        买家退款日期
+                                        <i class="desc-icon-down"></i></a>
+                                </th>
+                                <th id="fnsku" class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        商品接收日期
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th id="quantity" class="mt-header-center">
+                                    <a orderBy='quantity'>
+                                        库存属性
+                                        <i class="desc-icon-down"></i>
+                                    </a>
+                                </th>
+                                <th id="price" class="mt-header-center">
+                                    退货状态
+                                </th>
+                                <th id="minprice" class="mt-header-center">
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th><img src="./img/12.jpg" alt=""></th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>10</th>
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-foot-page clear_both">
+                    <div class="mt-foot-skiptopage fl">
+                        <span>页面</span>
+                        <input type="number" value="1" class="currentPageWl" name="gotopage" min="1" max="14">
+                        <span class="mt-totalpagecount">共 14 页</span>
+                        <input type="button" class="secondaryAUIButton" id="myitable-gotopage-button" value="前往">
+                    </div>
+                    <div class="search_result_num fr">
+                        <button class="secondaryAUIButton fl search_num drop_ul buttonSizeWl" size="10">
+                            每页10个搜索结果
+                            <i class="a-icon a-icon-dropdown drop_ul"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="search_num_down popover_down" style="top: auto; left: auto; right: auto; display: none;">
+        <div class="popover_down_innner">
+            <ul>
+                <li>
+                    <a href="javascript:;" class="drop_link" size="10">
+                        每页 10 个搜索结果
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="drop_link" size="25">
+                        每页 25 个搜索结果
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="drop_link" size="50">
+                        每页 50 个搜索结果
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="drop_link" size="100">
+                        每页 100 个搜索结果
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="drop_link" size="250">
+                        每页 250 个搜索结果
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<!-- 库龄 -->
+<script id="addArray" type="text/x-dot-template">
+    {{~it:value:index}}
+     <tr>
+        <td><input type="checkbox"></td>
+        <td><img src={{= decodeURIComponent(value.product_image)}}></td>
+        <td class="goods_name">
+             {{= decodeURIComponent(value.goods_name)}}
+        </td>   
+        <td><input type="text" value="{{= decodeURIComponent(value.usableNum)}}"></td>
+        <td>
+            <p style="padding-left:20px">{{= decodeURIComponent(value.libraryAge)}}</p>
+        </td>
+        <td>{{= decodeURIComponent(value.LTSF)}}</td>
+        <td>{{= decodeURIComponent(value.sellOutNum)}}</td>
+        <td>{{= value.sellOutRatio}}</td>
+        <td>{{= decodeURIComponent(value.your_price)}}</td>
+        <td>
+            {{? ( value.maximum_price == 0)||( value.maximum_price == null) }}
+            --
+            {{??}}
+            {{= decodeURIComponent(value.maximum_price)}}
+            {{?}}
+        </td>
+        <td>
+            {{? value.is_sale == 1}}
+                {{? (value.sale_price == 0) ||(value.sale_price == null) }}
+                --
+                {{??}}
+                {{= decodeURIComponent(value.sale_price)}}
+                {{?}}
+            {{??}}
+            {{= decodeURIComponent(value.your_price)}}
+            {{?}}
+        </td>
+        <td>
+           
+        </td> 
+    </tr>
+    {{~}}
+</script>
+<!-- 冗余库存 -->
+<script id="ryArray" type="text/x-dot-template">
+    {{~it:value:index}}
+    <tr>
+        <td><input type="checkbox"></td>
+        <td><img src="{{= decodeURIComponent(value.product_image)}}" alt=""></td>
+        <td class="goods_name">{{= decodeURIComponent(value.goods_name)}}</td>
+        <td>{{= decodeURIComponent(value.totalMoney)}}</td>
+        <td>{{= decodeURIComponent(value.libraryAge)}}</td>
+        <td>{{= decodeURIComponent(value.redundancyNum)}}</td>
+        <td>{{= decodeURIComponent(value.StorageCost)}}</td>
+        <td>{{= decodeURIComponent(value.sellOutNum)}}</td>
+        <td>{{= decodeURIComponent(value.your_price)}}</td>
+        <td>
+            {{? ( value.maximum_price == 0)||( value.maximum_price == null) }}
+            --
+            {{??}}
+            {{= decodeURIComponent(value.maximum_price)}}
+            {{?}}    
+        </td>
+        <td></td>
+    </tr>
+   {{~}}
+</script>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/doT.min.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_achievements.js" type="text/javascript"></script>
+<!-- <script src="js/webjs/manage_inventory.js"  type="text/javascript"></script> -->
+</html>

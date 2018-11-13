@@ -1,0 +1,41 @@
+.question-container{
+	width: 100%;
+	padding: 20px 2.5%;
+	background: #ebedf0;
+}
+
+.question-container .question{
+	width: 1020px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 24px 70px;
+}
+.question-container .question ul{
+	margin-left: 20px;
+}
+.question-container .question ul li{
+	list-style: decimal;
+	margin-bottom: 20px;
+	padding: 20px 0px;
+	border-bottom: 1px dashed #ddd;
+}
+.question-container .question ul li p{
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #333;
+}
+.question-container .question ul li input{
+	outline: none;
+	width: 400px;
+	border: 1px solid #ddd;
+	padding:4px 10px;
+	border-radius: 4px;
+}
+.question-container .question ul li input:focus{
+	border-color: #e77600;
+}
+.commit-question{
+	width: 100px;
+	display: block;
+	margin: 30px auto;
+}

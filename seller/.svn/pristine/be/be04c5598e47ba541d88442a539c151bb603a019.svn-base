@@ -1,0 +1,42 @@
+.selection-content{
+    padding: 18px;
+}
+body {
+    font-size: 13px;
+    color: #111;
+}
+.creat_selection_table{
+    border:1px solid #ccc;
+}
+.creat_selection_table td{
+    border-color: #ccc;
+    padding: 5px;
+}
+.creat_selection_table .left-bg{
+    background: #F3F3F3;
+    text-align: right;
+    width: 37%;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.creat_selection_table .right-td{
+    padding-left: 10px;
+}
+#Selection_ID,#Internal_Description,#ASIN_List{
+    width: 80%;
+}
+#ASIN_List{
+    height:140px;
+    resize: vertical;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    outline: none;
+}
+textarea:focus {
+    border-color: #e77600 !important;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+}
+.submit_button{
+    font-size: 14px;
+}

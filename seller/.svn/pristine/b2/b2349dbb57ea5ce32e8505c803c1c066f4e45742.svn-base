@@ -1,0 +1,101 @@
+let campaign_manager={};
+$(function(){
+	//判断是否设置过支付方式
+	campaign_manager.JudgeFirstEnter();
+})
+campaign_manager.JudgeFirstEnter=function(){
+	let request_data={
+			data:{
+				seller_id:amazon_userid,
+			}
+	}
+	request_data.data=JSON.stringify(request_data.data);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/IsSetCampaingAccount',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		 //设置过支付方式
+        		campaign_manager.GetCampaignList('1');
+				campaign_manager.InitFilterCondition('.a-dropdown-container');
+        	}else{
+        		location.href="campaign_advertising_charge_method.html"
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+	
+}
+//初始化筛选条件
+campaign_manager.InitFilterCondition=function(target){
+	let ctr_dom=$(target).find('.dropdown-menu').find('li a');
+	ctr_dom.each(function(){
+		$(this).click(function(){
+			if($(this).parent('li').attr('aria-checked')=="true"){
+				//没有改变筛选条件
+				return true;
+			}else{
+				$(this).addClass('active');
+				$(this).parent('li').attr('aria-checked',"true");
+				$(this).parent('li').siblings('li').attr('aria-checked',"false");
+				$(this).parent('li').siblings('li').find('a').removeClass('active');
+				let val=$(this).attr('data-value');
+				let tex=$(this).attr("replace-text");
+				$(this).parents('.a-dropdown-container').attr('data-condition',val);
+				$(this).parents('.a-dropdown-container').find('.a-dropdown-prompt').html(tex);
+				let flag=$('.spa-tab-container').find('.active a').attr('data-id');
+				campaign_manager.GetCampaignList('1')
+			}
+		})
+	})
+}
+
+//获取活动列表 
+campaign_manager.GetCampaignList=function(num){
+	let key=$('#product-search').val();
+	let status=$('#select-campaigns-action').attr('data-condition');
+	let request_data={
+			data:{
+				pageSize:10,
+				currentPage:num,
+				seller_id:amazon_userid,
+				key:key,
+				status:status
+			}
+	}
+	request_data.data=JSON.stringify(request_data.data);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetCampaingList',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		var html=template(document.getElementById('Campaign-table-container-tpl').innerHTML,data);
+				document.getElementById('Campaign-table-container').innerHTML = html;
+				campaign_manager.Pagination(data, num, campaign_manager.GetCampaignList)
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+campaign_manager.Pagination= function (alldata, num,callback_function) {
+    //分页
+    $(".campaign-history-pagination").paging({
+        pageNo: num,
+        totalPage:parseInt(alldata.totalPages),
+        totalSize:parseInt(alldata.totalRecords),
+        callback: function (num) {
+            callback_function(num)
+        }
+    })
+}
+campaign_manager.GoCreatCampaign=function(){
+	location.href="campaign_advertising_creat.html"
+}

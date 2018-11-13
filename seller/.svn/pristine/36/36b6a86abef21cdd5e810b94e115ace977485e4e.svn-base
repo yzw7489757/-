@@ -1,0 +1,70 @@
+.code-content{
+    padding: 14px 18px;
+}
+.code-title{
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.go_to {
+    margin-bottom: 10px;
+}
+body {
+    font-size: 13px;
+    color: #111;
+}
+a {
+    color: #0066c0;
+}
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #c45500;
+}
+a.a-link-normal:hover {
+    text-decoration: underline;
+}
+.overview{
+   background: #F3F3F3;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+.num_group{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.claim-code-table thead {
+    background: linear-gradient(to bottom,#f8f8f8,#eee);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    font-weight: 700;
+}
+.claim-code-table thead a{
+    font-weight: 700;
+}
+.claim-code-table{
+    border: 1px solid #ccc;
+}
+.claim-code-table td{
+    border-color: #ccc;
+    padding: 5px;
+    text-align: center;
+}
+.desc-icon-down {
+    height: 8px;
+    width: 12px;
+    background: url(../img/mrtable-sprite._V385386846_.png);
+    background-position: -77px 0;
+}
+.desc-icon-up {
+    background-position: -77px -7px;
+}
+.create-date-link, .create-date-link:hover {
+    color: #e47911;
+}
+.download{
+    color:#555;
+}
+.mt-sort-down {
+    border-top: 1px solid #e47911!important;
+}

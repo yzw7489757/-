@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>管理库存</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/manage_inventory.css" />
+        <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    </head>
+    <body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+        <div class="madagascar-navigation">
+            <div class="spacing-medium">
+                <ul class="unordered-list clear_both">
+                   <li><a>所有库存</a></li>
+                   <li><a>禁止显示</a></li>
+                   <li><a>管理定价</a></li>
+                   <li><a href="./manage_inventory_FBA.html">亚马逊库存</a></li>
+                   <li><a href="./cargo_handling_progress.html">货件处理进度</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="madagascar-main-body">
+            <div class="myi-header-section">
+                <div class="myi-heading">
+                    <h1 class="h1 fl">
+                        管理库存 
+                    </h1>
+                    <ul class="learn_more clear_both fl">
+                       <li><a href="javascript:;">了解更多信息</a></li>
+                       <li><a>浏览</a></li>
+                       <li><a>为此页评级</a></li>
+                    </ul>
+                </div>
+                <div class="view-header-buttons fr clear_both">
+                    <button class="secondaryAUIButton" onclick="javascript:location.href='add_product.html'">添加新商品</button>
+                    <button class="secondaryAUIButton first_select">首选项：隐藏 11 列</button>
+                </div>
+            </div>
+            <div class="search_box clear_both">
+                <button class="secondaryAUIButton declarative fl drop_ul" disabled>
+                    应用于<span>0</span>件选定商品
+                    <i class='a-icon a-icon-dropdown drop_ul'></i>
+                </button>
+                <div id="search" class="fl">
+                    <div class="searchInputWidth">
+                        <i class="a-icon icon-search"></i>
+                        <input type="search" id="myitable-search" placeholder="搜索 SKU、标题、ISBN、ASIN">
+                    </div>
+                    <div class="product-search-button">
+                        <button class="button button-search">搜索</button>
+                    </div>
+                </div>
+                <div class="mt-header-count fl">
+                    <span id='count-value'>0</span><span>件商品</span>
+                </div>
+            </div>
+            <div class="header-filters">
+                <div class="filter-selection">
+                    <ul class="mt-filter-group">
+                        <li><span class='mt-filter-heading'>筛选条件：</span></li>
+                        <li class="mt-filter">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">商品状态:</li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="goods" checked id="all_goods" status=''/>
+                                        <span style="padding-left:3px">所有</span>
+                                    </label>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="goods" id="on_sell" status='1'/>
+                                        <span style="padding-left:3px">在售</span>
+                                    </label>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="goods" id="forbid_sell" status='0'/>
+                                        <span style="padding-left:3px">不可售</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">配送类型:</li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="delivery" checked id="all_delivery" status=''/>
+                                        <span style="padding-left:3px">所有</span>
+                                    </label>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="delivery" id="on_amazon" status='2'/>
+                                        <span style="padding-left:3px">亚马逊</span>
+                                    </label>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <label class="a-radio-label">
+                                        <input type="radio" name="delivery" id="seller-logistics" status='1'/>
+                                        <span style="padding-left:3px">卖家</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter hide" id="DATE_RANGE_START_SECTION">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">搜索开始日期:</li>
+                                <li class="mt-expanded-filter">
+                                    <div class="date-filter clear_both">
+                                        <div class="mt-filter-calendar">
+                                            <div class="calendar-icon"></div>
+                                        </div>
+                                        <input type="text" placeholder="mm/dd/yyyy" id="DATE_RANGE_START_VAR" class="date_base_width" autocomplete="off"/>
+                                    </div>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <span class="filter-clear-clicked">
+                                        <i class="a-icon a-icon-close-filter"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter hide" id="DATE_RANGE_END_SECTION">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">搜索结束日期:</li>
+                                <li class="mt-expanded-filter">
+                                    <div class="date-filter clear_both">
+                                        <div class="mt-filter-calendar">
+                                            <div class="calendar-icon"></div>
+                                        </div>
+                                        <input type="text" placeholder="mm/dd/yyyy" id="DATE_RANGE_END_VAR" class="date_base_width" autocomplete="off"/>
+                                    </div>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <span class="filter-clear-clicked">
+                                        <i class="a-icon a-icon-close-filter"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter hide" id="MIN_PRICE_SECTION">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">价格高于:</li>
+                                <li class="mt-expanded-filter">
+                                    <div class="price_filter">
+                                        <i class="price-icon">$</i>
+                                        <input type="text" placeholder="0.00" id="MIN_PRICE_VAR" class="price-base-filter"/>
+                                    </div>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <span class="filter-clear-clicked">
+                                        <i class="a-icon a-icon-close-filter"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter hide" id="MAX_PRICE_SECTION">
+                            <ul class="mt-expanded-filter-group">
+                                <li class="mt-expanded-filter goods-state">价格低于:</li>
+                                <li class="mt-expanded-filter">
+                                    <div class="price_filter">
+                                        <i class="price-icon">$</i>
+                                        <input type="text" placeholder="0.00" id="MAX_PRICE_VAR" class="price-base-filter"/>
+                                    </div>
+                                </li>
+                                <li class="mt-expanded-filter">
+                                    <span class="filter-clear-clicked">
+                                        <i class="a-icon a-icon-close-filter"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-filter">
+                            <button class="secondaryAUIButton other-filter drop_ul">
+                                其他筛选条件<i class="a-icon a-icon-dropdown drop_ul"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table-content">
+                <table class="a-horizontal-stripes">
+                    <thead>
+                        <tr>
+                            <th id="select">
+                                <label for="mt-select-all">
+                                    <input type="checkbox" id="mt-select-all" />
+                                </label>
+                            </th>
+                            <th id="expand"></th>
+                            <th id="status" class="mt-header-left">
+                            <a orderBy='status'>
+                                状态
+                                <i class="desc-icon-down"></i>
+                            </a>
+                            </th>
+                            <th id="image" class="mt-header-center">图片</th>
+                            <th id="skucondition" class="mt-header-left">
+                                <a orderBy='skucondition'>
+                                    SKU
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                                <div class="mt-table-header-detail">状况</div>
+                            </th>
+                            <th id="listing_id" class="mt-header-center">商品编号</th>
+                            <th id="name" class="mt-header-left">
+                                <a orderBy='name'>
+                                    商品名称
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                                <div class="mt-table-header-detail">ASIN</div>
+                            </th>
+                            <th id="date" class="mt-header-left mt-sort-down">
+                                <a class="mt-sort-link" orderBy='createtime'>
+                                    创建日期
+                                    <i class="desc-icon-down"></i></a>
+                                <div class="mt-table-header-detail">状况更新日期</div>
+                            </th>
+                            <th id="quantity" class="mt-header-right">
+                                <a orderBy='quantity'>
+                                    可售
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="inboundQuantity" class="mt-header-center">
+                                <a orderBy='inboundQuantity'>
+                                    入库数量
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="UnfulfillableQuantity" class="mt-header-center">
+                                <a orderBy='UnfulfillableQuantity'>
+                                    不可售数量
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="reservedQuantity" class="mt-header-center">
+                                <a orderBy='reservedQuantity'>
+                                    预留数量
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="fee_preview" class="mt-header-center">
+                                <a orderBy='price'>
+                                    费用预览
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="price" class="mt-header-center">
+                                价格
+                                <div class="mt-table-header-detail">+ 配送费</div>
+                            </th>
+                            <th id="lowprice" class="mt-header-right">
+                                <span>最低价</span>
+                                <div class="mt-table-header-detail">+ 配送费</div>
+                            </th>
+                            <th id="fnsku" class="mt-header-center">
+                                <span>FNSKU</span>
+                            </th>
+                            <th id="fulfilled_by" class="mt-header-center">
+                                <a orderBy='fulfilled_by'>
+                                    订单配送方
+                                    <i class="desc-icon-down"></i>
+                                </a>
+                            </th>
+                            <th id="minimumPrice" class="mt-header-center">
+                                <span>价格下限</span>
+                            </th>
+                            <th id="maximumPrice" class="mt-header-center">
+                                <span>价格上限</span>
+                            </th>
+                            <th id="saveall" class="mt-header-center">
+                                <button class="primaryAUIButton saveall-clicked" disabled>保存所有</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="mt-foot-page clear_both">
+                <div class="mt-foot-skiptopage fl">
+                    <span>页面</span>
+                    <input type="number" value="1" id="myitable-gotopage" name="gotopage" min='1'>
+                    <span class="mt-totalpagecount">共 0 页</span>
+                    <input type="button" class="secondaryAUIButton" id="myitable-gotopage-button" value="前往"/>
+                </div>
+                <div class="search_result_num fr">
+                    <button class="secondaryAUIButton fl search_num drop_ul" size='10'>
+                        <span class="drop_ul">每页10个搜索结果</span>
+                        <i class="a-icon a-icon-dropdown drop_ul"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="popover_down split-down">
+            <div class="popover_down_innner">
+                <ul class="down_list">
+                </ul>
+            </div>
+        </div>
+        <div class="other-filter-down popover_down">
+            <div class="popover_down_innner">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="drop_link">
+                            其他筛选条件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" filter='1'>
+                            搜索开始日期
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" filter='2'>
+                            搜索结束日期
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" filter='3'>
+                            价格高于
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" filter='4'>
+                            价格低于
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search_num_down popover_down">
+            <div class="popover_down_innner">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="drop_link" size='10'>
+                            每页 10 个搜索结果
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" size='25'>
+                            每页 25 个搜索结果
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" size='50'>
+                            每页 50 个搜索结果
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" size='100'>
+                            每页 100 个搜索结果
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="drop_link" size='250'>
+                            每页 250 个搜索结果
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="a-container-footer">
+    </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js" ></script>
+    <script type="text/javascript" src="js/webjs/manage_inventory.js"></script>
+</html>

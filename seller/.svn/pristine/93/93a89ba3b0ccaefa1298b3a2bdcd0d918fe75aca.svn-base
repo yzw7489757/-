@@ -1,0 +1,13 @@
+$(function () { 
+    $('.a-container>ol>li').click(function (item) {
+        $('.a-container ol li').removeClass('activeOl');
+        index = $(this).index();
+        $(this).addClass('activeOl');
+        $('.a-container>ul>li').eq(index).show().siblings().hide();
+        if(index!=1){
+            $('.screenTable').hide();
+        }else{
+            $('.screenTable').show();
+        }
+    })
+ })

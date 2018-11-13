@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var act = inputctr.public.getQueryString('act');
+        var userid = inputctr.public.getQueryString('userid');
+        var date = inputctr.public.getQueryString('date');
+        var url = inputctr.public.getQueryString('url');
+        $.post(baseUrl + '/SellerLoginByUserID', { user_id: userid }, function (data) { 
+            if (data.result == 1) {
+                inputctr.public.setCookie('orgid', data.data.orgid);
+                inputctr.public.setCookie('classid', data.data.classid);
+                inputctr.public.setCookie('classname', data.data.classname);
+                inputctr.public.setCookie('studentID', data.data.stuid);
+                inputctr.public.setCookie('account', data.data.stuaccount);
+                inputctr.public.setCookie('SuccessAccount', data.data.stuaccount);
+                inputctr.public.setCookie('TrainingID', data.data.trainingid);
+                inputctr.public.setCookie('traintype', data.data.traintype);
+                inputctr.public.setCookie('amazon_userid', userid);
+                inputctr.public.setCookie('amazon_username', data.data.email);
+                if (act == 'register') {
+                    //身份验证
+                    if(data.data.selling_state!=1)
+                        location.href = url;
+                }
+            }
+        }, 'json');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

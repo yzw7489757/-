@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/data_inventory_sales.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container">
+        <div class="fontSize20 a-spacing-small">欢迎试用报告</div>
+        <a href="javascript:void(0)">报告一览页面</a>
+        <hr>
+        <div>
+            <div class="float_left width33">
+                <div class="fontSize20">库存</div>
+                <div class="a-spacing-top-mini a-spacing-small">
+                    <div><a href="">补货 <span class="color">新功能</span> </a></div>
+                    <div><a href="data_information_available.html">无在售信息的亚马逊库存</a></div>
+                    <div><a href="data_inventory_adjustment.html">库存调整</a></div>
+                    <div><a href="data_in_stock.html">亚马逊库存</a></div>
+                    <div><a href="data_day_stock.html">每日库存历史记录</a></div>
+                    <div><a href="data_mouth_stock.html">每月库存历史记录</a></div>
+                    <div><a href="data_inventory_action.html">库存动作详情</a></div>
+                    <div><a href="data_inventory_status.html">库存状况</a></div>
+                    <div><a href="data_logistics_inventory.html">管理亚马逊物流库存</a></div>
+                </div>
+            </div>
+            <div class="float_left width33">
+                <div class="fontSize20">销售额</div>
+                <div class="a-spacing-top-mini a-spacing-small">
+                    <div><a href="data_with_delivery.html">亚马逊配送货件</a></div>
+                    <div><a href="data_all_orders.html">所有订单</a></div>
+                    <div><a href="">促销</a></div>
+                </div>
+                <div class="fontSize20">付款</div>
+                <div class="a-spacing-top-mini a-spacing-small">
+                    <div><a href="data_mouth_fee.html">月储存费用 <span class="color">新功能</span> </a></div>
+                    <div><a href="data_cost_preview.html">费用预览</a></div>
+                    <div><a href="data_long_storage_fee.html">长期仓储费</a></div>
+                </div>
+                <div class="fontSize20">移除</div>
+                <div class="a-spacing-top-mini a-spacing-small">
+                    <div><a href="">移除订单详情</a></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/public.js " type="text/javascript "></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+
+</html>

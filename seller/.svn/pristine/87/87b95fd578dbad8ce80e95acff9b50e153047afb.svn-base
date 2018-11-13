@@ -1,0 +1,34 @@
+$(function () { 
+    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
+    if(window.sessionStorage){
+        var orderId = sessionStorage.getItem('orderId');
+    }
+     // 获取移除订单
+    $.post(baseUrl + '/GetRMVOrder', {
+        orderId: orderId
+    }, function (res) {
+        console.log(res);
+        $('.goodsName').text(decodeURIComponent(res.goodsName));
+        $('.sellerSku').text(decodeURIComponent(res.sellerSku));
+        $('.usableNum').text(res.rmvUsableNum);
+        $('.unavailableNum').text(res.rmvUnavailableNum);
+        $('.asin').text(res.asin);
+        $('.fnsku').text(res.fnsku);
+        $('.orderId').text(res.orderId)
+        if(res.removeMode == "1"){
+            $('.removeMode').text('配送地址')
+        }else{
+            $('.removeMode').text('弃置')
+        }
+    }, 'json')
+
+    // 下单
+    $('.placeOrderBtn').click(function () { 
+        $.post(baseUrl + '/PlaceOrder', {
+            orderId: orderId
+        }, function (res) {
+            console.log(res);
+            alert(decodeURIComponent(res.error))
+        }, 'json')
+     })
+ })

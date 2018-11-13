@@ -1,0 +1,156 @@
+$(function(){
+    // 初始化退货信息
+    inputctr.public.checkLogin();
+    var ReturnsInfo = {
+        seller_id:amazon_userid,
+        status:'0',
+        pageSize:'3',
+        currentPage:'1'
+    }
+    ReturnsInit(ReturnsInfo);
+    function dec(str){
+        return decodeURIComponent(str);
+    }
+    function ReturnsInit(info){
+        inputctr.public.SellerRegisterLoading();
+        inputctr.public.AjaxMethods('POST', baseUrl + '/GetReturnRequest', {json:JSON.stringify(info)}, function (data) {
+            inputctr.public.SellerRegisterLoadingRemove();
+            var order_html = '';
+            if(data.result == 1) {
+                for(var i=0;i<data.data.length;i++){
+                    order_html += '<div class="order-detainls-container clearfix">'+
+                                    '<div class="pull-left order-information-container1">'+
+                                        '<h3>'+data.data[i].title+'</h3>'+
+                                       ' <div class="order-detail">'+
+                                            '<div class="info-list">'+
+                                                '<span>Order ID:</span>'+
+                                                '<a>'+data.data[i].order_no+'</a>'+
+                                           ' </div>'+
+                                            '<div  class="info-list">'+
+                                                '<span>Buyer:</span>'+
+                                                '<a>'+data.data[i].buyer+'</a>'+
+                                            '</div>'+
+                                            '<div  class="info-list">'+
+                                                '<span>Request Date:</span>'+
+                                                '<span>'+data.data[i].createtime+'</span>'+
+                                           ' </div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="pull-left order-information-container2">'+
+                                        '<h3 style="color: #c60;">'+data.data[i].problem+'</h3>'+
+                                        '<div class="clearfix goods-list">'+
+                                            '<div class="pull-left goods-cover">'+
+                                                '<img src="'+dec(data.data[i].goods[0].product_image)+'"/>'+
+                                            '</div>'+
+                                            '<div class="pull-left goods-information">'+
+                                                '<div class="goods-name">'+
+                                                    '<a href="javascript:;">'+dec(data.data[i].goods[0].goods_name)+'</a>'+
+                                                '</div>'+
+                                            '</div>'+
+                                            '<div class="buy-comments pull-left">'+
+                                                '<span>Description:</span>'+
+                                                '<span>'+data.data[i].describe+'</span>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="pull-left order-information-container3 clearfix">'+
+                                        '<button class="highlighted-button pull-right" onclick="javascript:location.href=\'authorize_request.html?fld_id='+data.data[i].fld_id+'\'">'+
+                                            '<span class="highlighted-button-label button">Authorize request</span>'+
+                                        '</button>'+
+                                        '<button class="find find_on pull-right" onclick="javascript:location.href=\'close_request.html?fld_id='+data.data[i].fld_id+'\'">'+
+                                            '<span class="button-label button">Close request</span>'+
+                                        '</button>'+
+                                        '<button class="find find_on pull-right" onclick="javascript:location.href=\'refund_order.html?fld_id='+data.data[i].fld_id+'\'">'+
+                                            '<span class="button-label button">Issue refund</span>'+
+                                        '</button>'+
+                                        '<button class="find find_on pull-right">'+
+                                            '<span class="button-label button">Contact Buyer</span>'+
+                                        '</button>'+
+                                    '</div>'+
+                                '</div>'
+                }
+                $('.order-list').html(order_html);
+            }else{
+                $('.order-list').html(dec(data.error));
+            }
+            initPage(data.totalPages,info.currentPage);
+            ReturnsInfo.currentPage = 1; 
+        }, function (error) {
+            alert(error.statusText);
+        })
+    }
+    // Filter returns
+    function Filter(){
+        $('.Filter-container').on('click', 'a', function(event) {
+            event.preventDefault();
+            $(this).addClass('active').siblings('a').removeClass('active');
+            ReturnsInfo.status = $(this).attr('status');
+            ReturnsInit(ReturnsInfo);
+        });
+    }Filter();
+    //创建分页模板
+    //var currentPage=1; // 当前页码, 从1开始
+    var maxButtons = 3; // 显示的分页按钮数量
+    //var totalPage =30 // 总页数
+    var pagebox = $('#pagn');
+    function  initPage(totalPage,currentPage) {
+        var pageHtml = '';
+        if(totalPage >= 1){
+            var rangeStart = Math.max(1, currentPage - parseInt(currentPage % maxButtons)); //开始页
+            var rangeEnd = Math.min(totalPage, rangeStart + maxButtons - 1); //最后一页
+            pagebox.removeClass('hide');
+            if(currentPage != 1){
+               pageHtml += '<span class="pagnLA">'+
+                               '<a href="javascript:;" title="Previous Page" id="pagnPrevLink" data-num='+(currentPage - 1)+'>'+
+                                   '<span class="srSprite pagnPrevArrow"></span>'+
+                                   '<span id="pagnPrevString">Previous Page</span>'+
+                               '</a>'+
+                           '</span>'
+            }else{
+               //如果是第一页，禁用上一页
+               pageHtml += '<span class="pagnLA pagnLA1">'+
+                               '<span class="srSprite pagnPrevArrow"></span>'+
+                               '<span id="pagnPrevString">Previous Page</span>'+
+                           '</span>'
+            }
+           // 中间页码
+           for (var i = rangeStart; i <= rangeEnd; i++){
+               if (i == currentPage) {
+                   pageHtml += '<span class="pagnCur">'+i+'</span>';
+               } else {
+                   pageHtml += '<span class="pagnLink">'+
+                                    '<a href="javascript:;" data-num="'+i+'">'+i+'</a>'+
+                                '</span>';
+               }
+           }
+           if(totalPage <= maxButtons){
+                pageHtml += '';
+           }else{
+                pageHtml +='<span class="pagnMore">...</span>'+
+                      '<span class="pagnDisabled">'+totalPage+'</span>'
+           }
+           //当前页不是总页，即是最后一页
+           if (currentPage != totalPage) {
+               pageHtml += '<span class="pagnRA">'+
+                                '<a href="javascript:;" title="Next Page" id="pagnNextLink" data-num='+(parseInt(currentPage)+1)+'>'+
+                                    '<span id="pagnNextString">Next Page</span>'+
+                                    '<span class="srSprite pagnNextArrow"></span>'+
+                                '</a>'+
+                            '</span>';
+           } else {
+               //如果是最后页，禁用下一页
+               pageHtml += '<span class="pagnRA pagnRA1">'+
+                                '<span id="pagnNextString">Next Page</span>'+
+                                '<span class="srSprite pagnNextArrow"></span>'+
+                            '</span>';
+           }
+       }else{
+          pagebox.addClass('hide');  
+       }
+        pagebox.html(pageHtml);
+        pagebox.find('a').off('click').click(function(){
+            ReturnsInfo.currentPage = $(this).attr('data-num');
+            ReturnsInit(ReturnsInfo);
+        })
+    }
+})

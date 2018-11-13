@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Money Off</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/money_off.css" />
+        <link rel="stylesheet" type="text/css" href="css/manage_claim_codes.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="code-content">
+            <h1 class="code-title">Manage Claim Codes</h1>
+            <div class="go_to">
+                <button class="secondaryAUIButton a-button-inner a-button-31" onclick="javascript:location.href='view_promotion.html'">View promotion</button>
+            </div>
+            <div class="overview a-spacing-base">Promotion overview</div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Create claim code group 
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">Group Name</td>
+                            <td class="right-td">
+                                <input type="text" class="drop-select" placeholder="Enter group name" id="Group-Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Quantity</td>
+                            <td class="right-td">
+                                <input type="text" class="drop-select" value="1" id="Group-Quantity" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td"></td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31" id="Create-group">
+                                   Create
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="num_group">
+                <div class="a-color-secondary">1 claim code group</div>
+            </div>
+            <table class="claim-code-table a-row" border="1">
+                <thead>
+                    <tr>
+                        <td><a href="javascript:;">Claim code group</a></td>
+                        <td><a href="javascript:;">Quantity</a></td>
+                        <td class="mt-sort-down">
+                            <a href="javascript:;" class="create-date-link">
+                                Creation Date
+                                <i class="desc-icon-down"></i>
+                            </a>
+                        </td>
+                        <td><a href="javascript:;">Requested by</a></td>
+                        <td><a href="javascript:;">Status</a></td>
+                        <td>Download</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HJHKUHKH785</td>
+                        <td>10</td>
+                        <td>2018/10/23 17:44</td>
+                        <td>201816@qgy.com</td>
+                        <td>Ready</td>
+                        <td><a href="javascript:;" class="download a-link-normal">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+    <script type="text/javascript" src="js/webjs/manage_claim_codes.js"></script>
+</html>

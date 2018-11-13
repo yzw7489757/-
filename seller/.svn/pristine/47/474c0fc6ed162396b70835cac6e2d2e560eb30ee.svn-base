@@ -1,0 +1,142 @@
+$(function () {
+    // 移除方法
+    inputctr.public.checkLogin();
+    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
+    var addressName;
+    var address1;
+    var address2;
+    var City;
+    var Region;
+    var Phone;
+    var orderId;
+    var Country;
+    var goodsSku;
+    var rmvUsableNum;
+    var rmvUnavailableNum;
+    var strOrderJson;
+    var rmvMode;
+    var showTrue = false;
+    if (window.sessionStorage) {
+        var skuId = sessionStorage.getItem('sku')
+    }
+
+    function inputValue() {
+        addressName = $('.addressName').val().trim();
+        address1 = $('.address1').val().trim();
+        address2 = $('.address2').val().trim();
+        City = $('.City').val().trim();
+        Region = $('.Region').val().trim();
+        Phone = $('.Phone').val().trim();
+        orderId = $('.Phone').val().trim();
+        Zipcode = $('.Zipcode').val().trim();
+        Country = $("select[name='Country'] option:selected").text();
+        rmvUsableNum = $('input[name="usableNum"]').val().trim();
+        rmvUnavailableNum = $('input[name="unusableNum"]').val().trim()
+    }
+
+    $('input[name="usableNum"]').blur(function () { 
+        if(Number($(this).val()) > Number($('.usableNumspan').text())){
+            alert("可配送数量输入错误");
+            return;
+        }else if($(this).val() == "0"){
+            alert("可配送数量输入不为0");
+            return;
+        }else{
+            showTrue = true;
+        }
+     })
+    $("input[name='address']").click(function () {
+        if ($(this).val() == "2") {
+            $('.discarded input[type="text"]').addClass('inputBackground');
+            $('.discarded input[type="text"]').attr('disabled', true);
+            $('.discarded input[type="text"]').val('');
+            rmvMode = $(this).val();
+        } else {
+            $('.discarded input[type="text"]').removeClass('inputBackground');
+            $('.discarded input[type="text"]').attr('disabled', false);
+            rmvMode = $(this).val();
+        }
+    })
+    $('.goBtn').click(function () {
+        inputValue();
+        if (!rmvMode) {
+            alert('请选择移除方法');
+            return;
+        }else if($('input[name="usableNum"]').val() == "") {
+            alert('可配送数量为空');
+            return;
+        }else if($('input[name="usableNum"]').val() == "0") {
+            alert('可配送数量不为0');
+            return;
+        }else if(!showTrue){
+            alert('可配送数量输入错误');
+            return;
+        }else {
+            if (rmvMode == "1") {
+                if (addressName && address1 && City && Country && Region && Zipcode ) {
+                    CreateRMVOrder();
+                } else {
+                    alert('请填写完整配送地址带 * 文本框');
+                    return;
+                }
+                if (!rmvUsableNum && !rmvUnavailableNum) {
+                    alert("请填写可配送数量 && 不可配送数量");
+                    return;
+                }
+                // if(!showTrue){
+                //     alert('可配送数量输入错误')
+                // }
+            } else {
+                if (!rmvUsableNum && !rmvUnavailableNum) {
+                    alert("请填写可配送数量 && 不可配送数量");
+                    return;
+                }
+                CreateRMVOrder();
+            }
+        }
+        
+    })
+    function CreateRMVOrder() {
+        strOrderJson = JSON.stringify({
+            orderId: orderId,
+            sellerId: amazon_userid,
+            rmvMode: rmvMode,
+            addressName: addressName,
+            address1: address1,
+            address2: address2,
+            city: City,
+            country: Country,
+            region: Region,
+            zipcode: Zipcode,
+            phone: Phone,
+            goodsSku: skuId,
+            rmvUsableNum: rmvUsableNum,
+            rmvUnavailableNum: rmvUnavailableNum
+        })
+        $.post(baseUrl + '/CreateRMVOrder', {
+            strOrderJson: strOrderJson
+        }, function (res) {
+            console.log(res);
+            if (res.result == "1") {
+                if (window.sessionStorage) {
+                    sessionStorage.setItem('orderId', res.orderId)
+                }
+                $(location).attr('href', '/seller/manage_inventory_remove_check.html');
+            }
+        }, 'json')
+    }
+    // 获取商品信息
+    $.post(baseUrl + '/GetGoodInfo', {
+        skuId: skuId
+    }, function (res) {
+        console.log(res);
+        $('.goodsName').text(decodeURIComponent(res.goodsName));
+        $('.sellerSku').text(decodeURIComponent(res.sellerSku));
+        $('.condition').text(res.condition);
+        $('.num').text(res.num);
+        $('.usableNumspan').text(res.usableNum);
+        $('.unusableNumspan').text(res.unusableNum);
+        $('.asin').text(res.asin);
+        $('.fnsku').text(res.fnsku);
+    }, 'json')
+})

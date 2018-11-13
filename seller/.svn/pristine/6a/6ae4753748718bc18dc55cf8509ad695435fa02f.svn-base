@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/data_payment.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container">
+        <div class="a-spacing-base">
+            <span class="containerHeader">付款</span>
+            <a>了解更多信息</a>
+        </div>
+        <ul>
+            <li><a href="javascript:void(0)" class="active">结算一览</a></li>
+            <li><a href="javascript:void(0)">交易一览</a></li>
+            <li><a href="javascript:void(0)">所有结算</a></li>
+            <li><a href="javascript:void(0)">日期范围报告</a></li>
+        </ul>
+        <ol>
+            <!-- 结算一览 -->
+            <li class="a-spacing-top-medium">
+                <h2>预计转账日期：<b>2018年5月28日*。</b>但是，如果您的可用余额为0.00，则不会在次日期进行转账。</h2>
+                <div class="a-spacing-top-mini"><span class="a-color-tertiary">*转账最多需要3-5个工作日即可完成。请以实际转账金额为准。有关向您转账的日期的更多信息，请参阅</span><a
+                        href="javascript:void(0)">帮助页面</a></div>
+                <div>
+                    <button class="float_right">申请转账</button>
+                    <div class="clear"></div>
+                </div>
+                <div class="layout">
+                    <div class="float_left layoutLeft a-color-tertiary">结算周期</div>
+                    <div class="float_right layoutright pdTop10">
+                        <select name="">
+                            <option value="">12月4,2017 19:47 GMT-0800-5月23日，2018 02:37 GMT-0700（未结）</option>
+                        </select>
+                        <a href="javascript:void(0)">前一结算</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="layout">
+                    <div class="float_left layoutLeft a-color-tertiary">本期期初余额是多少？</div>
+                    <div class="float_right layoutright border_bottom pdTop10">
+                        <div class="float_left width33">
+                            <b class="border_bottom">期初余额</b>
+                        </div>
+                        <div class="float_left width33">
+                            <span class="border_bottom"> 转入</span>
+                        </div>
+                        <div class="float_left width33">
+                            <p class="align_right">-US$39.99</p>
+                            <hr>
+                            <p>
+                                <p class="float_left">小计</p>
+                                <p class="float_right">-US$39.99</p>
+                                <p class="clear"></p>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="layout">
+                    <div class="float_left layoutLeft a-color-tertiary">在此结算周期发生了哪些款项？</div>
+                    <div class="float_right layoutright border_bottom pdTop10">
+                        <!-- 向亚马逊支付的款项 -->
+                        <div class="pdTop10">
+                            <div class="float_left width33">
+                                <span class="border_bottom">向亚马逊支付的款项</b>
+                            </div>
+                            <div class="float_left width33">
+                                <span class="border_bottom"> 卖家再次付款</span>
+                            </div>
+                            <div class="float_left width33">
+                                <p class="align_right">-US$39.99</p>
+                                <hr>
+                                <p>
+                                    <p class="float_left">小计</p>
+                                    <p class="float_right">-US$39.99</p>
+                                    <p class="clear"></p>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- 订单 -->
+                        <div class="pdTop10">
+                            <div class="float_left width33">
+                                <b class="border_bottom">订单</b>
+                            </div>
+                            <div class="float_left width33">
+                                <span class="border_bottom"> 商品价格</span>
+                                <br>
+                                <span class="border_bottom"> 促销返点</span>
+                                <br>
+                                <span class="border_bottom"> 亚马逊所收费用</span>
+                            </div>
+                            <div class="float_left width33">
+                                <p class="align_right">-US$39.99</p>
+                                <p class="align_right">-US$39.99</p>
+                                <p class="align_right">-US$39.99</p>
+                                <hr>
+                                <p>
+                                    <p class="float_left">小计</p>
+                                    <p class="float_right">-US$39.99</p>
+                                    <p class="clear"></p>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- 退款 -->
+                        <div class="pdTop10">
+                            <div class="float_left width33">
+                                <span class="border_bottom">退款</span>
+                            </div>
+                            <div class="float_left width33">
+                                <span class="border_bottom"> 商品价格</span>
+                            </div>
+                            <div class="float_left width33">
+                                <p class="align_right">-US$39.99</p>
+                                <hr>
+                                <p>
+                                    <p class="float_left">小计</p>
+                                    <p class="float_right">-US$39.99</p>
+                                    <p class="clear"></p>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- 预留金额 -->
+                        <div class="pdTop10">
+                            <div class="float_left width33">
+                                <b class="border_bottom">预留金额</b>
+                            </div>
+                            <div class="float_left width33">
+                                <b class="border_bottom"> 预留金额</b>
+                            </div>
+                            <div class="float_left width33">
+                                <p class="align_right">-US$39.99</p>
+                                <hr>
+                                <p>
+                                    <p class="float_left">小计</p>
+                                    <p class="float_right">-US$39.99</p>
+                                    <p class="clear"></p>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="layout">
+                    <div class="float_left layoutLeft a-color-tertiary">结算金额是多少？</div>
+                    <div class="float_right layoutright border_bottom pdTop10">
+                        <div class="float_left width33">
+                            <span class="border_bottom">期末余额</span>
+                        </div>
+                        <div class="float_left width33">
+                            <span class="border_bottom"> 总余额</span>
+                        </div>
+                        <div class="float_left width33">
+                            <p class="align_right">-US$39.99</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="layout">
+                    <div class="float_left layoutLeft a-color-tertiary">您何时收到转账？</div>
+                    <div class="float_right layoutright pdTop10">
+                        <div class="float_left width61">
+                            <b class="inline-block a-spacing-base">转账金额 预计转账日期为：2018年5月28日*</b>
+                            <br>
+                            <span class="a-color-tertiary">*转账最多需要3-5个工作日即可完成。当前显示的金额为预计金额，实际转账金额可能根据您的卖家账户中的新活动（包括商品销售额、费用、退款、信用卡拒付一级亚马逊商城交易保障索赔）而有所变化。</span>
+                        </div>
+                        <div class="float_right width33">
+                            <p class="align_right a-spacing-base">-US$39.99</p>
+                            <button class="marLeft88">申请转账</button>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </li>
+            <!-- 交易一览 -->
+            <li>
+                <div class="a-section a-spacing-top-base">
+                    <div class="float_right">
+                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                            <span class="button_label">开始</span>
+                        </span>
+                    </div>
+                    <div class="float_right marRight5">
+                        <b class="border_bottom">查找某项交易:</b>
+                        <input type="text" placeholder="输入订单编号" class="inline-block" style="width: 200px;">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <table class="screenTable">
+                    <tr>
+                        <td class="align_right width33">查看筛选结果：</td>
+                        <td>
+                            <select>
+                                <option value="">所有交易类型</option>
+                                <option value="">订单付款</option>
+                                <option value="">退款</option>
+                                <option value="">买家信用卡退款</option>
+                                <option value="">-----------</option>
+                                <option value="">亚马逊商城交易保障退款</option>
+                                <option value="">服务费</option>
+                                <option value="">配送服务</option>
+                                <option value="">向亚马逊支付的款项</option>
+                                <option value="">其他</option>
+                            </select>
+                            <span>或 <a href="">搜索交易</a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align_right width33">时间期限：</td>
+                        <td>
+                            <p>
+                                <span>结算周期</span>
+                                <span>|</span>
+                                <a>天数范围</a>
+                                <span>|</span>
+                                <a>自定义日期范围</a>
+                            </p>
+                            <select>
+                                <option value="">2017-12-4-2018-5-23（未结）</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+
+                            <span class="pdLeft33 awesomeButton buttonLarge primaryLargeButton inner_button">
+                                <span class="button_label">更新</span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <table class="screenTable">
+                    <tr>
+                        <td colspan="9">
+                            <div class="float_left">
+                                <b>报表期2017-12-4 -- 2018-5-23 （未结）内的交易</b>
+                            </div>
+                            <div class="float_right">
+                                <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                    <span class="button_label">下载</span>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="9">商品1至1</td>
+                    </tr>
+                    <tr style="background: #ffffff" class="align_center">
+                        <td>日期</td>
+                        <td>交易类型</td>
+                        <td>订单编号</td>
+                        <td>商品详情</td>
+                        <td>商品价格总额</td>
+                        <td>促销返点总额</td>
+                        <td>亚马逊所受费用</td>
+                        <td>其他</td>
+                        <td>总计</td>
+                    </tr>
+                    <tr class="align_center">
+                        <td>2017-12-4</td>
+                        <td>向亚马逊支付的款项|卖家再次付款</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>US$0.00</td>
+                        <td>US$0.00</td>
+                        <td>US$0.00</td>
+                        <td>US$0.00</td>
+                        <td>US$0.00</td>
+                    </tr>
+                </table>
+            </li>
+            <!-- 所有结算 -->
+            <li>
+                <div class="a-section a-spacing-top-base">
+                    <div class="float_right">
+                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                            <span class="button_label">开始</span>
+                        </span>
+                    </div>
+                    <div class="float_right marRight5">
+                        <b class="border_bottom">查找某项交易:</b>
+                        <input type="text" placeholder="输入订单编号" class="inline-block" style="width: 200px;">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <p>下载亚马逊对您的账户进行结算时所创建的报告。<a href="javascript:void(0)">了解更多信息</a></p>
+                    <ol class="olPay">
+                        <li><a href="javascript:void(0)">何时向我付款？</a></li>
+                        <li><a href="javascript:void(0)">为什么有些报告会丢失？</a></li>
+                    </ol>
+                    <div class="dateRange a-spacing-mini">
+                        <b class="inline-block a-spacing-small">选择日期范围</b>
+                        <div>
+                            <div class="float_left marRight5">
+                                <b>自：</b>
+                                <input type="text" placeholder="18-5-23">
+                                <b>至：</b>
+                                <input type="text" placeholder="18-5-23">
+                            </div>
+                            <div class="float_left">
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label">搜索</span>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <table class="screenTable">
+                        <tr>
+                            <td colspan="8">商品1至2</td>
+                        </tr>
+                        <tr style="background: #ffffff" class="align_center">
+                            <td>结算周期</td>
+                            <td>期初余额</td>
+                            <td>商品价格总计</td>
+                            <td>促销返点总计</td>
+                            <td>亚马逊所受费用总计</td>
+                            <td>其他总计</td>
+                            <td>存款总计</td>
+                            <td>操作</td>
+
+                        </tr>
+                        <tr class="align_center">
+                            <td>2017-12-4</td>
+                            <td>向亚马逊支付的款项|卖家再次付款</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>US$0.00</td>
+                            <td>US$0.00</td>
+                            <td>US$0.00</td>
+                            <td>
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label">查看一览</span>
+                                </span>
+                                <br>
+                                不可用（未结）
+                            </td>
+                        </tr>
+                        <tr class="align_center">
+                            <td>2017-12-4</td>
+                            <td>向亚马逊支付的款项|卖家再次付款</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>US$0.00</td>
+                            <td>US$0.00</td>
+                            <td>US$0.00</td>
+                            <td>
+                                <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                    <span class="button_label">查看一览</span>
+                                </span>
+                                <br>
+                                不可用（未结）
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">商品1至2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="8">
+                                <div class="float_left marRight5">
+                                    每页显示
+                                    <select>
+                                        <option value="10">10</option>
+                                    </select>
+                                    个结果
+                                </div>
+                                <div class="float_left">
+                                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                        <span class="button_label">开始</span>
+                                    </span>
+                                </div>
+                                <div class="clear"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p><b>请注意：</b>只有当您的余额为正时，才会有付款。付款一般在结算报告日的3-5个工作日内进行。</p>
+                </div>
+            </li>
+            <!-- 日期范围报告 -->
+            <li>
+                日期范围报告
+            </li>
+        </ol>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="./js/jquery-3.3.1.min.js "></script>
+<script src="./js/public.js " type="text/javascript "></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+<script src="i18n/language.js" type="text/javascript"></script>
+<script src="js/webjs/data_payment.js" type="text/javascript"></script>
+
+</html>

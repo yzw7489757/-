@@ -1,0 +1,13 @@
+$(function () { 
+    // 移除方法
+
+    $("input[name='address']").click(function () { 
+        if($(this).val() == "弃置"){
+            $('.discarded input').addClass('inputBackground');
+            $('.discarded input').attr('disabled','disabled')
+        }
+     })
+    $('.goBtn').click(function () { 
+        $(location).attr('href', '/seller/manage_inventory_remove_check.html');
+     })
+ })

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>促销活动</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/promotion.css" />
+        <link rel="stylesheet" type="text/css" href="css/select_down.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="promotion-rule-content">
+            <div class="promotion-heading-section clear_both">
+                <h1 class="fl">促销</h1>
+                <div class="learn_more fl">
+                    <a href="javascript:;" class="a-link-normal">了解更多信息</a>
+                </div>
+            </div>
+             <div class="promotion-project">
+                <ul class="promotion-nav">
+                    <li class="active"><a href="javascript:;">创建促销</a></li>
+                    <li><a href="javascript:;">管理您的促销</a></li>
+                    <li><a href="javascript:;">管理商品列表</a></li>
+                </ul>
+            </div>
+            <div class="promotion_tab">
+                <ul class="Percentage-list clear_both">
+                    <li>
+                        <h2 class="a-size-large">Free Shipping</h2>
+                        <p class="a-spacing-large">买多少数量产品或者消费满多少，就可享受商品免运费。</p>
+                        <button class="secondaryAUIButton a-button-inner a-button-31">Created</button>
+                    </li>
+                    <li>
+                        <h2 class="a-size-large">Percentage Off</h2>
+                        <p class="a-spacing-large">买多少数量产品或者消费满多少，就可减免多少钱或者享受一定的折扣优惠。</p>
+                        <button class="secondaryAUIButton a-button-inner a-button-31" onclick="javascript:location.href='money_off.html'">Created</button>
+                    </li>
+                    <li>
+                        <h2 class="a-size-large">Buy One Get One</h2>
+                        <p class="a-spacing-large">购买一定数量产品后，可获赠同类产品或其他产品。</p>
+                        <button class="secondaryAUIButton a-button-inner a-button-31">Created</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="promotion_tab hide">暂无数据</div>
+            <div class="promotion_tab hide">
+               <div class="create_promotion">
+                   <button class="secondaryAUIButton a-button-inner a-button-31 drop_select class_select" creat='true' id="browse-class">
+                       <span>浏览分类节点编号列表</span>
+                       <i class="a-icon a-icon-dropdown"></i>
+                   </button>
+                   <button class="primaryAUIButton a-button-inner a-button-31 create_list_button" onclick="javascript:location.href='create_product_selection.html'">创建商品列表</button>
+               </div>
+               <div class="search_promotion">
+                   <button class="secondaryAUIButton a-button-inner a-button-31 drop_select search_select">
+                       <span>Tracking ID</span>
+                       <i class="a-icon a-icon-dropdown"></i>
+                   </button>
+                   <input type="search" id="search_key" placeholder="Partial tracking ID required"/>
+                   <button class="button-search">Search</button>
+               </div>
+               <div class="num_promotion">
+                   <div class="a-color-secondary">0 product selections</div>
+               </div>
+               <div class="product_selection_box">
+                   <table class="product_selection_table a-row" border="1">
+                       <thead>
+                           <tr>
+                               <td>Tarcking ID</td>
+                               <td>Internal Description</td>
+                               <td>Creation Date</td>
+                           </tr>
+                       </thead>
+                   </table>
+               </div> 
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+     <script type="text/javascript" src="js/select_down.js"></script>
+    <script type="text/javascript" src="js/webjs/promotion.js"></script>
+</html>

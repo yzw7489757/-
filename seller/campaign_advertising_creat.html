@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>创建活动第一步</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/campaign_advertising_creat.css"/>
+	
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+	<div class="campaign-advertising-creat-wrap">
+		<div class="campaign-advertising-creat-container">
+			<div id="campaign-advertising-creat-form">
+				<div class="wizard">
+					<div class="steps">
+						<ul>
+							<li role="tab" class="current">
+								<a class="no-underline" id="steps-uid-0-t-0" href="#">
+									<p class="name">CAMPAING SETTINGS</p>
+									<p class="number">1</p>
+								</a>
+							</li>
+							<li role="tab" class="disabled">
+								<a class="no-underline" id="steps-uid-0-t-1" href="#">
+									<p class="name">CREATE AD GROUP</p>
+									<p class="number">2</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="creat-information">
+					<p class="creat-step-describe">Set your campaign budget and duration</p>
+					<div class="a-box a-alert a-alert-error hide" id="commit-error">
+						<div class="a-box-inner a-alert-container">
+							<h4 class="a-alert-heading">请填写完整 ! </h4>
+							<!--<i class="a-icon a-icon-alert"></i>-->
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Campaign name</label>
+						<input type="text" class="long-input" name="CampaignName"  placeholder="Campaign name"/>
+					</div>
+					<div class="form-group">
+						<label>Daily budget</label>
+						<input type="text" name="DailyBudget"  placeholder="Daily budget"/>
+						<span>$1.00 minimum</span>
+					</div>
+					<div class="form-group clearfix">
+						<div class="pull-left start-date">
+							<label>Start date</label>
+							<input type="text" value="" placeholder="开始日期" class="ShipDate" readonly="readonly" id="customize-begin-date" lay-key="1">
+						</div>
+						<div class="pull-left end-date">
+							<label>End date</label>
+							<input type="text" value=""  placeholder="结束日期" class="ShipDate" readonly="readonly" id="customize-end-date" lay-key="2">
+						</div>
+					</div>
+					<p class="creat-step-describe">Select a targeting type</p>
+					<div class="form-group clearfix">
+						<input type="radio" class="pull-left" id="automatic-targeting" name="targeting-type" value="1"/>
+						<div class="pull-left targeting-type-dec">
+							<label for="automatic-targeting">Automatic targeting</label>
+							<p>Save time and let Amazon target your ads to all relevant customer searches based on your product info.<a href="#">Learn more</a></p>
+						</div>
+					</div>
+					<div class="form-group clearfix">
+						<input type="radio" class="pull-left" id="manual-targeting" name="targeting-type" value="2" />
+						<div class="pull-left targeting-type-dec">
+							<label for="manual-targeting">Manual targeting</label>
+							<p>Your ads appear when a customer's search matches keywords that you provide.<a href="#">Learn more</a></p>
+						</div>
+					</div>
+					<div class="a-form-actions"> 	
+						<button class="secondaryAUIButton" onclick="history.go(-1)">Cancel</button> 					
+						<button class="primaryAUIButton" onclick="campaign_advertising_create.Commitdata()">Continue to next step</button> 	
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+    <div class="a-container-footer"></div>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/laydate.js"></script>
+	<script src="js/public.js" type="text/javascript"></script>
+	<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+	<script src="js/webjs/campaign_advertising_creat.js" type="text/javascript" charset="utf-8"></script>
+	 
+</body>
+</html>
+

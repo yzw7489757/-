@@ -1,0 +1,166 @@
+$(function () {
+    var radio = false;
+    var batteryMain;
+    var hazmatMain;
+    var goodId;
+    var skuId;
+    var goodsArr;
+    var skuIds = skuId + ',';
+    var baseUrl = 'http://192.168.2.164:8096/QAMZNAPI.asmx';
+    if (window.sessionStorage) {
+        goodId = sessionStorage.getItem('goodId')
+        skuId = sessionStorage.getItem('skuId')
+        skuIds = skuId + ',';
+        sessionStorage.setItem('skuIds', skuIds)
+    }
+    var strGoodsJson = JSON.stringify({
+        goodsArr: [{
+            goodId: goodId,
+            skuId: skuId
+        }]
+    });
+
+
+    // 商品信息初始化
+    $.post(baseUrl + '/Transformation', {
+        strGoodsJson: strGoodsJson
+    }, function (res) {
+        console.log(res)
+        var data = res.goodsInfo[0];
+        // 卖家sku
+        $('.sellerSku').text(data.sellerSku)
+        // 商品名称
+        $('.goodName').text(decodeURIComponent(data.goodName))
+        // 状况：
+        $('.condition').text(decodeURIComponent(data.condition))
+        // 卖家SKU
+        $('.sellerSku').text(decodeURIComponent(data.sellerSku))
+        // ASIN
+        if (data.productIdType == "ASIN") {
+            $('.productId').text(decodeURIComponent(data.productId))
+        } else {
+            $('.productId').text('')
+        }
+        // img
+        $('.img img').attr('src', data.productImage)
+        // 配送类型：-1 所有 1卖家 2 亚马逊
+        if (data.shippingMode == '-1') {
+            $('.shippingMode').text('所有')
+        } else if (data.shippingMode == '1') {
+            $('.shippingMode').text('卖家')
+        } else if (data.shippingMode == '2') {
+            $('.shippingMode').text('亚马逊')
+        }
+        // UPC码
+        if (data.productId != "") {
+            $('.productId').text(decodeURIComponent(data.productId))
+        }
+        // 电池信息（1 使用电池 0 不使用）
+        if (data.batteryMain == '1') {
+            $("input[name=info]:eq(0)").attr('checked', 'checked')
+            batteryMain = 1;
+        } else if (data.batteryMain == '0') {
+            $("input[name=info]:eq(1)").attr('checked', 'checked')
+            batteryMain = 0;
+        }
+        // 商品法规（1 是 0 否 2 不确认）
+        if (data.hazmatMain == '1') {
+            $("input[name=type]:eq(0)").attr('checked', 'checked')
+            hazmatMain = 1;
+        } else if (data.hazmatMain == '0') {
+            $("input[name=type]:eq(1)").attr('checked', 'checked')
+            hazmatMain = 0;
+        } else if (data.hazmatMain == '2') {
+            $("input[name=type]:eq(2)").attr('checked', 'checked')
+            hazmatMain = 2;
+        }
+        // 
+        if ($("input[name=info]:checked").length > 0 && $("input[name=type]:checked").length > 0) {
+            $('.unfinish').hide();
+            $('.finish').show();
+            DangerousInfo();
+        }
+    }, 'json')
+
+    // 电池信息
+    $("input[name=info]").click(function () {
+        if ($(this).val() == 'infoYes') {
+            batteryMain = 1;
+        } else {
+            batteryMain = 0;
+        }
+    })
+    // 商品法规信息
+    $("input[name=type]").click(function () {
+        if ($(this).val() == 'typeYes') {
+            hazmatMain = 1;
+        } else if ($(this).val() == 'typeNo') {
+            hazmatMain = 0;
+        } else if ($(this).val() == 'typeUncertain') {
+            hazmatMain = 2;
+        }
+    })
+
+    // 添加危险品信息
+    $('.errinfo').click(function (e) {
+        e.preventDefault();
+        $('.model-wrapper').show();
+    })
+    $('.editTable').click(function (e) {
+        e.preventDefault();
+        $('.model-wrapper').show();
+    })
+
+    // 关闭按钮
+    $('.closeBtn').click(function () {
+        $('.model-wrapper').hide();
+    })
+
+    // 提交
+    $('.submitBtn').click(function () {
+        if ($("input[name=info]:checked").length > 0 && $("input[name=type]:checked").length > 0) {
+            DangerousInfo();
+        } else {
+            alert('请选择电池信息&&商品法规信息！')
+        }
+    })
+
+    function DangerousInfo() {
+        // 保存危险信息
+        $.post(baseUrl + '/DangerousInfo', {
+            goodId: goodId,
+            batteryMain: batteryMain,
+            hazmatMain: hazmatMain
+        }, function (res) {
+            console.log(res)
+            if (res.result == '1') {
+                $('.model-wrapper').hide();
+                if ($("input[name=info]:checked").length > 0 && $("input[name=type]:checked").length > 0) {
+                    $('.unfinish').hide();
+                    $('.finish').show();
+                }
+            }
+        }, 'json')
+    }
+    // 保存并继续
+    $('.saveBtn').click(function () {
+        if ($("input[name=info]:checked").length > 0 && $("input[name=type]:checked").length > 0) {
+            $.post(baseUrl + '/SaveTransformation', {
+                skuIds: skuIds
+            }, function (res) {
+                console.log(res)
+                if (res.result == '1') {
+                    $(window).attr('location', '/seller/manage_inventory_restocking.html')
+                }
+            }, 'json')
+        } else {
+            alert('请选择电池信息&&商品法规信息！')
+        }
+    })
+    // 返回
+    $('.returnBtn').click(function () {
+        window.location.href = 'manage_inventory_choose.html?goodsID=' + goodId + '&sku_id=' + skuId;
+        // $(window).attr('location', '/seller/manage_inventory_choose.html')
+    })
+
+})

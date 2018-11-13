@@ -1,0 +1,32 @@
+let data_analysis={};
+$(function(){
+	data_analysis.Initdata();
+	inputctr.public.judgeBegaintask('1601');
+	inputctr.public.judgeRecodertask('1601','下载订单数据报告');
+})
+data_analysis.Initdata=function(){
+	let reauest_data={
+		seller_id:amazon_userid
+	}
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/AllOrders',
+        data:reauest_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		inputctr.public.judgeFinishtask('1601',data_analysis.InitdataCallback,data);
+        	}else{
+        		alert(decodeURIComponent(data.error));
+        	}
+        	
+        },
+        error:function(XHR){
+          
+        }
+    });
+}
+data_analysis.InitdataCallback=function(data){
+	var html=template(document.getElementById('amazon-data-analysis-table-tpl').innerHTML,data);
+	document.getElementById('amazon-data-analysis-table').innerHTML = html;
+}

@@ -1,0 +1,27 @@
+let question={};
+$(function(){
+	question.GetQuestion();
+})
+
+question.GetQuestion=function(){
+	let reauest_data={
+		seller_id:amazon_userid
+	}
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetQuestion',
+        data:reauest_data,
+        dataType:"json",
+        success:function(data){
+        	debugger
+        	if(data.result==1){
+        		 
+        	}else{
+        		 
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    });
+}

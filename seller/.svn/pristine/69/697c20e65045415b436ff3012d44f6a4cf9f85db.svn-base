@@ -1,0 +1,162 @@
+body {
+    font-size: 13px;
+    color: #111;
+}
+.off-content{
+    padding: 18px;
+}
+a {
+    color: #0066c0;
+}
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #c45500;
+}
+a.a-link-normal:hover {
+    text-decoration: underline;
+}
+.off-title{
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.go_to{
+    margin-bottom: 10px;
+}
+#Rreview-button{
+    margin-left: 5px;
+}
+.step-conditions{
+    border: 1px solid  #ccc;
+}
+.step-bg{
+    background: #F3F3F3;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid  #ccc;
+}
+.step-innner{
+    padding: 10px;
+}
+.step-table{
+    border:1px solid  #ccc;
+}
+.step-table td{
+    border-color: #ccc;
+    padding: 5px;
+}
+.step-table .left-td{
+    text-align: right;
+    font-weight: 600;
+    width: 35%;
+    background: #F3F3F3;
+}
+.step-table .left-td a{
+    font-weight: 600;
+}
+.step-table .right-td{
+    text-align: left;
+    padding-left: 10px;
+}
+.drop-select{
+    width: 345px!important;
+    position:relative;
+    text-align: left;
+    margin-right: 25px;
+}
+.a-icon-dropdown {
+    width: 5px;
+    height: 8px;
+    background-position: -65px -5px;
+    position: absolute;
+    top: 10px;
+    right: 9px;
+}
+#purchases-quality,#percent-quality{
+    width: 155px;
+}
+#Qualifying-input{
+    width: 340px;
+    margin-right: 25px;
+    margin-left: 30px;
+}
+.date-enter,.drop-date{
+    width: 250px!important;
+}
+.date-enter{
+    display:inline-block;
+    position:relative;
+}
+.icon-calendar {
+    width: 23px;
+    height: 22px;
+    background-position: -297px -477px;
+    opacity: .7;
+    position: absolute;
+    top: 5px;
+    right: 3px;
+}
+.date-enter input{
+    padding-right: 25px;
+}
+.drop-date{
+    margin: 0 25px;
+    text-align: left;
+    position:relative;
+}
+.a-step-up{
+    width: 8px;
+    height: 10px;
+    background-position: -379px -12px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    transition: transform 0.2s;
+}
+.a-step-drown{
+    transform:rotate(90deg);
+}
+input[type="radio"]{
+    margin-bottom: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.claim-label{
+    margin-right: 45px;
+}
+.a-icon-tip{
+    width: 8px;
+    height: 14px;
+    background-position: -165px -129px;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+#Cliam-Code{
+    width: 115px;
+    margin-right: 10px;
+}
+#Checkout-display,#Short-display{
+    width: 250px;
+}
+input[readonly]{
+    background: #f3f3f3;
+    color:#555;
+}
+input[readonly]:focus{
+    border: 1px solid #a6a6a6;
+    box-shadow: none;
+}
+.a-text-top{
+    vertical-align: top;
+}
+#editor-submit{
+    font-size: 14px;
+    margin-top: 10px;
+}
+#Qualifying-tr{
+    display:none;
+}
+.claim_show,.customsize_show{
+    display:none;
+}

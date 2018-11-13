@@ -1,0 +1,134 @@
+let campaign_ad_group={};
+$(function(){
+	let name=inputctr.public.getQueryString('group');
+	$('#group-name-box').html(decodeURIComponent(name));
+	campaign_ad_group.GetCampaignList('1');
+	campaign_ad_group.InitFilterCondition('.a-dropdown-container');
+})
+//初始化筛选条件
+campaign_ad_group.InitFilterCondition=function(target){
+	let ctr_dom=$(target).find('.dropdown-menu').find('li a');
+	ctr_dom.each(function(){
+		$(this).click(function(){
+			if($(this).parent('li').attr('aria-checked')=="true"){
+				//没有改变筛选条件
+				 if($(target).prop('id')=="operationAdCampaign"){
+					campaign_ad_group.OperationAdGroup();
+				}else{
+					return true;
+				}
+			}else{
+				$(this).addClass('active');
+				$(this).parent('li').attr('aria-checked',"true");
+				$(this).parent('li').siblings('li').attr('aria-checked',"false");
+				$(this).parent('li').siblings('li').find('a').removeClass('active');
+				let val=$(this).attr('data-value');
+				let tex=$(this).attr("replace-text");
+				$(this).parents('.a-dropdown-container').attr('data-condition',val);
+				$(this).parents('.a-dropdown-container').find('.a-dropdown-prompt').html(tex);
+				let flag=$('.spa-tab-container').find('.active a').attr('data-id');
+				if($(this).parents('.a-dropdown-container').prop('id')=="select-keywords-action"){
+					campaign_ad_group.GetCampaignList()
+				}else if($(this).parents('.a-dropdown-container').prop('id')=="operationAdKeywords"){
+					campaign_ad_group.OperationAdGroup();
+				}
+				
+			}
+		})
+	})
+}
+
+//获取分组列表 
+campaign_ad_group.GetCampaignList=function(){
+	let key=$('#product-search').val();
+	let status=$('#select-keywords-action').attr('data-condition');
+	let group_id=inputctr.public.getQueryString('groupid');
+	let request_data={
+			json:{
+				group_id:group_id,
+				key:key,
+				status:status
+			}
+	}
+	request_data.json=JSON.stringify(request_data.json);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/GetCampaingGroupKeywordsList',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+    			var html=template(document.getElementById('Keywords-table-container-tpl').innerHTML,data);
+				document.getElementById('Keywords-table-container').innerHTML = html;
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+
+campaign_ad_group.GoCreatCampaign=function(){
+	location.href="campaign_advertising_creat.html"
+}
+//改变关键词状态
+campaign_ad_group.OperationAdGroup=function(){
+	let groupid="";
+	$('#Keywords-table-container table tbody input[type="checkbox"]:checked').each(function(){
+		groupid+=$(this).prop('id')+','
+	})
+	if(!groupid){
+		alert('请选择需要操作的关键字！');
+		return false;
+	}else{
+		groupid=groupid.substr(0,groupid.length-1);
+	}
+	let action=$('#operationAdKeywords').attr('data-condition');
+	let request_data={
+			data:{
+				id:groupid,
+				action:action 
+			}
+	}
+	request_data.data=JSON.stringify(request_data.data);
+	$.ajax({
+        type:'POST',
+        url:baseUrl+'/CampaingGroupKeywordsActions',
+        data:request_data,
+        dataType:"json",
+        success:function(data){
+        	if(data.result==1){
+        		 campaign_ad_group.GetCampaignList('1')
+        	}
+        },
+        error:function(XHR){
+          
+        }
+    }); 
+}
+
+//选择所有的活动
+campaign_ad_group.CheckKeywords=function(target){
+	if($(target).prop('id')=='check-all'){
+		//点击全选
+		if($(target).is(':checked')){
+			$('#Keywords-table-container table tbody input[type="checkbox"]').prop('checked',true);
+		}else{
+			$('#Keywords-table-container table tbody input[type="checkbox"]').prop('checked',false);
+		}
+	}else{
+		let flag=1;
+		$('#Keywords-table-container table tbody input[type="checkbox"]').each(function(){
+			if(!$(this).prop('checked')){
+				flag=0;
+			}
+		})
+		if(flag==0){
+			$('#Keywords-table-container table #check-all').prop('checked',false);
+		}else{
+			$('#Keywords-table-container table #check-all').prop('checked',true);
+		}
+	}
+	
+}
+ 

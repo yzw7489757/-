@@ -1,0 +1,210 @@
+.amazon-advertising-charge-method{
+	width: 100%;
+}
+.amazon-advertising-charge-method .amazon-advertising-charge-method-container{
+	padding: 28px 2.5%;
+}
+
+ 
+.amazon-advertising-charge-method-header h1{
+	color: #c8731e;
+	font-size: 18px;
+	font-weight: bold;
+}
+.advertising-describe{
+	margin: 16px 0px;
+	font-size: 14px;
+}
+.amazon-advertising-charge-method-second-header p{
+	color: #c8731e;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 4px 0px;
+}
+.payment-methods-table{
+	width: 100%;
+}
+.payment-methods-table tr th,
+.payment-methods-table tr td{
+	
+	text-align: left;
+	background: #fcf4fd;
+}
+.payment-methods-table tr th{
+	padding: 6px 20px;
+}
+.payment-methods-table tr td{
+	padding: 10px 20px; 
+}
+.payment-methods-table tr td input[type="radio"],
+.payment-methods-table tr th input[type="radio"]{
+	margin: 0px;
+	vertical-align: middle;
+}
+.payment-methods-table tr td label{
+	margin: 0px;
+}
+.highlighted-button {
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat left 0px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.order-detainls-container .order-information-container3 button {
+    width: 200px;
+    margin: 5px 0px;
+}
+.highlighted-button-label {
+    display: block;
+    background: transparent url(../img/sc_button_sliding._V192548845_.gif) no-repeat right -32px;
+    font-weight: bold;
+}
+.button {
+    padding: 1px 8px;
+    cursor: pointer;
+}
+.payment-method-commit{
+	margin-top: 30px;
+	width: 80%;
+}
+.a-dropdown-container{
+	margin-left: 8px;
+	margin-bottom: 10px;
+}
+.a-dropdown-container .dropdown-menu{
+	top: -3px;
+	left: -1px;
+	max-height: 169px;
+	overflow-y: scroll;
+    width: auto;
+}
+.a-button {
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none!important;
+    vertical-align: middle;
+}
+.a-button-dark, .a-button-search {
+    background: #444C55;
+    border-color: #3d444c #2f353b #2c3137;
+    color: #fff;
+}
+.a-button-inner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 29px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border-radius: 2px;
+}
+.a-button .a-button-inner {
+    background: #eff1f3;
+    background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+}
+.a-button-dark .a-button-inner, .a-button-search .a-button-inner {
+    background: #5b626a;
+    background: -webkit-linear-gradient(top,#72787F,#444C55);
+    background: linear-gradient(to bottom,#72787F,#444C55);
+    box-shadow: 0 1px 0 rgba(255,255,255,.15) inset;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+}
+.a-button-text {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 80px;
+}
+.a-button-dark .a-button-text, .a-button-search .a-button-text {
+    font-weight: 700;
+    color: #fff;
+}
+.a-button-dropdown .a-button-text {
+    padding-right: 22px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 10;
+    color: #111;
+}
+.a-icon-dropdown {
+    width: 5px;
+    height: 8px;
+    background-position: -65px -5px;
+}
+.a-button .a-icon-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+}
+.dropdown-menu{
+    overflow-y: auto;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.2);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.13);
+}
+.a-dropdown-link {
+    padding: 2px 12px 1px 13px;
+    display: block;
+    white-space: nowrap;
+    outline: 0;
+    border: 1px solid transparent;
+    margin-left:0px;
+}
+.a-dropdown-link.active {
+    background-color: #f3f3f3;
+    border-color: #e7e7e7;
+    border-top-color: #e7e7e7;
+    border-left-color: #e77600!important;
+}
+.myo-sqf-footer button, .modal-footer button, .filter-selection button {
+    height: 29px;
+    padding: 0px 10px;
+    margin-left: 8px;
+}
+.a-button-primary {
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+.date-fenge-line{
+	margin:5px 10px;
+	width: 2px;
+	height: 19px;
+	background: #ADB1B8 ;
+	transform: rotate(20deg);
+}
+.card-information-list{
+	width: 450px;
+}
+.billing-address{
+	margin-top:10px ;
+}
+.billing-address label{
+	font-weight: normal;
+	vertical-align:middle;
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+.billing-address input[type="radio"]{
+	vertical-align: middle;
+	margin: 0px;
+}
+#add-new-card-information{
+	margin-top: 20px;
+}

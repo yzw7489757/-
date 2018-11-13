@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="madagascar-main-body">
+        <div class="a-spacing-small">
+            <h3>多渠道配送订单</h3>
+            <div>为您的订单选择配送速度。查看配送速度的成本和预计送达时间。完成后，请点击”下单“。<a href="javascript:void(0)">了解更多信息</a></div>
+        </div>
+        <ul class="navTitle">
+            <li>
+                提供详情
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li class="selectLi">
+                检查并下单
+                <div class="border-triangle select-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li>
+                订单一览
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+        </ul>
+
+        <div class="a-box">
+            <div class="table" style="background: #f0f6f9;">
+                <div class="float_left width65 a-column">
+                    <h4 class="titleColor a-spacing-mini">选择配送操作</h4>
+                    <hr>
+                    <div class="a-section">
+                        <div><input type="radio" name="kucun" id=""> 配送此库存</div>
+                        <div><input type="radio" name="kucun" id=""> 最多将此库存保持2周 <a href="javascript:void(0)">了解更多信息</a></div>
+                    </div>
+                    <div class="a-box a-alert a-alert-warning a-section">
+                        <div class="a-box-inner a-alert-container">
+                            <i class="a-icon a-icon-alert"></i>
+                            <div class="a-alert-content">
+                                <h4>注意</h4>
+                                <div class="a-spacing-medium">在您的订单中，没有任何可配送的商品。您可以点击”返回“以修改订单。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <h4 class="titleColor">无法配送的商品</h4>
+                    </div>
+
+                    <table border="1" style="background: #e0f3fd;" class="tableInput">
+                        <tr style="vertical-align: bottom;">
+                            <td>卖家SKU</td>
+                            <td class="width2">已订购</td>
+                            <td class="width10">原因</td>
+                        </tr>
+                        <tr style="background: #fff;">
+                            <td>123</td>
+                            <td>1</td>
+                            <td>无可用库存</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float_left width31">
+                    <div class="a-box a-alert-show">
+                        <div class="a-box-inner">
+                            <!-- 订单一览 -->
+                            <div>
+                                <div>
+                                    <div class="float_left">
+                                        <h4 class="titleColor">订单一览</h4>
+                                    </div>
+                                    <div class="float_right">
+                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                            <span class="button_label">更改</span>
+                                        </span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div>
+                                    <b>订单编号：</b><span>123</span>
+                                </div>
+                            </div>
+                            <!-- 配送地址 -->
+                            <div class="a-spacing-top-medium">
+                                <div>
+                                    <div class="float_left">
+                                        <h4>配送地址</h4>
+                                    </div>
+                                    <div class="float_right">
+                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                            <span class="button_label">更改</span>
+                                        </span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div>Onion</div>
+                                <div>711 NE 33rd Drive,suite310</div>
+                                <div>C/O VTD982</div>
+                                <div>Portland,OR 97211</div>
+                                <div>美国</div>
+                                <div>电话：123</div>
+                            </div>
+                            <!-- 配送一览 -->
+                            <div class="a-spacing-top-medium">
+
+                                <h4 class="a-spacing-mini">配送一览</h4>
+
+                                <hr>
+                                <div><b>配送速度：</b>尽量一起送货上门</div>
+                            </div>
+                            <!-- 预计费用 -->
+                            <div class="a-spacing-top-medium">
+
+                                <h4 class="a-spacing-mini">预计费用</h4>
+
+                                <hr>
+                                <div><b>基础服务费：</b>$5.9</div>
+                                <div><b>估算的订单总计</b>$5.9</div>
+                            </div>
+                            <!-- 装箱单 -->
+                            <div class="a-spacing-top-medium">
+                                <div>
+                                    <div class="float_left">
+                                        <h4>装箱单</h4>
+                                    </div>
+                                    <div class="float_right">
+                                        <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                            <span class="button_label">更改</span>
+                                        </span>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <hr>
+                                <div><b>订单编号：</b><span>123</span></div>
+                                <div><b>订单日期：</b><span>2018年10月10日星期三</span></div>
+                                <div><b>备注：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><span>感谢您的订购！</span></div>
+                            </div>
+                            <hr>
+                            <div>这是一个预估值，实际收取的费用可能会存在差异，具体取决于亚马逊运营中心的位置或配送时确定的商品尺寸和重量。与可选增值服务相关的费用并未在此处列出。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div>
+            <div class="lineae"></div>
+            <div class="btn" style="background: #e0f3fd;">
+                <div class="float_left">
+                    <span class="awesomeButton returnButtonLarge returnButton inner_button">
+                        <span class="button_label returnBtn">返回</span>
+                    </span>
+                    <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                        <span class="button_label">取消</span>
+                    </span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<!-- <script src="js/webjs/manage_inventory_choose.js" type="text/javascript"></script> -->
+
+</html>

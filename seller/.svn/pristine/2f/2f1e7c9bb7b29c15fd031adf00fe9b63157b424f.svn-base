@@ -1,0 +1,59 @@
+/*分页*/
+ul.a-pagination{
+    user-select:none;
+    height: 33px;
+}
+ul.a-pagination li {
+    background-color: #fff;
+    line-height: 16px;
+}
+ul.a-pagination li.a-disabled {
+    color: #999;
+    border: 1px solid transparent;
+}
+ul.a-pagination li a, ul.a-pagination li.a-disabled {
+    padding: 8px 12px 7px 13px;
+    display:block;
+}
+ul.a-pagination li {
+    margin-right: 4px;
+    display:inline-block!important;
+}
+ul.a-pagination li.a-normal{
+    width:auto;
+}
+.a-letter-space{
+    display: inline-block;
+    width: .385em;
+}
+ul.a-pagination li.a-selected {
+    background-color: #fff;
+    border-color: #e77600;
+}
+ul.a-pagination li a {
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    background: #eff1f3;
+    background: -webkit-linear-gradient(top,#f7f8fa,#e7e9ec);
+    background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+    border: 1px solid #6c6e73;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    color:#111;
+}
+ul.a-pagination li a:hover {
+    background: #e0e3e9;
+    background: -webkit-linear-gradient(top,#e7eaf0,#d9dce1);
+    background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+    border-color: #a2a6ac #979aa1 #82858a;
+    color:#111!important;
+}
+ul.a-pagination li.a-selected a {
+    font-weight: 700;
+    background-color: #fff;
+    background-image: none;
+    color: #c45500;
+    border-color: #e77600;
+}
+ul.a-pagination li.a-selected a:hover{
+    color: #c45500!important;
+}

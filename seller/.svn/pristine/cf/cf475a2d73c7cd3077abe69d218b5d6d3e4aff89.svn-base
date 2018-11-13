@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>广告组详情</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/campaign_manager.css"/>
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+    <div class="amazon-campaign-manager-wrap">
+    	 <div class="amazon-campaign-manager-container">
+    	 	<div class="amazon-campaign-manager-header clearfix">
+    	 		<p><a href="campaign_manager.html">Campaign Manager</a> </p>
+    			<p class="Campaign-name">Ad group：<b id="group-name-box"></b></p>
+    		</div>
+    		<div class="nav-container">
+    			<ul class="nav nav-tabs">
+				  <li role="presentation" ><a data-toggle="tab" href="#Ads">Ads</a></li>
+				  <li role="presentation"  class="active"><a data-toggle="tab" href="#Keywords">Keywords</a></li>
+				  <li role="presentation"><a data-toggle="tab" href="#Ad-Group-Settings">Ad Group Settings</a></li>
+				</ul>
+    		</div>
+    		<div class="tab-content">
+    			<div id="Ads" class="tab-pane">
+    				<!--<div class="clearfix campaigns-action-container">
+    					<span class="a-dropdown-container dropdown pull-left" data-condition="">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Actions</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Actions1" data-value="Actions1" class="a-dropdown-link">Actions1</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Actions2" data-value="Actions1" class="a-dropdown-link">Actions2</a>
+								</li>
+						  	</ul>
+	    				</span>
+	    				<button class="primaryAUIButton pull-left">Creat ad group</button>
+	    				<span class="a-dropdown-container dropdown pull-left" data-condition="">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Enabled & Paused</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Enabled" data-value="Enabled" class="a-dropdown-link">Enabled</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Paused" data-value="Paused" class="a-dropdown-link">Paused</a>
+								</li>
+						  	</ul>
+	    				</span>
+                        <div class="searchInputWidth pull-left">
+                            <i class="a-icon icon-search"></i>
+                            <input type="text" id="product-search" placeholder="Search ad groups">
+                        </div>
+    				</div>
+    				<div class="Campaign-table">
+    					<table class="a-horizontal-stripes">
+    						<thead>
+    							<tr>
+    								<th>
+    									<input type="checkbox" name="" id="" value="" />
+    								</th>
+    								<th>
+    									<div class="campaign-statues"></div>
+    								</th>
+    								<th><strong>Ad group</strong></th>
+    								<th>Status</th>
+    								<th><strong>Default bid</strong></th>
+    								<th><strong>Keywords</strong></th>
+    								<th><strong>Ads</strong></th>
+    								<th><strong>Impr</strong></th>
+    								<th><strong>Clicks</strong></th>
+    								<th><strong>spend</strong></th>
+    								<th><strong>Sales</strong></th>
+    								<th><strong>ACoS</strong></th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td><input type="checkbox" name="" id="" value="" /></td>
+    								<td><div class="campaign-statues enabled-statue"></div></td>
+    								<td><a href="#">test Campaigns</a></td>
+    								<td>Running</td>
+    								<td><input type="text" class="input-short" name="" id="" value="13/07/2" /></td>
+    								<td>2</td>
+    								<td>1</td>
+    								<td>0</td>
+    								<td>0</td>
+    								<td>-</td>
+    								<td>-</td>
+    								<td>-</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>-->
+    			</div>
+				<div id="Keywords"  class="tab-pane active">
+					<!--<div class="second-lay-nav">
+						<a class="active">Keywords</a>
+						<a>Negative keywords</a>
+					</div>-->
+					<div class="clearfix campaigns-action-container">
+    					<span class="a-dropdown-container dropdown pull-left" data-condition="" id="operationAdKeywords">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Actions</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Enable" data-value="1" class="a-dropdown-link">Enable</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Pause" data-value="3" class="a-dropdown-link">Pause</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Archive" data-value="4" class="a-dropdown-link">Archive</a>
+								</li>
+						  	</ul>
+	    				</span>
+	    				<button class="primaryAUIButton pull-left">Add keywords</button>
+	    				<span class="a-dropdown-container dropdown pull-left" data-condition="0" id="select-keywords-action">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Enabled & Paused</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Running" data-value="1" class="a-dropdown-link">Running</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Enabled" data-value="2" class="a-dropdown-link">Enabled</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Paused" data-value="3" class="a-dropdown-link">Paused</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Archived" data-value="4" class="a-dropdown-link">Archived</a>
+								</li>
+						  	</ul>
+	    				</span>
+                        <div class="searchInputWidth pull-left">
+                            <i class="a-icon icon-search"></i>
+                            <input type="text" id="product-search" placeholder="Search keywords" onblur="campaign_ad_group.GetCampaignList()">
+                        </div>
+    				</div>
+<<<<<<< .mine
+    				<div class="Campaign-table">
+    					<table class="a-horizontal-stripes">
+    						<thead>
+    							<tr>
+    								<th>
+    									<input type="checkbox" name="" id="" value="" />
+    								</th>
+    								<th>
+    									<div class="campaign-statues"></div>
+    								</th>
+    								<th><strong>Keywords</strong></th>
+    								<th>Match type</th>
+    								<th>Status</th>
+    								<th><strong>Estrage 1 bid</strong></th>
+    								<th><strong>Keywords bid</strong></th>
+    								<th><strong>Impr</strong></th>
+    								<th><strong>Clicks</strong></th>
+    								<th><strong>CPC</strong></th>
+    								<th><strong>Spend</strong></th>
+    								<th><strong>Sales</strong></th>
+    								<th><strong>ACoS</strong></th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td><input type="checkbox" name="" id="" value="" /></td>
+    								<td><div class="campaign-statues enabled-statue"></div></td>
+    								<td><a href="#">test Campaigns</a></td>
+    								<td>Broad</td>
+    								<td>Runing</td>
+    								<td>$0.75</td>
+    								<td>
+    									<div>
+    										<input style="width: 150px;" type="text" name="" id="" value="$0.2" />
+    									</div>
+    									<a>match bid</a>
+    								</td>
+    								<td>0</td>
+    								<td>0</td>
+    								<td>-</td>
+    								<td>-</td>
+    								<td>-</td>
+    								<td>-</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+||||||| .r595
+    				<div class="Campaign-table">
+    					<table class="a-horizontal-stripes">
+    						<thead>
+    							<tr>
+    								<th>
+    									<input type="checkbox" name="" id="" value="" />
+    								</th>
+    								<th>
+    									<div class="campaign-statues"></div>
+    								</th>
+    								<th><strong>Keywords</strong></th>
+    								<th>Match type</th>
+    								<th>Status</th>
+    								<th><strong>Estrage 1 bid</strong></th>
+    								<th><strong>Keywords bid</strong></th>
+    								<th><strong>Impr</strong></th>
+    								<th><strong>Clicks</strong></th>
+    								<th><strong>CPC</strong></th>
+    								<th><strong>Spend</strong></th>
+    								<th><strong>Sales</strong></th>
+    								<th><strong>ACoS</strong></th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td><input type="checkbox" name="" id="" value="" /></td>
+    								<td><div class="campaign-statues enabled-statue"></div></td>
+    								<td><a href="">test Campaigns</a></td>
+    								<td>Broad</td>
+    								<td>Runing</td>
+    								<td>$0.75</td>
+    								<td>
+    									<div>
+    										<input style="width: 150px;" type="text" name="" id="" value="$0.2" />
+    									</div>
+    									<a>match bid</a>
+    								</td>
+    								<td>0</td>
+    								<td>0</td>
+    								<td>-</td>
+    								<td>-</td>
+    								<td>-</td>
+    								<td>-</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+=======
+    				<div id="Keywords-table-container"></div>
+    				<script  id="Keywords-table-container-tpl" type="text/html">
+	    				<div class="Campaign-table">
+	    					<table class="a-horizontal-stripes">
+	    						<thead>
+	    							<tr>
+	    								<th>
+	    									<input type="checkbox" name="" id="check-all" value="" onclick="campaign_ad_group.CheckKeywords(this)"/>
+	    								</th>
+	    								<th>
+	    									<div class="campaign-statues"></div>
+	    								</th>
+	    								<th><strong>Keywords</strong></th>
+	    								<th>Match type</th>
+	    								<th>Status</th>
+	    								<th><strong>Estrage 1 bid</strong></th>
+	    								<th><strong>Keywords bid</strong></th>
+	    								<th><strong>Impr</strong></th>
+	    								<th><strong>Clicks</strong></th>
+	    								<th><strong>CPC</strong></th>
+	    								<th><strong>Spend</strong></th>
+	    								<th><strong>Sales</strong></th>
+	    								<th><strong>ACoS</strong></th>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<%if(data.length>0){%>
+	    								<%for(var i=0;i<data.length;i++){%>
+	    									<tr>
+			    								<td><input type="checkbox"  onclick="campaign_ad_group.CheckKeywords(this)" name="checkkeyword" id="<%:=data[i].fld_id%>"  /></td>
+			    								<td>
+			    									<!--状态：1 正常 2 运行 3 暂停 4存档-->
+			    									<%if(data[i].status==1){%>
+			    										<div class="campaign-statues normal-statue"></div>
+			    									<%}else if(data[i].status==2){%>
+			    										<div class="campaign-statues enabled-statue"></div>
+			    									<%}else if(data[i].status==3){%>
+			    										<div class="campaign-statues stop-statue"></div>
+			    									<%}else if(data[i].status==4){%>
+			    										<div class="campaign-statues archive-statue"></div>
+			    									<%}%>
+			    								</td>
+			    								<td><%:=decodeURIComponent(data[i].keyword)%></td>
+			    								<td>Broad</td>
+			    								<td>
+			    									<%if(data[i].status==1){%>
+			    										<span>Running</span>
+			    									<%}else if(data[i].status==2){%>
+			    										 <span>Enabled</span>
+			    									<%}else if(data[i].status==3){%>
+			    										 <span>Paused</span>
+			    									<%}else if(data[i].status==4){%>
+			    										 <span>Archived</span>
+			    									<%}%>
+			    								</td>
+			    								<td>$<%:=decodeURIComponent(data[i].estpage_bid)%></td>
+			    								<td>
+			    									<div>
+			    										<input style="width: 150px;" readonly="readonly" type="text" name="" id="" value="$<%:=decodeURIComponent(data[i].bid)%>" />
+			    									</div>
+			    									<a>match bid</a>
+			    								</td>
+			    								<td><%:=decodeURIComponent(data[i].impression)%></td>
+			    								<td><%:=decodeURIComponent(data[i].clicks)%></td>
+			    								<td><%:=decodeURIComponent(data[i].CPC)%></td>
+			    								<td><%:=decodeURIComponent(data[i].spent)%></td>
+			    								<td><%:=decodeURIComponent(data[i].sales)%></td>
+			    								<td><%:=decodeURIComponent(data[i].ACoS)%>%</td>
+			    							</tr>
+	    								<%}%>
+	    							<%}else{%>
+	    								<tr>
+	    									<td colspan="13">
+	    										<p style="text-align: center;">暂无关键词</p>
+	    									</td>
+	    								</tr>
+	    							<%}%>
+	    							
+	    						</tbody>
+	    					</table>
+	    				</div>
+	    					
+    				</script>
+
+>>>>>>> .r602
+				</div>
+    			<div id="Ad-Group-Settings" class="tab-pane"></div>
+    		</div>
+    		
+    	 </div>
+    </div>
+    <div class="a-container-footer"></div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/campaign_ad_group.js" type="text/javascript" charset="utf-8"></script>

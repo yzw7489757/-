@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>编辑商品列表</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/create_product_selection.css" />
+        <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="selection-content">
+            <h1 class="heading-title">Edit Product Selection</h1>
+            <div class="a-spacing-top-medium a-spacing-base">
+                <button class="secondaryAUIButton a-button-inner a-button-31" id="manage_product">Manage Product Selection</button>
+            </div>
+            <div id="auth-error-message-box" class="a-box a-alert-error a-spacing-base">
+                <div class="a-box-inner a-alert-container">
+                    <h4 class="a-alert-heading"></h4>
+                    <i class="a-icon a-icon-alert"></i>
+                </div>
+            </div>
+            <table class="creat_selection_table a-row" border="1">
+                <tr>
+                    <td class="left-bg">Product Selection Type:</td>
+                    <td class="a-text-left right-td selection-type"></td>
+                </tr>
+                <tr>
+                    <td class="left-bg">Product Selection Name / Tracking ID:</td>
+                    <td class="a-text-left right-td">
+                        <input type="text" id="Selection_ID" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-bg">Internal Description:</td>
+                    <td class="a-text-left right-td">
+                        <input type="text" id="Internal_Description" />
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="left-bg" style="vertical-align: top;">ASIN List</td>
+                    <td class="a-text-left right-td">
+                        <textarea name="ASIN" id="ASIN_List" placeholder="Separate ASINs by new lines"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="a-spacing-top-small">
+                <button class="primaryAUIButton a-button-inner a-button-31 submit_button">Submit</button>
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+    <script type="text/javascript" src="js/webjs/edit_product_selection.js"></script>
+</html>

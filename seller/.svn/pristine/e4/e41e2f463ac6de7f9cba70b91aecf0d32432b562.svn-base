@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>秒杀活动</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/promotion.css" />
+        <link rel="stylesheet" type="text/css" href="css/money_off.css">
+        <link rel="stylesheet" type="text/css" href="css/lightning_deals.css" />
+        <link rel="stylesheet" type="text/css" href="css/select_down.css" />
+        <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+        <link rel="stylesheet" type="text/css" href="css/page2.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="promotion-rule-content">
+            <div class="promotion-heading-section clear_both">
+                <h1 class="fl">秒杀</h1>
+                <div class="learn_more fl">
+                    <a href="javascript:;" class="a-link-normal">了解更多信息</a>
+                </div>
+            </div>
+             <div class="promotion-project">
+                <ul class="promotion-nav">
+                    <li><a href="#1">创建秒杀</a></li>
+                    <li><a href="#2">管理您的秒杀</a></li>
+                </ul>
+            </div>
+            <div class="promotion_tab hide">
+                <div class="step-conditions a-spacing-base">
+                    <div class="step-bg">
+                        Creat lightning Deals
+                    </div>
+                    <div class="step-innner">
+                        <table class="step-table a-row" border="1">
+                            <tr>
+                                <td class="left-td">LD Title</td>
+                                <td class="right-td">
+                                    <input type="text" id="LD-Title" class="date-enter verify-require"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-td">Internal Description</td>
+                                <td class="right-td">
+                                    <input type="text" id="LD-Description" placeholder="Lightning deals description" class="verify-require" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-td">Products</td>
+                                <td class="right-td">
+                                    <a href="javascript:;" class="a-link-normal" id="deals-link">Select Products</a>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Product image</td>
+                                <td class="right-td">
+                                    <img src="img/user-64.png" width="60" height="60" id="product-img">
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Product name</td>
+                                <td class="right-td">
+                                    <span id='product_name'></span>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Your price</td>
+                                <td class="right-td">
+                                    <span id='product_price'></span>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Deal price</td>
+                                <td class="right-td">
+                                    <div class="deal-price clear_both">
+                                        <span class="currency_number-symbol fl">$</span>
+                                        <input type="text" id="deal-price" class="verify-require" placeholder="Example: 11.11"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Deal Date</td>
+                                <td class="right-td">
+                                    <div class="date-enter">
+                                        <input type="text" id="Start-Date" class="verify-require"/>
+                                        <i class="a-icon icon-calendar"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">Start Time</td>
+                                <td class="right-td">
+                                    <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-am" i='0'>
+                                        <span>0:00 AM</span>
+                                        <i class="a-icon a-icon-dropdown"></i>
+                                    </button>
+                                   <span>POT</span>
+                                   <span id='timeError1' class="timeError hide">开始时间不能小于当前时间</span>
+                                </td>
+                            </tr>
+                            <tr class="select">
+                                <td class="left-td">End Time</td>
+                                <td class="right-td">
+                                    <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-pm" i='0'>
+                                        <span>0:00 AM</span>
+                                        <i class="a-icon a-icon-dropdown"></i>
+                                    </button>
+                                   <span>POT</span>
+                                   <span id='timeError2' class="timeError hide">结束时间不能小于开始时间</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <button class="primaryAUIButton a-button-inner a-button-31" id="create-light" disabled>Create</button>
+            </div>
+            <div class="promotion_tab hide">
+               <div class="num_promotion num_selection">
+                   <div class="a-color-secondary">0 lightning deal</div>
+               </div>
+               <div class="product_selection_box">
+                   <table class="product_selection_table a-row" border="1">
+                       <thead>
+                           <tr>
+                               <td>产品主图</td>
+                               <td>LD Title</td>
+                               <td>Internal Description</td>
+                               <td>Price</td>
+                               <td>意向秒杀日期</td>
+                               <td>Time Range</td>
+                               <td>Edit</td>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <td><img src="img/user-64.png"  width="60" height="60" /></td>
+                           <td>举头望明月</td>
+                           <td>低头思故乡</td>
+                           <td>$16.25</td>
+                           <td>2018-11-11</td>
+                           <td>00:00:00 - 5:00:00</td>
+                           <td class="button-td">
+                                <button class="secondaryAUIButton edit_product">Edit</button>
+                           </td>
+                       </tbody>
+                   </table>
+               </div> 
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+        <div id="select-ASIN" class="a-box">
+            <div class="search-ASIN-box">
+                <div class="searchInputWidth">
+                    <i class="a-icon a-icon-search"></i>
+                    <input type="search" id="ASINitable-search" placeholder="搜索 名称">
+                </div>
+                <button class="button button-search" id="ASIN-search-button">搜索</button>
+                <div class="a-inline-block">
+                    <span id="count-value">0</span>
+                    <span>件商品</span>
+                </div>
+                <button id="close-ASIN">
+                    <i class="a-icon a-icon-close"></i>
+                </button>
+            </div>
+            <div class="a-select-inner">
+                <table id="select-ASIN-table" class="a-row">
+                    <thead>
+                        <tr>
+                            <td>Select</td>
+                            <td>图片</td>
+                            <td>商品名称</td>
+                            <td>Price</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" style="text-align:center;">
+                                <img src="img/spinner_2x._V1_.gif" alt="loading" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="a-pagination clear_both a-text-center hide" id="pagn"></ul>
+            <button class="primaryAUIButton a-button-inner a-button-31" id="select-this">Select</button>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+     <script type="text/javascript" src="js/select_down.js"></script>
+    <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript" src="js/webjs/lightning_deals.js"></script>
+</html>

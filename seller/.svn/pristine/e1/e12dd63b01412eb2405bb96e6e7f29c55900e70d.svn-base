@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>创建活动第二步</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/campaign_advertising_creat.css"/>
+	
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+	<div class="campaign-advertising-creat-wrap">
+		<div class="campaign-advertising-creat-container">
+			<div id="campaign-advertising-creat-form">
+				<div class="wizard">
+					<div class="steps">
+						<ul>
+							<li role="tab" class="done">
+								<a class="no-underline" id="steps-uid-0-t-0" href="#">
+									<p class="name">CAMPAING SETTINGS</p>
+									<p class="number">1</p>
+								</a>
+							</li>
+							<li role="tab" class="current">
+								<a class="no-underline" id="steps-uid-0-t-1" href="#">
+									<p class="name">CREATE AD GROUP</p>
+									<p class="number">2</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="creat-information">
+					<p class="creat-step-describe">Name this group of ads</p>
+					<div class="form-group">
+						<label>Ad group name</label>
+						<input type="text" class="long-input" name="AdGroupName"  placeholder="Ad group name"/>
+						<span>Only visible when managing ads</span>
+					</div>
+					<p class="creat-step-describe">Choose products to advertise</p>
+				 	<div class="clearfix search-product-container">
+				 		<span class="pull-left a-dropdown-container dropdown" id="search-product-condition" data-condition="name">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Search by product name</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="true">
+									<a href="javascript:void(0)" replace-text="Search by product name" data-value="name" class="a-dropdown-link active">product name</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Search by  seller_sku" data-value="seller_sku" class="a-dropdown-link">seller_sku</a>
+								</li>
+						  	</ul>
+	    				</span>
+	    				<input class="pull-left" type="text" name="" id="search-order-input" value="" placeholder="搜索">
+	    				<span class="pull-left a-button a-button-search" id="search-order-submit" onclick="campaign_advertising_creat2.GetProductList('1')">
+	    					<span class="a-button-inner">
+	    						<span class="a-button-text">Search</span>
+	    					</span>
+	    				</span>
+	    			</div>
+					<div class="search-product-result">
+						<div class="search_right">
+							<div id="product_show_conatiner"></div>
+							<script  id="product_show_conatiner-tpl" type="text/html">
+								<div class="product_show">
+									<div class="page_show">
+										<div class="a-search_innner clearfix">
+											<div class="product_tote pull-left"><b><%:=decodeURIComponent(data.totalRecords)%></b> 个结果中的 <b><%:=decodeURIComponent(data.minrecoder)%></b> 至 <b><%:=decodeURIComponent(data.maxrecoder)%></b></div>
+											<div class="select-all pull-right" onclick="campaign_advertising_creat2.SelectAllEligibleProduct()"><a>Select all on this page</a></div>
+										</div>
+									</div>
+									<div class="product_list" id="all-eligible-product">
+										<div class="a-search_innner">
+											<%if(data.goods.length>0){%>
+												<%for(var i=0;i<data.goods.length;i++){%>
+													<div class="product_details clearfix" qualified-mark="ellglble"  data-id="<%:=decodeURIComponent(data.goods[i].sku_id)%>" >
+														<div class="product_details_right pull-left">
+															<p class="product_name"><a><%:=decodeURIComponent(data.goods[i].goods_name)%></a></p>
+															<!--<div class="product_info">
+																<a>Bags</a>,<a>Green</a>
+															</div>-->
+															<div class="detail_info">
+																<span class="price">$<%:=decodeURIComponent(data.goods[i].your_price)%></span>
+																<span class="asin"><%:=decodeURIComponent(data.goods[i].product_id_type)%>:<%:=decodeURIComponent(data.goods[i].product_id)%></span>
+																<span class="sku">SKU:<%:=decodeURIComponent(data.goods[i].sku_id)%></span>
+															</div>
+														</div>
+														<div class="product_img pull-left">
+															<img src="<%:=decodeURIComponent(data.goods[i].product_image)%>" width="75" height="75">
+														</div> 
+														<div class="pull-left product_select">
+															<button class="secondaryAUIButton" onclick="campaign_advertising_creat2.SelectCurrentKeyword(this)">select</button>
+														</div>
+													</div>
+												<%}%>
+											<%}else{%>
+												<p>暂无商品</p>
+											<%}%>
+										</div>
+									</div>
+									<div class="clearfix bottom-pagination a-pagination a-text-center">
+										<ul class="a-pagination clearfix order-history-pagination pull-right"></ul>
+									</div>
+								</div>
+							</script>
+						</div>
+					</div>
+					<div class="has-chose-product">
+						 <p class="selected-product-num hide"><span class="select-num">2</span> products selected</p>
+						 <div class="select-product-container product_list" id="select-product-group">
+						 	<ul></ul>
+						 </div>
+					</div>
+					
+					<!--自动选取关键词-->
+					<div class="default-build hide" id="Automatic-targeting">
+						<p class="title">Default bid</p>
+						<input type="text" value="$0.50" name="reference-price" />
+						<span>Suggested bid $0.83 Bid range $0.14 - $1.22</span>
+					</div>
+					
+					<!--手动选取关键词-->
+					<div class="manually-select hide" id="Manual-targeting">
+						<p class="creat-step-describe">Set a bid and provide keywords:</p>
+						<div class="default-build">
+							<p class="title">Default bid</p>
+							<input type="text" value="$0.50" name="reference-price" />
+						</div>
+						<ul  role="tablist" class="SelectKeywordsTab clearfix">
+						    <li role="presentation"  class="active">
+						    	<a href="#suggestedkeywords" aria-controls="home" role="tab" data-toggle="tab">Suggested keywords</a>
+						    </li>
+						    <li>|</li>
+						    <li role="presentation">
+						    	<a href="#ownkeywords" aria-controls="profile" role="tab" data-toggle="tab">Provide your own keywords</a>
+						    </li>
+						</ul>
+						<div class="tab-content">
+						    <div role="tabpanel" class="tab-pane  active" id="suggestedkeywords">
+						    	<div id="suggestedkeywords-conatiner"></div>
+						    	<script  id="suggestedkeywords-conatiner-tpl" type="text/html">
+							    	<div class="suggestedkeywords-table-container">
+							    		<table class="keywordstable">
+							    			<thead>
+							    				<tr>
+							    					<th>Suggested keyword</th>
+							    					<th>Match</th>
+							    					<th>
+							    						<button class="primaryAUIButton" onclick="campaign_advertising_creat2.SelectAllKeywords()">Select All</button>
+							    					</th>
+							    				</tr>
+							    			</thead>
+							    		</table>
+							    		<div class="keywordstable-box">
+							    			<table class="keywordstable" id="all-suggest-keyWords">
+								    			<tbody>
+								    				<%if(data.keys.length>0){%>
+								    					<%for(var i=0;i<data.keys.length;i++){%>
+								    						<tr data-id="<%:=i%>" class="data-row">
+										    					<td class="keyword"><%:=decodeURIComponent(data.keys[i])%></td>
+										    					<td class="match">Broad</td>
+										    					<td>
+										    						<button class="secondaryAUIButton" onclick="campaign_advertising_creat2.SelectCurrentKeyWords(this)">Select</button>
+										    					</td>
+										    				</tr>
+								    					<%}%>
+								    				<%}else{%>
+								    					<tr>
+									    					<td colspan="3" class="keyword">暂无推荐关键词</td>
+									    				</tr>
+								    				<%}%>
+								    			</tbody>
+								    		</table>
+							    		</div>
+							    	</div>
+							    		
+						    	</script>
+
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="ownkeywords">
+						    	<div class="ownkeywords-provide-container">
+						    		<div class="clearfix">
+							    		<textarea class="pull-left enter-ownkeywords-textarea" id="ownkeywords-textarea"></textarea>
+							    		<span class="pull-right a-dropdown-container dropdown"  data-condition="Droad">
+					    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    						<span class="a-button-inner">
+					    							<span class="a-button-text a-declarative">
+					    								<span class="a-dropdown-prompt">Droad</span>
+					    							</span>
+					    							<i class="a-icon a-icon-dropdown"></i>
+					    						</span>
+					    					</span>
+					    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+												<li role="option" aria-checked="true">
+													<a href="javascript:void(0)" replace-text="Droad" data-value="Droad" class="a-dropdown-link active">Droad</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="Phrase" data-value="Phrase" class="a-dropdown-link">Phrase</a>
+												</li>
+												<li role="option" aria-checked="false">
+													<a href="javascript:void(0)" replace-text="Exact" data-value="Exact" class="a-dropdown-link">Exact</a>
+												</li>
+										  	</ul>
+					    				</span>
+							    	</div>
+							    	<button class="primaryAUIButton a-spacing-top-base add-these-keywords" onclick="campaign_advertising_creat2.AddOwnKeyWords()">Add these keywords</button>
+						    	</div>
+						    </div>
+						    <p class="select-keywords-number hide"><span class="num"></span> keywords selectd</p>
+				    		<table class="keywordstable hide" id="selected-keywords-table">
+				    			<thead>
+				    				<tr>
+				    					<th>Suggested keyword</th>
+				    					<th>Match type</th>
+				    					<th>Keyword bid</th>
+				    				</tr>
+				    			</thead>
+				    			<tbody></tbody>
+				    		</table>
+						</div>
+					</div>
+					
+					<div class="a-form-actions"> 	
+						<button class="secondaryAUIButton" onclick="history.go(-1)">Cancel</button> 					
+						<button class="primaryAUIButton" onclick="campaign_advertising_creat2.CreateADGroupAuto()">Save and finish</button> 	
+
+					</div>
+				</div>
+					
+			</div>
+		</div>
+		
+	</div>
+    <div class="a-container-footer"></div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/jquery.pagination.message.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/campaign_advertising_creat2.js" type="text/javascript" charset="utf-8"></script>

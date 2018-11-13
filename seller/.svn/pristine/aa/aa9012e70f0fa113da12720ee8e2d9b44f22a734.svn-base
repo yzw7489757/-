@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>活动管理</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/campaign_manager.css"/>
+
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+    <div class="amazon-campaign-manager-wrap">
+    	 <div class="amazon-campaign-manager-container">
+    	 	<div class="amazon-campaign-manager-header clearfix">
+    			<h1>Campaign Manager</h1>
+    		</div>
+    		<div class="nav-container">
+    			<ul class="nav nav-tabs">
+				  <li role="presentation"><a data-toggle="tab" href="#campaigns">Campaigns</a></li>
+				  <li role="presentation"><a data-toggle="tab" href="#bulk-operations">Bulk Operations</a></li>
+				  <li role="presentation"  class="active"><a data-toggle="tab" href="#advertising-setting">Advertising Setting</a></li>
+				</ul>
+    		</div>
+    		<div class="tab-content">
+    			<div id="campaigns" class="tab-pane">
+    				<div class="clearfix campaigns-action-container">
+    					<span class="a-dropdown-container dropdown pull-left" data-condition="">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Actions</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Actions1" data-value="Actions1" class="a-dropdown-link">Actions1</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Actions2" data-value="Actions1" class="a-dropdown-link">Actions2</a>
+								</li>
+						  	</ul>
+	    				</span>
+	    				<button class="primaryAUIButton pull-left">Creat Campaign</button>
+	    				<span class="a-dropdown-container dropdown pull-left" data-condition="">
+	    					<span class="a-button a-button-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    						<span class="a-button-inner">
+	    							<span class="a-button-text a-declarative">
+	    								<span class="a-dropdown-prompt">Enabled & Paused</span>
+	    							</span>
+	    							<i class="a-icon a-icon-dropdown"></i>
+	    						</span>
+	    					</span>
+	    					<ul class="dropdown-menu" aria-labelledby="dLabel">
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Enabled" data-value="Enabled" class="a-dropdown-link">Enabled</a>
+								</li>
+								<li role="option" aria-checked="false">
+									<a href="javascript:void(0)" replace-text="Paused" data-value="Paused" class="a-dropdown-link">Paused</a>
+								</li>
+						  	</ul>
+	    				</span>
+                        <div class="searchInputWidth pull-left">
+                            <i class="a-icon icon-search"></i>
+                            <input type="text" id="product-search" placeholder="Search Campaign">
+                        </div>
+    				</div>
+    				<div class="Campaign-table">
+    					<table class="a-horizontal-stripes">
+    						<thead>
+    							<tr>
+    								<th>
+    									<input type="checkbox" name="" id="" value="" />
+    								</th>
+    								<th>
+    									<div class="campaign-statues"></div>
+    								</th>
+    								<th><strong>Campaigns</strong></th>
+    								<th>Status</th>
+    								<th><strong>Type</strong></th>
+    								<th><strong>Start Date</strong></th>
+    								<th><strong>End Date</strong></th>
+    								<th><strong>Daily Budget</strong></th>
+    								<th><strong>Spent</strong></th>
+    								<th><strong>Sales</strong></th>
+    								<th><strong>ACoS</strong></th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td><input type="checkbox" name="" id="" value="" /></td>
+    								<td><div class="campaign-statues enabled-statue"></div></td>
+    								<td><a href="campaign_detail.html">test Campaigns</a></td>
+    								<td>Running</td>
+    								<td>Manual</td>
+    								<td><input type="text" class="input-short" name="" id="" value="13/07/2" /></td>
+    								<td><input type="text" class="input-short" name="" id="" value="No end" /></td>
+    								<td><input type="text" class="input-short" name="" id="" value="$10" /></td>
+    								<td>$0.00</td>
+    								<td>$0.00</td>
+    								<td>0.00%</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    			<div id="bulk-operations" class="tab-pane"></div>
+    			<div id="advertising-setting" class="tab-pane active">
+    				<table class="advertising-setting-table">
+    					<tbody>
+    						<tr>
+    							<td class="setting-title"><span>Account daily budget cap</span></td>
+    							<td class="setting-content">
+    								<input type="text" name="" id="" value="Use campaign level budgets only" />
+    							</td>
+    						</tr>
+    						<tr>
+    							<td class="setting-title"><span>Advertising billing</span></td>
+    							<td class="setting-content">
+    								<a href="campaign_advertising_charge_method.html">Update advertising billing</a>
+    							</td>
+    						</tr>
+    					</tbody>
+    				</table>
+    			</div>
+    		</div>
+    		
+    	 </div>
+    </div>
+    <div class="a-container-footer"></div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/campaign_manager.js" type="text/javascript" charset="utf-8"></script>

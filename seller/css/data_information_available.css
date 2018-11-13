@@ -1,0 +1,74 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+}
+.a-container {
+    min-width: 998px;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+}
+.a-container h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #e77600;
+    padding-right: 5px;
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Arial,sans-serif;
+}
+.a-container ol{
+    /* overflow: hidden; */
+    border-bottom: 1px solid #ddd;
+    height: 37px;
+}
+.a-container ol li{
+    float: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    margin:0 5px;
+    border-radius: 15px 15px 0 0;
+    background-image: linear-gradient(rgb(248, 248, 248), rgb(238, 238, 238));
+}
+.a-container ol li:nth-child(1){
+    background: #d2effb;
+}
+.a-container ul{
+    border: 1px solid #ddd;
+    border-top: 0;
+    background-image: linear-gradient(rgb(248, 248, 248), rgb(238, 238, 238));
+}
+.a-container ul li{
+    padding: 18px 14px;
+    display: none;
+    height: 89px;
+}
+.a-container ul li:nth-child(1){
+    background: #d2effb;
+}
+.a-container ul li:nth-child(2){
+    display: block;
+}
+.activeOl{
+    height: 37px;
+}
+.screenTable{
+    width: 100%;
+    background-image: linear-gradient(rgb(248, 248, 248), rgb(238, 238, 238));
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.screenTable tr td{
+    border: 1px solid rgb(8, 8, 8);
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+select[name=dataSelect]{
+    margin-bottom: 5px
+}
+.marRight5{
+    margin-right: 5px;
+}

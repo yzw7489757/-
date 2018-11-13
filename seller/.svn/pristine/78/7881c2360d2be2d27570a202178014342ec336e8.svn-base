@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+    <link rel="stylesheet" href="./css/laydate.css" />
+
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="madagascar-main-body">
+        <div class="a-spacing-small">
+            <div class="float_left pdleft10">
+                <h3>多渠道配送订单</h3>
+                <div class="a-spacing-small">输入订单的配送地址，订单编号和装箱单信息。验证每件商品和订购数量是否正确。完成后点击”继续“。即可查看可用的配送选项和预估费用。<a href="javascript:void(0)">了解更多信息</a></div>
+                <div><b>请注意：</b>带有<img src="./img/1.png" alt="">的字段为必填字段。</div>
+            </div>
+            <div class="float_left a-spacing-top-big borderRinght pdleft10">&nbsp;</div>
+            <div class="float_left a-spacing-top-big pdleft10"><img src="./img/UOLOAD.png" alt="" srcset=""></div>
+            <div class="float_left a-spacing-top-big ">
+                <div><b>使用库存模板文件创建移除订单</b></div>
+                <div>通过上传库存模板文件批量创建移除订单请求</div>
+                <div>
+                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                        <span class="button_label">上传库存模板文件</span>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <ul class="navTitle">
+            <li class="selectLi">
+                提供详情
+                <div class="border-triangle select-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li>
+                检查并下单
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+            <li>
+                订单一览
+                <div class="border-triangle unselect-title "></div>
+                <div class="border-triangle-white"></div>
+            </li>
+        </ul>
+
+        <div class="a-box">
+            <div class="table" style="background: #f0f6f9;">
+                <div class="float_left width_50">
+                    <div><span class="titleColor">配送地址:</span> <span>(仅允许使用国内邮政地址)</span></div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">全名：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">地址行1：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">地址行2：&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">城市：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">国家/地区：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <select name="" id="">
+                                <option label="Hungary" value="string:HU">Hungary</option>
+                                <option label="Romania" value="string:RO">Romania</option>
+                                <option label="中国" value="string:CN">中国</option>
+                                <option label="丹麦" value="string:DK">丹麦</option>
+                                <option label="乌克兰" value="string:UA">乌克兰</option>
+                                <option label="乌干达" value="string:UG">乌干达</option>
+                                <option label="乍得" value="string:TD">乍得</option>
+                                <option label="亚美尼亚" value="string:AM">亚美尼亚</option>
+                                <option label="以色列" value="string:IL">以色列</option>
+                                <option label="俄罗斯" value="string:RU">俄罗斯</option>
+                                <option label="保加利亚" value="string:BG">保加利亚</option>
+                                <option label="克罗地亚" value="string:HR">克罗地亚</option>
+                                <option label="冰岛" value="string:IS">冰岛</option>
+                                <option label="几内亚" value="string:GN">几内亚</option>
+                                <option label="列支敦士登" value="string:LI">列支敦士登</option>
+                                <option label="加拿大" value="string:CA">加拿大</option>
+                                <option label="加蓬" value="string:GA">加蓬</option>
+                                <option label="南非" value="string:ZA">南非</option>
+                                <option label="博茨瓦纳" value="string:BW">博茨瓦纳</option>
+                                <option label="卢森堡" value="string:LU">卢森堡</option>
+                                <option label="印度" value="string:IN">印度</option>
+                                <option label="印度尼西亚" value="string:ID">印度尼西亚</option>
+                                <option label="台湾" value="string:TW">台湾</option>
+                                <option label="哥伦比亚" value="string:CO">哥伦比亚</option>
+                                <option label="哥斯达黎加" value="string:CR">哥斯达黎加</option>
+                                <option label="喀麦隆" value="string:CM">喀麦隆</option>
+                                <option label="土耳其" value="string:TR">土耳其</option>
+                                <option label="圣马力诺" value="string:SM">圣马力诺</option>
+                                <option label="埃及" value="string:EG">埃及</option>
+                                <option label="塞内加尔" value="string:SN">塞内加尔</option>
+                                <option label="塞尔维亚" value="string:RS">塞尔维亚</option>
+                                <option label="塞浦路斯" value="string:CY">塞浦路斯</option>
+                                <option label="墨西哥" value="string:MX">墨西哥</option>
+                                <option label="多哥" value="string:TG">多哥</option>
+                                <option label="多米尼加共和国" value="string:DO">多米尼加共和国</option>
+                                <option label="奥地利" value="string:AT">奥地利</option>
+                                <option label="孟加拉国" value="string:BD">孟加拉国</option>
+                                <option label="安哥拉" value="string:AO">安哥拉</option>
+                                <option label="尼日尔" value="string:NE">尼日尔</option>
+                                <option label="尼泊尔" value="string:NP">尼泊尔</option>
+                                <option label="巴拉圭" value="string:PY">巴拉圭</option>
+                                <option label="巴拿马" value="string:PA">巴拿马</option>
+                                <option label="巴西" value="string:BR">巴西</option>
+                                <option label="布基纳法索" value="string:BF">布基纳法索</option>
+                                <option label="希腊" value="string:GR">希腊</option>
+                                <option label="德国" value="string:DE">德国</option>
+                                <option label="意大利" value="string:IT">意大利</option>
+                                <option label="拉脱维亚" value="string:LV">拉脱维亚</option>
+                                <option label="挪威" value="string:NO">挪威</option>
+                                <option label="捷克共和国" value="string:CZ">捷克共和国</option>
+                                <option label="摩洛哥" value="string:MA">摩洛哥</option>
+                                <option label="文莱" value="string:BN">文莱</option>
+                                <option label="斯洛伐克" value="string:SK">斯洛伐克</option>
+                                <option label="斯洛文尼亚" value="string:SI">斯洛文尼亚</option>
+                                <option label="斯里兰卡" value="string:LK">斯里兰卡</option>
+                                <option label="新加坡" value="string:SG">新加坡</option>
+                                <option label="新西兰" value="string:NZ">新西兰</option>
+                                <option label="日本" value="string:JP">日本</option>
+                                <option label="智利" value="string:CL">智利</option>
+                                <option label="柬埔寨" value="string:KH">柬埔寨</option>
+                                <option label="格鲁吉亚" value="string:GE">格鲁吉亚</option>
+                                <option label="比利时" value="string:BE">比利时</option>
+                                <option label="毛里求斯" value="string:MU">毛里求斯</option>
+                                <option label="法国" value="string:FR">法国</option>
+                                <option label="波兰" value="string:PL">波兰</option>
+                                <option label="泰国" value="string:TH">泰国</option>
+                                <option label="洪都拉斯" value="string:HN">洪都拉斯</option>
+                                <option label="海地" value="string:HT">海地</option>
+                                <option label="澳大利亚" value="string:AU">澳大利亚</option>
+                                <option label="爱尔兰" value="string:IE">爱尔兰</option>
+                                <option label="爱沙尼亚" value="string:EE">爱沙尼亚</option>
+                                <option label="特立尼达和多巴哥" value="string:TT">特立尼达和多巴哥</option>
+                                <option label="玻利维亚" value="string:BO">玻利维亚</option>
+                                <option label="瑞典" value="string:SE">瑞典</option>
+                                <option label="瑞士" value="string:CH">瑞士</option>
+                                <option label="白俄罗斯" value="string:BY">白俄罗斯</option>
+                                <option label="直布罗陀" value="string:GI">直布罗陀</option>
+                                <option label="科特迪瓦" value="string:CI">科特迪瓦</option>
+                                <option label="秘鲁" value="string:PE">秘鲁</option>
+                                <option label="立陶宛" value="string:LT">立陶宛</option>
+                                <option label="约旦" value="string:JO">约旦</option>
+                                <option label="纳米比亚" value="string:NA">纳米比亚</option>
+                                <option label="美国" value="string:US" selected="selected">美国</option>
+                                <option label="肯尼亚" value="string:KE">肯尼亚</option>
+                                <option label="芬兰" value="string:FI">芬兰</option>
+                                <option label="英国" value="string:GB">英国</option>
+                                <option label="荷兰" value="string:NL">荷兰</option>
+                                <option label="莫桑比克" value="string:MZ">莫桑比克</option>
+                                <option label="菲律宾" value="string:PH">菲律宾</option>
+                                <option label="萨尔瓦多" value="string:SV">萨尔瓦多</option>
+                                <option label="葡萄牙" value="string:PT">葡萄牙</option>
+                                <option label="西班牙" value="string:ES">西班牙</option>
+                                <option label="贝宁" value="string:BJ">贝宁</option>
+                                <option label="赤道几内亚" value="string:GQ">赤道几内亚</option>
+                                <option label="越南" value="string:VN">越南</option>
+                                <option label="阿塞拜疆" value="string:AZ">阿塞拜疆</option>
+                                <option label="阿尔及利亚" value="string:DZ">阿尔及利亚</option>
+                                <option label="阿尔巴尼亚" value="string:AL">阿尔巴尼亚</option>
+                                <option label="阿曼" value="string:OM">阿曼</option>
+                                <option label="阿根廷" value="string:AR">阿根廷</option>
+                                <option label="韩国" value="string:KR">韩国</option>
+                                <option label="香港" value="string:HK">香港</option>
+                                <option label="马其顿" value="string:MK">马其顿</option>
+                                <option label="马来西亚" value="string:MY">马来西亚</option>
+                                <option label="马达加斯加" value="string:MG">马达加斯加</option>
+                                <option label="马里" value="string:ML">马里</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">邮政编码：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">国家/地区：<img src="./img/1.png" alt=""></div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                            <div>想要向国外配送？</div>
+                            <div><a href="javascript:void(0)">了解更多信息</a> | <a href="javascript:void(0)">注册国际配送</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right a-form-label">电话号码</div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right ">
+                            <div class="a-form-label"> 买家电子邮件地址</div>
+                            <div>(获取货件通知)</div>
+                        </div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="float_left width_50">
+                    <h4 class="titleColor">设置订单编号</h4>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right"> 设置订单编号：</div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <h4 class="titleColor">打印在装箱单上</h4>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right"> 订单编号：</div>
+                        <div class="float_left">
+                            <input type="text" class="inline-block">
+                            <input type="checkbox" name="" id=""> 同上
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small ">
+                        <div class="float_left width17 a-text-right"> 订单日期：</div>
+                        <div class="float_left ">
+                            <div class="laydate-box">
+                                <input type="text" id="laydateInput" placeholder="xxxx年xx月xx日">
+                                <img src="img/calendar.png" alt="" class="icon data-icon">
+                                <div class="select-date" style="display: none;">
+                                    <div class="select-date-header">
+                                        <ul class="heade-ul">
+                                            <li class="header-item header-item-one">
+                                                <select name="" id="yearList">
+                                                    <option value="1990年">1990年</option>
+                                                    <option value="1991年">1991年</option>
+                                                    <option value="1992年">1992年</option>
+                                                    <option value="1993年">1993年</option>
+                                                    <option value="1994年">1994年</option>
+                                                    <option value="1995年">1995年</option>
+                                                    <option value="1996年">1996年</option>
+                                                    <option value="1997年">1997年</option>
+                                                    <option value="1998年">1998年</option>
+                                                    <option value="1999年">1999年</option>
+                                                    <option value="2000年">2000年</option>
+                                                    <option value="2001年">2001年</option>
+                                                    <option value="2002年">2002年</option>
+                                                    <option value="2003年">2003年</option>
+                                                    <option value="2004年">2004年</option>
+                                                    <option value="2005年">2005年</option>
+                                                    <option value="2006年">2006年</option>
+                                                    <option value="2007年">2007年</option>
+                                                    <option value="2008年">2008年</option>
+                                                    <option value="2009年">2009年</option>
+                                                    <option value="2010年">2010年</option>
+                                                    <option value="2011年">2011年</option>
+                                                    <option value="2012年">2012年</option>
+                                                    <option value="2013年">2013年</option>
+                                                    <option value="2014年">2014年</option>
+                                                    <option value="2015年">2015年</option>
+                                                    <option value="2016年">2016年</option>
+                                                    <option value="2017年">2017年</option>
+                                                    <option value="2018年">2018年</option>
+                                                    <option value="2019年">2019年</option>
+                                                    <option value="2020年">2020年</option>
+                                                    <option value="2021年">2021年</option>
+                                                    <option value="2022年">2022年</option>
+                                                    <option value="2023年">2023年</option>
+                                                    <option value="2024年">2024年</option>
+                                                    <option value="2025年">2025年</option>
+                                                    <option value="2026年">2026年</option>
+                                                    <option value="2027年">2027年</option>
+                                                    <option value="2028年">2028年</option>
+                                                    <option value="2029年">2029年</option>
+                                                    <option value="2030年">2030年</option>
+                                                    <option value="2031年">2031年</option>
+                                                    <option value="2032年">2032年</option>
+                                                    <option value="2033年">2033年</option>
+                                                    <option value="2034年">2034年</option>
+                                                    <option value="2035年">2035年</option>
+                                                    <option value="2036年">2036年</option>
+                                                    <option value="2037年">2037年</option>
+                                                    <option value="2038年">2038年</option>
+                                                    <option value="2039年">2039年</option>
+                                                    <option value="2040年">2040年</option>
+                                                    <option value="2041年">2041年</option>
+                                                    <option value="2042年">2042年</option>
+                                                    <option value="2043年">2043年</option>
+                                                    <option value="2044年">2044年</option>
+                                                    <option value="2045年">2045年</option>
+                                                    <option value="2046年">2046年</option>
+                                                    <option value="2047年">2047年</option>
+                                                    <option value="2048年">2048年</option>
+                                                    <option value="2049年">2049年</option>
+                                                    <option value="2050年">2050年</option>
+                                                    <option value="2051年">2051年</option>
+                                                    <option value="2052年">2052年</option>
+                                                    <option value="2053年">2053年</option>
+                                                    <option value="2054年">2054年</option>
+                                                    <option value="2055年">2055年</option>
+                                                    <option value="2056年">2056年</option>
+                                                    <option value="2057年">2057年</option>
+                                                    <option value="2058年">2058年</option>
+                                                    <option value="2059年">2059年</option>
+                                                    <option value="2060年">2060年</option>
+                                                    <option value="2061年">2061年</option>
+                                                    <option value="2062年">2062年</option>
+                                                    <option value="2063年">2063年</option>
+                                                    <option value="2064年">2064年</option>
+                                                    <option value="2065年">2065年</option>
+                                                    <option value="2066年">2066年</option>
+                                                    <option value="2067年">2067年</option>
+                                                    <option value="2068年">2068年</option>
+                                                    <option value="2069年">2069年</option>
+                                                    <option value="2070年">2070年</option>
+                                                    <option value="2071年">2071年</option>
+                                                    <option value="2072年">2072年</option>
+                                                    <option value="2073年">2073年</option>
+                                                    <option value="2074年">2074年</option>
+                                                    <option value="2075年">2075年</option>
+                                                    <option value="2076年">2076年</option>
+                                                    <option value="2077年">2077年</option>
+                                                    <option value="2078年">2078年</option>
+                                                    <option value="2079年">2079年</option>
+                                                    <option value="2080年">2080年</option>
+                                                    <option value="2081年">2081年</option>
+                                                    <option value="2082年">2082年</option>
+                                                    <option value="2083年">2083年</option>
+                                                    <option value="2084年">2084年</option>
+                                                    <option value="2085年">2085年</option>
+                                                    <option value="2086年">2086年</option>
+                                                    <option value="2087年">2087年</option>
+                                                    <option value="2088年">2088年</option>
+                                                    <option value="2089年">2089年</option>
+                                                    <option value="2090年">2090年</option>
+                                                    <option value="2091年">2091年</option>
+                                                    <option value="2092年">2092年</option>
+                                                    <option value="2093年">2093年</option>
+                                                    <option value="2094年">2094年</option>
+                                                    <option value="2095年">2095年</option>
+                                                    <option value="2096年">2096年</option>
+                                                    <option value="2097年">2097年</option>
+                                                    <option value="2098年">2098年</option>
+                                                </select>
+                                            </li>
+                                            <li class="header-item header-item-two" onselectstart="return false">
+                                                <select name="" id="monthList">
+                                                    <!-- <option value="1月">1月</option>
+                                                    <option value="2月">2月</option>
+                                                    <option value="3月">3月</option>
+                                                    <option value="4月">4月</option>
+                                                    <option value="5月">5月</option>
+                                                    <option value="6月">6月</option>
+                                                    <option value="7月">7月</option>
+                                                    <option value="8月">8月</option>
+                                                    <option value="9月">9月</option>
+                                                    <option value="10月">10月</option>
+                                                    <option value="11月">11月</option>
+                                                    <option value="12月">12月</option> -->
+                                                </select>
+                                            </li>
+                                            <li class="header-item header-item-three" onselectstart="return false">
+                                                <span class="reback">回到今天</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-date-body">
+                                        <ul class="week-list">
+                                            <li>日</li>
+                                            <li>一</li>
+                                            <li>二</li>
+                                            <li>三</li>
+                                            <li>四</li>
+                                            <li>五</li>
+                                            <li>六</li>
+                                        </ul>
+                                        <ul class="day-tabel">
+                                            <li class="tabel-line">
+                                                <ul class="tabel-ul">
+                                                    <li class="tabel-li preDays">30</li>
+                                                    <li class="tabel-li">1</li>
+                                                    <li class="tabel-li">2</li>
+                                                    <li class="tabel-li">3</li>
+                                                    <li class="tabel-li">4</li>
+                                                    <li class="tabel-li">5</li>
+                                                    <li class="tabel-li weekColor">6</li>
+                                                </ul>
+                                            </li>
+                                            <li class="tabel-line">
+                                                <ul class="tabel-ul">
+                                                    <li class="tabel-li weekColor">7</li>
+                                                    <li class="tabel-li">8</li>
+                                                    <li class="tabel-li">9</li>
+                                                    <li class="tabel-li">10</li>
+                                                    <li class="tabel-li active">11</li>
+                                                    <li class="tabel-li">12</li>
+                                                    <li class="tabel-li weekColor">13</li>
+                                                </ul>
+                                            </li>
+                                            <li class="tabel-line">
+                                                <ul class="tabel-ul">
+                                                    <li class="tabel-li weekColor">14</li>
+                                                    <li class="tabel-li">15</li>
+                                                    <li class="tabel-li">16</li>
+                                                    <li class="tabel-li">17</li>
+                                                    <li class="tabel-li">18</li>
+                                                    <li class="tabel-li">19</li>
+                                                    <li class="tabel-li weekColor">20</li>
+                                                </ul>
+                                            </li>
+                                            <li class="tabel-line">
+                                                <ul class="tabel-ul">
+                                                    <li class="tabel-li weekColor">21</li>
+                                                    <li class="tabel-li">22</li>
+                                                    <li class="tabel-li">23</li>
+                                                    <li class="tabel-li">24</li>
+                                                    <li class="tabel-li">25</li>
+                                                    <li class="tabel-li">26</li>
+                                                    <li class="tabel-li weekColor">27</li>
+                                                </ul>
+                                            </li>
+                                            <li class="tabel-line">
+                                                <ul class="tabel-ul">
+                                                    <li class="tabel-li weekColor">28</li>
+                                                    <li class="tabel-li">29</li>
+                                                    <li class="tabel-li">30</li>
+                                                    <li class="tabel-li">31</li>
+                                                    <li class="tabel-li nextDay">1</li>
+                                                    <li class="tabel-li nextDay">2</li>
+                                                    <li class="tabel-li nextDay">3</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="a-spacing-small">
+                        <div class="float_left width17 a-text-right"> 备注：</div>
+                        <div class="float_left">
+                            <textarea rows="2" cols="30">感谢您的订购</textarea>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <h4 class="titleColor">指定订单SKU商品</h4>
+                <div>
+                    <div>
+                        <div style="background: #e0f3fd;" class="inline-block float_right a-box-border">
+                            <div class="a-padding-small ">
+                                <div class="float_left ">搜索和添加商品：</div>
+                                <div class="float_left pdRight10"><input type="text" placeholder="按商品名称，MSKU，ASIN或FNSKU搜索"
+                                        style="width:400px"></div>
+                                <div class="float_left ">
+                                    <span class="awesomeButton buttonLarge primaryLargeButton inner_button">
+                                        <span class="button_label saveBtn">搜索</span>
+                                    </span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <table border="1" style="background: #e0f3fd;" class="tableInput">
+                    <tr style="vertical-align: bottom;">
+                        <td>卖家SKU</td>
+                        <td class="width2">状况</td>
+                        <td class="width_1">入库数量</td>
+                        <td class="width2">可配送数量</td>
+                        <td class="width2">已订购</td>
+                        <td class="width_1">删除</td>
+                    </tr>
+                    <tr style="background: #fff;">
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td class="a-text-center">
+                            <span>0</span>
+                        </td>
+                        <td class="a-text-center">
+                            <input type="text" name="" id="">
+                        </td>
+                        <td><input type="checkbox" name="" id=""></td>
+                    </tr>
+                    <tr class="addNum">
+                        <td colspan="4">总计</td>
+                        <td colspan="2">0</td>
+                    </tr>
+                </table>
+                <!-- <div >
+                    <div class="float_left">总计</div>
+                    <div class="float_right">0</div>
+                    <div class="clear"></div>
+                </div> -->
+            </div>
+        </div>
+        <div>
+            <div class="lineae"></div>
+            <div class="btn" style="background: #e0f3fd;">
+                <div class="float_left">
+                    <span class="awesomeButton returnButtonLarge returnButton inner_button">
+                        <span class="button_label returnBtn">取消</span>
+                    </span>
+                </div>
+                <div class="float_right">
+                    <span class="awesomeButton arrowButtonLarge arrowButton inner_button">
+                        <span class="button_label goBtn">继续</span>
+                    </span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<!-- <script src="js/webjs/manage_inventory_choose.js" type="text/javascript"></script> -->
+<script src="js/webjs/manage_inventory_fulfillment_order.js" type="text/javascript"></script>
+<script src="js/laydate2.js" type="text/javascript"></script>
+<script>
+    function getSelectDate(result) {
+        //这里获取选择的日期
+        console.log(result);
+    }
+</script>
+
+</html>

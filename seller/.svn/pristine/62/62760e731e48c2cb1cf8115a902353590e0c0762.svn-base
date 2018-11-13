@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Amazon - Account status</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/header_nav.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/account_status.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="status-content">
+            <div class="account-header">
+                <ul class="status-nav">
+                    <li class="active"><a href="javascript:;">账户状况</a></li>
+                    <li><a href="javascript:;">绩效指标</a></li>
+                    <li><a href="javascript:;">买家反馈</a></li>
+                    <li><a href="javascript:;">报告</a></li>
+                    <li><a href="javascript:;">资格条件</a></li>
+                </ul>
+            </div>
+            <div class="status-tab-box">
+                <div class="status-inner clear_both status-tab">
+                    <div class="main-title clear_both">
+                        <h1 class="a-size-extra-large fl">账户状况</h1> 
+                    </div>
+                    <p class="a-spacing-base">要在亚马逊上销售产品，您必须达到以下绩效目标和政策要求。</p>
+                    <div class="customer-service fl status-li">
+                        <div class="a-box">
+                            <div class="service-header a-box-inner">
+                                <h4 class="a-size-medium a-text-bold">客户服务绩效</h4>
+                            </div>
+                            <div class="a-box-inner">
+                                <div class="distribution-mode clear_both a-spacing-mini">
+                                    <div class="right-mode fr">
+                                        <span class="mode1">卖家自配送</span>
+                                        <span class="mode2 fr">亚马逊配送</span>
+                                    </div>
+                                </div>
+                                <div class="defect-box a-spacing-medium">
+                                    <div class="defect-header clear_both">
+                                        <a href="javascript:;">订单缺陷率</a>
+                                        <div class="defect-right fr">
+                                            <span class="apply1">不适用</span>
+                                            <span class="apply2 fr">不适用</span>
+                                        </div>
+                                    </div>
+                                    <div class="defect-rate a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">低于 1%</span>
+                                    </div>
+                                </div>
+                                <div class="defect-standard">
+                                    <h5>订单缺陷率包含三个不同的指标：</h5>
+                                    <ul class="standard-list defect-rate">
+                                        <li>
+                                            <span class="list-item clear_both">
+                                                <a href="javascript:;">负面反馈</a>
+                                                <div class="right-feedback fr">
+                                                    <span class="apply1">不适用</span>
+                                                    <span class="apply2 fr">不适用</span>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="list-item clear_both">
+                                                <a href="javascript:;">亚马逊商城交易保障索赔</a>
+                                                <div class="right-feedback fr">
+                                                    <span class="apply1">不适用</span>
+                                                    <span class="apply2 fr">不适用</span>
+                                                </div>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="list-item clear_both">
+                                                <a href="javascript:;">信用卡拒付索赔</a>
+                                                <div class="right-feedback fr">
+                                                    <span class="apply1">不适用</span>
+                                                    <span class="apply2 fr">不适用</span>
+                                                </div>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commodity-policy fl status-li">
+                        <div class="a-box">
+                            <div class="service-header a-box-inner">
+                                <h4 class="a-size-medium a-text-bold">商品政策合规性</h4>
+                            </div>
+                            <div class="a-box-inner">
+                                <div class="distribution-mode a-text-right">
+                                    <span class="mode">配送方：亚马逊和卖家</span>
+                                </div>
+                            </div>
+                            <div class="a-box-inner">
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="Compliance-title">
+                                        <a href="javascript:;">知识产权投诉</a>
+                                        <span class="complaint-num fr">0</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">0 次投诉</span>
+                                        <i class="a-icon a-icon-collapse"></i>
+                                    </div>
+                                </div>
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="Compliance-title">
+                                        <a href="javascript:;">商品真实性买家投诉</a>
+                                        <span class="complaint-num fr">0</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">0 次投诉</span>
+                                        <i class="a-icon a-icon-collapse"></i>
+                                    </div>
+                                </div>
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="Compliance-title">
+                                        <a href="javascript:;">商品安全买家投诉</a>
+                                        <span class="complaint-num fr">0</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">0 次投诉</span>
+                                        <i class="a-icon a-icon-collapse"></i>
+                                    </div>
+                                </div>
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="Compliance-title">
+                                        <a href="javascript:;">上架政策违规</a>
+                                        <span class="complaint-num fr">0</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">0 次投诉</span>
+                                        <i class="a-icon a-icon-collapse"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="distribution-performance fl status-li">
+                        <div class="a-box">
+                            <div class="service-header a-box-inner">
+                                <h4 class="a-size-medium a-text-bold">配送绩效</h4>
+                            </div>
+                            <div class="a-box-inner">
+                                <div class="distribution-mode a-text-right">
+                                    <select name="mode" id="mode">
+                                        <option value="卖家自配送">卖家自配送</option>
+                                        <option value="亚马逊配送">亚马逊配送</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="a-box-inner">
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="performance-title defect-rate">
+                                        <a href="javascript:;">迟发率</a>
+                                        <span class="apply fr">不适用</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">低于 4%</span>
+                                    </div>
+                                </div>
+                                <div class="policy-list a-spacing-mini">
+                                    <div class="performance-title defect-rate">
+                                        <a href="javascript:;">配送前取消率</a>
+                                        <span class="apply fr">不适用</span>
+                                    </div>
+                                    <div class="target a-size-mini">
+                                        <span class="a-text-bold">目标：</span>
+                                        &nbsp;<span class="defect-num">低于 2.5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievements-inner status-tab hide">
+                    <div class="main-title clear_both">
+                        <h1 class="a-size-extra-large fl">绩效指标</h1>
+                    </div>
+                    <p class="a-spacing-base">此页显示了您的客户满意度情况。<a href="javascript:;">了解更多信息</a></p>
+                    <ul class="distribution-nav a-spacing-mini">
+                        <li class="active"><a href="javascript:;">卖家自行配送</a></li>
+                    </ul>
+                    <div class="achievements-check-table table-bg a-section">
+                        <div class="thead a-text-bold">
+                            绩效检查表
+                        </div>
+                        <div class="tbody">
+                            <ul class="check-list clear_both">
+                                <li>
+                                    <p class="a-spacing-medium">订单缺陷率</p>
+                                    <div class="rate-box clear_both">
+                                        <div class="fl">
+                                            <img src="img/rate.jpg" />
+                                        </div>
+                                        <div class="fl target-rate a-size-mini">
+                                            <span class="rate-number">0%</span>
+                                            <span class="term">（长期）</span>
+                                            <span class="Range">目标 < 1%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="a-spacing-medium">取消率</p>
+                                    <div class="rate-box clear_both">
+                                        <div class="fl">
+                                            <img src="img/rate.jpg" />
+                                        </div>
+                                        <div class="fl target-rate a-size-mini">
+                                            <span class="rate-number">0%</span>
+                                            <span class="term">（30天）</span>
+                                            <span class="Range">目标 < 2.5%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="a-spacing-medium">迟发率</p>
+                                    <div class="rate-box clear_both">
+                                        <div class="fl">
+                                            <img src="img/rate.jpg" />
+                                        </div>
+                                        <div class="fl target-rate a-size-mini">
+                                            <span class="rate-number">0%</span>
+                                            <span class="term">（30天）</span>
+                                            <span class="Range">目标 < 4%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="beta-list clear_both">
+                                <li>
+                                    <img src="img/srate.jpg" />
+                                    <div class="dissatisfied-rate">
+                                        退货不满意率
+                                        <span class="a-color-price">(Beta)</span>
+                                    </div>
+                                </li>
+                                <li class="hidden">
+                                    <div class="dissatisfied-rate">
+                                        XXXXXX
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="img/srate.jpg" />
+                                    <div class="dissatisfied-rate">
+                                        客户服务不满意率
+                                        <span class="a-color-price">(Beta)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="img/srate.jpg" />
+                                    <div class="dissatisfied-rate">
+                                        违反政策
+                                        <span class="a-color-price">(Beta)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="img/srate.jpg" />
+                                    <div class="dissatisfied-rate">
+                                        联系回复时间
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 订单缺陷率 -->
+                    <table class="order-defect-table table-bg a-section a-row status-defect-table" border="1">
+                        <thead>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="thead a-text-bold">
+                                        订单缺陷率
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">短期</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-5-21）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">长期</div>
+                                    <div class="cycle-date">（2018-2-12 至 2019-2-21）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="a-text-bold order-tip">订单缺陷率</td>
+                                <td>
+                                    <span class="a-text-bold">0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span class="a-text-bold">0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span class="a-text-bold">< 1%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="order-tip"> <span>—</span> <span class="a-text-bold">负面反馈率</span></td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>--</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="order-tip"> <span>—</span> <span class="a-text-bold">已提交的亚马逊商城交易保障索赔率</span></td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>--</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="order-tip"> <span>—</span> <span class="a-text-bold">服务性拒付率</span></td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0/0)</span>
+                                </td>
+                                <td>
+                                    <span>--</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 最近卖家指标数据 -->
+                    <table class="seller-defect-table table-bg a-section a-row status-defect-table" border="1">
+                        <thead>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="thead a-text-bold">
+                                        最近卖家指标数据
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">7天</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-2-28）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-3-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="a-text-bold order-tip">取消率</td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>< 2.5%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="order-tip"><span class="a-text-bold">迟发率</span></td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>< 4%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="order-tip"><span class="a-text-bold">退款率</span></td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>--</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 有效追踪率 -->
+                    <table class="effective-tracking-table table-bg a-section a-row status-defect-table" border="1">
+                        <thead>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="thead">
+                                        <span class="a-text-bold">有效追踪率</span>  &nbsp;（仅限卖家自配送订单）
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">7天</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-2-28）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-3-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="a-text-bold order-tip">有效追踪率</td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span>0%</span>
+                                    <span>(0)</span>
+                                </td>
+                                <td>
+                                    <span class="a-text-bold">> 95%</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 买家与卖家联系指标 -->
+                    <table class="seller-buyer-table table-bg a-section a-row status-defect-table status-defect-table2" border="1">
+                        <thead>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="thead a-text-bold">
+                                        买家与卖家联系指标
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">7天</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-2-28）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-3-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">90天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-6-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">客户服务不满意率</span>
+                                <span class="a-color-price">(Bata)</span>&nbsp;
+                                <button class="secondaryAUIButton a-size-mini apply-data">请求报告</button>
+                                <button class="secondaryAUIButton a-size-mini history-data">下载历史报告</button>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>0%</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>< 25%</span>
+                            </td>
+                        </tr>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">7天</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-2-28）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-3-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">90天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-6-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="order-tip"><span class="a-text-bold">24小时之内回复数</span></td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>> 90%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip"><span class="a-text-bold">延迟回复</span></td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                                <span>(0)</span>
+                            </td>
+                            <td>
+                                <span>≤ 10%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip"><span> &nbsp;&nbsp;超过24小时没有回复</span></td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>--</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip"><span> &nbsp;&nbsp;24小时之内回复次数</span></td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>--</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="a-text-left">您在过去7天有<a href="javascript:;">0 条消息</a>没有回复。</td>
+                        </tr>
+                    </table>
+                    <!-- 退货不满意率 -->
+                    <table class="return-goods-table table-bg a-section a-row status-defect-table status-defect-table2" border="1">
+                        <thead>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="thead">
+                                        <span class="a-text-bold">退货不满意率</span>  <span class="a-color-price">(Bata)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">7天</div>
+                                    <div class="cycle-date">（2018-2-12 至 2018-2-28）</div>
+                                    <div class="order-num">订单：0</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-3-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">60天</div>
+                                    <div class="cycle-date">（2018-2-13 至 2019-4-12）</div>
+                                    <div class="order-num">订单：0</div>  
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">目标</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">退货不满意率</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>< 10%</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span>—</span>
+                                <span class="a-text-bold">负面退货反馈率</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>--</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span>—</span>
+                                <span class="a-text-bold">延迟回复率</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>--</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span>—</span>
+                                <span class="a-text-bold">无效拒绝率</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>不适用</span>
+                            </td>
+                            <td>
+                                <span>--</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="a-text-left">
+                                <button class="secondaryAUIButton a-size-mini apply-data">请求报告</button>
+                                <button class="secondaryAUIButton a-size-mini history-data">下载历史报告</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- 绩效目标 -->
+                    <div class="Performance-goals">
+                        <div class="a-text-bold goals a-spacing-base">绩效目标</div>
+                        <p class="a-spacing-base">所有亚马逊卖家均应达到并保持以下绩效目标。未能达到这些指标不一定使您的账户处于不利地位，但未能加以改善可能会给您的账户带来不利影响。</p>
+                        <ul class="norm-list a-spacing-base">
+                            <li>
+                                <span class="list-item">订单缺陷率 < 1%</span>
+                            </li>
+                            <li>
+                                <span class="list-item">取消率 < 2.5%</span>
+                            </li>
+                            <li>
+                                <span class="list-item">货品迟发率 < 4%</span>
+                            </li>
+                            <li>
+                                <span class="list-item">有效的跟踪率-全部类别： > 95%</span>
+                            </li>
+                        </ul>
+                         <p class="a-section">这些是基本的卖家目标。您的良好绩效会促进您的商品销量。大多数卖家都超过了这些目标，因此如果您的绩效越好，就越有可能获得更高的竞争力。</p>
+                         <p>请注意：整合的报告每天计算并记录一次。这个页面上最近订单的报告至少是24小时前的数据。此信息仅用于帮助您了解并改善您的业务，请不要用这些信息来进行任何财务决定。</p>
+                    </div>
+                </div>
+                <div class="seller-feedback-inner status-tab hide">
+                    <div class="main-title clear_both">
+                        <h1 class="a-size-extra-large fl">反馈管理器</h1>
+                    </div>
+                    <p class="a-spacing-base">使用反馈管理器可跟踪买家对您服务的满意情况。您可以查看短期和长期指标以及详细反馈记录，包括买家名称和详细订单编号。点击“订单编号”可在您卖家账户的“订单管理”部分查看交易详情。<a href="javascript:;">了解详情</a></p>
+                    <div class="Grade-title a-spacing-micro">
+                        <h1>反馈评级：<span class="new">NEW SEllER</span></h1>
+                    </div>
+                    <table class="seller-feedback-table table-bg a-section a-row status-defect-table status-defect-table2 a-spacing-micro" border="1">
+                        <thead class="cycle-thead">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="cycle a-text-bold">30天</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">90天</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">365天</div>
+                                </td>
+                                <td>
+                                    <div class="cycle a-text-bold">终身</div>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">好评</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">中评</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">差评</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                            <td>
+                                <span>-</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="order-tip">
+                                <span class="a-text-bold">计数</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                            <td>
+                                <span>0</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="seller-feedback-table-tip clear_both">
+                        <p class="fl">该表向您展示了相关的反馈百分比及反馈计数。<a href="javascript:;">请查看如何在亚马逊上向买家显示您的反馈内容。</a></p>
+                        <p class="fr count-tip">由于四舍五入，反馈计数可能不等于100%。</p>
+                    </div>
+                </div>
+                <div class="status-tab hide">暂无数据</div>
+                <div class="status-tab hide">暂无数据</div>
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script src="js/webjs/seller_public.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/webjs/account_status.js"></script>
+</html>

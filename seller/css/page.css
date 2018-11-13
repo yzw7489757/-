@@ -1,0 +1,89 @@
+#pagn.pagnHy {
+    background-color: #eee;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    user-select:none;
+}
+#pagn.pagnHy a{
+    color: #0066c0;
+}
+div.pagnHy .pagnLA{
+    margin: 0px 45px -16px 0;
+    font-size: 0;
+}
+.pagnPrevArrow,.pagnNextArrow {
+    height: 24px;
+    width: 16px;
+    display: inline-block;
+    position:relative;
+    top:7px;
+}
+.srSprite {
+    background-image: url(../img/searchSprite._CB280429789_.png);
+    background-repeat: no-repeat;
+}
+.pagnLA #pagnPrevString{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.pagnHy .pagnLA .pagnPrevArrow{
+    background-position: 0 -325px;
+}
+div.pagnHy span.pagnLink a, div.pagnHy span.pagnLink a:visited {
+    color: #0066c0;
+    padding: 6px;
+    white-space: nowrap;
+}
+div.pagnHy .pagnCur {
+    font-weight: 700;
+    padding: 0 5px;
+}
+div.pagnHy .pagnDisabled {
+    color: #555;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+div.pagnHy .pagnRA{
+    margin: 2px 0 -8px 45px;
+}
+#pagnNextString {
+    margin-right: 10px;
+    font-size: 18px;
+}
+.pagnHy .pagnRA .pagnNextArrow{
+    background-position: -20px -325px;
+}
+div.pagnHy span.pagnLink a:hover {
+    background: #FFF;
+    border: 1px solid #055D90;
+    color: #c45500!important;
+    padding: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+div.pagnHy .pagnLA a:hover .pagnPrevArrow{
+    background-position: -40px -325px;
+    cursor: pointer;
+}
+div.pagnHy .pagnRA a:hover .pagnNextArrow{
+    background-position: -60px -325px;
+    cursor: pointer;
+}
+div.pagnHy .pagnLA a:hover #pagnPrevString,div.pagnHy .pagnRA a:hover #pagnNextString{
+    text-decoration: underline;
+    color: #c45500;
+}
+.pagnHy .pagnLA1 .pagnPrevArrow{
+   background-position: -80px -325px;
+}
+.pagnLA1 #pagnPrevString{
+    color:#555;
+}
+.pagnHy .pagnRA1 .pagnNextArrow{
+   background-position: -100px -325px;
+}
+.pagnRA1 #pagnNextString{
+    color:#555;
+}

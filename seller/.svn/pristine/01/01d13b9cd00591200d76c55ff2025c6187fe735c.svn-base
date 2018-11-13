@@ -1,0 +1,43 @@
+var E = window.wangEditor
+var editor = new E('#editor')
+editor.customConfig.menus = ['head', 'bold','fontSize', 'fontName', 'italic', 'underline', 'strikeThrough', 'justify','undo','redo' ]
+editor.create();
+laydate.render({
+  elem:'#Start-Date',
+  lang: 'en',
+  format: 'dd/MM/yyyy',
+  min:0,
+  showBottom: false
+})
+laydate.render({
+  elem:'#End-Date',
+  lang: 'en',
+  min:0,
+  format: 'dd/MM/yyyy',
+  showBottom: false
+})
+$(function(){
+    $(window).scrollTop(0);
+    $('#editor-submit').click(function() {
+        console.log(editor.txt.html())
+    })
+    var buyer_purchases = $('#buyer-purchases');
+    var buyerArr = ['At least this quality of items','At least amount (in $)','For every quantity of items purchased'];
+    buyer_purchases.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'buyer_purchases',buyerArr);
+    })
+    var applies_to = $('#applies-to');
+    var appliesArr = ['Purchased Items','Qualifying Item'];
+    applies_to.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'applies_to',appliesArr);
+        $(this).children('span').on('DOMNodeInserted',function(){
+            if($(this).text() == 'Qualifying Item'){
+                $('#Qualifying-tr').fadeIn(150);
+            }else{
+                $('#Qualifying-tr').fadeOut(150);
+            }
+        })
+    })
+})

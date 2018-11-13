@@ -1,0 +1,4 @@
+$(function () { 
+    inputctr.public.checkLogin();
+    
+ })

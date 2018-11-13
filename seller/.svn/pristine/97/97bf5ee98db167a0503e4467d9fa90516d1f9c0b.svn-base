@@ -1,0 +1,82 @@
+$(function () {
+    inputctr.public.checkLogin();
+
+    $('.a-container>ol>li').click(function (item) {
+        $('.a-container ol li').removeClass('activeOl');
+        index = $(this).index();
+        $(this).addClass('activeOl');
+        $('.a-container>ul>li').eq(index).show().siblings().hide();
+        if (index != 1) {
+            $('.screenTable').hide();
+        } else {
+            $('.screenTable').show();
+        }
+    })
+
+    function GetDownloadRecord(tag) {
+        $.ajax({
+            url: baseUrl + '/GetDownloadRecord',
+            method: 'post',
+            dataType: "json",
+            data: {
+                sellerId: amazon_userid,
+                tag: tag
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.result == 1) {
+                    var data = res.data
+                    var add = doT.template($('#addArray').text());
+                    $('#addTmpl').html(add(data));
+                    
+                    
+                }
+            },
+            error: function (res) {
+                console.log(decodeURIComponent(res.error))
+            }
+        })
+    }
+    GetDownloadRecord(1);
+    
+    
+     
+    $('.downloadBtn').click(function () { 
+        $.ajax({
+            url: baseUrl + '/DownloadRecord',
+            method: 'post',
+            dataType: "json",
+            data: {
+                sellerId: amazon_userid,
+                tag: 1,
+                startTime:"",
+                endTime:""
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.result == 1) {
+                    let appendHtml=`
+                    <tr>
+                        <td>无在售信息的亚马逊库存</td>
+                        <td>${res.date}</td>
+                        <td>
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label loadBtn" path="${res.url}">下载</span>
+                            </span>
+                        </td>
+                    </tr>
+                    `
+                    $('#addTmpl').append(appendHtml)
+                }else{
+                    alert("请求下载失败")
+                }
+            },
+            error: function (res) {
+                console.log(decodeURIComponent(res.error))
+            }
+        })
+    })
+    $('#addTmpl').on('click',".loadBtn",function () { 
+        location.href=$(this).attr('path')
+    })
+})

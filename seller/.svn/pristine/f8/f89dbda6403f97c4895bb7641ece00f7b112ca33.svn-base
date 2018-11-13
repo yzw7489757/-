@@ -1,0 +1,33 @@
+$(function(){
+    var Create_group = $('#Create-group');
+    var Group_Name = $('#Group-Name');
+    var Group_Quantity = $('#Group-Quantity');
+    var claim_code_table = $('.claim-code-table');
+    var num_group = $('.num_group');
+    Create_group.click(function() {
+        if(Group_Name.val().trim() == ''){
+            Group_Name.addClass('error-border');
+        }else{
+            Group_Name.removeClass('error-border');
+        }
+        if(Group_Quantity.val().trim() == ''){
+            Group_Quantity.addClass('error-border');
+        }else{
+            Group_Quantity.removeClass('error-border');
+        }
+        if($('.error-border').length){
+            return;
+        }else{
+            var code_html = '<tr>'+
+                                '<td>HJHKUHKH785</td>'+
+                                '<td>10</td>'+
+                                '<td>2018/10/23 17:44</td>'+
+                                '<td>201816@qgy.com</td>'+
+                                '<td>Ready</td>'+
+                                '<td><a href="javascript:;" class="download a-link-normal">Download</a></td>'+
+                            '</tr>'
+            claim_code_table.find('tbody').append(code_html)
+            num_group.children().text(claim_code_table.find('tbody').children('tr').length+' claim code group');
+        }
+    })
+})

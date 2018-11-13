@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>管理退货</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iconfonthly.css" />
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+   	<link rel="stylesheet" type="text/css" href="css/manage_returns.css"/>
+   	<link rel="stylesheet" type="text/css" href="css/page.css" />
+   	<link rel="stylesheet" type="text/css" href="css/overlay.css" />
+</head>
+<body>
+    <header id="sc-masthead" class="clearable"></header>
+	<div class="amazon-confirm-shipment-wrap">
+		<div class="amazon-confirm-shipment">
+			<div id="manage-returns" class="common-container">
+				<div class="amazon-confirm-shipment-header">
+					<h1>Manage Returns</h1>
+				</div>
+				<div class="clearfix manage-returns-content">
+					<div class="pull-left intercepting-filter">
+						<h4><strong>Filter return by:</strong></h4>
+						<div class="Filter-container">
+							<a class="active" status="0">View all</a>
+							<a status="1">Authorization required</a>
+							<a status="2">Completed</a>
+							<a status="3">Authorized</a>
+							<a status="4">Closed</a>
+							<a status="5">By Buyer</a>
+							<a status="6">By Seller</a>
+						</div>
+						<div class="control-filters">
+							<i class="a-icon a-arrow-show"></i>
+							<span>Filters</span>
+						</div>
+					</div>
+					<div class="pull-left order-information">
+						<div class="search_category">
+							<select class="long">
+								<option>Date Range</option>
+							</select>
+							<select class="short">
+								<option>last 30 days</option>
+							</select>
+							<button class="highlighted-button">
+	                            <span class="highlighted-button-label button">Search</span>
+	                        </button>
+						</div>
+						<div class="Possible">
+							<select class="long">
+								<option>Status of Return Requests</option>
+							</select>
+						</div>
+						<div class="collapse control-order-details">
+							<a>Hide Return Details</a>
+						</div>
+						<div class="order-list">
+							<div class="order-detainls-container clearfix">
+								<div class="pull-left order-information-container1">
+									<h3>******</h3>
+									<div class="order-detail">
+										<div class="info-list">
+											<span>Order ID:</span>
+											<a>******</a>
+										</div>
+										<div  class="info-list">
+											<span>Buyer:</span>
+											<a>******</a>
+										</div>
+										<div  class="info-list">
+											<span>Request Date:</span>
+											<span>******</span>
+										</div>
+									</div>
+								</div>
+								<div class="pull-left order-information-container2">
+									<h3 style="color: #c60;">******</h3>
+									<div class="clearfix goods-list">
+										<div class="pull-left goods-cover">
+											<img src="img/camera_icon.png"/>
+										</div>
+										<div class="pull-left goods-information">
+											<div class="goods-name">
+												<a href="javascript:;">******</a><br />
+											</div>
+											<div class="buy-comments">
+												<span>Description:</span>
+												<span>******</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pull-left order-information-container3 clearfix">
+									<button class="highlighted-button pull-right">
+			                            <span class="highlighted-button-label button">Authorize request</span>
+			                        </button>
+			                        <button class="find find_on pull-right">
+			                            <span class="button-label button">Close request</span>
+			                        </button>
+			                        <button class="find find_on pull-right">
+			                            <span class="button-label button">Issue refund</span>
+			                        </button>
+			                        <button class="find find_on pull-right">
+			                            <span class="button-label button">Contact Buyer</span>
+			                        </button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="pagn" class="pagnHy"></div>
+		</div>
+	</div>
+   <div class="a-container-footer"></div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" src="js/webjs/seller_public.js"></script>
+<script type="text/javascript" src="js/webjs/manage_returns.js"></script>
+</html>
+

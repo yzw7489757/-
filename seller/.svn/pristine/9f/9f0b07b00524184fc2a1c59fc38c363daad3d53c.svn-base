@@ -1,0 +1,13 @@
+$(function(){
+    var promotion_tab = $('.promotion_tab');
+    $('.promotion-nav').on('click','li',function(){
+        $(this).addClass('active').siblings('li').removeClass('active');
+        promotion_tab.eq($(this).index()).removeClass('hide').siblings('.promotion_tab').addClass('hide');
+    })
+    var browse_class = $('#browse-class');
+    var browseArr = ['浏览分类节点编号列表','SKU 列表','ASIN 列表','品牌名称列表','高级商品列表'];
+    browse_class.click(function(event){
+        event.stopPropagation();
+        CreatSelect($(this),'browse_class',browseArr);
+    })
+})

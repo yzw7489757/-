@@ -1,0 +1,24 @@
+.data-analysis-conatiner{
+	width: 100%;
+	padding: 20px 2.5%;
+}
+.a-horizontal-stripes {
+    border: 1px solid #e7e7e7;
+    line-height: 1.2;
+    font-size: 12px;
+    min-width: 100%;
+}
+table.a-horizontal-stripes tr:first-child th {
+    background: -webkit-linear-gradient(top,#f8f8f8,#eee);
+    background: linear-gradient(to bottom,#f8f8f8,#eee);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    border-color: #e7e7e7;
+    
+}
+.a-horizontal-stripes td, .a-horizontal-stripes th {
+    height: auto !important;
+    max-width: 200px;
+    text-align: center;
+    padding: 10px 5px!important;
+    border-bottom: 1px solid #ddd;
+}

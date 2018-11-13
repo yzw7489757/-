@@ -1,0 +1,8 @@
+$(function () { 
+    $('.a-container ul li a').click(function (item) { 
+        $('.a-container ul li a').removeClass('active');
+        var index = $(this).parent('li').index();
+        $(this).addClass('active');
+        $('ol li').eq(index).show().siblings().hide();
+     })
+ })

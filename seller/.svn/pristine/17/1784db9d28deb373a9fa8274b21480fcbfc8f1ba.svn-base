@@ -1,0 +1,19 @@
+.a-icon-shop-down{
+    width: 7px;
+    height: 5px;
+    background-position: -90px -5px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+.shopping-list{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.shopping-list li{
+    margin-bottom: 5px;
+}
+.shopping-list .a-icon-shop-down{
+    opacity: 0.6;
+    transform: rotate(-90deg);
+}

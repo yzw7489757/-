@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/header_nav.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/manage_inventory_choose.css">
+    <link rel="stylesheet" href="./css/manage_inventory_setNumber.css">
+</head>
+
+<body>
+    <header id="sc-masthead" class="clearable">
+    </header>
+    <div class="a-container ">
+        <div>
+            <span class="a-color-state a-size-large">
+                发/补货
+            </span>
+            <a href="javascript:void(0)">了解更多信息</a>
+        </div>
+        <div>
+            PLN(4/28/18 12:04 AM) <a href="javascript:void(0)">重命名</a>
+        </div>
+        <ul class="showTitle">
+            <li>
+                设置数量
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理商品
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                为商品贴标
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                检查货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li>
+                预处理货件
+                <span class="dispplay_none"></span>
+            </li>
+            <li class="activeColor">
+                一览
+                <span></span>
+            </li>
+        </ul>
+        <ol class="olSKU showContent ">
+            <li>
+                <ol>
+                    <li>
+                        <div><b>发货地址</b></div>
+                        <div class="name">zhongguo feng</div>
+                        <div class="address">wanda shangyezhongxin Dzuo</div>
+                        <div class="address2">718</div>
+                        <div class="detailAddress">hangzhou,zhejiangsheng</div>
+                        <div class="zipcode">310000</div>
+                        <div class="country">CN</div>
+                    </li>
+                    <li>
+                        <div><b>货件名称/编号</b></div>
+                        <div><span>货件名称：</span> <span class="cargoName"></span></div>
+                        <div><span>编号：</span> <span class="cargoNo"></span</div> <div>货件追踪信号</div>
+                    </li>
+                    <li>
+                        <div><b>配送地址</b></div>
+                        <div class="toCity">Amazon.com</div>
+                        <div class="toZipcode">33333 LBJ FWY</div>
+                        <div class="toAdr">Dalas TX 75241-7203</div>
+
+                    </li>
+                    <li>
+                        <div><b>货件内商品</b></div>
+                        <div>1 MSKU</div>
+                        <div><span class="goodsNum"></span> 商品数量</div>
+                    </li>
+                    <li>
+                        <div><b>服务费用</b></div>
+                        <div>亚马逊物流人工处理费用 ：$0.00</div>
+                        <div>贴标和预处理 <a href="javascript:void(0)">已针对总体入库计划予以计算</a></div>
+                    </li>
+                    <li>
+                        <div><b>货件状态</b></div>
+                        <div class="cargoStatus">处理中</div>
+                        <div>已创建：<span class="createTime"></span></div>
+                        <div>已更新：<span class="createTime"></span></div>
+                        <div>
+                            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                                <span class="button_label">标记为已发货</span>
+                            </span>
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <ol class="olSKU showtext">
+            <!-- 6 -->
+            <li>
+                <hr>
+                <div>
+                    <div class="float_right">
+                        <a href="javascript:void(0)">显示更多</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <ul class="commodity cargoTitle">
+                        <li class="selectColor">追踪货件</li>
+                        <li>货件内商品</li>
+                        <li>货件差异查询</li>
+                    </ul>
+                    <ol class="cargo">
+                        <li>
+                            <div class="width50">
+                                <div class="a-box a-alert a-alert-info">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content">
+                                            <span>若要更改箱子数量，请返回到上一页。</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="a-row">
+                                    <tbody>
+                                        <tr>
+                                            <td>箱号</td>
+                                            <td>追踪编号</td>
+                                            <td>承运人状态</td>
+                                            <td>重量</td>
+                                            <td>尺寸</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cargoId"></td>
+                                            <td><input type="text" placeholder="输入追踪编号" class="trackNo"> </td>
+
+                                            <td class="shippingStatus">-</td>
+
+                                            <td class="weights" id="addTmpl">
+
+                                            </td>
+                                            <td class="size" id="addTmpl2">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div style="color: green" class="successInfo none">
+                                                    <img src="./img/img31._V271985466_.png" alt="hook" class="hook margin-top-small">
+                                                    您已成功提交追踪编号。
+                                                </div>
+                                                <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                                    <span class="button_label saveBtn">全部保存</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="a-row a-spacing-top-medium">
+                                <div>
+                                    <div class="float_left">
+                                        <span class="awesomeButton returnButtonLarge returnButton inner_button">
+                                            <span class="button_label returnBtn">返回</span>
+                                        </span>
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                                            <span class="button_label">删除货件</span>
+                                        </span>
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                                            <span class="button_label">返回“货件处理进度”</span>
+                                        </span>
+                                        <span class="awesomeButton thirdLarge thirdLargeButton inner_button">
+                                            <span class="button_label">复制</span>
+                                        </span>
+
+                                    </div>
+                                    <div class="float_right">
+                                        <button class="awesomeButton buttonLarge primaryLargeButton" type="submit">
+                                            <span class="button_label anotherGoods">处理另一个货件</span>
+                                        </button>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="none">
+                            <div class="a-box a-alert a-alert-warning a-section">
+                                <div class="a-box-inner a-alert-container">
+                                    <i class="a-icon a-icon-alert"></i>
+                                    <div class="a-alert-content">
+                                        <span>除非您已经在运输流程的准备货件步骤中提供了箱内物品信息，否则我们建议您不要打包和密封包装箱。</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="a-row">
+                                <tbody>
+                                    <tr>
+                                        <td>MSKU</td>
+                                        <td>商品名称</td>
+                                        <td class="width8">状况</td>
+                                        <td class="width8">已发货</td>
+                                        <td class="width8">已收到</td>
+                                    </tr>
+                                    <tr style="background-color:#ddd ;height: 40px;">
+                                        <td colspan="5" class="a-text-center"><input type="checkbox"> 显示ASIN/FNSKU</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sellerId">bc001</td>
+                                        <td class="goodsName">123</td>
+                                        <td><span class="shippingMode"></span>配送</td>
+                                        <td class="deliveried">
+                                            qqq
+                                        </td>
+                                        <td class="Collected">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">总计</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="none">
+                            <div class="width50">
+                                <div class="a-box a-alert a-alert-info">
+                                    <div class="a-box-inner a-alert-container">
+                                        <i class="a-icon a-icon-alert"></i>
+                                        <div class="a-alert-content">
+                                            <span>我们想要做好。</span>
+                                            <br>
+                                            <span>我们的追踪信息显示货件尚未交给合作承运人。如果您最近将货件交给承运人，请允许24小时来更新追踪信息。</span>
+                                            <br>
+                                            <a href="javascript:void(0)">了解更多信息</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>如果您对货件仍有疑问，请联系卖家支持，您可能需要提供其他支持文档。</div>
+                            </div>
+                        </li>
+                    </ol>
+
+                </div>
+            </li>
+        </ol>
+
+    </div>
+    <div class="a-container-footer">
+    </div>
+</body>
+<script id="addArray" type="text/x-dot-template">
+    {{~it:value:index}}
+        {{= decodeURIComponent(value.weights)}}
+        <br>
+    {{~}}
+</script>
+<script id="addArray2" type="text/x-dot-template">
+    {{~it:value:index}}
+        {{= decodeURIComponent(value.size)}}
+        <br>
+    {{~}}
+</script>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script src="js/webjs/seller_public.js" type="text/javascript"></script>
+<script src="js/webjs/manage_inventory_list.js" type="text/javascript"></script>
+<script src="js/doT.min.js" type="text/javascript"></script>
+
+</html>

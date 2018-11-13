@@ -1,0 +1,139 @@
+let campaign_advertising_creat2={};
+$(function(){})
+
+campaign_advertising_creat2.SelectCurrentKeyword=function(target){
+	let product_id=$(target).parents('.product_details').attr('data-id');
+	//用来判断该产品是否已经选中
+	let flag=1;
+	$('#select-product-group ul li').each(function(){
+		if($(this).attr('data-id')==product_id){
+			flag=0;
+		}
+	})
+	if(flag==1){
+		let product_info=$(target).parents('.product_details').find('.product_details_right').html();
+		let product_cover=$(target).parents('.product_details').find('.product_img').html();
+		let content='<li data-id="'+product_id+'">'
+			 		+'<div class="product_details clearfix">'
+					+'<div class="product_details_right pull-left">'+product_info+'</div>'
+					+'<div class="product_img pull-left">'+product_cover+'</div>' 
+					+'<div class="close" onclick="campaign_advertising_creat2.DeleteSelectProduct(this)"></div>'
+					+'</div></li>';
+		$('#select-product-group ul').append(content);
+		campaign_advertising_creat2.SelectNumber();
+	}
+	
+}
+
+campaign_advertising_creat2.DeleteSelectProduct=function(target){
+	$(target).parents('li').remove();
+	campaign_advertising_creat2.SelectNumber();
+}
+//当前选中产品的数量
+campaign_advertising_creat2.SelectNumber=function(){
+	let num=$('#select-product-group ul li').length;
+	if(num>0){
+		$('.has-chose-product .selected-product-num').removeClass('hide');
+		$('.has-chose-product .selected-product-num .select-num').html(num);
+	}else{
+		$('.has-chose-product .selected-product-num').addClass('hide');
+	}
+}
+
+//选择全部的合格的产品
+campaign_advertising_creat2.SelectAllEligibleProduct=function(){
+	let all_content='';
+	let  has_choose=$('#select-product-group ul li');
+	$('#all-eligible-product .product_details').each(function(){
+		if($(this).attr('qualified-mark')=='ellglble'){
+			let current_product=$(this);
+			let flag=1;
+			has_choose.each(function(){
+				if($(this).attr('data-id')==current_product.attr("data-id")){
+					flag=0
+				}else{}
+			})
+			if(flag==1){
+				let product_id=$(this).attr('data-id');
+				let product_info=$(this).find('.product_details_right').html();
+				let product_cover=$(this).find('.product_img').html();
+				let content='<li data-id="'+product_id+'">'
+					 		+'<div class="product_details clearfix">'
+							+'<div class="product_details_right pull-left">'+product_info+'</div>'
+							+'<div class="product_img pull-left">'+product_cover+'</div>' 
+							+'<div class="close" onclick="campaign_advertising_creat2.DeleteSelectProduct(this)"></div>'
+							+'</div></li>';
+				all_content+=content;
+			}
+			
+		}
+	})
+	$('#select-product-group ul').append(all_content);
+}
+
+//选择关键词
+campaign_advertising_creat2.SelectCurrentKeyWords=function(target){
+	let keywords_id=$(target).parents('tr').attr('data-id');
+	//用来判断该产品是否已经选中
+	let flag=1;
+	$('#selected-keywords-table tbody tr').each(function(){
+		if($(this).attr('data-id')==keywords_id){
+			flag=0;
+		}
+	})
+	if(flag==1){
+		let keyword=$(target).parents('tr').find('.keyword').html();
+		let match=$(target).parents('tr').find('.match').html();
+		let content='<tr data-id="'+keywords_id+'"><td>'+keyword+'</td>'
+					+'<td class="match">'+match+'</td>'
+					+'<td><div><input type="text" name="" id="" value="" class="pull-left" />'
+					+'<div class="close" onclick="campaign_advertising_creat2.DeleteKeywords(this)"></div></div></td></tr>';
+		$('#selected-keywords-table tbody').append(content);
+		campaign_advertising_creat2.SelectKeyWordsNumber();
+	}
+	
+}
+//当前选中关键词的数量
+campaign_advertising_creat2.SelectKeyWordsNumber=function(){
+	let num=$('#selected-keywords-table tbody tr').length;
+	if(num>0){
+		$('.select-keywords-number span').html(num);
+		$('.select-keywords-number').removeClass('hide');
+		$('#selected-keywords-table').removeClass('hide');
+	}else{
+		$('.select-keywords-number').addClass('hide');
+		$('#selected-keywords-table').addClass('hide');
+	}
+}
+//删除选中的关键词
+campaign_advertising_creat2.DeleteKeywords=function(target){
+	$(target).parents('tr').remove();
+	campaign_advertising_creat2.SelectKeyWordsNumber();
+}
+//选中全部关键词
+campaign_advertising_creat2.SelectAllKeywords=function(){
+	let has_choose=$('#selected-keywords-table tbody tr');
+	let allcontent='';
+	$('#all-suggest-keyWords tr').each(function(){
+		let keywords_id=$(this).attr('data-id');
+		//用来判断该关键词是否已经选中
+		let flag=1;
+		has_choose.each(function(){
+			if($(this).attr('data-id')==keywords_id){
+				flag=0;
+			}
+		})
+		if(flag==1){
+			let keyword=$(this).find('.keyword').html();
+			let match=$(this).find('.match').html();
+			let content='<tr data-id="'+keywords_id+'"><td>'+keyword+'</td>'
+						+'<td class="match">'+match+'</td>'
+						+'<td><div><input type="text" name="" id="" value="" class="pull-left" />'
+						+'<div class="close" onclick="campaign_advertising_creat2.DeleteKeywords(this)"></div></div></td></tr>';
+			$('#selected-keywords-table tbody').append(content);
+			campaign_advertising_creat2.SelectKeyWordsNumber();
+		}
+	})
+	
+	
+}

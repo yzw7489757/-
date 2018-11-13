@@ -1,0 +1,32 @@
+.drop-date{
+    margin: 0;
+    margin-right: 25px;
+}
+table tbody td{
+    height: 40px;
+}
+.deal-price{
+    width: 250px;
+}
+.currency_number-symbol {
+    background: #EEE;
+    padding: 6px 8px 6px 10px;
+    height:31px;
+    color: black;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px 0 0 3px;
+    font-weight: bold;
+}
+#deal-price{
+    width: 220px;
+    border-radius: 0 3px 3px 0!important;
+    float:left;
+    margin-left: -1px;
+}
+.select{
+    display:none;
+}
+.timeError{
+    margin-left: 25px;
+    color:#d00;
+}

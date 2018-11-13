@@ -1,0 +1,287 @@
+body {
+    font-size: 13px;
+    color: #111;
+}
+.off-content{
+    padding: 18px;
+}
+a {
+    color: #0066c0;
+}
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #c45500;
+}
+a.a-link-normal:hover {
+    text-decoration: underline;
+}
+.off-title{
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.go_to{
+    margin-bottom: 10px;
+}
+#Rreview-button{
+    margin-left: 5px;
+}
+.step-conditions{
+    border: 1px solid  #ccc;
+}
+.step-bg{
+    background: #F3F3F3;
+    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 1px solid  #ccc;
+}
+.step-innner{
+    padding: 10px;
+}
+.step-table{
+    border:1px solid  #ccc;
+}
+.step-table td{
+    border-color: #ccc;
+    padding: 5px;
+}
+.step-table .left-td{
+    text-align: right;
+    font-weight: 600;
+    width: 35%;
+    background: #F3F3F3;
+}
+.step-table .left-td a{
+    font-weight: 600;
+}
+.step-table .right-td{
+    text-align: left;
+    padding-left: 10px;
+}
+.drop-select{
+    width: 345px!important;
+    position:relative;
+    text-align: left;
+    margin-right: 25px;
+}
+.a-icon-dropdown {
+    width: 5px;
+    height: 8px;
+    background-position: -65px -5px;
+    position: absolute;
+    top: 10px;
+    right: 9px;
+}
+#purchases-quality,#percent-quality{
+    width: 155px;
+}
+#Qualifying-input{
+    width: 340px;
+    margin-right: 25px;
+    margin-left: 30px;
+}
+.date-enter,.drop-date,#applies-quantity{
+    width: 250px!important;
+}
+.date-enter{
+    display:inline-block;
+    position:relative;
+}
+.icon-calendar {
+    width: 23px;
+    height: 22px;
+    background-position: -297px -477px;
+    opacity: .7;
+    position: absolute;
+    top: 5px;
+    right: 3px;
+}
+.date-enter input{
+    padding-right: 25px;
+}
+.drop-date{
+    margin: 0 25px;
+    text-align: left;
+    position:relative;
+}
+.a-step-up{
+    width: 8px;
+    height: 10px;
+    background-position: -379px -12px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    transition: transform 0.2s;
+}
+.a-step-drown{
+    transform:rotate(90deg);
+}
+input[type="radio"]{
+    margin-bottom: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.claim-label{
+    margin-right: 45px;
+}
+.a-icon-tip{
+    width: 8px;
+    height: 14px;
+    background-position: -165px -129px;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+#Cliam-Code{
+    width: 115px;
+    margin-right: 10px;
+}
+#Checkout-display,#Short-display{
+    width: 250px;
+}
+input[readonly]{
+    background: #f3f3f3;
+    color:#555;
+}
+input[readonly]:focus{
+    border: 1px solid #a6a6a6;
+    box-shadow: none;
+}
+.a-text-top{
+    vertical-align: top;
+}
+#editor-submit{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.qualifying-benefit{
+    display:none;
+}
+.claim_show,.customsize_show{
+    display:none;
+}
+.precedence_num{
+    z-index: 99999;
+}
+#select-ASIN{
+    width: 600px;
+    position:fixed;
+    z-index: 100;
+    top: 10%;
+    left: 50%;
+    margin-left: -300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.13);
+    display:none;
+}
+#close-ASIN{
+    background-color: transparent;
+    border-radius: 3px;
+    border: none;
+    float: right;
+    padding: 8px;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    margin: -13px 0 0;
+    line-height: 0;
+    cursor: pointer;
+}
+#close-ASIN .a-icon-close {
+    width: 10px;
+    height: 9px;
+    background-position: -297px -5px;
+    opacity: .64;
+}
+#select-ASIN .a-select-inner{
+    margin-bottom: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+#select-ASIN-table thead{
+    background: linear-gradient(to bottom,#f8f8f8,#eee);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    font-weight: 700;
+}
+#select-ASIN-table td{
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+#select-ASIN-table tbody td{
+    height: 74px;
+}
+#select-ASIN-table thead td{
+    padding: 8px 5px;
+}
+#select-ASIN-table td.goods-name{
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#select-ASIN-table tbody tr.active{
+    background: rgba(217, 216, 216, 0.4);
+}
+#select-ASIN-table tbody tr{
+    cursor:default;
+}
+#select-this{
+    display: block;
+    margin: 10px auto;
+}
+.search-ASIN-box{
+    padding:5px;
+    text-align: center;
+    border-bottom: 1px solid #d3d2d2;
+}
+.search-ASIN-box .a-inline-block{
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.searchInputWidth{
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.a-icon-search{
+    width: 13px;
+    height: 13px;
+    background-position: -271px -86px;
+    opacity: .55;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 10px;
+}
+#ASINitable-search{
+    padding-left: 29px;
+    padding-right: 15px;
+    font-size: 12px;
+}
+
+.button {
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 29px;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+.button-search {
+    background: linear-gradient(to bottom,#72787f,#444c55);
+    border-color: #3d444c #2f353b #2c3137;
+    color: #fff;
+    transition: all 100ms linear;
+}
+.button-search:hover {
+    background: linear-gradient(to bottom,#666b72,#393f47);
+    border-color: #32373e #24282d #212429;
+}
+.deal-price{
+    width: 155px;
+}

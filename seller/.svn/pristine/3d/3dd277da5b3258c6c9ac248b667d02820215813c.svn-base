@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Free shopping</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/common2.css" />
+        <link rel="stylesheet" type="text/css" href="css/money_off.css" />
+        <link rel="stylesheet" type="text/css" href="css/select_down.css" />
+        <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+    </head>
+    <body>
+        <header id="sc-masthead" class="clearable"></header>
+        <div class="off-content">
+            <h1 class="off-title">Creat a promotion</h1>
+            <div class="go_to">
+                <button class="secondaryAUIButton a-button-inner a-button-31 go_to_Manage" onclick="javascript:location.href='promotion.html?step=2'">Go to Manage Promotions</button>
+                <button class="primaryAUIButton a-button-inner a-button-31 Rreview-button">Review</button>
+            </div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Step 1:Conditions
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">Buyer purchases</td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-select" id="buyer-purchases"creat='true'>
+                                    <span>At least this quality of items</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                                <input type="text" id="purchases-quality" class="verify-require" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Purchased Items</td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-select" id="purchased-items" creat='true'>
+                                    <span>Select one</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                                <a href="promotion.html?step=3" class="a-link-normal">Creat a new product selection</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Buyer gets</td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-select" creat='true' id="Percent_off">
+                                    <span>Free Shopping</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                                <input type="text" id="percent-quality" class="hide"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Applies to</td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-select" creat='true' id="applies-to">
+                                    <span>Purchased Items</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="qualifying-benefit">
+                            <td class="left-td">Qualifying Item</td>
+                            <td class="right-td">
+                                <span>One of</span>
+                                <input type="text" id="Qualifying-input" />
+                                <a href="javascript:;" class="a-link-normal">Select an ASIN</a>
+                            </td>
+                        </tr>
+                        <tr class="qualifying-benefit">
+                            <td class="left-td">Buyer benefit applies to a quantity of</td>
+                            <td class="right-td">
+                                <input type="text" id="applies-quantity" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Step 2:Scheduling
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">Start Date</td>
+                            <td class="right-td">
+                                <div class="date-enter">
+                                    <input type="text" id="Start-Date" class="verify-require"/>
+                                    <i class="a-icon icon-calendar"></i>
+                                </div>
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-am">
+                                    <span>0:00 AM</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                               <span>POT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">End Date</td>
+                            <td class="right-td">
+                                <div class="date-enter">
+                                    <input type="text" id="End-Date" class="verify-require"/>
+                                    <i class="a-icon icon-calendar"></i>
+                                </div>
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-pm">
+                                    <span>12:00 PM</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                               <span>POT</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Internal Description</td>
+                            <td class="right-td">
+                                <input type="text" id="Internal-Description" class="verify-require" placeholder="Example: Mother's Day Free Shipping"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">Tracking ID</td>
+                            <td class="right-td">
+                                <input type="text" id="Tracking-ID" class="verify-require"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="step-conditions a-spacing-base">
+                <div class="step-bg">
+                    Step 3:Additional Options
+                </div>
+                <div class="step-innner">
+                    <table class="step-table a-row" border="1">
+                        <tr>
+                            <td class="left-td">
+                                <a href="javascript:;" class="Claim-Code">
+                                    <i class="a-icon a-step-up"></i>
+                                    Claim Code
+                                </a>
+                            </td>
+                            <td class="right-td">
+                                <label class="claim-label"><input type="radio" name="claim" class="code-use" ctype='1'/>Single-use</label>
+                                <label class="claim-label"><input type="radio" name="claim" class="code-use" ctype='2'/>Group</label>
+                                <label class="claim-label"><input type="radio" name="claim" class="code-use" checked ctype='3'/>None</label>
+                                <label><i class="a-icon a-icon-tip"></i>Group claim codes have no quality limits.</label>
+                            </td>
+                        </tr>
+                        <tr class="claim_show">
+                            <td class="left-td">One redemption per customer</td>
+                            <td class="right-td">
+                                <input type="checkbox" id="one_per" checked />
+                            </td>
+                        </tr>
+                        <tr class="claim_show">
+                            <td class="left-td">Cliam Code</td>
+                            <td class="right-td">
+                                <input type="text" id="Cliam-Code" placeholder="DSPRGAXS"/>
+                                <button class="secondaryAUIButton a-button-inner a-button-31" id="Suggest-code">Suggest a code</button>
+                            </td>
+                        </tr>
+                        <tr class="claim_show">
+                            <td class="left-td">Cliam Code Combinability</td>
+                            <td class="right-td" id="combinability">
+                                <label class="claim-label"><input type="radio" name="Combinability" ctype='1'/>Preferential</label>
+                                <label class="claim-label"><input type="radio" name="Combinability" ctype='2'/>Unrestricted</label>
+                                <label class="claim-label"><input type="radio" name="Combinability" ctype='3' checked/>Exclusive</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left-td">
+                                <a href="javascript:;" class="Customsize-messageing">
+                                    <i class="a-icon a-step-up"></i>
+                                    Customsize messageing
+                                </a>
+                            </td>
+                            <td class="right-td"></td>
+                        </tr>
+                        <tr class="customsize_show">
+                            <td class="left-td">Checkout display text</td>
+                            <td class="right-td">
+                                <input type="text" id="Checkout-display" >
+                            </td>
+                        </tr>
+                        <tr class="customsize_show">
+                            <td class="left-td">Short display text</td>
+                            <td class="right-td">
+                                <input type="text" id="Short-display" value="1% off purchase of $1.00" readonly>
+                            </td>
+                        </tr>
+                        <tr class="customsize_show">
+                            <td class="left-td a-text-top">Detail page display text</td>
+                            <td class="right-td" id="detail-page">
+                                <div class="a-spacing-mini">
+                                    <label class="standard-label"><input type="radio" name="Detail" checked class="Detail" ctype='1'/>Standard text</label>
+                                </div>
+                                <input type="text" id="standard-text" value="Save 1% on each participating item when you spend %1.00 or more on Qualifying items offered by OPP shoses for the world." readonly/>
+                                <div class="a-spacing-mini a-spacing-top-mini">
+                                    <label class="standard-label"><input type="radio" name="Detail" class="Detail" ctype='2'/>Customized text</label>
+                                </div>
+                                <input type="text" id="customized-text" />
+                            </td>
+                        </tr>
+                        <tr class="customsize_show">
+                            <td class="left-td">Display precedence</td>
+                            <td class="right-td">
+                                <button class="secondaryAUIButton a-button-inner a-button-31 drop-select" id="precedence-num" creat='true'>
+                                    <span>50</span>
+                                    <i class="a-icon a-icon-dropdown"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="customsize_show">
+                            <td class="left-td a-text-top">Terms and conditions</td>
+                            <td class="right-td">
+                                <div id="editor"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="go_to">
+                <button class="secondaryAUIButton a-button-inner a-button-31 go_to_Manage" onclick="javascript:location.href='promotion.html?step=2'">Go to Manage Promotions</button>
+                <button class="primaryAUIButton a-button-inner a-button-31 Rreview-button">Review</button>
+            </div>
+        </div>
+        <div class="a-container-footer"></div>
+    </body>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/laydate.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/webjs/seller_public.js"></script>
+    <script type="text/javascript" src="js/wangEditor.min.js"></script>
+    <script type="text/javascript" src="js/select_down.js"></script>
+    <script type="text/javascript" src="js/webjs/creat_promotion.js"></script>
+</html>
