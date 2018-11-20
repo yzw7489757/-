@@ -43,20 +43,26 @@
 <script id="addArray" type="text/x-dot-template">
     <tr>
         <td>报告类型</td>
-        <td>涵盖的日期范围</td>
+       
         <td>请求日期</td>
         <td>报告状态</td>
     </tr>
     {{~it:value:index}}
     <tr>
-        <td>管理亚马逊物流库存</td>
-        <td>18-4-1 0:00 - 18-4-30 23:59</td>
-        <td>2018年6月1日</td>
+        <td>管理亚马逊物流库存</td>  
+       
+        <td>{{= decodeURIComponent(value.request_date)}}</td>
+        {{? value.state == 1}}
         <td>
             <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
-                <span class="button_label loadBtn">下载</span>
+                <span class="button_label loadBtn" path="{{= decodeURIComponent(value.csv_url)}}">下载</span>
             </span>
         </td>
+        {{?? value.state == 0}}
+        <td>暂无数据</td>
+        {{?? value.state == 2}}
+        <td>已下载</td>
+        {{?}}
     </tr>
     {{~}}
 </script>

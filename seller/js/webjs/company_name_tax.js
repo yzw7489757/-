@@ -144,6 +144,7 @@ $(function () {
     left_country_p = $('.left_country_p').text()
     choose_country_ever_p = $('.choose_country_ever_p').text()
     full_name_input = $('.full_name_input').val();
+    choose_country_nationality = $('.choose_country_nationality').text()
   }
 
   // 气泡显示与隐藏
@@ -883,18 +884,20 @@ $(function () {
         };
     }
   });
-
+  
   // 我同意为依据表格 W-8BEN 提供的信息提供电子签名
   $('.signBoxLabel').click(function (e) {
     e.preventDefault()
     debugger;
     if (showSign) {
-      $('input[name=signBox]').attr('checked', false)
+      $('input[name=signBox]').prop('checked', false);
+      console.log( $('input[name=signBox]').prop('checked'))
       $('.a-color-offset-background').show()
       $('.saveBtn').removeClass('finishColor')
       showSign = false;
     } else {
-      $('input[name=signBox]').attr('checked', true)
+      $('input[name=signBox]').prop('checked', true)
+      console.log( $('input[name=signBox]').prop('checked'))
       $('.saveBtn').addClass('finishColor')
       $('.a-color-offset-background').hide()
       showSign = true;
@@ -988,6 +991,7 @@ $(function () {
                   province_input2: province_input2,
                   todayInput: todayInput,
                   signature: signature,
+                  choose_country_nationality:choose_country_nationality
                 }
                 var inputVal = JSON.stringify(str)
                 sessionStorage.setItem('inputVal', inputVal)
@@ -1028,6 +1032,7 @@ $(function () {
           tel_input2: tel_input2,
           city_town_input2: city_town_input2,
           province_input2: province_input2,
+          choose_country_nationality:choose_country_nationality
         }
         var inputVal2 = JSON.stringify(str2)
         sessionStorage.setItem('inputVal2', inputVal2)
@@ -1035,6 +1040,4 @@ $(function () {
       $(window).attr('location', '/seller/company_name_tax_table.html')
     }
   })
-
-
 });

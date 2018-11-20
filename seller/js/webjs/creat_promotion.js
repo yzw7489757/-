@@ -208,6 +208,7 @@ $(function(){
         desc:''
     }
     var select_ASIN = $('#select-ASIN');
+    var ASINitable_search = $('#ASINitable-search');
     $('#ASIN-link').click(function(e){
         e.stopPropagation();
         if(select_ASIN.hasClass('show')){
@@ -216,8 +217,13 @@ $(function(){
         select_ASIN.fadeIn().addClass('show');
         $('body').css('overflow','hidden');
         renderASIN();
+        $(document).off('click').click(function(event) {
+            if(!select_ASIN.is(event.target) && select_ASIN.has(event.target).length === 0){ 
+                select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
+                ASINitable_search.val('');
+            }
+        })
     })
-    var ASINitable_search = $('#ASINitable-search');
     $('#ASIN-search-button').click(function(){
         if(ASINitable_search.val().trim() == ''){
             return;
@@ -292,12 +298,6 @@ $(function(){
         $(this).find('input[type="radio"]').prop('checked',true);
         select_this.attr('a',this.id);
     })
-    $(document).click(function(event) {
-        if(!select_ASIN.is(event.target) && select_ASIN.has(event.target).length === 0){ 
-            select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
-            ASINitable_search.val('');
-        }
-    })
     $('#close-ASIN').click(function(e){
         e.stopPropagation();
         select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
@@ -307,7 +307,9 @@ $(function(){
         e.stopPropagation();
         select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
         ASINitable_search.val('');
-        $('#Qualifying-input').val(select_this.attr('a'));
+        if(select_this.attr('a')){
+            $('#Qualifying-input').val(select_this.attr('a'));
+        }
     })
     // 提交创建促销条件
     $('.Rreview-button').click(function(){

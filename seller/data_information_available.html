@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/data_information_available.css">
+    <link rel="stylesheet" type="text/css" href="css/overlay.css" />
 </head>
 
 <body>
@@ -58,7 +58,7 @@
         </td>
         {{?? value.state == 0}}
         <td>暂无数据</td>
-        {{??}}
+        {{?? value.state == 2}}
         <td>已下载</td>
         {{?}}
     </tr>

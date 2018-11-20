@@ -17,7 +17,7 @@
     width: 100%;
 }
 .bank-account-dropdown:before {
-    top: 3px;
+    top: 7px;
     border-color: transparent transparent #000 transparent !important;
 }
 .bank-account-dropdown:before, .bank-account-dropdown:after {
@@ -35,7 +35,7 @@
     border-bottom: none;
 }
 .bank-account-dropdown:after {
-    top: 10px;
+    top: 17px;
     border-color: #000 transparent;
 }
 .bank-account-dropdown:before, .bank-account-dropdown:after {

@@ -1,5 +1,6 @@
 $(function () {
-    
+    inputctr.public.checkLogin();
+
     var country = $('.country_select option:selected').text(); //国家地区
     var name = $('.name').val(); // 名称
     var addressOne = $('.addressOne').val(); // 地址行1
@@ -78,7 +79,7 @@ $(function () {
         });
     }
     // 获取地址列表
-    $.post(baseUrl + '/GetAdrList', function (res) {
+    $.post(baseUrl + '/GetAdrList',{ sellerId:amazon_userid}, function (res) {
         console.log(res);
         detail = res.adrInfo;
         let detailTmpl = doT.template($('#addArray').text());

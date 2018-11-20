@@ -425,6 +425,7 @@ $(function () {
       var againBankIds_input = $('.againBankIds_input').val().trim()
       // 为防止滥用您的银行账户，您需要验证末尾数字为
       var SelectNumber = $('.account_number_input').val().trim()
+     
       if (!account_name) {
         addwarn("account_name", 2, "必填字段");
         $('.account_name_input ').addClass('activebtn')
@@ -433,8 +434,16 @@ $(function () {
         addwarn("routing_number", 2, "必填字段");
         $('.routing_number_input').addClass('activebtn')
       }
+      if(routing_number && $('.routing_number_input').val().length<9){
+        addwarn("routing_number", 2, "9 位 数");
+        $('.routing_number_input').addClass('activebtn')
+      }
       if (!account_number2) {
         addwarn("account_number2", 2, "必填字段");
+        $('.account_number_input2').addClass('activebtn')
+      }
+      if(account_number2 && $('.account_number_input2').val().length < 3 ){
+        addwarn("account_number2", 2, "介于 3 至 12 位数字之间");
         $('.account_number_input2').addClass('activebtn')
       }
       if (!SelectNumber) {

@@ -16,6 +16,7 @@ $(function(){
         promotion_tab.eq(url_step-1).removeClass('hide').siblings('.promotion_tab').addClass('hide');
         if(url_step == 2){
             promotion_nav.find('li').eq(1).addClass('clicked');
+            manageDeal()
         }
         if(url_step == 1){
             promotion_nav.find('li').eq(0).addClass('clicked');
@@ -37,8 +38,12 @@ $(function(){
         if($(this).hasClass('clicked')){
             return;
         }
+        if($(this).hasClass('clicked')){
+            return;
+        }
         if($(this).index() == 1){
             $(this).addClass('clicked');
+            manageDeal();
         }
         if($(this).index() == 0){
             $(this).addClass('clicked');
@@ -87,6 +92,11 @@ $(function(){
         select_ASIN.fadeIn().addClass('show');
         $('body').css('overflow','hidden');
         renderDeal();
+        $(document).off('click').click(function(event) {
+            if(!select_ASIN.is(event.target) && select_ASIN.has(event.target).length === 0){ 
+                dealHide();
+            }
+        })
     })
     var ASINitable_search = $('#ASINitable-search');
     $('#ASIN-search-button').click(function(){
@@ -107,6 +117,7 @@ $(function(){
     }) 
     var select_ASIN_table = $('#select-ASIN-table');
     var select_this = $('#select-this');
+    // 渲染弹窗
     function renderDeal(currentPage){
         if(currentPage){
             deal_inventory.currentPage = currentPage;
@@ -163,33 +174,35 @@ $(function(){
             selectedProduct(data.data[$(this).index()]);
         })
     }
-    $(document).click(function(event) {
-        if(!select_ASIN.is(event.target) && select_ASIN.has(event.target).length === 0){ 
-            select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
-            ASINitable_search.val('');
-        }
-    })
+    // 隐藏弹窗
+    function dealHide(){
+        select_ASIN.fadeOut().removeClass('show');
+        $('body').css('overflow','auto');
+        ASINitable_search.val('');
+    }
     $('#close-ASIN').click(function(e){
         e.stopPropagation();
-        select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
-        ASINitable_search.val('');
+        dealHide();
     })
+    var selectedFlag = false;
     function selectedProduct(data){
         if(Number(data.product_image) == 0){
             $('#product-img').addClass('hide')
         }else{
             $('#product-img').attr('src',data.product_image).removeClass('hide');
         }
-        $('#product_name').text(data.goods_name);
-        $('#product_price').text('$ '+data.your_price);
+        $('#product_name').text(data.goods_name).attr('goods',data.goods_id);
+        $('#product_price').text(data.your_price);
+        selectedFlag = true;
     }
     var create_light = $('#create-light');
     select_this.click(function(e){
         e.stopPropagation();
-        select_ASIN.fadeOut().removeClass('show');$('body').css('overflow','auto');
-        ASINitable_search.val('');
-        $('.select').fadeIn();
-        create_light.prop('disabled',false);
+        dealHide();
+        if(selectedFlag){
+            $('.select').fadeIn();
+            create_light.prop('disabled',false);
+        }
     })
     // 提交创建秒杀
     var timeError1 = $('#timeError1');
@@ -215,7 +228,7 @@ $(function(){
             verify.addClass('error-border');
         }
         i_verify.removeClass('error-border');
-        if(day_time_pm.attr('i') <= day_time_am.attr('i')){
+        if(parseInt(day_time_pm.attr('i')) <= parseInt(day_time_am.attr('i'))){
             day_time_pm.addClass('error-border');
             timeError2.removeClass('hide');
         }else{
@@ -223,7 +236,8 @@ $(function(){
             timeError2.addClass('hide');
         }
         var deal_price = $('#deal-price');
-        if(deal_price.val().trim() < 0){
+        var price_reg=/^[+]{0,1}(\d+)$|^[+]{0,1}(\d+\.\d+)$/;
+        if(!price_reg.test(deal_price.val().trim())){
             deal_price.addClass('error-border');
         }else{
             deal_price.removeClass('error-border');
@@ -255,5 +269,63 @@ $(function(){
         if($('.error-border').length){
             return;
         }
+        inputctr.public.SellerRegisterLoading();
+        var KillData = {
+            seller_id:amazon_userid,
+            goods_img:$('#product-img').attr('src'),
+            title:$('#LD-Title').val().trim(),
+            description:$('#LD-Description').val().trim(),
+            goods_id:$('#product_name').attr('goods'),
+            goods_title:$('#product_name').text(),
+            goods_price:$('#product_price').text(),
+            deal_price:deal_price.val().trim(),
+            deal_date:Start_Date.val().trim(),
+            start_time_hour:day_time_am.attr('i'),
+            end_time_hour:day_time_pm.attr('i')
+        }
+        inputctr.public.AjaxMethods('POST', baseUrl + '/SecKillAdd', {json:JSON.stringify(KillData)}, function (data) {
+            if(data.result == 1) {
+                window.location.href = 'lightning_deals.html?step=2';
+            }else{
+                alert(data.error);
+            }
+            inputctr.public.SellerRegisterLoadingRemove();
+        }, function (error) {
+            inputctr.public.SellerRegisterLoadingRemove();
+             alert(error.statusText);
+        })
     })
+    // 管理秒杀
+    function manageDeal(){
+        var killID_data = {
+            seller_id:amazon_userid
+        }
+        inputctr.public.SellerRegisterLoading();
+        inputctr.public.AjaxMethods('POST', baseUrl + '/SecKillList', {json:JSON.stringify(killID_data)}, function (data) {
+            if(data.result == 1) {
+                var val = data.data;
+                $('#lightning_num').text(val.length+' lightning deal');
+                var html_tr = '';
+                if(val.length){
+                    for(var i=0;i<val.length;i++){
+                        var img_h = (val[i].goods_img == '') ? 'hide' : '';
+                        html_tr += '<tr>'+
+                                        '<td><img src="'+val[i].goods_img+'" class="'+img_h+'" width="60" height="60" /></td>'+
+                                        '<td>'+val[i].title+'</td>'+
+                                        '<td>'+val[i].description+'</td>'+
+                                        '<td>$'+val[i].goods_price+'</td>'+
+                                        '<td>$'+val[i].deal_price+'</td>'+
+                                        '<td>'+val[i].deal_date+'</td>'+
+                                        '<td>'+AmArr[val[i].start_time_hour]+' - '+PmArr[val[i].end_time_hour]+'</td>'+
+                                   '</tr>'
+                    }
+                }
+                $('.product_selection_table').find('tbody').html(html_tr);
+                inputctr.public.SellerRegisterLoadingRemove();
+            }
+        }, function (error) {
+            inputctr.public.SellerRegisterLoadingRemove();
+            alert(error.statusText);
+        })
+    }
 })

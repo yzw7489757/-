@@ -2,53 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/slider.css">
-    <link rel="stylesheet" href="./css/header_nav.css">
-    <link rel="stylesheet" href="./css/basic.css">
-    <link rel="stylesheet" href="./css/text-edit.css">
-    <link rel="stylesheet" href="./css/information_policy.css">
-    <script src="./js/webjs/model-popup.js"></script>
-    <script language="JavaScript">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" href="./css/base.css">
+<link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./css/slider.css">
+<link rel="stylesheet" href="./css/header_nav.css">
+<link rel="stylesheet" href="./css/basic.css">
+<link rel="stylesheet" href="./css/text-edit.css">
+<link rel="stylesheet" href="./css/information_policy.css">
+<script src="./js/webjs/model-popup.js"></script>
+<script language="JavaScript">
 
-        var currentTE = null;
-            
-            function createTable(rows, cols, border)
-            {
-                if(currentTE) currentTE.createTable(rows, cols, border);
-            }	
-            
-            function createLink(url)
-            {
-                if(currentTE) currentTE.createLink(url);
-            }	
-            
-            function changeColor(color)
-            {
-                if(currentTE) currentTE.changeColor(color);
-            }
-            
-            function getCurrentEditor()
-            {
-                return currentTE;
-            }
-            
-            function setCurrentEditor(ed)
-            {
-                currentTE = ed;
-            }
-            
-            function killcolorpalette()
-            {
-                if(currentTE) currentTE.dismisscolorpalette();
-            }
-            
-            </script>
+    var currentTE = null;
+        
+        function createTable(rows, cols, border)
+        {
+            if(currentTE) currentTE.createTable(rows, cols, border);
+        }	
+        
+        function createLink(url)
+        {
+            if(currentTE) currentTE.createLink(url);
+        }	
+        
+        function changeColor(color)
+        {
+            if(currentTE) currentTE.changeColor(color);
+        }
+        
+        function getCurrentEditor()
+        {
+            return currentTE;
+        }
+        
+        function setCurrentEditor(ed)
+        {
+            currentTE = ed;
+        }
+        
+        function killcolorpalette()
+        {
+            if(currentTE) currentTE.dismisscolorpalette();
+        }
+        
+</script>
 </head>
 
 <body>
@@ -310,7 +310,7 @@
                                                                 <div class="clear"></div>
                                                             </li>
                                                             <li class="sc-cted-li-editor sc-cted">
-                                                                <iframe id="editattrValue" src="./blank.html" width="600"
+                                                                <iframe id="edit1_attrValue" src="./blank.html" width="600"
                                                                     height="200"></iframe>
                                                             </li>
                                                         </ul>

@@ -279,7 +279,6 @@ $(function(){
     // 初始化
     function renderPost(){
         inputctr.public.SellerRegisterLoading();
-        console.log(manage_inventory)
         $.post(baseUrl+'/ProductList',{json:JSON.stringify(manage_inventory)}, function(data){
             if(data){
                 inputctr.public.SellerRegisterLoadingRemove();

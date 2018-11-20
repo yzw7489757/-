@@ -10,7 +10,9 @@ $(function () {
             $('.signature').val(getStr.signature)
             $('.todayInput').val(getStr.todayInput)
              // 右国籍
-            $('.nationality').val(getStr.right_country_p)
+            if(getStr.tel_input2){
+                $('.nationality').val(getStr.nationality)
+            }
             // 永久地址
             $('.choose_country_ever_p').val(getStr.choose_country_ever_p)
             // 国籍
@@ -26,7 +28,9 @@ $(function () {
             $('.tel_input').val(getStr.tel_input)
             $('.tel_input2').val(getStr.tel_input2)
              // 右国籍
-            $('.nationality').val(getStr.right_country_p)
+             if(getStr.tel_input2){ 
+                $('.nationality').val(getStr.right_country_p)
+             }
             // 永久地址
             $('.choose_country_ever_p').val(getStr.choose_country_ever_p)
             // 国籍

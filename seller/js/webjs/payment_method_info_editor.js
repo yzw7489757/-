@@ -22,7 +22,7 @@ $(function () {
                 if (res.result == 1) {
                     var data = res.data;
                     // 卡号
-                    $('.card_number').text(data.card_number)
+                    $('.card_number').text(data.card_number).attr('all',data.card_number_all);
                     // 有效月份
                     $('.valid_through_month_select').val(data.valid_through_month)
                     // 有效年份
@@ -177,7 +177,7 @@ $(function () {
                 data: {
                     method_id: method_id,
                     userid: amazon_userid,
-                    card_number: card_number,
+                    card_number: $('.card_number').attr('all'),
                     valid_through_month: valid_through_month,
                     valid_through_year: valid_through_year,
                     card_holder_name: card_holder_name,

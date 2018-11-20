@@ -53,8 +53,7 @@
         function judgeRegister(TaskList) {				//判断有没有注册过
 //            inputctr.public.AjaxMethods('POST', baseUrl + '/GetUserInfoByStuID', { stuid: studentID, trainingmode: traintype }, function () { }, function (XHR, request_url) {
 //                alert("Error requesting " + request_url + ": " + XHR.status + " " + XHR.statusText);
-//            }, function () { })
-
+            //            }, function () { }) 
             $.post(baseUrl + '/GetUserInfoByStuID', { stuid: studentID, trainingmode: traintype }, function (data) {
                 if (data.result == "1") {
                     inputctr.public.setCookie('amazon_userid', data.user_id);

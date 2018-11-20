@@ -135,6 +135,7 @@ $(function(){
     //View Current Feedback
     var view_feedback_table = $('.view-feedback-table');
     function ViewFeedback(){
+        inputctr.public.SellerRegisterLoading();
         inputctr.public.AjaxMethods('POST', baseUrl + '/SellerFeedback', {json:JSON.stringify(ViewData)}, function (data) {
             var view_feedback_html = '';
             inputctr.public.judgeBegaintask('1403');
@@ -185,7 +186,9 @@ $(function(){
             }else{
                 alert(data.error);
             }
+            inputctr.public.SellerRegisterLoadingRemove();
         }, function (error) {
+            inputctr.public.SellerRegisterLoadingRemove();
             alert(error.statusText);
         })
     }
@@ -270,11 +273,12 @@ $(function(){
                followRate(data.data.trace);
                contactRate(data.data.msg7,data.data.msg30,data.data.msg90);
                ReturnGoods(data.data.discontent,data.data.dis7,data.data.dis30,data.data.dis60);
-               inputctr.public.SellerRegisterLoadingRemove();
             }else{
                 alert(data.error);
             }
+            inputctr.public.SellerRegisterLoadingRemove();
         }, function (error) {
+            inputctr.public.SellerRegisterLoadingRemove();
             alert(error.statusText);
         })
     }
