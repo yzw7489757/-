@@ -53,7 +53,8 @@ $(function () {
     }, 'json')
     // 获取地址详情
     $.post(baseUrl + '/GetAdr', {
-        adrId: adrIds
+        adrId: adrIds,
+        sellerId:amazon_userid
     }, function (res) {
         console.log(res);
         console.log(adrId)

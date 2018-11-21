@@ -1,44 +1,29 @@
-var teattrValue = new AMZTextEditor("0_attrValue",
-  document.getElementById("edit0_attrValue"),
-  document.getElementById("tabHolderDesignattrValue_0"),
-  document.getElementById("tabHolderCodeattrValue_0"),
-  document.getElementById("toolbar2attrValue_0"),
-  0, 0,
-  document.getElementById("text_component_0_attrValue"),
-  "Enter a URL", "", "");
-var teattrValue_1 = new AMZTextEditor("1_attrValue",
-  document.getElementById("edit1_attrValue"),
-  document.getElementById("tabHolderDesignattrValue_1"),
-  document.getElementById("tabHolderCodeattrValue_1"),
-  document.getElementById("toolbar2attrValue_1"),
-  0, 0,
-  document.getElementById("text_component_1_attrValue"),
-  "Enter a URL", "", "");
 
-  var teattrValue_2 = new AMZTextEditor("attrValue",
-  document.getElementById("editattrValue"),
-  document.getElementById("tabHolderDesignattrValue"),
-  document.getElementById("tabHolderCodeattrValue"),
-  document.getElementById("toolbar2attrValue"),
-  0, 0,
-  document.getElementById("text_component_1_attrValue"),
-  "Enter a URL", "", "");
+/**
+ * 
+ *
+ * @param {*} Node iframe的className，必传
+ * @param {*} Input Input 初始值文本框的id，可传可不传
+ */
+function teattrValueInit(Node, Input) {
 
-function teattrValueInit() {
-
-  var editor_doc = document.getElementById("edit0_attrValue").contentWindow.document;
+  var editor_doc = document.getElementById(Node).contentWindow.document;
   editor_doc.designMode = "on";
 
   teattrValue.Start();
-
-  var inputVal = $("input[name='0_attrValue']").val()
+  var inputVal;
+  if($(Input).length){
+    inputVal = $(Input).val()
+  }else{
+    inputVal="请输入";
+  }
   var content = decodeURIComponent(inputVal);
   // Some link wizard code depends on &quot; being unescaped here:
   content = content.replace(/&quot;/g, '\"');
 
   function update() {
     teattrValue.setContent(content);
-    var editor_doc = document.getElementById("edit0_attrValue").contentWindow.document;
+    var editor_doc = document.getElementById(Node).contentWindow.document;
     //Below two lines work in IE only
     editor_doc.body.onkeyup = function () {
       window.parent.teattrValue.updateToolbarKeyUpCheck(event);
@@ -46,7 +31,7 @@ function teattrValueInit() {
     editor_doc.body.onclick = function () {
       window.parent.teattrValue.updateToolbar();
     };
-    editor_doc.body.className = "attrValue_0";
+    editor_doc.body.className = "iFrameClass";
     teattrValue.addCss(editor_doc, "");
 
   }
@@ -55,7 +40,7 @@ function teattrValueInit() {
   var iframeTimeoutMillis = 3000;
 
   function waitForDoc() {
-    var doc = document.getElementById("edit0_attrValue").contentWindow.document;
+    var doc = document.getElementById(Node).contentWindow.document;
     if (doc.body) {
       update();
     } else if (iframeTimeoutMillis > 0) {
@@ -67,114 +52,8 @@ function teattrValueInit() {
 
   currentTE = teattrValue;
   try {
-    //this only works in firefox
     editor_doc.execCommand("styleWithCSS", false, false);
   } catch (ex) {}
-}
-
-function teattrValueInit_fe() {
-
-  var editor_doc = document.getElementById("edit1_attrValue").contentWindow.document;
-  editor_doc.designMode = "on";
-
-  teattrValue_1.Start();
-
-  var inputVal = $("input[name='1_attrValue']").val()
-  var content = decodeURIComponent(inputVal);
-  // Some link wizard code depends on &quot; being unescaped here:
-  content = content.replace(/&quot;/g, '\"');
-
-  function update() {
-    teattrValue_1.setContent(content);
-    var editor_doc = document.getElementById("edit1_attrValue").contentWindow.document;
-    //Below two lines work in IE only
-    editor_doc.body.onkeyup = function () {
-      window.parent.teattrValue_1.updateToolbarKeyUpCheck(event);
-    };
-    editor_doc.body.onclick = function () {
-      window.parent.teattrValue_1.updateToolbar();
-    };
-    editor_doc.body.className = "attrValue_1";
-    teattrValue_1.addCss(editor_doc, "");
-
-  }
-
-  //wait for the iframe from timeOut amount of ms, then give up with empty content.
-  var iframeTimeoutMillis = 3000;
-
-  function waitForDoc() {
-    var doc = document.getElementById("edit1_attrValue").contentWindow.document;
-    if (doc.body) {
-      update();
-    } else if (iframeTimeoutMillis > 0) {
-      iframeTimeoutMillis -= 100;
-      setTimeout(waitForDoc, 100);
-    }
-  }
-  waitForDoc();
-
-  currentTE = teattrValue_1;
-  try {
-    //this only works in firefox
-    editor_doc.execCommand("styleWithCSS", false, false);
-  } catch (ex) {}
-}
-function teattrValueInit_input() {
-
-  var editor_doc = document.getElementById("editattrValue").contentWindow.document;
-  editor_doc.designMode = "on";
-
-  teattrValue_2.Start();
-
-  var inputVal = $("input[name='attrValue']").val()
-  var content = decodeURIComponent(inputVal);
-  // Some link wizard code depends on &quot; being unescaped here:
-  content = content.replace(/&quot;/g, '\"');
-
-  function update() {
-    teattrValue_2.setContent(content);
-    var editor_doc = document.getElementById("editattrValue").contentWindow.document;
-    //Below two lines work in IE only
-    editor_doc.body.onkeyup = function () {
-      window.parent.teattrValue_2.updateToolbarKeyUpCheck(event);
-    };
-    editor_doc.body.onclick = function () {
-      window.parent.teattrValue_2.updateToolbar();
-    };
-    editor_doc.body.className = "editattrValue";
-    teattrValue_2.addCss(editor_doc, "");
-
-  }
-
-  //wait for the iframe from timeOut amount of ms, then give up with empty content.
-  var iframeTimeoutMillis = 3000;
-
-  function waitForDoc() {
-    var doc = document.getElementById("editattrValue").contentWindow.document;
-    if (doc.body) {
-      update();
-    } else if (iframeTimeoutMillis > 0) {
-      iframeTimeoutMillis -= 100;
-      setTimeout(waitForDoc, 100);
-    }
-  }
-  waitForDoc();
-
-  currentTE = teattrValue_2;
-  try {
-    //this only works in firefox
-    editor_doc.execCommand("styleWithCSS", false, false);
-  } catch (ex) {}
-}
-
-if (window.addEventListener) {
-  window.addEventListener("load", teattrValueInit_fe, true);
-  window.addEventListener("load", teattrValueInit, true);
-  window.addEventListener("load", teattrValueInit_input, true);
-} else if (window.attachEvent) {
-  window.attachEvent("onload", teattrValueInit);
-}else if(window.attachEvent){
-  window.attachEvent("onload", teattrValueInit_input);
 }
 
 function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, useColorPalette, useLinkWizard, textComponent, standardLinkPrompt, standardLinkPrefix, cssFile) {
@@ -683,7 +562,7 @@ function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, u
 
   function updateToolbarKeyUpCheck(e) //IE only
   {
-    var key;
+    /*var key;
     if (this.mEdFrame.contentWindow.event) {
       key = this.mEdFrame.contentWindow.event.keyCode;
     } else {
@@ -691,12 +570,12 @@ function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, u
     }
     if (key && (key === 37 || key === 38 || key === 39 || key === 40)) { //if arrow key is pressed
       updateToolbar();
-    }
+    }*/
   }
 
   function updateToolbar() //IE only
-  { 
-    if(navigator.appName !== 'Microsoft Internet Explorer'){
+  {
+    if (navigator.appName !== 'Microsoft Internet Explorer') {
       return
     }
     //Because this function is called off of an event on the <body> of the html inside the iframe 'this' inside updateToolbar
@@ -771,9 +650,9 @@ function AMZTextEditor(name, edFrame, tabholderDesign, tabholderCode, toolbar, u
     // mozilla/netscape specific 
     if (document.addEventListener) {
       document.addEventListener("mousedown", killcolorpalette, true);
-      document.getElementById("edit" +this.mName).contentWindow.document.addEventListener("mousedown", killcolorpalette, true);
+      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("mousedown", killcolorpalette, true);
       document.addEventListener("keypress", killcolorpalette, true);
-      document.getElementById("edit" +this.mName).contentWindow.document.addEventListener("keypress", killcolorpalette, true);
+      document.getElementById("edit" + this.mName).contentWindow.document.addEventListener("keypress", killcolorpalette, true);
     }
     // IE specific
     else if (document.attachEvent) {

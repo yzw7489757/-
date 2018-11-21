@@ -45,7 +45,8 @@ $(function () {
             cargoStatus = $(this).val()
             if(window.sessionStorage){
                 timeRange = sessionStorage.getItem('timeRange');
-                sessionStorage.setItem('cargoStatus',cargoStatus)
+                // sessionStorage.setItem('cargoStatus',cargoStatus)
+                $('input[type="number"]').val(1)
             }
        // })
         GetCargoList();
@@ -73,7 +74,7 @@ $(function () {
             $('#showTmpl').html(add(data));
             $('.totalPages').text(res.totalPages);
             $('input[type="number"]').attr('max', res.totalPages)
-
+            
             // 查看货件按钮
             $('#showTmpl .adds').each(function () {
                 $(this).find('.actionBtn').click(function () {

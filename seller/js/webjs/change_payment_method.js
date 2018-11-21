@@ -70,6 +70,7 @@ $(function () {
         $('.replace_credit_card').show();
         $('.new_credit_card').hide();
         $('.billing_address').hide();
+        $('.send_address').hide()
     })
     
     card_html = doT.template($('#card_tmpl').text());
@@ -256,22 +257,24 @@ $(function () {
             if (!card_number) {
                 addwarn("card_number_id", 2, "必填字段");
                 $('.card_number_input').addClass('activebtn');
+                $(window).scrollTop(350)
             }
             if (!card_holder_name) {
                 addwarn("card_holder_name_id", 2, "必填字段");
                 $('.card_holder_name_input').addClass('activebtn');
+                $(window).scrollTop(350)
             }
-            if (selectYear < year) { //选择的时间小于年份，直接返回
-                addwarn("year_select_id", 2, "有效期无效");
-                $(window).scrollTop(350);
+            if (selectYear <= year ) { //选择的时间小于年份，直接返回
+                // addwarn("year_select_id", 2, "有效期无效");
                 
-                return;
+                if (selectMouth <= mouth) { //选择的月份小于当前的月份&&年份为当前
+                    addwarn("month_select_id", 2, "有效期无效");
+                    $(window).scrollTop(350);
+                    return;
+                }
+                
             }
-            if (selectMouth < mouth) { //选择的月份小于当前的月份&&年份为当前
-                addwarn("month_select_id", 2, "有效期无效");
-                $(window).scrollTop(350);
-                return;
-            }
+
 
             if (card_number && card_holder_name) {
                 $.ajax({

@@ -29,37 +29,48 @@
             <li>此报告仅供下载</li>
             <li>
                 <span class="pdLeft33 awesomeButton buttonLarge primaryLargeButton inner_button">
-                    <span class="button_label">请求下载</span>
+                    <span class="button_label downloadBtn">请求下载</span>
                 </span>
             </li>
         </ul>
-        <table class="screenTable">
-            <tr>
-                <td>报告类型</td>
-                <td>涵盖的日期范围</td>
-                <td>请求日期</td>
-                <td>报告状态</td>
-            </tr>
-            <tr>
-                <td>亚马逊库存</td>
-                <td>18-4-1 0:00 - 18-4-30 23:59</td>
-                <td>2018年6月1日</td>
-                <td>
-                    <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
-                        <span class="button_label">下载</span>
-                    </span>
-                </td>
-            </tr>
+        <table class="screenTable" id="addTmpl">
+            
         </table>
     </div>
     <div class="a-container-footer">
     </div>
 </body>
+<script id="addArray" type="text/x-dot-template">
+    <tr>
+        <td>报告类型</td>
+      
+        <td>请求日期</td>
+        <td>报告状态</td>
+    </tr>
+    {{~it:value:index}}
+    <tr>
+        <td>长期仓储费</td>
+       
+        <td>{{= decodeURIComponent(value.request_date)}}</td>
+        {{? value.state == 1}}
+        <td>
+            <span class="awesomeButton buttonLarge secondaryLargeButton inner_button">
+                <span class="button_label loadBtn" path="{{= decodeURIComponent(value.csv_url)}}">下载</span>
+            </span>
+        </td>
+        {{?? value.state == 0}}
+        <td>暂无数据</td>
+        {{?? value.state == 2}}
+        <td>已下载</td>
+        {{?}}
+    </tr>
+    {{~}}
+</script>
 <script src="./js/jquery-3.3.1.min.js "></script>
 <script src="./js/public.js " type="text/javascript "></script>
 <script src="js/webjs/seller_public.js" type="text/javascript"></script>
 <script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
-<script src="i18n/language.js" type="text/javascript"></script>
+<script src="./js/doT.min.js" type="text/javascript"></script>
 <script src="js/webjs/data_information_available.js" type="text/javascript"></script>
 
 </html>

@@ -50,3 +50,9 @@ img {
     appearance: none;
     -webkit-appearance: none;
 }
+.bank-account-dropdown:before {
+    top: 11px !important;
+}
+.bank-account-dropdown:after {
+    top: 22px !important;
+}
