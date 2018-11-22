@@ -55,8 +55,7 @@ $(function(){
     })
     // Show claim code group
     var CodeGroupData = {
-        promotion_id:promotionID,
-        orderBy:'date_asc'
+        promotion_id:promotionID
     }
     function CodeGroup(data){
         inputctr.public.SellerRegisterLoading();
@@ -81,7 +80,6 @@ $(function(){
             }
             inputctr.public.SellerRegisterLoadingRemove();
         }, function (error) {
-            inputctr.public.SellerRegisterLoadingRemove();
             alert(error.statusText);
         })
     }CodeGroup(CodeGroupData)
@@ -105,17 +103,5 @@ $(function(){
         }, function (error) {
             alert(error.statusText);
         })
-    })
-    // Creation Date 排序
-    claim_code_table.find('thead').on('click','.mt-sort-down',function(){
-        $(this).toggleClass('desc');
-        if($(this).hasClass('desc')){
-            CodeGroupData.orderBy = 'date_desc';
-            $(this).find('.desc-icon-down').addClass('desc-icon-up');
-        }else{
-            CodeGroupData.orderBy = 'date_asc';
-            $(this).find('.desc-icon-down').removeClass('desc-icon-up');
-        }
-        CodeGroup(CodeGroupData);
     })
 })

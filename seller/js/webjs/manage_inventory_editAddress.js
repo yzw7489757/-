@@ -1,6 +1,6 @@
 $(function () {
     inputctr.public.checkLogin();
-
+    inputctr.public.selectCountry();
     var country = $('.country_select option:selected').text(); //国家地区
     var name = $('.name').val(); // 名称
     var addressOne = $('.addressOne').val(); // 地址行1
@@ -10,10 +10,11 @@ $(function () {
     var zipCode = $('.zipCode').val(); // 邮编
     var phone = $('.phone').val(); // 电话
     var adrId;
+    var edit = false;
     goodId = inputctr.public.getQueryString('goodsID');
     skuId = inputctr.public.getQueryString('sku_id');
     function inputValue() {
-        country = $('.country_select option:selected').text();
+        country = $('select option:selected').text();
         name = $('.name').val().trim();
         addressOne = $('.addressOne').val().trim();
         addressTwo = $('.addressTwo').val().trim();
@@ -26,24 +27,66 @@ $(function () {
     function changeBtnColor(target) {
         $(target).blur(function () {
             inputValue();
-            if (country && addressOne && city && stateProvinceRegion && zipCode) {
+            if ( addressOne && city && stateProvinceRegion && zipCode) {
                 $('.unfinishBtn').hide();
                 $('.finishBtn').show()
-                if (window.sessionStorage) {
-                    adrId = sessionStorage.getItem('adrId');
-                }
+                    
             }
+            if (window.sessionStorage) {
+                adrId = sessionStorage.getItem('adrId');
+            }
+            
         })
     }
-    changeBtnColor('.country');
+   
     changeBtnColor('.addressOne');
     changeBtnColor('.city');
     changeBtnColor('.stateProvinceRegion');
     changeBtnColor('.zipCode');
 
+    function AddAddress() { 
+        inputValue()
+        var data = {
+            userid: amazon_userid,
+            address: addressOne,
+            address2: addressTwo,
+            city: city,
+            province: stateProvinceRegion,
+            country: country,
+            zipcode: zipCode,
+            phone: phone,
+            type: '3',
+            name: name,
+            email: '',
+            full_name: ''
+        };
+        if ( addressOne && city && stateProvinceRegion && zipCode) {
+            $.ajax({
+                url: baseUrl + '/AddAddress',
+                method: 'post',
+                dataType: "json",
+                data: { json: JSON.stringify(data) },
+                success: function (res) {
+                    console.log(res)
+                    if (res.result == 1) {
+                        if (window.sessionStorage) {
+                            sessionStorage.setItem('adrId', res.addressid)
+                        }
+                        $(location).attr("href", "/seller/manage_inventory_restocking.html?goodsID="+goodId+"&sku_id="+skuId);
+                    } else {
+                        console.log(decodeURIComponent(res.error))
+                    }
+                },
+                error: function (res) {
+                    console.log(decodeURIComponent(res.error))
+                }
+            })
+        }
+     }
+
     function DelDistributionAddress() {
         inputValue()
-        if (country && addressOne && city && stateProvinceRegion && zipCode) {
+        if ( addressOne && city && stateProvinceRegion && zipCode) {
             $.post(baseUrl + '/UpdateDistributionAddress', {
                 addressId: adrId,
                 country: country,
@@ -86,13 +129,14 @@ $(function () {
         $('#addTmpl').html(detailTmpl(detail));
         $('#addTmpl .editBtn').each(function (i) {
             $('#addTmpl .editBtn').eq(i).click(function () {
+                // 编辑按钮
+                edit = true;
                 adrId = $(this).parents('.adds').attr('adrId');
                 var h = $(document).height() - $(window).height();
                 $(document).scrollTop(h);
                 // 国家地区
                 var detailCountry = $(this).parents('.adds').find('.detailCountry').text();
                 setOption(detailCountry)
-                console.log($(this).parents('.adds').attr('name'))
                 // 名称
                 $('.name').val($(this).parents('.adds').attr('name'));
                 // 地址行1
@@ -113,12 +157,7 @@ $(function () {
                 if (window.sessionStorage) {
                     sessionStorage.setItem('adrId', adrId)
                 }
-                $('.sendBtn').click(function () {
-                    if (window.sessionStorage) {
-                        adrId = sessionStorage.getItem('adrId');
-                    }
-                    DelDistributionAddress();
-                })
+                
             })
         })
         $('#addTmpl .finishSendBtn').each(function (i) {
@@ -129,6 +168,17 @@ $(function () {
                     $(location).attr("href", "/seller/manage_inventory_restocking.html?goodsID="+goodId+"&sku_id="+skuId);
                 }
             })
+        })
+        $('.sendBtn').click(function () {
+            if(edit){
+                if (window.sessionStorage) {
+                    adrId = sessionStorage.getItem('adrId');
+                }
+                DelDistributionAddress();
+            }else{
+                console.log(edit)
+                AddAddress();
+            }
         })
         // 删除
         $('#addTmpl .deleteBtn').click(function () {

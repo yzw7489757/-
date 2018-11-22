@@ -1,9 +1,13 @@
 $(function () {
+    
     $(window).click(function () {
         if ($(".select-date").css("display") == "block") {
             $(".select-date").css("display", "none")
         }
     });
+   
+        console.log($('.laydate-box').length)
+    
     $(".data-icon,#laydateInput").on("click", function (e) {
         e.stopPropagation();
         if ($(".select-date").css("display") == "none") {

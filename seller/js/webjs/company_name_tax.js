@@ -673,7 +673,7 @@ $(function () {
         country: choose_country_ever_p,
         zipcode: postal_code_input,
         phone: '',
-        type: '1',
+        type: '3',
         name: '2',
         email: '',
         full_name: ''
@@ -721,7 +721,7 @@ $(function () {
         country: right_country_p,
         zipcode: postal_code_input2,
         phone: '',
-        type: '1',
+        type: '3',
         name: '',
         email: '',
         full_name: ''
@@ -796,7 +796,7 @@ $(function () {
                 country: choose_country_ever_p,
                 zipcode: postal_code_input,
                 phone: '',
-                type: '1',
+                type: '3',
                 name: '2',
                 email: '',
                 full_name: ''

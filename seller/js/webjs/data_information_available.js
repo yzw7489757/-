@@ -4,6 +4,17 @@ $(function () {
     var showTr = true;
     var dataLength = false;
     var endTime="";
+    var startTime="";
+    laydate.render({
+        elem:'#Start-Date',
+        format: 'yyyy-MM-dd',
+        showBottom: false
+    })
+    laydate.render({
+        elem:'#End-Date',
+        format: 'yyyy-MM-dd',
+        showBottom: false
+    })
     $('.a-container>ol>li').click(function (item) {
         $('.a-container ol li').removeClass('activeOl');
         index = $(this).index();
@@ -76,8 +87,16 @@ $(function () {
             endTime = sessionStorage.getItem('timeRange');
             sessionStorage.removeItem('timeRange')
         }
-        if($('select[name="dataSelect"] option:selected').val() && $('select[name="mouthSelect"] option:selected').val()){
-            endTime = $('select[name="dataSelect"] option:selected').val() + $('select[name="mouthSelect"] option:selected').val()  
+        if($('.verify-require').length>1){
+            startTime = $('#Start-Date').val();
+            endTime = $('#End-Date').val();
+            console.log(startTime)
+        }
+        if($('select[name="dataSelect"] option:selected').text()){
+            endTime = $('select[name="dataSelect"] option:selected').text()
+        }
+        if($('.demo-input').val()){
+            endTime = $('.demo-input').val();
         }
         if(showTr && dataLength){
             const index = $('#addTmpl tr').length;
@@ -94,7 +113,7 @@ $(function () {
             data: {
                 sellerId: amazon_userid,
                 tag: tag,
-                startTime:"",
+                startTime:startTime,
                 endTime:endTime
             },
             success: function (res) {
@@ -179,4 +198,5 @@ $(function () {
     $('#addTmpl').on('click',".loadBtn",function () { 
         location.href=$(this).attr('path')
     })
+
 })

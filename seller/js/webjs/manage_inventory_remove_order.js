@@ -1,7 +1,7 @@
 $(function () {
     // 移除方法
     inputctr.public.checkLogin();
-    
+    inputctr.public.selectCountry();
     var addressName;
     var address1;
     var address2;
@@ -29,7 +29,7 @@ $(function () {
         Phone = $('.Phone').val().trim();
         orderId = $('.Phone').val().trim();
         Zipcode = $('.Zipcode').val().trim();
-        Country = $("select[name='Country'] option:selected").text();
+        Country = $("select[name='country'] option:selected").text();
         rmvUsableNum = $('input[name="usableNum"]').val().trim();
         rmvUnavailableNum = $('input[name="unusableNum"]').val().trim()
     }

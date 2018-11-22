@@ -1,6 +1,6 @@
 $(function () {
     inputctr.public.checkLogin();
-    
+    inputctr.public.selectCountry();
     var strJson;
     var orderNo;
     var goodsSku;
@@ -11,6 +11,7 @@ $(function () {
         var skuId = sessionStorage.getItem('sku');
        
     }
+    
     function inputValue() {
         orderNo = $('.orderNo').val().trim();
         addressName = $('.addressName').val().trim();
@@ -21,10 +22,11 @@ $(function () {
         Phone = $('.Phone').val().trim();
         orderId = $('.Phone').val().trim();
         Zipcode = $('.Zipcode').val().trim();
-        Country = $("select[name='Country'] option:selected").text();
+        Country = $("select[name='country'] option:selected").val();
         orderDate = $('.orderDate').val();
         reserveNum = $('input[name="reserveNum"]').val();
         Remarks = $('.Remarks').val();
+        
     }
     // 是否同上 1是 0否
     $('input[type="checkbox"]').change(function () { 
@@ -109,4 +111,5 @@ $(function () {
             return;
         }
     })
+
 })

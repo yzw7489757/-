@@ -8,9 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <link rel="stylesheet" type="text/css" href="css/base.css" />
         <link rel="stylesheet" type="text/css" href="css/iconfonthly.css" />
-        <link rel="stylesheet" type="text/css" href="css/header_nav.css">
-        <link rel="stylesheet" type="text/css" href="css/footer.css">
-        <link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="stylesheet" href="css/header_nav.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" type="text/css" href="css/common2.css" />
         <link rel="stylesheet" type="text/css" href="css/promotion.css" />
         <link rel="stylesheet" type="text/css" href="css/money_off.css">
@@ -62,7 +62,7 @@
                             <tr class="select">
                                 <td class="left-td">Product image</td>
                                 <td class="right-td">
-                                    <img src="" width="60" height="60" id="product-img">
+                                    <img src="img/user-64.png" width="60" height="60" id="product-img">
                                 </td>
                             </tr>
                             <tr class="select">
@@ -74,19 +74,19 @@
                             <tr class="select">
                                 <td class="left-td">Your price</td>
                                 <td class="right-td">
-                                    $<span id='product_price'></span>
+                                    <span id='product_price'></span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="select">
                                 <td class="left-td">Deal price</td>
                                 <td class="right-td">
                                     <div class="deal-price clear_both">
                                         <span class="currency_number-symbol fl">$</span>
-                                        <input type="text" id="deal-price" class="verify-require" placeholder="Example: 25.99"/>
+                                        <input type="text" id="deal-price" class="verify-require" placeholder="Example: 11.11"/>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="select">
                                 <td class="left-td">Deal Date</td>
                                 <td class="right-td">
                                     <div class="date-enter">
@@ -95,7 +95,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="select">
                                 <td class="left-td">Start Time</td>
                                 <td class="right-td">
                                     <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-am" i='0'>
@@ -106,7 +106,7 @@
                                    <span id='timeError1' class="timeError hide">开始时间不能小于当前时间</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="select">
                                 <td class="left-td">End Time</td>
                                 <td class="right-td">
                                     <button class="secondaryAUIButton a-button-inner a-button-31 drop-date" creat='true' id="day-time-pm" i='0'>
@@ -124,7 +124,7 @@
             </div>
             <div class="promotion_tab hide">
                <div class="num_promotion num_selection">
-                   <div class="a-color-secondary" id="lightning_num">0 lightning deal</div>
+                   <div class="a-color-secondary">0 lightning deal</div>
                </div>
                <div class="product_selection_box">
                    <table class="product_selection_table a-row" border="1">
@@ -133,13 +133,23 @@
                                <td>产品主图</td>
                                <td>LD Title</td>
                                <td>Internal Description</td>
-                               <td>Your Price</td>
-                               <td>Deal Price</td>
-                               <td>Deal Date</td>
+                               <td>Price</td>
+                               <td>意向秒杀日期</td>
                                <td>Time Range</td>
+                               <td>Edit</td>
                            </tr>
                        </thead>
-                       <tbody></tbody>
+                       <tbody>
+                           <td><img src="img/user-64.png"  width="60" height="60" /></td>
+                           <td>举头望明月</td>
+                           <td>低头思故乡</td>
+                           <td>$16.25</td>
+                           <td>2018-11-11</td>
+                           <td>00:00:00 - 5:00:00</td>
+                           <td class="button-td">
+                                <button class="secondaryAUIButton edit_product">Edit</button>
+                           </td>
+                       </tbody>
                    </table>
                </div> 
             </div>
@@ -187,7 +197,7 @@
     <script type="text/javascript" src="js/laydate.js"></script>
     <script type="text/javascript" src="js/public.js"></script>
     <script type="text/javascript" src="js/webjs/seller_public.js"></script>
-    <script type="text/javascript" src="js/select_down.js"></script>
+     <script type="text/javascript" src="js/select_down.js"></script>
     <script type="text/javascript" src="js/page.js"></script>
     <script type="text/javascript" src="js/webjs/lightning_deals.js"></script>
 </html>

@@ -123,7 +123,7 @@ $(function () {
                     country: country,
                     zipcode: zipcode,
                     phone: phone,
-                    type: '1',
+                    type: '3',
                     name: '',
                     email: '',
                     full_name: ''

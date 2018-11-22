@@ -1,4 +1,5 @@
 $(function () {
+    inputctr.public.selectCountry();
     inputctr.public.checkLogin();
     $('.last_step').click(function () {
         window.location.href = "../../company_address_choose.html"
@@ -30,7 +31,7 @@ $(function () {
                 country: country,
                 zipcode: zipcode,
                 phone: phone,
-                type: '1',
+                type: '3',
                 name: '',
                 email: '',
                 full_name: ''

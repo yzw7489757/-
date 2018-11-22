@@ -51,7 +51,7 @@ function CreatSelect(e,addClass,arrList,fun,dir){
     dropdown(e,$('.'+addClass),dir);
     $('.'+addClass).fadeIn(0).siblings('.popover_down').fadeOut(0);
     var drop_group = $('.'+addClass).find('.drop_group');
-    drop_group.off('click').on('click', '.drop_link', function(event) {
+    drop_group.on('click', '.drop_link', function(event) {
         event.stopPropagation();
         drop_group.find('.drop_link').removeClass('a-selected');
         $(this).addClass('a-selected');

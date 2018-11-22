@@ -407,3 +407,7 @@ b {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+select[name=country]{
+    height: 31px;
+    margin-top: 4px;
+}

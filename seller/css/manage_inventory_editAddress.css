@@ -55,3 +55,14 @@ body {
 .startColor{
     color: red;
 }
+select[name=country]{
+    height: 31px;
+   
+}
+.pdleft10{
+    padding:0 10px ;
+}
+.startColor{
+    color: red;
+}
+

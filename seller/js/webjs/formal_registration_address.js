@@ -1,4 +1,5 @@
 window.onload = function () {
+    inputctr.public.selectCountry();
     inputctr.public.checkLogin();
     var showText = true;
     var timer = null
@@ -104,7 +105,6 @@ window.onload = function () {
         success: function (res) {
             console.log(res)
             if (res.result == 1) {
-                
                 res.List.forEach(function (item) { 
                     item.status = (item.address_id === res.registered_address_Id) ? true : false
                     if(item.status){
@@ -172,7 +172,7 @@ window.onload = function () {
             // 州/地区/省;
             var province = $('.province_input').val().trim();
             // 国家/地区
-            var country = $('.country_select').text();
+            var country = $('select option:selected').text();
             // 邮编
             var zipcode = $('.zipcode_input').val().trim();
             if (country != "选择国家/地区" && address && city && province) {
@@ -185,7 +185,7 @@ window.onload = function () {
                         country: country,
                         zipcode: zipcode,
                         phone: '',
-                        type: '1',
+                        type: '3',
                         name: '',
                         email: '',
                         full_name: ''
@@ -209,10 +209,7 @@ window.onload = function () {
                     }
                 })
             }
-            if(country === "选择国家/地区"){
-                $('.a-alert-error').show()
-                $('.country_select_div').addClass('activebtn')
-            }
+            
             if (!address) {
                 $('.a-alert-error').show()
                 $('.address_input').addClass('activebtn')

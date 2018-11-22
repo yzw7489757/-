@@ -121,3 +121,7 @@ hr.a-divider-normal {
     margin-top: 0;
     margin-bottom: 14px;
 }
+select[name=country]{
+    height: 31px;
+    border: 0;
+}

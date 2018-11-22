@@ -35,7 +35,6 @@ $(function(){
             }
             inputctr.public.SellerRegisterLoadingRemove();
         }, function (error) {
-            inputctr.public.SellerRegisterLoadingRemove();
             alert(error.statusText);
         })
     }SelectionInit();

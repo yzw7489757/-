@@ -63,12 +63,11 @@ $(function () {
         // 州/地区/省;
         var province = $('.province_input').val().trim();
         // 国家/地区
-        var country = $('.country_select option:selected').text();
+        var country = $('select option:selected').text();
         // 邮编
         var zipcode = $('.zipcode_input').val().trim();
         // 手机号
         var phone = $('.phone_input').val().trim();
-
         // 邮寄地址
         if (showAddress) {
             if (address && city && zipcode && phone) {
@@ -81,7 +80,7 @@ $(function () {
                         country: country,
                         zipcode: zipcode,
                         phone: phone,
-                        type: '1',
+                        type: '3',
                         name: '',
                         email: '',
                         full_name: ''
@@ -97,7 +96,7 @@ $(function () {
                             if (window.sessionStorage) {
                                 sessionStorage.setItem('successInfo','1')
                             }
-                            $(location).attr('href', '/seller/company_address.html')
+                            // $(location).attr('href', '/seller/company_address.html')
                         } else {
                             console.log(decodeURIComponent(res.error))
                         }
