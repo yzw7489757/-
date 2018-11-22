@@ -2,4 +2,4 @@
 .js
 seller/node_modules/yeast/README.md
 seller/node_modules/
-seller/.svn/
+/seller/.svn/*
